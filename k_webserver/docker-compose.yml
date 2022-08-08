@@ -6,5 +6,5 @@ services:
       - ./:/usr/src/app
     ports:
       - "3000:3000"
-    command: sh -c "cd react-sample && yarn start"
+    command: sh -c "cd reacttestsite && yarn start"
     stdin_open: true
