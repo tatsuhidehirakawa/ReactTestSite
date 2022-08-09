@@ -18,7 +18,7 @@ by Tatsuhide Hirakawa
 
 ```
 C:.
-├─k_101_re_wbs          // WEBサーバ
+├─k_101_re_wbs          // WEBサーバ(React使用)
 │  ├─k_101_re_wbs_c        // WEBサーバ(CodeSandbox連携)
 │  ├─k_101_re_wbs_d        // WEBサーバ(Dockerからのビルド/.gitignore登録)
 │  └─k_101_re_wbs_g        // WEBサーバ(GitHubからのclone)
