@@ -4,7 +4,7 @@ by Tatsuhide Hirakawa
 主として使用する技術スタック  
 フロントエンド：TypeScript、React.js、Sass  
 バックエンド：Golang、PostgreSQL、Docker  
-
+開発環境：VSCode、Git、Github、Windows10、GoogleChrome、Evernote  
 
 ディレクトリ名命名規則  
 | 桁1 | 桁2 | 桁3 | 桁4 |  
