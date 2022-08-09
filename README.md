@@ -6,6 +6,8 @@ by Tatsuhide Hirakawa
 バックエンド：Golang、PostgreSQL  
 
 ディレクトリ名命名規則  
+| word | 記号 | 意味 | 備考 |
+|:-----------|------------:|:------------:|
 | wors1 | k_ | プロジェクト名 | | 
 | wors2　| 101 | サーバ番号 |  |  
 wors3　例：_re: React.js使用、_go: Golang使用、_ra: Rails使用、_pg: PostgreSQL使用  
