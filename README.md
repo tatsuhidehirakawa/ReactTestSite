@@ -17,6 +17,4 @@ wors3　例：_re: React.js使用、_go: Golang使用、_ra: Rails使用、_pg: 
 wors4　例：_wbs: Webserver、_aps: APserver、_dbs:DBserver  
 wors5　例：_g: GitHubからclone、_c: CodeSandboxからclone、_d: create-react-app&docker composeから生成  
 
-```math
-\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
-```
+
