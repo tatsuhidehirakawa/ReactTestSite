@@ -15,33 +15,17 @@ by Tatsuhide Hirakawa
 |wors4　|例：_wbs:| Webserver、_aps: APserver、_dbs:DBserver  
 |wors5　|例：_g:| GitHubからclone、|_c: CodeSandboxからclone、_d: create-react-app&docker composeから生成  
 
-tatsuhidehirakawa --- myportfololio_k -+-- k_101_re_wbs -+  
-                                       |                 +  
-                                       +-- k_201_go_aps  
-                                       +-- k_201_go_aps  
-                                       +-- k_201_go_aps  
-                                       
-+ /pages
-    + /posts
-        + .check-list.md
-        + .directory-list.md
-+ /css
-    + .main.css
-+ /preview
-    + .check-list.html
-    + .directory-list.html
-+ /static
 
 ```
 C:.
-├─k_101_re_wbs
-│  ├─k_101_re_wbs_c
-│  └─k_101_re_wbs_g
+├─k_101_re_wbs          // WEBサーバ
+│  ├─k_101_re_wbs_c      // WEBサーバ(CodeSandbox連携)
+│  └─k_101_re_wbs_g      // WEBサーバ(GitHubからのclone)
 │      ├─public
 │      └─src
-├─k_201_go_aps
-├─k_202_ra_aps
-└─k_301_pg_dbs
+├─k_201_go_aps          // APサーバ(Go使用)
+├─k_202_ra_aps          // APサーバ(Rails使用)
+└─k_301_pg_dbs          // DBサーバ(PostgreSQL使用)
     └─k_301_pg_dbs_g
         └─config
 ```
