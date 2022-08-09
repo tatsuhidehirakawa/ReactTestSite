@@ -2,7 +2,7 @@
 by Tatsuhide Hirakawa
 
 主として使用する技術スタック  
-フロントエンド：React.js、Sass、TypeScript  
+フロントエンド：TypeScript、React.js、Sass  
 バックエンド：Golang、PostgreSQL  
 
 
