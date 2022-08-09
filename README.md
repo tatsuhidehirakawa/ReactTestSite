@@ -20,7 +20,7 @@ by Tatsuhide Hirakawa
 C:.
 ├─k_101_re_wbs          // WEBサーバ
 │  ├─k_101_re_wbs_c        // WEBサーバ(CodeSandbox連携)
-│  ├─k_101_re_wbs_d        // WEBサーバ(Dockerからのビルド)
+│  ├─k_101_re_wbs_d        // WEBサーバ(Dockerからのビルド/.gitignore登録)
 │  └─k_101_re_wbs_g        // WEBサーバ(GitHubからのclone)
 ├─k_201_go_aps          // APサーバ(Go使用)
 ├─k_202_ra_aps          // APサーバ(Rails使用)
