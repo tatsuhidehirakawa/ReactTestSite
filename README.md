@@ -1,9 +1,9 @@
 ## 個人開発練習用リポジトリ
 by Tatsuhide Hirakawa
 
-主として使用する技術スタック
-フロントエンド：React.js、Sass、TypeScript
-バックエンド：Golang、PostgreSQL
+主として使用する技術スタック  
+フロントエンド：React.js、Sass、TypeScript  
+バックエンド：Golang、PostgreSQL  
 
 ディレクトリ名命名規則
 wors1　例：k　プロジェクト名  
