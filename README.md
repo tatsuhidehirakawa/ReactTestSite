@@ -18,3 +18,4 @@ wors4　例：_wbs: Webserver、_aps: APserver、_dbs:DBserver
 wors5　例：_g: GitHubからclone、_c: CodeSandboxからclone、_d: create-react-app&docker composeから生成  
 
 
+\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
