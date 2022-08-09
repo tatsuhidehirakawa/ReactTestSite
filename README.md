@@ -3,7 +3,7 @@ by Tatsuhide Hirakawa
 
 主として使用する技術スタック  
 フロントエンド：TypeScript、React.js、Sass  
-バックエンド：Golang、PostgreSQL  
+バックエンド：Golang、PostgreSQL、Docker  
 
 
 ディレクトリ名命名規則  
