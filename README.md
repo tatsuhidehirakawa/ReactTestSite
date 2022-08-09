@@ -5,7 +5,7 @@ by Tatsuhide Hirakawa
 フロントエンド：React.js、Sass、TypeScript  
 バックエンド：Golang、PostgreSQL  
 
-ディレクトリ名命名規則
+ディレクトリ名命名規則  
 wors1　例：k　プロジェクト名  
 wors2　例：101　サーバ番号  
 wors3　例：re: React.js使用、go: Golang使用、ra: Rails使用、pg: PostgreSQL使用  
