@@ -21,3 +21,13 @@ tatsuhidehirakawa --- myportfololio_k -+-- k_101_re_wbs -+
                                        +-- k_201_go_aps  
                                        +-- k_201_go_aps  
                                        
++ /pages
+    + /posts
+        + .check-list.md
+        + .directory-list.md
++ /css
+    + .main.css
++ /preview
+    + .check-list.html
+    + .directory-list.html
++ /static
