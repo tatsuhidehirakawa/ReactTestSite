@@ -5,6 +5,9 @@ by Tatsuhide Hirakawa
 フロントエンド：React.js、Sass、TypeScript  
 バックエンド：Golang、PostgreSQL  
 
+3x2
+
+
 ディレクトリ名命名規則  
 | word | 記号 | 意味 | 備考 |
 |:-----------|------------:|:------------:|
