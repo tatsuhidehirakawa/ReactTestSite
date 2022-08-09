@@ -15,4 +15,8 @@ by Tatsuhide Hirakawa
 |wors4　|例：_wbs:| Webserver、_aps: APserver、_dbs:DBserver  
 |wors5　|例：_g:| GitHubからclone、|_c: CodeSandboxからclone、_d: create-react-app&docker composeから生成  
 
-
+tatsuhidehirakawa --- myportfololio_k -+-- k_101_re_wbs -+
+                                       |                 +
+                                       +-- k_201_go_aps
+                                       +-- k_201_go_aps
+                                       +-- k_201_go_aps 
