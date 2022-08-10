@@ -1,0 +1,22 @@
+@import "./Management.scss";    // 全体管理用scssファイルを読み込み
+
+
+
+.icon-beginner {
+  float: left;
+  width: 21px;
+//margin: 2px 0px 0px 0px;
+  padding-top:2px;
+  padding-bottom: 9px;
+  margin:13px 3px 0px 13px;
+  cursor: pointer;
+}
+
+.userGuide_text {
+  float: left;
+  color: black;
+//top: 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 15px 3px 0px 0px;
+  cursor: pointer;
+}

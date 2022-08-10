@@ -1,0 +1,19 @@
+@import "./Management.scss";    // 全体管理用scssファイルを読み込み
+
+.header-logo {
+  height: 80px;
+  width: 60px;
+  background-color: $header-logo;
+  float: left;
+  text-align: center;
+  filter: drop-shadow(69px 69px 99px rgba(0,0,0,99) inset);
+  img {
+    width: 28px;
+    padding-top: 25px;
+    cursor: pointer;
+  }
+}
+
+header-img {
+  
+}
