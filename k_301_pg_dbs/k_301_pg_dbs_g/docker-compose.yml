@@ -3,7 +3,7 @@ version: '3'
 services:
   db:
     image: postgres:14
-    container_name: postgres
+    container_name: postgres # postgres -> 変更の余地あり！
     command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
     ports:
       - 5432:5432
