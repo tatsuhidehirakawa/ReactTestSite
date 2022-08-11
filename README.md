@@ -24,7 +24,7 @@ C:.
 |桁1|プロジェクト記号  |   k   |個人開発練習|         |       |
 |  桁2  |  サーバ番号     | _101  |101サーバ   |         |       |
 |&nbsp;&nbsp;&nbsp;&nbsp;〃&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;〃&nbsp;&nbsp;&nbsp;&nbsp;| _201  |201サーバ   |         |       |
-|  〃   |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;〃&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| _202  |202サーバ   |         |       |
+|  〃   |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;〃&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| _202  |202サーバ   |         |       |
 |  〃   |      〃        | _301  |301サーバ   |||
 |  桁3  |主たる技術スタック| _re  |React.js    |作り込み中|※CodeSandbox(https://codesandbox.io/s/weathered-violet-86tgok)|
 |  〃   |      〃        | _go  |Golang      |将来検討予定||
