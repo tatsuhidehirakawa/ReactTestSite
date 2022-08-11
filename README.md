@@ -3,7 +3,7 @@ by Tatsuhide Hirakawa
 
 主として使用する予定の技術スタック  
 フロントエンド：TypeScript、React.js、Sass  
-バックエンド：検討中  
+バックエンド：PostgreSQL、検討中  
 開発環境：VSCode、Git&Github、Windows10、GoogleChrome、Evernote  
 その他：Macへの移行を検討中
 
