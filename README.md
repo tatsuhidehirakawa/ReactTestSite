@@ -6,17 +6,6 @@ by Tatsuhide Hirakawa
 バックエンド：PostgreSQL、検討中  
 開発環境：VSCode、Git&Github、Windows10、GoogleChrome、Evernote  
 その他：Macへの移行を検討中
-
-ディレクトリ名命名規則  
-|桁1|桁2|桁3|桁4|桁5|  
-|:-----:|:---:|:-------------:|:------:|  
-| wors1 |  k_ | プロジェクト記号 |        |  
-| wors2 | 101 | サーバ番号 |  |  
-|wors3||　例：_re:| React.js使用、|_go: Golang使用、|_ra: Rails使用、_pg: PostgreSQL使用  |
-|wors4　|例：_wbs:| Webserver、_aps: APserver、_dbs:DBserver  
-|wors5　|例：_g:| GitHubからclone、|_c: CodeSandboxからclone、_d: create-react-app&docker composeから生成  
-
-
 ```
 C:.
 ├─k_101_re_wbs          // WEBサーバ(React使用)
@@ -28,3 +17,19 @@ C:.
 └─k_301_pg_dbs          // DBサーバ(PostgreSQL使用)
     └─k_301_pg_dbs_g
 ```
+ディレクトリ名命名規則  
+|桁番号|意 味|記 号|例|レベル感|備 考|
+|:----:|:----|:---:|:-|:-------|:----|
+|桁1|プロジェクト記号|k|個人開発練習|||
+|桁2|サーバ番号|_101|101サーバ|||
+|〃|〃|_201|201サーバ|||
+|〃|〃|_202|202サーバ|||
+|〃|〃|_301|301サーバ|||
+|桁3|主たる技術スタック|_re|React.js|作り込み中||
+|〃|〃|_go|Golang|将来検討予定||
+|〃|〃|_re|Rails|錬成中||
+|〃|〃|_pg|PostgreSQL|とりあえずサーバは立てた||
+|桁5|生成種別|_g|「git clone」から生成|||
+|〃|〃|_d|「docker compose run」から生成|||
+|〃|〃|_d|CodeSandboxからインポート|||
+
