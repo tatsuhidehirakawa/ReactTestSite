@@ -21,9 +21,9 @@ C:.
 
 |<div style="width:290px">桁番号</div>|     意 味      | 記 号 |     例     | レベル感 | 備 考 |
 | :---: |     :---:      | :---: | :---      | :---    | :---  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;桁1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |プロジェクト記号  |   k   |個人開発練習|         |       |
+|桁1|プロジェクト記号  |   k   |個人開発練習|         |       |
 |  桁2  |  サーバ番号     | _101  |101サーバ   |         |       |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;〃&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|      〃        | _201  |201サーバ   |         |       |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;〃&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|      〃        | _201  |201サーバ   |         |       |
 |  〃   |      〃        | _202  |202サーバ   |         |       |
 |  〃   |      〃        | _301  |301サーバ   |||
 |  桁3  |主たる技術スタック| _re  |React.js    |作り込み中|※CodeSandbox(https://codesandbox.io/s/weathered-violet-86tgok)|
