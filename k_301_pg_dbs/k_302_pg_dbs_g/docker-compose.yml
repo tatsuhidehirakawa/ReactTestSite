@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    build: .
+    tty: true
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_HOST_AUTH_METHOD: trust
+networks:
+  default:
+    external:
+      name: postgres-test-network
