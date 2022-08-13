@@ -1,6 +1,6 @@
 version: "3"
 services:
-  node:
+  node:    # コンテナ名
     build: .
     volumes:
       - ./:/usr/src/app
