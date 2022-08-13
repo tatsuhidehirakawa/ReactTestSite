@@ -1,7 +1,7 @@
 version: "3"
 services:
-  node:    # コンテナ名
-    build: .
+  node:                    # コンテナ名
+    build: .               # Dockerfile のあるディレクトリのパスを指定
     volumes:
       - ./:/usr/src/app
     ports:
