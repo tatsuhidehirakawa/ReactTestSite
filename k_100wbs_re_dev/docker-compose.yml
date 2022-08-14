@@ -6,7 +6,7 @@ services:
       - ./:/usr/src/app
     ports:
       - "3000:3000"
-    command: sh -c "cd k_101_re_wbs_d && yarn start"
+    command: sh -c "cd k_101wbs_re_dev_d && yarn start"
     # 末尾の「_d」はdocker側で作成されるため識別用に付加。（git cloneで作成された場合は「_g」を付加。）
     stdin_open: true
 

@@ -7,7 +7,7 @@ services:
 #---k_101wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
   k_101_re_wbs_d_node:                    # コンテナ名(変更：node -> k_101_wbs_d_node)
-    build: k_101_wbs_d     # Dockerfile のあるディレクトリのパスを指定
+    build: k_101wbs_re_dev     # Dockerfile のあるディレクトリのパスを指定
 
     volumes:
       - ./:/usr/src/app
