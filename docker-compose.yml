@@ -18,8 +18,6 @@ services:
 
 #---k_201_go_aps_g-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
-version: "3"
-services: 
   goapp: # サービス名
     build: # ビルドに使うDockerファイルのパス
       context: .
