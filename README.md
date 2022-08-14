@@ -27,12 +27,12 @@ myportfolio_k
   │  └─k_202aps_go_dev_g        # 未完成
   │     ├─docker-compose.yml    # 未完成
   │     └─Dockerfile            # 未完成
-  ├─k_200aps_ra_dev          # APサーバ群(開発用／Rails使用)
+  ├─k_210aps_ra_dev          # APサーバ群(開発用／Rails使用)
   ├─k_300dbs_pg_dev          # DBサーバ群(開発用／PostgreSQL使用)
   │  ├─k_301dbs_pg_dev_g
-  │  ├───Dockerfile
-  │  └───docker-compose.yml        # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
-  └──────docker-compose.yml        # ←新規作成(上の3つのdocker-compose.ymlをこれ一つで賄いたい)
+  │  │  └─docker-compose.yml       # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
+  │  └─k_302dbs_rp_dev_g         # Rails+PGSQL／テスト用／使用予定なし
+  └───────docker-compose.yml       # ←新規作成(上の3つのdocker-compose.ymlをこれ一つで賄いたい)
 ```
 
 <!--
