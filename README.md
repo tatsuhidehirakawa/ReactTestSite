@@ -10,29 +10,29 @@ by Tatsuhide Hirakawa
 
 現状のファイル・ディレクトリ構成図
 ```
-C:.
-├─k_100wbs_re_dev          # WEBサーバ群(開発用／React使用)
-│  ├─k_101wbs_re_dev_c        # CodeSandbox連携
-│  ├─k_101wbs_re_dev_d        # Dockerからのビルド(create-react-appで生成される)/.gitignore登録
-│  ├─k_101wbs_re_dev_g        # GitHubからのclone
-│  ├───Dockerfile
-│  └───docker-compose.yml        # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
-├─k_200aps_go_dev          # APサーバ群(開発用／Go使用)
-│  ├─k_201aps_go_dev_g        # Goテスト用201番サーバ(Hello World)
-│  │  ├─build
-│  │  │  └─Dockerfile
-│  │  ├─cmd
-│  │  ├─docker-compose.yml       # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
-│  │  └─README.md
-│  └─k_202aps_go_dev_g        # 未完成
-│     ├─docker-compose.yml    # 未完成
-│     └─Dockerfile            # 未完成
-├─k_200aps_ra_dev          # APサーバ群(開発用／Rails使用)
-├─k_300dbs_pg_dev          # DBサーバ群(開発用／PostgreSQL使用)
-│  ├─k_301dbs_pg_dev_g
-│  ├───Dockerfile
-│  └───docker-compose.yml        # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
-└──────docker-compose.yml        # ←新規作成(上の3つのdocker-compose.ymlをこれ一つで賄いたい)
+myportfolio_k
+  ├─k_100wbs_re_dev          # WEBサーバ群(開発用／React使用)
+  │  ├─k_101wbs_re_dev_c        # CodeSandbox連携
+  │  ├─k_101wbs_re_dev_d        # Dockerからのビルド(create-react-appで生成される)/.gitignore登録
+  │  ├─k_101wbs_re_dev_g        # GitHubからのclone
+  │  ├───Dockerfile
+  │  └───docker-compose.yml        # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
+  ├─k_200aps_go_dev          # APサーバ群(開発用／Go使用)
+  │  ├─k_201aps_go_dev_g        # Goテスト用201番サーバ(Hello World)
+  │  │  ├─build
+  │  │  │  └─Dockerfile
+  │  │  ├─cmd
+  │  │  ├─docker-compose.yml       # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
+  │  │  └─README.md
+  │  └─k_202aps_go_dev_g        # 未完成
+  │     ├─docker-compose.yml    # 未完成
+  │     └─Dockerfile            # 未完成
+  ├─k_200aps_ra_dev          # APサーバ群(開発用／Rails使用)
+  ├─k_300dbs_pg_dev          # DBサーバ群(開発用／PostgreSQL使用)
+  │  ├─k_301dbs_pg_dev_g
+  │  ├───Dockerfile
+  │  └───docker-compose.yml        # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
+  └──────docker-compose.yml        # ←新規作成(上の3つのdocker-compose.ymlをこれ一つで賄いたい)
 ```
 
 <!--
