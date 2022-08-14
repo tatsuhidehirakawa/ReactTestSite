@@ -1,0 +1,48 @@
+# １ 正常に動いているローカルのdocker-compose.ymlファイルは残したまま、新たにルートにdocker-compose.ymlを設置。
+# ２ それぞれのdocker-compose.ymlファイルの中身をそのままコピペ
+
+version: "3"
+services:
+
+#---k_101_re_wbs_g-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
+  k_101_re_wbs_d_node:                    # コンテナ名(変更：node -> k_101_wbs_d_node)
+    build: k_101_wbs_d     # Dockerfile のあるディレクトリのパスを指定
+
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "3000:3000"
+    command: sh -c "cd k_101_re_wbs_d && yarn start"
+    # 末尾の「_d」はdocker側で作成されるため識別用に付加。（git cloneで作成された場合は「_g」を付加。）
+    stdin_open: true
+
+#---k_201_go_aps_g-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
+
+version: "3"
+services: 
+  goapp: # サービス名
+    build: # ビルドに使うDockerファイルのパス
+      context: .
+      dockerfile: ./build/Dockerfile
+    tty: true # コンテナの永続化
+    volumes:
+      - ./cmd:/go/src/app # マウントディレクトリ
+
+#---k_301_pg_dbs_g-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
+
+  db:
+    image: postgres:14
+    container_name: k_301_pg_dbs_g_node # 変更(tatsu_hira_s)：postgres -> k_301_pg_dbs_g_node
+    command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
+    ports:
+      - 5432:5432
+    volumes: # 永続データはどこにおいてどう記述する？
+      - db-store:/var/lib/postgresql/data
+      - ./script:/docker-entrypoint-initdb.d
+      - ./config/postgresql.conf:/etc/postgresql/postgresql.conf # 追加
+    environment:
+      - POSTGRES_PASSWORD=passw0rd
+volumes:
+  db-store:
+
+#----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
