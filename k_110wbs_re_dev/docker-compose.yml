@@ -4,10 +4,10 @@ services:
     build: .               # Dockerfile のあるディレクトリのパスを指定
     volumes:
 #     - ./:/usr/src/app    # 20220815次段のとおり修正
-      - ./k_101wbs_re_dev_d/:/usr/src/app/app/k_101wbs_re_dev_d
+      - ./k_112wbs_re_dev_d/:/usr/src/app/app/k_112wbs_re_dev_d
     ports:
       - "3000:3000"
-    command: sh -c "cd k_101wbs_re_dev_d && yarn start"
+    command: sh -c "cd k_112wbs_re_dev_d && yarn start"
     # 末尾の「_d」はdockerコマンドで生成されるため識別用に付加。（git cloneで生成された場合は「_g」を付加。）
     stdin_open: true
 
