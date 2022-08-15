@@ -32,6 +32,7 @@ myportfolio_k
   │  ├─k_301dbs_pg_dev_g
   │  │  └─docker-compose.yml       # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
   │  └─k_302dbs_rp_dev_g         # Rails+PGSQL／テスト用／使用予定なし
+  ├─k_900log_xx_dev          # Syslogサーバ開発用(未整備)
   └───────docker-compose.yml       # ←新規作成(上の3つのdocker-compose.ymlをこれ一つで賄いたい)
 ```
 
