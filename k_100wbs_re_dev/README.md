@@ -1,7 +1,7 @@
 Webサーバー用Dockerコンテナ作成ディレクトリ
 Webserver（Docker／CreateReactApp／Sass／Windows10）の構築
 
-実行コマンド
+１　実行コマンド  
 ①　カレントディレクトリを変更
 ```
 cd myportfolio_k\k_100wbs_re_dev
@@ -19,3 +19,5 @@ docker compose up
 start chrome http://localhost:3000/
 ```
 
+２　実行環境
+Docker／Sass／React.Js／Windows10
