@@ -3,7 +3,8 @@ services:
   node:                    # コンテナ名
     build: .               # Dockerfile のあるディレクトリのパスを指定
     volumes:
-      - ./:/usr/src/app
+#     - ./:/usr/src/app    # 20220815次段のとおり修正
+      - ./k_101wbs_re_dev_d/:/usr/src/app/app/k_101wbs_re_dev_d
     ports:
       - "3000:3000"
     command: sh -c "cd k_101wbs_re_dev_d && yarn start"
