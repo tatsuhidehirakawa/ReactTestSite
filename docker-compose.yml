@@ -8,7 +8,7 @@ services:
 #---k_112wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
   node:                    # コンテナ名
-    build: .               # Dockerfile のあるディレクトリのパスを指定
+    build: k_110wbs_re_dev # 変更：「build: .」→「k_110wbs_re_dev」
     volumes:
       - ./:/usr/src/app
     ports:
@@ -20,7 +20,7 @@ services:
 #---k_211aps_go_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
   goapp: # サービス名
-    build: # ビルドに使うDockerファイルのパス
+    build: k_210aps_go_dev\k_211aps_go_dev_g # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
       context: .
       dockerfile: ./build/Dockerfile
     tty: true # コンテナの永続化
@@ -30,6 +30,7 @@ services:
 #---k_311dbs_pg_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
   db:
+    build: k_310dbs_pg_dev\k_311dbs_pg_dev_g # 行を新規追加
     image: postgres:14
     container_name: k_311dbs_pg_g # 変更：postgres -> k_311dbs_pg_g
     command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
