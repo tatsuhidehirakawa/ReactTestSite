@@ -1,6 +1,4 @@
 # ※注：このdocker-compose.ymlファイルは作成中であり使用していません。
-
-
 # １ 正常に動いているローカルのdocker-compose.ymlファイルは残したまま、新たにルートにdocker-compose.ymlを設置。
 # ２ それぞれのdocker-compose.ymlファイルの中身をそのままコピペ
 
@@ -9,16 +7,15 @@ services:
 
 #---k_101wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
-  k_101_re_wbs_d_node:                    # コンテナ名(変更：node -> k_101_wbs_d_node)
-    build: k_101wbs_re_dev     # Dockerfile のあるディレクトリのパスを指定
-
+  node:                    # コンテナ名
+    build: .               # Dockerfile のあるディレクトリのパスを指定
     volumes:
       - ./:/usr/src/app
     ports:
       - "3000:3000"
-    command: sh -c "cd k_101wbs_re_dev_d && yarn start"
-    # 末尾の「_d」はdocker側で作成されるため識別用に付加。（git cloneで作成された場合は「_g」を付加。）
+    command: sh -c "cd k_112wbs_re_dev_d && yarn start"
     stdin_open: true
+
 
 #---k_201aps_go_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
@@ -34,7 +31,7 @@ services:
 
   db:
     image: postgres:14
-    container_name: k_301_pg_dbs_g_node # 変更(tatsu_hira_s)：postgres -> k_301_pg_dbs_g_node
+    container_name: k_311dbs_pg_g # 変更：postgres -> k_311dbs_pg_g
     command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
     ports:
       - 5432:5432
