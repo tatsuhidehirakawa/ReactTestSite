@@ -16,11 +16,10 @@ services:
     command: sh -c "cd k_112wbs_re_dev_d && yarn start"
     stdin_open: true
 
-
 #---k_211aps_go_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
   goapp: # サービス名
-    build: k_210aps_go_dev\k_211aps_go_dev_g # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
+    build: k_210aps_go_dev\k_211aps_go_dev_g/build # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
       context: .
       dockerfile: ./build/Dockerfile
     tty: true # コンテナの永続化
