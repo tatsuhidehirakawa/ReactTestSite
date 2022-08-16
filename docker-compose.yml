@@ -8,7 +8,7 @@ services:
 #---k_112wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
   node:                    # コンテナ名
-    build: k_110wbs_re_dev # 変更：「build: .」→「k_110wbs_re_dev」
+    build: ./k_010ext_dk_dev/k_111wbs_re_dev # 変更：「build: .」→「k_110wbs_re_dev」
     volumes:
       - ./:/usr/src/app
     ports:
@@ -18,10 +18,10 @@ services:
 
 #---k_211aps_go_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
-  goapp: # サービス名
-    build: k_210aps_go_dev\k_211aps_go_dev_g/build # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
+  goapp:  # サービス名
+    build:  # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
       context: .
-      dockerfile: ./build/Dockerfile
+      dockerfile: ./k_010ext_dk_dev/k_211aps_go_dev # ./build/Dockerfile
     tty: true # コンテナの永続化
     volumes:
       - ./cmd:/go/src/app # マウントディレクトリ
@@ -29,7 +29,7 @@ services:
 #---k_311dbs_pg_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
   db:
-    build: k_310dbs_pg_dev\k_311dbs_pg_dev_g # 行を新規追加
+ #  build: ./k_310dbs_pg_dev\k_311dbs_pg_dev_g # 行を新規追加
     image: postgres:14
     container_name: k_311dbs_pg_g # 変更：postgres -> k_311dbs_pg_g
     command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
@@ -37,8 +37,8 @@ services:
       - 5432:5432
     volumes: # 永続データはどこにおいてどう記述する？
       - db-store:/var/lib/postgresql/data
-      - ./script:/docker-entrypoint-initdb.d
-      - ./config/postgresql.conf:/etc/postgresql/postgresql.conf # 追加
+      - ./k_010ext_dk_dev/k_311dbs_pg_dev/initdb:/docker-entrypoint-initdb.d #sql指定 initdb
+      - ./k_010ext_dk_dev/k_311dbs_pg_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
       - POSTGRES_PASSWORD=passw0rd
 volumes:
