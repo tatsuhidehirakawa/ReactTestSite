@@ -8,7 +8,7 @@ services:
 #---k_112wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
 
   node:                    # コンテナ名
-    build: ./k_010ext_dk_dev/k_111wbs_re_dev # 変更：「build: .」→「k_110wbs_re_dev」
+    build: ../k_910ext_dk_dev/k_111wbs_dk_dev # 変更：「build: .」→「build: ./../k_910ext_dk_dev/k_112wbs_dk_dev」
     volumes:
       - ./:/usr/src/app
     ports:
@@ -21,7 +21,7 @@ services:
   goapp:  # サービス名
     build:  # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
       context: .
-      dockerfile: ./k_010ext_dk_dev/k_211aps_go_dev # ./build/Dockerfile
+      dockerfile: ./k_211aps_dk_dev # ./build/Dockerfile
     tty: true # コンテナの永続化
     volumes:
       - ./cmd:/go/src/app # マウントディレクトリ
