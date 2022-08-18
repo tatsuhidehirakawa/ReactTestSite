@@ -6,5 +6,5 @@ services:
       - ./:/usr/src/app
     ports:
       - "3000:3000"
-    command: sh -c "cd k_112wbs_re_dev_d && yarn start"
+    command: sh -c "cd k_112wbs_re_dev_d && yarn start && npm install -g create-react-app && create-react-app k_101wbs_re_dev_d --typescript && cd k_101wbs_re_dev_d && npm install sass"
     stdin_open: true
