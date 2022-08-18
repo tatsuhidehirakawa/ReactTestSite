@@ -6,7 +6,7 @@ by Tatsuhide Hirakawa
 フロントエンド：TypeScript、React.js、Sass  
 バックエンド：Go、PostgreSQL、Docker  
 開発環境：VSCode、Git&Github、Windows10  
-(※開発環境からDockerで作成しローカルへのミドルウェアのインストールは一切行わない。
+開発環境からDockerで作成しローカルへのミドルウェアのインストールは一切行わない。  
 ベンダーロックインを避けるためあまりにも便利すぎるクラウドサービス依存は避ける。（ファイルを置くだけでデプロイできてしまうようなサービス等）
 
 現状のファイル・ディレクトリ構成図(抜粋)
