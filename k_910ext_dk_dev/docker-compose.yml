@@ -5,7 +5,7 @@
 version: "3"
 services:
 
-#---k_112wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
+#---k_112wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 
   node:                    # コンテナ名
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev # 変更：「build: .」→「build: ./../k_910ext_dk_dev/k_112wbs_dk_dev」
@@ -16,17 +16,17 @@ services:
     command: sh -c "cd k_112wbs_re_dev_d && yarn start"
     stdin_open: true
 
-#---k_211aps_go_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
+#---k_211aps_go_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 
   goapp:  # サービス名
     build:  # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
       context: .
-      dockerfile: ./k_211aps_dk_dev # ./build/Dockerfile
+      dockerfile: ./k_210aps_go_dev_g/k_211aps_dk_dev # ./build/Dockerfile
     tty: true # コンテナの永続化
     volumes:
       - ./cmd:/go/src/app # マウントディレクトリ
 
-#---k_311dbs_pg_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
+#---k_311dbs_pg_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 
   db:
  #  build: ./k_310dbs_pg_dev\k_311dbs_pg_dev_g # 行を新規追加
@@ -44,4 +44,4 @@ services:
 volumes:
   db-store:
 
-#----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
+#----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
