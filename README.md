@@ -8,32 +8,38 @@ by Tatsuhide Hirakawa
 開発環境：VSCode、Git&Github、Windows10  
 (※開発環境からDockerで作成しローカルへのミドルウェアのインストールは一切行わない)
 
-現状のファイル・ディレクトリ構成図
+現状のファイル・ディレクトリ構成図(抜粋)
 ```
 myportfolio_k
-  ├─k_100wbs_re_dev          # WEBサーバ群(開発用／React使用)
-  │  ├─k_101wbs_re_dev_c        # CodeSandbox連携
-  │  ├─k_101wbs_re_dev_d        # Dockerからのビルド(create-react-appで生成される)/.gitignore登録
-  │  ├─k_101wbs_re_dev_g        # GitHubからのclone
-  │  ├───Dockerfile
-  │  └───docker-compose.yml        # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
-  ├─k_200aps_go_dev          # APサーバ群(開発用／Go使用)
-  │  ├─k_201aps_go_dev_g        # Goテスト用201番サーバ(Hello World)
-  │  │  ├─build
-  │  │  │  └─Dockerfile
-  │  │  ├─cmd
-  │  │  ├─docker-compose.yml       # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
-  │  │  └─README.md
-  │  └─k_202aps_go_dev_g        # 未完成
-  │     ├─docker-compose.yml    # 未完成
-  │     └─Dockerfile            # 未完成
-  ├─k_210aps_ra_dev          # APサーバ群(開発用／Rails使用)
-  ├─k_300dbs_pg_dev          # DBサーバ群(開発用／PostgreSQL使用)
-  │  ├─k_301dbs_pg_dev_g
-  │  │  └─docker-compose.yml       # ←消したい(rootのdocker-compose.ymlでコントロールしたい)
-  │  └─k_302dbs_rp_dev_g         # Rails+PGSQL／テスト用／使用予定なし
-  ├─k_900log_xx_dev          # Syslogサーバ開発用(未整備)
-  └───────docker-compose.yml       # ←新規作成(上の3つのdocker-compose.ymlをこれ一つで賄いたい)
+  │
+  ├─k_110wbs_re_dev          # WEBサーバ群(開発用／React使用)
+  │  ├─k_111wbs_re_dev_c        # CodeSandbox連携
+  │  ├─k_121wbs_re_dev_d        # Dockerビルドからの生成(create-react-appで生成される)/.gitignore登録
+  │  └─k_131wbs_re_dev_g        # GitHubからのclone
+  │
+  ├─k_210aps_go_dev          # APサーバ群(開発用／Go使用)
+  │  └─k_211aps_go_dev_g        # Goテスト用211番サーバ(Hello World)
+  │     └─cmd
+  │        └─hello
+  │           └─main.go         # Hello World!
+  ├─k_310dbs_pg_dev          # DBサーバ群(開発用／PostgreSQL使用)
+  │  └─k_311dbs_pg_dev_g
+  │
+  ├─k_710log_xx_dev          # Syslogサーバ開発用(未着手)
+  │
+  ├─k_910ext_dk_dev          # Docker／SQL関連リソース群
+  │  ├─k_111wbs_dk_dev
+  │  │  └─Dockerfile
+  │  ├─k_211aps_dk_dev
+  │  │  └─Dockerfile
+  │  ├─k_311dbs_pg_dev
+  │  │  ├─config
+  │  │  │  └─postgresql.conf
+  │  │  ├─01_initialize.sql
+  │  │  └─02_create_table.sql
+  │  └─docker-compose.yml       # 121、211、311番サーバ用yamlファイル
+  │
+  └─READMR.md
 ```
 
 <!--
