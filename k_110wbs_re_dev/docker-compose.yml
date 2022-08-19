@@ -1,10 +1,10 @@
 version: "3"
 services:
-  node:                    # コンテナ名
+  112wbs_dev:                    # コンテナ名
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
-      - ./:/usr/src/app
-#      - ./k_113wbs_re_dev_c:/usr/src/app # ソースコードをマウントしたい
+#     - ./:/usr/src/app
+      - ./k_113wbs_re_dev_c:/usr/src/app_base/k_112wbs_re_dev_d # ソースコードをマウントしたい
     working_dir: /usr/src/app_base # 20220819追加
     ports:
       - "3000:3000"
