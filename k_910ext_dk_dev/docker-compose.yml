@@ -21,7 +21,7 @@ services:
   goapp:  # サービス名
     build:  # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
       context: .
-      dockerfile: ./k_210aps_go_dev_g/k_211aps_dk_dev # ./build/Dockerfile
+      dockerfile: ./k_211aps_dk_dev/Dockerfile # ./build/Dockerfile
     tty: true # コンテナの永続化
     volumes:
       - ./cmd:/go/src/app # マウントディレクトリ
