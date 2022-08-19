@@ -4,6 +4,7 @@ services:
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
       - ./:/usr/src/app
+#      - ./k_113wbs_re_dev_c:/usr/src/app # ソースコードをマウントしたい
     working_dir: /usr/src/app_base # 20220819追加
     ports:
       - "3000:3000"
