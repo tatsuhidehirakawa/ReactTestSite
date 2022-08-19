@@ -4,8 +4,7 @@ services:
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
 #     - ./:/usr/src/app
-      - ./k_113wbs_re_dev_c/public:/usr/src/app_base/k_112wbs_re_dev_d
-      - ./k_113wbs_re_dev_c/src:/usr/src/app_base/k_112wbs_re_dev_d
+      - ./k_113wbs_re_dev_c/src/components:/usr/src/app_base/k_112wbs_re_dev_d/src
     working_dir: /usr/src/app_base # 20220819追加
     ports:
       - "3000:3000"

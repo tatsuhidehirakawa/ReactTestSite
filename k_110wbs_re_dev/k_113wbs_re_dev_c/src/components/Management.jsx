@@ -13,12 +13,12 @@ import "./Management.scss";
 const Management = () => {
   return (
     <>
-      <header　/>
+      <header />
       <></>
         <h1>管理画面</h1>
         <h2>色管理、〇〇管理、〇〇管理等を行うための画面</h2>
       <></>
-      <footer　/>
+      <footer />
     </>
   );
 }
