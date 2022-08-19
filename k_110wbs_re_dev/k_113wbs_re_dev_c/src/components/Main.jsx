@@ -65,16 +65,19 @@ const MainWrapper = () => {
         <div className="copy-container">
           <h1>個人開発練習サイト</h1>
           <h2>
-            React、Sass、PostgressSQL（予定）等を組み合わせたWeb制作練習サイト
+            React、Sass、Go、PostgressSQL、Dockerを組み合わせたWeb制作練習サイト
           </h2>
           <ul>
-            <li>※凝った実装にはまだ手を出さない（我慢！）</li>
-            <li>※基本的なコンポーネントを実装する！</li>
-            <li>※画像系はSVG以外使用不可（重くなる！）</li>
-            <li>※レスポンシブ未対応（今後実装予定！）</li>
             <li>
-              ※デザイナーさんに手を入れてもらう可変部分のコードと、それ以外のコアコードは明確に分けることを意識する。
+              いろはにほへと ちりぬるを わかよたれそ つねならむ うゐのおくやま
+              けふこえて あさきゆめみし ゑひもせす
             </li>
+            <li>
+              以呂波耳本へ止 千利奴流乎 和加餘多連曽 津祢那良牟 有為能於久耶万
+              計不己衣天 阿佐伎喩女美之 恵比毛勢須
+            </li>
+            <li>abcdefghijklmnopqrstuvwxyz</li>
+            <li>1234567890</li>
           </ul>
         </div>
         <div className="lesson-container">

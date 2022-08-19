@@ -45,6 +45,16 @@ $SearchWidthDiff : 0px;
     border-radius:0 22px 22px 0;/*検索ボタンの角を丸める*/ 
   }
 
+.aaaaa {
+  top: 36px;
+  margine: 400px 120px 0px 0px;
+  keft: 300px;
+  width: 20px;
+  cursor: pointer;
+  
+}
+
+
 /* 検索ボタン念のため保存
   .sbtn{     //検索ボタン
     $left: 819px + $SearchWidthDiff;  //左右位置の変数宣言

@@ -20,7 +20,10 @@ const SearchBox = () => {
         type="text"
         placeholder="キーワードを入力"
       />
-      <input className="sbtn" type="submit" value="検索" />
+      {/*     <input className="sbtn" type="submit" value="検索" />   */}
+      <div className="aaaaa">
+        <img className="sarch" src="mglass.svg" />
+      </div>
     </form>
   );
 };
