@@ -1,6 +1,6 @@
 version: "3"
 services:
-  112wbs_dev:
+  node:
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
       - ./:/usr/src/app
