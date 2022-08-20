@@ -4,8 +4,10 @@ services:
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
       - ./:/usr/src/app
+    working_dir: /usr/src/app/k_113wbs_re_dev_c # 追加
 #   working_dir: /usr/src/app_base # コンテナ内でcreate-react-appしたい場合の記述(Dockerfile参照)
     ports:
       - "3000:3000"
-    command: sh -c "cd k_112wbs_re_dev_d && yarn start"
+    command: sh -c "yarn start"
+#   command: sh -c "cd k_112wbs_re_dev_d && yarn start"
     stdin_open: true
