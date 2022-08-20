@@ -8,7 +8,7 @@ cd myportfolio_k\k_110wbs_re_dev
 ```
 ②　「docker compose run」コマンド  
 ```
-docker compose run --rm node sh -c "npm install -g create-react-app && create-react-app "112wbs_re_dev_d --typescript && cd k_112wbs_re_dev_d && npm install sass
+docker compose run --rm node sh -c "npm install -g create-react-app && create-react-app k_112wbs_re_dev_d --typescript && cd k_112wbs_re_dev_d && npm install sass"
 ```
 ③　コンテナをビルド  
 ```
