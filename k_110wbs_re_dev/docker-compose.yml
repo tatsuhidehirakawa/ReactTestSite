@@ -1,6 +1,6 @@
 version: "3"
 services:
-  node:
+  node: # このサービス名を不用意に変更するとdocker compose runの引数も変更する必要が出てくるので注意すること！
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
       - ./:/usr/src/app
