@@ -1,0 +1,12 @@
+version: "3"
+services:
+  111wbs_dev:
+    build: ../../k_910ext_dk_dev/k_111wbs_dk_dev
+    volumes:
+      - ./:/usr/src/app
+#   working_dir: /usr/src/app/k_111wbs_re_dev
+    working_dir: /usr/src/app
+    ports:
+      - "3000:3000"
+    command: sh -c "yarn start"
+    stdin_open: true
