@@ -7,13 +7,15 @@ services:
 
 #---k_112wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 
-  112wbs_dev: # node -> 112wbs_dev
-    build: ../k_910ext_dk_dev/k_111wbs_dk_dev # 変更：「build: .」→「build: ./../k_910ext_dk_dev/k_112wbs_dk_dev」
+  112wbs_dev: # このサービス名を不用意に変更するとdocker compose runの引数も変更する必要が出てくるので注意すること！
+    build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
       - ./:/usr/src/app
+    working_dir: /usr/src/app/k_113wbs_re_dev_c # 追加
     ports:
       - "3000:3000"
-    command: sh -c "cd k_112wbs_re_dev_d && yarn start"
+    command: sh -c "yarn start"
+#   command: sh -c "cd k_112wbs_re_dev_d && yarn start"
     stdin_open: true
 
 #---k_211aps_go_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
