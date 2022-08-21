@@ -14,10 +14,8 @@ CSS-in-JSは情勢をよく観察しデファクトスタンダードが決ま�
 ```
 myportfolio_k
   │
-  ├─k_110wbs_re_dev          # WEBサーバ群(開発用／React使用)
-  │  ├─k_111wbs_re_dev_c        # CodeSandbox連携
-  │  ├─k_121wbs_re_dev_d        # Dockerビルドからの生成(create-react-appで生成される)/.gitignore登録
-  │  └─k_131wbs_re_dev_g        # GitHubからのclone
+  ├─k_110wbs_re_dev          # WEBサーバ(開発用／React使用)
+  │  └─k_111wbs_re_dev
   │
   ├─k_210aps_go_dev          # APサーバ群(開発用／Go使用)
   │  └─k_211aps_go_dev_g        # Goテスト用211番サーバ(Hello World)
@@ -39,7 +37,7 @@ myportfolio_k
   │  │  │  └─postgresql.conf
   │  │  ├─01_initialize.sql
   │  │  └─02_create_table.sql
-  │  └─docker-compose.yml       # 121、211、311番サーバ用yamlファイル
+  │  └─docker-compose.yml       # 111、211、311番サーバ用yamlファイル
   │
   └─READMR.md
 ```
