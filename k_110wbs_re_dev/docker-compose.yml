@@ -4,6 +4,8 @@ services:
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
       - ./:/usr/src/app
+    environment: # ホットリロード
+      - CHOKIDAR_USEPOLLING=true
     working_dir: /usr/src/app/k_113wbs_re_dev_c # 追加
     ports:
       - "3000:3000"
