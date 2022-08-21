@@ -14,8 +14,7 @@ CSS-in-JSは情勢をよく観察しデファクトスタンダードが決ま�
 ```
 myportfolio_k
   │
-  ├─k_110wbs_re_dev          # WEBサーバ(開発用／React使用)
-  │  └─k_111wbs_re_dev
+  ├─k_111wbs_re_dev          # WEBサーバ(開発用／React使用)
   │
   ├─k_210aps_go_dev          # APサーバ群(開発用／Go使用)
   │  └─k_211aps_go_dev_g        # Goテスト用211番サーバ(Hello World)
