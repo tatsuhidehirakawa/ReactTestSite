@@ -6,6 +6,8 @@ services:
       - ./:/usr/src/app
 #   working_dir: /usr/src/app/k_111wbs_re_dev
     working_dir: /usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true    # ホットリロード
     ports:
       - "3000:3000"
     command: sh -c "yarn start"
