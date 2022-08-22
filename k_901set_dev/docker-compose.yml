@@ -6,7 +6,7 @@ services:
 
 #---k_111wbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   111wbs_dev:
-    build: ../k_901set_dev/k_111wbs_dk_dev
+    build: ../k_901set_dev/k_111wbs_dev
     volumes:
     # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
       - ../k_111wbs_dev:/usr/src/app
@@ -23,7 +23,7 @@ services:
   211aps_dev:  # goapp -> 211aps_dev
     build:  # 変更：「build:」→「k_210aps_go_dev\k_211aps_dev_g」
       context: .
-      dockerfile: ./k_211aps_dk_dev/Dockerfile # ./build/Dockerfile
+      dockerfile: ./k_211aps_dev/Dockerfile # ./build/Dockerfile
     tty: true # コンテナの永続化
     volumes:
       - ../k_211aps_dev/cmd:/go/src/app # マウントディレクトリ
