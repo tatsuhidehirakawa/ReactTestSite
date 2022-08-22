@@ -1,9 +1,0 @@
-version: "3"
-services: 
-  211aps_dev: # サービス名
-    build: # ビルドに使うDockerファイルのパス
-      context: .
-      dockerfile: ../k_901set_dev/k_211aps_dk_dev/Dockerfile
-    tty: true # コンテナの永続化
-    volumes:
-      - ./cmd:/go/src/app # マウントディレクトリ
