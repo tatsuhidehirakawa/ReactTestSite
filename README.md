@@ -24,11 +24,11 @@ myportfolio_k
   ├─k_711log_dev          # Syslogサーバ開発用(未着手)
   │
   ├─k_901set_dev          # Docker／SQL関連リソース群
-  │  ├─111wbs_dev
+  │  ├─111set_dev
   │  │  └─Dockerfile
-  │  ├─211aps_dev
+  │  ├─211set_dev
   │  │  └─Dockerfile
-  │  ├─311dbs_dev
+  │  ├─311set_dev
   │  │  ├─config
   │  │  │  └─postgresql.conf
   │  │  └─initdb
