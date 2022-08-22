@@ -24,8 +24,8 @@ start chrome http://localhost:3000/ # Webサーバの動作確認（ブラウザ
 
 docker compose exec 211aps_dev go run hello/main.go # APサーバの動作確認  
 
-docker exec -it 311dbs_dev /bin/sh # DBサーバの動作確認1
-psql -h localhost -U postgres # DBサーバの動作確認2
+docker exec -it 311dbs_dev /bin/sh # DBサーバの動作確認
+psql -h localhost -U postgres
 ```
 
 <!--
