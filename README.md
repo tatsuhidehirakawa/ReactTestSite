@@ -34,8 +34,9 @@ myportfolio_k
   │  ├─k_311dbs_dev
   │  │  ├─config
   │  │  │  └─postgresql.conf
-  │  │  ├─01_initialize.sql
-  │  │  └─02_create_table.sql
+  │  │  └─initdb
+  │  │     ├─01_initialize.sql
+  │  │     └─02_create_table.sql
   │  └─docker-compose.yml       # 111、211、311番サーバ用yamlファイル
   │
   └─READMR.md
