@@ -4,7 +4,7 @@ Webサーバー開発用Dockerコンテナの構築
 １　構築手順  
 ①　カレントディレクトリを変更  
 ```
-cd myportfolio_k\k_111wbs_re_dev
+cd myportfolio_k\k_111wbs_dev
 ```
 ②　「docker compose run」コマンド  
 ```

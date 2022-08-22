@@ -4,7 +4,7 @@
 １　構築手順  
 ①　カレントディレクトリを変更（Webサーバ）  
 ```
-cd myportfolio_k\k_111wbs_re_dev
+cd myportfolio_k\k_111wbs_dev
 ```
 ②　Webサーバ用「docker compose run」コマンドの実行  
 ```
@@ -13,7 +13,7 @@ docker compose run --rm 111wbs_dev sh -c "npm install sass"
 ```
 ③　カレントディレクトリを変更（APサーバ）  
 ```
-cd ..\k_211aps_go_dev"
+cd ..\k_211aps_dev"
 ```
 ④　APサーバ用コンテナをビルド  
 ```

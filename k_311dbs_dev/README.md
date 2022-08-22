@@ -5,7 +5,7 @@
 １　使用コマンド
 ディレクトリ移動
 ```
-cd k_311dbs_pg_dev
+cd k_311dbs_dev
 ```
 コンテナをビルド
 ```
@@ -23,7 +23,7 @@ psql -h localhost -U postgres
 ```
 myportfolio_k
   │
-  └─k_310dbs_pg_dev
+  └─k_311dbs_dev
      ├─config
      │  └─postgresql.conf
      ├─01_initialize.sql
