@@ -22,6 +22,7 @@ psql -h localhost -U postgres
 ２　DB構成
 ```
 myportfolio_k
+  │
   └─k_310dbs_pg_dev
      ├─config
      │  └─postgresql.conf
