@@ -37,8 +37,8 @@ services:
       - 5432:5432
     volumes: # 永続データはどこにおいてどう記述する？
       - db-store:/var/lib/postgresql/data
-      - ./k_311dbs_dev/initdb:/docker-entrypoint-initdb.d #sql指定 initdb
-      - ./k_311dbs_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ../k_311dbs_dev/initdb:/docker-entrypoint-initdb.d #sql指定 initdb
+      - ../k_311dbs_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
       - POSTGRES_PASSWORD=passw0rd
 volumes:
