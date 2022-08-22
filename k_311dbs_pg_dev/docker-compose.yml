@@ -3,7 +3,7 @@ version: '3'
 services:
   db:
     image: postgres:14
-    container_name: k_311dbs_pg_g # 変更：postgres -> k_311dbs_pg_g
+    container_name: 311dbs_dev # 変更：postgres -> 311dbs_dev
     command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
     ports:
       - 5432:5432

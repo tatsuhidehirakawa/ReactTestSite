@@ -2,10 +2,10 @@
 
 参考資料：https://zenn.dev/re24_1986/articles/b76c3fd8f76aec
 
-
+１　使用コマンド
 ディレクトリ移動
 ```
-cd k_300dbs_pg_dev\k_301dbs_pg_dev_g
+cd k_311dbs_pg_dev
 ```
 コンテナをビルド
 ```
@@ -13,10 +13,18 @@ docker compose up -d
 ```
 コンテナへ接続
 ```
-docker exec -it k_301_pg_dbs_g_node /bin/sh
+docker exec -it 311dbs_dev /bin/sh
 ```
 psqlで接続確認
 ```
 psql -h localhost -U postgres
 ```
-
+２　DB構成
+```
+myportfolio_k
+  └─k_310dbs_pg_dev
+     ├─config
+     │  └─postgresql.conf
+     ├─01_initialize.sql
+     └─02_create_table.sql
+```
