@@ -5,35 +5,33 @@
 version: "3"
 services:
 
-#---k_112wbs_re_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-
-  112wbs_dev: # このサービス名を不用意に変更するとdocker compose runの引数も変更する必要が出てくるので注意すること！
+# k_112wbs_re_dev
+  111wbs_dev:
     build: ../k_910ext_dk_dev/k_111wbs_dk_dev
     volumes:
       - ./:/usr/src/app
-    working_dir: /usr/src/app/k_113wbs_re_dev_c # 追加
+  # working_dir: /usr/src/app/k_111wbs_re_dev     # バインドマウント
+    working_dir: /usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true                  # ホットリロード
     ports:
       - "3000:3000"
     command: sh -c "yarn start"
-#   command: sh -c "cd k_112wbs_re_dev_d && yarn start"
     stdin_open: true
 
-#---k_211aps_go_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-
+# k_211aps_go_dev
   211aps_dev:  # goapp -> 211aps_dev
     build:  # 変更：「build:」→「k_210aps_go_dev\k_211aps_go_dev_g」
       context: .
       dockerfile: ./k_211aps_dk_dev/Dockerfile # ./build/Dockerfile
     tty: true # コンテナの永続化
     volumes:
-      - ./k_210aps_go_dev/k_211aps_go_dev_g/cmd/hello:/go/src/app # マウントディレクトリ
+      - ../k_211aps_go_dev/cmd:/go/src/app # マウントディレクトリ
 
-#---k_311dbs_pg_dev_g--+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-
-  311dbs_dev: # db -> 311dbs_dev
- #  build: ./k_310dbs_pg_dev\k_311dbs_pg_dev_g # 行を新規追加
+# k_311dbs_pg_dev
+  311dbs_dev:
     image: postgres:14
-#   container_name: k_311dbs_pg_g # 変更：postgres -> k_311dbs_pg_g
+  # container_name: k_311dbs_pg_g # 変更：postgres -> k_311dbs_pg_g
     command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
     ports:
       - 5432:5432
@@ -45,5 +43,3 @@ services:
       - POSTGRES_PASSWORD=passw0rd
 volumes:
   db-store:
-
-#----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
