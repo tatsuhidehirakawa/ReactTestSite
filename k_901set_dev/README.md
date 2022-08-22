@@ -11,6 +11,7 @@ cd myportfolio_k\k_111wbs_dev
 docker compose run --rm 111wbs_dev sh -c "npm install"
 docker compose run --rm 111wbs_dev sh -c "npm install sass"
 ```
+---
 ③　カレントディレクトリを変更（APサーバ）  
 ```
 cd ..\k_211aps_dev"
@@ -23,15 +24,26 @@ docker compose build
 ```
 cd ..\k_901set_dev"
 ```
+---
 ⑤　コンテナの起動  
 ```
 docker compose up
 ```
-④　ブラウザを確認  
+---
+④　Webサーバの動作確認（ブラウザ使用）  
 ```
 start chrome http://localhost:3000/
 ```
-
+⓪APサーバの動作確認
+```
+docker compose exec 211aps_dev go run hello/main.go
+```
+⓪DBサーバの動作確認
+```
+docker exec -it 311dbs_dev /bin/sh
+psql -h localhost -U postgres
+```
+---
 ２　実行環境  
 Docker／Sass／React.Js／Windows10  
 
