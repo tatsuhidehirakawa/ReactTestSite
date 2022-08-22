@@ -22,8 +22,7 @@ myportfolio_k
   │        └─main.go            # Hello World!
   ├─k_212aps_go_dev          # 試験用APサーバ(開発用／未使用)
   │
-  ├─k_310dbs_pg_dev          # DBサーバ群(開発用／PostgreSQL使用)
-  │  └─k_311dbs_pg_dev_g
+  ├─k_311dbs_pg_dev          # DBサーバ群(開発用／PostgreSQL使用)
   │
   ├─k_710log_xx_dev          # Syslogサーバ開発用(未着手)
   │
