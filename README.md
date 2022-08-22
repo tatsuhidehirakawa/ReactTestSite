@@ -16,11 +16,12 @@ myportfolio_k
   │
   ├─k_111wbs_re_dev          # WEBサーバ(開発用／React使用)
   │
-  ├─k_210aps_go_dev          # APサーバ群(開発用／Go使用)
-  │  └─k_211aps_go_dev_g        # Goテスト用211番サーバ(Hello World)
-  │     └─cmd
-  │        └─hello
-  │           └─main.go         # Hello World!
+  ├─k_211aps_go_dev          # Goテスト用211番APサーバ(開発用／Go使用)
+  │  └─cmd
+  │     └─hello
+  │        └─main.go            # Hello World!
+  ├─k_212aps_go_dev          # 試験用APサーバ(開発用／未使用)
+  │
   ├─k_310dbs_pg_dev          # DBサーバ群(開発用／PostgreSQL使用)
   │  └─k_311dbs_pg_dev_g
   │
