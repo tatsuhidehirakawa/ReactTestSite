@@ -20,11 +20,11 @@ cd ..\k_211aps_dev"
 ```
 docker compose build
 ```
+---
 ③　カレントディレクトリを変更  
 ```
 cd ..\k_901set_dev"
 ```
----
 ⑤　コンテナの起動  
 ```
 docker compose up
