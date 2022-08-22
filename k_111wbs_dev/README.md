@@ -9,7 +9,6 @@ cd myportfolio_k\k_111wbs_dev
 ②　「docker compose run」コマンド  
 ```
 docker compose run --rm 111wbs_dev sh -c "npm install"
-docker compose run --rm 111wbs_dev sh -c "npm install sass"
 ```
 ③　コンテナをビルド  
 ```
