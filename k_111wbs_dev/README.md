@@ -1,4 +1,4 @@
-Webサーバー開発用Dockerコンテナ  
+Webサーバ開発用Dockerコンテナ  
 「k_111wbs_dev」  
 ---
 
