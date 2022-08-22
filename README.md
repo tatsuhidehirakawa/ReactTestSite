@@ -15,15 +15,12 @@ CSS-in-JSは情勢をよく観察しデファクトスタンダードが決ま�
 myportfolio_k
   │
   ├─k_111wbs_dev          # WEBサーバ(開発用／React使用)
-  │
   ├─k_211aps_dev          # Goテスト用211番APサーバ(開発用／Go使用)
   │  └─cmd
   │     └─hello
   │        └─main.go            # Hello World!
   ├─k_212aps_dev          # 試験用APサーバ(開発用／未使用)
-  │
   ├─k_311dbs_dev          # DBサーバ群(開発用／PostgreSQL使用)
-  │
   ├─k_711log_dev          # Syslogサーバ開発用(未着手)
   │
   ├─k_901set_dev          # Docker／SQL関連リソース群
