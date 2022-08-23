@@ -22,7 +22,7 @@ myportfolio_k
   ├─k_211aps_dev          # Goテスト用211番APサーバ(開発用／Go使用)
   │  └─cmd
   │     └─hello
-  │        └─main.go            # Hello World!
+  │        └─main.go
   ├─k_212aps_dev          # 試験用APサーバ(開発用／未使用)
   │
   ├─k_311dbs_dev          # DBサーバ群(開発用／PostgreSQL使用)
