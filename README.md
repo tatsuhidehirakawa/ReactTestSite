@@ -4,7 +4,7 @@ by Tatsuhide Hirakawa
 －開発方針－  
 方向性：一般的な「CtoC」サイトの雛形構築  
 主として使用する予定の技術スタック  
-フロントエンド：TypeScript、React.js、Sass  
+フロントエンド：TypeScript、React.js、Sass、Html  
 バックエンド：Go、PostgreSQL  
 開発環境：Docker、VSCode、Git&Github、Windows10  
 <!--
