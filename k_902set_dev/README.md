@@ -1,11 +1,13 @@
+※作成中  
 Web開発用Dockerコンテナ群  
-「k_901set_dev」  
-使用コンテナ：111wbs_dev、211aps_dev、311dbs_dev  
+「k_902set_dev」  
+使用コンテナ：111wbs_dev、212aps_dev、311dbs_dev  
 ---
 
 １　履 歴  
 2022. 8.17 実装開始  
 2022. 8.22 Web、AP、DBサーバ用docker-compose.yml及び構築手順を統合(k_901set_dev内／個別のdocker-compose.yml廃止)  
+2022. 8.24 212aps_devを使用した本バージョンの実装開始  
 
 ２　技術スタック  
 Html／CSS／Sass／Golang／JavaScript／PostgreSQL  
@@ -15,8 +17,8 @@ Windows10／VSCode／Docker
 
 ４　起動コマンド
 ```
-cd ..\k_901set_dev" # カレントディレクトリを変更
-docker compose run --rm 111wbs_dev sh -c "npm install" # Webサーバ用npmインストール
+cd ..\k_902set_dev" # カレントディレクトリを変更
+docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
 docker compose up # コンテナ群の起動
 start chrome http://localhost:3000/ # Webサーバの動作確認（ブラウザ使用）
 docker compose exec 211aps_dev go run hello/main.go # APサーバの動作確認  
