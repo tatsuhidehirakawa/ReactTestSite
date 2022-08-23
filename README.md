@@ -5,14 +5,14 @@ by Tatsuhide Hirakawa
 方向性：一般的な「CtoC」サイトの雛形構築  
 主として使用する予定の技術スタック  
 フロントエンド：TypeScript、React.js、Sass  
-バックエンド：Go、PostgreSQL、Docker  
-開発環境：VSCode、Git&Github、Windows10  
+バックエンド：Go、PostgreSQL  
+開発環境：Docker、VSCode、Git&Github、Windows10  
 <!--
 開発環境からDockerで作成しローカルへのミドルウェアのインストールは一切行わない。  
 ベンダーロックインを避けるためあまりにも便利すぎるクラウドサービス依存は避ける。（ファイルを置くだけでデプロイできてしまうようなサービス等）  
 CSS-in-JSは情勢をよく観察しデファクトスタンダードが決まるまでは手を出さず様子を見る。  
 -->
-主要なファイル・ディレクトリ構成図(抜粋)
+主要なファイル・ディレクトリ構成図(抜粋)  
 ```
 myportfolio_k
   │
