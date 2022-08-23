@@ -41,7 +41,7 @@ myportfolio_k
   │  │     ├─01_initialize.sql
   │  │     └─02_create_table.sql
   │  └─docker-compose.yml
-  ├─k_901set_dev          # 212番コンテナ利用バージョン（テスト中）
+  ├─k_902set_dev          # 212番コンテナ利用バージョン（テスト中）
   │
   └─READMR.md
 ```
