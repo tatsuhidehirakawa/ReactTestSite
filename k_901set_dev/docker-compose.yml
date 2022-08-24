@@ -21,7 +21,7 @@ services:
 
 #---k_211aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   211aps_dev:
-    build: .
+    build: ../k_901set_dev/211set_dev
     tty: true
     volumes:
       - .:/go/src/work
