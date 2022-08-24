@@ -6,7 +6,7 @@ by Tatsuhide Hirakawa
 主として使用する予定の技術スタック  
 フロントエンド：TypeScript、React.js、Sass、Html  
 バックエンド：Go、PostgreSQL  
-開発環境：Docker、VSCode、Git&Github、Windows10  
+開発環境：Docker、VSCode、Git&Github、Windows10、A5:SQL Mk-2  
 <!--
 開発環境からDockerで作成しローカルへのミドルウェアのインストールは一切行わない。  
 ベンダーロックインを避けるためあまりにも便利すぎるクラウドサービス依存は避ける。（ファイルを置くだけでデプロイできてしまうようなサービス等）  
