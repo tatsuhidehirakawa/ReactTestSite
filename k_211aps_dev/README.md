@@ -1,3 +1,20 @@
-## Golang+Dockerを利用したGo開発環境の構築
+## PosrgreSQL+Dockerを利用したWebサーバの構築
 
-参考資料：https://zenn.dev/akakuro/articles/2426098256785b#go%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%BD%9C%E6%88%90
+参考資料：https://qiita.com/optimisuke/items/911cd8756bdbfeb4815a
+
+
+立ち上げ：
+```
+docker-compose up -d
+```
+？lib/pqをgo get。ドライバー？記事参照。
+```
+docker-compose exec goapp go run main.go
+docker-compose exec goapp go get github.com/lib/pq
+```
+DB操作
+```
+CREATE DATABASE hogedb;  
+```
+
+

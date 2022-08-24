@@ -24,7 +24,7 @@ services:
       dockerfile: ./210set_dev/Dockerfile
     tty: true
     volumes:
-      - ../k_211aps_dev/cmd:/go/src/app
+      - ../k_210aps_dev/cmd:/go/src/app
 
 #---k_310dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   310dbs_dev:
