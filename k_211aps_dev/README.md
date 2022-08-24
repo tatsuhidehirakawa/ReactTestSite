@@ -9,8 +9,8 @@ docker-compose up
 ```
 ？lib/pqをgo get。ドライバー？記事参照。
 ```
-docker-compose exec goapp go run main.go
 docker-compose exec goapp go get github.com/lib/pq
+docker-compose exec goapp go run main.go
 ```
 DB操作
 ```
