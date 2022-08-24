@@ -29,8 +29,8 @@ myportfolio_k
   │
   ├─k_710log_dev          # Syslogサーバ開発用(未着手)
   │
-  ├─k_900set_dev          # 212番コンテナ利用バージョン（テスト中）
-  ├─k_901set_dev          # Docker／SQL関連リソース群
+  ├─k_900set_dev          # 210番コンテナ利用バージョン
+  ├─k_901set_dev          # 211番コンテナ利用バージョン（テスト中）
   │  ├─111set_dev
   │  │  └─Dockerfile
   │  ├─211set_dev
