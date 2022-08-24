@@ -18,7 +18,7 @@ Windows10／VSCode／Docker
 
 ４　起動コマンド
 ```
-cd ..\k_900set_dev" # カレントディレクトリを変更
+cd k_900set_dev # カレントディレクトリを変更
 docker compose run --rm 110wbs_dev sh -c "npm install" # npmインストール
 docker compose up # コンテナ群の起動
 start chrome http://localhost:3000/ # Webサーバの動作確認（ブラウザ使用）

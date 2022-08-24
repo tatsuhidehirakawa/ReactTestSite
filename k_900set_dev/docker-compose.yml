@@ -5,7 +5,7 @@ version: "3"
 services:
 
 #---k_110wbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  111wbs_dev:
+  110wbs_dev:
     build: ../k_900set_dev/110set_dev
     volumes:
       - ../k_110wbs_dev:/usr/src/app
@@ -18,7 +18,7 @@ services:
     stdin_open: true
 
 #---k_210aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  211aps_dev:
+  210aps_dev:
     build:
       context: .
       dockerfile: ./210set_dev/Dockerfile
@@ -27,7 +27,7 @@ services:
       - ../k_211aps_dev/cmd:/go/src/app
 
 #---k_310dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  311dbs_dev:
+  310dbs_dev:
     image: postgres:14
     command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
