@@ -5,7 +5,7 @@
 
 立ち上げ：
 ```
-docker-compose up -d
+docker-compose up
 ```
 ？lib/pqをgo get。ドライバー？記事参照。
 ```

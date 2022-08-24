@@ -20,13 +20,15 @@ services:
     stdin_open: true
 
 #---k_211aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  211aps_dev:  # goapp -> 211aps_dev
-    build:  # 変更：「build:」→「k_210aps_go_dev\k_211aps_dev_g」
-      context: .
-      dockerfile: ./211set_dev/Dockerfile # ./build/Dockerfile
-    tty: true # コンテナの永続化
+  211aps_dev:
+    build: .
+    tty: true
     volumes:
-      - ../k_211aps_dev/cmd:/go/src/app # マウントディレクトリ
+      - .:/go/src/work
+networks:
+  default:
+    external:
+      name: postgres-test-network
 
 #---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   311dbs_dev:
