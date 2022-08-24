@@ -16,12 +16,14 @@ Windows10／VSCode／Docker
 ４　起動コマンド
 ```
 cd k_901set_dev # カレントディレクトリを変更
-docker compose run --rm 111wbs_dev sh -c "npm install" # Webサーバ用npmインストール
+docker network create postgres-test-network # ネットワークを作成
+docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
 docker compose up # コンテナ群の起動
+docker-compose exec goapp go get github.com/lib/pq # ドライバ)をgo get
+docker-compose exec ping 311dbs_dev # 311dbs_devへping 
+docker-compose exec goapp go run main.go # 
 start chrome http://localhost:3000/ # Webサーバの動作確認（ブラウザ使用）
-docker compose exec 211aps_dev go run hello/main.go # APサーバの動作確認  
-docker exec -it 311dbs_dev /bin/sh # DBサーバの動作確認
-psql -h localhost -U postgres
+
 ```
 
 <!--
