@@ -19,16 +19,17 @@ myportfolio_k
   ├─k_110wbs_dev          # WEBサーバ(creat-react-app)
   ├─k_111wbs_dev          # WEBサーバ(開発用／React使用)
   │
-  ├─k_211aps_dev          # Goテスト用211番APサーバ(開発用／Go使用)
+  ├─k_210aps_dev          # Go簡易テスト用210番APサーバ(開発用／Go使用)
   │  └─cmd
   │     └─hello
   │        └─main.go
-  ├─k_212aps_dev          # 試験用APサーバ(開発用／未使用)
+  ├─k_211aps_dev          # 311番接続試験用APサーバ(開発用／試験中)
   │
-  ├─k_311dbs_dev          # DBサーバ群(開発用／PostgreSQL使用)
+  ├─k_310dbs_dev          # 簡易311番DBサーバ(開発用／PostgreSQL使用)
   │
-  ├─k_711log_dev          # Syslogサーバ開発用(未着手)
+  ├─k_710log_dev          # Syslogサーバ開発用(未着手)
   │
+  ├─k_900set_dev          # 212番コンテナ利用バージョン（テスト中）
   ├─k_901set_dev          # Docker／SQL関連リソース群
   │  ├─111set_dev
   │  │  └─Dockerfile
@@ -41,7 +42,6 @@ myportfolio_k
   │  │     ├─01_initialize.sql
   │  │     └─02_create_table.sql
   │  └─docker-compose.yml
-  ├─k_902set_dev          # 212番コンテナ利用バージョン（テスト中）
   │
   └─READMR.md
 ```
