@@ -13,7 +13,7 @@ Html／CSS／Sass／Golang／JavaScript／PostgreSQL
 ３　実行環境  
 Windows10／VSCode／Docker  
 
-４　起動コマンド
+４　起動・確認コマンド等
 ```
 cd k_901set_dev # カレントディレクトリを変更
 docker network create postgres-test-network # ネットワークを作成
