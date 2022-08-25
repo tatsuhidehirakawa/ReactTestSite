@@ -19,9 +19,13 @@ cd k_901set_dev # カレントディレクトリを変更
 docker network create postgres-test-network # ネットワークを作成
 docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
 docker compose up # コンテナ群の起動
-docker-compose exec goapp go get github.com/lib/pq # ドライバ)をgo get
-docker-compose exec ping 311dbs_dev # 311dbs_devへping 
-docker-compose exec goapp go run main.go # 
+docker-compose exec  -it 211aps_dev go get github.com/lib/pq # ドライバ入手
+docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのマウント確認
+docker ps # (別ターミナルで)Goのコンテナ確認
+docker exec -it k_901set_dev-211aps_dev-1 apt-get update # apt-getのupdate
+docker exec -it k_901set_dev-211aps_dev-1 apt-get install iputils-ping net-tools # pingコマンドのインストール
+docker exec -it k_901set_dev-211aps_dev-1 ping -c 3 311dbs_dev # 311dbs_devへping
+docker-compose exec -it goapp go run main.go # 
 start chrome http://localhost:3000/ # Webサーバの動作確認（ブラウザ使用）
 
 ```
