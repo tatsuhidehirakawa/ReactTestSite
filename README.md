@@ -25,7 +25,8 @@ myportfolio_k
   │        └─main.go
   ├─k_211aps_dev          # 311番接続試験用APサーバ(開発用／試験中)
   │
-  ├─k_310dbs_dev          # 簡易311番DBサーバ(開発用／PostgreSQL使用)
+  ├─k_310dbs_dev
+  ├─k_311dbs_dev          # 簡易311番DBサーバ(開発用／PostgreSQL使用)
   │
   ├─k_710log_dev          # Syslogサーバ開発用(未着手)
   │
