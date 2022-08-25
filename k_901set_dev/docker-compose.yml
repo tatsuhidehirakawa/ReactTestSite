@@ -41,8 +41,8 @@ services:
 volumes:
   db-store:
 
-#---k_211aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-networks:
-  default:
-    external:
-      name: postgres-test-network
+##---k_211aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#networks:
+#  default:
+#    external:
+#      name: postgres-test-network

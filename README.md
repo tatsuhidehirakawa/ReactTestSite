@@ -40,8 +40,9 @@ myportfolio_k
   │  │  ├─config
   │  │  │  └─postgresql.conf
   │  │  └─initdb
-  │  │     ├─01_initialize.sql
-  │  │     └─02_create_table.sql
+  │  │     ├─01_initialize.sql     # DDL,DCL
+  │  │     ├─02_create_table.sql   # DML,DCL,DDL
+  │  │     └─03_initdata.sql       # DML
   │  └─docker-compose.yml
   │
   └─READMR.md
