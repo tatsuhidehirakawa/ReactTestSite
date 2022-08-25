@@ -26,8 +26,6 @@ docker exec -it k_901set_dev-211aps_dev-1 apt-get update # apt-getのupdate
 docker exec -it k_901set_dev-211aps_dev-1 apt-get install iputils-ping net-tools # pingコマンドのインストール
 docker exec -it k_901set_dev-211aps_dev-1 ping -c 3 311dbs_dev # 311dbs_devへping
 docker-compose exec -it goapp go run main.go # 
-start chrome http://localhost:3000/ # Webサーバの動作確認（ブラウザ使用）
-
 ```
 
 <!--
