@@ -16,19 +16,19 @@ CSS-in-JSは情勢をよく観察しデファクトスタンダードが決ま�
 ```
 myportfolio_k
   │
-  ├─k_110wbs_dev          # WEBサーバ(creat-react-app)
-  ├─k_111wbs_dev          # WEBサーバ(開発用／React使用)
+  ├─k_110wbs_dev
+  ├─k_111wbs_dev          # 111番WEBサーバ(開発用／React使用)
   │
-  ├─k_210aps_dev          # Go簡易テスト用210番APサーバ(開発用／Go使用)
+  ├─k_210aps_dev
   │  └─cmd
   │     └─hello
   │        └─main.go
-  ├─k_211aps_dev          # 311番接続試験用APサーバ(開発用／試験中)
+  ├─k_211aps_dev          # 211番APサーバ(開発用／Go利用／試験中)
   │
   ├─k_310dbs_dev
   ├─k_311dbs_dev          # 簡易311番DBサーバ(開発用／PostgreSQL使用)
   │
-  ├─k_710log_dev          # Syslogサーバ開発用(未着手)
+  ├─k_711log_dev          # Syslogサーバ開発用(未着手)
   │
   ├─k_900set_dev          # 210番コンテナ利用バージョン
   ├─k_901set_dev          # 211番コンテナ利用バージョン（テスト中）
