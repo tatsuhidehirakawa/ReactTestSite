@@ -21,7 +21,7 @@ services:
     build: ../k_901set_dev/211set_dev
     tty: true
     volumes:
-      - .:/go/src/work
+      - ../k_211aps_dev:/go/src/work   # 修正
 
 #---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   311dbs_dev:
