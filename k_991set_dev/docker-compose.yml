@@ -1,0 +1,15 @@
+version: "3"
+services:
+
+#---k_991set_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  991set_dev:
+    build: ../k_901set_dev/111set_dev
+    volumes:
+    # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
+      - ../k_111wbs_dev:/usr/src/app
+  # working_dir: /usr/src/app/k_111wbs_dev     # バインドマウント
+    working_dir: /usr/src/app
+    ports:
+      - "3000:3000"
+    command: sh -c "yarn start"
+    stdin_open: true
