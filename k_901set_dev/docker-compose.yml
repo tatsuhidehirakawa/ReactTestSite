@@ -10,18 +10,22 @@ services:
   # working_dir: /usr/src/app/k_111wbs_dev     # バインドマウント
     working_dir: /usr/src/app
     environment:
-      - CHOKIDAR_USEPOLLING=true                  # ホットリロード
+      - CHOKIDAR_USEPOLLING=true               # ホットリロード
     ports:
       - "3000:3000"
     command: sh -c "yarn start"
     stdin_open: true
+    networks:                                  # 20220825追加
+      - postgres-test-network                  # 20220825追加
 
 #---k_211aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   211aps_dev:
     build: ../k_901set_dev/211set_dev
     tty: true
     volumes:
-      - ../k_211aps_dev:/go/src/work   # 修正
+      - ../k_211aps_dev:/go/src/work           # 修正
+    networks:                                  # 20220825追加
+      - postgres-test-network                  # 20220825追加
 
 #---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   311dbs_dev:
@@ -36,13 +40,16 @@ services:
       - ./311set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
       - POSTGRES_PASSWORD=passw0rd
+    networks:                                  # 20220825追加
+      - postgres-test-network                  # 20220825追加
 
 #---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   db-store:
 
 ##---k_211aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-#networks:
-#  default:
+networks:
+  postgres-test-network:                        # 20220825追加
+    driver: bridge                              # 20220825追加
 #    external:
 #      name: postgres-test-network
