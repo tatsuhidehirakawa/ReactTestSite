@@ -13,9 +13,8 @@ type EMPLOYEE struct {
 }
 
 func main() {
-//  db, err := sql.Open("postgres", "host=db port=5432 user=root sslmode=disable")                  20220825修正
-//  db, err := sql.Open("postgres", "host=311dbs_dev port=5432 user=postgres sslmode=disable")
-    db, err := sql.Open("postgres", "host=311dbs_dev port=5432 user=tatsu_hira_s sslmode=disable")           // 20220826修正／postgres->hoge
+//  db, err := sql.Open("postgres", "host=db port=5432 user=root sslmode=disable")                          20220825修正
+    db, err := sql.Open("postgres", "host=311dbs_dev port=5432 user=postgres sslmode=disable")           // 20220826修正／postgres->hoge
 
     defer db.Close()
 
