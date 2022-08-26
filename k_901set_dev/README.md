@@ -14,20 +14,32 @@ Html／CSS／Sass／Golang／JavaScript／PostgreSQL
 Windows10／VSCode／Docker  
 
 ４　起動・確認コマンド等
+※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
 ```
 cd k_901set_dev # カレントディレクトリを変更
-docker network create postgres-test-network # ネットワークを作成
-docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
-docker compose up # コンテナ群の起動
-docker-compose exec  -it 211aps_dev go get github.com/lib/pq # ドライバ入手
-docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのマウント確認
-docker ps # (別ターミナルで)Goのコンテナ確認
-docker exec -it k_901set_dev-211aps_dev-1 apt-get update # apt-getのupdate
-docker exec -it k_901set_dev-211aps_dev-1 apt-get install iputils-ping net-tools # pingコマンドのインストール
-docker exec -it k_901set_dev-211aps_dev-1 ping -c 3 311dbs_dev # 311dbs_devへping
-docker-compose exec -it goapp go run main.go # 
 ```
+コンテナビルド   
+```
+docker-compose build --no-cache
+docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
+docker compose up -d # コンテナ群の起動
+docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのマウント確認
 
+```
+APサーバからDBサーバへのコンテナ操作  
+```
+docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
+go mod init
+go get
+go run main.go
+psql -h k_901set_dev-311dbs_dev-1 -p 5432 -U postgres postgres # アクセス
+select * from employee;
+```
+APサーバからDBサーバへのping  
+```
+docker ps # (別ターミナルで)Goのコンテナ確認
+docker exec -it k_901set_dev-211aps_dev-1 ping -c 3 311dbs_dev # 311dbs_devへping
+```
 <!--
 ３　今後の課題（覚え書き）  
 ①引き続きローカルのOSにはDocker Desktop for Windows以外のミドルウェアをインストールせず開発環境はDocker上に構築すること  
