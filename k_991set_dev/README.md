@@ -10,7 +10,7 @@ ubuntu Latestバージョン
 
 ３　実行環境  
 Windows10／VSCode／Docker  
-VSCodeに拡張機能「Remote - Containers」を入れ、本コンテナを選択する。  
+VSCodeに拡張機能「Remote - Containers」を入れた上で本コンテナを選択する。  
 
 ４　起動コマンド  
 ```
@@ -20,5 +20,5 @@ docker exec -it コンテナ名 ls # バインドマウント内容の確認
 ```
 ５　コンテナ内でのコマンド操作（参考）  
 ```
-cat /etc/issue # Ubuntuのバージョン確認
+    cat /etc/issue # Ubuntuのバージョン確認
 ```
