@@ -22,7 +22,7 @@ cd k_901set_dev
 ```
 docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
 ```
- 4-3. コンテナビルド（バックエンド／211aps_dev、311dbs_dev）※バックエンドのみの試験の際は省略可  
+ 4-3. コンテナビルド（バックエンド／211aps_dev、311dbs_dev）※フロントエンドのみの試験の際は省略可  
 ```
 docker-compose build --no-cache
 ```
