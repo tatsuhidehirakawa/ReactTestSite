@@ -23,16 +23,16 @@ cd k_901set_dev
 ```
 docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
 ```
- 4-3. 211番コンテナビルド（211aps_dev、311dbs_dev／※フロントエンドのみの試験の際は省略）  
+ 4-3. 211番コンテナのビルド（211aps_dev、311dbs_dev／※フロントエンドのみの試験の際は省略）  
 ```
 docker-compose build --no-cache
 ```
- 4-4. コンテナ起動
+ 4-4. 111、211、311番コンテナ群の起動
 ```
-docker compose up -d # コンテナ群の起動
+docker compose up -d
 docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのバインドマウントの確認
 ```
- 4-5. APサーバ（211番）からDBサーバ（311番）へのコンテナ操作  
+ 4-5. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
 ```
 docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
 go mod init
@@ -41,9 +41,9 @@ go run main.go
 psql -h k_901set_dev-311dbs_dev-1 -p 5432 -U postgres postgres # アクセス
 select * from employee;
 ```
-4-6. APサーバからDBサーバへのping  
+4-6. 211番（APサーバ）から311番（DBサーバ）へのping  
 ```
-docker ps # (別ターミナルで)Goのコンテナ確認
+docker ps # Goのコンテナ確認(別ターミナルで)
 docker exec -it k_901set_dev-211aps_dev-1 ping -c 3 311dbs_dev # 311dbs_devへping
 ```
 <!--
