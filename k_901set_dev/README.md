@@ -18,13 +18,18 @@ Windows10／VSCode／Docker
 ```
 cd k_901set_dev # カレントディレクトリを変更
 ```
-コンテナビルド   
+コンテナビルド（フロントエンド／111wbs_dev）※バックエンドのみの試験の際は省略可  
+```
+docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
+```
+コンテナビルド（バックエンド／211aps_dev、311dbs_dev）※バックエンドのみの試験の際は省略可  
 ```
 docker-compose build --no-cache
-docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
+```
+コンテナ起動
+```
 docker compose up -d # コンテナ群の起動
 docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのマウント確認
-
 ```
 APサーバからDBサーバへのコンテナ操作  
 ```
