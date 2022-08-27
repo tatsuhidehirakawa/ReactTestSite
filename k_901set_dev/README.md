@@ -18,11 +18,11 @@ Windows10／VSCode／Docker
 ```
 cd k_901set_dev
 ```
- 4-2. コンテナビルド（フロントエンド／111wbs_dev／※バックエンドのみの試験の際は省略）  
+ 4-2. 111番コンテナビルド（111wbs_dev／※バックエンドのみの試験の際は省略）  
 ```
 docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
 ```
- 4-3. コンテナビルド（バックエンド／211aps_dev、311dbs_dev／※フロントエンドのみの試験の際は省略）  
+ 4-3. 211番コンテナビルド（211aps_dev、311dbs_dev／※フロントエンドのみの試験の際は省略）  
 ```
 docker-compose build --no-cache
 ```
