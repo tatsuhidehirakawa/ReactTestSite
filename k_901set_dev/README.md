@@ -1,6 +1,5 @@
 Web開発用Dockerコンテナ群  
-「k_901set_dev」  
-使用コンテナ：111wbs_dev、211aps_dev、311dbs_dev  
+「k_901set_dev」＝「111wbs_dev」＋「211aps_dev」＋「311dbs_dev」  
 ---
 
 １　履 歴  
