@@ -33,10 +33,10 @@ docker-compose build --no-cache
  4_4. 111、211、311番コンテナ群の起動
 ```
 docker compose up -d
-docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのバインドマウントの確認
 ```
  4_5. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
 ```
+docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのバインドマウントの確認
 docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
 go mod init
 go get
