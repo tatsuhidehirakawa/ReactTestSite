@@ -2,17 +2,17 @@ Web開発用Dockerコンテナ群
 「k_901set_dev」＝「111wbs_dev」＋「211aps_dev」＋「311dbs_dev」  
 ---
 
-1. 履 歴  
+１. 履 歴  
 2022. 8.17 実装開始  
 2022. 8.22 Web、AP、DBサーバ用docker-compose.yml及び構築手順を統合(k_901set_dev内／個別のdocker-compose.yml廃止)  
 
-2. 技術スタック  
+２. 技術スタック  
 Html／CSS／Sass／Golang／JavaScript／PostgreSQL  
 
-3. 実行環境  
+３. 実行環境  
 Windows10／VSCode／Docker  
 
-4. 起動・確認コマンド等  
+４. 起動・確認コマンド等  
 ※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
  4-1. カレントディレクトリを変更  
 ```
