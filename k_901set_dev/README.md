@@ -49,7 +49,7 @@ select * from employee;
 docker ps # Goのコンテナ確認(別ターミナルで)
 docker exec -it k_901set_dev-211aps_dev-1 ping -c 3 311dbs_dev # 311dbs_devへping
 ```
-５．開発方針
+５．開発方針  
 　CSS-in-JavaScriptには当面手を出さない。  
 　Paas利用は極力避ける。  
 　ファイル名の命名規則を浸透させることによりディレクトリ依存を避けネストを極力浅く保つ。  
