@@ -5,6 +5,7 @@ Web開発用Dockerコンテナ群
 １. 履 歴  
 2022. 8.17 実装開始  
 2022. 8.22 Web、AP、DBサーバ用docker-compose.yml及び構築手順を統合(k_901set_dev内／個別のdocker-compose.yml廃止)  
+2022. 8.27 環境変数を導入  
 
 ２. 技術スタック  
 Html／CSS／Sass／Golang／JavaScript／PostgreSQL  
