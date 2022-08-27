@@ -31,7 +31,7 @@ docker-compose build --no-cache
 docker compose up -d # コンテナ群の起動
 docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのマウント確認
 ```
- 4-5. APサーバからDBサーバへのコンテナ操作  
+ 4-5. APサーバ（211番）からDBサーバ（311番）へのコンテナ操作  
 ```
 docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
 go mod init
