@@ -15,24 +15,24 @@ Windows10／VSCode／Docker
 
 ４. 起動・確認コマンド等  
 　※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
- 4-1. 911番ディレクトリへカレントを変更  
+ 4_1. 911番ディレクトリへカレントを変更  
 ```
 cd k_901set_dev
 ```
- 4-2. 111番コンテナビルド（111wbs_dev／※バックエンドのみの試験の際は省略）  
+ 4_2. 111番コンテナビルド（111wbs_dev／※バックエンドのみの試験の際は省略）  
 ```
 docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
 ```
- 4-3. 211番コンテナのビルド（211aps_dev、311dbs_dev／※フロントエンドのみの試験の際は省略）  
+ 4_3. 211番コンテナのビルド（211aps_dev、311dbs_dev／※フロントエンドのみの試験の際は省略）  
 ```
 docker-compose build --no-cache
 ```
- 4-4. 111、211、311番コンテナ群の起動
+ 4_4. 111、211、311番コンテナ群の起動
 ```
 docker compose up -d
 docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのバインドマウントの確認
 ```
- 4-5. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
+ 4_5. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
 ```
 docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
 go mod init
