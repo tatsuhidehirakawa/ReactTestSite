@@ -29,7 +29,7 @@ docker-compose build --no-cache
  4-4. コンテナ起動
 ```
 docker compose up -d # コンテナ群の起動
-docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのマウント確認
+docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのバインドマウントの確認
 ```
  4-5. APサーバ（211番）からDBサーバ（311番）へのコンテナ操作  
 ```
