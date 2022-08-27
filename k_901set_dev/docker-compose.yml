@@ -39,7 +39,7 @@ services:
       - ./311set_dev/initdb:/docker-entrypoint-initdb.d #sql指定 initdb
       - ./311set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
-      - POSTGRES_PASSWORD=passw0rd
+      - POSTGRES_PASSWORD=${PGSQL_PW}          # 環境変数->${PGSQL_PW}
     networks:                                  # 20220825追加
       - postgres-test-network                  # 20220825追加
 

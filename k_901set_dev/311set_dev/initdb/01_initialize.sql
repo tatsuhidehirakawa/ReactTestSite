@@ -8,7 +8,7 @@ CREATE DATABASE hogedb;
 CREATE SCHEMA hogeschema;
 
 -- ロールの作成
-CREATE ROLE hoge WITH LOGIN PASSWORD 'passw0rd';
+CREATE ROLE hoge WITH LOGIN PASSWORD '${PGSQL_PW}';
 
 -- 権限追加
 GRANT ALL PRIVILEGES ON SCHEMA hogeschema TO hoge;
