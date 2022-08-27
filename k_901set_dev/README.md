@@ -13,7 +13,7 @@ Html／CSS／Sass／Golang／JavaScript／PostgreSQL
 Windows10／VSCode／Docker  
 
 ４. 起動・確認コマンド等  
-※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
+　※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
  4-1. カレントディレクトリを変更  
 ```
 cd k_901set_dev
