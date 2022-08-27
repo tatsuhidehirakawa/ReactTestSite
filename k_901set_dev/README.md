@@ -9,7 +9,9 @@ Web開発用Dockerコンテナ群
 2022. 8.27 環境変数を導入  
 
 ２. 技術スタック  
-Html／CSS／Sass／Golang／JavaScript／PostgreSQL  
+111wbs_dev：Html／CSS／Sass／JavaScript／Docker  
+211aps_dev：Golang(Gin)／Docker  
+311dbs_dev：PostgreSQL／Docker／A5:SQL MK-2  
 
 ３. 実行環境  
 Windows10／VSCode／Docker  
