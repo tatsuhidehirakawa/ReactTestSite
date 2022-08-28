@@ -18,18 +18,18 @@ myportfolio_k
   │
   ├─k_110wbs_dev
   ├─k_111wbs_dev
-  ├─k_112wbs_dev          # ポートフォリオ（Ver112／WEBサーバ）
+  ├─k_112wbs_dev          # ポートフォリオ（WEBサーバ）
   │
   ├─k_210aps_dev
-  ├─k_211aps_dev          # ポートフォリオ（Ver211／APサーバ)
+  ├─k_211aps_dev          # ポートフォリオ（APサーバ)
   │
   ├─k_310dbs_dev
-  ├─k_311dbs_dev          # ポートフォリオ（Ver311／DBサーバ)
+  ├─k_311dbs_dev          # ポートフォリオ（DBサーバ)
   │
   ├─k_711log_dev
   │
   ├─k_900set_dev
-  ├─k_901set_dev          # ポートフォリオ（Ver901／Dockerファイル群）
+  ├─k_901set_dev          # ポートフォリオ（Dockerファイル群）
   │  ├─111set_dev
   │  │  └─Dockerfile
   │  ├─211set_dev
