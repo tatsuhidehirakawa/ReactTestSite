@@ -12,24 +12,24 @@ by Tatsuhide Hirakawa
 ベンダーロックインを避けるためあまりにも便利すぎるクラウドサービス依存は避ける。（ファイルを置くだけでデプロイできてしまうようなサービス等）  
 CSS-in-JSは情勢をよく観察しデファクトスタンダードが決まるまでは手を出さず様子を見る。  
 -->
-主要なファイル・ディレクトリ構成図(抜粋)  
+リポジトリ・ポートフォリオ・ディレクトリ構成図(抜粋)  
 ```
 myportfolio_k
   │
   ├─k_110wbs_dev
   ├─k_111wbs_dev
-  ├─k_112wbs_dev          # ポートフォリオ（112WEBサーバ）
+  ├─k_112wbs_dev          # ポートフォリオ（Ver112／WEBサーバ）
   │
   ├─k_210aps_dev
-  ├─k_211aps_dev          # ポートフォリオ（311番APサーバ)
+  ├─k_211aps_dev          # ポートフォリオ（Ver211／APサーバ)
   │
   ├─k_310dbs_dev
-  ├─k_311dbs_dev          # ポートフォリオ（311番DBサーバ)
+  ├─k_311dbs_dev          # ポートフォリオ（Ver311／DBサーバ)
   │
   ├─k_711log_dev
   │
   ├─k_900set_dev
-  ├─k_901set_dev          # ポートフォリオ（901番Dockerファイル群）
+  ├─k_901set_dev          # ポートフォリオ（Ver901／Dockerファイル群）
   │  ├─111set_dev
   │  │  └─Dockerfile
   │  ├─211set_dev
