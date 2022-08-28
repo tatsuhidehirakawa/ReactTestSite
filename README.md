@@ -22,6 +22,7 @@ myportfolio_k
   │
   ├─k_210aps_dev
   ├─k_211aps_dev          # ポートフォリオ（APサーバ)
+  ├─k_212api_dev
   │
   ├─k_310dbs_dev
   ├─k_311dbs_dev          # ポートフォリオ（DBサーバ)
