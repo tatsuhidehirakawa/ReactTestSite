@@ -18,12 +18,12 @@ services:
     networks:                                  # 20220825追加
       - postgres-test-network                  # 20220825追加
 
-#---k_211aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  211aps_dev:
-    build: ../k_901set_dev/211set_dev
+#---k_212aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  212aps_dev:
+    build: ../k_902set_dev/212set_dev
     tty: true
     volumes:
-      - ../k_211aps_dev:/go/src/work           # 修正
+      - ../k_212aps_dev:/go/src/work           # 修正
     networks:                                  # 20220825追加
       - postgres-test-network                  # 20220825追加
 

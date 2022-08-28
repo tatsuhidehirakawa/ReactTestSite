@@ -1,5 +1,5 @@
 Web開発用Dockerコンテナ群  
-「k_901set_dev（「111wbs_dev」＋「211aps_dev」＋「311dbs_dev」）」  
+「k_901set_dev（「111wbs_dev」＋「212aps_dev」＋「311dbs_dev」）」  
 の起動・操作手順  
 ---
 
@@ -7,6 +7,7 @@ Web開発用Dockerコンテナ群
 2022. 8.17 実装開始  
 2022. 8.22 Web、AP、DBサーバ用docker-compose.yml及び構築手順を統合(k_901set_dev内／個別のdocker-compose.yml廃止)  
 2022. 8.27 環境変数を導入  
+2022. 8.28 APからAPIへの以降作業開始  
 
 ２. 技術スタック  
 111wbs_dev：Html／CSS／Sass／JavaScript／Docker  
