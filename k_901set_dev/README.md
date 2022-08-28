@@ -36,7 +36,7 @@ docker compose up -d
 ```
  4_5. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
 ```
-docker exec -it k_901set_dev-211aps_dev-1 ls # goコンテナのバインドマウントの確認
+docker exec -it k_902set_dev-212api_dev ls # goコンテナのバインドマウントの確認
 docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
 go mod init
 go get

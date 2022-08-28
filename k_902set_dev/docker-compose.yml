@@ -2,11 +2,11 @@ version: "3"
 services:
 
 #---k_111wbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  111wbs_dev:
-    build: ../k_901set_dev/111set_dev
+  112wbs_dev:
+    build: ../k_902set_dev/112set_dev
     volumes:
     # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
-      - ../k_111wbs_dev:/usr/src/app
+      - ../k_112wbs_dev:/usr/src/app
   # working_dir: /usr/src/app/k_111wbs_dev     # バインドマウント
     working_dir: /usr/src/app
     environment:
@@ -28,7 +28,7 @@ services:
       - postgres-test-network                  # 20220825追加
 
 #---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  311dbs_dev:
+  312dbs_dev:
     image: postgres:14
   # container_name: k_311dbs_pg_g # 変更：postgres -> k_311dbs_pg_g
     command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
