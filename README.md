@@ -21,16 +21,18 @@ myportfolio_k
   ├─k_112wbs_dev          # ポートフォリオ（WEBサーバ）
   │
   ├─k_210aps_dev
-  ├─k_211aps_dev          # ポートフォリオ（APサーバ)
-  ├─k_212api_dev
+  ├─k_211aps_dev
+  ├─k_212api_dev          # ポートフォリオ（APIサーバ)
   │
   ├─k_310dbs_dev
-  ├─k_311dbs_dev          # ポートフォリオ（DBサーバ)
+  ├─k_311dbs_dev
+  ├─k_312dbs_dev          # ポートフォリオ（DBサーバ)
   │
   ├─k_711log_dev
   │
   ├─k_900set_dev
-  ├─k_901set_dev          # ポートフォリオ（Dockerファイル群）
+  ├─k_901set_dev
+  ├─k_902set_dev          # ポートフォリオ（Dockerファイル群）
   │  ├─111set_dev
   │  │  └─Dockerfile
   │  ├─211set_dev
@@ -43,6 +45,7 @@ myportfolio_k
   │  │     ├─02_create_table.sql   # DML,DCL,DDL
   │  │     └─03_initdata.sql       # DML
   │  └─docker-compose.yml
+  │
   ├─k_991set_dev
   │
   └─READMR.md
