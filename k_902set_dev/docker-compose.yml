@@ -23,9 +23,11 @@ services:
     build: ../k_902set_dev/212set_dev
     tty: true
     volumes:
-      - ../k_212api_dev:/go/src/work           # 修正
-    networks:                                  # 20220825追加
-      - postgres-test-network                  # 20220825追加
+      - ../k_212api_dev/web:/go/src
+    ports:
+      - "3000:3000"
+    networks:
+      - postgres-test-network
 
 #---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   312dbs_dev:
