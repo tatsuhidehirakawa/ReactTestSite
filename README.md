@@ -81,7 +81,7 @@ non_SAP
 |  CLIENT   +<--html-->+ WebServer +---js?----+  APserver +<--SQL--->+  DBServer |
 |        #80|          |           |          |#443  #5432|          |#5432      |
 +-----------+          +-----------+          +-----------+          +-----------+
-almost_SAP
+SAP_Architecture
 +-----------+          +-----------+          +-----------+          +-----------+
 |           |          |           |          |           |          |           |
 | WebServer +---html-->+   CLIENT  +<--JSON-->+ APIserver +<--SQL--->+  DBServer |
