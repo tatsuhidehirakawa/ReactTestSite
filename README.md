@@ -46,9 +46,9 @@ myportfolio_k
   │  │     └─03_initdata.sql       # DML
   │  └─docker-compose.yml
   │
-  ├─k_991set_dev
+  ├─k_991set_dev           # Ubuntu22.04.1 LTS,Git
   │
-  └─READMR.md            # Ubuntu22.04.1 LTS,Git
+  └─READMR.md
 ```
 
 <!--
