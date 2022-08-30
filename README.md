@@ -82,8 +82,8 @@ SAP_Architecture
 |           |<--JSON-->|#443  #5432|<--SQL--->|#5432      |
 |           |          +-----------+          +-----------+
 |   CLIENT  |          +-----------+
-|           |   HTML   | WebServer |
-|           |   CSS    |React,Sass |
-|           |<--JS-----|#80        |
+|           |          | WebServer |
+|           |   HTML   |React,Sass |
+|           |<-CSS,JS--|#80        |
 +-----------+          +-----------+
 ```
