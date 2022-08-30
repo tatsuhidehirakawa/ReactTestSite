@@ -79,7 +79,7 @@ SAP_Architecture
 +-----------+          +-----------+          +-----------+
 |           |          | APIServer |          |  DBServer |
 |           |          |Golang(Gin)|          | PostgreSQL|
-|           |<--JSON-->|#443  #5432|<--SQL--->|#5432      |
+| API call->|<--JSON-->|#443  #5432|<--SQL--->|#5432      |
 |           |          +-----------+          +-----------+
 |   CLIENT  |          +-----------+
 |           |          | WebServer |
