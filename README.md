@@ -83,8 +83,8 @@ non_SAP
 +-----------+          +-----------+          +-----------+          +-----------+
 SAP_Architecture
 +-----------+          +-----------+          +-----------+          +-----------+
-|           |          |           |          |           |          |           |
-| WebServer +---html-->+   CLIENT  +<--JSON-->+ APIserver +<--SQL--->+  DBServer |
+| WebServer |          |           |          | APIserver |          |  DBServer |
+|React,Sass +---html-->+   CLIENT  +<--JSON-->+Golang(Gin)+<--SQL--->+ PostgreSQL|
 |        #80|          |           |          |#443  #5432|          |#5432      |
 +-----------+          +-----------+          +-----------+          +-----------+
 ```
