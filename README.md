@@ -48,7 +48,7 @@ myportfolio_k
   │
   ├─k_991set_dev
   │
-  └─READMR.md
+  └─READMR.md            # Ubuntu22.04.1 LTS,Git
 ```
 
 <!--
