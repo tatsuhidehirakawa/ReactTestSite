@@ -78,6 +78,7 @@ myportfolio_k
 SAP_dev_Architecture
 +-----------+          +-----------+          +-----------+
 |           |          |   *212    |          |   *312    |
+|           |          | APIServer |          |  DBServer |
 |           |          |Golang(Gin)|          | PostgreSQL|
 |           |          |           |          |           |
 | API call->|<--JSON-->|#443  #5432|<--SQL--->|#5432      |
