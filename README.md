@@ -77,11 +77,13 @@ myportfolio_k
 ```
 SAP_Architecture
 +-----------+          +-----------+          +-----------+
+|           |          |   *212    |          |   *312    |
 |           |          | APIServer |          |  DBServer |
 |           |          |Golang(Gin)|          | PostgreSQL|
 | API call->|<--JSON-->|#443  #5432|<--SQL--->|#5432      |
 |           |          +-----------+          +-----------+
 |   CLIENT  |          +-----------+
+|           |          |   *112    |
 |           |          | WebServer |
 |           |   HTML   |React,Sass |
 |           |<-CSS,JS--|#80        |
