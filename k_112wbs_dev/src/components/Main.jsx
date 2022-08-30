@@ -7,6 +7,7 @@
 ----+----+----+----+----+----+----+----+----+----+---*/
 import React from "react";
 import Lesson from "./Lesson";
+import CommentForm from "./CommentForm";
 import "./Main.scss";
 
 const MainWrapper = () => {
@@ -74,13 +75,8 @@ const MainWrapper = () => {
             <li>1234567890</li>
           </ul>
         </div>
-        {/*---json通信のテストエリア----------------------------*/}
 
-        function onSearchButtonClicked(keyword) {
-        const response = await fetch("https://aaa.com/book?n=" + keyword);(2-①、3-③の処理)
-        //結果を加工して画面表示 (3-③の処理)
-        }
-        {/*----------------------------------------------------*/}
+        <CommentForm />  {/*---DBへのテキスト送付用簡易ボタン*/}
 
         <div className="lesson-container">
           <h3>Mapメソッドの練習エリア（）</h3>
