@@ -7,8 +7,7 @@
 
 ----+----+----+----+----+----+----+----+----+----+---*/
 /*
-https://jsonplaceholder.typicode.com/posts
-にあるpostの状態をapiを叩いて取得する
+https://jsonplaceholder.typicode.com/postsにあるpostの状態をapiを叩いて取得する
 */
  import { Fragment, useEffect, useState } from "react";
  import "./styles.css";
