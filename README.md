@@ -67,13 +67,13 @@ myportfolio_k
 ```
 SAP_dev_Architecture
 +───────────+            +-----------+          +-----------+
-|           |            |   *212    |          |   *312    |
-|           |            | APIServer |          |  DBServer |
-|           |            |Golang(Gin)|          | PostgreSQL|
-|           |            |           |          |           |
-|           |  ┌──JSON──>|#443  #5432|<---SQL-->|#5432      |
-|   CLIENT  |  |         +-----------+          +-----------+
-|           |  |         +-----------+
+│           |            |   *212    |          |   *312    |
+│           |            | APIServer |          |  DBServer |
+│           |            |Golang(Gin)|          | PostgreSQL|
+│           |            |           |          |           |
+│           |  ┌──JSON──>|#443  #5432|<---SQL-->|#5432      |
+│   CLIENT  |  |         +-----------+          +-----------+
+│           |  |         +-----------+
 |        #80|<-┤         |   *112    |
 |           |  |         | WebServer |
 |           |  |         |React,Sass |
