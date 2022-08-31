@@ -20,7 +20,7 @@ myportfolio_k
   ├─k_212api_dev          # APIサーバ
   ├─k_312dbs_dev          # DBサーバ
   │
-  ├─k_711log_dev
+  ├─k_710log_dev
   │
   ├─k_902set_dev          # Dockerファイル群
   │  ├─112set_dev
