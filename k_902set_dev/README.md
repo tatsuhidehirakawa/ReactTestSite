@@ -4,21 +4,25 @@ Web開発用Dockerコンテナ群
 ---
 
 １. 履 歴  
-2022. 8.17 実装開始  
-2022. 8.22 Web、AP、DBサーバ用docker-compose.yml及び構築手順を統合(k_901set_dev内／個別のdocker-compose.yml廃止)  
-2022. 8.27 環境変数を導入  
-2022. 8.28 APからAPIへの以降作業開始  
+2022. 8.17 実装開始（902dbs_dev）  
+2022. 8.22 docker-compose.ymlを統合（902dbs_dev）  
+2022. 8.27 環境変数を導入（902dbs_dev）  
+2022. 8.28 APからAPIへの以降作業開始（212api_dev）  
+2022. 9. 3 「.sql」ファイルのコードを実装（902dbs_dev）  
+2022. 9. 6 (予定)REST（ULCODC$SS）コンポーネントを実装（112wbs_dev）  
 
 ２. 技術スタック  
-111wbs_dev：Html／CSS／Sass／JavaScript／Docker  
-211aps_dev：Golang(Gin)／Docker  
-311dbs_dev：PostgreSQL／Docker／A5:SQL MK-2  
+112wbs_dev：React.js／Html／Sass／（TypeScript）  
+212api_dev：Golang(Gin)  
+312dbs_dev：PostgreSQL  
+902dbs_dev：Docker／A5:SQL MK-2  
 
 ３. 実行環境  
-Windows10／VSCode／Docker  
+Windows10／VSCode／Docker desktop for Windows   
 
 ４. 起動・確認コマンド等  
 　※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
+
  4_1. 911番ディレクトリへカレントを変更  
 ```
 cd k_901set_dev

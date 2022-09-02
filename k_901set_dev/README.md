@@ -9,15 +9,17 @@ Web開発用Dockerコンテナ群
 2022. 8.27 環境変数を導入  
 
 ２. 技術スタック  
-111wbs_dev：Html／CSS／Sass／JavaScript／Docker  
-211aps_dev：Golang(Gin)／Docker  
-311dbs_dev：PostgreSQL／Docker／A5:SQL MK-2  
+111wbs_dev：React.js／Html／CSS／Sass／JavaScript  
+211aps_dev：Golang  
+311dbs_dev：PostgreSQL  
+901dbs_dev：Docker  
 
 ３. 実行環境  
-Windows10／VSCode／Docker  
+Windows10／VSCode／Docker desktop for Windows  
 
 ４. 起動・確認コマンド等  
 　※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
+
  4_1. 911番ディレクトリへカレントを変更  
 ```
 cd k_901set_dev
