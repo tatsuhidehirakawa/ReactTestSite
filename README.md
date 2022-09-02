@@ -65,7 +65,7 @@ myportfolio_k
 
 
 ```
-SAP_dev_Architecture
+REST(ULCODC$SS)_Architecture
 +-----------+            +-----------+          +-----------+
 |           |            |   *212    |          |   *312    |
 |           |            | APIServer |          |  DBServer |
