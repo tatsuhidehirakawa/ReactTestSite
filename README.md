@@ -1,5 +1,4 @@
 ## 個人開発練習用リポジトリ
-by Tatsuhide Hirakawa
 
 －開発方針－  
 方向性：一般的な「CtoC」サイトの雛形構築  
