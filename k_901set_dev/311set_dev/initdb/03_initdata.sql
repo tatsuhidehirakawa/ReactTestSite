@@ -1,4 +1,8 @@
-INSERT INTO TABLENAME (ID,NAME) VALUES(対応する値),(対応する値),(対応する値)
---マルチプルインサート
+--初期データ(管理者用データ)の記述
+INSERT INTO account_master
+  (user_id,account_name,password,time_zone,language,)
+VALUES
+  ('5e9nr6eka93u','Admin','${PGSQL_PW}','Asia/Tokyo');
 
---初めに必要なデータをここに投入する。区分値、管理者ユーザのログイン情報のバリエーションを記述するための
+
+--初期データ(管理者ユーザのログイン情報)をマルチプルインサートを利用し記述する

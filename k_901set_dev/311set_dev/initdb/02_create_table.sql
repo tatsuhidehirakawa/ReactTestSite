@@ -1,5 +1,5 @@
 -- Project Name : noname
--- Date/Time    : 2022/09/03 11:05:46
+-- Date/Time    : 2022/09/03 13:11:45
 -- Author       : tatsu_hira_s
 -- RDBMS Type   : PostgreSQL
 -- Application  : A5:SQL Mk-2
@@ -16,7 +16,7 @@
 --* RestoreFromTempTable
 create table account_attribute (
   account_id varchar(100) not null
-  , self_introduction character varying(1000) not null
+  , self_introduction character varying(1000)
   , twitter_url character varying
   , facebook_url character varying
   , instagram_url character varying
@@ -49,7 +49,7 @@ create table account_master (
 
 comment on table account_attribute is 'account_attribute';
 comment on column account_attribute.account_id is 'Account-ID:アカウントID';
-comment on column account_attribute.self_introduction is 'Self Introduction:自己紹介';
+comment on column account_attribute.self_introduction is 'Self Introduction';
 comment on column account_attribute.twitter_url is 'Twitter URL:ツイッターID';
 comment on column account_attribute.facebook_url is 'Facebook URL:フェイスブックID';
 comment on column account_attribute.instagram_url is 'Instagram URL:インスタグラムID';
