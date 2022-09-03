@@ -28,8 +28,8 @@ REST(ULCODC$SS)_Architecture
 |           |  | |         | WebServer |                        |
 |           |  | |         |React,Sass |                        |
 |           |  | |  HTML   |           |                        |
-|           |  | +-CSS,JS--|#8080      |                        |
-|           |  |           +-----------+        Amazon Linux 2  |
+|           |  | +-CSS,JS--|#8080      | dev: Ubuntu 22.04 LTS  |
+|           |  |           +-----------+ act: Amazon Linux 2022 |
 +-----------+  +------------------------------------------------+
 ```
 ディレクトリ構成図(抜粋)  
