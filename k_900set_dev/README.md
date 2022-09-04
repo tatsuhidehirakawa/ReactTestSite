@@ -26,3 +26,9 @@ docker compose exec 210aps_dev go run hello/main.go # APサーバの動作確認
 docker exec -it 310dbs_dev /bin/sh # DBサーバの動作確認
 psql -h localhost -U postgres
 ```
+<!--
+cd "C:\Users\tatsu_hira_s\Documents\My Repository\myportfolio_k\k_900set_dev"; start chrome http://localhost:3000/; docker compose run --rm 110wbs_dev sh -c "npm install"; docker compose up 
+docker compose exec 210aps_dev go run hello/main.go
+docker container ls -a; docker exec -it 310dbs_dev /bin/sh
+psql -h localhost -U postgres
+-->
