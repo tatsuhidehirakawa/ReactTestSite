@@ -4,7 +4,7 @@ APIサーバ構築練習①「k212api_dev」
 ```
 docker compose up # ビルド
 docker compose exec web bash # コンテナ入系
-go mod init github.com/gin-gonic/gin/v2 # 改造
+go mod init github.com/gin-gonic/gin/v2 # Golangのバージョンに注意
 go get # 追加コマンド
 go run main.go # サーバ起動
 start chrome http://localhost:3000/
