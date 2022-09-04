@@ -1,22 +1,6 @@
 version: "3"
 services:
 
-#---k_111wbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  111wbs_dev:
-    build: ../k_901set_dev/111set_dev
-    volumes:
-      - ../k_111wbs_dev:/usr/src/app
-  # working_dir: /usr/src/app/k_111wbs_dev     # バインドマウント
-    working_dir: /usr/src/app
-    environment:
-      - CHOKIDAR_USEPOLLING=true               # ホットリロード
-    ports:
-      - "3000:3000"
-    command: sh -c "yarn start"
-    stdin_open: true
-    networks:
-      - postgres-test-network
-
 #---k_211aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   211aps_dev:
     build: ../k_901set_dev/211set_dev
@@ -26,22 +10,22 @@ services:
     networks:
       - postgres-test-network
 
-#---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  311dbs_dev:
+#---k_310dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  310dbs_dev:
     image: postgres:14
     command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
     ports:
       - 5432:5432
     volumes:
       - db-store:/var/lib/postgresql/data
-      - ./311set_dev/initdb:/docker-entrypoint-initdb.d
-      - ./311set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./310set_dev/initdb:/docker-entrypoint-initdb.d
+      - ./310set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
       - POSTGRES_PASSWORD=${PGSQL_PW}
     networks:
       - postgres-test-network
 
-#---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#---k_310dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   db-store:
 
