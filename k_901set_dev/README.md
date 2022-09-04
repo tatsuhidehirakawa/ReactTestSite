@@ -18,23 +18,19 @@ Windows10／VSCode／Docker desktop for Windows
 ４. 起動・確認コマンド等  
 　※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
 
- 4_1. 911番ディレクトリへカレントを変更  
+ 4_1. 901番ディレクトリへカレントを変更  
 ```
 cd k_901set_dev
 ```
- 4_2. 111番コンテナビルド（111wbs_dev／※バックエンドのみの試験の際は省略）  
-```
-docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
-```
- 4_3. 211番コンテナのビルド（211aps_dev、311dbs_dev／※フロントエンドのみの試験の際は省略）  
+ 4_2. 211番コンテナのビルド（211aps_dev、311dbs_dev）  
 ```
 docker-compose build --no-cache
 ```
- 4_4. 111、211、311番コンテナ群の起動
+ 4_3. 211、311番コンテナ群の起動
 ```
 docker compose up -d
 ```
- 4_5. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
+ 4_4. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
 ```
 docker exec -it k_901set_dev_211aps_dev ls # バインドマウント確認
 docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
@@ -44,7 +40,7 @@ go run main.go
 psql -h k_901set_dev-311dbs_dev-1 -p 5432 -U postgres postgres # アクセス
 select * from employee;
 ```
-4-6. 211番（APサーバ）から311番（DBサーバ）へのping  
+4-5. 211番（APサーバ）から311番（DBサーバ）へのping  
 ```
 docker ps # Goのコンテナ確認(別ターミナルで)
 docker exec -it k_901set_dev-211aps_dev-1 ping -c 3 311dbs_dev # 311dbs_devへping
