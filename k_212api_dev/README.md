@@ -14,4 +14,5 @@ start chrome http://localhost:3000/
 cd "C:\Users\tatsu_hira_s\Documents\My Repository\myportfolio_k\k_212api_dev\go"
 docker compose up; docker compose exec web bash
 go mod init github.com/gin-gonic/gin && go run main.go
+start chrome http://localhost:3000/
 -->
