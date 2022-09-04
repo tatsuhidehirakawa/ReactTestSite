@@ -14,8 +14,8 @@ type EMPLOYEE struct {
 }
 
 func main() {
-//  db, err := sql.Open("postgres", "host=311dbs_dev port=5432 user=postgres sslmode=disable")
-    db, err := sql.Open("os.Getenv(${PGSQL_ID})", "host=311dbs_dev port=5432 user=postgres sslmode=disable") // 20220902追加／環境変数設定のため
+//  db, err := sql.Open("postgres", "host=310dbs_dev port=5432 user=postgres sslmode=disable")
+    db, err := sql.Open("os.Getenv(${PGSQL_ID})", "host=310dbs_dev port=5432 user=postgres sslmode=disable") // 20220902追加／環境変数設定のため
 
     defer db.Close()
 
