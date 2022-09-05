@@ -16,14 +16,14 @@ CSS-in-JSは情勢をよく観察しデファクトスタンダードが決ま�
 REST(ULCODC$SS)_Architecture
 +-----------+  +------------------------------------------------+
 |           |  |           +-----------+          +-----------+ |
-|           |  |           |   *212    |          |   *312    | |
+|           |  |           |   *214    |          |   *314    | |
 |           |  |           | APIServer |          |  DBServer | |
 |           |  |           |Golang(Gin)|          | PostgreSQL| |
 |           |  |           |           |          |           | |
 |           |  | +--JSON-->|#443  #5432|<---SQL-->|#5432      | |
 |  CLIENT   |  | |         +-----------+          +-----------+ |
 | (Browser) |  | |         +-----------+                        |
-|        #80|<---+         |   *112    |                        |
+|        #80|<---+         |   *114    |                        |
 |           |  | |         | WebServer |                        |
 |           |  | |         |React,Sass |                        |
 |           |  | |  HTML   |           |                        |
@@ -35,18 +35,18 @@ REST(ULCODC$SS)_Architecture
 ```
 myportfolio_k
   │
-  ├─k_112wbs_dev          # WEBサーバ
-  ├─k_212api_dev          # APIサーバ
-  ├─k_312dbs_dev          # DBサーバ
+  ├─k_114wbs_dev          # WEBサーバ
+  ├─k_214api_dev          # APIサーバ
+  ├─k_314dbs_dev          # DBサーバ
   │
   ├─k_710log_dev
   │
-  ├─k_902set_dev          # Dockerファイル群
-  │  ├─112set_dev
+  ├─k_904set_dev          # Dockerファイル群
+  │  ├─114set_dev
   │  │  └─Dockerfile
-  │  ├─212set_dev
+  │  ├─214set_dev
   │  │  └─Dockerfile
-  │  ├─312set_dev
+  │  ├─314set_dev
   │  │  ├─config
   │  │  │  └─postgresql.conf
   │  │  └─initdb
@@ -54,8 +54,6 @@ myportfolio_k
   │  │     ├─02_create_table.sql   # DML,DCL,DDL
   │  │     └─03_initdata.sql       # DML
   │  └─docker-compose.yml
-  │
-  ├─k_991set_dev           # Ubuntu22.04.1 LTS,Git
   │
   └─READMR.md
 ```
