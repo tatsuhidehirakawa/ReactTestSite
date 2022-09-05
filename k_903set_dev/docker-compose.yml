@@ -1,22 +1,21 @@
 version: "3"
 services:
 
-#---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  312dbs_dev:
+#---k_313dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  313dbs_dev:
     image: postgres:14
-  # container_name: k_311dbs_pg_g # 変更：postgres -> k_311dbs_pg_g
-    command: -c 'config_file=/etc/postgresql/postgresql.conf' # 追加
+  # container_name: 313dbs_dev # 変更：postgres -> 313dbs_dev
+    command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
       - 5432:5432
-    volumes: # 永続データはどこにおいてどう記述する？
+    tty: true # 脱落防止
+    volumes:
       - db-store:/var/lib/postgresql/data
-      - ./311set_dev/initdb:/docker-entrypoint-initdb.d #sql指定 initdb
-      - ./311set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./313set_dev/initdb:/docker-entrypoint-initdb.d
+      - ./313set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
       - POSTGRES_PASSWORD=${PGSQL_PW}          # 環境変数->${PGSQL_PW}
-    networks:                                  # 20220825追加
-      - postgres-test-network                  # 20220825追加
 
-#---k_311dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#---k_313dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   db-store:
