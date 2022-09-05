@@ -8,7 +8,7 @@ services:
     command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
       - 5432:5432
-    tty: true # 脱落防止
+  # tty: true  
     volumes:
       - db-store:/var/lib/postgresql/data
       - ./313set_dev/initdb:/docker-entrypoint-initdb.d
