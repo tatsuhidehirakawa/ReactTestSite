@@ -7,6 +7,8 @@ services:
     tty: true
     volumes:
       - ../k_211aps_dev:/go/src/work
+    environment: # 20220905追加
+      PGPASSWORD: ${PGSQL_PW} # 20220905追加
     networks:
       - postgres-test-network
 
@@ -20,8 +22,8 @@ services:
       - db-store:/var/lib/postgresql/data
       - ./310set_dev/initdb:/docker-entrypoint-initdb.d
       - ./310set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
-    environment:
-      - POSTGRES_PASSWORD=${PGSQL_PW}
+    environment: # 20220905修正
+        POSTGRES_PASSWORD: ${PGSQL_PW} # 20220905修正
     networks:
       - postgres-test-network
 
