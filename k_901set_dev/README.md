@@ -18,19 +18,13 @@ Windows10／VSCode／Docker desktop for Windows
 ４. 起動・確認コマンド等  
 　※以下は全て、コンテナ名が通らない場合はコンテナIDに変えて実行する  
 
- 4_1. 901番ディレクトリへカレントを変更  
+ 4_1. 211、311番コンテナ群の起動操作  
 ```
-cd k_901set_dev
-```
- 4_2. 211番コンテナのビルド（211aps_dev、311dbs_dev）  
-```
-docker-compose build --no-cache
-```
- 4_3. 211、311番コンテナ群の起動
-```
+cd k_901set_dev # 901番ディレクトリへカレントを変更
+docker-compose build --no-cache # 211番コンテナのビルド
 docker compose up -d
 ```
- 4_4. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
+ 4_2. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
 ```
 docker exec -it k_901set_dev_211aps_dev ls # バインドマウント確認
 docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
@@ -40,7 +34,7 @@ go run main.go
 psql -h k_901set_dev-311dbs_dev-1 -p 5432 -U postgres postgres # アクセス
 select * from employee;
 ```
-4-5. 211番（APサーバ）から311番（DBサーバ）へのping  
+4-3. 211番（APサーバ）から311番（DBサーバ）へのping  
 ```
 docker ps # Goのコンテナ確認(別ターミナルで)
 docker exec -it k_901set_dev-211aps_dev-1 ping -c 3 311dbs_dev # 311dbs_devへping
