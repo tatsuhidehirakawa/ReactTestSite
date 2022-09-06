@@ -26,10 +26,10 @@ docker compose up -d
 ```
  4_2. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
 ```
-docker exec -it k_901set_dev_211aps_dev ls # バインドマウント確認
-docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
+docker exec -it k_901set_dev-211aps_dev-1 ls # バインドマウント確認
+docker exec -it k_901set_dev-211aps_dev-1 bash # コンテナへ入る
 go mod init && go get && go run main.go
-psql -h k_901set_dev-311dbs_dev-1 -p 5432 -U postgres postgres # アクセス
+psql -h k_901set_dev-310dbs_dev-1 -p 5432 -U postgres postgres # アクセス
 select * from employee;
 ```
 4-3. 211番（APサーバ）から311番（DBサーバ）へのping  
