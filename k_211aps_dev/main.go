@@ -3,7 +3,7 @@ package main
 import (
     "database/sql"
     "fmt"
-//    "os" // 20220902追加:環境変数設定のため
+ // "os"       // 20220902追加:環境変数設定のため
 
     _ "github.com/lib/pq"
 )
@@ -15,7 +15,7 @@ type EMPLOYEE struct {
 
 func main() {
     db, err := sql.Open("postgres", "host=310dbs_dev port=5432 user=postgres sslmode=disable")
-//  db, err := sql.Open("os.Getenv(${PGSQL_ID})", "host=310dbs_dev port=5432 user=postgres sslmode=disable") // 20220902追加／環境変数設定のため
+ // db, err := sql.Open("os.Getenv(${PGSQL_ID})", "host=310dbs_dev port=5432 user=postgres sslmode=disable") // 20220902追加／環境変数設定のため
 
     defer db.Close()
 
