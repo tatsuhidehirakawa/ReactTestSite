@@ -14,7 +14,8 @@ services:
       - ./313set_dev/initdb:/docker-entrypoint-initdb.d
       - ./313set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
-      - POSTGRES_PASSWORD='${PGSQL_PW}'        # 環境変数->'${PGSQL_PW}'
+      - POSTGRES_PASSWORD='${PGSQL_PW}'
+    #   POSTGRES_PASSWORD: ${PGSQL_PW}
 
 #---k_313dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:

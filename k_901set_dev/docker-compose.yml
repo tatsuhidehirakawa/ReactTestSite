@@ -23,8 +23,9 @@ services:
       - ./310set_dev/initdb:/docker-entrypoint-initdb.d
       - ./310set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
   # tty: true
-    environment: # 20220905修正
-        POSTGRES_PASSWORD: ${PGSQL_PW} # 20220905修正
+    environment:
+      - POSTGRES_PASSWORD='${PGSQL_PW}'
+    #   POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
       - postgres-test-network
 
