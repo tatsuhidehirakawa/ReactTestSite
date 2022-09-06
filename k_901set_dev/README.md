@@ -24,6 +24,7 @@ cd k_901set_dev # 901番ディレクトリへカレントを変更
 docker-compose build --no-cache; docker compose up -d
 ```
  4_2. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
+ ※注意：goのコマンドをコピーする際は末尾に「~」が付加されないように注意すること！
 ```
 docker exec -it k_901set_dev-211aps_dev-1 ls # バインドマウント確認
 docker exec -it k_901set_dev-211aps_dev-1 bash # コンテナへ入る
