@@ -21,8 +21,7 @@ Windows10／VSCode／Docker desktop for Windows
  4_1. 211、311番コンテナ群の起動操作  
 ```
 cd k_901set_dev # 901番ディレクトリへカレントを変更
-docker-compose build --no-cache # 211番コンテナのビルド
-docker compose up -d
+docker-compose build --no-cache; docker compose up -d
 ```
  4_2. 211番（APサーバ）から311番（DBサーバ）へのコンテナ操作  
 ```
