@@ -28,9 +28,7 @@ docker compose up -d
 ```
 docker exec -it k_901set_dev_211aps_dev ls # バインドマウント確認
 docker exec -it k_901set_dev_211aps_dev bash # コンテナへ入る
-go mod init
-go get
-go run main.go
+go mod init && go get && go run main.go
 psql -h k_901set_dev-311dbs_dev-1 -p 5432 -U postgres postgres # アクセス
 select * from employee;
 ```
