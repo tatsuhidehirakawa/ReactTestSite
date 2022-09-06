@@ -3,5 +3,5 @@
 INSERT INTO account_master
   (user_id,account_name,password,time_zone,language)
 VALUES
-  ('5e9nr6eka93u','Admin','${PGSQL_PW}','Asia/Tokyo');
+  ('5e9nr6eka93u','Admin','a4cjuzn2','Asia/Tokyo');
 

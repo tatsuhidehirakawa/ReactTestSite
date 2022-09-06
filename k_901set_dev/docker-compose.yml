@@ -7,8 +7,8 @@ services:
     tty: true
     volumes:
       - ../k_211aps_dev:/go/src/work
-    environment: # 20220905追加
-      PGPASSWORD: ${PGSQL_PW} # 20220905追加
+    environment:
+      PGPASSWORD: ${PGSQL_PW}
     networks:
       - postgres-test-network
 
@@ -24,7 +24,6 @@ services:
       - ./310set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
   # tty: true
     environment:
-    # - POSTGRES_PASSWORD='${PGSQL_PW}'
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
       - postgres-test-network
