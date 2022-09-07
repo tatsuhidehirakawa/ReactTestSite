@@ -35,7 +35,7 @@ docker compose run --rm 111wbs_dev sh -c "npm install" # npmインストール
 ```
 docker-compose build --no-cache
 ```
- 4_4. 111、212、311番コンテナ群の起動
+ 4_4. 111、212、311番コンテナ群の起動  
 ```
 docker compose up -d
 ```
