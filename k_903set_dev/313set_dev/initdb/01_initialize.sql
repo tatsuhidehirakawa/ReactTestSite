@@ -13,7 +13,7 @@ CREATE ROLE hoge WITH LOGIN SUPERUSER PASSWORD 'passw0rd';
 
 -- 権限追加
 --GRANT ALL PRIVILEGES ON SCHEMA hogeschema TO hoge;
-GRANT ALL PRIVILEGES ON *.* TO hoge;
+--GRANT ALL PRIVILEGES ON *.* TO hoge;
 
 
 /*--+----+----+----+----+----+----+----+----+----+----+
