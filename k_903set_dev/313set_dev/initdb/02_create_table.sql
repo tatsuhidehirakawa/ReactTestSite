@@ -21,7 +21,7 @@ create table account_attribute (
   , facebook_url character varying
   , instagram_url character varying
   , youtube_channel character varying
-  , update_date datetime not null
+  , update_date timestamp not null
   , update_id character varying not null
   , pic_id_01 character varying not null
   , pic_id_02 character varying
@@ -42,7 +42,7 @@ create table account_master (
   , time_zone character varying not null
   , language character varying not null
   , status varchar(1) not null
-  , registration_date datetime not null
+  , registration_date timestamp not null
   , rate character varying
   , constraint account_master_PKC primary key (user_id)
 ) ;
