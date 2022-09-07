@@ -5,5 +5,5 @@ INSERT INTO account_attribute
 VALUES ('5e9nr6eka93u','09/07/22','5e9nr6eka93u','5e9nr6eka93u','SystemAdministrator');
 
 INSERT INTO account_master
-  (user_id,account_name,mail_addless,password,time_zone,language,status,registration_date)
-VALUES ('5e9nr6eka93u','Admin','Admin@example.com','a4cjuzn2','Asia/Tokyo','Japanese','Admin','09/07/22');
+  (user_id,account_name,mail_addless,password,zip_code,barth_date,time_zone,language,status,registration_date)
+VALUES ('5e9nr6eka93u','Admin','Admin@example.com','a4cjuzn2','123-4567','09/07/22','Asia/Tokyo','Japanese',9,'09/07/22');
