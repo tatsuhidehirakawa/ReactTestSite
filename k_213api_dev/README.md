@@ -10,7 +10,6 @@ go run main.go # サーバ起動
 start chrome http://localhost:3000/
 ```
 <!--
-cd "C:\Users\tatsu_hira_s\Documents\My Repository\myportfolio_k\k_212api_dev\go"
-docker compose up -d; docker compose exec web bash; start chrome http://localhost:3000/
+cd "C:\Users\tatsu_hira_s\Documents\My Repository\myportfolio_k\k_213api_dev\go"; docker compose up -d; docker compose exec web bash; start chrome http://localhost:3000/
 go mod init github.com/gin-gonic/gin/v2 && go get && go run main.go
 -->
