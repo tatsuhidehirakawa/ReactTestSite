@@ -19,7 +19,8 @@ func main() {
 
     // 値を取り出すSQL文をDBに投げる処理(GORM？)…<5>
 
-    
+
+    // gin.H{}でgoファイルの変数をHTMLテンプレートに渡す
     c.JSON(200, gin.H{
             "message": "Hello World",
         })
@@ -28,7 +29,3 @@ func main() {
     // サーバを起動する処理…<6>
     router.Run(":3000")
 }
-
-
-
-
