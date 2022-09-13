@@ -20,12 +20,12 @@ func main() {
     // 値を取り出すSQL文をDBに投げる処理(GORM？)…<5>
 
 
-    // gin.H{}でgoファイルの変数をHTMLテンプレートに渡す
+    // gin.H{}でgoファイルの変数をHTMLテンプレートに渡す…<6>
     c.JSON(200, gin.H{
             "message": "Hello World",
         })
     })
 
-    // サーバを起動する処理…<6>
+    // サーバを起動する処理…<7>
     router.Run(":3000")
 }
