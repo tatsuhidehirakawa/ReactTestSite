@@ -90,7 +90,7 @@ func main() {
             "update_id": "update_id",
             "pic_id_01": "pic_id_01",
             "skil": "skil",
-        // Table Name:"account_master"
+            // Table Name:"account_master"
             "user_id": "user_id",
             "account_name": "account_name",
             "mail_addless": "mail_addless",
@@ -121,11 +121,13 @@ func main() {
 
     // gin.H{}でHTMLテンプレートからgoファイルの変数を受け取る…<6>
     c.JSON(200, gin.H{
+            // Table Name:"account_attribute"
             "account_id": "account_id",
             "update_date": "update_date",
             "update_id": "update_id",
             "pic_id_01": "pic_id_01",
             "skil": "skil",
+            // Table Name:"account_master"
             "user_id": "user_id",
             "account_name": "account_name",
             "mail_addless": "mail_addless",
