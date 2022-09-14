@@ -41,22 +41,22 @@ func main() {
     func main() {
         // Table Name:"account_attribute"
         txjsn := new(txjsn)
-        txjsn.account_id = "5e9nr6eka93u"
-        txjsn.update_date = "09/07/22"
-        txjsn.update_id = "5e9nr6eka93u"
-        txjsn.pic_id_01 = "5e9nr6eka93u"
-        txjsn.skil = "SystemAdministrator"
+        txjsn.account_id = "account_id"
+        txjsn.update_date = "update_date"
+        txjsn.update_id = "update_id"
+        txjsn.pic_id_01 = "pic_id_01"
+        txjsn.skil = "skil"
         // Table Name:"account_master"
-        txjsn.user_id = "5e9nr6eka93u"
-        txjsn.account_name = "Admin"
-        txjsn.mail_addless = "Admin@example.com"
-        txjsn.password = "a4cjuzn2"
-        txjsn.zip_code = "123-4567"
-        txjsn.barth_date = "09/07/22"
-        txjsn.time_zone = "Asia/Tokyo"
-        txjsn.language = "Japanese"
-        txjsn.status = "9"
-        txjsn.registration_date = "09/07/22"
+        txjsn.user_id = "user_id"
+        txjsn.account_name = "account_name"
+        txjsn.mail_addless = "mail_addless"
+        txjsn.password = "password"
+        txjsn.zip_code = "zip_code"
+        txjsn.barth_date = "barth_date"
+        txjsn.time_zone = "time_zone"
+        txjsn.language = "language"
+        txjsn.status = "status"
+        txjsn.registration_date = "registration_date"
 
         // encode json
         txjsn_json, _ := json.Marshal(txjsn)
@@ -74,7 +74,6 @@ func main() {
         }
     }
 
-
     // DBから取り出した値をGO構造体に格納する処理…<3>
 
 
@@ -85,11 +84,13 @@ func main() {
 
     // gin.H{}でgoファイルの変数をHTMLテンプレートに渡す…<5>
     c.JSON(200, gin.H{
+            // Table Name:"account_attribute"
             "account_id": "account_id",
             "update_date": "update_date",
             "update_id": "update_id",
             "pic_id_01": "pic_id_01",
             "skil": "skil",
+        // Table Name:"account_master"
             "user_id": "user_id",
             "account_name": "account_name",
             "mail_addless": "mail_addless",
