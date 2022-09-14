@@ -84,8 +84,22 @@ func main() {
 
 
     // gin.H{}でgoファイルの変数をHTMLテンプレートに渡す…<5>
-    c.JSON(200, gin.H{
-            "message": "Hello World",
+        c.JSON(200, gin.H{
+            "account_id": "account_id",
+            "update_date": "update_date",
+            "update_id": "update_id",
+            "pic_id_01": "pic_id_01",
+            "skil": "skil",
+            "user_id": "user_id",
+            "account_name": "account_name",
+            "mail_addless": "mail_addless",
+            "password": "password",
+            "zip_code": "zip_code",
+            "barth_date": "barth_date",
+            "time_zone": "time_zone",
+            "language": "language",
+            "status": "status",
+            "registration_date": "registration_date",
         })
     })
 /*---POST処理----+-----+-----+-----+-----+-----+-----+-----+---*/
