@@ -8,6 +8,7 @@ import (
     "net/http"                   // 追加
 )
 
+/* "models/models.go"へ移植
 type txjsn struct {
     // Table Name:"account_attribute"
     account_id        int         `json: "account_id"`
@@ -27,6 +28,7 @@ type txjsn struct {
     status            string      `json: "status"`
     registration_date string `json: "registration_date"`
 }
+*/
 
 func main() {
 
@@ -37,7 +39,7 @@ func main() {
     // jsonデータをGETさせる処理
     router.GET("/", func(c *gin.Context) {
 
-    // GO構造体をjsonに変換する処理…<1>
+    // GO構造体からjsonに変換する処理…<2>
  
     func main() {
         // Table Name:"account_attribute"
@@ -108,7 +110,7 @@ func main() {
     // jsonデータをPOSTさせる処理
     router.POST("/", func(c *gin.Context) {
 
-    // jsonをGO構造体に変換する処理…<2>
+    // jsonをGO構造体に変換する処理…<1>
 
 
 
