@@ -41,23 +41,24 @@ func main() {
     // GO構造体からjsonに変換する処理…<#001>
  
         // Table Name:"account_attribute"
-        txjsn := new(txjsn)
-        txjsn.account_id = "account_id"
-        txjsn.update_date = "update_date"
-        txjsn.update_id = "update_id"
-        txjsn.pic_id_01 = "pic_id_01"
-        txjsn.skil = "skil"
+        Account_attribute := new(txjsn)
+        Account_attribute.account_id = "account_id"
+        Account_attribute.update_date = "update_date"
+        Account_attribute.update_id = "update_id"
+        Account_attribute.pic_id_01 = "pic_id_01"
+        Account_attribute.skil = "skil"
+    
         // Table Name:"account_master"
-        txjsn.user_id = "user_id"
-        txjsn.account_name = "account_name"
-        txjsn.mail_addless = "mail_addless"
-        txjsn.password = "password"
-        txjsn.zip_code = "zip_code"
-        txjsn.barth_date = "barth_date"
-        txjsn.time_zone = "time_zone"
-        txjsn.language = "language"
-        txjsn.status = "status"
-        txjsn.registration_date = "registration_date"
+        Account_master.user_id = "user_id"
+        Account_master.account_name = "account_name"
+        Account_master.mail_addless = "mail_addless"
+        Account_master.password = "password"
+        Account_master.zip_code = "zip_code"
+        Account_master.barth_date = "barth_date"
+        Account_master.time_zone = "time_zone"
+        Account_master.language = "language"
+        Account_master.status = "status"
+        Account_master.registration_date = "registration_date"
 
         // encode json
         txjsn_json, _ := json.Marshal(txjsn)
