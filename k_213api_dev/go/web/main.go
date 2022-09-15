@@ -36,19 +36,19 @@ func main() {
 	// *gin.EngineをReturnする関数を宣言
 	router := gin.Default()
 
-/*---GET処理-----+-----+-----+-----+-----+-----+-----+-----+---*/
-    // jsonデータをGETさせる処理
-    router.GET("/", func(c *gin.Context) {
+	/*---GET処理-----+-----+-----+-----+-----+-----+-----+-----+---*/
+	// jsonデータをGETさせる処理
+	router.GET("/", func(c *gin.Context) {
 
-        // GO構造体からjsonに変換する処理…<#001>
+		// GO構造体からjsonに変換する処理…<#001>
 
-        // Table Name:"account_attribute"
-        account_attribute := new(Account_attribute)
-        account_attribute.account_id = 1234
-        account_attribute.update_date = time.Now()
-        account_attribute.update_id = "update_id"
-        account_attribute.pic_id_01 = "pic_id_01"
-        account_attribute.skil = "skil"
+		// Table Name:"account_attribute"
+		account_attribute := new(Account_attribute)
+		account_attribute.account_id = 1234
+		account_attribute.update_date = time.Now()
+		account_attribute.update_id = "update_id"
+		account_attribute.pic_id_01 = "pic_id_01"
+		account_attribute.skil = "skil"
 
 		// Table Name:"account_master"
 		account_master := new(Account_master)
@@ -77,21 +77,20 @@ func main() {
 		} else {
 			fmt.Println("[*] " + res.Status)
 		}
+
+		// DBから取り出した値をGO構造体に格納する処理…<#003>
+
+		// 値を取り出すSQL文をDBに投げる処理…<#007>
+
+		// gin.H{}でgoファイルの変数をHTMLテンプレートに渡す…<#005>
+		c.JSON(http.StatusOK, gin.H{
+			"account_id":  account_attribute.account_id,
+			"update_date": account_attribute.update_date,
+			"update_id":   account_attribute.update_id,
+			"pic_id_01":   account_attribute.pic_id_01,
+			"skill":       account_attribute.skil,
+		})
+
 	})
-
-	// DBから取り出した値をGO構造体に格納する処理…<#003>
-
-	// 値を取り出すSQL文をDBに投げる処理…<#007>
-
-	// gin.H{}でgoファイルの変数をHTMLテンプレートに渡す…<#005>
-	c.JSON(http.StatusOK, gin.H{
-		"account_id":  account_attribute.account_id,
-		"update_date": account_attribute.update_date,
-		"update_id":   account_attribute.update_id,
-		"pic_id_01":   account_attribute.pic_id_01,
-		"skill":       account_attribute.skil,
-	})
-
-}
-    router.Run(":3000")
+	router.Run(":3000")
 }
