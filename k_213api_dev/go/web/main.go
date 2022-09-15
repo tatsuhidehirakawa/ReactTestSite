@@ -69,7 +69,7 @@ func main() {
 
 		// send json
 		//// ポイント2, 3
-		res, err := http.Post(URL, "application/json", bytes.NewBuffer(account_attribute_json))
+		res, err := http.Post("/", "application/json", bytes.NewBuffer(account_attribute_json))
 		defer res.Body.Close()
 
 		if err != nil {
