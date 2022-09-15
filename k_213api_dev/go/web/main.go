@@ -1,16 +1,16 @@
 package main
 
 import (
-	"bytes"         // 追加
-	"encoding/json" // 追加
-	"fmt"           // 追加
-	"net/http"      // 追加
+	// 追加
+	// 追加
+	// 追加
+	"net/http" // 追加
 	"time"
 
 	"github.com/gin-gonic/gin"
 )
 
-const URL = "http://localhost:3000"
+// const URL = "http://localhost:3000"
 
 type Account_attribute struct {
 	account_id  int       `json:"account_id"`
@@ -65,7 +65,7 @@ func main() {
 		account_master.status = "status"
 		account_master.registration_date = "registration_date"
 
-		// encode json
+		/*   // encode json
 		account_attribute_json, _ := json.Marshal(account_attribute)
 		fmt.Printf("[+] %s\n", string(account_attribute_json))
 
@@ -78,7 +78,7 @@ func main() {
 			fmt.Println("[!] " + err.Error())
 		} else {
 			fmt.Println("[*] " + res.Status)
-		}
+		}  */
 
 		// DBから取り出した値をGO構造体に格納する処理…<#003>
 
