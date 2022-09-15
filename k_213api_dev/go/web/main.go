@@ -39,7 +39,7 @@ func main() {
     // jsonデータをGETさせる処理
     router.GET("/", func(c *gin.Context) {
 
-    // GO構造体からjsonに変換する処理…<2>
+    // GO構造体からjsonに変換する処理…<1>
  
     func main() {
         // Table Name:"account_attribute"
@@ -110,7 +110,7 @@ func main() {
     // jsonデータをPOSTさせる処理
     router.POST("/", func(c *gin.Context) {
 
-    // jsonをGO構造体に変換する処理…<1>
+    // jsonをGO構造体に変換する処理…<2>
 
 
 
