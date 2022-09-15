@@ -8,7 +8,7 @@ import (
     "net/http"                   // 追加
 )
 
-/* "models/models.go"へ移植
+/* models/models.goへ移植
 type txjsn struct {
     // Table Name:"account_attribute"
     account_id        int         `json: "account_id"`
