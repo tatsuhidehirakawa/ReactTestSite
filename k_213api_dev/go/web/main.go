@@ -43,33 +43,33 @@ func main() {
 		// GO構造体からjsonに変換する処理…<#001>
 
 		// Table Name:"account_attribute"
-		Account_attribute := new(account_attribute)
-		Account_attribute.account_id = "account_id"
-		Account_attribute.update_date = "update_date"
-		Account_attribute.update_id = "update_id"
-		Account_attribute.pic_id_01 = "pic_id_01"
-		Account_attribute.skil = "skil"
+		account_attribute := new(Account_attribute)
+		account_attribute.account_id = "account_id"
+		account_attribute.update_date = "update_date"
+		account_attribute.update_id = "update_id"
+		account_attribute.pic_id_01 = "pic_id_01"
+		account_attribute.skil = "skil"
 
 		// Table Name:"account_master"
-		Account_master := new(account_master)
-		Account_master.user_id = "user_id"
-		Account_master.account_name = "account_name"
-		Account_master.mail_addless = "mail_addless"
-		Account_master.password = "password"
-		Account_master.zip_code = "zip_code"
-		Account_master.barth_date = "barth_date"
-		Account_master.time_zone = "time_zone"
-		Account_master.language = "language"
-		Account_master.status = "status"
-		Account_master.registration_date = "registration_date"
+		account_master := new(Account_master)
+		account_master.user_id = "user_id"
+		account_master.account_name = "account_name"
+		account_master.mail_addless = "mail_addless"
+		account_master.password = "password"
+		account_master.zip_code = "zip_code"
+		account_master.barth_date = "barth_date"
+		account_master.time_zone = "time_zone"
+		account_master.language = "language"
+		account_master.status = "status"
+		account_master.registration_date = "registration_date"
 
 		// encode json
 		account_attribute_json, _ := json.Marshal(account_attribute)
-		fmt.Printf("[+] %s\n", string(account_attribute))
+		fmt.Printf("[+] %s\n", string(account_attribute_json))
 
 		// send json
 		//// ポイント2, 3
-		res, err := http.Post(URL, "application/json", bytes.NewBuffer(account_attribute))
+		res, err := http.Post(URL, "application/json", bytes.NewBuffer(account_attribute_json))
 		defer res.Body.Close()
 
 		if err != nil {
