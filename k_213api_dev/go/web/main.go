@@ -10,6 +10,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+const URL = "http://localhost:3000"
+
 type Account_attribute struct {
 	account_id  int       `json:"account_id"`
 	update_date time.Time `json:"update_date"`
@@ -69,7 +71,7 @@ func main() {
 
 		// send json
 		//// ポイント2, 3
-		res, err := http.Post("/", "application/json", bytes.NewBuffer(account_attribute_json))
+		res, err := http.Post(URL, "application/json", bytes.NewBuffer(account_attribute_json))
 		defer res.Body.Close()
 
 		if err != nil {
