@@ -57,7 +57,7 @@ func main() {
 		account_master.mail_addless = "mail_addless"
 		account_master.password = "password"
 		account_master.zip_code = "zip_code"
-		account_master.barth_date = "barth_date"
+		account_master.barth_date = time.Now()
 		account_master.time_zone = "time_zone"
 		account_master.language = "language"
 		account_master.status = "status"
@@ -91,7 +91,7 @@ func main() {
 		"pic_id_01":   account_attribute.pic_id_01,
 		"skill":       account_attribute.skil,
 	})
-}
 
+}
     router.Run(":3000")
 }
