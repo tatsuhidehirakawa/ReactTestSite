@@ -2,14 +2,13 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
-
     "bytes"                      // 追加
     "encoding/json"              // 追加
     "fmt"                        // 追加
     "net/http"                   // 追加
 )
 
-type Account struct {
+type Account_attribute struct {
     account_id        int       `json:"account_id"`
     update_date       time.Time `json:"update_date"`
     update_id         string    `json:"update_id"`
@@ -17,7 +16,7 @@ type Account struct {
     skil              string    `json:"skil"`
 }
 
-type AccountMaster struct {
+type Account_master struct {
     user_id           string    `json:"user_id"`
     account_name      string    `json:"account_name"`
     mail_addless      string    `json:"mail_addless"`
