@@ -39,7 +39,7 @@ func main() {
     // jsonデータをGETさせる処理
     router.GET("/", func(c *gin.Context) {
 
-    // GO構造体からjsonに変換する処理…<1>
+    // GO構造体からjsonに変換する処理…<#001>
  
     func main() {
         // Table Name:"account_attribute"
@@ -77,15 +77,15 @@ func main() {
         }
     }
 
-    // DBから取り出した値をGO構造体に格納する処理…<3>
+    // DBから取り出した値をGO構造体に格納する処理…<#003>
 
 
 
-    // 値を取り出すSQL文をDBに投げる処理…<7>
+    // 値を取り出すSQL文をDBに投げる処理…<#007>
 
 
 
-    // gin.H{}でgoファイルの変数をHTMLテンプレートに渡す…<5>
+    // gin.H{}でgoファイルの変数をHTMLテンプレートに渡す…<#005>
     c.JSON(200, gin.H{
             // Table Name:"account_attribute"
             "account_id": "account_id",
@@ -110,19 +110,19 @@ func main() {
     // jsonデータをPOSTさせる処理
     router.POST("/", func(c *gin.Context) {
 
-    // jsonをGO構造体に変換する処理…<2>
+    // jsonをGO構造体に変換する処理…<#002>
 
 
 
-    // GO構造体から取り出した値をDBに格納する処理…<4>
+    // GO構造体から取り出した値をDBに格納する処理…<#004>
 
 
 
-    // 値を取り出すSQL文をDBに投げる処理…<8>
+    // 値を取り出すSQL文をDBに投げる処理…<#008>
 
 
 
-    // gin.H{}でHTMLテンプレートからgoファイルの変数を受け取る…<6>
+    // gin.H{}でHTMLテンプレートからgoファイルの変数を受け取る…<#006>
     c.JSON(200, gin.H{
             // Table Name:"account_attribute"
             "account_id": "account_id",
