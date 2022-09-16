@@ -8,7 +8,7 @@ services:
     volumes:
       - ../k_214api_dev/go/web:/go/src
     ports:
-      - "3000:3000"
+      - "3000:8080"
     networks:
       - postgres-test-network
 
