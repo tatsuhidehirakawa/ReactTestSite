@@ -1,7 +1,7 @@
 package main
 
 import (
-	"net/http"
+//	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -18,9 +18,9 @@ type Account_attribute struct {
 
 func main() {
 
-	router := gin.Default()
+	r := gin.Default()
 
-	router.GET("/", func(c *gin.Context) {
+	r.GET("/", func(c *gin.Context) {
 
 		// Go構造体「Account_attribute」の初期化
 		account_attribute := new(Account_attribute)
@@ -30,8 +30,8 @@ func main() {
 		account_attribute.Pic_id_01 = "pic_id_01"
 		account_attribute.Skil = "skil"
 
-        c.JSON(http.StatusOK, account_attribute)
+        c.JSON(200, account_attribute)
     })
 
-	router.Run(":3000")
+	r.Run()
 }

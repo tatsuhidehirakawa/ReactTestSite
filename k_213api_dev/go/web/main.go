@@ -2,7 +2,7 @@ package main
 
 import (
 //	"encoding/json"
-	"net/http"
+//	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -19,9 +19,9 @@ type Account_attribute struct {
 
 func main() {
 
-	router := gin.Default()
+	r := gin.Default()
 
-	router.GET("/", func(c *gin.Context) {
+	r.GET("/", func(c *gin.Context) {
 
 		// Go構造体「Account_attribute」の初期化
 		account_attribute := new(Account_attribute)
@@ -36,5 +36,5 @@ func main() {
         c.JSON(http.StatusOK, account_attribute)
     })
 
-	router.Run(":3000")
+	r.Run()
 }
