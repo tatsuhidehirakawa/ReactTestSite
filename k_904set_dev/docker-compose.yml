@@ -22,7 +22,7 @@ services:
   # tty: true  
     volumes:
       - db-store:/var/lib/postgresql/data
-      - ./314set_dev/initdb:/docker-entrypoint-initdb.d # 初期化したいSQLファイルをここに設置
+      - ./314set_dev/initdb:/docker-entrypoint-initdb.d # 初期化用SQLファイル置き場
       - ./314set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
