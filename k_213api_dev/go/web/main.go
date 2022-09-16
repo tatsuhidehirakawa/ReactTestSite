@@ -33,7 +33,7 @@ func main() {
 
 //		t, _ := json.Marshal(account_attribute) // 「_」は第2戻り値を破棄するブランク変数
 //		c.JSON(http.StatusOK, string(t))
-        c.JSON(http.StatusOK, account_attribute)
+        c.JSON(200, account_attribute)
     })
 
 	r.Run()
