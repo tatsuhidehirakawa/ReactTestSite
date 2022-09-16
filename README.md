@@ -18,8 +18,8 @@ REST(ULCODC$SS)_Architecture
 |           |  |           +-----------+          +-----------+ |
 |           |  |           |   *214    |          |   *314    | |
 |           |  |           | APIServer |          |  DBServer | |
-|           |  |           |Golang(Gin)|          | PostgreSQL| |
-|           |  |           |           |          |           | |
+|           |  |           |  Golang   |          | PostgreSQL| |
+|           |  |           |(Gin/sqlc) |          |           | |
 |           |  | +--JSON-->|#443  #5432|<---SQL-->|#5432      | |
 |  CLIENT   |  | |         +-----------+          +-----------+ |
 | (Browser) |  | |         +-----------+                        |
