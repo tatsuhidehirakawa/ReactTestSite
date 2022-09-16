@@ -3,9 +3,9 @@ package main
 import (
  // "encoding/json"
  // "net/http"
-	"time"
+    "time"
 
-	"github.com/gin-gonic/gin"
+    "github.com/gin-gonic/gin"
 )
 
 // Go構造体「Account_attribute」のデータ型を定義
