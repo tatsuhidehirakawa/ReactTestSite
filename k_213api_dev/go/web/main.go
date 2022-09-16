@@ -1,7 +1,7 @@
 package main
 
 import (
-	"encoding/json"
+//	"encoding/json"
 	"net/http"
 	"time"
 
@@ -31,9 +31,10 @@ func main() {
 		account_attribute.Pic_id_01 = "pic_id_01"
 		account_attribute.Skil = "skil"
 
-		t, _ := json.Marshal(account_attribute) // 「_」は第2戻り値を破棄するブランク変数
-		c.JSON(http.StatusOK, string(t))
-	})
+//		t, _ := json.Marshal(account_attribute) // 「_」は第2戻り値を破棄するブランク変数
+//		c.JSON(http.StatusOK, string(t))
+        c.JSON(http.StatusOK, account_attribute)
+    })
 
 	router.Run(":3000")
 }
