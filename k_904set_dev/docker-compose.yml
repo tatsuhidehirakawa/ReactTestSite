@@ -3,7 +3,7 @@ services:
 
 #---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
-    build: ../k_904set_dev/go/web214set_dev
+    build: ../k_904set_dev/214set_dev
     tty: true # コンテナを継続
     volumes:
       - ../k_214api_dev/go/web:/go/src
