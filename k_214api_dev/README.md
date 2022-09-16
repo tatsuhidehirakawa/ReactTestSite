@@ -1,5 +1,5 @@
 APIサーバ構築練習①「k214api_dev」  
-参考記事：  
+参考記事：https://future-architect.github.io/articles/20210804a/  
 コマンド：  
 ```
 docker compose up # ビルド
