@@ -1,5 +1,5 @@
 Web開発用Dockerコンテナ群  
-「k_902set_dev（「111wbs_dev」＋「212api_dev」＋「311dbs_dev」）」  
+「k_903set_dev（311dbs_dev」）」  
 の起動・操作手順  
 ---
 
