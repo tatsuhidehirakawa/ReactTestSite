@@ -18,6 +18,10 @@ cd go\src\sqlc
 go mod init
 go get github.com/gin-gonic/gin/v2
 go get github.com/kyleconroy/sqlc/cmd/sqlc
+go install github.com/kyleconroy/sqlc/cmd/sqlc
+sqlc version
+cd sqlc
+sqlc init
 sqlc generate
 sqlc generate --file sqlc/sqlc.yaml
 
