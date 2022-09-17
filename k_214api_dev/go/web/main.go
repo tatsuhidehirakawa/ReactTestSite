@@ -2,22 +2,23 @@ package main
 
 import (
 	"time"
+ // "encoding/json"
  // "database/sql"
 	"github.com/gin-gonic/gin"
 )
 
 // Go構造体「Account_master」のデータ型を定義
-type account_master struct {
-	user_id           string    `json:"user_id"`
-	account_name      string    `json:"account_name"`
-	Update_id         string    `json:"mail_addless"`
-	password          string    `json:"password"`
-	zip_code          string    `json:"zip_code"`
-	barth_date        string    `json:"barth_date"`
-	time_zone         string    `json:"time_zone"`
-	language          string    `json:"language"`
-	status            string    `json:"status"`
-	registration_date time.Time `json:"registration_date"`
+type Account_master struct {
+	User_id           string    `json:"user_id"`
+	Account_name      string    `json:"account_name"`
+	Mail_addless      string    `json:"mail_addless"`
+	Password          string    `json:"password"`
+	Zip_code          string    `json:"zip_code"`
+	Barth_date        time.Time `json:"barth_date"`
+	Time_zone         string    `json:"time_zone"`
+	Language          string    `json:"language"`
+	Status            string    `json:"status"`
+	Registration_date time.Time `json:"registration_date"`
 }
 
 // Go構造体「Account_attribute」のデータ型を定義
@@ -37,16 +38,16 @@ func main() {
 
 		// Go構造体「Account_master」の初期化
 		account_master := new(Account_master)
-		account_master.user_id = 1234
-		account_master.account_name = "abcde"
-		account_master.mail_addless = "example@test.go"
-		account_master.password = "passw0rd"
-		account_master.zip_code = "123-4567"
-		account_master.barth_date = time.Now()
-		account_master.time_zone = "Asia/Tokyo"
-		account_master.language = "Japanese"
-		account_master.status = "9"
-		account_master.registration_date = time.Now()
+		account_master.User_id = "abcde"
+		account_master.Account_name = "abcde"
+		account_master.Mail_addless = "example@test.go"
+		account_master.Password = "passw0rd"
+		account_master.Zip_code = "123-4567"
+		account_master.Barth_date = time.Now()
+		account_master.Time_zone = "Asia/Tokyo"
+		account_master.Language = "Japanese"
+		account_master.Status = "9"
+		account_master.Registration_date = time.Now()
 
 		// Go構造体「Account_attribute」の初期化
 		account_attribute := new(Account_attribute)
@@ -57,7 +58,7 @@ func main() {
 		account_attribute.Skill = "skill"
 
         c.JSON(200, account_master)
-        c.JSON(200, account_attribute)
+	    c.JSON(200, account_attribute)
     })
 
 	r.Run()
