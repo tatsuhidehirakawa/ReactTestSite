@@ -9,11 +9,11 @@ go get # 追加コマンド
 go run main.go # サーバ起動
 start chrome http://localhost:3000/
 ```
-
+  
 O/Rマッパー「sqlc」操作  
 公式：https://docs.sqlc.dev/en/latest/overview/install.html  
-参考①：https://future-architect.github.io/articles/20210804a/
-参考②：https://debimate.jp/2022/06/25/
+参考①：https://future-architect.github.io/articles/20210804a/  
+参考②：https://debimate.jp/2022/06/25/  
 使用コマンド：
 ```
 go get github.com/kyleconroy/sqlc/cmd/sqlc
