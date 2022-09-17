@@ -1,9 +1,8 @@
 package main
 
 import (
-//	"net/http"
 	"time"
-
+ // "database/sql"
 	"github.com/gin-gonic/gin"
 )
 
@@ -13,7 +12,7 @@ type Account_attribute struct {
 	Update_date time.Time `json:"update_date"`
 	Update_id   string    `json:"update_id"`
 	Pic_id_01   string    `json:"pic_id_01"`
-	Skill        string    `json:"skill"`
+	Skill       string    `json:"skill"`
 }
 
 func main() {

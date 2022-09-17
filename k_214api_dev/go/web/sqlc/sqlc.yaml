@@ -1,0 +1,8 @@
+sql:
+  - schema: "schema.sql"
+    queries: "query.sql"
+    engine: "postgresql"
+    gen:
+      go:
+        package: "query"
+        out: "../sqlc_output_dir"
