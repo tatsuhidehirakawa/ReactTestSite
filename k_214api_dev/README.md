@@ -16,6 +16,8 @@ go mod init
 go get github.com/gin-gonic/gin/v2
 go get github.com/kyleconroy/sqlc/cmd/sqlc
 
+sqlc generate
+
 # サーバ起動
 go run main.go
 

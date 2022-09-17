@@ -1,55 +1,18 @@
-SELECT
-    *
-FROM
-    user
-WHERE
-    id = ?
-LIMIT
-    1;
- 
--- name: ListUsers :many
-SELECT
-    *
-FROM
-    user
-ORDER BY
-    created_at ASC;
- 
--- name: CreateUser :execresult
-INSERT INTO
-    user (id, name, created_at, updated_at)
-VALUES
-    (?, ?, ?, ?);
- 
--- name: UpdateUserName :execresult
-UPDATE
-    user
-SET
-    name = ?,
-    updated_at = ?
-WHERE
-    id = ?;
- 
--- name: UpsertUser :execresult
-INSERT INTO
-    user (id, name, created_at, updated_at)
-VALUES
-    (?, ?, ?, ?) ON DUPLICATE KEY
-UPDATE
-    name = ?,
-    updated_at = ?;
- 
--- name: DeleteUser :execrows
-DELETE FROM
-    user
-WHERE
-    id = ?;
- 
--- name: ListUserDepartment :many
-SELECT
-    u.name AS user_name,
-    d.name AS department_name
-FROM
-    user_department_relation AS udr
-    LEFT JOIN user AS u ON udr.user_id = u.id
-    LEFT JOIN department AS d ON udr.department_id = d.id;
+-- name: GetAccount_attribute :one
+SELECT * FROM account_attribute
+WHERE account_id = ? LIMIT 1;
+
+-- name: ListAccount_attribute :many
+SELECT * FROM account_attribute
+ORDER BY name;
+
+-- name: CreateAccount_attribute :execresult
+INSERT INTO account_attribute (
+  update_date, update_id, pic_id_01, skill
+) VALUES (
+  ?, ?
+);
+
+-- name: DeleteAccount_attribute :exec
+DELETE FROM account_attribute
+WHERE account_id = ?;

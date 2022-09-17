@@ -1,8 +1,7 @@
-sql:
-  - schema: "schema.sql"
-    queries: "query.sql"
+version: 1
+packages:
+  - path: "build_orm" # 出力ディレクトリ
+    name: "build_orm" # 出力ディレクトリ名
     engine: "postgresql"
-    gen:
-      go:
-        package: "query"
-        out: "../sqlc_output_dir"
+    schema: "schema.sql" # スキーマの初期化
+    queries: "query.sql" # クエリの初期化

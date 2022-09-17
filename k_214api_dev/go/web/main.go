@@ -15,6 +15,21 @@ type Account_attribute struct {
 	Skill       string    `json:"skill"`
 }
 
+/*
+type account_master struct {
+	user_id           string    `json:"user_id"`
+	account_name      string    `json:"account_name"`
+	Update_id         string    `json:"mail_addless"`
+	password          string    `json:"password"`
+	zip_code          string    `json:"zip_code"`
+	barth_date        string    `json:"barth_date"`
+	time_zone         string    `json:"time_zone"`
+	language          string    `json:"language"`
+	status            string    `json:"status"`
+	registration_date time.Time `json:"registration_date"`
+}
+*/
+
 func main() {
 
 	r := gin.Default()
