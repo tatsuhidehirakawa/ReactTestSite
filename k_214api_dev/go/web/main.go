@@ -57,8 +57,8 @@ func main() {
 		account_attribute.Pic_id_01 = "pic_id_01"
 		account_attribute.Skill = "skill"
 
-        c.JSON(200, account_master)
-	    c.JSON(200, account_attribute)
+		c.JSON(200, account_master)
+		c.JSON(200, account_attribute)
     })
 
 	r.Run()
