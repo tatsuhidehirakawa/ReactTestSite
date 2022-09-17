@@ -6,4 +6,4 @@ services:
     volumes:
       - ./web:/go/src
     ports:
-      - "3000:8080"
+      - "3000:8080" # Ginはデフォルト8080に注意

@@ -11,12 +11,15 @@ APIサーバ用コンテナ「k214api_dev」構築手順
 # コンテナビルド／コンテナ入系
 docker compose up -d;docker compose exec web bash
 
+# ディレクトリ移動
+cd go\src\sqlc
+
 # 使用するフレームワーク・ライブラリのインポート
 go mod init
 go get github.com/gin-gonic/gin/v2
 go get github.com/kyleconroy/sqlc/cmd/sqlc
-
 sqlc generate
+sqlc generate --file sqlc/sqlc.yaml
 
 # サーバ起動
 go run main.go

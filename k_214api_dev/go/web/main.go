@@ -2,12 +2,11 @@ package main
 
 import (
 	"time"
- // "encoding/json"
- // "database/sql"
+
 	"github.com/gin-gonic/gin"
+	// "github.com/kyleconroy/sqlc"
 )
 
-// Go構造体「Account_master」のデータ型を定義
 type Account_master struct {
 	User_id           string    `json:"user_id"`
 	Account_name      string    `json:"account_name"`
@@ -21,7 +20,6 @@ type Account_master struct {
 	Registration_date time.Time `json:"registration_date"`
 }
 
-// Go構造体「Account_attribute」のデータ型を定義
 type Account_attribute struct {
 	Account_id  int       `json:"account_id"`
 	Update_date time.Time `json:"update_date"`
@@ -32,11 +30,12 @@ type Account_attribute struct {
 
 func main() {
 
+	// db, err := sql.Open("postgresql", "hoge:passw0rd@tcp(localhost:13306)/account_attribute")
+
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
 
-		// Go構造体「Account_master」の初期化
 		account_master := new(Account_master)
 		account_master.User_id = "abcde"
 		account_master.Account_name = "abcde"
@@ -49,7 +48,6 @@ func main() {
 		account_master.Status = "9"
 		account_master.Registration_date = time.Now()
 
-		// Go構造体「Account_attribute」の初期化
 		account_attribute := new(Account_attribute)
 		account_attribute.Account_id = 1234
 		account_attribute.Update_date = time.Now()
@@ -57,9 +55,10 @@ func main() {
 		account_attribute.Pic_id_01 = "pic_id_01"
 		account_attribute.Skill = "skill"
 
+		// この2行に違和感（ピリオド結合は？）
 		c.JSON(200, account_master)
 		c.JSON(200, account_attribute)
-    })
+	})
 
 	r.Run()
 }
