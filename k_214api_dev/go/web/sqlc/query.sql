@@ -17,7 +17,6 @@ INSERT INTO account_master (
 DELETE FROM account_master
 WHERE user_id = ?;
 
-
 -- name: GetAccount_attribute :one
 SELECT * FROM account_attribute
 WHERE account_id = ? LIMIT 1;
