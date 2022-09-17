@@ -21,11 +21,11 @@ type Account_master struct {
 }
 
 type Account_attribute struct {
-	Account_id  int       `json:"account_id"`
-	Update_date time.Time `json:"update_date"`
-	Update_id   string    `json:"update_id"`
-	Pic_id_01   string    `json:"pic_id_01"`
-	Skill       string    `json:"skill"`
+	Account_id        int       `json:"account_id"`
+	Update_date       time.Time `json:"update_date"`
+	Update_id         string    `json:"update_id"`
+	Pic_id_01         string    `json:"pic_id_01"`
+	Skill             string    `json:"skill"`
 }
 
 func main() {
