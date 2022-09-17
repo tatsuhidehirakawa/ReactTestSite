@@ -1,7 +1,7 @@
 version: 1
 packages:
-  - path: "build_orm" # 出力ディレクトリ
-    name: "build_orm" # 出力ディレクトリ名
+  - path: "build_sqlc" # 出力ディレクトリ
+    name: "build_sqlc" # 出力ディレクトリ名
     engine: "postgresql"
     schema: "schema.sql" # スキーマの初期化
     queries: "query.sql" # クエリの初期化
