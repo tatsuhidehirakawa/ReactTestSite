@@ -13,7 +13,7 @@ type Account_attribute struct {
 	Update_date time.Time `json:"update_date"`
 	Update_id   string    `json:"update_id"`
 	Pic_id_01   string    `json:"pic_id_01"`
-	Skil        string    `json:"skil"`
+	Skill        string    `json:"skill"`
 }
 
 func main() {
@@ -28,7 +28,7 @@ func main() {
 		account_attribute.Update_date = time.Now()
 		account_attribute.Update_id = "update_id"
 		account_attribute.Pic_id_01 = "pic_id_01"
-		account_attribute.Skil = "skil"
+		account_attribute.Skill = "skill"
 
         c.JSON(200, account_attribute)
     })

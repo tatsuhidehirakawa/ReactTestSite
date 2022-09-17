@@ -1,7 +1,7 @@
 --初期データ(管理者用データ)の記述
 
 INSERT INTO account_attribute
-  (account_id,update_date,update_id,pic_id_01,skil)
+  (account_id,update_date,update_id,pic_id_01,skill)
 VALUES ('5e9nr6eka93u','09/07/22','5e9nr6eka93u','5e9nr6eka93u','SystemAdministrator');
 
 INSERT INTO account_master

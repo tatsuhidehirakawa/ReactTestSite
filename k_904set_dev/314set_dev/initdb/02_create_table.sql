@@ -26,7 +26,7 @@ create table account_attribute (
   , pic_id_01 character varying not null
   , pic_id_02 character varying
   , pic_id_03 character varying
-  , skil character varying(1000) not null
+  , skill character varying(1000) not null
   , constraint account_attribute_PKC primary key (account_id)
 ) ;
 
@@ -59,7 +59,7 @@ comment on column account_attribute.update_id is 'update id:更新者';
 comment on column account_attribute.pic_id_01 is 'Picture ID 1:プロフィール写真1';
 comment on column account_attribute.pic_id_02 is 'Picture ID 2:プロフィール写真2';
 comment on column account_attribute.pic_id_03 is 'Picture ID 3:プロフィール写真3';
-comment on column account_attribute.skil is 'skill:スキル';
+comment on column account_attribute.skill is 'skill:スキル';
 
 comment on table account_master is 'account_master';
 comment on column account_master.user_id is 'User ID:ユーザID';
