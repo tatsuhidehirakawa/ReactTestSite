@@ -9,14 +9,17 @@ APIサーバ用コンテナ「k214api_dev」構築手順
 
 使用コマンド：
 ```
-# コンテナビルド／コンテナ入系
-docker compose up -d;docker compose exec web bash
+docker compose up -d
+docker exec -it k_214api_dev bash # コンテナ入系
+cd go\src # カレントディレクトリ移動
+go mod init github.com/xxxxxxxx/yyyyyyyy/ # ？
+go get github.com/kyleconroy/sqlc/cmd/sqlc # go.modが生成
+go install github.com/kyleconroy/sqlc/cmd/sqlc
+sqlc generate --file sqlc/sqlc.yaml
+sqlc generate # sqlcのビルド
+start chrome http://localhost:3000/ # 動作確認
 
-# ディレクトリ移動
-cd go\src\sqlc
-
-# 使用するフレームワーク・ライブラリのインポート
-go mod init # ※使わない？
+# 以下は予備メモ
 go get github.com/gin-gonic/gin/v2
 go get github.com/kyleconroy/sqlc/cmd/sqlc # ※使わない？
 go install github.com/kyleconroy/sqlc/cmd/sqlc
@@ -25,12 +28,6 @@ sqlc version # バージョン確認
 cd sqlc # ymalファイルの場所に遷移
 sqlc generate # sqlcのビルド
 sqlc generate --file sqlc/sqlc.yaml
-
-# サーバ起動
-go run main.go
-
-# 動作確認
-start chrome http://localhost:3000/
 ```
 <!--
 注意点：
