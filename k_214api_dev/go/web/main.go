@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"log" // ?
 	"context" // ?
-	"github.com/lib/pq"
-	"github.com/gowebexamples/sqlc-example/postgres"
+	"github.com/lib/pq" // ?
+	"github.com/gowebexamples/sqlc-example/postgres" // ?
 	"github.com/gin-gonic/gin"
 )
 
