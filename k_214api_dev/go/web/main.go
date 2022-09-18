@@ -35,7 +35,7 @@ func main() {
 
 	/*---sqlc関連行ここから---------------------------------------------------*/
 	conn, err := sql.Open("build_sqlc", "user=hoge password=passw0rd dbname=sqlc sslmode=desable")
-    if err != nil {
+	if err != nil {
 		log.Fatal(err)
 	}
 
