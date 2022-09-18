@@ -16,13 +16,13 @@ docker compose up -d;docker compose exec web bash
 cd go\src\sqlc
 
 # 使用するフレームワーク・ライブラリのインポート
-go mod init
+go mod init # ※使わない？
 go get github.com/gin-gonic/gin/v2
-go get github.com/kyleconroy/sqlc/cmd/sqlc
+go get github.com/kyleconroy/sqlc/cmd/sqlc # ※使わない？
 go install github.com/kyleconroy/sqlc/cmd/sqlc
+go install github.com/gin-gonic/gin/v2
 sqlc version # バージョン確認
 cd sqlc # ymalファイルの場所に遷移
-sqlc init # 空のymalファイルを生成  
 sqlc generate # sqlcのビルド
 sqlc generate --file sqlc/sqlc.yaml
 
