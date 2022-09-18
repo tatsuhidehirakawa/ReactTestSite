@@ -4,7 +4,9 @@ project:
 packages:
   - name: "build_sqlc" # 出力ディレクトリ名
     path: "build_sqlc" # 出力ディレクトリ
-    emit_json_tags: true
-    engine: "postgresql"
-    schema: "schema.sql" # スキーマの初期化
     queries: "query.sql" # クエリの初期化
+    schema: "schema.sql" # スキーマの初期化
+    engine: "postgresql"
+    emit_json_tags: true
+    emit_prepared_queries: false
+    emit_exact_table_names: false

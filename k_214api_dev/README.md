@@ -22,7 +22,7 @@ go get github.com/kyleconroy/sqlc/cmd/sqlc
 go install github.com/kyleconroy/sqlc/cmd/sqlc # 旧バージョン？基本使わない
 sqlc version # バージョン確認
 cd sqlc # ymalファイルの場所に遷移する必要あり
-sqlc init
+~~sqlc init # 空のymalファイルを生成~~  
 sqlc generate # sqlcのビルド
 sqlc generate --file sqlc/sqlc.yaml
 
