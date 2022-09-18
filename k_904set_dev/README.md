@@ -7,10 +7,10 @@ Web開発用Dockerコンテナ群
 2022. 8.17 実装開始（902dbs_dev）  
 2022. 8.22 docker-compose.ymlを統合（902dbs_dev）  
 2022. 8.27 環境変数を導入（902dbs_dev）  
-2022. 8.28 APからAPIへの移行作業開始（212api_dev）  
+2022. 8.28 APからAPIへの以降作業開始（212api_dev）  
 2022. 9. 3 「.sql」ファイルのコードを実装（902dbs_dev）  
 2022. 9.17 「sqlc」を実装（214api_dev）  
-2022. 9.xx (予定)REST（ULCODC$SS）コンポーネントを実装（115wbs_dev）  
+2022. 9.xx (予定)REST（ULCODC$SS）コンポーネントを実装（112wbs_dev）  
 
 ２. 技術スタック  
 214api_dev：Golang(Gin,sqlc)  
@@ -23,8 +23,8 @@ Windows10／VSCode／Docker desktop for Windows
 ４. 起動・確認コマンド等  
 ```
 docker compose up -d
-docker exec -it k_214api_dev bash # コンテナ入系
-cd go\src # カレントディレクトリ移動
+docker exec -it k_904set_dev-214api_dev-1 bash # コンテナ入系
+cd go\src # カレントディレクトリ確認
 go mod init github.com/xxxxxxxx/yyyyyyyy/ # go.modが生成
 go get github.com/kyleconroy/sqlc/cmd/sqlc # go.sumが生成
 go install github.com/kyleconroy/sqlc/cmd/sqlc # ？
@@ -36,13 +36,7 @@ start chrome http://localhost:3000/ # 動作確認
 
 # 以下は予備メモ
 go get github.com/gin-gonic/gin/v2
-go get github.com/kyleconroy/sqlc/cmd/sqlc # ※使わない？
-go install github.com/kyleconroy/sqlc/cmd/sqlc
 go install github.com/gin-gonic/gin/v2
-sqlc version # バージョン確認
-cd sqlc # ymalファイルの場所に遷移
-sqlc generate # sqlcのビルド
-sqlc generate --file sqlc/sqlc.yaml
 ```
 <!--
 注意点：
@@ -65,7 +59,7 @@ go mod init github.com/gin-gonic/gin/v2 && go get && go run main.go
 ②「create-react-app」を使用せずに開発用コンテナを作成すること  
 ③「docker-compose.yml」ファイルをルートディレクトリ「myportfolio_k」直下で一つにまとめること  
 -->
-６．参考文献  
+６．参考文献
 ① https://docs.sqlc.dev/en/latest/overview/install.html  
 ② https://www.youtube.com/watch?v=uBPXNREhZZw  
 ③ https://future-architect.github.io/articles/20210804a/  
