@@ -10,7 +10,7 @@ Web開発用Dockerコンテナ群
 2022. 8.28 APからAPIへの以降作業開始（212api_dev）  
 2022. 9. 3 「.sql」ファイルのコードを実装（902dbs_dev）  
 2022. 9.17 「sqlc」を実装（214api_dev）  
-2022. 9.xx (予定)REST（ULCODC$SS）コンポーネントを実装（112wbs_dev）  
+2022. 9.xx (予定)REST（ULCODC$SS）コンポーネントを実装（115wbs_dev）  
 
 ２. 技術スタック  
 214api_dev：Golang(Gin,sqlc)  
