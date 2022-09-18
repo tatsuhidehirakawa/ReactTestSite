@@ -1,14 +1,13 @@
 package main
 
 import (
-	"context" // ?
 	"time"
 	"database/sql"
 	"log" // ?
-    "github.com/lib/pq"
-    "github.com/gowebexamples/sqlc-example/postgres"
+	"context" // ?
+	"github.com/lib/pq"
+	"github.com/gowebexamples/sqlc-example/postgres"
 	"github.com/gin-gonic/gin"
-	// "github.com/kyleconroy/sqlc"
 )
 
 type Account_master struct {
