@@ -1,10 +1,12 @@
 package main
 
 import (
+	"context" // ?
 	"time"
 	"database/sql"
-	"log"
-	-"github.com/lib/pq"
+	"log" // ?
+    "github.com/lib/pq"
+    "github.com/gowebexamples/sqlc-example/postgres"
 	"github.com/gin-gonic/gin"
 	// "github.com/kyleconroy/sqlc"
 )
@@ -40,9 +42,10 @@ func main() {
 
 	db := postgres.New(conn)
 
-	user, err := db.CreateUser(context.Background(), postgres,CreateUserParams{})
+	user, err := db.CreateUser(context.Background(), postgres,CreateUserParams{
 	    Firstname: "hoge",
 		Lastname: "fuga",
+	})
 	if err != nil{
 		log.Fatal(err)
 	}

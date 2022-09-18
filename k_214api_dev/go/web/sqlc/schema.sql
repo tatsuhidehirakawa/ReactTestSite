@@ -1,5 +1,5 @@
 CREATE TABLE account_master (
-  user_id  BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id SERIAL PRIMARY KEY,
   account_name      text      NOT NULL,
   mail_addless      text      NOT NULL,
   password          text      NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE account_master (
 );
 
 CREATE TABLE account_attribute (
-  account_id        BIGINT    NOT NULL,
+  account_id        SERIAL    NOT NULL,
   self_introduction text,
   twitter_url       text,
   facebook_url      text,
