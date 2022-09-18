@@ -34,14 +34,14 @@ type Account_attribute struct {
 func main() {
 
 	/*---sqlc関連行ここから---------------------------------------------------*/
-	conn, err := sql.Open("postgres", "user=hoge password=passw0rd dbname=sqlc sslmode=desable")
+	conn, err := sql.Open("build_sqlc", "user=hoge password=passw0rd dbname=sqlc sslmode=desable")
     if err != nil {
 		log.Fatal(err)
 	}
 
-	db := postgres.New(conn)
+	db := build_sqlc.New(conn)
 
-	user, err := db.CreateUser(context.Background(), postgres,CreateUserParams{
+	user, err := db.CreateUser(context.Background(), build_sqlc,CreateUserParams{
 	    Firstname: "hoge",
 		Lastname: "fuga",
 	})
