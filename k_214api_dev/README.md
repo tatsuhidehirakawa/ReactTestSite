@@ -14,7 +14,7 @@ docker exec -it k_214api_dev bash # コンテナ入系
 cd go\src # カレントディレクトリ移動
 go mod init github.com/xxxxxxxx/yyyyyyyy/ # ？
 go get github.com/kyleconroy/sqlc/cmd/sqlc # go.modが生成
-go install github.com/kyleconroy/sqlc/cmd/sqlc
+go install github.com/kyleconroy/sqlc/cmd/sqlc # go.sumが生成
 sqlc generate --file sqlc/sqlc.yaml
 sqlc generate # sqlcのビルド
 start chrome http://localhost:3000/ # 動作確認
