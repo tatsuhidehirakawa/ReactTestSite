@@ -39,6 +39,9 @@ go get github.com/gin-gonic/gin/v2
 go install github.com/gin-gonic/gin/v2
 ```
 <!--
+go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml
+-->
+<!--
 注意点：
 ・Golangのバージョンを今後固定する必要あり(latestにしない！)
 ・
