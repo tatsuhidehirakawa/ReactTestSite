@@ -7,7 +7,7 @@ Web開発用Dockerコンテナ群
 2022. 8.17 実装開始（902dbs_dev）  
 2022. 8.22 docker-compose.ymlを統合（902dbs_dev）  
 2022. 8.27 環境変数を導入（902dbs_dev）  
-2022. 8.28 APからAPIへの以降作業開始（212api_dev）  
+2022. 8.28 APからAPIへの移行作業開始（212api_dev）  
 2022. 9. 3 「.sql」ファイルのコードを実装（902dbs_dev）  
 2022. 9.17 「sqlc」を実装（214api_dev）  
 2022. 9.xx (予定)REST（ULCODC$SS）コンポーネントを実装（115wbs_dev）  
