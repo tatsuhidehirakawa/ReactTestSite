@@ -2,7 +2,9 @@ package main
 
 import (
 	"time"
-
+	"database/sql"
+	"log"
+	-"github.com/lib/pq"
 	"github.com/gin-gonic/gin"
 	// "github.com/kyleconroy/sqlc"
 )
@@ -30,8 +32,23 @@ type Account_attribute struct {
 
 func main() {
 
-	// db, err := sql.Open("postgresql", "hoge:passw0rd@tcp(localhost:13306)/account_attribute")
+	/*---sqlc関連行ここから---------------------------------------------------*/
+	conn, err := sql.Open("postgres", "user=hoge password=passw0rd dbname=sqlc sslmode=desable")
+    if err != nil {
+		log.Fatal(err)
+	}
 
+	db := postgres.New(conn)
+
+	user, err := db.CreateUser(context.Background(), postgres,CreateUserParams{})
+	    Firstname: "hoge",
+		Lastname: "fuga",
+	if err != nil{
+		log.Fatal(err)
+	}
+	log.Println(user)  // 末尾のr.Run()に渡す？
+
+	/*---Gin関連行ここから----------------------------------------------------*/
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {

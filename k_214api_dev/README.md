@@ -18,11 +18,11 @@ cd go\src\sqlc
 go mod init
 go get github.com/gin-gonic/gin/v2
 go get github.com/kyleconroy/sqlc/cmd/sqlc
-go install github.com/kyleconroy/sqlc/cmd/sqlc
-sqlc version
-cd sqlc
+go install github.com/kyleconroy/sqlc/cmd/sqlc # 旧バージョン？基本使わない
+sqlc version # バージョン確認
+cd sqlc # ymalファイルの場所に遷移する必要あり
 sqlc init
-sqlc generate
+sqlc generate # sqlcのビルド
 sqlc generate --file sqlc/sqlc.yaml
 
 # サーバ起動

@@ -1,7 +1,10 @@
-version: 1
+version: "1"
+project:
+    id: ""
 packages:
-  - path: "build_sqlc" # 出力ディレクトリ
-    name: "build_sqlc" # 出力ディレクトリ名
+  - name: "build_sqlc" # 出力ディレクトリ名
+    path: "build_sqlc" # 出力ディレクトリ
+    emit_json_tags: true
     engine: "postgresql"
     schema: "schema.sql" # スキーマの初期化
     queries: "query.sql" # クエリの初期化

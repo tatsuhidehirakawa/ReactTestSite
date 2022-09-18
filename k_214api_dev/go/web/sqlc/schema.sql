@@ -9,7 +9,7 @@ CREATE TABLE account_master (
   language          text      NOT NULL,
   status            text      NOT NULL,
   registration_date timestamp NOT NULL,
-  rate              text,
+  rate              text
 );
 
 CREATE TABLE account_attribute (
@@ -24,5 +24,5 @@ CREATE TABLE account_attribute (
   pic_id_01         text      NOT NULL,
   pic_id_02         text,
   pic_id_03         text,
-  skill             text      NOT NULL,
+  skill             text      NOT NULL
 );
