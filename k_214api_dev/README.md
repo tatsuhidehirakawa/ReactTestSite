@@ -12,11 +12,12 @@ APIサーバ用コンテナ「k214api_dev」構築手順
 docker compose up -d
 docker exec -it k_214api_dev bash # コンテナ入系
 cd go\src # カレントディレクトリ移動
-go mod init github.com/xxxxxxxx/yyyyyyyy/ # ？
-go get github.com/kyleconroy/sqlc/cmd/sqlc # go.modが生成
-go install github.com/kyleconroy/sqlc/cmd/sqlc # go.sumが生成
-sqlc generate --file sqlc/sqlc.yaml
-sqlc generate # sqlcのビルド
+go mod init github.com/xxxxxxxx/yyyyyyyy/ # go.modが生成
+go get github.com/kyleconroy/sqlc/cmd/sqlc # go.sumが生成
+go install github.com/kyleconroy/sqlc/cmd/sqlc # ？
+sqlc version # インストール確認
+sqlc generate --file sqlc/sqlc.yaml # sqlcのビルド
+
 start chrome http://localhost:3000/ # 動作確認
 
 # 以下は予備メモ
