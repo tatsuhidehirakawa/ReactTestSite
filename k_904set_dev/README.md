@@ -1,5 +1,5 @@
 Web開発用Dockerコンテナ群  
-「k_904set_dev（「214api_dev」＋「314dbs_dev」）」  
+「k_904set_dev（「k_214api_dev」＋「314dbs_dev」）」  
 の起動・操作手順  
 ---
 
