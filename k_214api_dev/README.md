@@ -3,7 +3,7 @@ APIサーバ用コンテナ「k214api_dev」構築手順
 技術スタック：Golang／Gin／sqlc／Docker  
 
 参考①：https://docs.sqlc.dev/en/latest/overview/install.html  
-参考②：https://www.youtube.com/watch?v=uBPXNREhZZw
+参考②：https://www.youtube.com/watch?v=uBPXNREhZZw  
 参考③：https://future-architect.github.io/articles/20210804a/  
 参考④：https://debimate.jp/2022/06/25/  
 
