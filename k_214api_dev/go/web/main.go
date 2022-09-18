@@ -33,7 +33,7 @@ type Account_attribute struct {
 */
 func main() {
 
-	/*---sqlc関連行ここから---------------------------------------------------*/
+/*---sqlc関連行ここから---------------------------------------------------*/
 	conn, err := sql.Open("build_sqlc", "user=hoge password=passw0rd dbname=sqlc sslmode=desable")
 	if err != nil {
 		log.Fatal(err)
@@ -50,7 +50,7 @@ func main() {
 	}
 	log.Println(user)  // 末尾のr.Run()に渡す？
 
-	/*---Gin関連行ここから----------------------------------------------------*/
+/*---Gin関連行ここから----------------------------------------------------*/
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
