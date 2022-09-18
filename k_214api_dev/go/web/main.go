@@ -9,7 +9,7 @@ import (
 	"github.com/gowebexamples/sqlc-example/postgres" // -> ???
 	"github.com/gin-gonic/gin"
 )
-
+/*
 type Account_master struct {
 	User_id           string    `json:"user_id"`
 	Account_name      string    `json:"account_name"`
@@ -30,7 +30,7 @@ type Account_attribute struct {
 	Pic_id_01         string    `json:"pic_id_01"`
 	Skill             string    `json:"skill"`
 }
-
+*/
 func main() {
 
 	/*---sqlc関連行ここから---------------------------------------------------*/
@@ -56,7 +56,7 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 
 		account_master := new(Account_master)
-		account_master.User_id = "abcde"
+/*		account_master.User_id = "abcde"
 		account_master.Account_name = "abcde"
 		account_master.Mail_addless = "example@test.go"
 		account_master.Password = "passw0rd"
@@ -66,14 +66,14 @@ func main() {
 		account_master.Language = "Japanese"
 		account_master.Status = "9"
 		account_master.Registration_date = time.Now()
-
+*/
 		account_attribute := new(Account_attribute)
-		account_attribute.Account_id = 1234
+/*		account_attribute.Account_id = 1234
 		account_attribute.Update_date = time.Now()
 		account_attribute.Update_id = "update_id"
 		account_attribute.Pic_id_01 = "pic_id_01"
 		account_attribute.Skill = "skill"
-
+*/
 		// この2行に違和感（ピリオド結合は？）
 		c.JSON(200, account_master)
 		c.JSON(200, account_attribute)
