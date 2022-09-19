@@ -10,9 +10,7 @@ import (
 	"github.com/gowebexamples/sqlc-example/postgres" // -> ???
 	"github.com/gin-gonic/gin"
 
-	"sqlc_package/db.go"
-	"sqlc_package/models.go"
-	"sqlc_package/query.sql.go"
+	"sqlc_package/build_sqlc"
 )
 /*
 type Account_master struct {
