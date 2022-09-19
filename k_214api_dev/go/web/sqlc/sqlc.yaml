@@ -2,8 +2,8 @@ version: "1"
 project:
     id: ""
 packages:
-  - name: "build_sqlc" # 出力ディレクトリ名
-    path: "build_sqlc" # 出力ディレクトリ
+  - name: "postgres" # 出力ディレクトリ名
+    path: "postgres" # 出力ディレクトリ
     queries: "query.sql" # クエリの初期化
     schema: "schema.sql" # スキーマの初期化
     engine: "postgresql"
