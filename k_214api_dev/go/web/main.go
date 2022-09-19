@@ -8,13 +8,13 @@ import (
 	_ "github.com/lib/pq"
 
 	"github.com/gin-gonic/gin"
-	"github.com/myportfolio_k/k_214api_dev/go/web/sqlc/postgres"
+	"github.com/myportfolio_k/k_214api_dev/go/web/sqlc/build_sqlc"
 )
 
 func main() {
 
 	/*---sqlc関連行ここから---------------------------------------------------*/
-	db, err := sql.Open("postgres", "user=hoge password=passw0rd dbname=sqlc sslmode=desable")
+	db, err := sql.Open("build_sqlc", "user=hoge password=passw0rd dbname=sqlc sslmode=desable")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -29,7 +29,7 @@ func main() {
 
 	r.GET("/", func(c *gin.Context) {
 
-		queries := postgres.New(db)
+		queries := build_sqlc.New(db)
 		accountAttribute, err := queries.ListAccount_attribute(context.TODO())
 
 		if err != nil {
