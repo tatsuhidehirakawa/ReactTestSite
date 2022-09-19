@@ -9,7 +9,7 @@ import (
 	"github.com/gowebexamples/sqlc-example/postgres" // -> ???
 	"github.com/gin-gonic/gin"
 
-	"sqlc/build_sqlc/db.go"
+	"sqlc_package/db.go"
 	"sqlc_package/models.go"
 	"sqlc_package/query.sql.go"
 )
