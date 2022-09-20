@@ -13,8 +13,10 @@ import (
 
 func main() {
 
-	/*---sqlc関連行ここから---------------------------------------------------*/
-	db, err := sql.Open("build_sqlc", "user=hoge password=passw0rd dbname=sqlc sslmode=desable")
+    // DB(PostgreSQL)への接続処理
+	db, err := sql.Open("postgres", "host=314dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
+
+    // DB接続時の例外処理
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -22,9 +24,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	//log.Println(user) // 末尾のr.Run()に渡す？
 
-	/*---Gin関連行ここから----------------------------------------------------*/
+	// Ginの初期化処理
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
@@ -39,5 +40,6 @@ func main() {
 		c.JSON(200, accountAttribute)
 	})
 
+	// サーバの起動処理(8080番)
 	r.Run()
 }

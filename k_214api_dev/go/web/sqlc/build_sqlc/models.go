@@ -10,7 +10,7 @@ import (
 )
 
 type AccountAttribute struct {
-	AccountID        int32          `json:"account_id"`
+	AccountID        string         `json:"account_id"`
 	SelfIntroduction sql.NullString `json:"self_introduction"`
 	TwitterUrl       sql.NullString `json:"twitter_url"`
 	FacebookUrl      sql.NullString `json:"facebook_url"`

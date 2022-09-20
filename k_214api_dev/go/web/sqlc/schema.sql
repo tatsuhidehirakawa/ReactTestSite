@@ -13,7 +13,7 @@ CREATE TABLE account_master (
 );
 
 CREATE TABLE account_attribute (
-  account_id        SERIAL    NOT NULL,
+  account_id        text    NOT NULL,
   self_introduction text,
   twitter_url       text,
   facebook_url      text,

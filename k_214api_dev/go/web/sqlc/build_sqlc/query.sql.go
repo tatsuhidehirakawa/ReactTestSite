@@ -20,7 +20,7 @@ INSERT INTO account_attribute (
 `
 
 type CreateAccount_attributeParams struct {
-	AccountID        int32          `json:"account_id"`
+	AccountID        string         `json:"account_id"`
 	SelfIntroduction sql.NullString `json:"self_introduction"`
 	TwitterUrl       sql.NullString `json:"twitter_url"`
 	FacebookUrl      sql.NullString `json:"facebook_url"`
@@ -96,7 +96,7 @@ DELETE FROM account_attribute
 WHERE account_id = ?
 `
 
-func (q *Queries) DeleteAccount_attribute(ctx context.Context, accountID int32) error {
+func (q *Queries) DeleteAccount_attribute(ctx context.Context, accountID string) error {
 	_, err := q.db.ExecContext(ctx, deleteAccount_attribute, accountID)
 	return err
 }
@@ -116,7 +116,7 @@ SELECT account_id, self_introduction, twitter_url, facebook_url, instagram_url, 
 WHERE account_id = ? LIMIT 1
 `
 
-func (q *Queries) GetAccount_attribute(ctx context.Context, accountID int32) (AccountAttribute, error) {
+func (q *Queries) GetAccount_attribute(ctx context.Context, accountID string) (AccountAttribute, error) {
 	row := q.db.QueryRowContext(ctx, getAccount_attribute, accountID)
 	var i AccountAttribute
 	err := row.Scan(
