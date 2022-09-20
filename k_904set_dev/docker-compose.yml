@@ -12,6 +12,8 @@ services:
       - "3000:8080"
     networks:
       - postgres-test-network
+    depends_on:
+      - 314dbs_dev
 
 #---k_314dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   314dbs_dev:
