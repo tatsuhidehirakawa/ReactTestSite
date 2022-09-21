@@ -5,6 +5,7 @@ go 1.19
 require (
 	github.com/gin-gonic/gin v1.8.1
 	github.com/lib/pq v1.10.7
+	sqlc_pkg v0.0.0-00010101000000-000000000000
 )
 
 require (
@@ -27,7 +28,6 @@ require (
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	sqlc_package v0.0.0-00010101000000-000000000000 // indirect
 )
 
-replace sqlc_package => ./sqlc/build_sqlc
+replace sqlc_pkg => ./sqlc/build_sqlc

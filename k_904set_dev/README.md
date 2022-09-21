@@ -30,10 +30,10 @@ go install github.com/kyleconroy/sqlc/cmd/sqlc # ？
 sqlc version # インストール確認
 sqlc generate --file sqlc/sqlc.yaml # sqlcのビルド
 
-# ローカルモジュール「sqlc_package」のインポート
-# 「go.mod」の末尾に「replace sqlc_package => ./sqlc/build_sqlc
+# ローカルモジュール「sqlc_pkg」のインポート
+# 「go.mod」の末尾に「replace sqlc_pkg => ./sqlc/build_sqlc
 」を加える。
-cd sqlc/build_sqlc && go mod init sqlc_package && cd ../.. && go get sqlc_package
+cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
 
 go run main.go
 start chrome http://localhost:3000/ # 動作確認
