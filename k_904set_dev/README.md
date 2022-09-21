@@ -29,12 +29,12 @@ go get github.com/kyleconroy/sqlc/cmd/sqlc # go.sumが生成
 go install github.com/kyleconroy/sqlc/cmd/sqlc # 処理に57秒
 sqlc version # インストール確認
 sqlc generate --file sqlc/sqlc.yaml # sqlcのビルド
-
 cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg # ローカルモジュール「sqlc_pkg」のインポート
+# ↓
 # 「src/web/go.mod」の末尾に「replace sqlc_pkg => ./sqlc/build_sqlc
 」を加える。
-
-go run main.go
+# ↓
+go mod tidy && go run main.go
 start chrome http://localhost:3000/ # 動作確認
 
 # 以下は予備メモ
@@ -42,7 +42,7 @@ go get github.com/gin-gonic/gin/v2
 go install github.com/gin-gonic/gin/v2
 ```
 <!--
-go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml
+go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
 -->
 <!--
 注意点：
