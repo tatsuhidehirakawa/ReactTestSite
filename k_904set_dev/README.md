@@ -26,14 +26,13 @@ docker exec -it k_904set_dev-214api_dev-1 bash # コンテナ入系
 cd go\src # カレントディレクトリ確認
 go mod init github.com/xxxxxxxx/yyyyyyyy/ # go.modが生成
 go get github.com/kyleconroy/sqlc/cmd/sqlc # go.sumが生成
-go install github.com/kyleconroy/sqlc/cmd/sqlc # ？
+go install github.com/kyleconroy/sqlc/cmd/sqlc # 処理に57秒
 sqlc version # インストール確認
 sqlc generate --file sqlc/sqlc.yaml # sqlcのビルド
 
-# ローカルモジュール「sqlc_pkg」のインポート
-# 「go.mod」の末尾に「replace sqlc_pkg => ./sqlc/build_sqlc
+cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg # ローカルモジュール「sqlc_pkg」のインポート
+# 「src/web/go.mod」の末尾に「replace sqlc_pkg => ./sqlc/build_sqlc
 」を加える。
-cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
 
 go run main.go
 start chrome http://localhost:3000/ # 動作確認
