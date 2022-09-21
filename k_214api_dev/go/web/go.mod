@@ -1,4 +1,4 @@
-module github.com/myportfolio_k/k_214api_dev/go/web
+module sqlc/build_sqlc
 
 go 1.19
 
@@ -27,4 +27,7 @@ require (
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
+	sqlc_package v0.0.0-00010101000000-000000000000 // indirect
 )
+
+replace sqlc_package => ./sqlc/build_sqlc
