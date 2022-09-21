@@ -25,12 +25,12 @@ services:
   # tty: true  
     volumes:
       - db-store:/var/lib/postgresql/data
-      - ./314set_dev/initdb:/docker-entrypoint-initdb.d # 初期化用SQLファイル置き場
+      - ./314set_dev/initdb:/docker-entrypoint-initdb.d
       - ./314set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
-    networks:                                  # 20220825追加
-      - postgres-test-network                  # 20220825追加
+    networks:
+      - postgres-test-network
 
 #---k_314dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
@@ -38,10 +38,8 @@ volumes:
 
 #---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 networks:
-  postgres-test-network:                        # 20220825追加
-    driver: bridge                              # 20220825追加
-#    external:
-#      name: postgres-test-network
+  postgres-test-network:
+    driver: bridge
 
 #---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 # db-storeが生成されるような行為を行うときには「.sql」ファイルを

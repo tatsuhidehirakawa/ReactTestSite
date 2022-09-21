@@ -27,8 +27,8 @@ REST(ULCODC$SS)_Architecture
 |           |  | |         | WebServer |                        |
 |           |  | |         |React,Sass |                        |
 |           |  | |  HTML   |           |                        |
-|           |  | +-CSS,JS--|#8080      | dev: Ubuntu 22.04 LTS  |
-|           |  |           +-----------+ act: Amazon Linux 2022 |
+|           |  | +-CSS,JS--|#8080      | act: Ubuntu 22.04 LTS  |
+|           |  |           +-----------+      Amazon Linux 2022 |
 +-----------+  +------------------------------------------------+
 ```
 ディレクトリ構成図(抜粋)  
@@ -49,7 +49,7 @@ myportfolio_k
   │  ├─314set_dev
   │  │  ├─config
   │  │  │  └─postgresql.conf
-  │  │  └─initdb
+  │  │  └─initdb                   # 初期化用SQLファイル置き場
   │  │     ├─01_initialize.sql     # DDL,DCL
   │  │     ├─02_create_table.sql   # DML,DCL,DDL
   │  │     └─03_initdata.sql       # DML
