@@ -1,9 +1,0 @@
-version: '3'
-services:
-  web:
-    build: ./web
-    tty: true # コンテナを継続
-    volumes:
-      - ./web:/go/src
-    ports:
-      - "3000:8080"

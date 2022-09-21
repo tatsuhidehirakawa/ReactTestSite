@@ -5,7 +5,7 @@
 １　使用コマンド
 ディレクトリ移動
 ```
-cd k_311dbs_dev
+cd k_314dbs_dev
 ```
 コンテナをビルド
 ```
@@ -13,7 +13,7 @@ docker compose up -d
 ```
 コンテナへ接続
 ```
-docker exec -it 311dbs_dev /bin/sh
+docker exec -it 314dbs_dev /bin/sh
 ```
 psqlで接続確認
 ```
@@ -23,7 +23,7 @@ psql -h localhost -U postgres
 ```
 myportfolio_k
   │
-  └─k_311dbs_dev
+  └─k_314dbs_dev
      ├─config
      │  └─postgresql.conf
      ├─01_initialize.sql
