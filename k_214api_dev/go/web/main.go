@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"log"
 
 	_ "github.com/lib/pq"
@@ -12,15 +13,12 @@ import (
 )
 
 func main() {
+	// DB(PostgreSQL)への接続処理
+	cfg := NewConfig()
+	dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode)
+	db, err := sql.Open("postgres", dsn)
 
-    // DB(PostgreSQL)への接続処理
-	db, err := sql.Open("postgres", "host=314dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
-
-    // DB接続時の例外処理
-	if err != nil {
-		log.Fatal(err)
-	}
-
+	// DB接続時の例外処理
 	if err != nil {
 		log.Fatal(err)
 	}
