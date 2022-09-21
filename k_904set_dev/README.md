@@ -31,8 +31,7 @@ sqlc version # インストール確認
 sqlc generate --file sqlc/sqlc.yaml # sqlcのビルド
 cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg # ローカルモジュール「sqlc_pkg」のインポート
 # ↓
-# 「src/web/go.mod」の末尾に「replace sqlc_pkg => ./sqlc/build_sqlc
-」を加える。
+# 「src/web/go.mod」の末尾に「replace sqlc_pkg => ./sqlc/build_sqlc」を加える。
 # ↓
 go mod tidy && go run main.go
 start chrome http://localhost:3000/ # 動作確認
