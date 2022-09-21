@@ -65,8 +65,13 @@ go mod init github.com/gin-gonic/gin/v2 && go get && go run main.go
 ②「create-react-app」を使用せずに開発用コンテナを作成すること  
 ③「docker-compose.yml」ファイルをルートディレクトリ「myportfolio_k」直下で一つにまとめること  
 -->
-６．参考文献
+６．参考文献  
 ① https://docs.sqlc.dev/en/latest/overview/install.html  
 ② https://www.youtube.com/watch?v=uBPXNREhZZw  
 ③ https://future-architect.github.io/articles/20210804a/  
 ④ https://debimate.jp/2022/06/25/  
+
+
+<!--
+db, err := sql.Open("postgres", "host=314dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
+-->
