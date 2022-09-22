@@ -35,9 +35,18 @@ REST(ULCODC$SS)_Architecture
 ```
 myportfolio_k
   │
-  ├─k_114wbs_dev          # WEBサーバ
-  ├─k_214api_dev          # APIサーバ
-  ├─k_314dbs_dev          # DBサーバ
+  ├─k_114wbs_dev          # WebServer
+  ├─k_214api_dev          # APIServer
+  │  └─go
+  │    └─web
+  │       ├─main.go
+  │       ├─pkgset.sh
+  │       ├─config.go
+  │       └─sqlc          # ORM
+  │          ├─query.sql
+  │          ├─schema.sql
+  │          └─sqlc.yaml
+  ├─k_314dbs_dev          # DBServer
   │
   ├─k_710log_dev
   │
