@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"database/sql"
-//	"fmt"
+	"fmt"
 	"log"
 
 	_ "github.com/lib/pq"

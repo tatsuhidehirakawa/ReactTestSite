@@ -29,7 +29,11 @@ go get github.com/kyleconroy/sqlc/cmd/sqlc # go.sumが生成
 go install github.com/kyleconroy/sqlc/cmd/sqlc # 処理に57秒
 sqlc version # インストール確認
 sqlc generate --file sqlc/sqlc.yaml # sqlcのビルド
-cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg # ローカルモジュール「sqlc_pkg」のインポート
+cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg 
+```
+シェルはここまで
+```
+# ローカルモジュール「sqlc_pkg」のインポート
 # ↓
 # 「src/web/go.mod」の末尾に「replace sqlc_pkg => ./sqlc/build_sqlc」を加える。
 # ↓
