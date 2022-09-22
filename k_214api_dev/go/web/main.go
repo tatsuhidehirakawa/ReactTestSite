@@ -26,7 +26,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	/*--- GETのハンドラ部分を移動 ------------------*/
+	/*--- GETのハンドラ部分を抽出 ------------------*/
 	getting := func(c *gin.Context) {
 
 		queries := build_sqlc.New(db)
