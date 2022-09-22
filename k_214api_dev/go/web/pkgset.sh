@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
-touch test.txt
+touch test1.txt
+touch test2.txt
 
 << COMMENT
 go mod init github.com/goark/pa-api
