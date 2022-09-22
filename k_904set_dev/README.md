@@ -69,8 +69,3 @@ go mod init github.com/gin-gonic/gin/v2 && go get && go run main.go
 ② https://www.youtube.com/watch?v=uBPXNREhZZw  
 ③ https://future-architect.github.io/articles/20210804a/  
 ④ https://debimate.jp/2022/06/25/  
-
-
-<!--
-db, err := sql.Open("postgres", "host=314dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
--->
