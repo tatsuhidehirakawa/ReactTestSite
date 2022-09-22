@@ -38,18 +38,31 @@ func main() {
 	
 		c.JSON(200, accountAttribute)
 	}
+
+	/*--- POSTのハンドラ部分 -----------------------*/
+	posting := func(c *gin.Context) {
+
+		queries := build_sqlc.New(db)
+		accountAttribute, err := queries.ListAccount_attribute(context.TODO())
+	
+		if err != nil {
+			log.Fatal(err)
+		}
+	
+		c.JSON(200, accountAttribute)
+	}
 	/*--------------------------------------------*/
 
 	// Ginの初期化処理
 	router := gin.Default()
 
 	router.GET("/someGet", getting)
-/*	router.POST("/somePost", posting)
-	router.PUT("/somePut", putting)
-	router.DELETE("/someDelete", deleting)
-	router.PATCH("/somePatch", patching)
-	router.HEAD("/someHead", head)
-	router.OPTIONS("/someOptions", options)
-*/
+	router.POST("/somePost", posting)
+//	router.PUT("/somePut", putting)
+//	router.DELETE("/someDelete", deleting)
+//	router.PATCH("/somePatch", patching)
+//	router.HEAD("/someHead", head)
+//	router.OPTIONS("/someOptions", options)
+
 	router.Run()
 }
