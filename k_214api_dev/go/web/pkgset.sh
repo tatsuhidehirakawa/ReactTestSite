@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+touch test.txt
+
+<< COMMENT
 go mod init github.com/goark/pa-api
 go get github.com/kyleconroy/sqlc/cmd/sqlc
 go install github.com/kyleconroy/sqlc/cmd/sqlc
@@ -12,3 +15,4 @@ go get sqlc_pkg
 sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod
 go mod tidy
 go run main.go
+COMMENT
