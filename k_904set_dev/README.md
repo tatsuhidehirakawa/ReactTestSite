@@ -17,7 +17,7 @@ Web開発用Dockerコンテナ群
 904dbs_dev：Docker／A5:SQL MK-2  
 
 ３. 実行環境  
-Windows10／VSCode／Docker desktop for Windows   
+Windows10／VSCode／Docker desktop for Windows  
 
 ４. 起動・確認コマンド等  
 ```
