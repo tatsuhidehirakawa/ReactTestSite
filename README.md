@@ -1,8 +1,6 @@
 ## 個人開発練習用リポジトリ
 
-１．概　要  
-方向性：一般的な「CtoC」サイトの雛形構築  
-主として使用する予定の技術スタック  
+１．技術スタック  
 フロントエンド：TypeScript、React.js、Sass、Html  
 バックエンド：Go(Gin,sqlc)、PostgreSQL  
 開発環境：Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
@@ -18,10 +16,10 @@ docker exec -it k_904set_dev-214api_dev-1 bash
 
 # 同じ階層にmain.goが存在することを確認する
 
-# 以下のコマンドA群を流す
+# 以下のコマンドA群をシェルで流す
 go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
 
-# 以下のコマンドB群を流す
+# 以下のコマンドB群をシェルで流す
 sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod && go mod tidy && go run main.go
 
 # エンドポイント「http://localhost:3000/someGet」にアクセスしGETを確認する
