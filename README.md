@@ -40,7 +40,7 @@ myportfolio_k
   │  └─go
   │    └─web
   │       ├─main.go
-  │       ├─pkgset.sh
+  │       ├─pkgset.sh     # 作成中
   │       ├─config.go
   │       └─sqlc          # ORM
   │          ├─query.sql

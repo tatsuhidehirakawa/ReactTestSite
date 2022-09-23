@@ -34,7 +34,7 @@ sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod
 go mod tidy && go run main.go
 ```
 ```
-start chrome http://localhost:3000/ # 動作確認
+start chrome http://localhost:3000/someGet # 動作確認
 
 # 以下は予備メモ
 go get github.com/gin-gonic/gin/v2
@@ -50,7 +50,7 @@ go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sql
 ・
 -->
 <!--
-cd "C:\Users\tatsu_hira_s\Documents\My Repository\myportfolio_k\k_214api_dev\go"; docker compose up -d; docker compose exec web bash; start chrome http://localhost:3000/
+cd "C:\Users\tatsu_hira_s\Documents\My Repository\myportfolio_k\k_214api_dev\go"; docker compose up -d; docker compose exec web bash; start chrome http://localhost:3000/someGet
 go mod init github.com/gin-gonic/gin/v2 && go get && go run main.go
 -->
 
