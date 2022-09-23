@@ -14,7 +14,6 @@ go mod init sqlc_pkg
 cd ../..
 go get sqlc_pkg                                           # ここまでは動く
 echo -i 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
-sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod
 go mod tidy
 go run main.go
 COMMENT
