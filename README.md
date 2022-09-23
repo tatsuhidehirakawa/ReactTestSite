@@ -24,7 +24,7 @@ go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sql
 # 以下のコマンドB群をシェルで流す（※ペースト時コマンド末尾に「~」が無いことを確認！）
 sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod && go mod tidy && go run main.go
 
-# postmanでエンドポイントsomeGet、somePost、somePut、someDeleteにてCRUD確認
+# postmanでエンドポイントsomeGet（somePost、somePut、someDelete）にてCRUD確認
 # またはPowerShellで「start chrome http://localhost:3000/someGet」
 
 ```
