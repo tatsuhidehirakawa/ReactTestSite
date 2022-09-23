@@ -19,10 +19,10 @@ docker exec -it k_904set_dev-214api_dev-1 bash
 # 同じ階層にmain.goが存在することを確認する
 
 # 以下のコマンドA群をシェルで流す
-go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
+go mod init go mod init github.com/tatsuhidehirakawa/myportfolio_k && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
 
 # 以下のコマンドB群をシェルで流す（※注意：コマンドのコピペ時、末尾に「~」が付いていないことを確認！）
-sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod && go mod tidy && go run main.go
+echo -i 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod && go mod tidy && go run main.go
 
 # postmanでエンドポイントsomeGet（somePost、somePut、someDelete）にてCRUD確認
 # またはPowerShellで「start chrome http://localhost:3000/someGet」
