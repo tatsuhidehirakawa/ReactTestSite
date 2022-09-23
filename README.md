@@ -35,22 +35,20 @@ REST(ULCODC$SS)_Architecture
 ```
 myportfolio_k
   │
-  ├─k_114wbs_dev                   # Web Server
-  ├─k_214api_dev                   # API Server
+  ├─k_214api_dev                   # 214番APIServer
   │  └─go
   │    └─web
   │       ├─main.go
-  │       ├─pkgset.sh              # 作成中
-  │       ├─config.go
-  │       └─sqlc                   # ORM
+  │       ├─pkgset.sh                  # 作成中
+  │       ├─config.go                  # 作成中
+  │       └─sqlc                       # ORM
   │          ├─query.sql
   │          ├─schema.sql
   │          └─sqlc.yaml
-  ├─k_314dbs_dev                   # DB Server
   │
-  ├─k_710log_dev
+  ├─k_314dbs_dev                   # 314番DBServer
   │
-  ├─k_904set_dev                   # Dockerファイル群
+  ├─k_904set_dev                   # 管理系ファイル群
   │  ├─114set_dev
   │  │  └─Dockerfile
   │  ├─214set_dev
@@ -58,11 +56,11 @@ myportfolio_k
   │  ├─314set_dev
   │  │  ├─config
   │  │  │  └─postgresql.conf
-  │  │  └─initdb                   # 初期化用SQLファイル置き場
+  │  │  └─initdb                       # 初期化用SQLファイル置き場
   │  │     ├─01_initialize.sql
   │  │     ├─02_create_table.sql
   │  │     └─03_initdata.sql
-  │  └─docker-compose.yml          # ※起動用
+  │  └─docker-compose.yml              # Dockerコンテナ群起動用yml
   │
   └─READMR.md
 ```
