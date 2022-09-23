@@ -16,11 +16,15 @@ CSS-in-JSは情勢をよく観察しデファクトスタンダードが決ま�
 # APIコンテナへ入系
 docker exec -it k_904set_dev-214api_dev-1 bash
 
+# 同じ階層にmain.goが存在することを確認する
+
 # 以下のコマンドA群を流す
 go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
 
 # 以下のコマンドB群を流す
 sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod && go mod tidy && go run main.go
+
+# エンドポイント「http://localhost:3000/someGet」にアクセスしGETを確認する
 ```
 ３．サーバ構成図  
 ```
