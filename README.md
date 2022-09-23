@@ -11,6 +11,8 @@ CSS-in-JSは情勢をよく観察しデファクトスタンダードが決ま�
 -->
 ２．起動手順
 ```
+# ディレクトリk_904set_devのdocker-compose.ymlでコンテナを起動
+
 # APIコンテナへ入系
 docker exec -it k_904set_dev-214api_dev-1 bash
 
@@ -19,10 +21,12 @@ docker exec -it k_904set_dev-214api_dev-1 bash
 # 以下のコマンドA群をシェルで流す
 go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
 
-# 以下のコマンドB群をシェルで流す
+# 以下のコマンドB群をシェルで流す（※コピペの場合は末尾の「~」に注意！）
 sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod && go mod tidy && go run main.go
 
-# エンドポイント「http://localhost:3000/someGet」にアクセスしGETを確認する
+# postmanでエンドポイントsomeGet、somePost、somePut、someDeleteにてCRUD確認
+# またはPowerShellで「start chrome http://localhost:3000/someGet」
+
 ```
 ３．サーバ構成図  
 ```
