@@ -1,6 +1,6 @@
 ## 個人開発練習用リポジトリ
 
-－開発方針－  
+１．概　要  
 方向性：一般的な「CtoC」サイトの雛形構築  
 主として使用する予定の技術スタック  
 フロントエンド：TypeScript、React.js、Sass、Html  
@@ -11,7 +11,18 @@
 ベンダーロックインを避けるためあまりにも便利すぎるクラウドサービス依存は避ける。（ファイルを置くだけでデプロイできてしまうようなサービス等）  
 CSS-in-JSは情勢をよく観察しデファクトスタンダードが決まるまでは手を出さず様子を見る。  
 -->
-サーバ構成図  
+２．起動手順
+```
+# APIコンテナへ入系
+docker exec -it k_904set_dev-214api_dev-1 bash
+
+# 以下のコマンドA群を流す
+go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
+
+# 以下のコマンドB群を流す
+sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod && go mod tidy && go run main.go
+```
+３．サーバ構成図  
 ```
 REST(ULCODC$SS)_Architecture
 +-----------+  +------------------------------------------------+
@@ -31,7 +42,7 @@ REST(ULCODC$SS)_Architecture
 |           |  |           +-----------+      Amazon Linux 2022 |
 +-----------+  +------------------------------------------------+
 ```
-ディレクトリ構成図(抜粋)  
+４．ディレクトリ構成図(抜粋)  
 ```
 myportfolio_k
   │
