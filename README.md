@@ -50,7 +50,7 @@ REST(ULCODC$SS)_Architecture
 ```
 myportfolio_k
   ├─k_214api_dev                   # 214番APIServer
-  ├─k_314dbs_dev  [データ形式](/k_214api_dev/README.md)                 # 314番DBServer
+  ├─k_314dbs_dev                   # 314番DBServer
   └─k_904set_dev                   # 管理系ファイル群
      └─docker-compose.yml          # 起動用ymlファイル
 ```
