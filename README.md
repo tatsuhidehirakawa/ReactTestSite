@@ -25,7 +25,7 @@ go mod init github.com/tatsuhidehirakawa/myportfolio_k && go get github.com/kyle
 # またはPowerShellで「start chrome http://localhost:3000/someGet」
 
 ```
-３．サーバ構成図  
+３．サーバ構成図(全体)  
 ```
 REST(ULCODC$SS)_Architecture
 +-----------+  +------------------------------------------------+
@@ -45,37 +45,13 @@ REST(ULCODC$SS)_Architecture
 |           |  |           +-----------+      Amazon Linux 2022 |
 +-----------+  +------------------------------------------------+
 ```
-４．ディレクトリ構成図(抜粋)  
+４．ディレクトリ構成図(全体／抜粋)  
 ```
 myportfolio_k
-  │
   ├─k_214api_dev                   # 214番APIServer
-  │  └─go
-  │    └─web
-  │       ├─main.go
-  │       ├─pkgset.sh                  # 作成中
-  │       ├─config.go                  # 作成中
-  │       └─sqlc                       # ORM
-  │          ├─query.sql
-  │          ├─schema.sql
-  │          └─sqlc.yaml
-  │
   ├─k_314dbs_dev                   # 314番DBServer
-  │
   ├─k_904set_dev                   # 管理系ファイル群
-  │  ├─114set_dev
-  │  │  └─Dockerfile
-  │  ├─214set_dev
-  │  │  └─Dockerfile
-  │  ├─314set_dev
-  │  │  ├─config
-  │  │  │  └─postgresql.conf
-  │  │  └─initdb                       # 初期化用SQLファイル置き場
-  │  │     ├─01_initialize.sql
-  │  │     ├─02_create_table.sql
-  │  │     └─03_initdata.sql
-  │  └─docker-compose.yml              # Dockerコンテナ群起動用yml
-  │
+  │  └─docker-compose.yml
   └─READMR.md
 ```
 

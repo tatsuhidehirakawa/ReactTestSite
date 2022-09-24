@@ -40,6 +40,30 @@ start chrome http://localhost:3000/someGet # 動作確認
 go get github.com/gin-gonic/gin/v2
 go install github.com/gin-gonic/gin/v2
 ```
+４．ディレクトリ構成図(抜粋)  
+```
+myportfolio_k
+  │
+  ├─k_214api_dev                   # 214番APIServer
+  ├─k_314dbs_dev                   # 314番DBServer
+  │
+  ├─k_904set_dev                   # 管理系ファイル群
+  │  ├─114set_dev
+  │  │  └─Dockerfile
+  │  ├─214set_dev
+  │  │  └─Dockerfile
+  │  ├─314set_dev
+  │  │  ├─config
+  │  │  │  └─postgresql.conf
+  │  │  └─initdb                       # 初期化用SQLファイル置き場
+  │  │     ├─01_initialize.sql
+  │  │     ├─02_create_table.sql
+  │  │     └─03_initdata.sql
+  │  └─docker-compose.yml              # Dockerコンテナ群起動用yml
+  │
+  └─READMR.md
+```
+
 <!--
 go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg && sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod && go mod tidy && go run main.go
 -->
