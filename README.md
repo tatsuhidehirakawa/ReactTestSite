@@ -1,15 +1,15 @@
 ## 個人開発練習用リポジトリ
+１．概　要  
+CtoCサイトのひな形を作成  
+CSS-in-JS非採用  
+直交性と疎結合、静的型付けとDockerを重視  
 
-１．技術スタック  
+２．技術スタック  
 フロントエンド：TypeScript、React.js、Sass、Html  
 バックエンド：Go(Gin,sqlc)、PostgreSQL  
 開発環境：Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
-<!--
-開発環境からDockerで作成しローカルへのミドルウェアのインストールは一切行わない。  
-ベンダーロックインを避けるためあまりにも便利すぎるクラウドサービス依存は避ける。（ファイルを置くだけでデプロイできてしまうようなサービス等）  
-CSS-in-JSは情勢をよく観察しデファクトスタンダードが決まるまでは手を出さず様子を見る。  
--->
-２．起動手順
+
+３．起動手順
 ```
 # ディレクトリk_904set_devにあるdocker-compose.ymlでコンテナを起動
 
@@ -21,11 +21,11 @@ docker exec -it k_904set_dev-214api_dev-1 bash
 # 以下のコマンド群をまとめてシェルで流す
 go mod init github.com/tatsuhidehirakawa/myportfolio_k && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg | echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod && go mod tidy && go run main.go
 ```
-３．API定義  
+４．API定義  
 ☞[エンドポイント](/k_214api_dev/README.md)、[データ形式](/k_214api_dev/README.md)  
 （リンク先参照）  
 
-４．サーバ構成図(全体)  
+５．サーバ構成図(全体)  
 ```
 REST(ULCODC$SS)_Architecture
 +-----------+  +------------------------------------------------+
@@ -45,7 +45,7 @@ REST(ULCODC$SS)_Architecture
 |           |  |           +-----------+      Amazon Linux 2022 |
 +-----------+  +------------------------------------------------+
 ```
-５．ディレクトリ構成図(全体／抜粋)  
+６．ディレクトリ構成図(全体／抜粋)  
 ```
 myportfolio_k
   ├─k_214api_dev                   # 214番APIServer
