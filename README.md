@@ -4,7 +4,6 @@
 フロントエンド：TypeScript、React.js、Sass、Html  
 バックエンド：Go(Gin,sqlc)、PostgreSQL  
 開発環境：Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
-[AboutMe](/README.md)
 <!--
 開発環境からDockerで作成しローカルへのミドルウェアのインストールは一切行わない。  
 ベンダーロックインを避けるためあまりにも便利すぎるクラウドサービス依存は避ける。（ファイルを置くだけでデプロイできてしまうようなサービス等）  
@@ -23,9 +22,7 @@ docker exec -it k_904set_dev-214api_dev-1 bash
 go mod init github.com/tatsuhidehirakawa/myportfolio_k && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg | echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod && go mod tidy && go run main.go
 ```
 ３．API定義  
-（１）エンドポイント  
-     localhost:3000/someGet、somePost、somePut、someDelete  
-（２）データ形式  
+右記リンク先：[エンドポイント](/k_214api_dev/README.md)、[データ形式](/k_214api_dev/README.md)
   
 ４．サーバ構成図(全体)  
 ```
