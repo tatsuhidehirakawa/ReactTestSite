@@ -59,7 +59,7 @@ myportfolio_k
   │  │     ├─01_initialize.sql
   │  │     ├─02_create_table.sql
   │  │     └─03_initdata.sql
-  │  └─docker-compose.yml              # Dockerコンテナ群起動用yml
+  │  └─docker-compose.yml          # 起動用ymlファイル
   │
   └─READMR.md
 ```

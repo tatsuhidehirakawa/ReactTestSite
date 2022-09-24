@@ -19,7 +19,7 @@ myportfolio_k
   │          ├─schema.sql
   │          └─sqlc.yaml
   │
-  ├─k_314dbs_dev                   # 314番DBServer
-  └─k_904set_dev                   # 管理系ファイル群
-     └─docker-compose.yml              # Dockerコンテナ群起動用yml
+  ├─k_314dbs_dev
+  └─k_904set_dev
+     └─docker-compose.yml          # 起動用ymlファイル
 ```
