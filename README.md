@@ -13,7 +13,7 @@ CSS-in-JS非採用
 ３．起動手順
 ```
 # カレントディレクトリを「myportfolio_k」とする  
-docker compose -f ./k_904set_dev/docker-compose.yml up -d   # コンテナ起動
+docker compose -f ./myportfolio_k/k_904set_dev/docker-compose.yml up -d   # コンテナ起動
 docker exec -it k_904set_dev-214api_dev-1 bash   # APIコンテナ入系
 
 # 同じ階層にmain.goが存在することを確認する
