@@ -1,7 +1,7 @@
 ## 個人開発練習用リポジトリ
 １．概　要  
-CtoCサイトのひな形を作成  
-RESTfulを意識
+一般的なCtoCサイトのひな形を作成  
+RESTfulを意識  
 CSS-in-JS非採用  
 直交性と疎結合、静的型付けとDockerを重視  
 
@@ -12,10 +12,9 @@ CSS-in-JS非採用
 
 ３．起動手順
 ```
-# ディレクトリk_904set_devにあるdocker-compose.ymlでコンテナを起動
+docker compose -f ./k_904set_dev/docker-compose.yml up -d   # コンテナ起動
 
-# APIコンテナへ入系
-docker exec -it k_904set_dev-214api_dev-1 bash
+docker exec -it k_904set_dev-214api_dev-1 bash   # APIコンテナ入系
 
 # 同じ階層にmain.goが存在することを確認する
 
