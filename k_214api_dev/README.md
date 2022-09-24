@@ -4,6 +4,11 @@ APIサーバ用コンテナ「k214api_dev」
 
 詳細は「k_904set_dev/README.md」」に転記  
 
+３．API定義
+（１）エンドポイント  
+     localhost:3000/someGet、somePost、somePut、someDelete  
+（２）データ形式  
+
 ４．ディレクトリ構成図(k_214api_dev／抜粋)  
 ```
 myportfolio_k
