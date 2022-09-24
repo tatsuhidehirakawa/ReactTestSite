@@ -4,6 +4,7 @@
 フロントエンド：TypeScript、React.js、Sass、Html  
 バックエンド：Go(Gin,sqlc)、PostgreSQL  
 開発環境：Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
+[AboutMe](/README.md)
 <!--
 開発環境からDockerで作成しローカルへのミドルウェアのインストールは一切行わない。  
 ベンダーロックインを避けるためあまりにも便利すぎるクラウドサービス依存は避ける。（ファイルを置くだけでデプロイできてしまうようなサービス等）  
