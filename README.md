@@ -13,7 +13,6 @@ CSS-in-JS非採用
 ３．起動手順  
 起動はディレクトリ「k_904set_dev」で「docker compose up」コマンドを実行する。  
 ※注意1：コンテナ起動に１分、シェルの実行からエンドポイントのJSON確認が可能になるまで1分30秒、トータルに2分30秒必要  
-※注意2：シェルスクリプト「pkgset.sh」の改行文字問題を解決できていないため、Windows環境ではAPIコンテナ起動不可（参考:https://qiita.com/ayasumi_primary/items/0225d5c89ff1f2e7e217）  
 
 ４．API定義  
 ☞[エンドポイント](/k_214api_dev/README.md)、[データ形式](/k_214api_dev/README.md)  
