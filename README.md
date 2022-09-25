@@ -10,16 +10,10 @@ CSS-in-JS非採用
 バックエンド：Go(Gin,sqlc)、PostgreSQL  
 開発環境：Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
 
-３．起動手順
-```
-# カレントディレクトリを「myportfolio_k」とする  
-docker compose -f ./myportfolio_k/k_904set_dev/docker-compose.yml up -d   # コンテナ起動
-docker exec -it k_904set_dev-214api_dev-1 bash   # APIコンテナ入系
+３．起動手順  
+ディレクトリ「k_904set_dev」の「docker-compose.yml」から起動させる。  
+（※注意／PCの能力によってシェルが動作し終わるまで数分かかる。）  
 
-# 同じ階層にmain.goが存在することを確認する
-# 以下のコマンド群をまとめてシェルで流す
-go mod init github.com/tatsuhidehirakawa/myportfolio_k && go get github.com/kyleconroy/sqlc/cmd/sqlc && go install github.com/kyleconroy/sqlc/cmd/sqlc && sqlc version && sqlc generate --file sqlc/sqlc.yaml && cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg | echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod && go mod tidy && go run main.go
-```
 ４．API定義  
 ☞[エンドポイント](/k_214api_dev/README.md)、[データ形式](/k_214api_dev/README.md)  
 （リンク先参照）  
