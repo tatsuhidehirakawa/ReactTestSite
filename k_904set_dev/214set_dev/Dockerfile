@@ -1,4 +1,3 @@
 FROM golang:latest
 WORKDIR /go/src
-
-# COPY pkgset.sh /go/src
+CMD ["/go/src/pkgset.sh"]
