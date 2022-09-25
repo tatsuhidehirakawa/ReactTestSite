@@ -10,16 +10,15 @@ CSS-in-JS非採用
 バックエンド：Go(Gin,sqlc)、PostgreSQL  
 開発環境：Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
 
-３．起動手順  
-起動はディレクトリ「k_904set_dev」で「docker compose up」コマンドを実行する。 
+３．開発環境起動手順  
+ディレクトリ「k_904set_dev」で「docker compose up」コマンドを実行すると必要なコンテナ全てが起動し、シェルによるAPIプログラム起動を経て待機状態となる（PCの性能にもよるがコンテナ起動に１分、シェルの実行からエンドポイントが利用可能になるまで1分36秒、トータルに2分36秒必要）  
 
-４．注意事項  
-（１）コンテナ起動に１分、シェルの実行からエンドポイントのJSON確認が可能になるまで1分30秒、トータルに2分30秒必要  
-（２）Windows環境の場合はGitに以下のコマンド設定が必要  
+４．注意事項（※重要）  
+（１）Windows環境の場合はGitに以下のコマンド設定が必要  
 ```
 git config --global core.autoCRLF false
 ```  
-（３）VSCode使用時は設定で「規定の改行文字」をユーザ、ワークスペース共に「\n」とする  
+（２）VSCode使用時は設定で「規定の改行文字」をユーザ、ワークスペース共に「\n」とすること  
 
 ４．API定義  
 ☞[エンドポイント](/k_214api_dev/README.md)、[データ形式](/k_214api_dev/README.md)  
@@ -75,6 +74,3 @@ myportfolio_k
 |  〃   |      〃        |   _d  |「docker compose run」から生成|||
 |  〃   |      〃        |   _c  |CodeSandboxからインポート|||
 -->
-
-
-
