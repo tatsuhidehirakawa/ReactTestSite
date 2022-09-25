@@ -11,9 +11,15 @@ CSS-in-JS非採用
 開発環境：Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
 
 ３．起動手順  
-起動はディレクトリ「k_904set_dev」で「docker compose up」コマンドを実行する。  
-※注意1：コンテナ起動に１分、シェルの実行からエンドポイントのJSON確認が可能になるまで1分30秒、トータルに2分30秒必要  
-※注意2：  
+起動はディレクトリ「k_904set_dev」で「docker compose up」コマンドを実行する。 
+
+４．注意事項  
+（１）コンテナ起動に１分、シェルの実行からエンドポイントのJSON確認が可能になるまで1分30秒、トータルに2分30秒必要  
+（２）Windows環境の場合はGitに以下のコマンド設定が必要  
+```
+git config --global core.autoCRLF false
+```  
+（３）VSCode使用時は設定で「規定の改行文字」をユーザ、ワークスペース共に「\n」とする  
 
 ４．API定義  
 ☞[エンドポイント](/k_214api_dev/README.md)、[データ形式](/k_214api_dev/README.md)  
