@@ -3,7 +3,8 @@
 一般的なCtoCサイトのひな形を作成  
 RESTfulを意識  
 CSS-in-JS非採用  
-直交性と疎結合、静的型付けとDockerを重視  
+Paas依存の極小化  
+直交性と疎結合、静的型付けとDocker利用を重視  
 
 ２．技術スタック  
 フロントエンド：TypeScript、React.js、Sass、Html  
