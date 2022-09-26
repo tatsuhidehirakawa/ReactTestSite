@@ -19,27 +19,13 @@ Web開発用Dockerコンテナ群
 ３. 実行環境  
 Windows10／VSCode／Docker desktop for Windows  
 
-４. 起動・確認コマンド等  
-```
+<!--
 docker compose up -d
 docker exec -it k_904set_dev-214api_dev-1 bash # コンテナ入系
-cd go\src # カレントディレクトリ確認
-go mod init github.com/xxxxxxxx/yyyyyyyy/ # go.modが生成
-go get github.com/kyleconroy/sqlc/cmd/sqlc # go.sumが生成
-go install github.com/kyleconroy/sqlc/cmd/sqlc # 処理に57秒
-sqlc version # インストール確認
-sqlc generate --file sqlc/sqlc.yaml # sqlcのビルド
-cd sqlc/build_sqlc && go mod init sqlc_pkg && cd ../.. && go get sqlc_pkg
-sed -i '$a replace sqlc_pkg => ./sqlc/build_sqlc' go.mod 
-go mod tidy && go run main.go
-```
-```
 start chrome http://localhost:3000/someGet # 動作確認
-
-# 以下は予備メモ
 go get github.com/gin-gonic/gin/v2
 go install github.com/gin-gonic/gin/v2
-```
+-->
 ４．ディレクトリ構成図(抜粋)  
 ```
 myportfolio_k
