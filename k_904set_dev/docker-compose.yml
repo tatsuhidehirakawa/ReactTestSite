@@ -14,8 +14,8 @@ services:
       - postgres-test-network
     depends_on:
       - 314dbs_dev
-    command:
-      - sed -i 's/r//' *.sh   # Remove CRLF from shellscript files.
+  # command:
+    # - sed -i 's/r//' *.sh   # Remove CRLF from shellscript files.
 
 #---k_314dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   314dbs_dev:
