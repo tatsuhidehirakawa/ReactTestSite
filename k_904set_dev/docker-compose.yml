@@ -5,9 +5,9 @@ services:
   214api_dev:
   # command:
     # - sed -i 's/r//' *.sh   # Remove CRLF from shellscript files.
-  # build: ../k_214api_dev/go/web
     build: ./214set_dev
-    tty: true # コンテナを継続
+  # build: ../k_214api_dev/go/web
+    tty: true
     volumes:
       - ../k_214api_dev/go/web:/go/src
     ports:
@@ -20,11 +20,10 @@ services:
 #---k_314dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   314dbs_dev:
     image: postgres:14
-  # container_name: 314dbs_dev # 変更：postgres -> 314dbs_dev
+  # container_name: 314dbs_dev
     command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
       - 5432:5432
-  # tty: true  
     volumes:
       - db-store:/var/lib/postgresql/data
       - ./314set_dev/initdb:/docker-entrypoint-initdb.d
