@@ -4,7 +4,7 @@ services:
 #---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
   # command:
-    # - sed -i 's/r//' *.sh   # Remove CRLF from shellscript files.
+   #  - sed -i 's/\r//g' .pkgset.sh
     build: ./214set_dev
   # build: ../k_214api_dev/go/web
     tty: true
