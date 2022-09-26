@@ -3,9 +3,9 @@ services:
 
 #---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
-  # command:
-   #  - sed -i 's/\r//g' .pkgset.sh
-    build: ./214set_dev
+    build:
+      context: ../k_214api_dev/go/web
+      dockerfile: ../../../k_904set_dev/214set_dev/Dockerfile
   # build: ../k_214api_dev/go/web
     tty: true
     volumes:

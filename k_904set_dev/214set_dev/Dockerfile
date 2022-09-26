@@ -1,3 +1,5 @@
 FROM golang:latest
 WORKDIR /go/src
-CMD ["/go/src/pkgset.sh"]
+COPY . .
+RUN ./pkgset.sh
+CMD go run main.go
