@@ -3,6 +3,8 @@ services:
 
 #---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
+  # command:
+    # - sed -i 's/r//' *.sh   # Remove CRLF from shellscript files.
   # build: ../k_214api_dev/go/web
     build: ./214set_dev
     tty: true # コンテナを継続
