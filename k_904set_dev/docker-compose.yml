@@ -9,8 +9,8 @@ services:
       dockerfile: ../../../k_904set_dev/214set_dev/Dockerfile
   # build: ../k_214api_dev/go/web
     tty: true
-    volumes:
-      - ../k_214api_dev/go/web:/go/src
+    # volumes:
+    #   - ../k_214api_dev/go/web:/go/src
     ports:
       - "3000:8080"
     networks:
