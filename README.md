@@ -14,12 +14,9 @@ Paas依存の極小化
 ３．開発環境起動手順  
 ディレクトリ「k_904set_dev」で「docker compose up」コマンドを実行すると必要なコンテナ全てが起動し、シェルによるAPIプログラム起動を経て待機状態となる（PCの性能にもよるがコンテナ起動に１分、シェルの実行からエンドポイントが利用可能になるまで1分36秒、トータルに2分36秒必要）  
 
-４．注意事項（※重要）  
-（１）Windows環境の場合はGitに以下のコマンド設定が必要  
-```
-git config --global core.autoCRLF false
-```  
-（２）VSCode使用時は設定で「規定の改行文字」をユーザ、ワークスペース共に「\n」とすること  
+４．留意事項  
+(1)改行文字の制御問題には「.gitattributes」を使用  
+(2)  
 
 ４．API定義  
 ☞[エンドポイント](/k_214api_dev/README.md)、[データ形式](/k_214api_dev/README.md)  
@@ -48,10 +45,11 @@ REST(ULCODC$SS)_Architecture
 ６．ディレクトリ構成図(全体／抜粋)  
 ```
 myportfolio_k
-  ├─k_214api_dev                   # 214番APIServer
-  ├─k_314dbs_dev                   # 314番DBServer
-  └─k_904set_dev                   # 管理系ファイル群
-     └─docker-compose.yml          # 起動用ymlファイル
+  ├─k_114api_dev                   # 開発用114番APIServer(解除中)
+  ├─k_214api_dev                   # 開発用214番APIServer
+  ├─k_314dbs_dev                   # 開発用314番DBServer
+  └─k_904set_dev                   # 管理系ファイル群(開発用)
+     └─docker-compose.yml          # 起動用ymlファイル(開発用)
 ```
 
 <!--
