@@ -39,7 +39,7 @@ func main() {
 		c.JSON(200, accountAttribute)
 	}
 
-	/*--- POSTのハンドラ部分 -----------------------*/
+	/*--- DELETEのハンドラ部分 --------------------*/
 	posting := func(c *gin.Context) {
 
 		queries := build_sqlc.New(db)
@@ -58,9 +58,9 @@ func main() {
 	router := gin.Default()
 
 	router.GET("/someGet", getting)
-	router.POST("/somePost", posting)
+//	router.POST("/somePost", posting)
 //	router.PUT("/somePut", putting)
-//	router.DELETE("/someDelete", deleting)
+	router.DELETE("/someDelete", deleting)
 //	router.PATCH("/somePatch", patching)
 //	router.HEAD("/someHead", head)
 //	router.OPTIONS("/someOptions", options)
