@@ -3,6 +3,7 @@ services:
 
 #---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
+    container_name: 214api_dev
     build:
       context: ../k_214api_dev/go/web
       dockerfile: ../../../k_904set_dev/214set_dev/Dockerfile
@@ -20,7 +21,7 @@ services:
 #---k_314dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   314dbs_dev:
     image: postgres:14
-  # container_name: 314dbs_dev
+    container_name: 314dbs_dev
     command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
       - 5432:5432
