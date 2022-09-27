@@ -10,4 +10,3 @@ cd ../..
 go get sqlc_pkg
 echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
 go mod tidy
-# nohup go run main.go
