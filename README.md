@@ -45,9 +45,9 @@ REST(ULCODC$SS)_Architecture
 7. Directory structure diagram (overall/excerpt)  
 ```
 myportfolio_k
-  ├─k_114wbs_dev                   # 開発用114番WebServer(解除中)
-  ├─k_214api_dev                   # 開発用214番APIServer
-  ├─k_314dbs_dev                   # 開発用314番DBServer
-  └─k_904set_dev                   # 管理系ファイル群(開発用)
+  ├─k_114wbs_dev                   # 114番WebServer(開発用)
+  ├─k_214api_dev                   # 214番APIServer(開発用)
+  ├─k_314dbs_dev                   # 314番DBServer(開発用)
+  └─k_914set_dev                   # 管理系ファイル群(開発用)
      └─docker-compose.yml          # 起動用ymlファイル(開発用)
 ```

@@ -30,6 +30,7 @@ go install github.com/gin-gonic/gin/v2
 ```
 myportfolio_k
   │
+  ├─k_114api_dev                   # 114番WebServer
   ├─k_214api_dev                   # 214番APIServer
   ├─k_314dbs_dev                   # 314番DBServer
   │
