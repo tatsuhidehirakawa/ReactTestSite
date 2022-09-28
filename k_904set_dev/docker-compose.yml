@@ -1,6 +1,24 @@
 version: "3"
 services:
 
+#---k_114wbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  114wbs_dev:
+    container_name: 114wbs_dev
+    build: ../k_904set_dev/114set_dev
+    volumes:
+    # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
+      - ../k_114wbs_dev:/usr/src/app
+  # working_dir: /usr/src/app/k_114wbs_dev
+    working_dir: /usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true               # ホットリロード
+    ports:
+      - "3000:3000"
+    command: sh -c "yarn start"
+    stdin_open: true
+    networks:
+      - postgres-test-network
+
 #---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
     container_name: 214api_dev
