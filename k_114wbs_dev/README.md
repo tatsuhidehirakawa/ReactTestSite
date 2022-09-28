@@ -11,3 +11,9 @@ Html／CSS／Sass／JavaScript／React.js／Docker
 
 ３　実行環境  
 Windows10／VSCode  
+
+
+4. 114番コンテナビルド  
+```
+docker compose run --rm 114wbs_dev sh -c "npm install" # npmインストール
+```
