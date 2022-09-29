@@ -14,7 +14,9 @@ services:
       - CHOKIDAR_USEPOLLING=true               # ホットリロード
     ports:
       - "8080:3000"
-    command: sh -c "yarn start"
+    command: sh -c "./114set_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
+  # command: sh -c "npm install && yarn start"
+    tty: true
     stdin_open: true
     networks:
       - postgres-test-network
@@ -47,8 +49,8 @@ services:
       - 5432:5432
     volumes:
       - db-store:/var/lib/postgresql/data
-      - ./314set_dev/initdb:/docker-entrypoint-initdb.d
-      - ./314set_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ../k_314dbs_dev/initdb:/docker-entrypoint-initdb.d
+      - ../k_314dbs_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
