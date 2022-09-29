@@ -32,7 +32,7 @@ services:
   #   - ../k_214api_dev/go/web:/go/src
     ports:
       - "3000:8080"
-      # ホストのポート番号（重複可）：コンテナのポート番号（重複不可）
+      # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
     networks:
       - postgres-test-network
     depends_on:
