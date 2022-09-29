@@ -38,3 +38,70 @@ myportfolio_k
   └─k_904set_dev
      └─docker-compose.yml          # 起動用ymlファイル
 ```
+コンテナ内のディレクトリ構成図(抜粋)
+```
+root@89ff808980e1:
+ ├─go
+ |  └─src -------------- -> Bind mounted area.
+ └─usr
+    └─local
+       └─bin ----------- -> Best directory to put shell scripts.
+          └─npmset.sh
+```
+<!--
+```
+root@89ff808980e1:
+ ├─bin
+ ├─dev
+ ├─go
+ |  ├─bin
+ |  |  └─sqlc (:file)
+ |  ├─pkg
+ |  |  ├─mod
+ |  |  └─sumdb
+ |  |    └─sum.golang.org
+ |  |       └─latest
+ |  └─src ------------- -> Bind mounted area.
+ ├─lib
+ ├─media
+ ├─opt
+ ├─root
+ ├─sbin
+ ├─sys
+ ├─usr
+ |  ├─bin
+ |  ├─games
+ |  ├─include
+ |  ├─lib
+ |  ├─libexec
+ |  ├─local
+ |  |  ├─bin -------------- -> パスが通っているのでシェルを置くのに最適！
+ |  |  ├─etc
+ |  |  ├─games
+ |  |  ├─go
+ |  |  ├─include
+ |  |  ├─lib
+ |  |  ├─man
+ |  |  ├─sbin
+ |  |  ├─share
+ |  |  └─src
+ |  ├─games
+ |  ├─include
+ |  ├─lib
+ |  ├─libexec
+ |  ├─local
+ |  ├─sbin
+ |  ├─share
+ |  └─src
+ ├─boot
+ ├─etc
+ ├─home
+ ├─lib64
+ ├─mnt
+ ├─proc
+ ├─run
+ ├─srv
+ ├─tmp
+ └─var
+```
+-->
