@@ -7,7 +7,7 @@
 ----+----+----+----+----+----+----+----+----+----+---*/
 import React from "react";
 import Lesson from "./Lesson";
-import CommentForm from "./CommentForm";
+// import CommentForm from "./CommentForm";
 import "./Main.scss";
 
 const MainWrapper = () => {

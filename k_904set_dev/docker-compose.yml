@@ -13,7 +13,7 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true               # ホットリロード
     ports:
-      - "8080:8080"
+      - "8080:3000"
     command: sh -c "yarn start"
     stdin_open: true
     networks:
