@@ -13,18 +13,8 @@ APIサーバ用コンテナ「k214api_dev」
 ```
 myportfolio_k
   │
-  ├─k_114wbs_dev 
-  ├─k_214api_dev 
-  │  └─go
-  │    └─web
-  │       ├─main.go
-  │       ├─pkgset.sh
-  │       ├─config.go
-  │       └─sqlc
-  │          ├─query.sql
-  │          ├─schema.sql
-  │          └─sqlc.yaml
-  │
+  ├─k_114wbs_dev
+  |
   ├─k_214api_dev                   # 214番APIServer
   │  └─src
   │    ├─main.go
@@ -34,6 +24,7 @@ myportfolio_k
   │       ├─query.sql
   │       ├─schema.sql
   │       └─sqlc.yaml
+  |
   ├─k_314dbs_dev
   └─k_904set_dev
      └─docker-compose.yml          # 起動用ymlファイル
