@@ -25,9 +25,10 @@ services:
   214api_dev:
     container_name: 214api_dev
     build:
-      context: ../k_214api_dev/go/web
-    # context: ../k_214api_dev/src
-      dockerfile: ../../../k_904set_dev/214set_dev/Dockerfile
+    # context: ../k_214api_dev/go/web
+      context: ../k_214api_dev/src
+    # dockerfile: ../../../k_904set_dev/214set_dev/Dockerfile
+      dockerfile: ../../k_904set_dev/214set_dev/Dockerfile
   # build: ../k_214api_dev/go/web
     tty: true
   # volumes:
