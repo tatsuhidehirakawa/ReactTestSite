@@ -1,5 +1,5 @@
 Web開発用Dockerコンテナ群  
-「k_904set_dev（「k_214api_dev」＋「314dbs_dev」）」  
+「k_914set_dev（「k_214api_dev」＋「314dbs_dev」）」  
 の起動・操作手順  
 ---
 
@@ -21,7 +21,7 @@ Windows10／VSCode／Docker desktop for Windows
 
 <!--
 docker compose up -d
-docker exec -it k_904set_dev-214api_dev-1 bash # コンテナ入系
+docker exec -it k_914set_dev-214api_dev-1 bash # コンテナ入系
 start chrome http://localhost:3000/someGet # 動作確認
 go get github.com/gin-gonic/gin/v2
 go install github.com/gin-gonic/gin/v2
@@ -34,7 +34,7 @@ myportfolio_k
   ├─k_214api_dev                   # 214番APIServer
   ├─k_314dbs_dev                   # 314番DBServer
   │
-  ├─k_904set_dev                   # 管理系ファイル群
+  ├─k_914set_dev                   # 管理系ファイル群
   │  ├─114set_dev
   │  │  └─Dockerfile
   │  ├─214set_dev

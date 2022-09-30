@@ -4,7 +4,7 @@ services:
 #---k_114wbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   114wbs_dev:
     container_name: 114wbs_dev
-    build: ../k_904set_dev/114set_dev
+    build: ../k_914set_dev/114set_dev
     volumes:
       # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
       - ../k_114wbs_dev:/usr/src/app
@@ -26,7 +26,7 @@ services:
     container_name: 214api_dev
     # build:
       # context: ../k_214api_dev/src
-      # dockerfile: ../../k_904set_dev/214set_dev/Dockerfile
+      # dockerfile: ../../k_914set_dev/214set_dev/Dockerfile
     build: ./214set_dev
     tty: true
     volumes:

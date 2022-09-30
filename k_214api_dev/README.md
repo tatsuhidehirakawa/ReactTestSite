@@ -2,7 +2,7 @@ APIサーバ用コンテナ「k214api_dev」
 
 技術スタック：Golang／Gin／sqlc／Docker  
 
-詳細は「k_904set_dev/README.md」」に転記  
+詳細は「k_914set_dev/README.md」」に転記  
 
 ３．API定義
 （１）エンドポイント  
@@ -26,7 +26,7 @@ myportfolio_k
   │       └─sqlc.yaml
   |
   ├─k_314dbs_dev
-  └─k_904set_dev
+  └─k_914set_dev
      └─docker-compose.yml          # 起動用ymlファイル
 ```
 コンテナ内のディレクトリ構成図(抜粋)

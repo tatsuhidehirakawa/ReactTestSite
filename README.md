@@ -12,7 +12,7 @@ Backend: Go(Gin,sqlc)、PostgreSQL
 Development environment: Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
 
 3. Boot procedure  
-ディレクトリ「k_904set_dev」で「docker compose up」コマンドを実行すると必要なコンテナ全てが起動し、シェルによるAPIプログラム起動を経て待機状態となる（PCの性能にもよるがエンドポイントが利用可能になるまでトータルに2分36秒必要）  
+ディレクトリ「k_914set_dev」で「docker compose up」コマンドを実行すると必要なコンテナ全てが起動し、シェルによるAPIプログラム起動を経て待機状態となる（PCの性能にもよるがエンドポイントが利用可能になるまでトータルに2分36秒必要）  
 
 4. Considerations  
 (1)改行文字の制御に「.gitattributes」を使用  
