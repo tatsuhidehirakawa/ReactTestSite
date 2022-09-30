@@ -1,4 +1,4 @@
-## Personal Development Practice Repository
+## Personal Development Practice Repository (use STGPRD environment)
 1. Overview  
 一般的なCtoCサイトのひな形を作成  
 RESTfulを意識  
