@@ -21,6 +21,9 @@ destroy:
 	@docker container ls -a
 	@docker system df
 
+zzzzzzz:
+	@cat -e *.sh
+
 rplccrlf:
 	@sed -e 's/\r//g' *.sh
 
