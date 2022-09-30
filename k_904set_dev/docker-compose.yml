@@ -6,16 +6,16 @@ services:
     container_name: 114wbs_dev
     build: ../k_904set_dev/114set_dev
     volumes:
-    # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
+      # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
       - ../k_114wbs_dev:/usr/src/app
-  # working_dir: /usr/src/app/k_114wbs_dev
+    # working_dir: /usr/src/app/k_114wbs_dev
     working_dir: /usr/src/app
     environment:
-      - CHOKIDAR_USEPOLLING=true               # ホットリロード
+      - CHOKIDAR_USEPOLLING=true # Hotreload
     ports:
       - "8080:3000"
-    command: sh -c "./114set_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
-  # command: sh -c "npm install && yarn start"
+    # command: sh -c "./114set_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
+    command: sh -c "npm install && yarn start"
     tty: true
     stdin_open: true
     networks:
@@ -27,10 +27,10 @@ services:
     build:
       context: ../k_214api_dev/src
       dockerfile: ../../k_904set_dev/214set_dev/Dockerfile
-  # build: ../k_214api_dev/go/web
+    # build: ../k_214api_dev/go/web
     tty: true
-  # volumes:
-  #   - ../k_214api_dev/go/web:/go/src
+    # volumes:
+    #   - ../k_214api_dev/src:/go/src
     ports:
       - "3000:8080"
       # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
