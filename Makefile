@@ -1,4 +1,8 @@
 .PHONY: init
+
+initall:
+	@docker buildx bake --file docker-bake.hcl myportfolio_k_dev myportfolio_k_tst
+
 initdev:
 	@cd k_914set_dev
 	# @docker compose up
@@ -32,3 +36,4 @@ yyyyyyy:
 
 clonenv:
 	@git clone https://github.com/tatsuhidehirakawa/myportfolio_k.git
+
