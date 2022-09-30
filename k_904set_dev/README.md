@@ -40,12 +40,7 @@ myportfolio_k
   │  ├─214set_dev
   │  │  └─Dockerfile
   │  ├─314set_dev
-  │  │  ├─config
-  │  │  │  └─postgresql.conf
-  │  │  └─initdb                       # 初期化用SQLファイル置き場
-  │  │     ├─01_initialize.sql
-  │  │     ├─02_create_table.sql
-  │  │     └─03_initdata.sql
+  │  │  └─Dockerfile
   │  └─docker-compose.yml          # 起動用ymlファイル
   │
   └─READMR.md
