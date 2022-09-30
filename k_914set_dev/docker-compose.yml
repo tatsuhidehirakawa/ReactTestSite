@@ -19,7 +19,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - postgres-test-network
+      - myportfolio_k_dev_network
 
 #---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
@@ -35,7 +35,7 @@ services:
       - "3000:8080"
       # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
     networks:
-      - postgres-test-network
+      - myportfolio_k_dev_network
     depends_on:
       - 314dbs_dev
 
@@ -54,7 +54,7 @@ services:
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
-      - postgres-test-network
+      - myportfolio_k_dev_network
 
 #---k_314dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
@@ -62,7 +62,7 @@ volumes:
 
 #---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 networks:
-  postgres-test-network:
+  myportfolio_k_dev_network:
     driver: bridge
 
 #---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
