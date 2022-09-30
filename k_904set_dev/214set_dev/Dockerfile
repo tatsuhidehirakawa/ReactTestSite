@@ -1,6 +1,6 @@
 FROM golang:latest
 WORKDIR /go/src
-COPY . .
+# COPY . .
 
 # test
 COPY pkgset.sh ../../usr/local/bin
