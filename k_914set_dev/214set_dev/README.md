@@ -9,7 +9,8 @@ Web開発用Dockerコンテナ群
 2022. 8.27 環境変数を導入（902dbs_dev）  
 2022. 8.28 APからAPIへの以降作業開始（212api_dev）  
 2022. 9. 3 「.sql」ファイルのコードを実装（902dbs_dev）  
-2022. 9. 6 (予定)REST（ULCODC$SS）コンポーネントを実装（112wbs_dev）  
+2022. 9.30 Makefileを導入（914set_dev）  
+2022.10. 6 (予定)REST（ULCODC$SS）コンポーネントを実装（112wbs_dev）  
 
 ２. 技術スタック  
 112wbs_dev：React.js／Html／Sass／（TypeScript）  
