@@ -13,7 +13,7 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true # Hotreload
     ports:
-      - "8080:3000"
+      - "3000:3000"
     # command: sh -c "./114set_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
     command: sh -c "npm install && yarn start"
     tty: true
@@ -32,7 +32,7 @@ services:
     volumes:
       - ../k_214api_dev/src:/go/src
     ports:
-      - "3000:8080"
+      - "8080:8080"
       # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
     networks:
       - myportfolio_k_dev_network
