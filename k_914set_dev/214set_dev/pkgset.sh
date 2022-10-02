@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd ../../../go/src
+touch test.txt
 go mod init github.com/tatsuhidehirakawa/myportfolio_k
 go get github.com/kyleconroy/sqlc/cmd/sqlc
 go install github.com/kyleconroy/sqlc/cmd/sqlc
