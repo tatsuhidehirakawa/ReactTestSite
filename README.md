@@ -1,6 +1,5 @@
 ## Personal Development Practice Repository (use STGPRD environment)
 1. Overview  
-一般的なCtoCサイトのひな形を作成  
 RESTfulを意識  
 CSS-in-JS非採用  
 Paas依存の極小化  
