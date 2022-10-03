@@ -37,7 +37,7 @@ zzzzzzz:
 	@cat -e *.sh
 
 rplccrlf:
-	@sed -e 's/\r//g' *.sh
+	@sed -i 's/\r//' *.sh
 
 yyyyyyy:
 	@docker exec -it k_904set_dev-214api_dev-1 bash
