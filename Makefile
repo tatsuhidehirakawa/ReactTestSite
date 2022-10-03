@@ -1,12 +1,15 @@
-.PHONY: init
+#.PHONY:
 
-# maketst:
-# 	@mkdir testingMakecmd && touch testingMakecmd/testingSuccess.txt
-# 	@echo "test success!"
-# 	@echo "Please delete testingMakecmd/testingSuccess.txt after maketest success."
+maketst:
+	@mkdir testingMakecmd && touch testingMakecmd/testingSuccess.txt
+	@echo "test success!"
+	@echo "Please delete testingMakecmd/testingSuccess.txt after maketest success."
 
 initall:
 	@docker buildx bake --file docker-bake.hcl myportfolio_k_dev myportfolio_k_tst
+
+inittem:
+	@docker compose up 114api_dev, 314dbs_dev
 
 initdev:
 	@cd k_914set_dev
@@ -18,7 +21,7 @@ inittst:
 	# @cd k_910set_tst
 	# @docker compose up
 
-destroy:
+prundkr:
 	@docker container ls -a
 	@docker system df
 	@docker stop $(docker ps -q)
