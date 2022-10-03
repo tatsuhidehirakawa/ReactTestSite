@@ -17,11 +17,7 @@ Development environment: Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10
 (1)改行文字の制御に「.gitattributes」を使用  
 (2)  
 
-5. API definition  
-☞[エンドポイント](/k_214api_dev/README.md)、[データ形式](/k_214api_dev/README.md)  
-（リンク先参照）  
-
-6. Server configuration diagram (overall)  
+5. Server configuration diagram (overall)  
 ```
 REST(ULCODC$SS)_Architecture
 +--------------+  +---------------------------------------------------+
@@ -56,7 +52,7 @@ REST(ULCODC$SS)_Architecture
 |              |  |          +-----------+              +-----------+ |
 +--------------+  +---------------------------------------------------+
 ```
-7. Directory structure diagram (overall/excerpt)  
+6. Directory structure diagram (overall/excerpt)  
 ```
 myportfolio_k
   ├─k_114wbs_dev        # No.114:WebServer(for development)
