@@ -15,5 +15,6 @@ func NewConfig() *Config {
 		User:     "postgres",
 		Password: "passw0rd",
 		Sslmode:  "disable",
+		// os.Getenv("DBHOST")
 	}
 }
