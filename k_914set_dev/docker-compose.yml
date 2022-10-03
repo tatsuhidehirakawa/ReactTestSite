@@ -20,6 +20,7 @@ services:
     stdin_open: true
     networks:
       - myportfolio_k_dev_network
+    # platform: linux/x86_64
 
 #---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
