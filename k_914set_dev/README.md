@@ -38,7 +38,8 @@ myportfolio_k
   │  ├─114set_dev
   │  │  └─Dockerfile
   │  ├─214set_dev
-  │  │  └─Dockerfile
+  |  |  ├─Dockerfile
+  |  |  └─pkgset.sh
   │  ├─314set_dev
   │  │  └─Dockerfile
   │  └─docker-compose.yml          # 起動用ymlファイル
