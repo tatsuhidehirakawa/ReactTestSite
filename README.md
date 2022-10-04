@@ -55,15 +55,11 @@ REST(ULCODC$SS)_Architecture
 6. Directory structure diagram (overall/excerpt)  
 ```
 myportfolio_k
-  ├─k_114wbs_dev        # No.114:WebServer(for development)
-  ├─k_120wbs_tst
-  ├─k_214api_dev        # No.214:APIServer(for development)
-  ├─k_220api_tst
-  ├─k_314dbs_dev        # No.314:DBServer(for development)
-  ├─k_320dbs_tst
-  ├─k_914set_dev        # Management files(for development)
-  ├─k_920set_tst
-  ├─docker-bake.hcl
+  ├─k_114wbs_src        # Source code of WebServer.
+  ├─k_214api_src        # Source code of APIServer.
+  ├─k_314dbs_src        # Source code of DBServer.
+  ├─k_914set_dev        # Management files for development.
+  ├─k_920set_tst        # Management files for test.
   ├─Makefile
   └─README.md
 ```

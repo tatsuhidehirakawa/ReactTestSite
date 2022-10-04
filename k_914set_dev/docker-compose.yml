@@ -1,14 +1,14 @@
 version: "3"
 services:
 
-#---k_114wbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#---114wbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   114wbs_dev:
     container_name: 114wbs_dev
     build: ../k_914set_dev/114set_dev
     volumes:
       # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
-      - ../k_114wbs_dev:/usr/src/app
-    # working_dir: /usr/src/app/k_114wbs_dev
+      - ../k_114wbs_src:/usr/src/app
+    # working_dir: /usr/src/app/k_114wbs_src
     working_dir: /usr/src/app
     environment:
       - CHOKIDAR_USEPOLLING=true # Hotreload
@@ -22,16 +22,16 @@ services:
       - myportfolio_k_dev_network
     # platform: linux/x86_64
 
-#---k_214api_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#---214api_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   214api_dev:
     container_name: 214api_dev
     # build:
-      # context: ../k_214api_dev/src
+      # context: ../k_214api_src/src
       # dockerfile: ../../k_914set_dev/214set_dev/Dockerfile
     build: ./214set_dev
     tty: true
     volumes:
-      - ../k_214api_dev/src:/go/src
+      - ../k_214api_src/src:/go/src
     ports:
       - "8080:8080"
       # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
@@ -40,7 +40,7 @@ services:
     depends_on:
       - 314dbs_dev
 
-#---k_314dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#---314dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   314dbs_dev:
     # image: postgres:14
     container_name: 314dbs_dev
@@ -50,14 +50,14 @@ services:
       - 5432:5432
     volumes:
       - db-store:/var/lib/postgresql/data
-      - ../k_314dbs_dev/initdb:/docker-entrypoint-initdb.d
-      - ../k_314dbs_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ../k_314dbs_src/initdb:/docker-entrypoint-initdb.d
+      - ../k_314dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
       - myportfolio_k_dev_network
 
-#---k_314dbs_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#---314dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   db-store:
 
