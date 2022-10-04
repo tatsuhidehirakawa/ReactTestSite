@@ -2,7 +2,7 @@
 
 # cd /go/src
 touch test.txt
-# go mod init github.com/tatsuhidehirakawa/myportfolio_k
+# go mod init github.com/goark/pa-api
 # go get github.com/kyleconroy/sqlc/cmd/sqlc
 # go install github.com/kyleconroy/sqlc/cmd/sqlc
 # sqlc generate --file sqlc/sqlc.yaml
