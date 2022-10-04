@@ -22,14 +22,14 @@ Development environment: Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10
 REST(ULCODC$SS)_Architecture
 +--------------+  +---------------------------------------------------+
 |              |  |          +-----------+    Development environment |
-|              |  |          |   *114    |                            |
+|              |  |          | *110_dev  |                            |
 |              |  |          | WebServer |                            |
 |              |  |          |React,Sass |                            |
 |              |  |          |           |                            |
 |              |  | +---#8080|#8080      |                            |
 |              |  | |        +-----------+                            |
 |              |  | |        +-----------+              +-----------+ |
-|localhost:3000|<---+        |   *214    |              |   *314    | |
+|localhost:3000|<---+        | *124_dev  |              | *134_dev  | |
 |              |  | |        | APIServer |              |  DBServer | |
 |              |  | |        |  Golang   |              | PostgreSQL| |
 |              |  | |        |(Gin/sqlc) |              |           | |
@@ -37,14 +37,14 @@ REST(ULCODC$SS)_Architecture
 |              |  |          +-----------+              +-----------+ |
 |    CLIENT    |  +---------------------------------------------------+
 |   (Browser)  |  |          +-----------+           Test environment |
-|              |  |          |   *120    |                            |
+|              |  |          | *110_tst  |                            |
 |              |  |          | WebServer |          Ubuntu 22.04 LTS  |
 |              |  |          |           |          Amazon Linux 2022 |
 |              |  |          |           |                            |
 |              |  | +---#8080|#8080      |                            |
 |              |  | |        +-----------+                            |
 |              |  | |        +-----------+              +-----------+ |
-|           #80|<---+        |   *220    |              |   *320    | |
+|           #80|<---+        | *120_tst  |              | *130_tst  | |
 |              |  | |        | APIServer |              |  DBServer | |
 |              |  | |        |  Golang   |              | PostgreSQL| |
 |              |  | |        |           |              |           | |
