@@ -42,9 +42,9 @@ services:
 
 #---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   134dbs_dev:
-    # image: postgres:14
     container_name: 134dbs_dev
-    build: ./134dbs_dev
+    image: postgres:14
+    # build: ./134dbs_dev
     command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
       - 5432:5432
