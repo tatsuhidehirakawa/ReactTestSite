@@ -29,19 +29,17 @@ go install github.com/gin-gonic/gin/v2
 ４．ディレクトリ構成図(抜粋)  
 ```
 myportfolio_k
-  ├─k_114api_src
-  ├─k_214api_src
-  ├─k_314dbs_src
-  ├─k_914set_dev
-  │  ├─114set_dev
+  ├─k_01_src
+  ├─k_02_dev
+  │  ├─110wbs_src
   │  │  └─Dockerfile
-  │  ├─214set_dev
+  │  ├─124api_src
   |  |  ├─Dockerfile
   |  |  └─pkgset.sh
-  │  ├─314set_dev
+  │  ├─134dbs_src
   │  │  └─Dockerfile
   │  └─docker-compose.yml      # Boot for development enveronment.
-  ├─k_920set_tst
+  ├─k_03_tst
   ├─Makefile
   └─READMR.md
 ```

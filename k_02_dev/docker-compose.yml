@@ -1,20 +1,20 @@
 version: "3"
 services:
 
-#---114wbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  114wbs_dev:
-    container_name: 114wbs_dev
-    build: ../k_914set_dev/114set_dev
+#---110wbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  110wbs_dev:
+    container_name: 110wbs_dev
+    build: ../k_02_dev/110wbs_dev
     volumes:
       # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
-      - ../k_114wbs_src:/usr/src/app
-    # working_dir: /usr/src/app/k_114wbs_src
+      - ../k_01_src/110wbs_dev:/usr/src/app
+    # working_dir: /usr/src/app/110wbs_dev
     working_dir: /usr/src/app
     environment:
       - CHOKIDAR_USEPOLLING=true # Hotreload
     ports:
       - "3000:3000"
-    # command: sh -c "./114set_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
+    # command: sh -c "./110wbs_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
     command: sh -c "npm install && yarn start"
     tty: true
     stdin_open: true
@@ -22,16 +22,16 @@ services:
       - myportfolio_k_dev_network
     # platform: linux/x86_64
 
-#---214api_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  214api_dev:
-    container_name: 214api_dev
+#---124api_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  124api_dev:
+    container_name: 124api_dev
     # build:
-      # context: ../k_214api_src/src
-      # dockerfile: ../../k_914set_dev/214set_dev/Dockerfile
-    build: ./214set_dev
+      # context: ../k_01_src/124api_src/src
+      # dockerfile: ../../k_02_dev/124api_dev/Dockerfile
+    build: ./124api_dev
     tty: true
     volumes:
-      - ../k_214api_src/src:/go/src
+      - ../k_01_src/124api_src/src:/go/src
     ports:
       - "8080:8080"
       # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
@@ -40,24 +40,24 @@ services:
     depends_on:
       - 314dbs_dev
 
-#---314dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-  314dbs_dev:
+#---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  134dbs_dev:
     # image: postgres:14
-    container_name: 314dbs_dev
-    build: ./314set_dev
+    container_name: 134dbs_dev
+    build: ./134dbs_dev
     command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
       - 5432:5432
     volumes:
       - db-store:/var/lib/postgresql/data
-      - ../k_314dbs_src/initdb:/docker-entrypoint-initdb.d
-      - ../k_314dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ../k_01_src/134dbs_dev/initdb:/docker-entrypoint-initdb.d
+      - ../k_01_src/134dbs_dev/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
       - myportfolio_k_dev_network
 
-#---314dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   db-store:
 

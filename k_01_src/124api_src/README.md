@@ -8,21 +8,25 @@ Under construction
 2. Directory structure diagram (Local/excerpt)  
 ```
 myportfolio_k
-  ├─k_114wbs_src
-  ├─k_214api_src                   # APIServer(No.214)
-  │  └─src -----------------------># Bind mounted area.
-  │    ├─main.go
-  │    ├─config.go
-  │    └─sqlc                      # ORM(sqlc)
-  │       ├─query.sql
-  │       ├─schema.sql
-  │       └─sqlc.yaml
-  ├─k_314dbs_src
-  ├─k_914set_dev
-  │  ├─214set_dev
+  ├─k_01_src
+  │  ├─110wbs_src
+  │  ├─124api_src                     # APIServer(No.214)
+  │  │  └─src -----------------------># Bind mounted area.
+  │  │    ├─main.go
+  │  │    ├─config.go
+  │  │    └─sqlc                      # ORM(sqlc)
+  │  │       ├─query.sql
+  │  │       ├─schema.sql
+  │  │       └─sqlc.yaml
+  │  └─134dbs_src
+  ├─k_02_dev
+  │  ├─110wbs_dev
+  │  ├─124api_dev
   │  │  ├─Dockerfile
   │  │  └─pkgset.sh --------------># Place to put shell scripts.
+  │  ├─134dbs_dev
   │  └─docker-compose.yml
+  ├─k_03_tst
   └─Makefile                       # For boot
 ```
 3. Directory structure diagram (Inside the Docker Container/excerpt)  

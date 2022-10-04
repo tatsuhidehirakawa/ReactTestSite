@@ -55,23 +55,15 @@ REST(ULCODC$SS)_Architecture
 6. Directory structure diagram (overall/excerpt)  
 ```
 myportfolio_k
-  ├─k_114wbs_src        # Source code of WebServer.
-  ├─k_214api_src        # Source code of APIServer.
-  ├─k_314dbs_src        # Source code of DBServer.
-  ├─k_914set_dev        # Management files for development.
-  ├─k_920set_tst        # Management files for test.
-  ├─Makefile
-  └─README.md
-```
-<!--
-myportfolio_k
-  ├─k_100wbs_src
+  ├─k_01_src
   |  ├─110wbs_src       # Source code of WebServer.
   |  ├─124api_src       # Source code of APIServer.
   |  ├─134dbs_src       # Source code of DBServer.
   |  └─170log_src
-  ├─k_200set_dev        # Management files for development.
-  ├─k_300set_tst        # Management files for test.
+  ├─k_02_dev            # Management files for development.
+  ├─k_03_tst            # Management files for test.
   ├─Makefile
   └─README.md
+```
+<!--
 -->
