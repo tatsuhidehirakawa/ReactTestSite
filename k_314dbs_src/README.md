@@ -5,7 +5,7 @@
 １　DB構成
 ```
 myportfolio_k
-  ├─k_314dbs_dev
+  ├─k_314dbs_src
   │  ├─config
   │  │  └─postgresql.conf
   │  └─initdb

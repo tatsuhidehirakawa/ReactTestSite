@@ -8,8 +8,8 @@ Under construction
 2. Directory structure diagram (Local/excerpt)  
 ```
 myportfolio_k
-  ├─k_114wbs_dev
-  ├─k_214api_dev                   # APIServer(No.214)
+  ├─k_114wbs_src
+  ├─k_214api_src                   # APIServer(No.214)
   │  └─src -----------------------># Bind mounted area.
   │    ├─main.go
   │    ├─config.go
@@ -17,7 +17,7 @@ myportfolio_k
   │       ├─query.sql
   │       ├─schema.sql
   │       └─sqlc.yaml
-  ├─k_314dbs_dev
+  ├─k_314dbs_src
   ├─k_914set_dev
   │  ├─214set_dev
   │  │  ├─Dockerfile
