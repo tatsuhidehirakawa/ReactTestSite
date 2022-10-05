@@ -11,7 +11,8 @@ INSERT INTO account_master (
 -- user_id, account_name, mail_addless, password, zip_code, barth_date, time_zone, language, status, registration_date, rate
   user_id, account_name, mail_addless, password, zip_code, barth_date, time_zone, language, status, registration_date, rate
 ) VALUES (
-  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+  -- ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+  $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11
 );
 
 -- name: DeleteAccount_master :exec
@@ -31,7 +32,8 @@ INSERT INTO account_attribute (
 -- account_id, self_introduction, twitter_url, facebook_url, instagram_url, youtube_channel, update_date, update_id, pic_id_01, pic_id_02, pic_id_03, skill
   account_id, self_introduction, twitter_url, facebook_url, instagram_url, youtube_channel, update_date, update_id, pic_id_01, pic_id_02, pic_id_03, skill
 ) VALUES (
-  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+  -- ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+  $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12
 );
 
 -- name: DeleteAccount_attribute :exec

@@ -40,18 +40,31 @@ func main() {
 	}
 
 	/*--- POSTのハンドラ部分 --------------------*/
-	posting := func(c *gin.Context) {
+    posting := func(c *gin.Context) {
+        // パラメータのstructオブジェクトを作成
+        var attributeParams build_sqlc.CreateAccount_attributeParams
+        // 作成したオブジェクトの参照を渡してJSONデータをstructに注入
+        c.BindJSON(&attributeParams)
+        // DBアクセス用のインスタンスを生成
+        queries := build_sqlc.New(db)
+        // 第二引数で、先程作成したattributeParamsを渡す
+        // ※今回は戻り値のSQLResultは使用しないので、破棄しているが、使用してもOK
+        _, err := queries.CreateAccount_attribute(context.TODO(), attributeParams)
 
-		queries := build_sqlc.New(db)
-		accountAttribute, err := queries.ListAccount_attribute(context.TODO())
-	
-		if err != nil {
-			log.Fatal(err)
-		}
-	
-		c.JSON(200, accountAttribute)
-	}
-	
+        // 以下は任意
+        // POST成功がわかりやすいように、成功時はOKを返却し、失敗時はNGとエラー詳細を返却する
+        if err == nil {
+            c.JSON(http.StatusOK, gin.H{
+                "status": "OK",
+            })
+        } else {
+            c.JSON(http.StatusBadRequest, gin.H{
+                "status": "NG",
+                "detail": err.Error(),
+            })
+        }
+    }
+
 	/*--------------------------------------------*/
 
 	// Ginの初期化処理
@@ -59,11 +72,11 @@ func main() {
 
 	router.GET("/someGet", getting)
 	router.POST("/somePost", posting)
-//	router.PUT("/somePut", putting)
-// router.DELETE("/someDelete", deleting)
-//	router.PATCH("/somePatch", patching)
-//	router.HEAD("/someHead", head)
-//	router.OPTIONS("/someOptions", options)
+	// router.PUT("/somePut", putting)
+	// router.DELETE("/someDelete", deleting)
+	// router.PATCH("/somePatch", patching)
+	// router.HEAD("/someHead", head)
+	// router.OPTIONS("/someOptions", options)
 
 	router.Run()
 }
