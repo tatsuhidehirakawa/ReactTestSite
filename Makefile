@@ -1,11 +1,18 @@
 #.PHONY:
 
-maketst:
-	@mkdir testingMakecmd && touch testingMakecmd/testingSuccess.txt
-	@echo "test success!"
-	@echo "Please delete testingMakecmd/testingSuccess.txt after maketest success."
-
 initall:
+	@cd k_01_src && docker compose up -d
+	@cd ../k_02_dev && docker compose up -d
+	@cd ../k_03_tst && docker compose up -d
+	@cd ../k_04_tst && docker compose up -d
+
+initdev/front:
+	@docker compose up -d 110wbs_dev
+
+initdev/back:
+	@docker compose up -d 124api_dev,134dbs_dev
+
+initdev/bake:
 	@docker buildx bake --file docker-bake.hcl myportfolio_k_dev myportfolio_k_tst
 
 inittem:
@@ -20,6 +27,11 @@ initdev:
 inittst:
 	# @cd k_910set_tst
 	# @docker compose up
+
+# maketst:
+# 	@mkdir testingMakecmd && touch testingMakecmd/testingSuccess.txt
+# 	@echo "test success!"
+# 	@echo "Please delete testingMakecmd/testingSuccess.txt after maketest success."
 
 prundkr:
 	@docker container ls -a
