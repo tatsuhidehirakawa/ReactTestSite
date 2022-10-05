@@ -40,7 +40,7 @@ func main() {
 	}
 
 	/*--- POSTのハンドラ部分 --------------------*/
-    posting := func(c *gin.Context) {
+	posting := func(c *gin.Context) {
         // パラメータのstructオブジェクトを作成
         var attributeParams build_sqlc.CreateAccount_attributeParams
         // 作成したオブジェクトの参照を渡してJSONデータをstructに注入
