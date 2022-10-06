@@ -55,7 +55,7 @@ REST(ULCODC$SS)_Architecture
 6. Directory structure diagram (overall/excerpt)  
 ```
 myportfolio_k
-  ├─k_01_src            # Source code.
+  ├─k_01_src            # Source codes.
   ├─k_02_dev            # Management files for development.
   ├─k_03_tst            # Management files for test.
   ├─Makefile
