@@ -1,11 +1,11 @@
 FROM golang:latest
 WORKDIR /go/src
 
-# # <Pattearn 1> ShellScript Operation.------------------------#
+# #--- <Pattearn 1> ShellScript Operation.---------------------#
 # COPY pkgset.sh /usr/local/bin
 # CMD pkgset.sh
 
-# <Pattearn 2> Dockerfile Operation.---------------------------#
+#--- <Pattearn 2> Dockerfile Operation.------------------------#
 RUN go mod init github.com/tatsuhidehirakawa/myportfolio_k
 RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
 RUN go install github.com/kyleconroy/sqlc/cmd/sqlc
