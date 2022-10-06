@@ -14,9 +14,17 @@ Development environment: Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10
 Please check the Makefile, that's all.
 
 4. Branch names  
+<<<<<<< HEAD
 master -> Sorce code of master.  
 develop_20221007 -> API server sorce code development.  
 develop_20221006 -> Frontend sorce code development.  
+=======
+master -> Existing version.  
+hotfix-100622 -> API server sorce code development.  
+<!-- develop -> Next Version.  -->
+<!-- release-*  -->
+<!-- hotfix-100622 -->
+>>>>>>> hotfix-100622
 
 5. Considerations  
 (1)改行文字の制御に「.gitattributes」を使用  
