@@ -13,11 +13,16 @@ Development environment: Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10
 3. Boot procedure  
 Please check the Makefile, that's all.
 
-4. Considerations  
+4. Branch names  
+master -> Sorce code of master.  
+develop_20221007 -> API server sorce code development.  
+develop_20221006 -> Frontend sorce code development.  
+
+5. Considerations  
 (1)改行文字の制御に「.gitattributes」を使用  
 (2)  
 
-5. Server configuration diagram (overall)  
+6. Server configuration diagram (overall)  
 ```
 REST(ULCODC$SS)_Architecture
 +--------------+  +---------------------------------------------------+
@@ -52,7 +57,7 @@ REST(ULCODC$SS)_Architecture
 |              |  |          +-----------+              +-----------+ |
 +--------------+  +---------------------------------------------------+
 ```
-6. Directory structure diagram (overall/excerpt)  
+7. Directory structure diagram (overall/excerpt)  
 ```
 myportfolio_k
   ├─k_01_src            # Source codes.
