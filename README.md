@@ -70,22 +70,13 @@ myportfolio_k
 ```
 
 8. Task list  
- -[ ]Add delete method on main.go  
-[]Add put method on main.go  
-[]Add delete method on main.go  
-[]Add delete method on main.go  
-- [x] #739   
-- [x] #739   
-- [x] #739   
-- [x] #739   
-- [x] #739   
-- [x] #739   
-- [x] #739   
-
-
-
-
-
+- [x] Add post method on main.go ([#1006](k_01_src/124api_src/src/main.go))  
+- [ ] Add delete method on main.go ([#0000](k_01_src/124api_src/src/main.go))  
+- [ ] Add put method on main.go ([#0000](k_01_src/124api_src/src/main.go))  
+- [ ] Add Environment variable on main.go ([#0000](k_01_src/124api_src/src/main.go))  
+- [ ] Add jwt-go on API.  
+- [ ] Add test environment on "k_03_tst".(Use multistage build.) ([#0000](k_03_tst\120api_tst\Dockerfile))  
+- [ ] Switch Frontend.
 
 <!--
 -->
