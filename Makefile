@@ -4,7 +4,7 @@ initall:
 	@cd k_01_src && docker compose up -d
 	@cd ../k_02_dev && docker compose up -d
 	@cd ../k_03_tst && docker compose up -d
-	@cd ../k_04_tst && docker compose up -d
+	@cd ../k_04_stg && docker compose up -d
 
 initdev/front:
 	@docker compose up -d 110wbs_dev
