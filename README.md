@@ -68,5 +68,24 @@ myportfolio_k
   ├─Makefile
   └─README.md
 ```
+
+8. Task list  
+ -[ ]Add delete method on main.go  
+[]Add put method on main.go  
+[]Add delete method on main.go  
+[]Add delete method on main.go  
+- [x] #739   
+- [x] #739   
+- [x] #739   
+- [x] #739   
+- [x] #739   
+- [x] #739   
+- [x] #739   
+
+
+
+
+
+
 <!--
 -->
