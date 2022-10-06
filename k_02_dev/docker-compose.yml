@@ -35,7 +35,7 @@ services:
       - api-vol:/go/src
     ports:
       - "8080:8080"
-      # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
+      # Port No of Host(non-overlapable):Port No of Container(overlappable)
     networks:
       - myportfolio_k_dev_network
     depends_on:
