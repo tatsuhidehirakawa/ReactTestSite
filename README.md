@@ -14,9 +14,9 @@ Development environment: Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10
 Please check the Makefile, that's all.
 
 4. Branch names  
-master -> Present version.  
-<!-- develop -> Next Version.  -->
+master -> Existing version.  
 hotfix-100622 -> API server sorce code development.  
+<!-- develop -> Next Version.  -->
 <!-- release-*  -->
 <!-- hotfix-100622 -->
 
