@@ -31,8 +31,8 @@ services:
     build: ./124api_dev
     tty: true
     volumes:
-      - ../k_01_src/124api_src/src:/go/src
-      # - api-vol:/go/src
+      # - ../k_01_src/124api_src/src:/go/src
+      - api-vol:/go/src
     ports:
       - "8080:8080"
       # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
@@ -60,7 +60,7 @@ services:
 
 #---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
-  # api-vol:
+  api-vol:
   dbs-vol:
 
 #---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
