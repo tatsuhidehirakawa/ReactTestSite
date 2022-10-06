@@ -6,6 +6,7 @@ WORKDIR /go/src
 # CMD pkgset.sh
 
 #--- <Pattearn 2> Dockerfile Operation.------------------------#
+COPY ./k_01_src/124api_src/src /go/src
 RUN go mod init github.com/tatsuhidehirakawa/myportfolio_k
 RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
 RUN go install github.com/kyleconroy/sqlc/cmd/sqlc
