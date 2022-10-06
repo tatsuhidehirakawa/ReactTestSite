@@ -32,6 +32,7 @@ services:
     tty: true
     volumes:
       - ../k_01_src/124api_src/src:/go/src
+      # - api-vol:/go/src
     ports:
       - "8080:8080"
       # ホストのポート番号（重複不可）：コンテナのポート番号（重複可）
@@ -49,7 +50,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - db-store:/var/lib/postgresql/data
+      - dbs-vol:/var/lib/postgresql/data
       - ../k_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
       - ../k_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
@@ -59,7 +60,8 @@ services:
 
 #---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
-  db-store:
+  dbs-vol:
+  # api-vol:
 
 #---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 networks:
