@@ -4,10 +4,11 @@ services:
 #---110wbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   110wbs_dev:
     container_name: 110wbs_dev
-    build: ../k_02_dev/110wbs_dev
+    # build: ../k_02_dev/110wbs_dev
+    build: ./110wbs_dev
     volumes:
-      # - ./:/usr/src/app # ↓.yml統合に伴う修正（.jsonを参照させる）
       - ../k_01_src/110wbs_src:/usr/src/app
+      # - wbs-vol:/usr/src/app
     # working_dir: /usr/src/app/110wbs_dev
     working_dir: /usr/src/app
     environment:
@@ -15,7 +16,8 @@ services:
     ports:
       - "3000:3000"
     # command: sh -c "./110wbs_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
-    command: sh -c "npm install && yarn start"
+    # command: sh -c "npm install && yarn start"
+    # command: sh -c "cd react-sample && yarn start"
     tty: true
     stdin_open: true
     networks:
@@ -60,6 +62,7 @@ services:
 
 #---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
+  # wbs-vol:
   api-vol:
   dbs-vol:
 
