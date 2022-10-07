@@ -25,10 +25,10 @@ services:
 #---124api_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   124api_dev:
     container_name: 124api_dev
-    # build:
-    #   context: ../k_01_src/124api_src/src
-    #   dockerfile: ../../k_02_dev/124api_dev/Dockerfile
-    build: ./124api_dev
+    build:
+      context: ../k_01_src/124api_src/src
+      dockerfile: ../../../k_02_dev/124api_dev/Dockerfile
+    # build: ./124api_dev
     tty: true
     volumes:
       # - ../k_01_src/124api_src/src:/go/src
