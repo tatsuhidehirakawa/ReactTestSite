@@ -12,4 +12,4 @@ rm -rf ./.*
 npm install -g create-react-app
 create-react-app . --typescript
 # # cd 110wbs_dev
-# npm install sass"
+npm install sass
