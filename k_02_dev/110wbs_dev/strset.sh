@@ -1,18 +1,18 @@
 #!/bin/bash
 
-
 # touch .gitkeep
-#--- .gitkeep removal -----------------------------------------#
 
+#--- .gitkeep removal -----------------------------------------#
 # rm .dotfile
-rm .dot*
+# rm .dot*
 # rm -rf ./.*
 # rm.dotfile
 # rm ./.gitkeep
 # rm -rf tafgetDir/.*
 # rm -rf .gitkeep
 # rm *
-# rm .gitkeep
+rm .gitkeep
+# rm -rf .[^.] .?*
 # rm -r .*
 # rm -R .*
 # rm -rf
