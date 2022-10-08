@@ -3,7 +3,7 @@
 
 
 #--- .gitkeep removal -----------------------------------------#
-# rm -rf ./.*
+rm -rf ./.*
 # rm.dotfile
 # rm ./.gitkeep
 # rm -rf tafgetDir/.*
