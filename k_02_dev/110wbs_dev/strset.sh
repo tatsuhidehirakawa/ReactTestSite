@@ -24,3 +24,7 @@ npm install -g create-react-app@latest
 create-react-app . --typescript
 npm install sass@latest
 yarn start
+
+#--- Sample Code Installation. --------------------------------#
+# mkdir src/components
+# touch components/SampleCode.tsx
