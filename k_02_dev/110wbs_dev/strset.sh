@@ -11,7 +11,8 @@
 rm -rf ./.*
 # rm.dotfile
 # npm cache clean --force
-npm install -g create-react-app
+# npm install -g create-react-app
+npm install -g create-react-app@latest
 create-react-app . --typescript
-npm install sass
+npm install sass@latest
 # yarn start

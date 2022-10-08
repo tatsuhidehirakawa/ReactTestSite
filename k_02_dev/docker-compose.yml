@@ -17,7 +17,7 @@ services:
       - "3000:3000"
     # command: sh -c "./110wbs_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
     # command: sh -c "npm install && yarn start"
-    # command: sh -c "cd react-sample && yarn start"
+    # command: sh -c "yarn start"
     tty: true
     stdin_open: true
 #     networks:
