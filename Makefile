@@ -6,10 +6,10 @@ initall:
 	@cd ../k_03_tst && docker compose up -d
 	@cd ../k_04_stg && docker compose up -d
 
-initdev/front:
+initdev/f:
 	@docker compose up -d 110wbs_dev
 
-initdev/back:
+initdev/b:
 	@docker compose up -d 124api_dev,134dbs_dev
 
 initdev/bake:
@@ -56,4 +56,8 @@ yyyyyyy:
 
 clonenv:
 	@git clone https://github.com/tatsuhidehirakawa/myportfolio_k.git
+
+persist:
+	@cd k_02_dev && 110wbs_dev && rm strset.sh
+	@cd ../../k_01_src/k110wbs && git add package.json, package-lock.json
 
