@@ -1,22 +1,24 @@
 #!/bin/bash
 
 # touch .gitkeep
+# touch test.txt
 
 #--- .gitkeep removal -----------------------------------------#
-# rm .dotfile
-# rm .dot*
+rm .gitkeep
 # rm -rf ./.*
-# rm.dotfile
-# rm ./.gitkeep
+# rm *
+# rm -rf .[^.] .?*
+# rm -rf
 # rm -rf tafgetDir/.*
 # rm -rf .gitkeep
-# rm *
-rm .gitkeep
-# rm -rf .[^.] .?*
+# rm .dotfile
+# rm.dotfile
+# rm .dot*
+# rm.dot*
 # rm -r .*
 # rm -R .*
-# rm -rf
-# rm.dot*
+# rm ./.gitkeep
+
 
 #--- <Pattearn A> Manual Operation.----------------------------#
 # npm install -D webpack webpack-cli
