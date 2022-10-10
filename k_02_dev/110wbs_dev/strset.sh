@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# touch .gitkeep
-# touch test.txt
+#--- Saving Sample Codes --------------------------------------#
+rm Samplecode.tsx
+rm Samplecode.sass
 
 #--- .gitkeep removal -----------------------------------------#
 rm .gitkeep
@@ -19,7 +20,6 @@ rm .gitkeep
 # rm -R .*
 # rm ./.gitkeep
 
-
 #--- <Pattearn A> Manual Operation.----------------------------#
 # npm install -D webpack webpack-cli
 # npm install -g typescript
@@ -31,6 +31,13 @@ create-react-app . --typescript
 npm install sass@latest
 yarn start
 
-#--- Sample Code Installation. --------------------------------#
-# mkdir src/components
-# touch components/SampleCode.tsx
+#--- Relocation of sample code. -------------------------------#
+mkdir src/components
+copy Samplecode.jsx src/components
+copy Samplecode.sass src/components
+mkdir src/hooks
+touch src/hooks/.gitkeep
+mkdir src/types
+touch src/types/.gitkeep
+
+# touch test.txt
