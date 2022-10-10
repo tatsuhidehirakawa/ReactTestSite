@@ -18,60 +18,60 @@ services:
     # command: sh -c "./110wbs_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
     tty: true
     stdin_open: true
-#     networks:
-#       - myportfolio_k_dev_network
-#     # platform: linux/x86_64
+    networks:
+      - myportfolio_k_dev_network
+    # platform: linux/x86_64
 
-# #---124api_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-#   124api_dev:
-#     container_name: 124api_dev
-#     # build:
-#     #   context: ../k_01_src/124api_src/src
-#     #   dockerfile: ../../k_02_dev/124api_dev/Dockerfile
-#     build: ./124api_dev
-#     tty: true
-#     volumes:
-#       # - ../k_01_src/124api_src/src:/go/src
-#       - api-vol:/go/src
-#     ports:
-#       - "8080:8080"
-#       # Port No of Host(non-overlapable):Port No of Container(overlappable)
-#     networks:
-#       - myportfolio_k_dev_network
-#     depends_on:
-#       - 134dbs_dev
+#---124api_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  124api_dev:
+    container_name: 124api_dev
+    # build:
+    #   context: ../k_01_src/124api_src/src
+    #   dockerfile: ../../k_02_dev/124api_dev/Dockerfile
+    build: ./124api_dev
+    tty: true
+    volumes:
+      # - ../k_01_src/124api_src/src:/go/src
+      - api-vol:/go/src
+    ports:
+      - "8080:8080"
+      # Port No of Host(non-overlapable):Port No of Container(overlappable)
+    networks:
+      - myportfolio_k_dev_network
+    depends_on:
+      - 134dbs_dev
 
-# #---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-#   134dbs_dev:
-#     container_name: 134dbs_dev
-#     image: postgres:14
-#     # build: ./134dbs_dev
-#     command: -c 'config_file=/etc/postgresql/postgresql.conf'
-#     ports:
-#       - 5432:5432
-#     volumes:
-#       - dbs-vol:/var/lib/postgresql/data
-#       - ../k_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
-#       - ../k_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
-#     environment:
-#         POSTGRES_PASSWORD: ${PGSQL_PW}
-#     networks:
-#       - myportfolio_k_dev_network
+#---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  134dbs_dev:
+    container_name: 134dbs_dev
+    image: postgres:14
+    # build: ./134dbs_dev
+    command: -c 'config_file=/etc/postgresql/postgresql.conf'
+    ports:
+      - 5432:5432
+    volumes:
+      - dbs-vol:/var/lib/postgresql/data
+      - ../k_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
+      - ../k_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
+    environment:
+        POSTGRES_PASSWORD: ${PGSQL_PW}
+    networks:
+      - myportfolio_k_dev_network
 
-# #---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-# volumes:
-#   # wbs-vol:
-#   api-vol:
-#   dbs-vol:
+#---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+volumes:
+  # wbs-vol:
+  api-vol:
+  dbs-vol:
 
-# #---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-# networks:
-#   myportfolio_k_dev_network:
-#     driver: bridge
+#---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+networks:
+  myportfolio_k_dev_network:
+    driver: bridge
 
-# #---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-# # db-storeが生成されるような行為を行うときには「.sql」ファイルを
-# # 格納していないと初期化処理がスキップされるので注意！
+#---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+# db-storeが生成されるような行為を行うときには「.sql」ファイルを
+# 格納していないと初期化処理がスキップされるので注意！
 
-# # Dockerfile：コンテナ自体の初期設定のみ(動作に必要なツールのインストールと設定変更)記載
-# # docker-compose.yml：環境依存情報のみ(ポートとかストレージとか、プログラムの起動コマンドとか)記載
+# Dockerfile：コンテナ自体の初期設定のみ(動作に必要なツールのインストールと設定変更)記載
+# docker-compose.yml：環境依存情報のみ(ポートとかストレージとか、プログラムの起動コマンドとか)記載
