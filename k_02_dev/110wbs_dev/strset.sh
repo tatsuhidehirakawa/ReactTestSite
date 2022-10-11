@@ -13,18 +13,16 @@ mv src ..
 npm install -g create-react-app@latest
 create-react-app . --typescript
 npm install sass@latest
-yarn start
-
-touch src/test.txt
-
-
 # # Restore samplecodes.
+touch src/test.txt
+touch test.txt
 # mv ../public/.gitkeep ./public
 # mv ../src/components ./src
 # mv ../src/hooks ./src
 # mv ../src/types ./src
 
-
+# Create a standby state.
+yarn start
 
 #--- .gitkeep removal -----------------------------------------#
 # rm .gitkeep
