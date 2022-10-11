@@ -5,7 +5,7 @@
 # npm install -g typescript
 # npm install sass
 
-#--- <Pattearn B> create-react-app Operation.---(6m56sec)------#
+#--- <Pattearn B> create-react-app Operation.---(5m45sec)------#
 # Saveing samplecodes.
 mv public ..
 mv src ..
