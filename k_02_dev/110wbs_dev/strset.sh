@@ -7,6 +7,7 @@
 
 #--- <Pattearn B> create-react-app Operation.------------------#
 # Saveing samplecodes.
+mv public ..
 mv src ..
 # React installation.
 npm install -g create-react-app@latest
@@ -18,6 +19,7 @@ touch src/test.txt
 
 
 # # Restore samplecodes.
+# mv ../public/.gitkeep ./public
 # mv ../src/components ./src
 # mv ../src/hooks ./src
 # mv ../src/types ./src
