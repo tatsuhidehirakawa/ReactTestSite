@@ -1,11 +1,10 @@
 #!/bin/bash
 
 #--- Saving Sample Codes --------------------------------------#
-rm Samplecode.tsx
-rm Samplecode.sass
+mv src ..
 
 #--- .gitkeep removal -----------------------------------------#
-rm .gitkeep
+# rm .gitkeep
 # rm -rf ./.*
 # rm *
 # rm -rf .[^.] .?*
