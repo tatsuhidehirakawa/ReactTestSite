@@ -20,7 +20,7 @@ mv ../src/hooks ./src
 mv ../src/types ./src
 mv ../src/App.js ./src
 
-# Create a standby state.
+# Make a standby state.
 yarn start
 
 #--- .gitkeep removal -----------------------------------------#
