@@ -6,19 +6,23 @@
 # npm install sass
 
 #--- <Pattearn B> create-react-app Operation.------------------#
-# Saveing sample codes.
+# Saveing samplecodes.
 mv src ..
 # React installation.
 npm install -g create-react-app@latest
 create-react-app . --typescript
 npm install sass@latest
 yarn start
-# Restore sample codes.
-mv ../src/components ./src
-mv ../src/hooks ./src
-mv ../src/types ./src
 
-touch test.txt
+touch src/test.txt
+
+
+# # Restore samplecodes.
+# mv ../src/components ./src
+# mv ../src/hooks ./src
+# mv ../src/types ./src
+
+
 
 #--- .gitkeep removal -----------------------------------------#
 # rm .gitkeep
