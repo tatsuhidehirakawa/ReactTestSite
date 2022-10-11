@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome <code>STGprd_devpkg</code> v0.1
+          Welcome to the "<code>STGprd_devpkg</code>" v0.1
         </p>
         <a
           className="App-link"
@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          See sample modal
+          View database values in JSON
         </a>
       </header>
     </div>
