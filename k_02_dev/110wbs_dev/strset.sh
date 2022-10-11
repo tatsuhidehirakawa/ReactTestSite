@@ -1,7 +1,24 @@
 #!/bin/bash
 
-#--- Saving Sample Codes --------------------------------------#
+#--- <Pattearn A> Manual Operation.----------------------------#
+# npm install -D webpack webpack-cli
+# npm install -g typescript
+# npm install sass
+
+#--- <Pattearn B> create-react-app Operation.------------------#
+# Saveing sample codes.
 mv src ..
+# React installation.
+npm install -g create-react-app@latest
+create-react-app . --typescript
+npm install sass@latest
+yarn start
+# Restore sample codes.
+mv ../src/components ./src
+mv ../src/hooks ./src
+mv ../src/types ./src
+
+touch test.txt
 
 #--- .gitkeep removal -----------------------------------------#
 # rm .gitkeep
@@ -18,25 +35,3 @@ mv src ..
 # rm -r .*
 # rm -R .*
 # rm ./.gitkeep
-
-#--- <Pattearn A> Manual Operation.----------------------------#
-# npm install -D webpack webpack-cli
-# npm install -g typescript
-# npm install sass
-
-#--- <Pattearn B> create-react-app Operation.------------------#
-npm install -g create-react-app@latest
-create-react-app . --typescript
-npm install sass@latest
-yarn start
-
-#--- Relocation of sample code. -------------------------------#
-mkdir src/components
-copy Samplecode.jsx src/components
-copy Samplecode.sass src/components
-mkdir src/hooks
-touch src/hooks/.gitkeep
-mkdir src/types
-touch src/types/.gitkeep
-
-# touch test.txt
