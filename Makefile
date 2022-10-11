@@ -45,7 +45,7 @@ prundkr:
 	@docker container ls -a
 	@docker system df
 
-zzzzzzz:
+lookcrlf:
 	@cat -e *.sh
 
 rplccrlf:
