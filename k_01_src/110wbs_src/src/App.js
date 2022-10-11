@@ -7,15 +7,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome to the "<code>STGprd_devpkg</code>" v0.1
+          Welcome to the "<code>STGprd_devpkg</code>" v0.3.0
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.yahoo.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View database values in JSON
+          Show database values in JSON
         </a>
       </header>
     </div>
