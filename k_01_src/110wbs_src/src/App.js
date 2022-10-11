@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Show Sample modal
+          See sample modal
         </a>
       </header>
     </div>
