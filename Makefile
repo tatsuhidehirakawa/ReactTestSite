@@ -45,11 +45,15 @@ prundkr:
 	@docker container ls -a
 	@docker system df
 
-lookcrlf:
-	@cat -e *.sh
+lookcrlf/wbs:
+	@cd k_02_dev/110wbs_dev && cat -e *.sh
 
-rplccrlf:
-	@sed -i 's/\r//' *.sh
+lookcrlf/api:
+	@cd k_02_dev/124api_dev && cat -e *.sh
+
+rplccrlf/all:
+	@cd k_02_dev/110wbs_dev && sed -i 's/\r//' *.sh
+	@cd k_02_dev/124api_dev && sed -i 's/\r//' *.sh
 
 yyyyyyy:
 	@docker exec -it k_904set_dev-214api_dev-1 bash

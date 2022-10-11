@@ -31,8 +31,8 @@ services:
     # build: ./124api_dev
     tty: true
     volumes:
-      # - ../k_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
-      - api-vol:/go/src # Activate for Dockerfile Opration.
+      - ../k_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
+      # - api-vol:/go/src # Activate for Dockerfile Opration.
     ports:
       - "8080:8080"
       # Port No of Host(non-overlapable):Port No of Container(overlappable)
@@ -61,7 +61,7 @@ services:
 #---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   # wbs-vol:
-  api-vol: # Activate for Dockerfile Opration.
+  # api-vol: # Activate for Dockerfile Opration.
   dbs-vol:
 
 #---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
