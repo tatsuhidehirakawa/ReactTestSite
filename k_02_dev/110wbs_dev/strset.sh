@@ -14,7 +14,7 @@ npm install -g create-react-app@latest
 create-react-app . --typescript
 npm install sass@latest
 # Restore samplecodes.
-mv ../public/.gitkeep ./public
+mv ../public/logo512.png ./public
 mv ../src/components ./src
 mv ../src/hooks ./src
 mv ../src/types ./src
