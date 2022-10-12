@@ -1,29 +1,29 @@
 #.PHONY:
 
-initall: ## Booting all containers and services.
+init.all: ## Initialize and booting all containers and services.
 	@cd k_02_dev && docker compose up -d
 	@cd k_03_tst && docker compose up -d
 	@cd k_04_stg && docker compose up -d
 
-initdev/f: ## Booting only frontend dev containers.
+init.dev.f: ## Booting only frontend devlopment containers.
 	@cd k_02_dev && docker compose-up -d 110wbs_dev
 
-initdev/b:
+init.dev.b: ## Booting only backend devlopment containers.
 	@docker compose up -d 124api_dev,134dbs_dev
 
-initdev/bake:
+init.dev.bake: ## Under construction.
 	@docker buildx bake --file docker-bake.hcl myportfolio_k_dev myportfolio_k_tst
 
-inittem:
+inittem: ## Under construction.
 	@docker compose up 114api_dev, 314dbs_dev
 
-# initdev:
+# initdev: ## Under construction.
 # 	@cd k_914set_dev
 # 	# @docker compose up
 # 	@docker compose up 214api_dev, 314dbs_dev
 # 	# @docker compose up 114wbs_dev
 
-inittst:
+inittst: ## Under construction.
 	# @cd k_910set_tst
 	# @docker compose up
 
@@ -32,7 +32,7 @@ inittst:
 # 	@echo "test success!"
 # 	@echo "Please delete testingMakecmd/testingSuccess.txt after maketest success."
 
-prundkr:
+prundkr: ## Under construction.
 	@docker container ls -a
 	@docker system df
 	@docker stop $(docker ps -q)
@@ -44,10 +44,10 @@ prundkr:
 	@docker container ls -a
 	@docker system df
 
-lookcrlf/wbs:
+look.crlf.wbs:
 	@cd k_02_dev/110wbs_dev && cat -e *.sh
 
-lookcrlf/api:
+look.crlf.api:
 	@cd k_02_dev/124api_dev && cat -e *.sh
 
 rplccrlf/all:
