@@ -14,11 +14,12 @@ npm install -g create-react-app@latest
 create-react-app . --typescript
 npm install sass@latest
 # Restore samplecodes.
-mv ../public/logo512.png ./public
+mv ../public/.gitkeep ./public
 mv ../src/components ./src
 mv ../src/hooks ./src
 mv ../src/types ./src
 mv ../src/App.js ./src
+mv ../src/logo.svg ./src
 
 # Make a standby state.
 yarn start
