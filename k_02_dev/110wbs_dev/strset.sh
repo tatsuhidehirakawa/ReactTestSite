@@ -13,7 +13,7 @@ mv src ..
 npm install -g create-react-app@latest
 create-react-app . --typescript
 npm install sass@latest
-# Restore samplecodes.
+# Restore samplecodes.(If you want to see React sample page, comment out mv command.)
 mv ../public/index.html ./public
 mv ../src/components ./src
 mv ../src/hooks ./src
