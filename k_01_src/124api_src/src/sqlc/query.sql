@@ -16,7 +16,7 @@ INSERT INTO account_master (
 
 -- name: DeleteAccount_master :exec
 DELETE FROM account_master
-WHERE user_id = ?;
+WHERE user_id = $1;
 
 -- name: GetAccount_attribute :one
 SELECT * FROM account_attribute
@@ -36,4 +36,4 @@ INSERT INTO account_attribute (
 
 -- name: DeleteAccount_attribute :exec
 DELETE FROM account_attribute
-WHERE account_id = ?;
+WHERE account_id = $1;

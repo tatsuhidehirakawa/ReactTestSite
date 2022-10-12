@@ -67,17 +67,19 @@ func main() {
     }
 
 	/*--- DELETEのハンドラ部分 --------------------*/
-	// deleting := func(c *gin.Context) {
+    deleting := func(c *gin.Context) {
+        // クエリパラメータからaccountIDを取得
+        accountID := c.Param("accountID")
+        queries := build_sqlc.New(db)
+        err := queries.DeleteAccount_attribute(context.TODO(), accountID)
 
+        if err != nil {
+            log.Fatal(err)
+        }
 
+        c.JSON(200, "Successful deletion")
 
-
-
-
-
-
-
-    // }
+    }
 
 	/*--------------------------------------------*/
 
@@ -87,7 +89,8 @@ func main() {
 	router.GET("/someGet", getting)
 	router.POST("/somePost", posting)
 	// router.PUT("/somePut", putting)
-	// router.DELETE("/someDelete", deleting)
+    // :accontIDはクエリパラメータ
+    router.DELETE("/someDelete/:accountID", deleting)
 	// router.PATCH("/somePatch", patching)
 	// router.HEAD("/someHead", head)
 	// router.OPTIONS("/someOptions", options)
