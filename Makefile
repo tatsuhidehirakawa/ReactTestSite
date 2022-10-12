@@ -1,13 +1,12 @@
 #.PHONY:
 
-initall:
-	@cd k_01_src && docker compose up -d
-	@cd ../k_02_dev && docker compose up -d
-	@cd ../k_03_tst && docker compose up -d
-	@cd ../k_04_stg && docker compose up -d
+initall: ## Booting all containers and services.
+	@cd k_02_dev && docker compose up -d
+	@cd k_03_tst && docker compose up -d
+	@cd k_04_stg && docker compose up -d
 
-initdev/f:
-	@docker compose up -d 110wbs_dev
+initdev/f: ## Booting only frontend dev containers.
+	@cd k_02_dev && docker compose-up -d 110wbs_dev
 
 initdev/b:
 	@docker compose up -d 124api_dev,134dbs_dev
@@ -18,11 +17,11 @@ initdev/bake:
 inittem:
 	@docker compose up 114api_dev, 314dbs_dev
 
-initdev:
-	@cd k_914set_dev
-	# @docker compose up
-	@docker compose up 214api_dev, 314dbs_dev
-	# @docker compose up 114wbs_dev
+# initdev:
+# 	@cd k_914set_dev
+# 	# @docker compose up
+# 	@docker compose up 214api_dev, 314dbs_dev
+# 	# @docker compose up 114wbs_dev
 
 inittst:
 	# @cd k_910set_tst
@@ -64,4 +63,11 @@ clonenv:
 persist:
 	@cd k_02_dev && 110wbs_dev && rm strset.sh
 	@cd ../../k_01_src/k110wbs && git add package.json, package-lock.json
+
+
+pg_dump:
+	@pg_dump -U postgres -d sample_db > backup_file.txt
+
+pg_restore:
+	@psql -U postgres -d sample_db < backup_file.txt
 
