@@ -42,8 +42,8 @@ services:
 #---130dbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   130dbs_tst:
     container_name: 130dbs_tst
-    image: postgres:14
-    # build: ./130dbs_tst
+    # image: postgres:14
+    build: ./130dbs_tst
     command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
       - 5678:5432

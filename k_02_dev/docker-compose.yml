@@ -53,6 +53,7 @@ services:
       - dbs-vol:/var/lib/postgresql/data
       - ../k_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
       - ../k_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ../k_03_tst/130dbs_tst/:/usr/src/dbdata
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
