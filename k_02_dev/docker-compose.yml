@@ -53,13 +53,15 @@ services:
       - dbs-vol:/var/lib/postgresql/data
       - ../k_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
       - ../k_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
-      - ../k_03_tst/130dbs_tst/:/usr/src/dbdata
+      # This directory is for generate test data from db dump and restore.
+      # Warning : Do not operate PowerShell at dump and restore.
+      - ../k_03_tst/130dbs_tst/:/usr/src/dbstore
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
       - STGprd_devpkg_dev_network
 
-#---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+#----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   # wbs-vol:
   # api-vol: # Activate for Dockerfile Opration.

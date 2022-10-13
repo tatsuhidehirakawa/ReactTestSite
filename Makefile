@@ -30,8 +30,11 @@ inittst: ## Under construction.
 pg_dump: ## Dump to local file.(touch backup_`date +%Y%m%d%H%M`_134dbs.txt)
 	@cd k_03_tst\130dbs_tst && docker exec 134dbs_dev pg_dump -U postgres -Fc postgres > backup_20221013164512_134dbs_dev.sql
 
-pg_restore/l: ## restore by local file.
+pg_restore/t: ## restore by local file.
+	@docker cp k_03_tst/testdata.sql 134dbs_dev:/usr/local/dbstore
 	@docker exec -it 134dbs_dev pg_restore -d postgres -U postgres /usr/src/dbdata/backup_20221013164512_134dbs_dev.sql
+	
+	@                           pg_restore -c -Fc -d postgres -U postgres testdata.sq
 
 pg_restore/c: ## restore by inside container.
 	@docker compose exec -T 134dbs_dev pg_restore -U postgres -c -d postgres < 134dbs_dump.sql
