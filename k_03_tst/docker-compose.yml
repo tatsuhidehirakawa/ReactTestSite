@@ -44,11 +44,14 @@ services:
     container_name: 130dbs_tst
     # image: postgres:14
     build: ./130dbs_tst
-    command: -c 'config_file=/etc/postgresql/postgresql.conf'
+    # command: -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:
       - 5678:5432
     volumes:
       - dbs-vol:/var/lib/postgresql/data
+      # This directory is for generate test data from db dump and restore.
+      # Warning : Do not operate PowerShell at dump and restore.
+      - ../k_03_tst/130dbs_tst/:/usr/src/dbstore
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     # networks:
