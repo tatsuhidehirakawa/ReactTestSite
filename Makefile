@@ -64,10 +64,3 @@ persist:
 	@cd k_02_dev && 110wbs_dev && rm strset.sh
 	@cd ../../k_01_src/k110wbs && git add package.json, package-lock.json
 
-
-pg_dump:
-	@pg_dump -U postgres -d sample_db > backup_file.txt
-
-pg_restore:
-	@psql -U postgres -d sample_db < backup_file.txt
-

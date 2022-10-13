@@ -19,7 +19,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - myportfolio_k_dev_network
+      - STGprd_devpkg_dev_network
     # platform: linux/x86_64
 
 #---124api_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
@@ -37,7 +37,7 @@ services:
       - "8080:8080"
       # Port No of Host(non-overlapable):Port No of Container(overlappable)
     networks:
-      - myportfolio_k_dev_network
+      - STGprd_devpkg_dev_network
     depends_on:
       - 134dbs_dev
 
@@ -56,7 +56,7 @@ services:
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
-      - myportfolio_k_dev_network
+      - STGprd_devpkg_dev_network
 
 #---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
@@ -66,7 +66,7 @@ volumes:
 
 #---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 networks:
-  myportfolio_k_dev_network:
+  STGprd_devpkg_dev_network:
     driver: bridge
 
 #---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
