@@ -78,4 +78,6 @@ myportfolio_k
 - [ ] [#3256](k_03_tst/120api_tst/Dockerfile) : Add test environment on "k_03_tst".(Use multistage build.)  
 
 <!--
+使いやすさを優先せず、１０年後でも理解できるコードを！
+
 -->
