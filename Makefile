@@ -1,5 +1,7 @@
 #.PHONY:
 
+#---[ 1. system boot ]----------------------------------------------------------
+
 init.all: ## Initialize and booting all containers and services.
 	@cd k_02_dev && docker compose up -d
 	@cd k_03_tst && docker compose up -d
@@ -27,22 +29,15 @@ inittst: ## Under construction.
 	# @cd k_910set_tst
 	# @docker compose up
 
-pg_dump: ## Dump to local file.(touch backup_`date +%Y%m%d%H%M`_134dbs.txt)
-	@cd k_03_tst\130dbs_tst && docker exec 134dbs_dev pg_dump -U postgres -Fc postgres > backup_20221013164512_134dbs_dev.sql
+#---[ 3. DB backup and restore ]------------------------------------------------
 
-pg_restore/t: ## restore by local file.
-	@docker cp k_03_tst/testdata.sql 134dbs_dev:/usr/local/dbstore
-	@docker exec -it 134dbs_dev pg_restore -d postgres -U postgres /usr/src/dbdata/backup_20221013164512_134dbs_dev.sql
-	
-	@                           pg_restore -c -Fc -d postgres -U postgres testdata.sq
+pg_dump: ## Dump db backupfile to local.(cf."meke pg_dump container_name=134dbs_dev")
+	@docker exec -it "$(container_name)" /usr/src/dbstore/pg_dump.sh "$(container_name)" bash
 
-pg_restore/c: ## restore by inside container.
-	@docker compose exec -T 134dbs_dev pg_restore -U postgres -c -d postgres < 134dbs_dump.sql
+pg_restore: ## Restore by local file.(cf."make pg_restore container_name=130dbs_tst file_name=sample")
+	@docker exec -it "$(container_name)" /usr/src/dbstore/pg_restore.sh "$(file_name)" bash
 
-# maketst:
-# 	@mkdir testingMakecmd && touch testingMakecmd/testingSuccess.txt
-# 	@echo "test success!"
-# 	@echo "Please delete testingMakecmd/testingSuccess.txt after maketest success."
+#---[ 4. system stop ]---------------------------------------------------------
 
 prundkr: ## Under construction.
 	@docker container ls -a
@@ -75,4 +70,13 @@ clonenv:
 persist:
 	@cd k_02_dev && 110wbs_dev && rm strset.sh
 	@cd ../../k_01_src/k110wbs && git add package.json, package-lock.json
+
+
+
+#---[ 9. memo ]----------------------------------------------------------------
+
+#---[ 9.1. docker ]------------------------------------------------------------
+# https://zenn.dev/sickleaf/articles/99884a12b0489cf21d45
+	@docker ps -a | grep dbs | awk '$0=$NF'
+
 
