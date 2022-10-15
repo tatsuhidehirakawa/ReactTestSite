@@ -1,17 +1,25 @@
 #.PHONY:
 
+chmod:
+	@cd k_02_dev && cd 124api_dev && ls -la && chmod 775 pkgset.sh && ls -la
+	@cd k_02_dev && cd 110wbs_dev && ls -la && chmod 775 strset.sh && ls -la
+	@cd k_03_tst && cd 130dbs_tst && ls -la && chmod 775 pg_dump.sh && ls -la
+	@cd k_03_tst && cd 130dbs_tst && ls -la && chmod 775 pg_restore.sh && ls -la
+
 #---[ 1. system boot ]----------------------------------------------------------
 
 init.all: ## Initialize and booting all containers and services.
 	@cd k_02_dev && docker compose up -d
-	@cd k_03_tst && docker compose up -d
-	@cd k_04_stg && docker compose up -d
+	# @cd k_03_tst && docker compose up -d
+	# @cd k_04_stg && docker compose up -d
 
 init.dev.f: ## Booting only frontend devlopment containers.
-	@cd k_02_dev && docker compose-up -d 110wbs_dev
+	@cd k_02_dev && docker compose up -d 110wbs_dev
 
 init.dev.b: ## Booting only backend devlopment containers.
-	@docker compose up -d 124api_dev,134dbs_dev
+	# @cd k_02_dev && docker compose up 124api_dev, 134dbs_dev
+	@cd k_02_dev && docker compose up 134dbs_dev -d
+	@cd k_02_dev && docker compose up 124api_dev -d
 
 init.dev.bake: ## Under construction.
 	@docker buildx bake --file docker-bake.hcl myportfolio_k_dev myportfolio_k_tst
@@ -39,17 +47,20 @@ pg_restore: ## Restore by local file.(cf."make pg_restore container_name=130dbs_
 
 #---[ 4. system stop ]---------------------------------------------------------
 
-prundkr: ## Under construction.
-	@docker container ls -a
+destroy: ## Destroy all Docker image, container and caches.  
+	# @docker container ls -a
 	@docker system df
-	@docker stop $(docker ps -q)
-	@docker system prune --volumes -f
-	@docker container prune -f
-	@docker image prune -a -f
-	@docker builder prune -f
-	@docker images -a -f
-	@docker container ls -a
-	@docker system df
+	# @docker stop $(docker ps -q)
+	# @docker system prune --volumes -f
+	# @docker container prune -f
+	# @docker image prune -a -f
+	# @docker builder prune -f
+	# @docker images -a -f
+	# @docker container ls -a
+	# @docker system df
+
+destroy.w: ## (For Windows!)Destroy all Docker image, container and caches.  
+	@docker container ls -a; docker system df; docker stop $(docker ps -q); docker system prune --volumes -f; docker container prune -f; docker image prune -a -f; docker builder prune -f; docker images -a -f; docker container ls -a; docker system df
 
 look.crlf.wbs:
 	@cd k_02_dev/110wbs_dev && cat -e *.sh
