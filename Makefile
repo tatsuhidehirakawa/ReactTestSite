@@ -21,6 +21,9 @@ init.dev.b: ## Booting only backend devlopment containers.
 	@cd k_02_dev && docker compose up 134dbs_dev -d
 	@cd k_02_dev && docker compose up 124api_dev -d
 
+init.tst.b: ## Under construction.
+	@cd k_03_tst && cd 130dbs_tst && docker compose up -d
+
 init.dev.bake: ## Under construction.
 	@docker buildx bake --file docker-bake.hcl myportfolio_k_dev myportfolio_k_tst
 
@@ -32,10 +35,6 @@ inittem: ## Under construction.
 # 	# @docker compose up
 # 	@docker compose up 214api_dev, 314dbs_dev
 # 	# @docker compose up 114wbs_dev
-
-inittst: ## Under construction.
-	# @cd k_910set_tst
-	# @docker compose up
 
 #---[ 3. DB backup and restore ]------------------------------------------------
 
@@ -107,3 +106,7 @@ test.s:
 
 test.e:
 	@rm test.txt
+
+
+exec:
+	@docker exec -it 134dbs_dev bash
