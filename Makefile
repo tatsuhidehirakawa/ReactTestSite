@@ -80,3 +80,13 @@ persist:
 	@docker ps -a | grep dbs | awk '$0=$NF'
 
 
+#---[ 10. make test ]----------------------------------------------------------
+
+vall:
+	@make -v && git -v && docker -v
+
+test.s:
+	@touch test.txt
+
+test.e:
+	@rm test.txt
