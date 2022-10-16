@@ -67,30 +67,23 @@ func main() {
     }
 
 	/*--- PUTのハンドラ部分 -----------------------*/
-	// putting := func(c *gin.Context) {
-	// 	// パラメータのstructオブジェクトを作成
-	// 	var attributeParams build_sqlc.UpdateAccount_attributeParams
-	// 	// 作成したオブジェクトの参照を渡してJSONデータをstructに注入
-	// 	c.BindJSON(&attributeParams)
-	// 	// DBアクセス用のインスタンスを生成
-	// 	queries := build_sqlc.New(db)
-	// 	// 第二引数で、先程作成したattributeParamsを渡す
-	// 	// ※今回は戻り値のSQLResultは使用しないので、破棄しているが、使用してもOK
-	// 	_, err := queries.UpdateAccount_attribute(context.TODO(), attributeParams)
+	putting := func(c *gin.Context) {
+		var attributeParams build_sqlc.UpdateAccount_attributeParams
+		c.BindJSON(&attributeParams)
+		queries := build_sqlc.New(db)
+		_, err := queries.UpdateAccount_attribute(context.TODO(), attributeParams)
 
-	// 	// 以下は任意
-	// 	// PUT成功がわかりやすいように、成功時はOKを返却し、失敗時はNGとエラー詳細を返却する
-	// 	if err == nil {
-	// 		c.JSON(http.StatusOK, gin.H{
-	// 			"status": "OK",
-	// 		})
-	// 	} else {
-	// 		c.JSON(http.StatusBadRequest, gin.H{
-	// 			"status": "NG",
-	// 			"detail": err.Error(),
-	// 		})
-	// 	}
-	// }
+		if err == nil {
+			c.JSON(http.StatusOK, gin.H{
+				"status": "OK",
+			})
+		} else {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"status": "NG",
+				"detail": err.Error(),
+			})
+		}
+	}
 
 	/*--- DELETEのハンドラ部分 --------------------*/
     deleting := func(c *gin.Context) {
@@ -114,7 +107,7 @@ func main() {
 
 	router.GET("/someGet", getting)
 	router.POST("/somePost", posting)
-	// router.PUT("/somePut", putting)
+	router.PUT("/somePut", putting)
     // :accontIDはクエリパラメータ
     router.DELETE("/someDelete/:accountID", deleting)
 	// router.PATCH("/somePatch", patching)
