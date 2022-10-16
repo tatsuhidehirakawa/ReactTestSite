@@ -6,7 +6,7 @@ chmod:
 	@cd k_03_tst && cd 130dbs_tst && ls -la && chmod 775 pg_dump.sh && ls -la
 	@cd k_03_tst && cd 130dbs_tst && ls -la && chmod 775 pg_restore.sh && ls -la
 
-#---[ 1. system boot ]----------------------------------------------------------
+#---[ 1. system boot ]-------------------------------------------------------
 
 init.all: ## Initialize and booting all containers and services.
 	@cd k_02_dev && docker compose up -d
@@ -87,7 +87,23 @@ persist:
 	@cd k_02_dev && 110wbs_dev && rm strset.sh
 	@cd ../../k_01_src/k110wbs && git add package.json, package-lock.json
 
+#---[ 8. Git add ]-------------------------------------------------------------
 
+git.add.norm:  ## Addition of git (cf. make git.add.norm)
+	@git status
+	@git add Makefile
+	@git status
+
+git.add.param:  ## Addition of git (cf. make git.add.param)
+	@git status
+	@git add k_01_src/110wbs_src/package.json
+	@git add k_01_src/110wbs_src/package-lock.json
+	@git add k_01_src/124api_src/src/mod.go
+	@git add k_01_src/124api_src/src/sqlc/build_sqlc/query.sql
+	@git add k_01_src/124api_src/src/sqlc/build_sqlc/ß
+	@git add k_01_src/124api_src/src/sqlc/build_sqlc/
+	@git add k_01_src/124api_src/src/sqlc/build_sqlc/
+	@git status
 
 #---[ 9. memo ]----------------------------------------------------------------
 

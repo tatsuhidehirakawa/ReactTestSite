@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import SampleModal from './components/SampleModal.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           View Package Summary
         </a>
+        <SampleModal />
       </header>
     </div>
   );
