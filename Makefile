@@ -99,10 +99,10 @@ git.add.param:  ## Addition of git (cf. make git.add.param)
 	@git add k_01_src/110wbs_src/package.json
 	@git add k_01_src/110wbs_src/package-lock.json
 	@git add k_01_src/124api_src/src/mod.go
-	@git add k_01_src/124api_src/src/sqlc/build_sqlc/query.sql
-	@git add k_01_src/124api_src/src/sqlc/build_sqlc/ß
-	@git add k_01_src/124api_src/src/sqlc/build_sqlc/
-	@git add k_01_src/124api_src/src/sqlc/build_sqlc/
+	@git add k_01_src/124api_src/src/sqlc/build_sqlc/db.go
+	@git add k_01_src/124api_src/src/sqlc/build_sqlc/go.mod
+	@git add k_01_src/124api_src/src/sqlc/build_sqlc/models.go
+	@git add k_01_src/124api_src/src/sqlc/build_sqlc/query.sql.go
 	@git status
 
 #---[ 9. memo ]----------------------------------------------------------------
