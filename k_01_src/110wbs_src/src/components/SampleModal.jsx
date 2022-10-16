@@ -44,7 +44,7 @@ class SampleModal extends React.Component {   // ※コンポーネント名(Log
     return (   // returnステートメント
       <>
         <div onClick={()=>{this.handleClickLesson();}}>
-          <p className="loginText">View Package Summary</p>
+          <p className="App-link">View Package Summary</p>
         </div>
         {modal}
       </>
