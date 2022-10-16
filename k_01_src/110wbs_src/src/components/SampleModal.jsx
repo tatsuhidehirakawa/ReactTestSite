@@ -10,7 +10,7 @@ class SampleModal extends React.Component {   // ※コンポーネント名(Log
     this.state = { isModalOpen: false };
   }
 
-  handleClickLesson() {
+  handleClickOpen() {
     this.setState({ isModalOpen: true });   // setStateメソッドを使用してisModalOpenプロパティの値をtrueに変更する。
   }
 
@@ -43,7 +43,7 @@ class SampleModal extends React.Component {   // ※コンポーネント名(Log
 
     return (   // returnステートメント
       <>
-        <div onClick={()=>{this.handleClickLesson();}}>
+        <div onClick={()=>{this.handleClickOpen();}}>
           <p className="App-link">View Package Summary</p>
         </div>
         {modal}
@@ -51,5 +51,4 @@ class SampleModal extends React.Component {   // ※コンポーネント名(Log
     );
   }
 }
-
 export default SampleModal;
