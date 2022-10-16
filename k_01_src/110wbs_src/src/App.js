@@ -10,14 +10,14 @@ function App() {
         <p>
           Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
         </p>
-        <a
+        {/* <a
           className="App-link"
           href="https://www.yahoo.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
           View Package Summary
-        </a>
+        </a> */}
         <SampleModal />
       </header>
     </div>
