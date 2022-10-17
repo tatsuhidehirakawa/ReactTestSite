@@ -47,23 +47,23 @@ pg_restore: ## Restore by local file.(cf."make pg_restore container_name=130dbs_
 #---[ 4. Repository build and destroy ]---------------------------------------------
 
 destroy: ## Destroy all Docker image, container and caches.  
-	# @docker container ls -a
+	@docker container ls -a
 	@docker system df
-	# @docker stop $(docker ps -q)
-	# @docker system prune --volumes -f
-	# @docker container prune -f
-	# @docker image prune -a -f
-	# @docker builder prune -f
-	# @docker images -a -f
-	# @docker container ls -a
-	# @docker system df
+	docker stop `docker ps -q`
+	@docker system prune --volumes -f
+	@docker container prune -f
+	@docker image prune -a -f
+	@docker builder prune -f
+	@docker images -a -f
+	@docker container ls -a
+	@docker system df
 
 clean:
 	@git clean -df .
 	@cd k_01_src && cd 110wbs_src && rm -R node_modules
 
-destroy.w: ## (For Windows!)Destroy all Docker image, container and caches.  
-	@docker container ls -a; docker system df; docker stop $(docker ps -q); docker system prune --volumes -f; docker container prune -f; docker image prune -a -f; docker builder prune -f; docker images -a -f; docker container ls -a; docker system df
+# destroy.w: ## (For Windows!)Destroy all Docker image, container and caches.  
+# 	@docker container ls -a; docker system df; docker stop $(docker ps -q); docker system prune --volumes -f; docker container prune -f; docker image prune -a -f; docker builder prune -f; docker images -a -f; docker container ls -a; docker system df
 
 #---[ 5. Validation ]----------------------------------------------------------------
 
