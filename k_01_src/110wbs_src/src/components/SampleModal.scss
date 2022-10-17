@@ -10,10 +10,10 @@
 }
 
 /* 展開したモーダル用------------------------- */
-.modalBackground {
-  @include std_modal_bkgnd;
-  //スタンダード・モーダル・バックグラウンド（背景をグレーアウト）
-}
+// .modalBackground {
+//   @include std_modal_bkgnd;
+//   //スタンダード・モーダル・バックグラウンド（背景をグレーアウト）
+// }
 
 /*
 @include std_modal_body {
@@ -96,7 +96,7 @@
 }
 
 .modal-tx-btn {
-  @include tx-btn ;
+  // @include tx-btn ;
   margin:20px 0px 0px 153px ; //ログインボタンの位置合わせ。もっと綺麗に描けない？
   border-radius: 22px;
 }

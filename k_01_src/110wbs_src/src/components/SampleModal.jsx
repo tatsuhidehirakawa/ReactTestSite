@@ -4,7 +4,7 @@ import "./SampleModal.scss";
 // const SampleModal = () => {
 //   const [count, setcount] = React.usestate(0);
 
-class SampleModal extends React.Component {   // ※コンポーネント名(LoginModal)は大文字で開始させること！！！
+class SampleModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isModalOpen: false };
@@ -21,9 +21,8 @@ class SampleModal extends React.Component {   // ※コンポーネント名(Log
   render() {    // renderライフサイクルメソッド
     let modal;
     if (this.state.isModalOpen) {
-      /* ---modalはクリックされた時にreturnステートメントに挿入する-------------------*/
       modal = (
-        <div className="modalBackground">   {/* 背景をグレーアウトする処理 */}
+        // <div className="modalBackground">   {/* 背景をグレーアウトする処理 */}
           <div className="modal-inner">   {/* 以下モーダルを形成する処理 */}
             <div className="modal-header"></div>
             <div className="modal-introduction">
@@ -36,12 +35,11 @@ class SampleModal extends React.Component {   // ※コンポーネント名(Log
             <h5 className="Pravicy">当サイトの規約とプライバシー規約に同意いただける場合は <u>ログイン</u> して下さい。</h5>
             <h5 className="piyopiyo"><center>アカウントをお持ちでない場合は <u>登録</u></center></h5>
           </div>
-        </div>
+        // </div>
       );
-      /* ----------------------------------------------------------------------*/
     }
 
-    return (   // returnステートメント
+    return (
       <>
         <div onClick={()=>{this.handleClickOpen();}}>
           <p className="App-link">View Package Summary</p>
