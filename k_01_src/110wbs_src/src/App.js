@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import SampleModal from './components/SampleModal.jsx';
+import M_Signin_a from './components/M_Signin_a.jsx';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         >
           View Package Summary
         </a> */}
-        <SampleModal />
+        <M_Signin_a />
       </header>
     </div>
   );

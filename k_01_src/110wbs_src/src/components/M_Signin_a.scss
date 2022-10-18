@@ -1,0 +1,60 @@
+// @import "./Management.scss";    // 全体管理用scssファイルを読み込み
+
+/* 展開したモーダル用------------------------- */
+// .modalBackground {
+//   @include std_modal_bkgnd;
+//   //スタンダード・モーダル・バックグラウンド（背景をグレーアウト）
+// }
+
+.App-link {
+  color: #61dafb;
+}
+
+.modal_inner {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+  width: 380px;
+  padding-bottom: 30px;
+  margin: auto;
+  border-radius: 18px;
+  //新規導入すりガラスエフェクト！！！
+  background-color: rgba(255,255,255,0.4);
+  backdrop-filter:blur(8px);
+}
+ß
+.Loginaaa{
+  padding: 0px 0px 13px 0px;
+  margin: 0px 0px 0px 0px;
+  color: #61dafb;
+}
+
+.mailAndpass {
+  padding: 6px 6px;
+  margin: 0px 0px 10px 0px;
+  width: 220px;
+  // align: center;
+}
+
+.loginPass{
+  padding: 6px 6px;
+  margin: 0px 0px 0px 0px;
+  width: 220px;
+}
+
+.notes {
+  padding: 10px 10px 10px 10px;
+  margin: 20px 20px 0px 20px;
+  color: #000;
+  font-size: medium;
+  u {
+    cursor: pointer;
+  }
+}
+
+.modal-tx-btn {
+  // @include tx-btn ;
+  margin:20px 0px 0px 153px ; //ログインボタンの位置合わせ。もっと綺麗に描けない？
+  border-radius: 22px;
+}
