@@ -1,5 +1,5 @@
 import React from 'react';
-import A_Button_a from './A_Button_a';
+// import A_Button_a from './A_Button_a';
 import './O_Signin_a.scss';
 
 // const MSignina = () => {
@@ -36,10 +36,10 @@ class O_Signin_a extends React.Component {
               // placeholder="Please input your password."
               value="********"
             />
-            {/* <button className="modal-tx-btn" onClick={() => this.handleClickClose()}>
+            <button className="modal-tx-btn" onClick={() => this.handleClickClose()}>
               Login
-            </button> */}
-            <A_Button_a />
+            </button>
+            {/* <A_Button_a /> */}
             <div className="notes">
               If forgetten password, <u>cleck</u>.\nIf you agree to the Terms of Use and Privacy Policy please `<u>login</u>` .`\n
             `If you do not have an account please `<u>register</u>` .``
