@@ -1,4 +1,4 @@
-// @import "./Management.scss";    // 全体管理用scssファイルを読み込み
+// @import "./A_Button_a.scss";
 
 /* 展開したモーダル用------------------------- */
 // .modalBackground {
@@ -6,16 +6,19 @@
 //   //スタンダード・モーダル・バックグラウンド（背景をグレーアウト）
 // }
 
+
+
 .App-link {
   color: #61dafb;
 }
 
-.modal_inner {
+.modal_general {
   position: absolute;
   top: 20%;
   right: 0;
   left: 0;
-  width: 380px;
+  width: 700px;
+  height: 550px;
   padding-bottom: 30px;
   margin: auto;
   border-radius: 18px;
@@ -23,18 +26,13 @@
   background-color: rgba(255,255,255,0.4);
   backdrop-filter:blur(8px);
 }
-ß
-.Loginaaa{
-  padding: 0px 0px 13px 0px;
-  margin: 0px 0px 0px 0px;
-  color: #61dafb;
-}
 
-.mailAndpass {
-  padding: 6px 6px;
-  margin: 0px 0px 10px 0px;
-  width: 220px;
-  // align: center;
+.upper_notes {
+  margin: 60px 0px 38px 0px;
+  color: #1e4049;
+  font-size: 23px;
+  text-shadow: 3px 4px 3px rgb(131, 152, 152);
+  // opacity: 0.8;
 }
 
 .loginPass{
@@ -43,18 +41,28 @@
   width: 220px;
 }
 
-.notes {
-  padding: 10px 10px 10px 10px;
-  margin: 20px 20px 0px 20px;
+.signIntext {
+  width: 1900px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 20px 16px 30px;
+  width: 350px;
+  font-size: 18px;
+  // align: center;
+}
+
+.tx_btn {
+  // @include tx-btn ;
+  margin:60px; //ログインボタンの位置合わせ。もっと綺麗に描けない？
+  border-radius: 22px;
+}
+
+.lower_notes {
+  margin: 10px 0px 13px 15px;
+  padding: 6px 6px 6px 6px;
   color: #000;
-  font-size: medium;
+  font-size: 23px;
+  text-align: left;
   u {
     cursor: pointer;
   }
-}
-
-.modal-tx-btn {
-  // @include tx-btn ;
-  margin:20px 0px 0px 153px ; //ログインボタンの位置合わせ。もっと綺麗に描けない？
-  border-radius: 22px;
 }
