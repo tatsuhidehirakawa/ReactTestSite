@@ -4,7 +4,7 @@ import './A_Button_a.scss';
 const A_Button_a = () => {
     return (
       <>
-      <button className="modal-tx-btn" onClick={() => this.handleClickClose()}>
+      <button className="tx-btn" onClick={() => this.handleClickClose()}>
         Login
       </button>
       </>

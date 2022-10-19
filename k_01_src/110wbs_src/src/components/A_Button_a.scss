@@ -12,11 +12,11 @@
     color: black;
 }
 
-
 @mixin tx-btn {
     // @include LightmodeColorset;
     padding: 7px 10px 4px 10px;
-    background: $sawayaka-color;            // ★
+    // background: $sawayaka-color;            // ★
+    background: lighten(#61dafb, 9%);
     border: none;            // ★
     filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.2));
     text-align: center;            // いらない
