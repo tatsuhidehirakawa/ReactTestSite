@@ -1,10 +1,11 @@
-import React from "react";
-import "./M_Signin_a.scss";
+import React from 'react';
+import A_Button_a from './A_Button_a';
+import './O_Signin_a.scss';
 
 // const MSignina = () => {
 //   const [count, setcount] = React.usestate(0);
 
-class M_Signin_a extends React.Component {
+class O_Signin_a extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isModalOpen: false };
@@ -35,9 +36,10 @@ class M_Signin_a extends React.Component {
               // placeholder="Please input your password."
               value="********"
             />
-            <button className="modal-tx-btn" onClick={() => this.handleClickClose()}>
+            {/* <button className="modal-tx-btn" onClick={() => this.handleClickClose()}>
               Login
-            </button>
+            </button> */}
+            <A_Button_a />
             <div className="notes">
               If forgetten password, <u>cleck</u>.\nIf you agree to the Terms of Use and Privacy Policy please `<u>login</u>` .`\n
             `If you do not have an account please `<u>register</u>` .``
@@ -57,4 +59,4 @@ class M_Signin_a extends React.Component {
     );
   }
 }
-export default M_Signin_a;
+export default O_Signin_a;
