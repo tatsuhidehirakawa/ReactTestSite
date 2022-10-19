@@ -11,3 +11,27 @@
 .aaa {
     color: black;
 }
+
+
+@mixin tx-btn {
+    // @include LightmodeColorset;
+    padding: 7px 10px 4px 10px;
+    background: $sawayaka-color;            // ★
+    border: none;            // ★
+    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.2));
+    text-align: center;            // いらない
+    font-size: 15px;            // ★
+    color: white;            // ★
+    display: block;
+    cursor: pointer;            // ★
+    opacity: 0.8;            // ★
+    &:hover {            // ★
+      opacity: 1;            // ★
+    }
+    &:active {            // ★
+      box-shadow: none;             // ★
+      position: relative; 
+      top: 1px; 
+      left: 1px; 
+    }
+  }
