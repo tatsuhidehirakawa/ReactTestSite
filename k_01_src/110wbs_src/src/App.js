@@ -7,17 +7,20 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
+        {/* <p>
+          Edit <code>src/App.js</code> and save to reload.
         </p>
-        {/* <a
+        <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Package Summary
+          Learn React
         </a> */}
+        <p>
+          Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
+        </p>
         <O_Signin_a />
       </header>
     </div>
