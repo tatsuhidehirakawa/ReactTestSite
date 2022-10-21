@@ -2,10 +2,10 @@ import React from 'react';
 import A_BUTTON_A from './A_Button_a.tsx';
 import './O_Signin_a.scss';
 
-// const O_Signin_a = () => {
+// const O_SIGNIN_A = () => {
 //   const [count, setcount] = React.usestate(0);
 
-class O_Signin_a extends React.Component {
+class O_SIGNIN_A extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isModalOpen: false };
@@ -62,4 +62,4 @@ class O_Signin_a extends React.Component {
     );
   }
 }
-export default O_Signin_a;
+export default O_SIGNIN_A;
