@@ -43,9 +43,9 @@ class O_SIGNIN_A extends React.Component {
               />
             </div>
             <div className="lower_notes">
-              If forgetten password, <u>cleck</u>.<br/>
+              If you have forgotten your password, please click <u>here</u>.<br/>
               If you agree to the Terms of Use and Privacy Policy please <u>login</u> .<br/>
-              If you do not have an account please <u>register</u> .<br/>
+              If you do not have an account, please <u>register</u> .<br/>
             </div>
           </div>
         // </div>
