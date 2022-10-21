@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import O_Signin_a from './components/O_Signin_a.jsx';
+import O_SIGNIN_A from './components/O_Signin_a.jsx';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <p>
           Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
         </p>
-        <O_Signin_a />
+        <O_SIGNIN_A />
       </header>
     </div>
   );
