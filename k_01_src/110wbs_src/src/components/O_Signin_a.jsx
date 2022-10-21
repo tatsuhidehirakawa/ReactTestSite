@@ -1,5 +1,5 @@
 import React from 'react';
-import A_BUTTON_A from './A_Button_a';
+import A_BUTTON_A from './A_Button_a.tsx';
 import './O_Signin_a.scss';
 
 // const O_Signin_a = () => {
