@@ -9,7 +9,7 @@ import (
 
 	_ "github.com/lib/pq"
 	"github.com/gin-gonic/gin"
-
+	// "github.com/tatsuhidehirakawa/myportfolio_k/k_01_src/124api_src/src/controllers"
 	"sqlc_pkg"
 )
 
@@ -102,7 +102,6 @@ func main() {
 
 	/*--------------------------------------------*/
 
-	// Ginの初期化処理
 	router := gin.Default()
 
 	router.GET("/someGet", getting)
