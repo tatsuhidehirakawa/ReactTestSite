@@ -1,5 +1,5 @@
 import React from 'react';
-// import A_Button_a from './A_Button_a';
+import A_BUTTON_A from './A_Button_a';
 import './O_Signin_a.scss';
 
 // const O_Signin_a = () => {
@@ -36,10 +36,12 @@ class O_Signin_a extends React.Component {
               // placeholder="Please input your password."
               value="********"
             />
-            <button className="tx_btn" onClick={() => this.handleClickClose()}>
-              Login
-            </button>
-            {/* <A_Button_a /> */}
+            <div className='A_BUTTON_A_pos'>
+              <A_BUTTON_A
+                // onClick={() => (Main.jp)}
+                children ="login"
+              />
+            </div>
             <div className="lower_notes">
               If forgetten password, <u>cleck</u>.<br/>
               If you agree to the Terms of Use and Privacy Policy please <u>login</u> .<br/>
