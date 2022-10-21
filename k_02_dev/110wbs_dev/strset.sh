@@ -5,6 +5,10 @@
 # npm install -g typescript
 # npm install sass
 
+# npm install @babel/core @babel/preset-env @babel/preset-react --save-dev 
+# npm install webpack webpack-cli webpack-dev-server babel-loader css-loader style-loader html-webpack-plugin --save-dev 
+
+
 #--- <Pattearn B> create-react-app Operation.---(5m45sec)------#
 # Saveing samplecodes.
 mv public ..

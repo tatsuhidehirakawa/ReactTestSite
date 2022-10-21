@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import SampleModal from './components/SampleModal.jsx';
+import O_SIGNIN_A from './components/O_Signin_a.jsx';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
+        {/* <p>
+          Edit <code>src/App.js</code> and save to reload.
         </p>
-        {/* <a
+        <a
           className="App-link"
-          href="https://www.yahoo.com/"
+          href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Package Summary
+          Learn React
         </a> */}
-        <SampleModal />
+        <p>
+          Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
+        </p>
+        <O_SIGNIN_A />
       </header>
     </div>
   );

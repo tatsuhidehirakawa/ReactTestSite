@@ -1,0 +1,72 @@
+// @import "./A_Button_a.scss";
+
+/* 展開したモーダル用------------------------- */
+// .modalBackground {
+//   @include std_modal_bkgnd;
+//   //スタンダード・モーダル・バックグラウンド（背景をグレーアウト）
+// }
+
+.App-link {
+  color: #61dafb;
+  text-decoration:underline;
+}
+
+.modal_general {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+  width: 700px;
+  height: 550px;
+  padding-bottom: 30px;
+  margin: auto;
+  border-radius: 18px;
+  //新規導入すりガラスエフェクト！！！
+  background-color: rgba(255,255,255,0.4);
+  backdrop-filter:blur(8px);
+}
+
+.upper_notes {
+  margin: 70px 0px 38px 0px;
+  color: #1e4049;
+  font-size: 23px;
+  text-shadow: 3px 4px 3px rgb(131, 152, 152);
+  // opacity: 0.8;
+}
+
+.loginPass{
+  padding: 6px 6px;
+  margin: 0px 0px 0px 0px;
+  width: 220px;
+}
+
+.signIntext {
+  width: 1900px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 20px 16px 30px;
+  width: 350px;
+  font-size: 18px;
+  border-radius: 28px;
+  // align: center;
+}
+
+.A_BUTTON_A_pos {
+  // @include tx-btn ;
+  margin: 45px 350px 50px 290px;
+  // margin:0 auto;
+  // padding: 100px 0px 20px 100px;
+
+}
+
+.lower_notes {
+  margin: 10px 0px 13px 15px;
+  padding: 6px 6px 6px 6px;
+  color: #1e4049;
+  font-weight: 250;
+  font-size: 23px;
+  // text-align: left;
+  line-height: 33px;
+  u {
+    cursor: pointer;
+  }
+}

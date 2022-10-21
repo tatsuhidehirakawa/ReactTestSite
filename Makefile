@@ -8,10 +8,8 @@ chmod:
 
 #---[ 1. system boot ]-------------------------------------------------------
 
-init.all: ## Initialize and booting all containers and services.
+init.dev: ## Booting only frontend devlopment containers.
 	@cd k_02_dev && docker compose up -d
-	# @cd k_03_tst && docker compose up -d
-	# @cd k_04_stg && docker compose up -d
 
 init.dev.f: ## Booting only frontend devlopment containers.
 	@cd k_02_dev && docker compose up -d 110wbs_dev
@@ -30,6 +28,11 @@ init.dev.bake: ## Under construction.
 inittem: ## Under construction.
 	@docker compose up 114api_dev, 314dbs_dev
 
+init.all: ## Initialize and booting all containers and services.
+	@cd k_02_dev && docker compose up -d
+	@cd k_03_tst && docker compose up -d
+	@cd k_04_stg && docker compose up -d
+
 # initdev: ## Under construction.
 # 	@cd k_914set_dev
 # 	# @docker compose up
@@ -47,16 +50,16 @@ pg_restore: ## Restore by local file.(cf."make pg_restore container_name=130dbs_
 #---[ 4. Repository build and destroy ]---------------------------------------------
 
 destroy: ## Destroy all Docker image, container and caches.  
-	# @docker container ls -a
+	@docker container ls -a
 	@docker system df
-	# @docker stop $(docker ps -q)
-	# @docker system prune --volumes -f
-	# @docker container prune -f
-	# @docker image prune -a -f
-	# @docker builder prune -f
-	# @docker images -a -f
-	# @docker container ls -a
-	# @docker system df
+	docker stop `docker ps -q`
+	@docker system prune --volumes -f
+	@docker container prune -f
+	@docker image prune -a -f
+	@docker builder prune -f
+	@docker images -a -f
+	@docker container ls -a
+	@docker system df
 
 clean:
 	@git clean -df .
