@@ -1,10 +1,11 @@
 // @import "./A_Button_a.scss";
 
-/* 展開したモーダル用------------------------- */
-// .modalBackground {
-//   @include std_modal_bkgnd;
-//   //スタンダード・モーダル・バックグラウンド（背景をグレーアウト）
-// }
+// This is command to make a templete.
+@mixin templatization {
+  border-radius: 10px;
+  background-color: #b2b2b2;
+  opacity: 0.3;
+}
 
 .App-link {
   color: #61dafb;
@@ -17,7 +18,7 @@
   right: 0;
   left: 0;
   width: 700px;
-  height: 550px;
+  height: 570px;
   padding-bottom: 30px;
   margin: auto;
   border-radius: 18px;
@@ -27,11 +28,13 @@
 }
 
 .upper_notes {
-  margin: 70px 0px 38px 0px;
-  color: #1e4049;
+  // @include templatization;
+  margin: 70px 30px 38px 30px;
+  padding: 15px 5px 15px 5px;
+  color: #1b1b1b;
   font-size: 23px;
-  text-shadow: 3px 4px 3px rgb(131, 152, 152);
-  // opacity: 0.8;
+  text-shadow: 3px 4px 3px rgb(143, 143, 143);
+
 }
 
 .loginPass{
@@ -40,32 +43,38 @@
   width: 220px;
 }
 
-.signIntext {
+@mixin signIntxt {
   width: 1900px;
   margin: 10px 10px 10px 10px;
-  padding: 10px 20px 16px 30px;
   width: 350px;
   font-size: 18px;
   border-radius: 28px;
-  // align: center;
+}
+
+.signInid {
+  @include signIntxt;
+  padding: 11px 20px 10px 30px;
+}
+
+.signInpass {
+  @include signIntxt;
+  padding: 17px 20px 10px 30px;
+  // font-size: 20px;
 }
 
 .A_BUTTON_A_pos {
-  // @include tx-btn ;
   margin: 45px 350px 50px 290px;
-  // margin:0 auto;
-  // padding: 100px 0px 20px 100px;
-
 }
 
 .lower_notes {
-  margin: 10px 0px 13px 15px;
+  // @include templatization;
+  margin: 10px 30px 13px 30px;
   padding: 6px 6px 6px 6px;
-  color: #1e4049;
-  font-weight: 250;
-  font-size: 23px;
-  // text-align: left;
+  color: #000;
+  font-weight: 245;
+  font-size: 21px;
   line-height: 33px;
+  text-shadow: 3px 4px 3px rgb(143, 143, 143);
   u {
     cursor: pointer;
   }

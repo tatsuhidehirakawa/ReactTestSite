@@ -27,18 +27,18 @@ class O_SIGNIN_A extends React.Component {
           <div className="modal_general">
             <h2 className="upper_notes"><center>Welcome to the "STGprd_devpkg" - Ver 0.3.0.0</center></h2>
             <input
-              className="signIntext"
+              className="signInid"
               // placeholder="Please input your id or email."
               value="test_id_01"
             />
             <input
-              className="signIntext"
+              className="signInpass"
               // placeholder="Please input your password."
               value="********"
             />
             <div className='A_BUTTON_A_pos'>
               <A_BUTTON_A
-                // onClick={() => (Main.jp)}
+                // onClick={()=>{this.handleClickOpen();}}
                 children ="login"
               />
             </div>
