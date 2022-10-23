@@ -5,8 +5,8 @@ const ApiFetch = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
-        // fetch('http://localhost:8080/someGet', {method: 'GET'})
+        // fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
+        fetch('/someGet')
         .then(res => res.json())
         .then(data => {
             setPosts(data)
