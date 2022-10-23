@@ -2,6 +2,9 @@ import React from 'react';
 import A_BUTTON_A from '../Lv1_atm/A_Button_a.tsx';
 // import Main from './Main.jsx';
 import './O_Signin_a.scss';
+// import DbGetParams from '../Lv1_atm/DbGetParams.jsx';
+// import ApiFetch from '../Lv1_atm/ApiFetch.js';
+
 
 // const O_SIGNIN_A = () => {
 //   const [count, setcount] = React.usestate(0);
@@ -26,6 +29,7 @@ class O_SIGNIN_A extends React.Component {
       modal = (
         // <div className="modalBack・ground">   {/* 背景をグレーアウトする処理 */}
           <div className="modal_general">
+            {/* <ApiFetch /> */}
             <h2 className="upper_notes"><center>Welcome to the "STGprd_devpkg" - Ver 0.3.0.0</center></h2>
             <input
               className="signInid"
@@ -47,6 +51,9 @@ class O_SIGNIN_A extends React.Component {
               If you have forgotten your password, please click <u>here</u>.<br/>
               If you agree to the Terms of Use and Privacy Policy please <u>login</u> .<br/>
               If you do not have an account, please <u>register</u> .<br/>
+            </div>
+            <div className='test'>
+            {/* <DbGetParams /> */}
             </div>
           </div>
         // </div>
