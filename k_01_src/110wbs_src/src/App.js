@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import O_SIGNIN_A from './components/Lv5_pgs/O_Signin_a.jsx';
-import ApiFetch from './components/Lv1_atm/ApiFetch.jsx';
+import O_SIGNIN_A from './components/Lv5_page/O_Signin_a.jsx';
+import ApiFetch from './components/Lv1_atms/ApiFetch.jsx';
 
 function App() {
   return (
