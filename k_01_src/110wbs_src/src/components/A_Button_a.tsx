@@ -5,7 +5,7 @@
 
          
 +----+----+----+----+----+----+----+--- */
-import * as React from 'react';
+import React from 'react';
 import './A_Button_a.scss';
 
 interface Props {

@@ -1,15 +1,16 @@
 import React from "react";
-import Header from "./Header";
-import Wrapper from "./Wrapper";
-import Footer from "./Footer";
+// import Header from "./Header";
+// import Wrapper from "./Wrapper";
+// import Footer from "./Footer";
 
 const Main = () => {
 //   render() {
     return (
       <>
-        <Header />
+      <p>fff</p>
+        {/* <Header />
         <Wrapper />
-        <Footer />
+        <Footer /> */}
       </>
     );
   }

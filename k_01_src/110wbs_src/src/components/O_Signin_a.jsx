@@ -1,5 +1,6 @@
 import React from 'react';
 import A_BUTTON_A from './A_Button_a.tsx';
+import Main from './Main.jsx';
 import './O_Signin_a.scss';
 
 // const O_SIGNIN_A = () => {
@@ -38,7 +39,7 @@ class O_SIGNIN_A extends React.Component {
             />
             <div className='A_BUTTON_A_pos'>
               <A_BUTTON_A
-                // onClick={()=>{this.handleClickOpen();}}
+                onClick={()=>{this.handleClickClose();}}
                 children ="login"
               />
             </div>
