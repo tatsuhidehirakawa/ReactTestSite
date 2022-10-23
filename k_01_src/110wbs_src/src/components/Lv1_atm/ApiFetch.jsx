@@ -2,14 +2,14 @@ import React, {useState, useEffect} from 'react'
 
 const ApiFetch = () => {
 
-    const [posts, setPosts] = useState([])
+    const [get, setGet] = useState([])
 
     useEffect(() => {
-        // fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
-        fetch('/someGet')
+        // fetch('https://jsonplaceholder.typicode.com/get', {method: 'GET'})
+        fetch('http://localhost:8080/someGet')
         .then(res => res.json())
         .then(data => {
-            setPosts(data)
+            setGet(data)
         })
     },[])
 
@@ -17,7 +17,7 @@ const ApiFetch = () => {
         <div>
             <ul>
                 {
-                    posts.map(post => <li key={post.id}>{post.title}</li>)
+                    get.map(post => <li key={post.id}>{post.title}</li>)
                 }
             </ul>
             
