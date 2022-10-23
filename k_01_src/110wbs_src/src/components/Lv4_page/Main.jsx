@@ -3,11 +3,11 @@ import React from "react";
 // import Wrapper from "./Wrapper";
 // import Footer from "./Footer";
 
-const Main = () => {
+const MAIN = () => {
 //   render() {
     return (
       <>
-      <p>fff</p>
+      <p>This is the "Main.jsx" TestPage.</p>
         {/* <Header />
         <Wrapper />
         <Footer /> */}
@@ -15,5 +15,5 @@ const Main = () => {
     );
   }
 // }
-export default Main;
+export default MAIN;
 
