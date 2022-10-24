@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <ApiFetch />
         <img src={logo} className="App-logo" alt="logo" />
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -24,6 +23,8 @@ function App() {
           Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
         </p>
         <O_SIGNIN_A />
+        <ApiFetch />
+
       </header>
     </div>
   );
