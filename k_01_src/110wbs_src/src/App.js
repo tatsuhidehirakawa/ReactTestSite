@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import O_SIGNIN_A from './components/Lv4_page/O_Signin_a.jsx';
-import ApiFetch from './components/Lv1_atms/ApiFetch.jsx';
+import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import Main from './components/Lv4_page/Main.jsx';
 
 function App() {
   return (
@@ -23,7 +24,15 @@ function App() {
           Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
         </p>
         <O_SIGNIN_A />
-        <ApiFetch />
+
+        <BrowserRouter>
+          <Link to='./components/Lv4_page/Main.jsx'>Main</Link>
+          <Switch>
+            <Route path="./components/Lv4_page/Main.jsx">
+              <Main />
+            </Route>
+          </Switch>
+        </BrowserRouter>
 
       </header>
     </div>
