@@ -9,7 +9,7 @@ const MAIN = () => {
       <>
       <p>This is the "Main.jsx" TestPage.</p>
         {/* <Header />
-        <Wrapper />
+        <mWrapper />
         <Footer /> */}
       </>
     );
