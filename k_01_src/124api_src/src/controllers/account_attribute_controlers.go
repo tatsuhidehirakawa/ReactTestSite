@@ -1,3 +1,14 @@
+package main
+
+import (
+	"database/sql"
+	"net/http"
+
+	_ "github.com/lib/pq"
+	"github.com/gin-gonic/gin"
+)
+
+func main() {
 
 /*--- GETのハンドラ部分を抽出 ------------------*/
 getting := func(c *gin.Context) {
@@ -69,5 +80,7 @@ deleting := func(c *gin.Context) {
 	}
 
 	c.JSON(200, "Successful deletion")
+
+}
 
 }
