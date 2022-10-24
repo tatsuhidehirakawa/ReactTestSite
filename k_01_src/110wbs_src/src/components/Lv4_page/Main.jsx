@@ -1,5 +1,5 @@
 import React from "react";
-// import ApiFetch from './components/Lv1_atms/ApiFetch.jsx';
+import ApiFetch from './components/Lv1_atms/ApiFetch.jsx';
 import './Main.scss';
 // import Header from "./Header";
 // import Wrapper from "./Wrapper";
@@ -15,7 +15,7 @@ const MAIN = () => {
         {/* <Header />
         <mWrapper />
         <Footer /> */}
-      {/* <ApiFetch /> */}
+      <ApiFetch />
       </>
     );
   }
