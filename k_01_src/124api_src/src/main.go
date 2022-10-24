@@ -102,8 +102,14 @@ func main() {
 
 	/*--------------------------------------------*/
 	// CORS レスポンスヘッダーの追加
-	c := cors.Default()
-	handler := c.Handler(mux)
+	// c := cors.Default()
+	// handler := c.Handler(mux)
+	/*--------------------------------------------*/
+	c := cors.New(cors.Options{
+		AllowedOrigins:   []string{"http://localhost:3000", "http://foo.com"},
+		AllowedMethods:   []string{http.MethodGet, http.MethodPost, http.MethodDelete},
+		AllowCredentials: true,
+	})
 	/*--------------------------------------------*/
 
 
