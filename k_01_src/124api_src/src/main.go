@@ -15,6 +15,18 @@ import (
 
 func main() {
 
+	/*--------------------------------------------*/
+	// CORS レスポンスヘッダーの追加
+	// c := cors.Default()
+	// handler := c.Handler(mux)
+	/*--------------------------------------------*/
+	// c := cors.New(cors.Options{
+	// 	AllowedOrigins:   []string{"http://localhost:3000", "http://foo.com"},
+	// 	AllowedMethods:   []string{http.MethodGet, http.MethodPost, http.MethodDelete},
+	// 	AllowCredentials: true,
+	// })
+	/*--------------------------------------------*/
+
 	// // DB(PostgreSQL)への接続処理(環境変数導入バージョン)
 	// cfg := NewConfig()
 	// dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode) // 「dsn」に結合した文字列を格納
@@ -99,19 +111,6 @@ func main() {
         c.JSON(200, "Successful deletion")
 
 	}
-
-	/*--------------------------------------------*/
-	// CORS レスポンスヘッダーの追加
-	// c := cors.Default()
-	// handler := c.Handler(mux)
-	/*--------------------------------------------*/
-	// c := cors.New(cors.Options{
-	// 	AllowedOrigins:   []string{"http://localhost:3000", "http://foo.com"},
-	// 	AllowedMethods:   []string{http.MethodGet, http.MethodPost, http.MethodDelete},
-	// 	AllowCredentials: true,
-	// })
-	/*--------------------------------------------*/
-
 
 	router := gin.Default()
 

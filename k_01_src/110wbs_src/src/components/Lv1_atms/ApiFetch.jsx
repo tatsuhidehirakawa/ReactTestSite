@@ -7,7 +7,7 @@ const ApiFetch = () => {
     useEffect(() => {
         console.log('ApiFetch.jsx: useEffect()')   // Debug.
         fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
-        // fetch('http://localhost:8080/somePost', {method: 'POST'})
+        // fetch('http://localhost:8080/somePost', {method: 'GET'})
         // fetch('http://localhost:8080/someGet', {method: 'GET'})
         .then(res => res.json())
         .then(data => {
