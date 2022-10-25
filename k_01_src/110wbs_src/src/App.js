@@ -23,7 +23,7 @@ function App() {
         <p>
           Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
         </p>
-        <O_SIGNIN_A />
+        {/* <O_SIGNIN_A /> */}
 
         <BrowserRouter>
           <Link to='./components/Lv4_page/Main.jsx'>Main</Link>

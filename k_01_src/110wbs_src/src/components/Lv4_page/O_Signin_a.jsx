@@ -63,7 +63,8 @@ class O_SIGNIN_A extends React.Component {
     return (
       <>
         <div onClick={()=>{this.handleClickOpen();}}>
-          <p className="App-link">View Package Summary</p>
+          {/* <p className="App-link">View Package Summary</p> */}
+          <p className="App-link">SignIn</p>
         </div>
         {modal}
       </>

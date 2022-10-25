@@ -1,5 +1,6 @@
 import React from "react";
-import ApiFetch from './components/Lv1_atms/ApiFetch.jsx';
+import ApiFetch from '../Lv1_atms/ApiFetch.jsx';
+import O_SIGNIN_A from './O_Signin_a.jsx';
 import './Main.scss';
 // import Header from "./Header";
 // import Wrapper from "./Wrapper";
@@ -15,7 +16,8 @@ const MAIN = () => {
         {/* <Header />
         <mWrapper />
         <Footer /> */}
-      <ApiFetch />
+        <ApiFetch />
+        <O_SIGNIN_A />
       </>
     );
   }
