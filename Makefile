@@ -8,13 +8,13 @@ chmod:
 
 #---[ 1. system boot ]-------------------------------------------------------
 
-init.dev: ## Booting only frontend devlopment containers.
+init.d: ## Booting only frontend devlopment containers.
 	@cd k_02_dev && docker compose up -d
 
-init.dev.w: ## Booting only frontend devlopment containers.
+init.d.w: ## Booting only frontend devlopment containers.
 	@cd k_02_dev && docker compose up -d 110wbs_dev
 
-init.dev.a,d: ## Booting only backend devlopment containers.
+init.d.a.d: ## Booting only backend devlopment containers.
 	# @cd k_02_dev && docker compose up 124api_dev, 134dbs_dev
 	@cd k_02_dev && docker compose up 134dbs_dev -d
 	@cd k_02_dev && docker compose up 124api_dev -d
