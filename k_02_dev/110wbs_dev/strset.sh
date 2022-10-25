@@ -15,7 +15,7 @@ mv public ..
 mv src ..
 # React installation.
 npm install -g create-react-app@latest
-npm i -S react-router-dom@5.2.0
+# npm i -S react-router-dom@5.2.0
 create-react-app . --typescript
 npm install sass@latest
 # Restore samplecodes.(If you want to see React sample page, comment out mv command.)
@@ -25,6 +25,8 @@ mv ../src/hooks ./src
 mv ../src/types ./src
 mv ../src/App.js ./src
 mv ../src/logo.svg ./src
+
+npm i -S react-router-dom@5.2.0
 
 # Make a standby state.
 yarn start
