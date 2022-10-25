@@ -2,22 +2,19 @@ import React, {useState, useEffect} from 'react'
 
 const ApiFetch = () => {
     console.log('ApiFetch.jsx: ApiFetch()')   // Debug.
-    const [get, setGet] = useState([])
+    const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        console.log('ApiFetch.jsx: useEffect()')
-        // fetch('https://jsonplaceholder.typicode.com/get', {method: 'GET'})
-        fetch('http://localhost:8080/someGet')
-
-        .then(res => {
-            console.log(res);   // Debug.
-            res.json()
-        })
+        console.log('ApiFetch.jsx: useEffect()')   // Debug.
+        fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
+        // fetch('http://localhost:8080/somePost', {method: 'POST'})
+        // fetch('http://localhost:8080/someGet', {method: 'GET'})
+        .then(res => res.json())
         .then(data => {
-            setGet(data)
+            setPosts(data)
         })
         .catch(err => {
-            console.log('ApiFetch.jsx: useEffect() err: ', err)   // Debug.
+            console.log('ApiFetch.jsx: useEffect(): err: ', err)
         });
     },[])
 
@@ -25,7 +22,7 @@ const ApiFetch = () => {
         <div>
             <ul>
                 {
-                    get.map(post => <li key={post.id}>{post.title}</li>)
+                    posts.map(post => <li key={post.id}>{post.title}</li>)
                 }
             </ul>
             
