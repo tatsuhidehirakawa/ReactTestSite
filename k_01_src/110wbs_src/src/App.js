@@ -8,10 +8,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <p>
+          {/* Edit <code>src/App.js</code> and save to reload. */}
+          Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
         </p>
-        <a
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
@@ -19,15 +20,14 @@ function App() {
         >
           Learn React
         </a> */}
-        <p>
-          Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
-        </p>
+        
         <BrowserRouter>
           <Link to='/' className='App-link'>View Package Summary</Link>
             <Route path="./components/Lv4_page/Main.jsx">
               <MAIN />
             </Route>
         </BrowserRouter>
+
       </header>
     </div>
   );
