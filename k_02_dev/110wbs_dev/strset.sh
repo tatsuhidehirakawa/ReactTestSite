@@ -15,7 +15,7 @@ mv public ..
 mv src ..
 # React installation.
 npm install -g create-react-app@latest
-# npm i react-router-dom@5.2.0
+# npm i -S react-router-dom@5.2.0
 create-react-app . --typescript
 npm install sass@latest
 # Restore samplecodes.(If you want to see React sample page, comment out mv command.)
