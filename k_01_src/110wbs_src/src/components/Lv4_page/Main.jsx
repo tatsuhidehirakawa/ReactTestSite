@@ -9,16 +9,17 @@ import './Main.scss';
 const MAIN = () => {
 //   render() {
     return (
-      <>
+      <div className="aaa">
       {/* <div onClick={()=>{this.handleClickOpen();}}> */}
         {/* <p className="App-link">View Package Summary</p> */}
       {/* </div> */}
         {/* <Header />
         <mWrapper />
         <Footer /> */}
+        <p>test test test123</p>
         <ApiFetch />
         <O_SIGNIN_A />
-      </>
+      </div>
     );
   }
 // }
