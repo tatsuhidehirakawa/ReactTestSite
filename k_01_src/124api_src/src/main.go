@@ -27,6 +27,22 @@ func main() {
 	// })
 	/*--------------------------------------------*/
 
+	
+	// cors設定の適用
+	router.Use(cors.New(cors.Config{
+		// アクセスを許可したいアクセス元
+		AllowOrigins: []string{"http://localhost:3000"},
+		// アクセスを許可したいHTTPメソッド
+		AllowMethods: []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
+		// 許可したいHTTPリクエストヘッダ
+		AllowHeaders: []string{"Access-Control-Allow-Headers", "Content-Length", "Content-Type", "Authorization"},
+		// cookieなどの認証情報を含めるか否か(通常デフォルトfalseなので合わせました)
+		AllowCredentials: false,
+		// プリフライトリクエストのキャッシュ時間
+		MaxAge: 12 * time.Hour,
+	}))
+
+
 	// // DB(PostgreSQL)への接続処理(環境変数導入バージョン)
 	// cfg := NewConfig()
 	// dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode) // 「dsn」に結合した文字列を格納
