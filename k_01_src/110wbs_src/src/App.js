@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import O_SIGNIN_A from './components/Lv4_page/O_Signin_a.jsx';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+// import O_SIGNIN_A from './components/Lv4_page/O_Signin_a.jsx';
+import { BrowserRouter, Link, Routes } from 'react-router-dom';
 import Main from './components/Lv4_page/Main.jsx';
 
 function App() {
@@ -26,12 +26,12 @@ function App() {
         {/* <O_SIGNIN_A /> */}
 
         <BrowserRouter>
+        console.log('App.js: BrowserRouter()')
           <Link to='./components/Lv4_page/Main.jsx'>Main</Link>
-          <Switch>
-            <Route path="./components/Lv4_page/Main.jsx">
+            <Routes path="./components/Lv4_page/Main.jsx">
               <Main />
-            </Route>
-          </Switch>
+              console.log('Main');
+            </Routes>
         </BrowserRouter>
 
       </header>

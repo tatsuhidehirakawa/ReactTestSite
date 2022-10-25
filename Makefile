@@ -109,3 +109,7 @@ test.e:
 
 exec:
 	@docker exec -it 134dbs_dev bash
+
+
+
+debug: ## Debug code removal
