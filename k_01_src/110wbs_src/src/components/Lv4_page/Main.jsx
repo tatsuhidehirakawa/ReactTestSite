@@ -10,9 +10,9 @@ const MAIN = () => {
 //   render() {
     return (
       <>
-      <div onClick={()=>{this.handleClickOpen();}}>
-        <p className="App-link">View Package Summary</p>
-      </div>
+      {/* <div onClick={()=>{this.handleClickOpen();}}> */}
+        {/* <p className="App-link">View Package Summary</p> */}
+      {/* </div> */}
         {/* <Header />
         <mWrapper />
         <Footer /> */}

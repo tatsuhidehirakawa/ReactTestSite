@@ -1,8 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-// import O_SIGNIN_A from './components/Lv4_page/O_Signin_a.jsx';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import Main from './components/Lv4_page/Main.jsx';
+import MAIN from './components/Lv4_page/Main.jsx';
 
 function App() {
   return (
@@ -24,9 +23,9 @@ function App() {
           Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
         </p>
         <BrowserRouter>
-          <Link to='./components/Lv4_page/Main.jsx' className='App-link'>View Package Summary</Link>
+          <Link to='/' className='App-link'>View Package Summary</Link>
             <Route path="./components/Lv4_page/Main.jsx">
-              <Main />
+              <MAIN />
             </Route>
         </BrowserRouter>
       </header>
