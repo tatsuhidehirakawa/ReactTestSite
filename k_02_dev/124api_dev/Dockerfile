@@ -19,7 +19,7 @@ CMD pkgset.sh
 # RUN go install github.com/cosmtrek/air@latest
 # RUN which air
 # RUN air init
-# RUN air
+# # RUN air
 # RUN go mod tidy
 # CMD ["nohup", "go", "run", "main.go"]
 # # CMD ["go", "run", "main.go"]

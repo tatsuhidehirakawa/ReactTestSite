@@ -17,7 +17,7 @@ echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
 go install github.com/cosmtrek/air@latest
 which air
 air init
-air
+# air
 
 # --- verification -+----+----+----+----+----+----+-- #
 go mod tidy
