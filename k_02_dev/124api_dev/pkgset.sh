@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# ----+----+----+----+----+----+---+----+----+----+-- #
 go mod init github.com/tatsuhidehirakawa/myportfolio_k
 
 # --- sqlc-+----+----+----+----+---+----+----+----+-- #
@@ -23,4 +24,4 @@ go mod tidy
 
 # --- Run -+----+---+----+----+----+----+----+----+-- #
 nohup go run main.go
-# go run main.go
+# go run main.go   # For debug. 

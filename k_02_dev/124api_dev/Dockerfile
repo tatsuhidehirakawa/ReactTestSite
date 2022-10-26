@@ -16,6 +16,10 @@ CMD pkgset.sh
 # WORKDIR /go/src
 # # RUN go get sqlc_pkg # ローカルファイルを参照するため下記の記述のみで大丈夫
 # RUN echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
+# RUN go install github.com/cosmtrek/air@latest
+# RUN which air
+# RUN air init
+# RUN air
 # RUN go mod tidy
 # CMD ["nohup", "go", "run", "main.go"]
 # # CMD ["go", "run", "main.go"]
