@@ -6,9 +6,9 @@ Paas依存の極小化
 直交性と疎結合、静的型付けとDocker利用を重視  
 
 2. Technology stack  
-Frontend: TypeScript、React.js、Sass、Html  
-Backend: Go(Gin,sqlc,Air)、PostgreSQL  
-Development environment: Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
+Frontend: TypeScript, React.js, Sass, Html  
+Backend: Go(Gin, sqlc) PostgreSQL  
+Development environment: Docker, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10  
 
 3. Boot procedure  
 Please check the Makefile, that's all.
