@@ -34,7 +34,7 @@ services:
       - ../k_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
       # - api-vol:/go/src # Activate for Dockerfile Opration.
     ports:
-      - "8080:3000"
+      - "8080:8080"
       # Port No of Host(non-overlapable):Port No of Container(overlappable)
     networks:
       - STGprd_devpkg_dev_network

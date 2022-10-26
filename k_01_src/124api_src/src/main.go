@@ -145,7 +145,7 @@ func main() {
 	// router.HEAD("/someHead", head)
 	// router.OPTIONS("/someOptions", options)
 
-	router.Run(":3000")
+	router.Run()
 }
 
 // func setCors(r *gin.Engine) {
