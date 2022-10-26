@@ -17,6 +17,9 @@ go install github.com/cosmtrek/air@latest
 which air
 air init
 
+# --- verification -+----+----+----+----+----+----+-- #
 go mod tidy
+
+# --- Run -+----+---+----+----+----+----+----+----+-- #
 nohup go run main.go
 # go run main.go

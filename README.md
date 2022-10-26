@@ -7,7 +7,7 @@ Paas依存の極小化
 
 2. Technology stack  
 Frontend: TypeScript、React.js、Sass、Html  
-Backend: Go(Gin,sqlc)、PostgreSQL  
+Backend: Go(Gin,sqlc,Air)、PostgreSQL  
 Development environment: Docker、VSCode、Git&Github、A5:SQL Mk-2、Windows10  
 
 3. Boot procedure  
