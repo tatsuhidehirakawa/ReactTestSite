@@ -1,6 +1,8 @@
 FROM golang:latest
 WORKDIR /go/src
 
+# COPY hrdset.sh /usr/local/bin
+
 #--- <Pattearn 1> ShellScript Operation.---------------------#
 COPY pkgset.sh /usr/local/bin
 CMD pkgset.sh

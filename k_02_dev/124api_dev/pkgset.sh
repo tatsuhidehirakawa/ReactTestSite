@@ -13,14 +13,15 @@ cd ../..
 echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
 
 # --- Hot-reload+----+----+----+---+----+----+----+-- #
-# go get -u github.com/cosmtrek/air
+go get -u github.com/cosmtrek/air
 go install github.com/cosmtrek/air@latest
 which air
 air init
+# air
 
 # --- verification -+----+----+----+----+----+----+-- #
 go mod tidy
-air
+
 # --- Run -+----+---+----+----+----+----+----+----+-- #
 nohup go run main.go
 # go run main.go   # For debug. 
