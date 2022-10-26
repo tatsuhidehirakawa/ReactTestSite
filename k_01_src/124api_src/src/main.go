@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	_ "github.com/lib/pq"
+	// "github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	// "github.com/tatsuhidehirakawa/myportfolio_k/k_01_src/124api_src/src/controllers"
 	"sqlc_pkg"
@@ -119,19 +120,19 @@ func main() {
 	router := gin.Default()
 
 
-	// cors設定の適用
-	router.Use(cors.New(cors.Config{
-		// アクセスを許可したいアクセス元
-		AllowOrigins: []string{"http://localhost:3000"},
-		// アクセスを許可したいHTTPメソッド
-		AllowMethods: []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
-		// 許可したいHTTPリクエストヘッダ
-		AllowHeaders: []string{"Access-Control-Allow-Headers", "Content-Length", "Content-Type", "Authorization"},
-		// cookieなどの認証情報を含めるか否か(通常デフォルトfalseなので合わせました)
-		AllowCredentials: false,
-		// プリフライトリクエストのキャッシュ時間
-		MaxAge: 12 * time.Hour,
-	}))
+	// // cors設定の適用
+	// router.Use(cors.New(cors.Config{
+	// 	// アクセスを許可したいアクセス元
+	// 	AllowOrigins: []string{"http://localhost:3000"},
+	// 	// アクセスを許可したいHTTPメソッド
+	// 	AllowMethods: []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
+	// 	// 許可したいHTTPリクエストヘッダ
+	// 	AllowHeaders: []string{"Access-Control-Allow-Headers", "Content-Length", "Content-Type", "Authorization"},
+	// 	// cookieなどの認証情報を含めるか否か(通常デフォルトfalseなので合わせました)
+	// 	AllowCredentials: false,
+	// 	// プリフライトリクエストのキャッシュ時間
+	// 	MaxAge: 12 * time.Hour,
+	// }))
 
 
 	router.GET("/someGet", getting)
@@ -145,3 +146,14 @@ func main() {
 
 	router.Run()
 }
+
+// func setCors(r *gin.Engine) {
+// 	r.Use(cors.New(cors.Config{
+// 		AllowOrigins:     []string{"http://localhost:3000"},
+// 		AllowMethods:     []string{"PUT", "PATCH"},
+// 		AllowHeaders:     []string{"Content-Type"},
+// 		ExposeHeaders:    []string{"Content-Length"},
+// 		AllowCredentials: true,
+// 		MaxAge:           12 * time.Hour,
+// 	}))
+// }
