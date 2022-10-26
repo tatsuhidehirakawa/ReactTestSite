@@ -10,7 +10,7 @@ cd ../..
 # go get sqlc_pkg
 echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
 # Hot-reload
-go get -u github.com/cosmtrek/air
+# go get -u github.com/cosmtrek/air
 # go install github.com/cosmtrek/air@latest
 go mod tidy
 nohup go run main.go

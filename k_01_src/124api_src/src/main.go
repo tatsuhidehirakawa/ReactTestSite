@@ -10,7 +10,7 @@ import (
 	_ "github.com/lib/pq"
 	// "github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/cosmtrek/air"   // Hot-reload
+	// "github.com/cosmtrek/air"   // Hot-reload
 	// "github.com/tatsuhidehirakawa/myportfolio_k/k_01_src/124api_src/src/controllers"
 	"sqlc_pkg"
 )
