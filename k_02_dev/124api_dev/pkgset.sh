@@ -17,11 +17,10 @@ echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
 go install github.com/cosmtrek/air@latest
 which air
 air init
-nohup air
 
 # --- verification -+----+----+----+----+----+----+-- #
 go mod tidy
-
+air
 # --- Run -+----+---+----+----+----+----+----+----+-- #
 nohup go run main.go
 # go run main.go   # For debug. 
