@@ -8,7 +8,7 @@ Paas依存の極小化
 2. Technology stack  
 Frontend: TypeScript, React.js, Sass, Html  
 Backend: Go(Gin, sqlc) PostgreSQL  
-Development environment: Docker, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10  
+Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10  
 
 3. Boot procedure  
 Please check the Makefile, that's all.
