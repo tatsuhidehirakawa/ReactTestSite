@@ -12,7 +12,7 @@ services:
     # working_dir: /usr/src/app/110wbs_dev
     working_dir: /usr/src/app
     environment:
-      - CHOKIDAR_USEPOLLING=true # Hotreload
+      - CHOKIDAR_USEPOLLING=true # Hot-reload
     ports:
       - "3000:3000"
     # command: sh -c "./110wbs_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
