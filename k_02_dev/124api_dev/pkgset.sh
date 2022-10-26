@@ -1,17 +1,22 @@
 #!/bin/bash
 
 go mod init github.com/tatsuhidehirakawa/myportfolio_k
+
+# --- sqlc-+----+----+----+----+---+----+----+----+-- #
 go get github.com/kyleconroy/sqlc/cmd/sqlc
 go install github.com/kyleconroy/sqlc/cmd/sqlc
 sqlc generate --file sqlc/sqlc.yaml
 cd sqlc/build_sqlc
 go mod init sqlc_pkg
 cd ../..
-# go get sqlc_pkg
 echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
-# Hot-reload
+
+# --- Hot-reload+----+----+----+---+----+----+----+-- #
 # go get -u github.com/cosmtrek/air
-# go install github.com/cosmtrek/air@latest
+go install github.com/cosmtrek/air@latest
+which air
+air init
+
 go mod tidy
 nohup go run main.go
 # go run main.go
