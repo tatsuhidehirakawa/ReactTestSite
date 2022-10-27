@@ -2,8 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import MAIN from './components/Lv4_page/Main.jsx';
-
-import ApiFetch from './components/Lv1_atms/ApiFetch.jsx';   //
+import ApiFetch from './components/Lv1_atms/ApiFetch.jsx';
 
 function App() {
   return (
@@ -22,13 +21,13 @@ function App() {
         >
           Learn React
         </a> */}
+
         <BrowserRouter>
-          <Link to='/' className='App-link'>View Package Summary</Link>
+          <Link to='/ViewPackageSummary' className='App-link'>View Package Summary</Link>
             <Route path="./components/Lv4_page/Main.jsx">
               <MAIN />
             </Route>
         </BrowserRouter>
-
 
       </header>
       <ApiFetch />
