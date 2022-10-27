@@ -3,16 +3,19 @@ package main
 import (
 	"context"
 	"database/sql"
+	"time"
+
 	// "fmt"
 	"log"
 	"net/http"
 
-	_ "github.com/lib/pq"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	_ "github.com/lib/pq"
+
 	// "github.com/cosmtrek/air"   // Hot-reload
 	// "github.com/tatsuhidehirakawa/myportfolio_k/k_01_src/124api_src/src/controllers"
-	"sqlc_pkg"
+	build_sqlc "sqlc_pkg"
 )
 
 func main() {
@@ -20,9 +23,9 @@ func main() {
 	// // DB(PostgreSQL)への接続処理(環境変数導入バージョン)
 	// cfg := NewConfig()
 	// dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode) // 「dsn」に結合した文字列を格納
- 	// db, err := sql.Open("postgres", dsn)
+	// db, err := sql.Open("postgres", dsn)
 
- 	db, err := sql.Open("postgres", "host=134dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
+	db, err := sql.Open("postgres", "host=134dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
 
 	// DB接続時の例外処理
 	if err != nil {
@@ -34,11 +37,11 @@ func main() {
 
 		queries := build_sqlc.New(db)
 		accountAttribute, err := queries.ListAccount_attribute(context.TODO())
-	
+
 		if err != nil {
 			log.Fatal(err)
 		}
-	
+
 		c.JSON(200, accountAttribute)
 	}
 
@@ -60,7 +63,7 @@ func main() {
 			c.JSON(http.StatusOK, gin.H{
 				"status": "OK",
 			})
-			} else {
+		} else {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"status": "NG",
 				"detail": err.Error(),
@@ -98,16 +101,16 @@ func main() {
 			log.Fatal(err)
 		}
 
-        c.JSON(200, "Successful deletion")
+		c.JSON(200, "Successful deletion")
 
 	}
 
 	router := gin.Default()
 
 	// Access Allowance
-	func setCors(r *gin.Engine) {
+	setCors := func(r *gin.Engine) {
 		r.Use(cors.New(cors.Config{
-			AllowOrigins:     []string{"*"},   // or host.docker.internal, or 110wbs_dev
+			AllowOrigins:     []string{"*"}, // or host.docker.internal, or 110wbs_dev
 			AllowMethods:     []string{http.MethodPut, http.MethodPatch},
 			AllowHeaders:     []string{"Content-Type"},
 			ExposeHeaders:    []string{"Content-Length"},
