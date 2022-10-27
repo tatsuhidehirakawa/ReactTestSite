@@ -9,7 +9,7 @@ const ApiFetch = () => {
         // fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
         // fetch('http://localhost:8080/somePost', {method: 'GET'})
         // fetch('http://host.docker.internal:8080/somePost', {method: 'GET'})
-        fetch('http://localhost:8080/someGet', {method: 'GET'})
+        fetch('http://host.docker.internal:8080/someGet', {method: 'GET'})
         .then(res => res.json())
         .then(data => {
             setPosts(data)
