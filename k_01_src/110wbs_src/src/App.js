@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import MAIN from './components/Lv4_page/Main.jsx';
-import ApiFetch from './components/Lv1_atms/ApiFetch.jsx';
+import Page404 from './components/Lv4_page/Page404.tsx';
+import ApiFetch from './hooks/ApiFetch.jsx';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           <Link to='/ViewPackageSummary' className='App-link'>View Package Summary</Link>
             <Route path="./components/Lv4_page/Main.jsx">
               <MAIN />
+            </Route>
+            <Route path="*S">
+              <Page404 />
             </Route>
         </BrowserRouter>
 
