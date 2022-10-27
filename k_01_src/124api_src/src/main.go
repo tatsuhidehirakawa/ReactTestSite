@@ -116,6 +116,7 @@ func main() {
 		}))
 	}
 
+	setCors(router)
 	router.GET("/someGet", getting)
 	router.POST("/somePost", posting)
 	router.PUT("/somePut", putting)
