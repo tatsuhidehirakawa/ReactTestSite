@@ -8,7 +8,7 @@ import (
 	"net/http"
 
 	_ "github.com/lib/pq"
-	// "github.com/gin-contrib/cors"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	// "github.com/cosmtrek/air"   // Hot-reload
 	// "github.com/tatsuhidehirakawa/myportfolio_k/k_01_src/124api_src/src/controllers"
@@ -16,22 +16,6 @@ import (
 )
 
 func main() {
-
-	/*--------------------------------------------*/
-	// CORS レスポンスヘッダーの追加
-	// c := cors.Default()
-	// handler := c.Handler(mux)
-	/*--------------------------------------------*/
-	// c := cors.New(cors.Options{
-	// 	AllowedOrigins:   []string{"http://localhost:3000", "http://foo.com"},
-	// 	AllowedMethods:   []string{http.MethodGet, http.MethodPost, http.MethodDelete},
-	// 	AllowCredentials: true,
-	// })
-	/*--------------------------------------------*/
-
-	
-
-
 
 	// // DB(PostgreSQL)への接続処理(環境変数導入バージョン)
 	// cfg := NewConfig()
@@ -120,21 +104,17 @@ func main() {
 
 	router := gin.Default()
 
-
-	// // cors設定の適用
-	// router.Use(cors.New(cors.Config{
-	// 	// アクセスを許可したいアクセス元
-	// 	AllowOrigins: []string{"http://localhost:3000"},
-	// 	// アクセスを許可したいHTTPメソッド
-	// 	AllowMethods: []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
-	// 	// 許可したいHTTPリクエストヘッダ
-	// 	AllowHeaders: []string{"Access-Control-Allow-Headers", "Content-Length", "Content-Type", "Authorization"},
-	// 	// cookieなどの認証情報を含めるか否か(通常デフォルトfalseなので合わせました)
-	// 	AllowCredentials: false,
-	// 	// プリフライトリクエストのキャッシュ時間
-	// 	MaxAge: 12 * time.Hour,
-	// }))
-
+	// Access Allowance
+	func setCors(r *gin.Engine) {
+		r.Use(cors.New(cors.Config{
+			AllowOrigins:     []string{"*"},   // or host.docker.internal, or 110wbs_dev
+			AllowMethods:     []string{http.MethodPut, http.MethodPatch},
+			AllowHeaders:     []string{"Content-Type"},
+			ExposeHeaders:    []string{"Content-Length"},
+			AllowCredentials: true,
+			MaxAge:           12 * time.Hour,
+		}))
+	}
 
 	router.GET("/someGet", getting)
 	router.POST("/somePost", posting)
@@ -147,14 +127,3 @@ func main() {
 
 	router.Run()
 }
-
-// func setCors(r *gin.Engine) {
-// 	r.Use(cors.New(cors.Config{
-// 		AllowOrigins:     []string{"http://localhost:3000"},
-// 		AllowMethods:     []string{"PUT", "PATCH"},
-// 		AllowHeaders:     []string{"Content-Type"},
-// 		ExposeHeaders:    []string{"Content-Length"},
-// 		AllowCredentials: true,
-// 		MaxAge:           12 * time.Hour,
-// 	}))
-// }
