@@ -16,7 +16,6 @@ const MAIN = () => {
         {/* <Header />
         <mWrapper />
         <Footer /> */}
-        <p>test test test123</p>
         <ApiFetch />
         <O_SIGNIN_A />
       </div>
