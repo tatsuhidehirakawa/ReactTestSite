@@ -39,6 +39,11 @@ init.all: ## Initialize and booting all containers and services.
 # 	@docker compose up 214api_dev, 314dbs_dev
 # 	# @docker compose up 114wbs_dev
 
+#---[ 3. Tst env boot ]------------------------------------------------
+boot.api:
+	docker build -f k_03_tst/120api_tst/Dockerfile -t 120api_tst k_01_src/124api_src/src
+	docker compose up -d 120api_tst
+
 #---[ 3. DB backup and restore ]------------------------------------------------
 
 pg_dump: ## Dump db backupfile to local.(cf."meke pg_dump container_name=134dbs_dev")

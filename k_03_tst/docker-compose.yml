@@ -30,7 +30,6 @@ services:
       - api-vol:/go/src
     ports:
       - "8081:8080"
-      # Port No of Host(non-overlapable):Port No of Container(overlappable)
     # networks:
     #   - STGprd_devpkg_tst_network
     # depends_on:

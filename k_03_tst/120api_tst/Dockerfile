@@ -6,7 +6,7 @@ WORKDIR /go/src
 # RUN ./srccpy.sh
 
 # COPY k_01_src/124api_src/src /go/src
-COPY ./src /go/src
+# COPY ./src /go/src
 # COPY ../../k_01_src/124api_src/src /go/src
 # go buildでバイナリだけ作成する
 RUN go build -v -o server
