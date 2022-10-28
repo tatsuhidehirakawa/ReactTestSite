@@ -30,38 +30,36 @@ services:
       - api-vol:/go/src
     ports:
       - "8081:8080"
-    # networks:
-    #   - STGprd_devpkg_tst_network
-    # depends_on:
-    #   - 130dbs_tst
-
-# #---130dbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-#   130dbs_tst:
-#     container_name: 130dbs_tst
-#     # image: postgres:14
-#     build: ./130dbs_tst
-#     # working_dir: /usr/src/dbstore
-#     ports:
-#       - 5433:5432
-#     volumes:
-#       - dbs-vol:/var/lib/postgresql/data
-#       - ../k_03_tst/130dbs_tst/:/usr/src/dbstore
-#     environment:
-#         POSTGRES_PASSWORD: ${PGSQL_PW}
-#     command: sh -c `pg_restore.sh 130dbs_tst`
-#     # networks:
-#     #   - STGprd_devpkg_tst_network
+    networks:
+      - STGprd_devpkg_tst_network
+    depends_on:
+      - 130dbs_tst
 
 #---130dbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  130dbs_tst:
+    container_name: 130dbs_tst
+    # image: postgres:14
+    build: ./130dbs_tst
+    # working_dir: /usr/src/dbstore
+    ports:
+      - 5433:5432
+    volumes:
+      - dbs-vol:/var/lib/postgresql/data
+      - ../k_03_tst/130dbs_tst/:/usr/src/dbstore
+    environment:
+        POSTGRES_PASSWORD: ${PGSQL_PW}
+    # command: sh -c `pg_restore.sh 130dbs_tst`
+    networks:
+      - STGprd_devpkg_tst_network
+
 volumes:
   # wbs-vol:
   api-vol:
-  # dbs-vol:
+  dbs-vol:
 
-#---k_214aps_tst-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-# networks:
-#   STGprd_devpkg_dev_network:
-#     driver: bridge
+networks:
+  STGprd_devpkg_tst_network:
+    driver: bridge
 
 #---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 # db-storeが生成されるような行為を行うときには「.sql」ファイルを
