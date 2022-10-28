@@ -42,10 +42,11 @@ init.all: ## Initialize and booting all containers and services.
 #---[ 3. Tst env boot ]------------------------------------------------
 boot.api.a:
 	docker build -f k_03_tst/120api_tst/Dockerfile -t 120api_tst k_01_src/124api_src/src
-	docker compose up -d 120api_tst
+	cd k_03_tst && docker compose up 120api_tst
 
 boot.api.b:
-	cp k_01_src/124api_src/src k_03_tst/120api_tst
+	cp -r k_01_src/124api_src/src k_03_tst/120api_tst
+	cd k_03_tst && docker compose up 120api_tst
 
 #---[ 3. DB backup and restore ]------------------------------------------------
 
