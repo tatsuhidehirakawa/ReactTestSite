@@ -1,17 +1,22 @@
 import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import MAIN from  './components/Lv4_page/Main.jsx'
+import App from './App.js'
+import MAIN from './components/page/Main.jsx'
+import UserGuide from  './components/page/UserGuide.jsx'
 
 const Pager = () => {
     return (
 
      <BrowserRouter>
-        <Link to="/ViewPackageSummary" className="App-link">
+        <Link to="/" className="App-link">
           View Package Summary
         </Link>
         <Routes>
-          <Route path="/ViewPackageSummary" element={<MAIN />} />
-          <Route path="*">{/* <Page404 /> */}</Route>
+          <Route path={`/`} element={<MAIN />} />
+          {/* <Route path={`/main`} element={<MAIN />} /> */}
+          <Route path={`/UserGuide/`} element={<UserGuide />} />
+          {/* <Route path={`/Page404/`} element={<Page404 />} /> */}
+          {/* <Route path="*"><Page404 /></Route> */}
         </Routes>
       </BrowserRouter>
     );
