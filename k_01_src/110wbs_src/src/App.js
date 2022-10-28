@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Pages from './Pages.jsx';
+import Pager from './Pager.jsx';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a> */}
-        <Pages />
+        <Pager />
       </header>
     </div>
   );

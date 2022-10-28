@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import MAIN from  './components/Lv4_page/Main.jsx'
 
-const Pages = () => {
+const Pager = () => {
     return (
 
      <BrowserRouter>
@@ -17,4 +17,4 @@ const Pages = () => {
     );
 }
 
-export default Pages;
+export default Pager;
