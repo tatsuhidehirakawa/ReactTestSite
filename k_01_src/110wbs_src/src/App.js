@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import MAIN from './components/Lv4_page/Main.jsx';
 // import Page404 from './components/Lv4_page/Page404.tsx';
 import ApiFetch from './hooks/ApiFetch.jsx';
@@ -24,13 +24,13 @@ function App() {
         </a> */}
 
         <BrowserRouter>
-          <Link to='/ViewPackageSummary' className='App-link'>View Package Summary</Link>
-            <Route path="./components/Lv4_page/Main.jsx">
-              <MAIN />
-            </Route>
-            <Route path="*">
-              {/* <Page404 /> */}
-            </Route>
+          <Link to="/ViewPackageSummary" className="App-link">
+            View Package Summary
+          </Link>
+          <Routes>
+            <Route path="/ViewPackageSummary" element={<MAIN />} />
+            <Route path="*">{/* <Page404 /> */}</Route>
+          </Routes>
         </BrowserRouter>
 
       </header>

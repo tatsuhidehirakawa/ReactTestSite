@@ -25,7 +25,7 @@ mv ../src/types ./src
 mv ../src/App.js ./src
 mv ../src/logo.svg ./src
 # react-router-dom installation.
-npm i -S react-router-dom@5.2.0
+npm i -S react-router-dom@6.4.2
 # Make a standby state.
 yarn start
 
