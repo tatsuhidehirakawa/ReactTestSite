@@ -1,9 +1,9 @@
 # 1ステージ目
 # go入りのイメージを使う
 FROM golang:1.18.0-buster as builder
-WORKDIR /app
+WORKDIR /go/src
 
-COPY . .
+COPY k_01_src/124api_src/src /go/src
 # go buildでバイナリだけ作成する
 RUN go build -v -o server
 
