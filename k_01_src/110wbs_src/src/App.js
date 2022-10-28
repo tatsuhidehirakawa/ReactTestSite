@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Routs from './Routs.jsx';
+import Pages from './Pages.jsx';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a> */}
-        <Routs />
+        <Pages />
       </header>
     </div>
   );
