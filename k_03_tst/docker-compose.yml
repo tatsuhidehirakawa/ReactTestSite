@@ -29,7 +29,7 @@ services:
       - ../k_01_src/124api_src/src:/go/src
       - api-vol:/go/src
     ports:
-      - "8081:8080"
+      - "8080:8080"
     networks:
       - STGprd_devpkg_tst_network
     depends_on:
@@ -42,7 +42,7 @@ services:
     build: ./130dbs_tst
     # working_dir: /usr/src/dbstore
     ports:
-      - 5433:5432
+      - 5432:5432
     volumes:
       - dbs-vol:/var/lib/postgresql/data
       - ../k_03_tst/130dbs_tst/:/usr/src/dbstore
