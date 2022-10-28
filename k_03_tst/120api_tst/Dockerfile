@@ -3,7 +3,8 @@
 FROM golang:1.18.0-buster as builder
 WORKDIR /go/src
 
-COPY k_01_src/124api_src/src /go/src
+# COPY k_01_src/124api_src/src /go/src
+COPY ../../k_01_src/124api_src/src /go/src
 # go buildでバイナリだけ作成する
 RUN go build -v -o server
 
