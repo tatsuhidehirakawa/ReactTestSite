@@ -1,12 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import App from './App.js'
-import MAIN from './components/page/Main.jsx'
-import UserGuide from  './components/page/UserGuide.jsx'
+// import App from './App.js'
+import MAIN from './components/Lv4_page/Main.jsx'
+import UserGuide from  './components/Lv4_page/UserGuide.jsx'
 
 const Pager = () => {
     return (
-
      <BrowserRouter>
         <Link to="/" className="App-link">
           View Package Summary

@@ -10,7 +10,7 @@ import "./UserGuide.scss"
 const UserGuide = () => {
   return (
     <>
-      <img src="hiyoko.svg" className="icon-beginner" />
+      {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
       <p className="userGuide_text">ご利用ガイド</p>
     </>
   )
