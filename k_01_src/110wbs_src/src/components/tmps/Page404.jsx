@@ -5,15 +5,14 @@
 
 ----+----+----+----+----+----+----+----+----+----+---*/
 import React from "react"
-import "./UserGuide.scss"
+import "./Page404.scss"
 
-const UserGuide = () => {
+const Page404 = () => {
   return (
-    <>
+    <div className="bbb">
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="userGuide_text">ご利用ガイド</p>
-    </>
+      <p className="userGuide_text_a">404 Page not found...</p>
+    </div>
   )
 }
-
-export default UserGuide;
+export default Page404;

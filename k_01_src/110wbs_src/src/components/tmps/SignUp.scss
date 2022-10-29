@@ -1,20 +1,20 @@
 
-@import "./Management.scss";    // 全体管理用scssファイルを読み込み
+// @import "./Management.scss";    // 全体管理用scssファイルを読み込み
 
 
 
 /* ヘッダーにおける表示位置調節用--------------- */
 .SignUpText {
-  @include tx-btn;
+  // @include tx-btn;
   float:right;
   margin: 6px 0px 0px 8px;   // 位置合わせ
   border-radius: 22px;
 }
 
 /* 展開したモーダル用------------------------- */
-.modalBackground {
-  @include std_modal_bkgnd;
-}
+// .modalBackground {
+//   @include std_modal_bkgnd;
+// }
 
 .signup-modal-inner {
   position: absolute;
@@ -88,7 +88,7 @@
 }
 
 .modal-tx-btn {
-  @include tx-btn ;
+  // @include tx-btn ;
   margin:20px 0px 0px 660px ; //ログインボタンの位置合わせ。もっと綺麗に描けない？
   border-radius: 22px;
 }

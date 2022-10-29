@@ -1,6 +1,7 @@
 import React from "react";
 import ApiFetch from '../../hooks/ApiFetch.jsx';
-import O_SIGNIN_A from './O_Signin_a.jsx';
+import O_SIGNIN_A from '../page/O_Signin_a.jsx';
+import Pager from '../../Pager.jsx';
 import './Main.scss';
 // import Header from "./Header";
 // import Wrapper from "./Wrapper";
@@ -16,6 +17,7 @@ const MAIN = () => {
         {/* <Header />
         <mWrapper />
         <Footer /> */}
+        <Pager />
         <ApiFetch />
         <O_SIGNIN_A />
       </div>
