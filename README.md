@@ -6,7 +6,7 @@ Paas依存の極小化
 直交性と疎結合、静的型付けとDocker利用を重視  
 
 2. Technology stack  
-Frontend: TypeScript, React.js, Sass、Html, Atomicdesign.  
+Frontend: TypeScript, React.js, Sass, Html, AtomicDesign.  
 Backend: Go(Gin,sqlc), PostgreSQL.  
 Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10, macOS Monterey.  
 
