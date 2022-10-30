@@ -16,7 +16,7 @@ const Pager = () => {
     <BrowserRouter>
       {/* <Link to="/App" className="App-link">View Package Summary</Link> */}
       <Link to="/" className="App-link">View Package Summary</Link>
-      <Link to="/Main" className="App-link">Main</Link>
+      {/* <Link to="/Main" className="App-link">Main</Link> */}
       <Link to="/Products" className="App-link">Products</Link>
       <Link to="UserGuide" className="App-link">UserGuide</Link>
       {/* <Link to="/Agreement" className="App-link">Agreement</Link>
@@ -25,7 +25,8 @@ const Pager = () => {
       <Link to="/ContactUs" className="App-link">ContactUs</Link>
       <Link to="/Company" className="App-link">Company</Link>
       <Routes>
-        <Route path={`/Main`} element={<Main />} />
+        <Route path={`/`} element={<Main>Product</Main>} />
+        {/* <Route path={`/Main`} element={<Main />} /> */}
         <Route path={`/Products/`} element={<Products />} />
         <Route path={`/UserGuide/`} element={<UserGuide />} />
         {/* <Route path={`/Agreement/`} element={<Agreement />} />
