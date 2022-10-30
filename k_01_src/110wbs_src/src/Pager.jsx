@@ -39,3 +39,46 @@ const Pager = () => {
   );
 }
 export default Pager;
+
+// <Route path="/" element={<Main>landingcomp</App>}>
+
+// <Route path="/main" element={<Main>product</Main>}>
+// <Route path="/other" element={<Main>other</Main>}></Route>
+
+
+// const Layout =({children})=>{
+// return(
+// <header/>
+// {children}
+// <footer/>
+// )
+// }
+
+// const Page1=()=>{
+// <Layout>
+// 1
+// </Layout>
+// }
+// const Page2=()=>{
+// <Layout>
+// 2
+// </Layout>
+// }
+
+// <Layout children={1}/>
+
+
+// const Page1=()=>{
+// <Layout>
+// {loading ? "loading" : 1}
+// </Layout>
+// }
+// シングルカラムレイアウト
+
+// const Layout =({header,children})=>{
+// return(
+// {header}
+// {children}
+// <footer/>
+// )
+// }
