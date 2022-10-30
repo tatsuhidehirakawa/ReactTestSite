@@ -10,7 +10,7 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/gin-gonic/gin"
 	// "github.com/tatsuhidehirakawa/myportfolio_k/k_01_src/124api_src/src/controllers"
-	"sqlc_pkg"
+	"github.com/tatsuhidehirakawa/myportfolio_k/sqlc/build_sqlc"
 )
 
 func main() {
