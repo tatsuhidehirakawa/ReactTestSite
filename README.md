@@ -6,9 +6,9 @@ Paas依存の極小化
 直交性と疎結合、静的型付けとDocker利用を重視  
 
 2. Technology stack  
-Frontend: TypeScript, React.js, Sass, Html  
-Backend: Go(Gin, sqlc), PostgreSQL  
-Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10  
+Frontend: TypeScript, React.js, Sass、Html, Atomicdesign.  
+Backend: Go(Gin,sqlc), PostgreSQL.  
+Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10, macOS Monterey.  
 
 3. Boot procedure  
 Please check the Makefile, that's all.  
@@ -71,7 +71,12 @@ myportfolio_k
 ```
 
 8. Task list  
-
+- [x] [#2785](k_01_src/124api_src/src/main.go) : Add "post" method on "main.go".  
+- [ ] [#7236](k_01_src/124api_src/src/main.go) : Add "delete" method on "main.go".  
+- [ ] [#9832](k_01_src/124api_src/src/main.go) : Add "put" method on "main.go".  
+- [ ] [#5982](k_01_src/124api_src/src/main.go) : Add "Environment variable" on "main.go".  
+- [ ] [#8246](k_01_src/124api_src/src/main.go) : Add "Authentication mechanism" on "API".  
+- [ ] [#3256](k_03_tst/120api_tst/Dockerfile) : Add test environment on "k_03_tst".(Use multistage build.)  
 
 <!--
 使いやすさを優先せず、１０年後でも理解できるコードを！

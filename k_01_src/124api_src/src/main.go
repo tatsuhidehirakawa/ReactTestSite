@@ -15,7 +15,7 @@ import (
 
 	// "github.com/cosmtrek/air"   // Hot-reload
 	// "github.com/tatsuhidehirakawa/myportfolio_k/k_01_src/124api_src/src/controllers"
-	build_sqlc "sqlc_pkg"
+	"github.com/tatsuhidehirakawa/myportfolio_k/sqlc/build_sqlc"
 )
 
 func main() {
@@ -104,6 +104,8 @@ func main() {
 		c.JSON(200, "Successful deletion")
 
 	}
+
+	// /*--------------------------------------------*/
 
 	router := gin.Default()
 

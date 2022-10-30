@@ -20,24 +20,20 @@ services:
 #       - STGprd_devpkg_tst_network
 #     # platform: linux/x86_64
 
-# #---124api_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-#   124api_tst:
-#     container_name: 124api_tst
-#     # build:
-#     #   context: ../k_01_src/124api_src/src
-#     #   dockerfile: ../../../k_03_tst/124api_tst/Dockerfile
-#     build: ./124api_tst
-#     tty: true
-#     volumes:
-#       # - ../k_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
-#       - api-vol:/go/src # Activate for Dockerfile Opration.
-#     ports:
-#       - "8080:8080"
-#       # Port No of Host(non-overlapable):Port No of Container(overlappable)
-#     networks:
-#       - STGprd_devpkg_tst_network
-#     depends_on:
-#       - 130dbs_tst
+#---120api_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  120api_tst:
+    container_name: 120api_tst
+    build: ./120api_tst
+    tty: true
+    volumes:
+      - ../k_01_src/124api_src/src:/go/src
+      - api-vol:/go/src
+    ports:
+      - "8080:8080"
+    networks:
+      - STGprd_devpkg_tst_network
+    depends_on:
+      - 130dbs_tst
 
 #---130dbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   130dbs_tst:
@@ -46,26 +42,24 @@ services:
     build: ./130dbs_tst
     # working_dir: /usr/src/dbstore
     ports:
-      - 5433:5432
+      - 5432:5432
     volumes:
       - dbs-vol:/var/lib/postgresql/data
       - ../k_03_tst/130dbs_tst/:/usr/src/dbstore
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
-    command: sh -c `pg_restore.sh 130dbs_tst`
-    # networks:
-    #   - STGprd_devpkg_tst_network
+    # command: sh -c `pg_restore.sh 130dbs_tst`
+    networks:
+      - STGprd_devpkg_tst_network
 
-#---130dbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   # wbs-vol:
-  # api-vol:
+  api-vol:
   dbs-vol:
 
-#---k_214aps_tst-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-# networks:
-#   STGprd_devpkg_dev_network:
-#     driver: bridge
+networks:
+  STGprd_devpkg_tst_network:
+    driver: bridge
 
 #---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 # db-storeが生成されるような行為を行うときには「.sql」ファイルを

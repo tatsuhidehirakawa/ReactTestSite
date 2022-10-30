@@ -8,13 +8,13 @@ chmod:
 
 #---[ 1. system boot ]-------------------------------------------------------
 
-init.d: ## Booting only frontend devlopment containers.
-	@cd k_02_dev && docker compose up
+init.dev: ## Booting only frontend devlopment containers.
+	@cd k_02_dev && docker compose up -d
 
-init.d.w: ## Booting only frontend devlopment containers.
+init.dev.f: ## Booting only frontend devlopment containers.
 	@cd k_02_dev && docker compose up -d 110wbs_dev
 
-init.d.a.d: ## Booting only backend devlopment containers.
+init.dev.b: ## Booting only backend devlopment containers.
 	# @cd k_02_dev && docker compose up 124api_dev, 134dbs_dev
 	@cd k_02_dev && docker compose up 134dbs_dev -d
 	@cd k_02_dev && docker compose up 124api_dev -d
@@ -56,10 +56,26 @@ pg_dump: ## Dump db backupfile to local.(cf."meke pg_dump container_name=134dbs_
 pg_restore: ## Restore by local file.(cf."make pg_restore container_name=130dbs_tst file_name=sample.sql")
 	@docker exec -it "$(container_name)" /usr/src/dbstore/pg_restore.sh "$(file_name)" bash
 
-#---[ 4. Hot-reload ]-------------------------------------------------------------
+#---[ 4. Repository build and destroy ]---------------------------------------------
 
-air:
-	docker exec -it 124api_dev air bash
+destroy: ## Destroy all Docker image, container and caches.  
+	@docker container ls -a
+	@docker system df
+	docker stop `docker ps -q`
+	@docker system prune --volumes -f
+	@docker container prune -f
+	@docker image prune -a -f
+	@docker builder prune -f
+	@docker images -a -f
+	@docker container ls -a
+	@docker system df
+
+clean:
+	@git clean -df .
+	@cd k_01_src && cd 110wbs_src && rm -R node_modules
+
+destroy.w: ## (For Windows!)Destroy all Docker image, container and caches.  
+	@docker container ls -a; docker system df; docker stop $(docker ps -q); docker system prune --volumes -f; docker container prune -f; docker image prune -a -f; docker builder prune -f; docker images -a -f; docker container ls -a; docker system df
 
 #---[ 5. Validation ]----------------------------------------------------------------
 
@@ -122,7 +138,3 @@ test.e:
 
 exec:
 	@docker exec -it 134dbs_dev bash
-
-
-
-debug: ## Debug code removal
