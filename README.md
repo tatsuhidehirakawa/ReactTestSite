@@ -1,9 +1,6 @@
 ## Personal Development Practice Repository (use STGPRD environment)
 1. Overview  
-RESTfulを意識  
-CSS-in-JS非採用  
-Paas依存の極小化  
-直交性と疎結合、静的型付けとDocker利用を重視  
+It is a full-stack package for web development, focusing on the technology stack presented in the next chapter. It is optimized primarily as a template for creating large-scale CtoC sites. In particular, it is RESTful, does not use CSS-in-JS, minimizes Paas dependencies, emphasizes orthogonality and loose coupling, static typing, and Docker usage.  
 
 2. Technology stack  
 Frontend: TypeScript, React.js, Sass, Html, AtomicDesign.  
@@ -13,18 +10,21 @@ Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:S
 3. Boot procedure  
 Please check the Makefile, that's all.  
 
-4. Branch names  
+4. (Warning) Handling of Version Control Files
+This package does not include the version control files "package.json", "go.mod", and "go.sum". If you use this package, please prepare these files by yourself. Refer to "Makefile" for information on how to apply the version control files.  
+
+5. Branch names  
 master -> Existing version.  
 hotfix-100622 -> API server sorce code development.  
 <!-- develop -> Next Version.  -->
 <!-- release-*  -->
 <!-- hotfix-100622 -->
 
-5. Considerations  
+6. Considerations  
 (1)改行文字の制御に「.gitattributes」を使用  
 (2)  
 
-6. Server configuration diagram (overall)  
+7. Server configuration diagram (overall)  
 ```
 REST(ULCODC$SS)_Architecture
 +--------------+  +---------------------------------------------------+
@@ -59,7 +59,7 @@ REST(ULCODC$SS)_Architecture
 |              |  |          +-----------+              +-----------+ |
 +--------------+  +---------------------------------------------------+
 ```
-7. Directory structure diagram (overall/excerpt)  
+8. Directory structure diagram (overall/excerpt)  
 ```
 myportfolio_k
   ├─k_01_src            # Source codes.
@@ -70,7 +70,7 @@ myportfolio_k
   └─README.md
 ```
 
-8. Task list  
+9. Task list  
 - [x] [#2785](k_01_src/124api_src/src/main.go) : Add "post" method on "main.go".  
 - [ ] [#7236](k_01_src/124api_src/src/main.go) : Add "delete" method on "main.go".  
 - [ ] [#9832](k_01_src/124api_src/src/main.go) : Add "put" method on "main.go".  

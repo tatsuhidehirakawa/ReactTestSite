@@ -13,26 +13,26 @@
 
 ----+----+----+----+----+----+----+----+----+----+-- */
 import React from "react";
-import Logo from "./Logo";
-import UserGuide from "./UserGuide";
-import SearchBox from "./SearchBox";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
+// import Logo from "./Logo";
+// import UserGuide from "./UserGuide";
+// import SearchBox from "./SearchBox";
+// import SignUp from "./SignUp";
+// import SignIn from "./SignIn";
 import "./Header.scss";
 
 const Header = () => {
   return (
     <div className="header">
-      <Logo />
+      {/* <Logo /> */}
       <div className="headerLeft">
         <ul>
           <li>サービス</li>
         </ul>
       </div>
-      <UserGuide />
+      {/* <UserGuide />
       <SearchBox />
       <SignIn />
-      <SignUp />
+      <SignUp /> */}
       <div className="headerRight">
         <ul>
           <li>お知らせ</li>
