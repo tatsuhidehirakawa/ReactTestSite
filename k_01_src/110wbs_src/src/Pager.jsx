@@ -9,7 +9,7 @@ import UserGuide from  './components/tmps/UserGuide.jsx'
 // import Privacy from  './components/tmps/Privacy.jsx'
 import ContactUs from  './components/tmps/ContactUs.jsx'
 import Company from  './components/tmps/Company.jsx'
-import Top from  './Top.jsx'
+import Top from './Top.jsx'
 import Page404 from  './components/tmps/Page404.jsx'
 
 const Pager = () => {
