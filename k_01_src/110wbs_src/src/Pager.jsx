@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import App from './App.js'
 import Main from './components/tmps/Main.jsx'
 import Products from  './components/tmps/Products.jsx'
