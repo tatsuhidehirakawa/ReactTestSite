@@ -9,26 +9,18 @@ import UserGuide from  './components/tmps/UserGuide.jsx'
 // import Privacy from  './components/tmps/Privacy.jsx'
 import ContactUs from  './components/tmps/ContactUs.jsx'
 import Company from  './components/tmps/Company.jsx'
+import Top from  './Top.jsx'
 import Page404 from  './components/tmps/Page404.jsx'
 
 const Pager = () => {
   return (
     <BrowserRouter>
-      {/* <Link to="/App" className="App-link">View Package Summary</Link> */}
-      <Link to="/" className="App-link">View Package Summary</Link>
-      {/* <Link to="/Main" className="App-link">Main</Link> */}
-      <Link to="/Products" className="App-link">Products</Link>
-      <Link to="UserGuide" className="App-link">UserGuide</Link>
-      {/* <Link to="/Agreement" className="App-link">Agreement</Link>
-      <Link to="/Pricing" className="App-link">Pricing</Link>
-      <Link to="/Privacy" className="App-link">Privacy</Link> */}
-      <Link to="/ContactUs" className="App-link">ContactUs</Link>
-      <Link to="/Company" className="App-link">Company</Link>
       <Routes>
-        <Route path={`/`} element={<Main>Product</Main>} />
-        {/* <Route path={`/Main`} element={<Main />} /> */}
-        <Route path={`/Products/`} element={<Products />} />
-        <Route path={`/UserGuide/`} element={<UserGuide />} />
+        {/* <Route path={`/`} element={<Main>Product</Main>} /> */}
+        <Route path={`/`} element={<Top/>} />
+        <Route path={`/Main`} element={<Main />} />
+        <Route path={`/Products/`} element={<Main><Products/></Main>} />
+        <Route path={`/UserGuide/`} element={<Main><UserGuide/></Main>} />
         {/* <Route path={`/Agreement/`} element={<Agreement />} />
         <Route path={`/Pricing/`} element={<Pricing />} />
         <Route path={`/Privacy/`} element={<Privacy />} /> */}
