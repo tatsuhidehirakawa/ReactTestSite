@@ -26,9 +26,9 @@ mv ../src/hooks ./src
 mv ../src/types ./src
 mv ../src/App.js ./src
 mv ../src/logo.svg ./src
-mv ../src/Nukes.jsx ./src
+# mv ../src/Nukes.jsx ./src
 mv ../src/Pager.jsx ./src
-mv ../src/Top.jsx ./src
+# mv ../src/Top.jsx ./src
 # react-router-dom installation.
 npm i -S react-router-dom@6.4.2
 # Make a standby state.

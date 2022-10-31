@@ -1,5 +1,7 @@
 import React from "react";
-import logo from './logo.svg';
+import logo from '../../logo.svg';
+import { Link } from "react-router-dom";
+
 
 const Nukes = () => {
   return (
@@ -8,6 +10,7 @@ const Nukes = () => {
       <p>
         Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
       </p>
+      <Link to="/main" className="App-link">View Package Summary</Link>
     </header>
   )
 }

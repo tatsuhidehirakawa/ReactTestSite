@@ -9,7 +9,8 @@ import UserGuide from  './components/tmps/UserGuide.jsx'
 // import Privacy from  './components/tmps/Privacy.jsx'
 import ContactUs from  './components/tmps/ContactUs.jsx'
 import Company from  './components/tmps/Company.jsx'
-import Top from './Top.jsx'
+// import Top from './Top.jsx'
+import Nukes from './components/page/Nukes.jsx'
 import Page404 from  './components/tmps/Page404.jsx'
 
 const Pager = () => {
@@ -17,7 +18,7 @@ const Pager = () => {
     <BrowserRouter>
       <Routes>
         {/* <Route path={`/`} element={<Main>Product</Main>} /> */}
-        <Route path={`/`} element={<Top/>} />
+        <Route path={`/`} element={<Nukes/>} />
         <Route path={`/Main`} element={<Main />} />
         <Route path={`/Products/`} element={<Main><Products/></Main>} />
         <Route path={`/UserGuide/`} element={<Main><UserGuide/></Main>} />
