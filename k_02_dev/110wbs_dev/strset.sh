@@ -19,12 +19,16 @@ create-react-app . --typescript
 npm install sass@latest
 # Restore samplecodes.(If you want to see React sample page, comment out mv command.)
 mv ../public/index.html ./public
+mv ../public/LandingPage.html ./public
+mv ../public/LandingPage.scss ./public
 mv ../src/components ./src
 mv ../src/hooks ./src
 mv ../src/types ./src
 mv ../src/App.js ./src
 mv ../src/logo.svg ./src
+mv ../src/Nucleus.jsx ./src
 mv ../src/Pager.jsx ./src
+mv ../src/Top.jsx ./src
 # react-router-dom installation.
 npm i -S react-router-dom@6.4.2
 # Make a standby state.

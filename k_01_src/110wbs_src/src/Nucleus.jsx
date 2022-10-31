@@ -1,7 +1,7 @@
 import React from "react";
 import logo from './logo.svg';
 
-const Kurukuru = () => {
+const Nucleus = () => {
 
 return (
 <header className="App-header">
@@ -21,4 +21,4 @@ return (
 </header>
 )
 }
-export default Kurukuru;
+export default Nucleus;
