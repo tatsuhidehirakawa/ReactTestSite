@@ -5,8 +5,8 @@ import Nukes from "./Nukes";
 const Top = () => {
   return (
     <>
-    <Nukes/>
-    <Link to="/main" className="App-link">View Package Summary</Link>
+      <Nukes />
+      <Link to="/main" className="App-link">View Package Summary</Link>
     </>
   )
 }
