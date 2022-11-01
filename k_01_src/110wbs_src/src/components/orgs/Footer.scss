@@ -1,9 +1,32 @@
 // @import "./Management.scss";    // 全体管理用scssファイルを読み込み
 
 .footer_outline {
-  margin-top: 706px;
-  background-color: #d8e698;
+  height: 100px;
+  margin-top: 630px;
+  background-color: #c1e4e9;
   padding: 80px 0;
+}
+
+.footer_logo {
+  // display: inline-block;
+  background-color: #2b546a;
+  height: 200px;
+  width: 200px;
+  float: left;
+  img {
+    height: 20px;
+  }
+}
+
+.footer_left {
+  display: inline-block;
+  img {
+    height: 20px;
+  }
+  p {
+    color: #b1c0c0;
+    font-size: 12px;
+  }
 }
 
 .footer-inner {
@@ -18,13 +41,6 @@
   }
 }
 
-.footer-logo {
-  display: inline-block;
-  img {
-    height: 20px;
-  }
-  p {
-    color: #b1c0c0;
-    font-size: 12px;
-  }
-}
+// .footer_right {
+  
+// }

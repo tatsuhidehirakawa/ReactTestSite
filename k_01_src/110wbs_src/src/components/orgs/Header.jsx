@@ -11,32 +11,29 @@ import "./Header.scss";
 const Header = () => {
   return (
     <div className="header_outline">
-      {/* <Logo /> */}
-      <div className="headerLeft">
+      {/* Logo */}
+      <div className="header_logo">
+      </div>      
+      {/* Left area */}
+      <div className="header_left">
       </div>
-      {/* <UserGuide />
-      <SearchBox />
-      <SignIn />
-      <SignUp /> */}
-      <div className="LinkDefine">
-        <Link to="/Main" className="App-link">Main</Link>
-        <Link to="/News" className="App-link">News</Link>
-        <Link to="/Products" className="App-link">Products</Link>
-        <Link to="/Agreement" className="App-link">Agreement</Link>
-        <Link to="/Pricing" className="App-link">Pricing</Link>
-        <Link to="/UserGuide" className="App-link">UserGuide</Link>
-        <Link to="/SignUp" className="App-link">SignUp</Link>
-        <Link to="/SignIn" className="App-link">SignIn</Link>
-        <Link to="/MyPage" className="App-link">MyPage</Link>
+      {/* Middle area */}
+      <div className="header_search">
+      </div>
+      {/* Left area */}
+      <div className="header_right">
+        <Link to="/Main" className="header_text">Main</Link>
+        <Link to="/News" className="header_text">News</Link>
+        <Link to="/Products" className="header_text">Products</Link>
+        <Link to="/Agreement" className="header_text">Agreement</Link>
+        <Link to="/Pricing" className="header_text">Pricing</Link>
+        <Link to="/UserGuide" className="header_text">UserGuide</Link>
+        <Link to="/SignUp" className="header_text">SignUp</Link>
+        <Link to="/SignIn" className="header_text">SignIn</Link>
+        <Link to="/MyPage" className="header_text">MyPage</Link>
       </div>
       <Signin />
-      <div className="headerRight">
-        <ul>
-          <li>ようこそ ゲスト さん！</li>
-        </ul>
-      </div>
     </div>
   );
 };
-
 export default Header;
