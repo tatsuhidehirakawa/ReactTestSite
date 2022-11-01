@@ -1,45 +1,57 @@
 @import "../../Pager.scss";
 
-.header_outline {
+
+//--- Common Declarations -----------------------------------------
+@mixin headerText {
+  margin: 300px 3px 3px 30px;
+  color: rgb(26, 24, 24);
+  padding: 150px 0px 10px 0px;
+  text-decoration: none;
+  text-shadow: 1px 2px 3px #808080;
+  cursor: pointer;
+  // font-weight: bold;
+}
+
+//--- Header Outline ----------------------------------------------
+.headerOutline {
   float: inline-end;
   position: fixed;
   top: 0;
   height: 55px;
   width: 100%;
-  background-color: #bed2c3;
-// background-color: rgba(255,255,255,0.2);     //新規導入すりガラスエフェクト！！！
-// backdrop-filter:blur(8px);                     //新規導入すりガラスエフェクト！！！
-// filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+  // background-color: $color-header;
+background-color: rgba(255,255,255,0.2);     //新規導入すりガラスエフェクト！！！
+backdrop-filter:blur(8px);                     //新規導入すりガラスエフェクト！！！
+filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
 }
 
-.header_text {
-  margin: 300px 3px 3px 30px;
-  color: rgb(119, 119, 119);
-  padding: 150px 0px 10px 0px;
-  text-decoration: none;
-  text-shadow: 1px 2px 3px #808080;
-  // font-weight: bold;
+//--- Logo --------------------------------------------------------
+.headerLogo {
+  // @include background_test_color;
+  margin-left: 15px;
+  float: left;
+  height: 55px;
+  width: 55px;
 }
 
-.LinkDefine {
-  padding-right: 35px;
-}
-
-/*---以下はパーツのコンポーネント化後は削除する---------------*/
-//左メニュー
+//--- Left menu　---------------------------------------------------
 .headerLeft {
-  padding-left: 35px;
-  li {
-    float: left;
-    //display: table-cell;
-    margin: 14px 0px 0px 18px;
-    cursor: pointer;
+  padding-left: 5px;
+  float: left;
+  //display: table-cell;
+  margin: 14px 0px 0px 18px;
+  .headerText {
+    @include headerText;
   }
 }
-//右メニュー
-.header_right {
-  @include background_test_color;
+
+//--- Right menu ----------------------------------------------------
+.headerRight {
+  // @include background_test_color;
   float: right;
   padding: 0px;
   margin: 18px 30px 0px 0px;
+  .headerText {
+    @include headerText;
+  }
 }

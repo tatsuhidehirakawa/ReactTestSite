@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Logo from "./Logo";
+import logo from '../../logo.svg';
 // import UserGuide from "../tmps/UserGuide";
 // import SearchBox from "./SearchBox";
 // import SignUp from "./SignUp";
@@ -10,30 +10,32 @@ import "./Header.scss";
 
 const Header = () => {
   return (
-    <div className="header_outline">
+    <div className="headerOutline">
       {/* Logo */}
-      <div className="header_logo">
-      </div>      
+      <div className="headerLogo">
+        <img src={logo} className="headerLogo" alt="logo" />
+      </div>
       {/* Left area */}
-      <div className="header_left">
+      <div className="headerLeft">
+        <Link to="/News" className="headerText">News</Link>
+        <Link to="/Products" className="headerText">Products</Link>
+        <Link to="/Pricing" className="headerText">Pricing</Link>
       </div>
       {/* Middle area */}
       <div className="header_search">
       </div>
       {/* Left area */}
-      <div className="header_right">
-        <Link to="/Main" className="header_text">Main</Link>
-        <Link to="/News" className="header_text">News</Link>
-        <Link to="/Products" className="header_text">Products</Link>
-        <Link to="/Agreement" className="header_text">Agreement</Link>
-        <Link to="/Pricing" className="header_text">Pricing</Link>
-        <Link to="/UserGuide" className="header_text">UserGuide</Link>
-        <Link to="/SignUp" className="header_text">SignUp</Link>
-        <Link to="/SignIn" className="header_text">SignIn</Link>
-        <Link to="/MyPage" className="header_text">MyPage</Link>
+      <div className="headerRight">
+        <Link to="/Main" className="headerText">Main</Link>
+        <Link to="/Agreement" className="headerText">Agreement</Link>
+        <Link to="/UserGuide" className="headerText">UserGuide</Link>
+        <Link to="/SignUp" className="headerText">SignUp</Link>
+        <Link to="/SignIn" className="headerText">SignIn</Link>
+        <Link to="/MyPage" className="headerText">MyPage</Link>
       </div>
       <Signin />
     </div>
   );
 };
+
 export default Header;
