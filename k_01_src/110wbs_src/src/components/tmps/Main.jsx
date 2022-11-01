@@ -6,7 +6,7 @@ import './Main.scss';
 
 const Main = ({children}) => {
   return (
-    <div className="bbb">
+    <div className="aaa">
       <p className="Main_text_a">- Main -</p>
       <Header />
       <Footer />

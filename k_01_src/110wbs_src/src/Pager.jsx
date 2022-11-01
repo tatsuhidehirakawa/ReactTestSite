@@ -5,7 +5,7 @@ import Top from  './components/page/Top.jsx';
 import Page404 from  './components/tmps/Page404.jsx';
 
 import Main from './components/tmps/Main.jsx';
-// import News from './components/tmps/News.jsx';
+import News from './components/tmps/News.jsx';
 import Products from  './components/tmps/Products.jsx';
 import Agreement from  './components/tmps/Agreement.jsx';
 import Pricing from  './components/tmps/Pricing.jsx';
@@ -28,7 +28,7 @@ const Pager = () => {
         <Route path={`*`} element={<Page404 />} />
         {/* Header area */}
         <Route path={`/Main`} element={<Main />} />
-        {/* <Route path={`/News`} element={<Main><News /></Main>} /> */}
+        <Route path={`/News`} element={<Main><News /></Main>} />
         <Route path={`/Products`} element={<Main><Products /></Main>} />
         <Route path={`/Agreement`} element={<Main><Agreement /></Main>} />
         <Route path={`/Pricing`} element={<Main><Pricing /></Main>} />
