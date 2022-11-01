@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import Logo from "./Logo";
-import UserGuide from "../tmps/UserGuide";
+// import UserGuide from "../tmps/UserGuide";
 // import SearchBox from "./SearchBox";
 // import SignUp from "./SignUp";
 // import SignIn from "./SignIn";
