@@ -4,16 +4,16 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer_outline">
       <div className="footer-inner">
         <div className="footer-logo">
           <img src="../atms/postgresql.svg" />
         </div>
         <ul className="footer-list">
-          <Link to="/Contact" className="App-link">Contact</Link>
-          <Link to="/Recruit" className="App-link">Recruit</Link>
-          <Link to="/Company" className="App-link">Company</Link>
-          <Link to="/Privacy" className="App-link">Privacy</Link>
+          <Link to="/Contact" className="Footer_text">Contact</Link>
+          <Link to="/Recruit" className="Footer_text">Recruit</Link>
+          <Link to="/Company" className="Footer_text">Company</Link>
+          <Link to="/Privacy" className="Footer_text">Privacy</Link>
         </ul>
       </div>
     </div>

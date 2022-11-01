@@ -10,7 +10,7 @@ import "./Header.scss";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header_outline">
       {/* <Logo /> */}
       <div className="headerLeft">
       </div>

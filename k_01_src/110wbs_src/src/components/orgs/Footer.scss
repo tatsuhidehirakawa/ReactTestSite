@@ -1,12 +1,12 @@
 // @import "./Management.scss";    // 全体管理用scssファイルを読み込み
 
-.footer {
-  background-color: aqua;
+.footer_outline {
+  margin-top: 706px;
+  background-color: #d8e698;
   padding: 80px 0;
 }
 
 .footer-inner {
-  max-width: 1040px;
   margin: 0 auto;
   ul {
     float: right;
