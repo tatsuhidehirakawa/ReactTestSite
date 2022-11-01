@@ -1,8 +1,8 @@
 
 import React from "react"
-import "./ContactUs.scss"
+import "./Contact.scss"
 
-const ContactUs = () => {
+const Contact = () => {
   return (
     <div className="bbb">
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
@@ -18,4 +18,4 @@ const ContactUs = () => {
   )
 }
 
-export default ContactUs;
+export default Contact;

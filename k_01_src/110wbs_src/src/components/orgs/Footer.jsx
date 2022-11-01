@@ -10,7 +10,7 @@ const Footer = () => {
           <img src="../atms/postgresql.svg" />
         </div>
         <ul className="footer-list">
-          <Link to="/ContactUs" className="App-link">ContactUs</Link>
+          <Link to="/Contact" className="App-link">Contact</Link>
           <Link to="/Recruit" className="App-link">Recruit</Link>
           <Link to="/Company" className="App-link">Company</Link>
           <Link to="/Privacy" className="App-link">Privacy</Link>

@@ -19,20 +19,20 @@ const Header = () => {
       <SignIn />
       <SignUp /> */}
       <div className="LinkDefine">
-      <Link to="/Main" className="App-link">Main</Link>
-      <Link to="/Products" className="App-link">Products</Link>
-      <Link to="/UserGuide" className="App-link">UserGuide</Link>
-      <Link to="/Agreement" className="App-link">Agreement</Link>
-      <Link to="/Pricing" className="App-link">Pricing</Link>
-      {/* <Link to="/Signin" className="App-link"><Signin /></Link> */}
+        <Link to="/Main" className="App-link">Main</Link>
+        <Link to="/News" className="App-link">News</Link>
+        <Link to="/Products" className="App-link">Products</Link>
+        <Link to="/Agreement" className="App-link">Agreement</Link>
+        <Link to="/Pricing" className="App-link">Pricing</Link>
+        <Link to="/UserGuide" className="App-link">UserGuide</Link>
+        <Link to="/SignUp" className="App-link">SignUp</Link>
+        <Link to="/SignIn" className="App-link">SignIn</Link>
+        <Link to="/MyPage" className="App-link">MyPage</Link>
       </div>
       <Signin />
       <div className="headerRight">
         <ul>
-          <li>お知らせ</li>
-          <li>マイページ</li>
           <li>ようこそ ゲスト さん！</li>
-
         </ul>
       </div>
     </div>
