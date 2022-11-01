@@ -1,15 +1,15 @@
 import React from 'react';
 import A_BUTTON_A from '../atms/A_Button_a.tsx';
 // import Main from './Main.jsx';
-import './O_Signin_a.scss';
+import './Signin.scss';
 // import DbGetParams from '../Lv1_atm/DbGetParams.jsx';
 // import ApiFetch from '../Lv1_atm/ApiFetch.js';
 
 
-// const O_SIGNIN_A = () => {
+// const Signin = () => {
 //   const [count, setcount] = React.usestate(0);
 
-class O_SIGNIN_A extends React.Component {
+class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isModalOpen: false };
@@ -71,4 +71,4 @@ class O_SIGNIN_A extends React.Component {
     );
   }
 }
-export default O_SIGNIN_A;
+export default Signin;

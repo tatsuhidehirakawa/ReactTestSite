@@ -1,34 +1,15 @@
 import React from "react";
-import ApiFetch from '../../hooks/ApiFetch.jsx';
-import O_SIGNIN_A from '../page/O_Signin_a.jsx';
-// import Pager from '../../Pager.jsx';
-import './Main.scss';
 import Header from "../orgs/Header";
-// import Wrapper from "./Wrapper";
-// import Footer from "./Footer";
-import { Link } from "react-router-dom";
+// import Wrapper from "../orgs/Wrapper";
+import Footer from "../orgs/Footer";
+import './Main.scss';
 
 const Main = ({children}) => {
   return (
     <div className="bbb">
       <p className="Main_text_a">- Main -</p>
-      {/* <Link to="/App" className="App-link">View Package Summary</Link> */}
-      {/* <Link to="/Main" className="App-link">Main</Link> */}
-      <Link to="/Products" className="App-link">Products</Link>
-      <Link to="UserGuide" className="App-link">UserGuide</Link>
-      {/* <Link to="/Agreement" className="App-link">Agreement</Link>
-      <Link to="/Pricing" className="App-link">Pricing</Link>
-      <Link to="/Privacy" className="App-link">Privacy</Link> */}
-      <Link to="/ContactUs" className="App-link">ContactUs</Link>
-      <Link to="/Company" className="App-link">Company</Link>
-      {/* <div onClick={()=>{this.handleClickOpen();}}> */}
-      {/* <p className="App-link">View Package Summary</p> */}
-      {/* </div> */}
       <Header />
-      {/* <mWrapper />
-      <Footer /> */}
-      <O_SIGNIN_A />
-      <ApiFetch />
+      <Footer />
       {children}
     </div>
   );

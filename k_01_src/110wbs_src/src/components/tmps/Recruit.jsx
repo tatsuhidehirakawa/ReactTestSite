@@ -1,11 +1,11 @@
 import React from "react"
-import "./UserGuide.scss"
+import "./Recruit.scss"
 
-const UserGuide = () => {
+const Recruit = () => {
   return (
     <div className="bbb">
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="userGuide_text_a">- User Guide -</p>
+      <p className="Products_text_a">- Recruit -</p>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
@@ -17,4 +17,4 @@ const UserGuide = () => {
   )
 }
 
-export default UserGuide;
+export default Recruit;

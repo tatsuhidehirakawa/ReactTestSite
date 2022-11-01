@@ -1,13 +1,7 @@
-/*--+----+----+----+----+----+----+----+----+----+----+
-
-
-    フッダーコンポーネント(Footer.jsx)の装飾
-      2022.7.25 Tatsu_hira
-
-----+----+----+----+----+----+----+----+----+----+---*/
-@import "./Management.scss";    // 全体管理用scssファイルを読み込み
+// @import "./Management.scss";    // 全体管理用scssファイルを読み込み
 
 .footer {
+  background-color: aqua;
   padding: 80px 0;
 }
 

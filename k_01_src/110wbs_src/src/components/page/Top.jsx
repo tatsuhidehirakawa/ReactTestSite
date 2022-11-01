@@ -1,5 +1,5 @@
 import React from "react";
-import Nukes from "./Nukes";
+import Nukes from "../orgs/Nukes";
 
 const Top = () => {
   return (
