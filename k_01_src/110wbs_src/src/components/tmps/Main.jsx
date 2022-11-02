@@ -6,12 +6,16 @@ import './Main.scss';
 
 const Main = ({children}) => {
   return (
+    <>
     <div className="mainOutline">
-      <p className="mainText">Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0</p>
+      {/* <p className="mainText">Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0</p> */}
       <Header />
       {children}
-      <Footer />
     </div>
+          <Footer />
+          </>
+
+
   );
 }
 export default Main;

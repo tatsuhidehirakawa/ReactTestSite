@@ -18,7 +18,7 @@ const Header = () => {
       {/* Left area */}
       <div className="headerLeft">
         <Link to="/News" className="headerText">News</Link>
-        <Link to="/Products" className="headerText">Products</Link>
+        <Link to="/TestPage" className="headerText">TestPage</Link>
         <Link to="/Pricing" className="headerText">Pricing</Link>
       </div>
       {/* Middle area */}

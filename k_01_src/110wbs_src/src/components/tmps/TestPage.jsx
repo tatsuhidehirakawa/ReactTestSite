@@ -1,13 +1,13 @@
 import React from "react"
 import ApiFetch from '../../hooks/ApiFetch.jsx';
-import "./Products.scss"
+import "./TestPage.scss"
 
-const Products = () => {
+const TestPage = () => {
   return (
-    <div className="productsPageOutline">
-      <div className="productsPageInlines">
+    <div className="TestPageOutline">
+      <div className="TestPageInlines">
         {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-        <p className="Products_text_a">- Products -</p>
+        <p className="TestPage_text_a">- Products -</p>
         <div className="templete_text"></div>
         <div className="templete_text"></div>
         <div className="templete_text"></div>
@@ -21,4 +21,4 @@ const Products = () => {
   )
 }
 
-export default Products;
+export default TestPage;

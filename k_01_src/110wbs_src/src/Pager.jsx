@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Top from  './components/page/Top.jsx';
 import Page404 from  './components/tmps/Page404.jsx';
+import TestPage from './components/tmps/TestPage.jsx';
 
 import Main from './components/tmps/Main.jsx';
 import News from './components/tmps/News.jsx';
@@ -18,6 +19,7 @@ import Contact from  './components/tmps/Contact.jsx';
 import Recruit from  './components/tmps/Recruit.jsx';
 import Company from  './components/tmps/Company.jsx';
 import Privacy from  './components/tmps/Privacy.jsx';
+import Header from  './components/orgs/Header.jsx';
 
 const Pager = () => {
   return (
@@ -26,6 +28,7 @@ const Pager = () => {
         {/* Common Pass */}
         <Route path={`/`} element={<Top/>} />
         <Route path={`*`} element={<Page404 />} />
+        <Route path={`/TestPage`} element={<Main><TestPage /></Main>} />
         {/* Header area */}
         <Route path={`/Main`} element={<Main />} />
         <Route path={`/News`} element={<Main><News /></Main>} />

@@ -1,4 +1,4 @@
-@import "../../Pager.scss";
+@import "../tmps/TestPage.scss";
 
 //--- Common Declarations -----------------------------------------
 @mixin footerText {
@@ -17,6 +17,7 @@
   margin-top: 230px;
   background-color: #c1e4e9;
   padding: 80px 0;
+  float: inline-end;
 }
 
 //--- Logo --------------------------------------------------------
