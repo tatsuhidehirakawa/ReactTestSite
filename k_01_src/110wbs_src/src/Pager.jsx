@@ -1,10 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Top from  './components/page/Top.jsx';
 import Page404 from  './components/tmps/Page404.jsx';
 import TestPage from './components/tmps/TestPage.jsx';
-
 import Main from './components/tmps/Main.jsx';
 import News from './components/tmps/News.jsx';
 import Products from  './components/tmps/Products.jsx';
@@ -14,7 +12,6 @@ import UserGuide from  './components/tmps/UserGuide.jsx';
 import SignUp from  './components/tmps/SignUp.jsx';
 // import SignIn from  './components/tmps/SignIn.jsx';
 import MyPage from  './components/tmps/MyPage.jsx';
-
 import Contact from  './components/tmps/Contact.jsx';
 import Recruit from  './components/tmps/Recruit.jsx';
 import Company from  './components/tmps/Company.jsx';
@@ -25,11 +22,9 @@ const Pager = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Common Pass */}
         <Route path={`/`} element={<Top/>} />
         <Route path={`*`} element={<Page404 />} />
         <Route path={`/TestPage`} element={<Main><TestPage /></Main>} />
-        {/* Header area */}
         <Route path={`/Main`} element={<Main />} />
         <Route path={`/News`} element={<Main><News /></Main>} />
         <Route path={`/Products`} element={<Main><Products /></Main>} />
@@ -39,7 +34,6 @@ const Pager = () => {
         <Route path={`/MyPage`} element={<Main><MyPage /></Main>} />
         <Route path={`/SignUp`} element={<Main><SignUp /></Main>} />
         {/* <Route path={`/SignIn`} element={<Main><SignIn /></Main>} /> */}
-        {/* Footer area */}
         <Route path={`/Contact`} element={<Main><Contact /></Main>} />
         <Route path={`/Recruit`} element={<Main><Recruit /></Main>} />
         <Route path={`/Company`} element={<Main><Company /></Main>} />
@@ -50,7 +44,7 @@ const Pager = () => {
 }
 export default Pager;
 
-
+// layout Layout
 
 // <Route path="/" element={<Main>landingcomp</App>}>
 
