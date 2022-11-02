@@ -6,16 +6,24 @@
     background-color: #f8b500;   //for test
 }
 
-@mixin commonPageOutlines {
-    height: auto;
-    width: auto;
-    float: both;
+@mixin commonTestpageOutlines {
+    height: 1500px;
+    // width: auto;
+    // float: both;
     // margin: 70px 0px 30px 0px;
-    margin: auto;
+    // margin: auto;
     background-color: rgb(167, 167, 167);
 }
 
 
-
+@mixin commonTestpageInlines {
+    height: (1500 - 59 - 99)px;
+    // width: auto;
+    // float: both;
+    margin: 59px 0px 99px 0px;
+    padding: 59px 0px 99px 0px;
+    // margin: auto;
+    background-color: rgb(161, 136, 136);
+}
 
 $color-header: #bed2c3;

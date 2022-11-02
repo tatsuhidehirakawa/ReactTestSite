@@ -2,7 +2,11 @@
 
 
 .newsOutline {
-  @include commonPageOutlines;
+  @include commonTestpageOutlines;
+}
+
+.nwesInlines {
+  @include commonTestpageInlines;
 }
 
 .templeteText {
@@ -18,5 +22,5 @@
   color: rgb(0, 0, 0);
 //top: 0px;
   padding: 0px 0px 0px 0px;
-  margin: 35px 3px 35px 0px;
+  margin: 0px 3px 35px 0px;
 }

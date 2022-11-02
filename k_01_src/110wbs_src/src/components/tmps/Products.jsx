@@ -4,7 +4,7 @@ import "./Products.scss"
 
 const Products = () => {
   return (
-    <div className="bbb">
+    <div className="productsPageOutline">
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
       <p className="Products_text_a">- Products -</p>
       <div className="templete_text"></div>

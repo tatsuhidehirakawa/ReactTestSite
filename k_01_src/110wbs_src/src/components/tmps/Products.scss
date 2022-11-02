@@ -1,4 +1,13 @@
 // @import "./Management.scss";    // 全体管理用scssファイルを読み込み
+@import "../../Pager.scss";
+
+.productsPageOutline {
+  // height: 1000px;
+  // width: 1000px;
+  // margin: 10px 0px 30px 0px;
+  // background-color: rgb(142, 142, 142);
+  @include commonTestpageOutlines;
+}
 
 .templete_text {
   height: auto;
@@ -9,12 +18,7 @@
   border-radius: 30px;
 }
 
-.bbb {
-  height: 1000px;
-  width: 1000px;
-  margin: 10px 0px 30px 0px;
-  background-color: rgb(142, 142, 142);
-}
+
 
 .icon-beginner {
   float: left;
