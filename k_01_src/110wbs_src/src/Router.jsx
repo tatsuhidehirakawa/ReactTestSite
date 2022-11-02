@@ -45,21 +45,12 @@ const Router = () => {
 }
 export default Router;
 
-// layout Layout Router
 
 // <Route path="/" element={<Main>landingcomp</App>}>
 
 // <Route path="/main" element={<Main>product</Main>}>
 // <Route path="/other" element={<Main>other</Main>}></Route>
 
-
-// const Layout =({children})=>{
-// return(
-// <header/>
-// {children}
-// <footer/>
-// )
-// }
 
 // const Page1=()=>{
 // <Layout>

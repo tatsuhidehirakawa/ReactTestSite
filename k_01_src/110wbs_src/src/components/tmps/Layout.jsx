@@ -11,11 +11,9 @@ const Layout = ({children}) => {
       {/* <p className="LayoutText">Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0</p> */}
       <Header />
       {children}
+      <Footer />
     </div>
-          <Footer />
-          </>
-
-
+    </>
   );
 }
 export default Layout;
