@@ -4,11 +4,9 @@
 //--- Common Declarations -----------------------------------------
 
 @mixin commonTestpageOutlines {
-  height: 900px;
-  width: 900px;
-  // float: both;
-  margin: 10px 10% 10% 10%;
-  // margin: auto;
+  height: 1200px;
+  width: auto;
+  margin-top: 0px auto;
   background-color: rgb(167, 167, 167);
   border: 5px dotted #4097a7;
 }
@@ -17,7 +15,7 @@
   height: (1500 - 59 - 99)px;
   width: 800px;
   // float: both;
-  margin-top: 59px;
+  margin: 50px auto;
   // padding: 9px 0px 99px 0px;
   padding: 9%;
   // margin: auto;
