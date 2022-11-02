@@ -26,7 +26,7 @@ mv ../src/hooks ./src
 mv ../src/types ./src
 mv ../src/App.js ./src
 mv ../src/logo.svg ./src
-mv ../src/Pager.jsx ./src
+mv ../src/Router.jsx ./src
 mv ../src/Pager.scss ./src
 # mv ../src/Top.jsx ./src
 # react-router-dom installation.
