@@ -1,13 +1,26 @@
-// @import "./Management.scss";    // 全体管理用scssファイルを読み込み
+@import "../../Pager.scss";
 
-.footer_outline {
+//--- Common Declarations -----------------------------------------
+@mixin footerText {
+  margin: 300px 3px 3px 30px;
+  color: rgb(26, 24, 24);
+  padding: 150px 0px 10px 0px;
+  text-decoration: none;
+  text-shadow: 1px 2px 3px #808080;
+  cursor: pointer;
+  // font-weight: bold;
+}
+
+//--- Header Outline ----------------------------------------------
+.footerOutline {
   height: 100px;
-  margin-top: 630px;
+  margin-top: 230px;
   background-color: #c1e4e9;
   padding: 80px 0;
 }
 
-.footer_logo {
+//--- Logo --------------------------------------------------------
+.footerLogo {
   // display: inline-block;
   background-color: #2b546a;
   height: 200px;
@@ -18,7 +31,8 @@
   }
 }
 
-.footer_left {
+//--- Left menu　---------------------------------------------------
+.footerLeft {
   display: inline-block;
   img {
     height: 20px;
@@ -26,6 +40,20 @@
   p {
     color: #b1c0c0;
     font-size: 12px;
+  }
+}
+
+//--- Right menu ----------------------------------------------------
+.footerRight{
+  padding: 5px;
+  float: right;
+  margin: 5px 45px 5px 5px;
+  height: 200px;
+  width: 250px;
+  @include background_test_color;
+
+  .footerText {
+    @include footerText;
   }
 }
 
