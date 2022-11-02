@@ -10,7 +10,7 @@ Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:S
 3. Boot procedure  
 Please check the Makefile, that's all.  
 
-4. (Warning) Handling of Version Control Files
+4. (Warning) Handling of Version Control Files  
 This package does not include the version control files "package.json", "go.mod", and "go.sum". If you use this package, please prepare these files by yourself. Refer to "Makefile" for information on how to apply the version control files.  
 
 5. Branch names  
