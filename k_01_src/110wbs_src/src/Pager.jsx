@@ -19,7 +19,7 @@ import Contact from  './components/tmps/Contact.jsx';
 import Recruit from  './components/tmps/Recruit.jsx';
 import Company from  './components/tmps/Company.jsx';
 import Privacy from  './components/tmps/Privacy.jsx';
-import Header from  './components/orgs/Header.jsx';
+// import Header from  './components/orgs/Header.jsx';
 
 const Pager = () => {
   return (

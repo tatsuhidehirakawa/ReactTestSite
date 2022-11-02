@@ -7,10 +7,13 @@ const Footer = () => {
     <div className="footerOutline">
       {/* Logo area */}
       <div className="footerLogo">
-        <img src="../atms/postgresql.svg" />
+        {/* <img src="../atms/postgresql.svg" /> */}
       </div>
       {/* Left area */}
       <div className="footerLeft">
+      </div>
+      {/* Left area */}
+      <div className="footerCenter">
       </div>
       {/* Right area */}
       <div className="footerRight">

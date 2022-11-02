@@ -44,15 +44,19 @@
   }
 }
 
+//---Center area ----------------------------------------------------
+.footerCenter {
+  @include background_test_color;
+}
+
 //--- Right menu ----------------------------------------------------
-.footerRight{
+.footerRight {
   padding: 5px;
   float: right;
   margin: 5px 45px 5px 5px;
   height: 200px;
   width: 250px;
   @include background_test_color;
-
   .footerText {
     @include footerText;
   }

@@ -5,7 +5,7 @@ It is a full-stack package for web development, focusing on the technology stack
 2. Technology stack  
 Frontend: TypeScript, React.js, Sass, Html, AtomicDesign.  
 Backend: Go(Gin,sqlc), PostgreSQL.  
-Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10, macOS Monterey.  
+Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10, macOS Monterey, Mermaid.js.  
 
 3. Boot procedure  
 Please check the Makefile, that's all.  
