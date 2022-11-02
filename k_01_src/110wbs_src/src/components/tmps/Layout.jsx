@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../orgs/Header";
-// import Wrapper from "../orgs/Wrapper";
 import Footer from "../orgs/Footer";
 import './Layout.scss';
 
