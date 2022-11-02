@@ -5,11 +5,13 @@ flowchart LR
   idh[index.html] --> idj[index.js]
   idj --> apj[App.js]
   apj --> lph[LandingPage.html]
-  lph --> |click|maj[Main.jsx]
-  maj --- hej[Header.jsx]
-  maj --- ftj[Footer.js]
+  lph --> |click|lot[Layout.jsx]
+  lot --- hej[Header.jsx]
+  lot --- ftj[Footer.js]
+  lot --> maj[Footer.js]
 
 subgraph funcA [Header]
+  hej --> |click|alog[Logo.svg]
   hej --> |click|pa[News.js]
   hej --> |click|tp[TestPage.js]
   hej --> |click|pcj[Pricing.js]
@@ -26,12 +28,17 @@ subgraph funcA [Header]
 end
 
 subgraph funcD [Footer]
+  ftj --> |click|blog[Logo.svg]
   ftj --> |click|ct[Contact.js]
   ftj --> |click|rt[Recruit.js]
   ftj --> |click|cy[Company.js]
   ftj --> |click|pr[Pravicy.js]
   ct --> |click|ctm[Contact_Modal]
 end
+
+  alog --> |click|maj[Main.jsx]
+  blog --> |click|maj[Main.jsx]
+
 ```
 2. 
 
