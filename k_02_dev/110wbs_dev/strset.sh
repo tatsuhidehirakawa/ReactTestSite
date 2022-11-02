@@ -13,6 +13,7 @@
 # Saveing samplecodes.
 mv public ..
 mv src ..
+mv README.md ..
 # React installation.
 npm install -g create-react-app@latest
 create-react-app . --typescript
@@ -28,8 +29,8 @@ mv ../src/App.js ./src
 mv ../src/logo.svg ./src
 mv ../src/Router.jsx ./src
 mv ../src/Pager.scss ./src
+mv ./README.md ..
 # mv ../src/Top.jsx ./src
-# react-router-dom installation.
 npm i -S react-router-dom@6.4.2
 # Make a standby state.
 yarn start
