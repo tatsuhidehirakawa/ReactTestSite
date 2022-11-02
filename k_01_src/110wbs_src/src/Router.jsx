@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Top from  './components/page/Top.jsx';
 import Page404 from  './components/tmps/Page404.jsx';
 import TestPage from './components/tmps/TestPage.jsx';
-import Main from './components/tmps/Main.jsx';
+import Layout from './components/tmps/Layout.jsx';
 import News from './components/tmps/News.jsx';
 import Products from  './components/tmps/Products.jsx';
 import Agreement from  './components/tmps/Agreement.jsx';
@@ -18,31 +18,31 @@ import Company from  './components/tmps/Company.jsx';
 import Privacy from  './components/tmps/Privacy.jsx';
 // import Header from  './components/orgs/Header.jsx';
 
-const Pager = () => {
+const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path={`/`} element={<Top/>} />
         <Route path={`*`} element={<Page404 />} />
-        <Route path={`/TestPage`} element={<Main><TestPage /></Main>} />
-        <Route path={`/Main`} element={<Main />} />
-        <Route path={`/News`} element={<Main><News /></Main>} />
-        <Route path={`/Products`} element={<Main><Products /></Main>} />
-        <Route path={`/Agreement`} element={<Main><Agreement /></Main>} />
-        <Route path={`/Pricing`} element={<Main><Pricing /></Main>} />
-        <Route path={`/UserGuide`} element={<Main><UserGuide /></Main>} />
-        <Route path={`/MyPage`} element={<Main><MyPage /></Main>} />
-        <Route path={`/SignUp`} element={<Main><SignUp /></Main>} />
-        {/* <Route path={`/SignIn`} element={<Main><SignIn /></Main>} /> */}
-        <Route path={`/Contact`} element={<Main><Contact /></Main>} />
-        <Route path={`/Recruit`} element={<Main><Recruit /></Main>} />
-        <Route path={`/Company`} element={<Main><Company /></Main>} />
-        <Route path={`/Privacy`} element={<Main><Privacy /></Main>} />
+        <Route path={`/TestPage`} element={<Layout><TestPage /></Layout>} />
+        <Route path={`/Layout`} element={<Layout />} />
+        <Route path={`/News`} element={<Layout><News /></Layout>} />
+        <Route path={`/Products`} element={<Layout><Products /></Layout>} />
+        <Route path={`/Agreement`} element={<Layout><Agreement /></Layout>} />
+        <Route path={`/Pricing`} element={<Layout><Pricing /></Layout>} />
+        <Route path={`/UserGuide`} element={<Layout><UserGuide /></Layout>} />
+        <Route path={`/MyPage`} element={<Layout><MyPage /></Layout>} />
+        <Route path={`/SignUp`} element={<Layout><SignUp /></Layout>} />
+        {/* <Route path={`/SignIn`} element={<Layout><SignIn /></Layout>} /> */}
+        <Route path={`/Contact`} element={<Layout><Contact /></Layout>} />
+        <Route path={`/Recruit`} element={<Layout><Recruit /></Layout>} />
+        <Route path={`/Company`} element={<Layout><Company /></Layout>} />
+        <Route path={`/Privacy`} element={<Layout><Privacy /></Layout>} />
       </Routes>
     </BrowserRouter>
   );
 }
-export default Pager;
+export default Router;
 
 // layout Layout Router
 
