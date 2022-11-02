@@ -11,9 +11,9 @@ import Products from  './components/tmps/Products.jsx';
 import Agreement from  './components/tmps/Agreement.jsx';
 import Pricing from  './components/tmps/Pricing.jsx';
 import UserGuide from  './components/tmps/UserGuide.jsx';
-// import SignUp from  './components/tmps/SignUp.jsx';
+import SignUp from  './components/tmps/SignUp.jsx';
 // import SignIn from  './components/tmps/SignIn.jsx';
-// import MyPage from  './components/tmps/MyPage.jsx';
+import MyPage from  './components/tmps/MyPage.jsx';
 
 import Contact from  './components/tmps/Contact.jsx';
 import Recruit from  './components/tmps/Recruit.jsx';
@@ -36,9 +36,9 @@ const Pager = () => {
         <Route path={`/Agreement`} element={<Main><Agreement /></Main>} />
         <Route path={`/Pricing`} element={<Main><Pricing /></Main>} />
         <Route path={`/UserGuide`} element={<Main><UserGuide /></Main>} />
-        {/* <Route path={`/SignUp`} element={<Main><SignUp /></Main>} /> */}
+        <Route path={`/MyPage`} element={<Main><MyPage /></Main>} />
+        <Route path={`/SignUp`} element={<Main><SignUp /></Main>} />
         {/* <Route path={`/SignIn`} element={<Main><SignIn /></Main>} /> */}
-        {/* <Route path={`/MyPage`} element={<Main><MyPage /></Main>} /> */}
         {/* Footer area */}
         <Route path={`/Contact`} element={<Main><Contact /></Main>} />
         <Route path={`/Recruit`} element={<Main><Recruit /></Main>} />

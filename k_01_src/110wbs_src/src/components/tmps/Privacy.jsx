@@ -19,6 +19,7 @@ const Privacy = () => {
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
+      <p className="Privacy_text_a">- Privacy -</p>
     </div>
   )
 }

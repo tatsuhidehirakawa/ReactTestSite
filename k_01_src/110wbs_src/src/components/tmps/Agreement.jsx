@@ -13,6 +13,7 @@ const Agreement = () => {
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
+      <p className="Privacy_text_a">- Agreement -</p>
     </div>
   )
 }

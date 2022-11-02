@@ -15,6 +15,7 @@ const News = () => {
         <div className="templete_text"></div>
         <div className="templete_text"></div>
         <div className="templete_text"></div>
+        <p className="newsText">- News -</p>
       </div>
   )
 }

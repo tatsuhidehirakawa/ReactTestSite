@@ -1,23 +1,21 @@
 import React from "react"
-import ApiFetch from '../../hooks/ApiFetch.jsx';
-import "./SignUp.scss"
+import "./MyPage.scss"
 
-const SignUp = () => {
+const MyPage = () => {
   return (
     <div className="bbb">
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="MyPage_text_a">- SignUp -</p>
+      <p className="MyPage_text_a">- MyPage -</p>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
-      <ApiFetch />
       <div className="templete_text"></div>
       <div className="templete_text"></div>
-      <p className="SignUp_text_a">- SignUp -</p>
+      <p className="userGuide_text_a">- MyPage -</p>
     </div>
   )
 }
 
-export default SignUp;
+export default MyPage;

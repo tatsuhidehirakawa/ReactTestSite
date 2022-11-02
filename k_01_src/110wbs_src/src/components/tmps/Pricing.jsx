@@ -13,6 +13,7 @@ const Pricing = () => {
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
+      <p className="userGuide_text_a">- Pricing -</p>
     </div>
   )
 }
