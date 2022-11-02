@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import Pager from './Pager.jsx';
+import Router from './Router.jsx';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Pager />
+      <Router />
     </div>
   );
 }

@@ -44,7 +44,7 @@ const Pager = () => {
 }
 export default Pager;
 
-// layout Layout
+// layout Layout Router
 
 // <Route path="/" element={<Main>landingcomp</App>}>
 
