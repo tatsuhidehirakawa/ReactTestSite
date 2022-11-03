@@ -3,27 +3,6 @@
 
 //--- Common Declarations -----------------------------------------
 
-@mixin commonTestpageOutlines {
-  height: 1200px;
-  width: auto;
-  margin-top: 0px auto;
-  // background-color: rgb(167, 167, 167);  // For test
-  // border: 5px dotted #4097a7;  // For test
-}
-
-@mixin commonTestpageInlines {
-  height: 400px;
-  width: 900px;
-  // float: both;
-  margin: 50px auto;
-  // padding: 9px 0px 99px 0px;
-  padding: 50px;
-  // margin: auto;
-  // border: 5px dotted #d16363;  // For test
-  // background-color: rgb(233, 185, 185);  // For test
-  opacity: 0.5;
-}
-
 @mixin background_test_color {
   background-color: #f8b500;   //for test
 }
