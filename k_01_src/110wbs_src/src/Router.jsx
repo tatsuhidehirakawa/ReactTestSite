@@ -75,8 +75,8 @@ export default Router;
 
 // const Layout =({header,children})=>{
 // return(
-// {header}
+// <header />
 // {children}
-// <footer/>
+// <footer />
 // )
 // }
