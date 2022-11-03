@@ -19,6 +19,7 @@ npm install -g create-react-app@latest
 create-react-app . --typescript
 npm install sass@latest
 # Restore samplecodes.(If you want to see React sample page, comment out mv command.)
+mv ../public/Assets ./public
 mv ../public/index.html ./public
 mv ../public/LandingPage.html ./public
 mv ../public/LandingPage.scss ./public
