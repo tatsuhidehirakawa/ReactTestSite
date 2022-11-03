@@ -22,15 +22,15 @@ npm install sass@latest
 mv ../public/Assets ./public
 mv ../public/LandingPage ./public
 mv ../public/index.html ./public
-mv ../public/LandingPage.html ./public
-mv ../public/LandingPage.scss ./public
+# mv ../public/LandingPage.html ./public
+# mv ../public/LandingPage.scss ./public
 mv ../src/components ./src
 mv ../src/hooks ./src
 mv ../src/types ./src
 mv ../src/App.js ./src
 mv ../src/logo.svg ./src
-mv ../src/Router.jsx ./src
 mv ../src/Pager.scss ./src
+mv ../src/Router.jsx ./src
 mv ./README.md ..
 # mv ../src/Top.jsx ./src
 npm i -S react-router-dom@6.4.2
