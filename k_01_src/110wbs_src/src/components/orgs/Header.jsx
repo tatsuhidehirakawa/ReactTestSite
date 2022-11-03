@@ -5,7 +5,7 @@ import logo from '../../logo.svg';
 // import SearchBox from "./SearchBox";
 // import SignUp from "./SignUp";
 // import SignIn from "./SignIn";
-import Signin from '../page/Signin.jsx';
+import SignIn from '../page/Signin.jsx';
 import "./Header.scss";
 
 const Header = () => {
@@ -30,10 +30,9 @@ const Header = () => {
         <Link to="/Agreement" className="headerText">Agreement</Link>
         <Link to="/UserGuide" className="headerText">UserGuide</Link>
         <Link to="/SignUp" className="headerText">SignUp</Link>
-        <Link to="/SignIn" className="headerText">SignIn</Link>
+        <SignIn />
         <Link to="/MyPage" className="headerText">MyPage</Link>
       </div>
-      <Signin />
     </div>
   );
 };
