@@ -32,6 +32,7 @@ mv ../src/logo.svg ./src
 mv ../src/Pager.scss ./src
 mv ../src/Router.jsx ./src
 mv ../README.md .
+mv ../../myportfolio_k/package.json ./myportfolio_k/k_01_src/110wbs_src/
 # mv ../src/Top.jsx ./src
 npm i -S react-router-dom@6.4.2
 # Make a standby state.
