@@ -16,10 +16,10 @@ const Footer = () => {
       </div>
       {/* Right area */}
       <div className="footerRight">
-        <Link to="/Contact" className="Footer_text">Contact</Link>
-        <Link to="/Recruit" className="Footer_text">Recruit</Link>
-        <Link to="/Company" className="Footer_text">Company</Link>
-        <Link to="/Privacy" className="Footer_text">Privacy</Link>
+        <Link to="/Contact" className="footerText">Contact</Link>
+        <Link to="/Recruit" className="footerText">Recruit</Link>
+        <Link to="/Company" className="footerText">Company</Link>
+        <Link to="/Privacy" className="footerText">Privacy</Link>
       </div>
     </div>
   );
