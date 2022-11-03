@@ -10,14 +10,17 @@
 
 
 #--- <Pattearn B> create-react-app Operation.---(5m45sec)------#
+
 # Saveing samplecodes.
 mv public ..
 mv src ..
 mv README.md ..
+
 # React installation.
 npm install -g create-react-app@latest
 create-react-app . --typescript
 npm install sass@latest
+
 # Restore samplecodes.(If you want to see React sample page, comment out mv command.)
 mv ../public/Assets ./public
 mv ../public/LandingPage ./public
@@ -34,8 +37,10 @@ mv ../src/Router.jsx ./src
 mv ../README.md .
 # mv ../src/Top.jsx ./src
 npm i -S react-router-dom@6.4.2
+
 # Transfer version control files.
-mv ./package.json ../../k_01_src/110wbs_src/
+\cp -f ./package.json ../../k_01_src/110wbs_src/package.json
+
 # Make a standby state.
 yarn start
 
