@@ -31,7 +31,7 @@ mv ../src/App.js ./src
 mv ../src/logo.svg ./src
 mv ../src/Pager.scss ./src
 mv ../src/Router.jsx ./src
-mv ../README.md ..
+mv ../README.md .
 # mv ../src/Top.jsx ./src
 npm i -S react-router-dom@6.4.2
 # Make a standby state.
