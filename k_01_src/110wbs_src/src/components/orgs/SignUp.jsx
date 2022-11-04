@@ -8,7 +8,7 @@ const SignUp = () => {
             <div className="PageInlineA">
 
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="PageTextA">- SignUp -</p>
+      <p className="PageTextA">- <b>SignUp</b>(Sample) -</p>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>

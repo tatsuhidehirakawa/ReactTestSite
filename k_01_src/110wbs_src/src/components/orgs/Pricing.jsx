@@ -5,7 +5,7 @@ const Pricing = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-        <p className="PageTextA">- Pricing -</p>
+        <p className="PageTextA">- <b>Pricing</b>(Sample) -</p>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>

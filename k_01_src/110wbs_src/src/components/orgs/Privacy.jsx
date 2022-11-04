@@ -11,7 +11,7 @@ const Privacy = () => {
   return (
     <div className="bbb">
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="Privacy_text_a">- Privacy -</p>
+      <p className="Privacy_text_a">- <b>Privacy</b>(Sample) -</p>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>

@@ -7,7 +7,7 @@ const Agreement = () => {
             <div className="PageInlineA">
 
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="PageTextA">- Agreement -</p>
+      <p className="PageTextA">- Agreement(Sample) -</p>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>

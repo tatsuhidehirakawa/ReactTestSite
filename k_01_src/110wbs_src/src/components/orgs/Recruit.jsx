@@ -5,7 +5,7 @@ const Recruit = () => {
   return (
     <div className="bbb">
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="Products_text_a">- Recruit -</p>
+      <p className="Products_text_a">- <b>Recruit</b>(Sample) -</p>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>

@@ -7,7 +7,7 @@ const MyPage = () => {
             <div className="PageInlineA">
 
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="PageTextA">- MyPage -</p>
+      <p className="PageTextA">- MyPage(Sample) -</p>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>

@@ -5,7 +5,7 @@ const News = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-        <p className="PageTextA">- News -</p>
+        <p className="PageTextA">- <b>News</b>(Sample) -</p>
           <p>
             202x.xx.xx: サービスのローンチを行なった。<br />
             202x.xx.xx: xx機能をリリースしました。<br />
