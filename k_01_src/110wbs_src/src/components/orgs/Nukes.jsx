@@ -14,4 +14,5 @@ const Nukes = () => {
     </header>
   )
 }
+
 export default Nukes;
