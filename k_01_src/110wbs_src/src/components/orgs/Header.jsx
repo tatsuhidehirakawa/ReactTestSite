@@ -5,7 +5,7 @@ import logo from '../../logo.svg';
 // import SearchBox from "./SearchBox";
 // import SignUp from "./SignUp";
 // import SignIn from "./SignIn";
-import SignIn from '../page/Signin.jsx';
+import SignIn from './Signin.jsx';
 import "./Header.scss";
 
 const Header = () => {

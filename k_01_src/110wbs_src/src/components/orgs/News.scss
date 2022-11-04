@@ -1,8 +1,8 @@
-@import "../tmps/TestPage.scss";
+@import "./TestPage.scss";
 @import "../../Pager.scss";    // 全体管理用scssファイルを読み込み
 
 
-//--- Common Declarations -----------------------------------------
+//--- Common Declarations --------------------------------------
 @mixin background_test_color {
   background-color: #f8b500;   //for test
 }

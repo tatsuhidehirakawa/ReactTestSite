@@ -1,21 +1,21 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
-import Top from  './components/page/Top.jsx';
-import Page404 from  './components/tmps/Page404.jsx';
-import TestPage from './components/tmps/TestPage.jsx';
+import Top from  './components/tmps/Top.jsx';
+import Page404 from  './components/orgs/Page404.jsx';
+import TestPage from './components/orgs/TestPage.jsx';
 import Layout from './components/tmps/Layout.jsx';
-import News from './components/tmps/News.jsx';
+import News from './components/orgs/News.jsx';
 // import Products from  './components/tmps/Products.jsx';
-import Agreement from  './components/tmps/Agreement.jsx';
-import Pricing from  './components/tmps/Pricing.jsx';
-import UserGuide from  './components/tmps/UserGuide.jsx';
-import SignUp from  './components/tmps/SignUp.jsx';
-import MyPage from  './components/tmps/MyPage.jsx';
-import Contact from  './components/tmps/Contact.jsx';
-import Recruit from  './components/tmps/Recruit.jsx';
-import Company from  './components/tmps/Company.jsx';
-import Privacy from  './components/tmps/Privacy.jsx';
-import Main from  './components/tmps/Main.jsx';
+import Agreement from  './components/orgs/Agreement.jsx';
+import Pricing from  './components/orgs/Pricing.jsx';
+import UserGuide from  './components/orgs/UserGuide.jsx';
+import SignUp from  './components/orgs/SignUp.jsx';
+import MyPage from  './components/orgs/MyPage.jsx';
+import Contact from  './components/orgs/Contact.jsx';
+import Recruit from  './components/orgs/Recruit.jsx';
+import Company from  './components/orgs/Company.jsx';
+import Privacy from  './components/orgs/Privacy.jsx';
+import Main from  './components/orgs/Main.jsx';
 
 const Router = () => {
   return (
