@@ -2,44 +2,33 @@
 @import "../../Pager.scss";
 
 //--- Common Declarations -----------------------------------------
-
 @mixin background_test_color {
   background-color: #f8b500;   //for test
 }
 
 //--- Test Page Outline ----------------------------------------
-.TestPageOutline {
+.OutlineA {
   @include commonTestpageOutlines;
 }
 
 //--- Test Page Inline -----------------------------------------
-.TestPageInlines {
+.InlineA {
   @include commonTestpageInlines;
 }
 
-.templete_text {
+.TestPageTextA {
+  color: rgb(0, 0, 0);
+//top: 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 35px 3px 35px 0px;
+  cursor: pointer;
+}
+
+.TestPageTextB {
   height: auto;
   width: auto;
   margin: 10px 30px 10px 30px;
   padding: 10px 10px 10px 10px;
   background-color: rgb(81, 81, 81);
   border-radius: 30px;
-}
-
-.icon-beginner {
-  float: left;
-  width: 21px;
-//margin: 2px 0px 0px 0px;
-  padding-top:2px;
-  padding-bottom: 9px;
-  margin:13px 3px 0px 13px;
-  cursor: pointer;
-}
-
-.Products_text_a {
-  color: rgb(0, 0, 0);
-//top: 0px;
-  padding: 0px 0px 0px 0px;
-  margin: 35px 3px 35px 0px;
-  cursor: pointer;
 }

@@ -10,20 +10,19 @@ import Agreement from  './components/tmps/Agreement.jsx';
 import Pricing from  './components/tmps/Pricing.jsx';
 import UserGuide from  './components/tmps/UserGuide.jsx';
 import SignUp from  './components/tmps/SignUp.jsx';
-// import SignIn from  './components/tmps/SignIn.jsx';
 import MyPage from  './components/tmps/MyPage.jsx';
 import Contact from  './components/tmps/Contact.jsx';
 import Recruit from  './components/tmps/Recruit.jsx';
 import Company from  './components/tmps/Company.jsx';
 import Privacy from  './components/tmps/Privacy.jsx';
 import Main from  './components/tmps/Main.jsx';
-// import Header from  './components/orgs/Header.jsx';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path={`/`} element={<Top/>} />
+        {/* <Route path={`/`} element={<http://www.sample.com/landingpage.html>} /> */}  {/* Change CORS setting sat API*/}
         <Route path={`*`} element={<Page404 />} />
         <Route path={`/News`} element={<Layout><News /></Layout>} />
         {/* <Route path={`/Products`} element={<Layout><Products /></Layout>} /> */}
@@ -33,7 +32,6 @@ const Router = () => {
         <Route path={`/Agreement`} element={<Layout><Agreement /></Layout>} />
         <Route path={`/UserGuide`} element={<Layout><UserGuide /></Layout>} />
         <Route path={`/SignUp`} element={<Layout><SignUp /></Layout>} />
-        {/* <Route path={`/SignIn`} element={<Layout><SignIn /></Layout>} /> */}
         <Route path={`/MyPage`} element={<Layout><MyPage /></Layout>} />
         <Route path={`/Contact`} element={<Layout><Contact /></Layout>} />
         <Route path={`/Recruit`} element={<Layout><Recruit /></Layout>} />
@@ -44,6 +42,8 @@ const Router = () => {
   );
 }
 export default Router;
+
+
 
 
 // <Route path="/" element={<Main>landingcomp</App>}>

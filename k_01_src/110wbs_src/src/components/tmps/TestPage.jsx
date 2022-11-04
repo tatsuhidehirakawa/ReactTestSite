@@ -4,18 +4,18 @@ import "./TestPage.scss"
 
 const TestPage = () => {
   return (
-    <div className="TestPageOutline">
-      <div className="TestPageInlines">
+    <div className="OutlineA">
+      <div className="InlineA">
         {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-        <p className="TestPage_text_a">- Products -</p>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
+        <p className="TestPageTextA">- Products -</p>
+        <div className="TestPageTextB"></div>
+        <div className="TestPageTextB"></div>
+        <div className="TestPageTextB"></div>
         <ApiFetch />
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
+        <div className="TestPageTextB"></div>
+        <div className="TestPageTextB"></div>
+        <div className="TestPageTextB"></div>
+        <div className="TestPageTextB"></div>
       </div>
     </div>
   )
