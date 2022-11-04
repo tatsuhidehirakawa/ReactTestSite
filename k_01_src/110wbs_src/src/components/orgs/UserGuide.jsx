@@ -8,13 +8,13 @@ const UserGuide = () => {
 
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
       <p className="PageTextA">- <b>User Guide</b>(Sample) -</p>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
       <p className="PageTextA">- User Guide -</p>
       </div>
       </div>

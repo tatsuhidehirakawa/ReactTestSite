@@ -3,17 +3,19 @@ import "./Company.scss"
 
 const Company = () => {
   return (
-    <div className="bbb">
-      {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="userGuide_text_a">- Company(Sample) -</p>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-    </div>
+    <div className="PageOutline">
+      <div className="PageInlineA">
+        <p className="PageTextA">- Company(Sample) -</p>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- Company(Sample) -</p>
+        </div>
+      </div>
   )
 }
 
