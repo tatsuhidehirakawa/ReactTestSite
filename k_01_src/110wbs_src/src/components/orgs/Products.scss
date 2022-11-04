@@ -1,8 +1,8 @@
 @import "../tmps/TestPage.scss";
 @import "../../Pager.scss";
 
-.productsPageOutline {
-  @include commonTestpageOutlines;
+.PageOutline {
+  @include PageOutline;
 }
 
 .productsPageInlines {

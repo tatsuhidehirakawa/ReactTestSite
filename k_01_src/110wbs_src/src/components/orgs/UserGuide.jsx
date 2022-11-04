@@ -3,9 +3,11 @@ import "./UserGuide.scss"
 
 const UserGuide = () => {
   return (
-    <div className="bbb">
+    <div className="PageOutline">
+            <div className="PageInlineA">
+
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="userGuide_text_a">- User Guide -</p>
+      <p className="PageTextA">- User Guide -</p>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
@@ -13,8 +15,9 @@ const UserGuide = () => {
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
-      <p className="userGuide_text_a">- User Guide -</p>
-    </div>
+      <p className="PageTextA">- User Guide -</p>
+      </div>
+      </div>
   )
 }
 

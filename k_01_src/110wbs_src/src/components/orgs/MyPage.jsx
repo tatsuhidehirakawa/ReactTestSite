@@ -3,19 +3,22 @@ import "./MyPage.scss"
 
 const MyPage = () => {
   return (
-    <div className="bbb">
+    <div className="PageOutline">
+            <div className="PageInlineA">
+
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="MyPage_text_a">- MyPage -</p>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <p className="userGuide_text_a">- MyPage -</p>
+      <p className="PageTextA">- MyPage -</p>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <p className="PageTextA">- MyPage -</p>
+      </div>
     </div>
-  )
+    )
 }
 
 export default MyPage;

@@ -3,18 +3,19 @@ import "./Pricing.scss"
 
 const Pricing = () => {
   return (
-    <div className="bbb">
-      {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="userGuide_text_a">- Pricing -</p>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <p className="userGuide_text_a">- Pricing -</p>
-    </div>
+    <div className="PageOutline">
+      <div className="PageInlineA">
+        <p className="PageTextA">- Pricing -</p>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- Pricing -</p>
+       </div>
+      </div>
   )
 }
 export default Pricing;

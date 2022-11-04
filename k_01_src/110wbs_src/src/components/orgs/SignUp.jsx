@@ -4,9 +4,11 @@ import "./SignUp.scss"
 
 const SignUp = () => {
   return (
-    <div className="bbb">
+    <div className="PageOutline">
+            <div className="PageInlineA">
+
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="MyPage_text_a">- SignUp -</p>
+      <p className="PageTextA">- SignUp -</p>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
@@ -15,9 +17,10 @@ const SignUp = () => {
       <ApiFetch />
       <div className="templete_text"></div>
       <div className="templete_text"></div>
-      <p className="SignUp_text_a">- SignUp -</p>
+      <p className="PageTextA">- SignUp -</p>
+      </div>
     </div>
-  )
+    )
 }
 
 export default SignUp;

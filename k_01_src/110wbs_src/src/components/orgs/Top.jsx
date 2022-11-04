@@ -3,11 +3,11 @@ import "./Top.scss"
 
 const Top = () => {
   return (
-    <div className="OutlineA">
-      <div className="InlineA">
-      <p className="TestPageTextA">- Main -</p>
-      <div className="TestPageTextB"></div>
-      <div className="TestPageTextB"></div>
+    <div className="PageOutline">
+      <div className="PageInlineA">
+      <p className="PageTextA">- Main -</p>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
       <p>
         This Packege is <b>fullstack</b> Web development <b>environment</b> named "<b>STGprd</b>".<br />
         "<b>STGprd</b>" is made by Golang, PostgreSQL, React, TypeScript, Sass & Docker.<br />
@@ -21,9 +21,9 @@ const Top = () => {
         <b>T</b>e<b>st</b> Environment: CircleCI, Docker(Multistage Build)<br />
         <b>St</b>a<b>g</b>ing Environment: Terraform
       </p>
-      <div className="TestPageTextB"></div>
-      <div className="TestPageTextB"></div>
-      <div className="TestPageTextB"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
       </div>
     </div>
   )

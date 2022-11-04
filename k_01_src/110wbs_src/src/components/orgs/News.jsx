@@ -3,20 +3,20 @@ import "./News.scss"
 
 const News = () => {
   return (
-    <div className="OutlineA">
-      <div className="InlineA">
-        <p className="NewsTextA">- News -</p>
+    <div className="PageOutline">
+      <div className="PageInlineA">
+        <p className="PageTextA">- News -</p>
           <p>
             202x.xx.xx: サービスのローンチを行なった。<br />
             202x.xx.xx: xx機能をリリースしました。<br />
           </p>
-        <div className="NewsTextB"></div>
-        <div className="NewsTextB"></div>
-        <div className="NewsTextB"></div>
-        <div className="NewsTextB"></div>
-        <div className="NewsTextB"></div>
-        <div className="NewsTextB"></div>
-        <p className="NewsTextA">- News -</p>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- News -</p>
       </div>
     </div>
   )

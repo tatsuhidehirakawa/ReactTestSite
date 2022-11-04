@@ -3,18 +3,21 @@ import "./Agreement.scss"
 
 const Agreement = () => {
   return (
-    <div className="bbb">
+    <div className="PageOutline">
+            <div className="PageInlineA">
+
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="Privacy_text_a">- Agreement -</p>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <p className="Privacy_text_a">- Agreement -</p>
-    </div>
+      <p className="PageTextA">- Agreement -</p>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <p className="PageTextA">- Agreement -</p>
+      </div>
+      </div>
   )
 }
 

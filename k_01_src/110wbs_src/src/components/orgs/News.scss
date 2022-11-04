@@ -1,35 +1,20 @@
-@import "./TestPage.scss";
-@import "../../Pager.scss";    // 全体管理用scssファイルを読み込み
+@import "../../Pager.scss";
 
+//--- Common Declarations -----------------------------------------
 
-//--- Common Declarations --------------------------------------
-@mixin background_test_color {
-  background-color: #f8b500;   //for test
+//--- Page Outline ------------------------------------------------
+.PageOutline {
+  @include PageOutline;
+}
+//--- Page Inline -------------------------------------------------
+.PageInlineA {
+  @include PageInlineA;
 }
 
-//--- Test Page Outline ----------------------------------------
-.OutlineA {
-  @include commonTestpageOutlines;
+.PageTextA {
+  @include PageTextA;
 }
 
-//--- Test Page Inline -----------------------------------------
-.InlineA {
-  @include commonTestpageInlines;
-}
-
-.NewsTextA {
-  color: rgb(0, 0, 0);
-//top: 0px;
-  padding: 0px 0px 0px 0px;
-  margin: 35px 3px 35px 0px;
-  cursor: pointer;
-}
-
-.NewsTextB {
-  height: auto;
-  width: auto;
-  margin: 10px 30px 10px 30px;
-  padding: 10px 10px 10px 10px;
-  background-color: rgb(81, 81, 81);
-  border-radius: 30px;
+.PageTextS {
+  @include PageTextS;
 }
