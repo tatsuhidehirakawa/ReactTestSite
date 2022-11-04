@@ -1,0 +1,16 @@
+import React from 'react';
+import { Link } from "react-router-dom";
+import './LogoA.scss';
+import logo from '../../logo.svg';
+
+const LogoA = () => {
+  return (
+    <div className="logoOutline">
+      <Link to="/main">
+      <img src={logo} className="logoIcon" alt="logo" />
+      </Link>
+    </div>
+  );
+}
+
+export default LogoA;

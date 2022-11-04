@@ -6,6 +6,7 @@ import logo from '../../logo.svg';
 // import SignUp from "./SignUp";
 // import SignIn from "./SignIn";
 import SignIn from './Signin.jsx';
+import LogoA from '../atms/LogoA.jsx';
 import "./Header.scss";
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
     <div className="headerOutline">
       {/* Logo */}
       <div className="headerLogo">
-        <img src={logo} className="headerLogo" alt="logo" />
+        <LogoA />
       </div>
       {/* Left area */}
       <div className="headerLeft">
