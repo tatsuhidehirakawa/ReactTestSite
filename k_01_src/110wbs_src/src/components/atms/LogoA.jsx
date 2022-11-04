@@ -6,7 +6,7 @@ import logo from '../../logo.svg';
 const LogoA = () => {
   return (
     <div className="logoOutline">
-      <Link to="/main">
+      <Link to="/Top">
       <img src={logo} className="logoInline" alt="logo" />
       </Link>
     </div>

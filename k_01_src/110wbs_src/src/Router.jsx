@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
-import Top from  './components/tmps/Top.jsx';
+import Main from  './components/tmps/Main.jsx';
 import Page404 from  './components/orgs/Page404.jsx';
 import TestPage from './components/orgs/TestPage.jsx';
 import Layout from './components/tmps/Layout.jsx';
@@ -15,20 +15,20 @@ import Contact from  './components/orgs/Contact.jsx';
 import Recruit from  './components/orgs/Recruit.jsx';
 import Company from  './components/orgs/Company.jsx';
 import Privacy from  './components/orgs/Privacy.jsx';
-import Main from  './components/orgs/Main.jsx';
+import Top from  './components/orgs/Top.jsx';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={`/`} element={<Top/>} />
+        <Route path={`/`} element={<Main/>} />
         {/* <Route path={`/`} element={<http://www.sample.com/landingpage.html>} /> */}  {/* Change CORS setting sat API*/}
         <Route path={`*`} element={<Page404 />} />
         <Route path={`/News`} element={<Layout><News /></Layout>} />
         {/* <Route path={`/Products`} element={<Layout><Products /></Layout>} /> */}
         <Route path={`/TestPage`} element={<Layout><TestPage /></Layout>} />
         <Route path={`/Pricing`} element={<Layout><Pricing /></Layout>} />
-        <Route path={`/Main`} element={<Layout><Main /></Layout>} />
+        <Route path={`/Top`} element={<Layout><Top /></Layout>} />
         <Route path={`/Agreement`} element={<Layout><Agreement /></Layout>} />
         <Route path={`/UserGuide`} element={<Layout><UserGuide /></Layout>} />
         <Route path={`/SignUp`} element={<Layout><SignUp /></Layout>} />

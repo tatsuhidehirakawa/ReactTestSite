@@ -1,7 +1,7 @@
 import React from "react"
-import "./Main.scss"
+import "./Top.scss"
 
-const Main = () => {
+const Top = () => {
   return (
     <div className="OutlineA">
       <div className="InlineA">
@@ -29,4 +29,4 @@ const Main = () => {
   )
 }
 
-export default Main;
+export default Top;

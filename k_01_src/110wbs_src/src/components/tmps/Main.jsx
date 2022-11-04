@@ -1,11 +1,11 @@
 import React from "react";
 import Nukes from "../orgs/Nukes";
 
-const Top = () => {
+const Main = () => {
   return (
     <>
       <Nukes />
     </>
   )
 }
-export default Top;
+export default Main;

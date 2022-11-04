@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       {/* Left area */}
       <div className="headerRight">
-        <Link to="/Main" className="headerText">TopPage</Link>
+        <Link to="/Top" className="headerText">Top</Link>
         <Link to="/Agreement" className="headerText">Agreement</Link>
         <Link to="/UserGuide" className="headerText">UserGuide</Link>
         <Link to="/SignUp" className="headerText">SignUp</Link>
