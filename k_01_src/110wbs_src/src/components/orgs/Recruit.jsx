@@ -3,17 +3,19 @@ import "./Recruit.scss"
 
 const Recruit = () => {
   return (
-    <div className="bbb">
-      {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="Products_text_a">- <b>Recruit</b>(Sample) -</p>
+    <div className="PageOutline">
+      <div className="PageInlineA">
+      <p className="PageTextA">- <b>Recruit</b>(Sample) -</p>
       <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-    </div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- Pricing -</p>
+       </div>
+      </div>
   )
 }
 
