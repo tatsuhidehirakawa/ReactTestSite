@@ -15,6 +15,11 @@ $RecruitBackgroundColor: #bed2c3;
 $CompanyBackgroundColor: #bed2c3;
 $PrivacyBackgroundColor: #bed2c3;
 
+@mixin background_test_color {
+  background-color: #f8b500;   //for test
+}
+
+
 @mixin commonTestpageOutlines {
     height: 1200px;
     width: auto;

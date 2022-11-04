@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from '../../logo.svg';
-// import UserGuide from "../tmps/UserGuide";
 // import SearchBox from "./SearchBox";
-// import SignUp from "./SignUp";
-// import SignIn from "./SignIn";
 import SignIn from './Signin.jsx';
 import LogoA from '../atms/LogoA.jsx';
 import "./Header.scss";
@@ -27,7 +23,7 @@ const Header = () => {
       </div>
       {/* Left area */}
       <div className="headerRight">
-        <Link to="/Main" className="headerText">Main</Link>
+        <Link to="/Main" className="headerText">TopPage</Link>
         <Link to="/Agreement" className="headerText">Agreement</Link>
         <Link to="/UserGuide" className="headerText">UserGuide</Link>
         <Link to="/SignUp" className="headerText">SignUp</Link>

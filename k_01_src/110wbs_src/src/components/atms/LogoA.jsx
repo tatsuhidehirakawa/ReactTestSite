@@ -7,7 +7,7 @@ const LogoA = () => {
   return (
     <div className="logoOutline">
       <Link to="/main">
-      <img src={logo} className="logoIcon" alt="logo" />
+      <img src={logo} className="logoInline" alt="logo" />
       </Link>
     </div>
   );
