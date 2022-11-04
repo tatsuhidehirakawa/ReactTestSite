@@ -23,10 +23,8 @@ npm install sass@latest
 
 # Restore samplecodes.(If you want to see React sample page, comment out mv command.)
 mv ../public/Assets ./public
-mv ../public/LandingPage ./public
+# mv ../public/LandingPage ./public
 mv ../public/index.html ./public
-# mv ../public/LandingPage.html ./public
-# mv ../public/LandingPage.scss ./public
 mv ../src/components ./src
 mv ../src/hooks ./src
 mv ../src/types ./src
