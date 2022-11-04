@@ -17,6 +17,9 @@ const SignUp = () => {
       <ApiFetch />
       <div className="templete_text"></div>
       <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
       <p className="PageTextA">- SignUp -</p>
       </div>
     </div>

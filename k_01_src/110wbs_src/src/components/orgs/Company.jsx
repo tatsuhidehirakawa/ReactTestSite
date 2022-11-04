@@ -13,6 +13,9 @@ const Company = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
         <p className="PageTextA">- Company(Sample) -</p>
         </div>
       </div>

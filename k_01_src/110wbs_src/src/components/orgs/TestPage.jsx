@@ -16,6 +16,9 @@ const TestPage = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
       </div>
     </div>
   )

@@ -13,10 +13,13 @@ const MyPage = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
         <p className="PageTextA">- MyPage -</p>
       </div>
     </div>
-    )
+  )
 }
 
 export default MyPage;

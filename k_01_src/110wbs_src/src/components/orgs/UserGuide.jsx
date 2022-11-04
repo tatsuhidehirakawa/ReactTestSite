@@ -15,6 +15,9 @@ const UserGuide = () => {
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
       <p className="PageTextA">- User Guide -</p>
       </div>
       </div>

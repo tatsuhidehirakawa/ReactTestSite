@@ -8,12 +8,15 @@ const Products = () => {
         {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
         <p className="Products_text_a">- <b>Products</b>(Sample) -</p>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
       </div>
     </div>
   )
