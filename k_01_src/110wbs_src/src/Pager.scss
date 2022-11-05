@@ -1,6 +1,5 @@
 
-// outline color control
-
+//--- outline color control -----------------------------
 $NewsBackgroundColor: #bed2c3;
 $ProductsBackgroundColor: #bed2c3;
 $TestPageBackgroundColor: #bed2c3;
@@ -19,43 +18,43 @@ $PrivacyBackgroundColor: #bed2c3;
   background-color: #f8b500;   //for test
 }
 
-
 @mixin PageOutline {
     height: 1200px;
     width: auto;
-    margin-top: 0px auto;
+    // margin-top: 0px auto;
+    margin-top: 0px;
     // background-color: rgb(167, 167, 167);  // For test
     // border: 5px dotted #4097a7;  // For test
   }
   
-  @mixin PageInlineA {
-    height: 400px;
-    width: 900px;
-    // float: both;
-    margin: 50px auto;
-    // padding: 9px 0px 99px 0px;
-    padding: 50px;
-    // margin: auto;
-    // border: 5px dotted #d16363;  // For test
-    // background-color: rgb(233, 185, 185);  // For test
-    opacity: 0.5;
-  }
-  
-  @mixin PageTextA {
-    color: rgb(0, 0, 0);
+@mixin PageInlineA {
+  height: 400px;
+  width: 900px;
+  // float: both;
+  margin: 50px auto;
+  // padding: 9px 0px 99px 0px;
+  padding: 50px;
+  // margin: auto;
+  // border: 5px dotted #d16363;  // For test
+  // background-color: rgb(233, 185, 185);  // For test
+  opacity: 0.5;
+}
+
+@mixin PageTextA {
+  color: rgb(0, 0, 0);
   //top: 0px;
-    padding: 0px 0px 0px 0px;
-    margin: 35px 3px 35px 0px;
-    cursor: pointer;
-  }
+  padding: 0px 0px 0px 0px;
+  margin: 35px 3px 35px 0px;
+  cursor: pointer;
+}
   
-  @mixin PageTextS {
-    height: auto;
-    width: auto;
-    margin: 10px 30px 10px 30px;
-    padding: 10px 10px 10px 10px;
-    background-color: rgb(81, 81, 81);
-    border-radius: 30px;
-  }
+@mixin PageTextS {
+  height: auto;
+  width: auto;
+  margin: 10px 30px 10px 30px;
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(81, 81, 81);
+  border-radius: 30px;
+}
 
 
