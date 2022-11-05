@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-        <p className="PageTextA">- Contact Us -</p>
+        <p className="PageTextA">- <b>Contact Us</b>(Sample) -</p>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
