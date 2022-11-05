@@ -1,6 +1,6 @@
 
 //--- outline color control -----------------------------
-$NewsBackgroundColor: #bed2c3;
+$NewsBackgroundColor: #cecdb2;
 $ProductsBackgroundColor: #bed2c3;
 $TestPageBackgroundColor: #bed2c3;
 $PricingBackgroundColor: #bed2c3;
@@ -20,15 +20,17 @@ $PrivacyBackgroundColor: #bed2c3;
 
 @mixin PageOutline {
     height: 1200px;
-    width: auto;
+    width: 1200px;
+    // margin-left: auto;
+    // margin-right: auto;
     // margin-top: 0px auto;
-    margin-top: 0px;
+    margin: 0px auto;
     // background-color: rgb(167, 167, 167);  // For test
     // border: 5px dotted #4097a7;  // For test
   }
   
 @mixin PageInlineA {
-  height: 400px;
+  height: 800px;
   width: 900px;
   // float: both;
   margin: 50px auto;
@@ -57,4 +59,9 @@ $PrivacyBackgroundColor: #bed2c3;
   border-radius: 30px;
 }
 
-
+// Frosted Glass Effect
+@mixin FrostedGlass {
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter:blur(8px);
+  filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+}

@@ -5,6 +5,7 @@
 //--- Page Outline ------------------------------------------------
 .PageOutline {
   @include PageOutline;
+  background-color: $TestPageBackgroundColor;
 }
 //--- Page Inline -------------------------------------------------
 .PageInlineA {
