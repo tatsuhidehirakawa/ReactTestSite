@@ -10,7 +10,6 @@ const News = () => {
             202x.xx.xx: サービスのローンチを行なった。<br />
             202x.xx.xx: xx機能をリリースしました。<br />
           </p>
-          <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
@@ -26,10 +25,10 @@ const News = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <p className="PageTextA">- News -</p>
+        <p className="PageTextA">- <b>News</b>(Sample) -</p>
       </div>
     </div>
   )
 }
+
 export default News;
