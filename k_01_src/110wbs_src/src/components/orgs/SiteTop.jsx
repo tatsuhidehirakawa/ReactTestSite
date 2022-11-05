@@ -5,7 +5,7 @@ const SiteTop = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-      <p className="PageTextA">- SiteTop -</p>
+      <p className="PageTextA">- <b>SiteTop</b> -</p>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <p>
@@ -29,9 +29,7 @@ const SiteTop = () => {
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
+      <p className="PageTextA">- <b>SiteTop</b> -</p>
       </div>
     </div>
   )
