@@ -26,6 +26,12 @@ const Top = () => {
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
+      <div className="PageTextS"></div>
       </div>
     </div>
   )

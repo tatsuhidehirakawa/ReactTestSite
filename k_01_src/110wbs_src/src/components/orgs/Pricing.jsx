@@ -7,18 +7,28 @@ const Pricing = () => {
       <div className="PageInlineA">
         <p className="PageTextA">- <b>Pricing</b>(Sample) -</p>
         <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-        <p className="PageTextA">- Pricing -</p>
-       </div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- <b>Pricing</b>(Sample) -</p>
       </div>
+    </div>
   )
 }
 export default Pricing;

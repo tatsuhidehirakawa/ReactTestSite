@@ -5,7 +5,7 @@ const Agreement = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-        <p className="PageTextA">- Agreement(Sample) -</p>
+        <p className="PageTextA">- <b>Agreement</b>(Sample) -</p>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
@@ -16,7 +16,17 @@ const Agreement = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <p className="PageTextA">- Agreement -</p>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- <b>Agreement</b>(Sample) -</p>
       </div>
     </div>
   )

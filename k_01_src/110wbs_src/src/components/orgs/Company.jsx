@@ -5,7 +5,7 @@ const Company = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-        <p className="PageTextA">- Company(Sample) -</p>
+        <p className="PageTextA">- <b>Company</b>(Sample) -</p>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
@@ -16,9 +16,19 @@ const Company = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <p className="PageTextA">- Company(Sample) -</p>
-        </div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- <b>Company</b>(Sample) -</p>
       </div>
+    </div>
   )
 }
 

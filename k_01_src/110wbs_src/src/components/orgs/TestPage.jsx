@@ -7,18 +7,28 @@ const TestPage = () => {
     <div className="PageOutline">
       <div className="PageInlineA">
         {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-        <p className="PageTextA">- Products -</p>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
+        <p className="PageTextA">- <b>TestPage</b>(Sample) -</p>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
         <ApiFetch />
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <div className="templete_text"></div>
+        <p className="PageTextA">- <b>TestPage</b>(Sample) -</p>
       </div>
     </div>
   )

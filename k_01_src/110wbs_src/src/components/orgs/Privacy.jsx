@@ -11,20 +11,30 @@ const Privacy = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-      <p className="PageTextA">- <b>Privacy</b>(Sample) -</p>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <p className="PageTextA">- Privacy -</p>
-      </div>
-      </div>
+        <p className="PageTextA">- <b>Privacy</b>(Sample) -</p>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA"> <b>Privacy</b>(Sample) </p>
+      </div>  
+    </div>
   )
 }
 

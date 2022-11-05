@@ -5,7 +5,7 @@ const MyPage = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-        <p className="PageTextA">- MyPage(Sample) -</p>
+        <p className="PageTextA">- <b>MyPage</b>(Sample) -</p>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
@@ -16,7 +16,17 @@ const MyPage = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <p className="PageTextA">- MyPage -</p>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- <b>MyPage</b>(Sample) -</p>
       </div>
     </div>
   )

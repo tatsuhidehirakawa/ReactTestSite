@@ -5,20 +5,30 @@ const Recruit = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-      <p className="PageTextA">- <b>Recruit</b>(Sample) -</p>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
-        <p className="PageTextA">- Pricing -</p>
-       </div>
+        <p className="PageTextA">- <b>Recruit</b>(Sample) -</p>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <p className="PageTextA">- <b>Recruit</b>(Sample) -</p>
       </div>
+    </div>
   )
 }
 

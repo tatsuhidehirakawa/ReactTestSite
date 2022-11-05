@@ -14,13 +14,22 @@ const SignUp = () => {
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
       <ApiFetch />
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
       <div className="templete_text"></div>
-      <p className="PageTextA">- SignUp -</p>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <div className="templete_text"></div>
+      <p className="PageTextA">- <b>SignUp</b>(Sample) -</p>
       </div>
     </div>
     )
