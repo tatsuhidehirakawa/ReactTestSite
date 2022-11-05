@@ -9,26 +9,23 @@ const SignUp = () => {
 
       {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
       <p className="PageTextA">- <b>SignUp</b>(Sample) -</p>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
+      <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
       <ApiFetch />
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
-      <div className="templete_text"></div>
+      <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
       <p className="PageTextA">- <b>SignUp</b>(Sample) -</p>
       </div>
     </div>

@@ -23,9 +23,6 @@ const Products = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
         <p className="Products_text_a">- <b>Products</b>(Sample) -</p>
       </div>
     </div>

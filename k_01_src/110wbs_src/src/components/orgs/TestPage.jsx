@@ -16,10 +16,7 @@ const TestPage = () => {
         <div className="templete_text"></div>
         <div className="templete_text"></div>
         <div className="templete_text"></div>
-        <div className="templete_text"></div>
         <ApiFetch />
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
         <div className="templete_text"></div>
         <div className="templete_text"></div>
         <div className="templete_text"></div>

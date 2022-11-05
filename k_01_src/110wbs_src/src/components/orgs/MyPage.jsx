@@ -23,9 +23,6 @@ const MyPage = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
         <p className="PageTextA">- <b>MyPage</b>(Sample) -</p>
       </div>
     </div>

@@ -23,9 +23,6 @@ const Pricing = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
         <p className="PageTextA">- <b>Pricing</b>(Sample) -</p>
       </div>
     </div>

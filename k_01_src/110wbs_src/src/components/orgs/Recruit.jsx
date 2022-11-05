@@ -23,9 +23,6 @@ const Recruit = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
         <p className="PageTextA">- <b>Recruit</b>(Sample) -</p>
       </div>
     </div>

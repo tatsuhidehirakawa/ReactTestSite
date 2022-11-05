@@ -29,9 +29,6 @@ const Privacy = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
         <p className="PageTextA"> <b>Privacy</b>(Sample) </p>
       </div>  
     </div>

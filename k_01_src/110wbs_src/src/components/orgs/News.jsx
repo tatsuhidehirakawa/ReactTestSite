@@ -27,7 +27,6 @@ const News = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
         <p className="PageTextA">- News -</p>
       </div>
     </div>
