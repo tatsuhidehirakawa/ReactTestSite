@@ -10,7 +10,7 @@ const Nukes = () => {
       <p>
         Welcome to the "<code>STGprd_devpkg</code>" - Ver 0.3.0.0
       </p>
-      <Link to="/Top" className="App-link">View Package Summary</Link>
+      <Link to="/SiteTop" className="App-link">View Package Summary</Link>
     </header>
   )
 }
