@@ -1,4 +1,6 @@
 @import "./TestPage.scss";
+@import "../../Pager.scss";
+
 
 //--- Common Declarations -----------------------------------------
 @mixin footerText {
@@ -14,8 +16,9 @@
 //--- Footer Outline ----------------------------------------------
 .footerOutline {
   height: 99px;
-  padding: 80px 0;
-  float: inline-end;
+  padding: 80px 0px;
+  // float: inline-end;
+  // bottom: 0px;
   @include FrostedGlass;
 }
 
