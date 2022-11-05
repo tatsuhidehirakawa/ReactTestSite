@@ -1,11 +1,11 @@
 import React from "react"
-import "./Top.scss"
+import "./SiteTop.scss"
 
-const Top = () => {
+const SiteTop = () => {
   return (
     <div className="PageOutline">
       <div className="PageInlineA">
-      <p className="PageTextA">- Main -</p>
+      <p className="PageTextA">- SiteTop -</p>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <p>
@@ -37,4 +37,4 @@ const Top = () => {
   )
 }
 
-export default Top;
+export default SiteTop;

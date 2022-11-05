@@ -15,7 +15,7 @@ import Contact from  './components/orgs/Contact.jsx';
 import Recruit from  './components/orgs/Recruit.jsx';
 import Company from  './components/orgs/Company.jsx';
 import Privacy from  './components/orgs/Privacy.jsx';
-import Top from  './components/orgs/Top.jsx';
+import SiteTop from  './components/orgs/SiteTop.jsx';
 
 const Router = () => {
   return (
@@ -28,7 +28,7 @@ const Router = () => {
         {/* <Route path={`/Products`} element={<Layout><Products /></Layout>} /> */}
         <Route path={`/TestPage`} element={<Layout><TestPage /></Layout>} />
         <Route path={`/Pricing`} element={<Layout><Pricing /></Layout>} />
-        <Route path={`/Top`} element={<Layout><Top /></Layout>} />
+        <Route path={`/SiteTop`} element={<Layout><SiteTop /></Layout>} />
         <Route path={`/Agreement`} element={<Layout><Agreement /></Layout>} />
         <Route path={`/UserGuide`} element={<Layout><UserGuide /></Layout>} />
         <Route path={`/SignUp`} element={<Layout><SignUp /></Layout>} />
@@ -41,6 +41,7 @@ const Router = () => {
     </BrowserRouter>
   );
 }
+
 export default Router;
 
 
