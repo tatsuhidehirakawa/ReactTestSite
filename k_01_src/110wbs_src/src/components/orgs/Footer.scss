@@ -18,7 +18,9 @@
   height: 99px;
   padding: 80px 0px;
   // float: inline-end;
-  // bottom: 0px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
   @include FrostedGlass;
 }
 

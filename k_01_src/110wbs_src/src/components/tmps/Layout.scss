@@ -1,10 +1,17 @@
-.flex-list {
+// .flex-list {
+//   display: flex;
+//   flex-direction: column;
+//   // justify-content: space-between;
+//   margin:  0px auto;
+//   // padding: 0;
+//   list-style: none;
+// }
+
+.li2 {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
-  margin:  0px auto;
-  // padding: 0;
-  list-style: none;
+  justify-content: center;
 }
 
 .mainOutline {
@@ -29,4 +36,5 @@
 .LayoutOutline {
   background-color: rgb(197, 187, 255);
   top: 0px;
+  height: 100vh;
 }
