@@ -4,27 +4,33 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
+    <>
     <div className="footerOutline">
-      {/* Logo area */}
-      <div className="footerLogo">
+      <div className="footer_flex">
+        {/* Logo area */}
+        <div className="footerLogo">
+        </div>
+        {/* Left area */}
+        <div className="footerLeft">
+        </div>
+        {/* Left area */}
+        <div className="footerCenter">
+        </div>
+        {/* Right area */}
+        <div className="footerRight">
+          <Link to="/Contact" className="footerText">Contact</Link>
+          <Link to="/Recruit" className="footerText">Recruit</Link>
+          <Link to="/Company" className="footerText">Company</Link>
+          <Link to="/Privacy" className="footerText">Privacy</Link>
+        </div>
       </div>
-      {/* Left area */}
-      <div className="footerLeft">
-      </div>
-      {/* Left area */}
-      <div className="footerCenter">
-      </div>
-      {/* Right area */}
-      <div className="footerRight">
-        <Link to="/Contact" className="footerText">Contact</Link>
-        <Link to="/Recruit" className="footerText">Recruit</Link>
-        <Link to="/Company" className="footerText">Company</Link>
-        <Link to="/Privacy" className="footerText">Privacy</Link>
-      </div>
-      <div className="Signature">
-        <p>since 20xx-2023@Sample team all right reserved.</p>
-      </div>
+      {/* Signature area */}
+      {/* <div className="Signature"> */}
+      {/* oupCopyright inc.-3 2022 All Right Reser. All Right Reserved */}
+      <p>2023-2022 &copy; Sample Inc.</p>
+      {/* </div> */}
     </div>
+    </>
   );
 }
 

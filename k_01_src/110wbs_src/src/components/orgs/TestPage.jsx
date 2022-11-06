@@ -8,31 +8,31 @@ const TestPage = () => {
       <div className="PageInlineA">
         {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
         <p className="PageTextA">- <b>TestPage</b>(Sample) -</p>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
         <ApiFetch />
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
-        <div className="templete_text"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
         <p className="PageTextA">- <b>TestPage</b>(Sample) -</p>
       </div>
     </div>

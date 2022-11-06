@@ -16,7 +16,7 @@
 //--- Footer Outline ----------------------------------------------
 .footerOutline {
   height: 99px;
-  padding: 80px 0px;
+  padding-bottom: 43px;
   // float: inline-end;
   width: 100%;
   bottom: 0;
@@ -30,7 +30,7 @@
   background-color: #5459546a;
   height: 150px;
   width: 200px;
-  float: left;
+  // float: left;
   img {
     height: 20px;
   }
@@ -55,14 +55,13 @@
 
 //--- Right menu ----------------------------------------------------
 .footerRight {
+  width: 50%;
   height: 10px;
   display: flex;
   flex-direction: column;
-  float: right;
-  margin: 15px;
-  padding: 15px;
+  margin: 0 42px 0px 4px;
   line-height: 2.0;
-  text-align: left;
+  text-align: center;
   // text-decoration: none;
   // @include background_test_color;
   .footerText {
@@ -70,14 +69,10 @@
   }
 }
 
-.Signature {
-  background-color: #6ebbe5;
+.footer_flex {
+  display: flex;
+  justify-content: space-between;
 }
-
-
-
-
-
 
 
 .footer-inner {
@@ -95,3 +90,9 @@
 // .footer_right {
   
 // }
+
+.Signature {
+  background-color: #84a2d4;
+  bottom: 0;
+  height: 30px;
+}
