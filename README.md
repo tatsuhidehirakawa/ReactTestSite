@@ -2,15 +2,16 @@
 1. Overview  
 It is a full-stack package for web development, focusing on the technology stack presented in the next chapter. It is optimized primarily as a template for creating large-scale CtoC sites. In particular, it is RESTful, does not use CSS-in-JS, minimizes Paas dependencies, emphasizes orthogonality and loose coupling, static typing, and Docker usage.  
 
-2. Technology stack  
-Frontend: TypeScript, React.js, Sass, Html, AtomicDesign.  
+2. Technology stacks.  
+Frontend: TypeScript, React.js, Sass, Html, AtomicDesign, MindBEMding, MUI.  
 Backend: Go(Gin,sqlc), PostgreSQL.  
 Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10, macOS Monterey, Mermaid.js.  
 
-3. Boot procedure  
+3. Boot procedure.  
 Please check the Makefile, that's all.  
+(Git and Docker are required at a minimum, and use of GNU Make is recommended).  
 
-4. (Warning) Handling of Version Control Files  
+4. (Warning) Handling of Version Control Files.  
 This package does not include the version control files "package.json", "go.mod", and "go.sum". If you use this package, please prepare these files by yourself. Refer to "Makefile" for information on how to apply the version control files.  
 
 5. Branch names  

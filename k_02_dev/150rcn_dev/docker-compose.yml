@@ -1,0 +1,16 @@
+  app:
+    # container_name: 150rcn_dev
+    # image:  archlinux
+    # build:
+    #   context: ../k_01_src/124api_src/src
+    #   dockerfile: ../../../k_02_dev/124api_dev/Dockerfile
+    build: .
+    tty: true
+    # volumes:
+    #   - ../k_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
+    #   # - api-vol:/go/src # Activate for Dockerfile Opration.
+    ports:
+      - "4444:4444"
+      # Port No of Host(non-overlapable):Port No of Container(overlappable)
+    # networks:
+    #   - STGprd_devpkg_dev_network

@@ -7,9 +7,11 @@ import Layout from './components/tmps/Layout.jsx';
 import News from './components/orgs/News.jsx';
 import Products from  './components/orgs/Products.jsx';
 import Agreement from  './components/orgs/Agreement.jsx';
-import Pricing from  './components/orgs/Pricing.jsx';
+// import Pricing from  './components/orgs/Pricing.jsx';
+import PricingContent from  './components/orgs/Pricing.tsx';
 import UserGuide from  './components/orgs/UserGuide.jsx';
-import SignUp from  './components/orgs/SignUp.jsx';
+// import SignUp from  './components/orgs/SignUp.jsx';
+import SignUp from  './components/orgs/SignUp.tsx';
 import MyPage from  './components/orgs/MyPage.jsx';
 import Contact from  './components/orgs/Contact.jsx';
 import Recruit from  './components/orgs/Recruit.jsx';
@@ -27,7 +29,7 @@ const Router = () => {
         <Route path={`/News`} element={<Layout><News /></Layout>} />
         <Route path={`/Products`} element={<Layout><Products /></Layout>} />
         {/* <Route path={`/TestPage`} element={<Layout><TestPage /></Layout>} /> */}
-        <Route path={`/Pricing`} element={<Layout><Pricing /></Layout>} />
+        <Route path={`/Pricing`} element={<Layout><PricingContent /></Layout>} />
         <Route path={`/SiteTop`} element={<Layout><SiteTop /></Layout>} />
         <Route path={`/Agreement`} element={<Layout><Agreement /></Layout>} />
         <Route path={`/UserGuide`} element={<Layout><UserGuide /></Layout>} />
@@ -43,6 +45,7 @@ const Router = () => {
 }
 
 export default Router;
+
 
 
 
