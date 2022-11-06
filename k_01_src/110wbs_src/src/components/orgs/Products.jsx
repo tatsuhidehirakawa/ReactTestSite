@@ -1,11 +1,21 @@
 import React from "react"
 import "./Products.scss"
+import ApiFetch from '../../hooks/ApiFetch.jsx';
 
 const Products = () => {
   return (
-    <div className="productsPageOutline">
-      <div className="productsPageInlines">
-        <p className="Products_text_a">- <b>Products</b>(Sample) -</p>
+    <div className="PageOutline">
+      <div className="PageInlineA">
+        <p className="PageTextA">- <b>Products</b>(Sample) -</p>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <div className="PageTextS"></div>
+        <ApiFetch />
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
@@ -22,8 +32,7 @@ const Products = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <p className="Products_text_a">- <b>Products</b>(Sample) -</p>
+        <p className="PageTextA">- <b>Products</b>(Sample) -</p>
       </div>
     </div>
   )
