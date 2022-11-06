@@ -1,7 +1,6 @@
 @import "./TestPage.scss";
 @import "../../Pager.scss";
 
-
 //--- Common Declarations -----------------------------------------
 @mixin footerText {
   // margin: 300px 3px 3px 30px;
@@ -13,9 +12,11 @@
   // font-weight: bold;
 }
 
-//--- Footer Outline ----------------------------------------------
+//--- Definition of outermost area ---------------------------------
 .footerOutline {
-  height: 99px;
+  display: flex;
+  flex-direction: column;
+  height: 154px;
   padding-bottom: 43px;
   // float: inline-end;
   width: 100%;
@@ -24,20 +25,29 @@
   @include FrostedGlass;
 }
 
-//--- Logo --------------------------------------------------------
-.footerLogo {
-  // display: inline-block;
-  background-color: #5459546a;
-  height: 150px;
-  width: 200px;
-  // float: left;
-  img {
-    height: 20px;
-  }
+//--- Definition of intermediate areas ----------------------------
+.footerInlineA {
+  display: flex;
+  justify-content: space-between;
 }
 
-//--- Left menu　---------------------------------------------------
-.footerLeft {
+// Signeture area
+.footerInlineB {
+  background-color: #84a2d4;
+  bottom: 0;
+  height: 25px;
+}
+
+//--- Definition of internal areas -------------------------------
+// Logo area
+.footerInlineA_SectionA {
+  margin-left: 7px;
+  float: left;
+  height: 59px;
+  width: 58px;
+}
+
+.footerInlineA_SectionB {
   display: inline-block;
   img {
     height: 20px;
@@ -48,18 +58,16 @@
   }
 }
 
-//---Center area ----------------------------------------------------
-.footerCenter {
+.footerInlineA_SectionC {
   @include background_test_color;
 }
 
-//--- Right menu ----------------------------------------------------
-.footerRight {
-  width: 50%;
+.footerInlineA_SectionD {
+  width: 20%;
   height: 10px;
   display: flex;
   flex-direction: column;
-  margin: 0 42px 0px 4px;
+  margin: 18px 29px 0px 0px;
   line-height: 2.0;
   text-align: center;
   // text-decoration: none;
@@ -67,32 +75,4 @@
   .footerText {
     @include footerText;
   }
-}
-
-.footer_flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.footer-inner {
-  margin: 0 auto;
-  ul {
-    float: right;
-  }
-  li {
-    color: #2b546a;
-    display: inline-block;
-    padding-left: 16px;
-  }
-}
-
-// .footer_right {
-  
-// }
-
-.Signature {
-  background-color: #84a2d4;
-  bottom: 0;
-  height: 30px;
 }
