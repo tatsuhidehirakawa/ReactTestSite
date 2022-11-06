@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import SearchBox from "./SearchBox";
+// import Language from './Language.jsx';
 import SignIn from './Signin.jsx';
 import LogoA from '../atms/LogoA.jsx';
 import "./Header.scss";
@@ -23,6 +24,7 @@ const Header = () => {
       </div>
       {/* Left area */}
       <div className="headerRight">
+        {/* <Language /> */}
         <Link to="/SiteTop" className="headerText">SiteTop</Link>
         <Link to="/Agreement" className="headerText">Agreement</Link>
         <Link to="/UserGuide" className="headerText">UserGuide</Link>

@@ -21,7 +21,11 @@ const Footer = () => {
         <Link to="/Company" className="footerText">Company</Link>
         <Link to="/Privacy" className="footerText">Privacy</Link>
       </div>
+      <div className="Signature">
+        <p>since 20xx-2023@Sample team all right reserved.</p>
+      </div>
     </div>
   );
 }
+
 export default Footer;
