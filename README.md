@@ -15,7 +15,7 @@ Please check the Makefile, that's all.
 ```
 STGprd Repository Diagram
 
-./k_01_src                          +-----------+ 
+./STGprd_devpkg/s_01_src            +-----------+ 
 (Sorce code)                        |/110wbs_src| React,Sass,TypeScript
                                     |  +-----------+  
                                     |  |/124api_src| Golang
@@ -25,7 +25,7 @@ STGprd Repository Diagram
                                        |  |Sorce codes|
                                        +--|           |
                                          ||           /
-./k_02_dev                               |+----+-----/
+./STGprd_devpkg/s_02_dev                 |+----+-----/
 (Development environment)                |  |  |
                   +----------------------|--|--|--------------------+
                   |      +-----------+   |  |  |                    |
@@ -35,7 +35,7 @@ STGprd Repository Diagram
                   |      |TypeScript |   |  |  |      +-----------+ |
                   | +----#3000       |   |  |  |      |/134dbs_dev| |
    For develop    | |    +-----------+   |  |  |      |  DBServer | | 
-  localhost:3000<---+    +-----------+   |  |  I<---->+ PostgreSQL| |
+  localhost:3000<---+    +-----------+   |  |  V<---->+ PostgreSQL| |
   "make init.d"   | |    |/124api_dev|   |  |  |      |           | |
                   | |    | APIServer |   |  |  |  +-->#5432       | |
                   | |    |  Golang   +<--B  |  |  |   +-----------+ |
@@ -44,19 +44,19 @@ STGprd Repository Diagram
                   |      +-----------+   |  |  |                    |
                   +----------------------M--M--D--------------------+
                                          |  |  |  
-./k_03_tst                          +----+--|--|+ 
+./STGprd_devpkg/s_03_tst            +----+--|--|+ 
 (Testing environment)               |/110wbs|ts||
                                     |  +----+--|---+  
                                     |  |/120api|tst|
      A: Air(Hot reload)             |  |  +----+------+                      
      B: Bind Mount                  |  |  |/130dbs_tst|
      D: Dump and restore            +--|  | Container |
-     I: Initialize & Volume Mount      |  |    for    |
-     M: Multi stage build              +--|   test    |
-     S: sqlc(O/R Mapper)                  |           |
+     M: Multi stage build              |  |    for    |
+     S: sqlc(O/R Mapper)               +--|   test    |
+     V: Initialize & Volume Mount         |           |
                                           +-----------+
                                              |
-./k_04_stg                                   |
+./STGprd_devpkg/s_04_stg                     |
 (Staging environment)                     Staging
                                         (Terraform)
 ```
@@ -64,11 +64,11 @@ STGprd Repository Diagram
 This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  
 ```
 myportfolio_k
-  ├─k_01_src              # Source codes.
+  ├─s_01_src              # Source codes.
   |   ├─110wbs_src
   |   ├─124api_src
   |   └─134dbs_src
-  ├─k_02_dev              # Management files for Development.(REST)
+  ├─s_02_dev              # Management files for Development.(REST)
   |   ├─110wbs_dev
   |   |   ├─Dockerfile
   |   |   └─package.json  # Place the version control files used by the team here.
@@ -79,13 +79,13 @@ myportfolio_k
   |   ├─134dbs_dev
   |   ├─docker-compose.yml
   |   └─Makefile
-  ├─k_05_tst              # Management files for Test.
+  ├─s_05_tst              # Management files for Test.
   |   ├─110wbs_tst
   |   ├─124api_tst
   |   ├─134dbs_tst
   |   ├─docker-compose.yml
   |   └─Makefile
-  ├─k_08_stg              # Management files for Stage.
+  ├─s_08_stg              # Management files for Stage.
   |   └─Makefile
   ├─Makefile              # Control files for Repository.
   └─README.md
