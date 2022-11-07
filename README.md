@@ -67,7 +67,7 @@ Architecture(REST)
                   |      |React,Sass +<--|--+  |                    |
                   |      |TypeScript |   |  |  |      +-----------+ |
                   | +----#3000       |   |  M  |      | *134/dev  | |
-  For develop     | |    +-----------+   |  |  |      |  DBServer | |
+  For develop     | |    +-----------+   |  |  |      |  DBServer | | 
 localhost:3000<-----+    +-----------+   |  |  +----->+ PostgreSQL| |
 "make init.d"     | |    | *124/dev  |   |  |  |      |           | |
                   | |    | APIServer |   |  |  |  +-->+#5432      | |
@@ -88,6 +88,10 @@ localhost:3000<-----+    +-----------+   |  |  +----->+ PostgreSQL| |
                                        +--|   test    |
                                           |           |
                                           +-----------+
+                                             |
+                                             |
+                                          Staging
+                                        (Terraform)
 ```
 
 
