@@ -29,31 +29,31 @@ STGprd Architecture(REST)
 (Development environment)                |  |  |
                   +----------------------|--|--|--------------------+
                   |      +-----------+   |  |  |                    |
-                  |      |/110wbs_dev|   B  B  V                    |
+                  |      |/110wbs_dev|   |  |  |                    |
                   |      | WebServer |   |  |  |                    |
-                  |      |React,Sass +<--|--+  |                    |
+                  |      |React,Sass +<--|--B  |                    |
                   |      |TypeScript |   |  |  |      +-----------+ |
                   | +----#3000       |   |  |  |      |/134dbs_dev| |
    For develop    | |    +-----------+   |  |  |      |  DBServer | | 
-  localhost:3000<---+    +-----------+   |  |  +-<--->+ PostgreSQL| |
+  localhost:3000<---+    +-----------+   |  |  I<---->+ PostgreSQL| |
   "make init.d"   | |    |/124api_dev|   |  |  |      |           | |
                   | |    | APIServer |   |  |  |  +-->+#5432      | |
-                  | A    |  Golang   +<--+  |  |  |   +-----------+ |
-                  | |    |           |   |  |  |  S                 |
-                  | +--->#8080       |<-----------+                 |
+                  | |    |  Golang   +<--B  |  |  |   +-----------+ |
+                  | |    |           |   |  |  |  |                |
+                  | A--->#8080       +<-----------S                 |
                   |      +-----------+   |  |  |                    |
-                  +----------------------|--|--|--------------------+
-                                         M  M  D  
+                  +----------------------M--M--D--------------------+
+                                         |  |  |  
 ./k_03_tst                          +----+--|--|+ 
 (Testing environment)               |/110wbs|ts||
                                     |  +----+--|---+  
                                     |  |/120api|tst|
-          A: Air(Hot reload)        |  |  +----+------+                      
-          B: Bind Mount             |  |  |/130dbs_tst|
-          V: Volume Mount           +--|  | Container |
-          M: Multi stage build         |  |    for    |
-          D: Dump and restore          +--|   test    |
-          S: sqlc(O/R Mapper)             |           |
+     A: Air(Hot reload)             |  |  +----+------+                      
+     B: Bind Mount                  |  |  |/130dbs_tst|
+     D: Dump and restore            +--|  | Container |
+     I: Initialize & Volume Mount      |  |    for    |
+     M: Multi stage build              +--|   test    |
+     S: sqlc(O/R Mapper)                  |           |
                                           +-----------+
                                              |
 ./k_04_stg                                   |
