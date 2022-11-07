@@ -19,6 +19,7 @@ This package does not include the version control files "package.json", "go.mod"
 (2)  
 
 6. Directory structure diagram (overall/excerpt)  
+This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  
 ```
 myportfolio_k
   ├─k_01_src                 # Source codes.
