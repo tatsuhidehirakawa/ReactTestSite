@@ -27,7 +27,7 @@ Sorce code                          +-----------+
                                          ||           /
 Development environment                  |+----+-----/
 (./STGprd_devpkg/s_03_dev)               |  |  |
-"make init.d"     +----------------------|--|--|--------------------+
+"make init.dev"   +----------------------|--|--|--------------------+
                   |      +-----------+   |  |  |                    |
                   |      |/110wbs_dev|   |  |  |                    |
                   |      | WebServer |   |  |  |                    |
@@ -46,7 +46,7 @@ Development environment                  |+----+-----/
                                          |  |  |  
 Testing environment                 +----+--|--|+ 
 (./STGprd_devpkg/s_03_tst)          |/110wbs|ts||
-"make init.t"                       |  +----+--|---+  
+"make init.tst"                     |  +----+--|---+  
                                     |  |/120api|tst|
      A: Air(Hot reload)             |  |  +----+------+                      
      B: Bind Mount                  |  |  |/130dbs_tst|
@@ -58,7 +58,7 @@ Testing environment                 +----+--|--|+
                                              |
 Staging environment                          |
 (./STGprd_devpkg/s_04_stg)                Staging
-"make init.s"                           (Terraform)
+"make init.stg"                         (Terraform)
 ```
 6. Directory structure diagram (overall/excerpt)  
 This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  
