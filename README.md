@@ -11,9 +11,9 @@ Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:S
 Please check the Makefile, that's all.  
 (Git and Docker are required at a minimum, and use of GNU Make is recommended).  
 
-5. Server configuration diagram (overall)  
+5. STGprd Repository Diagram (overall)  
 ```
-STGprd Architecture(REST)
+STGprd Repository Diagram
 
 ./k_01_src                          +-----------+ 
 (Sorce code)                        |/110wbs_src| React,Sass,TypeScript
