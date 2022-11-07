@@ -71,14 +71,6 @@ myportfolio_k
   └─README.md
 ```
 
-9. Task list  
-- [x] [#2785](k_01_src/124api_src/src/main.go) : Add "post" method on "main.go".  
-- [ ] [#7236](k_01_src/124api_src/src/main.go) : Add "delete" method on "main.go".  
-- [ ] [#9832](k_01_src/124api_src/src/main.go) : Add "put" method on "main.go".  
-- [ ] [#5982](k_01_src/124api_src/src/main.go) : Add "Environment variable" on "main.go".  
-- [ ] [#8246](k_01_src/124api_src/src/main.go) : Add "Authentication mechanism" on "API".  
-- [ ] [#3256](k_03_tst/120api_tst/Dockerfile) : Add test environment on "k_03_tst".(Use multistage build.)  
-
 <!--
 使いやすさを優先せず、１０年後でも理解できるコードを！
 
