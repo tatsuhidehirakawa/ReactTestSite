@@ -63,5 +63,5 @@ docker exec -it k_901set_dev-212api_dev ping -c 3 311dbs_dev # 311dbs_devへping
 ３　今後の課題（覚え書き）  
 ①引き続きローカルのOSにはDocker Desktop for Windows以外のミドルウェアをインストールせず開発環境はDocker上に構築すること  
 ②「create-react-app」を使用せずに開発用コンテナを作成すること  
-③「docker-compose.yml」ファイルをルートディレクトリ「myportfolio_k」直下で一つにまとめること  
+③「docker-compose.yml」ファイルをルートディレクトリ「STGprd_devpkg」直下で一つにまとめること  
 -->

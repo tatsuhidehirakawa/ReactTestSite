@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ----+----+----+----+----+----+---+----+----+----+-- #
-go mod init github.com/tatsuhidehirakawa/myportfolio_k
+go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
 
 # --- sqlc-+----+----+----+----+---+----+----+----+-- #
 go get github.com/kyleconroy/sqlc/cmd/sqlc
