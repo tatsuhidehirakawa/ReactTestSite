@@ -6,13 +6,11 @@ import './Layout.scss';
 const Layout = ({children}) => {
   return (
     <>
-    <div className="LayoutOutline">
-      {/* <div className="flex-list>"> */}
-        <div className="li1"><Header /></div>
-        <div className="li2">{children}</div>
-        <div className="li3"><Footer /></div>
-      </div>
-    {/* </div> */}
+    <div className="layout--outline__violet">
+      <div className="layout--outline__inlineA__header"><Header /></div>
+      <div className="layout--outline__inlineB__children">{children}</div>
+      <div className="layout--outline__inlineC__footer"><Footer /></div>
+    </div>
     </>
   );
 }
