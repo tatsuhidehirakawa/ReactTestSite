@@ -3,9 +3,14 @@
 It is a full-stack package for web development, focusing on the technology stack presented in the next chapter. It is optimized primarily as a template for creating large-scale CtoC sites. In particular, it is RESTful, does not use CSS-in-JS, minimizes Paas dependencies, emphasizes orthogonality and loose coupling, static typing, and Docker usage.  
 
 2. Technology stacks.  
-Frontend: TypeScript, React.js, Sass, Html, AtomicDesign, MindBEMding, MUI.  
-Backend: Go(Gin,sqlc), PostgreSQL.  
-Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10, macOS Monterey, Mermaid.js.  
+Common: Docker, GNU Make, VSCode, Git&Github, Mermaid.js.  
+Development environment: Air(Golang).  
+-> Frontend: TypeScript, React.js, Sass, Html, AtomicDesign, MindBEMding, MUI.  
+-> Backend: Go(Gin,sqlc), PostgreSQL, A5:SQL Mk-2.  
+Testing environment:  
+-> CircliCI  
+Staging environment:  
+-> Terraform  
 
 3. Boot procedure.  
 Please check the Makefile, that's all.  
@@ -15,7 +20,7 @@ Please check the Makefile, that's all.
 ```
 STGprd Repository Diagram
 
-Sorce code                          +-----------+ 
+<Sorce code>                        +-----------+ 
 (./STGprd_devpkg/s_01_src)          |/110wbs_src| React,Sass,TypeScript
                                     |  +-----------+  
                                     |  |/124api_src| Golang
@@ -25,7 +30,7 @@ Sorce code                          +-----------+
                                        |  |Sorce codes|
                                        +--|           |
                                          ||           /
-Development environment                  |+----+-----/
+<Development environment>                |+----+-----/
 (./STGprd_devpkg/s_03_dev)               |  |  |
 "make init.dev"   +----------------------|--|--|--------------------+
                   |      +-----------+   |  |  |                    |
@@ -44,7 +49,7 @@ Development environment                  |+----+-----/
                   |      +-----------+   |  |  |                    |
                   +----------------------M--M--D--------------------+
                                          |  |  |  
-Testing environment                 +----+--|--|+ 
+<Testing environment>               +----+--|--|+ 
 (./STGprd_devpkg/s_03_tst)          |*110wbs|ts||
 "make init.tst"                     |  +----+--|---+  
                                     |  |/120api|tst|
@@ -56,11 +61,11 @@ Testing environment                 +----+--|--|+
      V: Initialize & Volume Mount         |           |
                                           +-----------+
                                              |
-Staging environment                          |
+<Staging environment>                        |
 (./STGprd_devpkg/s_04_stg)                Staging
 "make init.stg"                         (*Terraform)
                                              |
-Deploy                                       |
+<Deploy>                                     |
                                            Deploy
 ```
 6. Directory structure diagram (overall/excerpt)  
