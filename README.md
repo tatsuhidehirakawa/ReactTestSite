@@ -14,18 +14,11 @@ Please check the Makefile, that's all.
 4. (Warning) Handling of Version Control Files.  
 This package does not include the version control files "package.json", "go.mod", and "go.sum". If you use this package, please prepare these files by yourself. Refer to "Makefile" for information on how to apply the version control files.  
 
-5. Branch names  
-master -> Existing version.  
-hotfix-100622 -> API server sorce code development.  
-<!-- develop -> Next Version.  -->
-<!-- release-*  -->
-<!-- hotfix-100622 -->
-
-6. Considerations  
-(1)改行文字の制御に「.gitattributes」を使用  
+5. Considerations  
+(1)  
 (2)  
 
-7. Server configuration diagram (overall)  
+6. Server configuration diagram (overall)  
 ```
 REST(ULCODC$SS)_Architecture
 +--------------+  +---------------------------------------------------+
@@ -60,7 +53,7 @@ REST(ULCODC$SS)_Architecture
 |              |  |          +-----------+              +-----------+ |
 +--------------+  +---------------------------------------------------+
 ```
-8. Directory structure diagram (overall/excerpt)  
+7. Directory structure diagram (overall/excerpt)  
 ```
 myportfolio_k
   ├─k_01_src            # Source codes.
