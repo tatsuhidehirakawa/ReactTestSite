@@ -11,59 +11,58 @@ Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:S
 Please check the Makefile, that's all.  
 (Git and Docker are required at a minimum, and use of GNU Make is recommended).  
 
-4. (Warning) Handling of Version Control Files.  
-This package does not include the version control files "package.json", "go.mod", and "go.sum". If you use this package, please prepare these files by yourself. Refer to "Makefile" for information on how to apply the version control files.  
-
-5. Considerations  
+4. Considerations  
 (1)  
 (2)  
 
-6. Directory structure diagram (overall/excerpt)  
+5. Directory structure diagram (overall/excerpt)  
 This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  
 ```
 myportfolio_k
-  ├─k_01_src                 # Source codes.
+  ├─k_01_src              # Source codes.
   |   ├─110wbs_src
   |   ├─124api_src
   |   └─134dbs_src
-  ├─k_02_dev                 # Management files for Development.(REST)
+  ├─k_02_dev              # Management files for Development.(REST)
   |   ├─110wbs_dev
-  |   |   └─Dockerfile
+  |   |   ├─Dockerfile
+  |   |   └─package.json  # Place the version control files used by the team here.
   |   ├─124api_dev
-  |   |   └─Dockerfile
+  |   |   ├─Dockerfile
+  |   |   ├─go.mod        # Place the version control files used by the team here.
+  |   |   └─go.sum        # (Same as above)
   |   ├─134dbs_dev
   |   ├─docker-compose.yml
   |   └─Makefile
-  ├─k_05_tst                 # Management files for Test.
+  ├─k_05_tst              # Management files for Test.
   |   ├─110wbs_tst
   |   ├─124api_tst
   |   ├─134dbs_tst
   |   ├─docker-compose.yml
   |   └─Makefile
-  ├─k_08_stg                 # Management files for Stage.
+  ├─k_08_stg              # Management files for Stage.
   |   └─Makefile
-  ├─Makefile                 # Control files for Repository.
+  ├─Makefile              # Control files for Repository.
   └─README.md
 ```
-7. Server configuration diagram (overall)  
+6. Server configuration diagram (overall)  
 ```
 REST(ULCODC$SS)_Architecture
-+--------------+  +---------------------------------------------------+
-|              |  |          +-----------+                Sorce codes |
-|              |  |          | *110/src  |                            |
-|              |  |          |           |                            |
-|              |  |          |React,Sass +------+                     |
-|              |  |          |TypeScript |      |                     |
-|              |  |          |           /      |                     |
-|              |  |          +----------/       |                     |
-|              |  |          +-----------+      |       +-----------+ |
-|              |  |          | *124/src  |      |       | *134/src  | |
-|              |  |          |           |      |       |           | |
-|              |  |          |  Golang   +---+  |  +----+ PostgreSQL| |
-|              |  |          |(Gin/sqlc) |   |  |  |    |           | |
-|              |  |          |           /   |  |  |    |           / |
-|              |  |          +----------/    |  |  |    +----------/  |
-|              |  +--------------------------|--|--|------------------+
+                             +-----------+                Sorce codes  
+                             | *110/src  |                             
+                             |           |                             
+                             |React,Sass +------+                      
+                             |TypeScript |      |                      
+                             |           /      |                      
+                             +----------/       |                      
+                             +-----------+      |       +-----------+  
+                             | *124/src  |      |       | *134/src  |  
+                             |           |      |       |           |  
+                             |  Golang   +---+  |  +----+ PostgreSQL|  
+                             |(Gin/sqlc) |   |  |  |    |           |  
+                             |           /   |  |  |    |           /  
+                             +----------/    |  |  |    +----------/   
++--------------+  +--------------------------|--|--|------------------+
 |              |  |          +-----------+   |Development environment |
 |              |  |          | *110/dev  |   |  |  |                  |
 |              |  |          | WebServer |   |  |  |                  |
@@ -79,21 +78,21 @@ REST(ULCODC$SS)_Architecture
 |              |  | +-->#8080|#8080 #8080|#3000<-->#5432|#5432      | |
 |              |  |          +-----------+   |  |  |    +-----------+ |
 |    CLIENT    |  +--------------------------M--|--|------------------+
-|   (Browser)  |  |          +-----------+   |  |  | Test environment |
-|              |  |          | *110/tst  |   |  |  |                  |
-|              |  |          | WebServer |   |  |  |                  |
-|              |  |          | Html, CSS +<-----+  |                  |
-|              |  |          |           |   |     |                  |
-|              |  | +---#3001|#3000      |   |     D:DumpAndRestore   |
-|   For test   |  | |        +-----------+   |     |                  |
-|localhost:3001|<---+        +-----------+   |     |    +-----------+ |
-|"make init.t" |  | |        | *120/tst  |   |     |    | *130/tst  | |
-|              |  | |        | APIServer |   |     |    |  DBServer | |
-|              |  | |        |  Golang   +<--+     +--->+ PostgreSQL| |
-|              |  | |        | (Binary)  |              |           | |
-|              |  | +-->#8081|#8080 #8080|#3001<-->#5433|#5432      | |
-|              |  |          +-----------+              +-----------+ |
-+--------------+  +---------------------------------------------------+
+|   (Browser)  |             +-----------+   |  |  | Test environment  
+|              |             | *110/tst  |   |  |  |                   
+|              |             | WebServer |   |  |  |                   
+|              |             | Html, CSS +<-----+  |                   
+|              |             |           |   |     |                   
+|              |    +---#3001|#3000      |   |     D:DumpAndRestore    
+|   For test   |    |        +-----------+   |     |                   
+|localhost:3001|<---+        +-----------+   |     |    +-----------+  
+|"make init.t" |    |        | *120/tst  |   |     |    | *130/tst  |  
+|              |    |        | APIServer |   |     |    |  DBServer |  
+|              |    |        |  Golang   +<--+     +--->+ PostgreSQL|  
+|              |    |        | (Binary)  |              |           |  
+|              |    +-->#8081|#8080 #8080|#3001<-->#5433|#5432      |  
+|              |             +-----------+              +-----------+  
++--------------+                                                       
 ```
 
 
