@@ -11,11 +11,56 @@ Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:S
 Please check the Makefile, that's all.  
 (Git and Docker are required at a minimum, and use of GNU Make is recommended).  
 
-4. Considerations  
-(1)  
-(2)  
+5. Server configuration diagram (overall)  
+```
+STGprd Architecture(REST)
 
-5. Directory structure diagram (overall/excerpt)  
+./k_01_src                          +-----------+ 
+(Sorce code)                        |/110wbs_src| React,Sass,TypeScript
+                                    |  +-----------+  
+                                    |  |/124api_src| Golang
+                                    |  |  +-----------+                      
+                                    |  |  |/134api_src| PostgreSQL
+                                    +--|  |           |
+                                       |  |Sorce codes|
+                                       +--|           |
+                                         ||           /
+./k_02_dev                               |+----+-----/
+(Development environment)                |  |  |
+                  +----------------------|--|--|--------------------+
+                  |      +-----------+   |  |  |                    |
+                  |      |/110wbs_dev|   B  B  V                    |
+                  |      | WebServer |   |  |  |                    |
+                  |      |React,Sass +<--|--+  |                    |
+                  |      |TypeScript |   |  |  |      +-----------+ |
+                  | +----#3000       |   |  |  |      |/134dbs_dev| |
+   For develop    | |    +-----------+   |  |  |      |  DBServer | | 
+  localhost:3000<---+    +-----------+   |  |  +-<--->+ PostgreSQL| |
+  "make init.d"   | |    |/124api_dev|   |  |  |      |           | |
+                  | |    | APIServer |   |  |  |  +-->+#5432      | |
+                  | A    |  Golang   +<--+  |  |  |   +-----------+ |
+                  | |    |           |   |  |  |  S                 |
+                  | +--->#8080       |<-----------+                 |
+                  |      +-----------+   |  |  |                    |
+                  +----------------------|--|--|--------------------+
+                                         M  M  D  
+./k_03_tst                          +----+--|--|+ 
+(Testing environment)               |/110wbs|ts||
+                                    |  +----+--|---+  
+                                    |  |/120api|tst|
+          A: Air(Hot reload)        |  |  +----+------+                      
+          B: Bind Mount             |  |  |/130dbs_tst|
+          V: Volume Mount           +--|  | Container |
+          M: Multi stage build         |  |    for    |
+          D: Dump and restore          +--|   test    |
+          S: sqlc(O/R Mapper)             |           |
+                                          +-----------+
+                                             |
+./k_04_stg                                   |
+(Staging environment)                     Staging
+                                        (Terraform)
+```
+6. Directory structure diagram (overall/excerpt)  
 This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  
 ```
 myportfolio_k
@@ -45,56 +90,9 @@ myportfolio_k
   ├─Makefile              # Control files for Repository.
   └─README.md
 ```
-6. Server configuration diagram (overall)  
-```
-Architecture(REST)
-                                    +-----------+ 
-                                    |*110wbs_src|React,Sass,TypeScript
-                                    |  +-----------+  
-    D: Dump and restore             |  |*124api_src|Golang
-    M: Multi stage build            |  |  +-----------+                      
-                                    |  |  |*134api_src|PostgreSQL
-                                    +--|  |           |
-                                       |  |Sorce codes|
-                                       +--|           |
-                                         ||           |
-                                         |+----+-----/
-                Development environment  |  |  | 
-                  +----------------------|--|--|--------------------+
-                  |      +-----------+   |  |  |                    |
-                  |      | *110/dev  |   |  |  |                    |
-                  |      | WebServer |   |  |  |                    |
-                  |      |React,Sass +<--|--+  |                    |
-                  |      |TypeScript |   |  |  |      +-----------+ |
-                  | +----#3000       |   |  M  |      | *134/dev  | |
-  For develop     | |    +-----------+   |  |  |      |  DBServer | | 
-localhost:3000<-----+    +-----------+   |  |  +----->+ PostgreSQL| |
-"make init.d"     | |    | *124/dev  |   |  |  |      |           | |
-                  | |    | APIServer |   |  |  |  +-->+#5432      | |
-                  | |    |  Golang   +<--+  |  |  |   +-----------+ |
-                  | |    |   (Air)   |   |  |  |  |                 |
-                  | +--->#8080       |<-----------+                 |
-                  |      +-----------+   |  |  |                    |
-                  +----------------------M--|--|--------------------+
-                                         |  |  |  
-                                    +----+--|--|+ 
-                                    |*110   |  ||
-                                    |  +----+--|---+  
-                                    |  |*124   |   |
-                                    |  |  +----+------+                      
-                                    |  |  |*134       |
-                                    +--|  | Container |
-                                       |  |    for    |
-                                       +--|   test    |
-                                          |           |
-                                          +-----------+
-                                             |
-                                             |
-                                          Staging
-                                        (Terraform)
-```
-
-
+4. Considerations  
+(1)  
+(2)  
 <!--
 使いやすさを優先せず、１０年後でも理解できるコードを！
 
