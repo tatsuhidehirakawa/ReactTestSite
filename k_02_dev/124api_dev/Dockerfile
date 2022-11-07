@@ -9,7 +9,7 @@ CMD pkgset.sh
 
 #--- <Pattearn 2> Dockerfile Operation.------------------------#
 # COPY . .
-# RUN go mod init github.com/tatsuhidehirakawa/myportfolio_k
+# RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
 # RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
 # RUN go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
 # RUN sqlc generate --file sqlc/sqlc.yaml
