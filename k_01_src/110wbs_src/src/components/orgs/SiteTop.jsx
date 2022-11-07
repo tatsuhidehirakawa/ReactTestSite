@@ -1,5 +1,6 @@
 import React from "react"
 import "./SiteTop.scss"
+import ApiFetch from '../../hooks/ApiFetch.jsx';
 
 const SiteTop = () => {
   return (
@@ -24,7 +25,7 @@ const SiteTop = () => {
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
-      <div className="PageTextS"></div>
+      <ApiFetch />
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>
       <div className="PageTextS"></div>

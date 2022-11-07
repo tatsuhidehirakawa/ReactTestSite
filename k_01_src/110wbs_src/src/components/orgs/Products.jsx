@@ -1,6 +1,5 @@
 import React from "react"
 import "./Products.scss"
-import ApiFetch from '../../hooks/ApiFetch.jsx';
 
 const Products = () => {
   return (
@@ -15,7 +14,7 @@ const Products = () => {
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
-        <ApiFetch />
+        <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
         <div className="PageTextS"></div>
