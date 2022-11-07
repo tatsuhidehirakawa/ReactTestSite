@@ -29,8 +29,8 @@ go install github.com/gin-gonic/gin/v2
 ４．ディレクトリ構成図(抜粋)  
 ```
 STGprd_devpkg
-  ├─k_01_src
-  ├─k_02_dev
+  ├─s_01_src
+  ├─s_03_dev
   │  ├─110wbs_src
   │  │  └─Dockerfile
   │  ├─124api_src

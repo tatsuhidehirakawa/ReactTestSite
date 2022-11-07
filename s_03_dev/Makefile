@@ -1,23 +1,23 @@
 #.PHONY:
 
 chmod:
-	@cd k_02_dev && cd 124api_dev && ls -la && chmod 775 pkgset.sh && ls -la
-	@cd k_02_dev && cd 110wbs_dev && ls -la && chmod 775 strset.sh && ls -la
+	@cd s_03_dev && cd 124api_dev && ls -la && chmod 775 pkgset.sh && ls -la
+	@cd s_03_dev && cd 110wbs_dev && ls -la && chmod 775 strset.sh && ls -la
 	@cd k_03_tst && cd 130dbs_tst && ls -la && chmod 775 pg_dump.sh && ls -la
 	@cd k_03_tst && cd 130dbs_tst && ls -la && chmod 775 pg_restore.sh && ls -la
 
 #---[ 1. system boot ]-------------------------------------------------------
 
 init.dev: ## Booting only frontend devlopment containers.
-	@cd k_02_dev && docker compose up -d
+	@cd s_03_dev && docker compose up -d
 
 init.dev.f: ## Booting only frontend devlopment containers.
-	@cd k_02_dev && docker compose up -d 110wbs_dev
+	@cd s_03_dev && docker compose up -d 110wbs_dev
 
 init.dev.b: ## Booting only backend devlopment containers.
-	# @cd k_02_dev && docker compose up 124api_dev, 134dbs_dev
-	@cd k_02_dev && docker compose up 134dbs_dev -d
-	@cd k_02_dev && docker compose up 124api_dev -d
+	# @cd s_03_dev && docker compose up 124api_dev, 134dbs_dev
+	@cd s_03_dev && docker compose up 134dbs_dev -d
+	@cd s_03_dev && docker compose up 124api_dev -d
 
 init.tst.b: ## Under construction.
 	@cd k_03_tst && cd 130dbs_tst && docker compose up -d
@@ -29,7 +29,7 @@ inittem: ## Under construction.
 	@docker compose up 114api_dev, 314dbs_dev
 
 init.all: ## Initialize and booting all containers and services.
-	@cd k_02_dev && docker compose up -d
+	@cd s_03_dev && docker compose up -d
 	@cd k_03_tst && docker compose up -d
 	@cd k_04_stg && docker compose up -d
 
@@ -41,11 +41,11 @@ init.all: ## Initialize and booting all containers and services.
 
 #---[ 3. Tst env boot ]------------------------------------------------
 boot.api.a:
-	docker build -f k_03_tst/120api_tst/Dockerfile -t 120api_tst k_01_src/124api_src/src
+	docker build -f k_03_tst/120api_tst/Dockerfile -t 120api_tst s_01_src/124api_src/src
 	cd k_03_tst && docker compose up 120api_tst
 
 boot.api.b:
-	cp -r k_01_src/124api_src/src k_03_tst/120api_tst
+	cp -r s_01_src/124api_src/src k_03_tst/120api_tst
 	cd k_03_tst && docker compose up 120api_tst
 
 #---[ 3. DB backup and restore ]------------------------------------------------
@@ -72,7 +72,7 @@ destroy: ## Destroy all Docker image, container and caches.
 
 clean:
 	@git clean -df .
-	@cd k_01_src && cd 110wbs_src && rm -R node_modules
+	@cd s_01_src && cd 110wbs_src && rm -R node_modules
 
 destroy.w: ## (For Windows!)Destroy all Docker image, container and caches.  
 	@docker container ls -a; docker system df; docker stop $(docker ps -q); docker system prune --volumes -f; docker container prune -f; docker image prune -a -f; docker builder prune -f; docker images -a -f; docker container ls -a; docker system df
@@ -80,14 +80,14 @@ destroy.w: ## (For Windows!)Destroy all Docker image, container and caches.
 #---[ 5. Validation ]----------------------------------------------------------------
 
 look.crlf.wbs:
-	@cd k_02_dev/110wbs_dev && cat -e *.sh
+	@cd s_03_dev/110wbs_dev && cat -e *.sh
 
 look.crlf.api:
-	@cd k_02_dev/124api_dev && cat -e *.sh
+	@cd s_03_dev/124api_dev && cat -e *.sh
 
 rplccrlf/all:
-	@cd k_02_dev/110wbs_dev && sed -i 's/\r//' *.sh
-	@cd k_02_dev/124api_dev && sed -i 's/\r//' *.sh
+	@cd s_03_dev/110wbs_dev && sed -i 's/\r//' *.sh
+	@cd s_03_dev/124api_dev && sed -i 's/\r//' *.sh
 
 yyyyyyy:
 	@docker exec -it k_904set_dev-214api_dev-1 bash
@@ -96,8 +96,8 @@ clonenv:
 	@git clone https://github.com/tatsuhidehirakawa/STGprd_devpkg.git
 
 persist:
-	@cd k_02_dev && 110wbs_dev && rm strset.sh
-	@cd ../../k_01_src/k110wbs && git add package.json, package-lock.json
+	@cd s_03_dev && 110wbs_dev && rm strset.sh
+	@cd ../../s_01_src/k110wbs && git add package.json, package-lock.json
 
 #---[ 8. Git add ]-------------------------------------------------------------
 
@@ -108,13 +108,13 @@ git.add.norm:  ## Addition of git (cf. make git.add.norm)
 
 git.add.param:  ## Addition of git (cf. make git.add.param)
 	@git status
-	@git add k_01_src/110wbs_src/package.json
-	@git add k_01_src/110wbs_src/package-lock.json
-	@git add k_01_src/124api_src/src/mod.go
-	@git add k_01_src/124api_src/src/sqlc/build_sqlc/db.go
-	@git add k_01_src/124api_src/src/sqlc/build_sqlc/go.mod
-	@git add k_01_src/124api_src/src/sqlc/build_sqlc/models.go
-	@git add k_01_src/124api_src/src/sqlc/build_sqlc/query.sql.go
+	@git add s_01_src/110wbs_src/package.json
+	@git add s_01_src/110wbs_src/package-lock.json
+	@git add s_01_src/124api_src/src/mod.go
+	@git add s_01_src/124api_src/src/sqlc/build_sqlc/db.go
+	@git add s_01_src/124api_src/src/sqlc/build_sqlc/go.mod
+	@git add s_01_src/124api_src/src/sqlc/build_sqlc/models.go
+	@git add s_01_src/124api_src/src/sqlc/build_sqlc/query.sql.go
 	@git status
 
 #---[ 9. memo ]----------------------------------------------------------------

@@ -8,7 +8,7 @@ Under construction
 2. Directory structure diagram (Local/excerpt)  
 ```
 STGprd_devpkg
-  ├─k_01_src
+  ├─s_01_src
   │  ├─110wbs_src
   │  ├─124api_src                     # APIServer(No.214)
   │  │  └─src -----------------------># Bind mounted area.
@@ -19,7 +19,7 @@ STGprd_devpkg
   │  │       ├─schema.sql
   │  │       └─sqlc.yaml
   │  └─134dbs_src
-  ├─k_02_dev
+  ├─s_03_dev
   │  ├─110wbs_dev
   │  ├─124api_dev
   │  │  ├─Dockerfile

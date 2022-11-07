@@ -7,7 +7,7 @@ b/d.c.u/f: ## Booting only frontend testing containers.
 
 
 b.t.a: ## Booting only backend testing containers.
-	cp -r ../k_01_src/124api_src/src ./120api_tst
+	cp -r ../s_01_src/124api_src/src ./120api_tst
 	docker compose up 120api_tst
 
 b.t.d:
@@ -25,12 +25,12 @@ b.t: ## Boot All testing containers.
 
 #---[ 3. Tst env boot ]------------------------------------------------
 boot.api.a:
-	docker build -f k_03_tst/120api_tst/Dockerfile -t 120api_tst k_01_src/124api_src/src
-	cd k_03_tst && docker compose up 120api_tst
+	docker build -f s_05_tst/120api_tst/Dockerfile -t 120api_tst s_01_src/124api_src/src
+	cd s_05_tst && docker compose up 120api_tst
 
 boot.api.b:
-	cp -r k_01_src/124api_src/src k_03_tst/120api_tst
-	cd k_03_tst && docker compose up 120api_tst
+	cp -r s_01_src/124api_src/src s_05_tst/120api_tst
+	cd s_05_tst && docker compose up 120api_tst
 
 #---[ 3. DB backup and restore ]------------------------------------------------
 

@@ -3,7 +3,7 @@
 #---[ 1. system boot ]-------------------------------------------------------
 
 init.stg: ## Booting
-	@cd k_02_dev && docker compose up -d
+	@cd s_03_dev && docker compose up -d
 
 #---[ 3. DB backup and restore ]------------------------------------------------
 

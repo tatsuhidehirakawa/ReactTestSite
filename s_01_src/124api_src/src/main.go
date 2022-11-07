@@ -14,7 +14,7 @@ import (
 	_ "github.com/lib/pq"
 
 	// "github.com/cosmtrek/air"   // Hot-reload
-	// "github.com/tatsuhidehirakawa/STGprd_devpkg/k_01_src/124api_src/src/controllers"
+	// "github.com/tatsuhidehirakawa/STGprd_devpkg/s_01_src/124api_src/src/controllers"
 	"github.com/tatsuhidehirakawa/STGprd_devpkg/sqlc/sqlc_pkg"
 )
 

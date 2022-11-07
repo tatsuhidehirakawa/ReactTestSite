@@ -2,12 +2,12 @@
     # container_name: 150rcn_dev
     # image:  archlinux
     # build:
-    #   context: ../k_01_src/124api_src/src
+    #   context: ../s_01_src/124api_src/src
     #   dockerfile: ../../../k_02_dev/124api_dev/Dockerfile
     build: .
     tty: true
     # volumes:
-    #   - ../k_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
+    #   - ../s_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
     #   # - api-vol:/go/src # Activate for Dockerfile Opration.
     ports:
       - "4444:4444"

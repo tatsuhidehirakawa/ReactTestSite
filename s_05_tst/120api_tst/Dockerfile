@@ -3,8 +3,8 @@ FROM golang:1.18.0-buster as builder
 WORKDIR /go/src
 
 # RUN ./srccpy.sh
-# COPY ../../k_01_src/124api_src/src /go/src
-# COPY k_01_src/124api_src/src /go/src
+# COPY ../../s_01_src/124api_src/src /go/src
+# COPY s_01_src/124api_src/src /go/src
 
 COPY ./src /go/src
 RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg

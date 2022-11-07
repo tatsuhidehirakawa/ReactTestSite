@@ -6,7 +6,7 @@ services:
 #     container_name: 110wbs_tst
 #     build: ./110wbs_tst
 #     volumes:
-#       - ../k_01_src/110wbs_src:/usr/src/app
+#       - ../s_01_src/110wbs_src:/usr/src/app
 #       - wbs-vol:/usr/src/app
 #     # working_dir: /usr/src/app/110wbs_tst
 #     working_dir: /usr/src/app
@@ -26,7 +26,7 @@ services:
     build: ./120api_tst
     tty: true
     volumes:
-      - ../k_01_src/124api_src/src:/go/src
+      - ../s_01_src/124api_src/src:/go/src
       - api-vol:/go/src
     ports:
       - "8080:8080"
@@ -45,7 +45,7 @@ services:
       - 5432:5432
     volumes:
       - dbs-vol:/var/lib/postgresql/data
-      - ../k_03_tst/130dbs_tst/:/usr/src/dbstore
+      - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     # command: sh -c `pg_restore.sh 130dbs_tst`

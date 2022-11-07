@@ -26,7 +26,7 @@ Sorce code                          +-----------+
                                        +--|           |
                                          ||           /
 Development environment                  |+----+-----/
-(./STGprd_devpkg/s_02_dev)               |  |  |
+(./STGprd_devpkg/s_03_dev)               |  |  |
 "make init.d"     +----------------------|--|--|--------------------+
                   |      +-----------+   |  |  |                    |
                   |      |/110wbs_dev|   |  |  |                    |
@@ -68,7 +68,7 @@ STGprd_devpkg
   |   ├─110wbs_src
   |   ├─124api_src
   |   └─134dbs_src
-  ├─s_02_dev              # Management files for Development.(REST)
+  ├─s_03_dev              # Management files for Development.(REST)
   |   ├─110wbs_dev
   |   |   ├─Dockerfile
   |   |   └─package.json  # Place the version control files used by the team here.
@@ -85,7 +85,7 @@ STGprd_devpkg
   |   ├─134dbs_tst
   |   ├─docker-compose.yml
   |   └─Makefile
-  ├─s_08_stg              # Management files for Stage.
+  ├─s_06_stg              # Management files for Stage.
   |   └─Makefile
   ├─Makefile              # Control files for Repository.
   └─README.md

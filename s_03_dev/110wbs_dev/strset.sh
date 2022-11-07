@@ -37,7 +37,7 @@ mv ../README.md .
 npm i -S react-router-dom@6.4.2
 
 # Transfer version control files.
-\cp -f ./package.json ../../k_01_src/110wbs_src/package.json
+\cp -f ./package.json ../../s_01_src/110wbs_src/package.json
 
 # Import MUI
 npm install @mui/material @emotion/react @emotion/styled
