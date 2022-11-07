@@ -15,8 +15,8 @@ Please check the Makefile, that's all.
 ```
 STGprd Repository Diagram
 
-./STGprd_devpkg/s_01_src            +-----------+ 
-(Sorce code)                        |/110wbs_src| React,Sass,TypeScript
+Sorce code                          +-----------+ 
+(./STGprd_devpkg/s_01_src)          |/110wbs_src| React,Sass,TypeScript
                                     |  +-----------+  
                                     |  |/124api_src| Golang
                                     |  |  +-----------+                      
@@ -25,18 +25,18 @@ STGprd Repository Diagram
                                        |  |Sorce codes|
                                        +--|           |
                                          ||           /
-./STGprd_devpkg/s_02_dev                 |+----+-----/
-(Development environment)                |  |  |
-                  +----------------------|--|--|--------------------+
+Development environment                  |+----+-----/
+(./STGprd_devpkg/s_02_dev)               |  |  |
+"make init.d"     +----------------------|--|--|--------------------+
                   |      +-----------+   |  |  |                    |
                   |      |/110wbs_dev|   |  |  |                    |
                   |      | WebServer |   |  |  |                    |
                   |      |React,Sass +<--|--B  |                    |
                   |      |TypeScript |   |  |  |      +-----------+ |
                   | +----#3000       |   |  |  |      |/134dbs_dev| |
-   For develop    | |    +-----------+   |  |  |      |  DBServer | | 
+                  | |    +-----------+   |  |  |      |  DBServer | | 
   localhost:3000<---+    +-----------+   |  |  V<---->+ PostgreSQL| |
-  "make init.d"   | |    |/124api_dev|   |  |  |      |           | |
+                  | |    |/124api_dev|   |  |  |      |           | |
                   | |    | APIServer |   |  |  |  +-->#5432       | |
                   | |    |  Golang   +<--B  |  |  |   +-----------+ |
                   | |    |           |   |  |  |  |                 |
@@ -44,9 +44,9 @@ STGprd Repository Diagram
                   |      +-----------+   |  |  |                    |
                   +----------------------M--M--D--------------------+
                                          |  |  |  
-./STGprd_devpkg/s_03_tst            +----+--|--|+ 
-(Testing environment)               |/110wbs|ts||
-                                    |  +----+--|---+  
+Testing environment                 +----+--|--|+ 
+(./STGprd_devpkg/s_03_tst)          |/110wbs|ts||
+"make init.t"                       |  +----+--|---+  
                                     |  |/120api|tst|
      A: Air(Hot reload)             |  |  +----+------+                      
      B: Bind Mount                  |  |  |/130dbs_tst|
@@ -56,9 +56,9 @@ STGprd Repository Diagram
      V: Initialize & Volume Mount         |           |
                                           +-----------+
                                              |
-./STGprd_devpkg/s_04_stg                     |
-(Staging environment)                     Staging
-                                        (Terraform)
+Staging environment                          |
+(./STGprd_devpkg/s_04_stg)                Staging
+"make init.s"                           (Terraform)
 ```
 6. Directory structure diagram (overall/excerpt)  
 This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  
