@@ -1,13 +1,13 @@
-target "myportfolio_k_dev" {
+target "STGprd_devpkg_dev" {
   dockerfile = "Dockerfile"
-  target = "myportfolio_k-a-stage"
-  tags = ["myportfolio_k_dev"]
+  target = "STGprd_devpkg-a-stage"
+  tags = ["STGprd_devpkg_dev"]
 }
 
-target "myportfolio_k_tst" {
+target "STGprd_devpkg_tst" {
   dockerfile = "Dockerfile"
-  target = "myportfolio_k-b-stage"
-  tags = ["myportfolio_k_tst"]
+  target = "STGprd_devpkg-b-stage"
+  tags = ["STGprd_devpkg_tst"]
 }
 
 # 参考1：https://zenn.dev/ciffelia/articles/f11d26e9b72a5d

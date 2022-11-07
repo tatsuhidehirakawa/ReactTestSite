@@ -2,8 +2,8 @@ version: "1"
 project:
     id: ""
 packages:
-  - name: "build_sqlc" # Output directory name.
-    path: "build_sqlc" # Output directory path.
+  - name: "sqlc_pkg" # Output directory name.
+    path: "sqlc_pkg" # Output directory path.
     queries: "query.sql" # Query initialization.
     schema: "schema.sql" # Schema initialization.
     engine: "postgresql"

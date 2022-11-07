@@ -7,7 +7,7 @@ WORKDIR /go/src
 # COPY k_01_src/124api_src/src /go/src
 
 COPY ./src /go/src
-RUN go mod init github.com/tatsuhidehirakawa/myportfolio_k
+RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
 RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
 RUN go install github.com/kyleconroy/sqlc/cmd/sqlc
 RUN sqlc generate --file sqlc/sqlc.yaml

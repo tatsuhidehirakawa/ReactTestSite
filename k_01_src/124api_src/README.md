@@ -7,7 +7,7 @@ localhost:3000/someGet,somePost,somePut,someDelete
 Under construction
 2. Directory structure diagram (Local/excerpt)  
 ```
-myportfolio_k
+STGprd_devpkg
   ├─k_01_src
   │  ├─110wbs_src
   │  ├─124api_src                     # APIServer(No.214)

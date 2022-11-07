@@ -14,8 +14,8 @@ import (
 	_ "github.com/lib/pq"
 
 	// "github.com/cosmtrek/air"   // Hot-reload
-	// "github.com/tatsuhidehirakawa/myportfolio_k/k_01_src/124api_src/src/controllers"
-	"github.com/tatsuhidehirakawa/myportfolio_k/sqlc/build_sqlc"
+	// "github.com/tatsuhidehirakawa/STGprd_devpkg/k_01_src/124api_src/src/controllers"
+	"github.com/tatsuhidehirakawa/STGprd_devpkg/sqlc/sqlc_pkg"
 )
 
 func main() {

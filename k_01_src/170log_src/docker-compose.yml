@@ -4,7 +4,7 @@ services:
   991set_dev:
     build: .
     volumes:
-      - ../../myportfolio_k:/usr/src/app
+      - ../../STGprd_devpkg:/usr/src/app
   # working_dir: /usr/src/app/k_111wbs_dev     # バインドマウント
     working_dir: /usr/src/app
     ports:

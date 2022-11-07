@@ -23,7 +23,7 @@ init.tst.b: ## Under construction.
 	@cd k_03_tst && cd 130dbs_tst && docker compose up -d
 
 init.dev.bake: ## Under construction.
-	@docker buildx bake --file docker-bake.hcl myportfolio_k_dev myportfolio_k_tst
+	@docker buildx bake --file docker-bake.hcl STGprd_devpkg_dev STGprd_devpkg_tst
 
 inittem: ## Under construction.
 	@docker compose up 114api_dev, 314dbs_dev
@@ -93,7 +93,7 @@ yyyyyyy:
 	@docker exec -it k_904set_dev-214api_dev-1 bash
 
 clonenv:
-	@git clone https://github.com/tatsuhidehirakawa/myportfolio_k.git
+	@git clone https://github.com/tatsuhidehirakawa/STGprd_devpkg.git
 
 persist:
 	@cd k_02_dev && 110wbs_dev && rm strset.sh

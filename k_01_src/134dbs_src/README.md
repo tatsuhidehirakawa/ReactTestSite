@@ -4,7 +4,7 @@
 
 １　DB構成
 ```
-myportfolio_k
+STGprd_devpkg
   ├─k_314dbs_src
   │  ├─config
   │  │  └─postgresql.conf

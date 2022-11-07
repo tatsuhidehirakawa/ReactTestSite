@@ -28,7 +28,7 @@ go install github.com/gin-gonic/gin/v2
 -->
 ４．ディレクトリ構成図(抜粋)  
 ```
-myportfolio_k
+STGprd_devpkg
   ├─k_01_src
   ├─k_02_dev
   │  ├─110wbs_src
@@ -54,7 +54,7 @@ go mod init github.com/goark/pa-api && go get github.com/kyleconroy/sqlc/cmd/sql
 ・
 -->
 <!--
-cd "C:\Users\tatsu_hira_s\Documents\My Repository\myportfolio_k\k_214api_dev\go"; docker compose up -d; docker compose exec web bash; start chrome http://localhost:3000/someGet
+cd "C:\Users\tatsu_hira_s\Documents\My Repository\STGprd_devpkg\k_214api_dev\go"; docker compose up -d; docker compose exec web bash; start chrome http://localhost:3000/someGet
 go mod init github.com/gin-gonic/gin/v2 && go get && go run main.go
 -->
 
@@ -66,7 +66,7 @@ go mod init github.com/gin-gonic/gin/v2 && go get && go run main.go
 ３　今後の課題（覚え書き）  
 ①引き続きローカルのOSにはDocker Desktop for Windows以外のミドルウェアをインストールせず開発環境はDocker上に構築すること  
 ②「create-react-app」を使用せずに開発用コンテナを作成すること  
-③「docker-compose.yml」ファイルをルートディレクトリ「myportfolio_k」直下で一つにまとめること  
+③「docker-compose.yml」ファイルをルートディレクトリ「STGprd_devpkg」直下で一つにまとめること  
 -->
 ６．参考文献  
 ① https://docs.sqlc.dev/en/latest/overview/install.html  
