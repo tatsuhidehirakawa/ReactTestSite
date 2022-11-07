@@ -18,7 +18,33 @@ This package does not include the version control files "package.json", "go.mod"
 (1)  
 (2)  
 
-6. Server configuration diagram (overall)  
+6. Directory structure diagram (overall/excerpt)  
+```
+myportfolio_k
+  ├─k_01_src                 # Source codes.
+  |   ├─110wbs_src
+  |   ├─124api_src
+  |   └─134dbs_src
+  ├─k_02_dev                 # Management files for Development.(REST)
+  |   ├─110wbs_dev
+  |   |   └─Dockerfile
+  |   ├─124api_dev
+  |   |   └─Dockerfile
+  |   ├─134dbs_dev
+  |   ├─docker-compose.yml
+  |   └─Makefile
+  ├─k_05_tst                 # Management files for Test.
+  |   ├─110wbs_tst
+  |   ├─124api_tst
+  |   ├─134dbs_tst
+  |   ├─docker-compose.yml
+  |   └─Makefile
+  ├─k_08_stg                 # Management files for Stage.
+  |   └─Makefile
+  ├─Makefile                 # Control files for Repository.
+  └─README.md
+```
+7. Server configuration diagram (overall)  
 ```
 REST(ULCODC$SS)_Architecture
 +--------------+  +---------------------------------------------------+
@@ -43,9 +69,9 @@ REST(ULCODC$SS)_Architecture
 |              |  |          |React,Sass +<--|--+  |                  |
 |              |  |          |TypeScript |   |  |  |                  |
 |              |  | +---#3000|#3000      |   |  M:MultiStageBuild     |
-|              |  | |        +-----------+   |  |  |                  |
+|  For develop |  | |        +-----------+   |  |  |                  |
 |localhost:3000|<---+        +-----------+   |  |  |    +-----------+ |
-|              |  | |        | *124/dev  |   |  |  |    | *134/dev  | |
+|"make init.d" |  | |        | *124/dev  |   |  |  |    | *134/dev  | |
 |              |  | |        | APIServer |   |  |  |    |  DBServer | |
 |              |  | |        |  Golang   +<--+  |  +--->+ PostgreSQL| |
 |              |  | |        |   (Air)   |   |  |  |    |           | |
@@ -54,13 +80,13 @@ REST(ULCODC$SS)_Architecture
 |    CLIENT    |  +--------------------------M--|--|------------------+
 |   (Browser)  |  |          +-----------+   |  |  | Test environment |
 |              |  |          | *110/tst  |   |  |  |                  |
-|              |  |          | WebServer |   |  |  |       22.04 LTS  |
+|              |  |          | WebServer |   |  |  |                  |
 |              |  |          | Html, CSS +<-----+  |                  |
 |              |  |          |           |   |     |                  |
 |              |  | +---#3001|#3000      |   |     D:DumpAndRestore   |
-|              |  | |        +-----------+   |     |                  |
+|   For test   |  | |        +-----------+   |     |                  |
 |localhost:3001|<---+        +-----------+   |     |    +-----------+ |
-|              |  | |        | *120/tst  |   |     |    | *130/tst  | |
+|"make init.t" |  | |        | *120/tst  |   |     |    | *130/tst  | |
 |              |  | |        | APIServer |   |     |    |  DBServer | |
 |              |  | |        |  Golang   +<--+     +--->+ PostgreSQL| |
 |              |  | |        | (Binary)  |              |           | |
@@ -68,16 +94,7 @@ REST(ULCODC$SS)_Architecture
 |              |  |          +-----------+              +-----------+ |
 +--------------+  +---------------------------------------------------+
 ```
-7. Directory structure diagram (overall/excerpt)  
-```
-myportfolio_k
-  ├─k_01_src            # Source codes.
-  ├─k_02_dev            # Management files for Development.
-  ├─k_03_tst            # Management files for Test.
-  ├─k_04_stg            # Management files for Stage.
-  ├─Makefile
-  └─README.md
-```
+
 
 <!--
 使いやすさを優先せず、１０年後でも理解できるコードを！
