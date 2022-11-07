@@ -35,7 +35,7 @@ func main() {
 	/*--- GETのハンドラ部分を抽出 ------------------*/
 	getting := func(c *gin.Context) {
 
-		queries := build_sqlc.New(db)
+		queries := sqlc_pkg.New(db)
 		accountAttribute, err := queries.ListAccount_attribute(context.TODO())
 
 		if err != nil {
@@ -48,11 +48,11 @@ func main() {
 	/*--- POSTのハンドラ部分 --------------------*/
 	posting := func(c *gin.Context) {
 		// パラメータのstructオブジェクトを作成
-		var attributeParams build_sqlc.CreateAccount_attributeParams
+		var attributeParams sqlc_pkg.CreateAccount_attributeParams
 		// 作成したオブジェクトの参照を渡してJSONデータをstructに注入
 		c.BindJSON(&attributeParams)
 		// DBアクセス用のインスタンスを生成
-		queries := build_sqlc.New(db)
+		queries := sqlc_pkg.New(db)
 		// 第二引数で、先程作成したattributeParamsを渡す
 		// ※今回は戻り値のSQLResultは使用しないので、破棄しているが、使用してもOK
 		_, err := queries.CreateAccount_attribute(context.TODO(), attributeParams)
@@ -73,9 +73,9 @@ func main() {
 
 	/*--- PUTのハンドラ部分 -----------------------*/
 	putting := func(c *gin.Context) {
-		var attributeParams build_sqlc.UpdateAccount_attributeParams
+		var attributeParams sqlc_pkg.UpdateAccount_attributeParams
 		c.BindJSON(&attributeParams)
-		queries := build_sqlc.New(db)
+		queries := sqlc_pkg.New(db)
 		_, err := queries.UpdateAccount_attribute(context.TODO(), attributeParams)
 
 		if err == nil {
@@ -94,7 +94,7 @@ func main() {
 	deleting := func(c *gin.Context) {
 		// クエリパラメータからaccountIDを取得
 		accountID := c.Param("accountID")
-		queries := build_sqlc.New(db)
+		queries := sqlc_pkg.New(db)
 		err := queries.DeleteAccount_attribute(context.TODO(), accountID)
 
 		if err != nil {
