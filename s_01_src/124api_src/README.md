@@ -1,4 +1,4 @@
-Container for API server "k_214api_dev"  
+Container for API server.  
 
 1. API Definition  
 (1) Endpoint  
@@ -23,10 +23,21 @@ STGprd_devpkg
   │  ├─110wbs_dev
   │  ├─124api_dev
   │  │  ├─Dockerfile
+  │  │  ├─go.mod
+  │  │  ├─go.sum
   │  │  └─pkgset.sh --------------># Place to put shell scripts.
   │  ├─134dbs_dev
-  │  └─docker-compose.yml
-  ├─k_03_tst
+  │  ├─docker-compose.yml
+  │  └─Makefile
+  ├─s_05_tst
+  │  ├─110wbs_tst
+  │  ├─120api_tst
+  │  │  ├─Dockerfile
+  │  │  └─Dockerfile--------------># For Multi stage build.
+  │  ├─130dbs_tst
+  │  ├─docker-compose.yml
+  │  └─Makefile
+  ├─s_06_stg
   └─Makefile                       # For boot
 ```
 3. Directory structure diagram (Inside the Docker Container/excerpt)  
@@ -37,7 +48,7 @@ root@89ff808980e1:
  └─usr
     └─local
        └─bin ---------------------># Place to put shell scripts.
-          └─npmset.sh
+          └─pkgset.sh
 ```
 <!--
 
