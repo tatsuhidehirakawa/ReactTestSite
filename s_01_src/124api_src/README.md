@@ -32,7 +32,6 @@ STGprd_devpkg
   ├─s_05_tst
   │  ├─110wbs_tst
   │  ├─120api_tst
-  │  │  ├─Dockerfile
   │  │  └─Dockerfile--------------># For Multi stage build.
   │  ├─130dbs_tst
   │  ├─docker-compose.yml
