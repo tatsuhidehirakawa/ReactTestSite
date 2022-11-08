@@ -24,7 +24,7 @@ const Footer = () => {
       </div>
       <div className="footer--InlineB__signeture">
         {/* oupCopyright inc.-3 2022 All Right Reser. All Right Reserved */}
-        <p>2023-2022 &copy; Your company Inc.</p>
+        <p>2023-2022 &copy; Your Website Inc.</p>
       </div>
     </div>
     </>

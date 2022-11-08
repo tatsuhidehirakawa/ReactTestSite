@@ -12,6 +12,7 @@ import PricingContent from  './components/orgs/Pricing.tsx';
 import UserGuide from  './components/orgs/UserGuide.jsx';
 // import SignUp from  './components/orgs/SignUp.jsx';
 import SignUp from  './components/orgs/SignUp.tsx';
+import SignIn from  './components/orgs/SignIn.tsx';
 import MyPage from  './components/orgs/MyPage.jsx';
 import Contact from  './components/orgs/Contact.jsx';
 import Recruit from  './components/orgs/Recruit.jsx';
@@ -34,6 +35,7 @@ const Router = () => {
         <Route path={`/Agreement`} element={<Layout><Agreement /></Layout>} />
         <Route path={`/UserGuide`} element={<Layout><UserGuide /></Layout>} />
         <Route path={`/SignUp`} element={<Layout><SignUp /></Layout>} />
+        <Route path={`/SignIn`} element={<Layout><SignIn /></Layout>} />
         <Route path={`/MyPage`} element={<Layout><MyPage /></Layout>} />
         <Route path={`/Contact`} element={<Layout><Contact /></Layout>} />
         <Route path={`/Recruit`} element={<Layout><Recruit /></Layout>} />
