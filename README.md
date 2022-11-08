@@ -25,7 +25,7 @@ STGprd Repository Diagram
                                     |  +-----------+  
                                     |  |/124api_src| Golang
                                     |  |  +-----------+                      
-                                    |  |  |/134api_src| PostgreSQL
+                                    |  |  |/134dbs_src| PostgreSQL
                                     +--|  |           |
                                        |  |Sorce codes|
                                        +--|           |
