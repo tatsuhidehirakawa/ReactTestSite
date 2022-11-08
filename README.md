@@ -36,14 +36,14 @@ STGprd Repository Diagram
                   |      +-----------+   |  |  |                    |
                   |      |/110wbs_dev|   |  |  |                    |
                   |      | WebServer |   |  |  |                    |
-                  |      |React,Sass +<--|--B  |                    |
+     package.json------->|React,Sass +<--|--B  |                    |
                   |      |TypeScript |   |  |  |      +-----------+ |
                   | +----#3000       |   |  |  |      |/134dbs_dev| |
                   | |    +-----------+   |  |  |      |  DBServer | | 
   localhost:3000<---+    +-----------+   |  |  V<---->+ PostgreSQL| |
                   | |    |/124api_dev|   |  |  |      |           | |
                   | |    | APIServer |   |  |  |  +-->#5432       | |
-                  | |    |  Golang   +<--B  |  |  |   +-----------+ |
+    go.mod,go.sum------->|  Golang   +<--B  |  |  |   +-----------+ |
                   | |    |           |   |  |  |  |                 |
                   | A--->#8080  #8080<------------S                 |
                   |      +-----------+   |  |  |                    |
