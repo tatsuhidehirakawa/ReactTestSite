@@ -32,7 +32,7 @@ STGprd Repository Diagram
                                          ||           /
 <Development environment>                |+----+-----/
 (./STGprd_devpkg/s_03_dev)               |  |  |
-"make init.dev"   +----------------------|--|--|--------------------+
+"$ make init.dev" +----------------------|--|--|--------------------+
                   |      +-----------+   |  |  |                    |
                   |      |/110wbs_dev|   |  |  |                    |
                   |      | WebServer |   |  |  |                    |
@@ -51,7 +51,7 @@ STGprd Repository Diagram
                                          |  |  |  
 <Testing environment>               +----+--|--|+ 
 (./STGprd_devpkg/s_03_tst)          |*110wbs|ts||
-"make init.tst"                     |  +----+--|---+  
+"$ make init.tst"                   |  +----+--|---+  
                                     |  |/120api|tst|
      A: Air(Hot reload)             |  |  +----+------+                      
      B: Bind Mount                  |  |  |/130dbs_tst|
@@ -63,7 +63,7 @@ STGprd Repository Diagram
                                              |
 <Staging environment>                        |
 (./STGprd_devpkg/s_04_stg)                Staging
-"make init.stg"                         (*Terraform)
+"$ make init.stg"                       (*Terraform)
                                              |
 <Deploy>                                     |
                                            Deploy
