@@ -13,13 +13,24 @@ $RecruitBackgroundColor: #bed2c3;
 $CompanyBackgroundColor: #bed2c3;
 $PrivacyBackgroundColor: #bed2c3;
 
+
+@mixin header__text {
+  margin: 0px 3px 3px 30px;
+  color: rgb(26, 24, 24);
+  padding: 0px 0px 10px 0px;
+  text-decoration: none;
+  text-shadow: 1px 2px 3px #808080;
+  cursor: pointer;
+  // font-weight: bold;
+}
+
 @mixin background_test_color {
   background-color: #f8b500;   //for test
 }
 
 @mixin PageOutline {
-    height: 1200px;
-    width: 1200px;
+    height: 701px;
+    width: 963px;
     // margin-left: auto;
     // margin-right: auto;
     // margin-top: 0px auto;

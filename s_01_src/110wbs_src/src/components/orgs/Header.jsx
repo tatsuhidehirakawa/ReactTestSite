@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import SearchBox from "./SearchBox";
 // import Language from './Language.jsx';
-import SignIn from './Signin.jsx';
-// import SignIn from './Signin.tsx';
 import LogoA from '../atms/LogoA.jsx';
+import Tags from '../mlcs/SearchBox.tsx';
+import SignIn from './SignIn.jsx';
+// import SignIn from './Signin.tsx';
 import "./Header.scss";
+
 
 const Header = () => {
   return (
@@ -16,11 +17,10 @@ const Header = () => {
       <div className="header--sectionB__button">
         <Link to="/News" className="header__text">News</Link>
         <Link to="/Products" className="header__text">Products</Link>
-        {/* <Link to="/TestPage" className="headerText">TestPage</Link> */}
         <Link to="/Pricing" className="header__text">Pricing</Link>
       </div>
       <div className="header--sectionC__searchbox">
-        <p>searchbox.jsx</p>
+        <Tags />
       </div>
       <div className="header--sectionD__button">
         {/* <Language /> */}
@@ -28,7 +28,8 @@ const Header = () => {
         <Link to="/Agreement" className="header__text">Agreement</Link>
         <Link to="/UserGuide" className="header__text">UserGuide</Link>
         <Link to="/SignUp" className="header__text">SignUp</Link>
-        <SignIn />
+        {/* <SignIn className="header__text">kkk</SignIn> */}
+        <SignIn className="header__text" />
         {/* <Link to="/SignIn" className="header__text">SignIn</Link> */}
         <Link to="/MyPage" className="header__text">MyPage</Link>
       </div>

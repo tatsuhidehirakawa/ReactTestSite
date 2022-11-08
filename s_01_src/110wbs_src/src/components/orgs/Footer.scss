@@ -15,8 +15,8 @@
 .footer--Outline {
   display: flex;
   flex-direction: column;
-  height: 154px;
-  padding-bottom: 43px;
+  height: 199px;
+  // padding-bottom: 43px;
   // float: inline-end;
   width: 100%;
   bottom: 0;
@@ -27,6 +27,7 @@
 //--- Definition of intermediate areas ----------------------------
 .footer--InlineA {
   display: flex;
+  height: 156px;
   justify-content: space-between;
 }
 

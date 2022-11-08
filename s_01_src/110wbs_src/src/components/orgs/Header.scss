@@ -1,15 +1,7 @@
 @import "../../Pager.scss";
 
 //--- Common Declarations -----------------------------------------
-@mixin header__text {
-  margin: 0px 3px 3px 30px;
-  color: rgb(26, 24, 24);
-  padding: 0px 0px 10px 0px;
-  text-decoration: none;
-  text-shadow: 1px 2px 3px #808080;
-  cursor: pointer;
-  // font-weight: bold;
-}
+
 
 //--- Definition of outermost area ---------------------------------
 .header--outline {
@@ -17,7 +9,7 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
-  height: 57px;
+  height: 69px;
   width: 100%;
   // background-color: $color-header;
   @include FrostedGlass;
@@ -27,9 +19,9 @@
 //  Logo
 .header--sectionA__logo {
   // @include background_test_color;
-  margin-left: 7px;
+  margin: 7px 0px 0px 0px;
   // float: left;
-  height: 59px;
+  height: 69px;
   width: 8%;
 }
 
@@ -37,18 +29,22 @@
   // padding-left: 5px;
   // float: left;
   //display: table-cell;
-  margin: 18px 0px 0px 18px;
-  width: 10%;
+  margin: 22px 0px 0px 0px;
+  width: 22%;
   .header__text {
     @include header__text;
   }
 }
 
-SearchBox
-.header--SectionC__searchbox {
-  p {
-  width: 33%;
-  }
+.header--sectionC__searchbox {
+  // background-color: aqua;
+  margin: 7px 33px 6px 33px
+  // width: 30px;
+  // margin: 18px 0px 0px 0px;
+  // @include background_test_color;
+  // p {
+  //   @include header__text;
+  // }
 }
 
 .header--sectionD__button {
@@ -56,7 +52,7 @@ SearchBox
   // @include background_test_color;
   // float: right;
   padding: 0px;
-  margin: 18px 30px 0px 0px;
+  margin: 22px 110px 0px 0px;
   width: 30%;
   .header__text {
     @include header__text;

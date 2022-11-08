@@ -1,7 +1,7 @@
 import React from 'react';
 import A_BUTTON_A from '../atms/A_Button_a.tsx';
 // import Main from './Main.jsx';
-import './Signin.scss';
+import './SignIn.scss';
 // import DbGetParams from '../Lv1_atm/DbGetParams.jsx';
 // import ApiFetch from '../Lv1_atm/ApiFetch.js';
 
@@ -9,7 +9,7 @@ import './Signin.scss';
 // const Signin = () => {
 //   const [count, setcount] = React.usestate(0);
 
-class Signin extends React.Component {
+class SignIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isModalOpen: false };
@@ -64,11 +64,11 @@ class Signin extends React.Component {
       <>
         <div onClick={()=>{this.handleClickOpen();}}>
           {/* <p className="App-link">View Package Summary</p> */}
-          <p className="App-link">SignIn</p>
+          <p className="header__text">SignIn</p>
         </div>
         {modal}
       </>
     );
   }
 }
-export default Signin;
+export default SignIn;
