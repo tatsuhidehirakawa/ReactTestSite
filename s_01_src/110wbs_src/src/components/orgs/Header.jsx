@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 // import Language from './Language.jsx';
 import LogoA from '../atms/LogoA.jsx';
 import Tags from '../mlcs/SearchBox.tsx';
-import SignIn from './SignIn.jsx';
-// import SignIn from './Signin.tsx';
+// import SignIn from './SignIn.jsx';
+import SignIn from './SignIn.tsx';
 import "./Header.scss";
 
 
@@ -29,8 +29,8 @@ const Header = () => {
         <Link to="/UserGuide" className="header__text">UserGuide</Link>
         <Link to="/SignUp" className="header__text">SignUp</Link>
         {/* <SignIn className="header__text">kkk</SignIn> */}
-        <SignIn className="header__text" />
-        {/* <Link to="/SignIn" className="header__text">SignIn</Link> */}
+        {/* <SignIn className="header__text" /> */}
+        <Link to="/SignIn" className="header__text">SignIn</Link>
         <Link to="/MyPage" className="header__text">MyPage</Link>
       </div>
     </div>
