@@ -50,7 +50,7 @@ STGprd Repository Diagram
                   +----------------------M--M--D--------------------+
                                          |  |  |  
 <Testing environment>               +----+--|--|+ 
-(./STGprd_devpkg/s_03_tst)          |*110wbs|ts||
+(./STGprd_devpkg/s_05_tst)          |*110wbs|ts||
 "$ make init.tst"                   |  +----+--|---+  
                                     |  |/120api|tst|
      A: Air(Hot reload)             |  |  +----+------+                      
@@ -62,7 +62,7 @@ STGprd Repository Diagram
                                           +-----------+
                                              |
 <Staging environment>                        |
-(./STGprd_devpkg/s_04_stg)                Staging
+(./STGprd_devpkg/s_06_stg)                Staging
 "$ make init.stg"                       (*Terraform)
                                              |
 <Deploy>                                     |
