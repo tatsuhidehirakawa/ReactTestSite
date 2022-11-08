@@ -36,7 +36,7 @@
   // background-color: #84a2d4;
   bottom: 0;
   margin: 0px;
-  height: 25px;
+  height: 45px;
   p {
     margin: 0px;
     @include footer__Text;
@@ -46,10 +46,13 @@
 //--- Definition of internal areas -------------------------------
 // Logo area
 .footer--InlineA--SectionA_logo {
-  margin: 42px 0px 0px 48px;
+  margin: 43px 0px 0px 29px;
   float: left;
   height: 59px;
   width: 58px;
+  .logoInline {
+    height: 90px;
+  }
 }
 
 .footer--InlineA--SectionB__blank {
@@ -65,7 +68,7 @@
   height: 10px;
   display: flex;
   flex-direction: column;
-  margin: 18px 29px 0px 0px;
+  margin: 33px 29px 0px 0px;
   line-height: 2.0;
   text-align: center;
   // text-decoration: none;

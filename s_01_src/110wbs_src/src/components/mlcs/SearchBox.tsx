@@ -51,10 +51,10 @@ export default function Tags() {
         renderInput={(params) => (
           <TextField
             {...params}
-            // variant="filled"             // <- Modified by STGprd(off).
-            // label="freeSolo"             // <- Modified by STGprd(off).
-            // placeholder="Favorites"      // <- Modified by STGprd(off).
-            placeholder="Search this site"  // <- Modified by STGprd(add).
+            // variant="filled"          // <- Modified by STGprd(off).
+            // label="freeSolo"          // <- Modified by STGprd(off).
+            // placeholder="Favorites"   // <- Modified by STGprd(off).
+            placeholder="Search"         // <- Modified by STGprd(add).
           />
         )}
       />
