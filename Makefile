@@ -1,43 +1,17 @@
 #.PHONY:
 
-chmod:
-	@cd s_03_dev && cd 124api_dev && ls -la && chmod 775 pkgset.sh && ls -la
-	@cd s_03_dev && cd 110wbs_dev && ls -la && chmod 775 strset.sh && ls -la
-	@cd s_05_tst && cd 130dbs_tst && ls -la && chmod 775 pg_dump.sh && ls -la
-	@cd s_05_tst && cd 130dbs_tst && ls -la && chmod 775 pg_restore.sh && ls -la
-
 #---[ 1. system boot ]-------------------------------------------------------
-
-d.c.u/dev: ## Booting only frontend devlopment containers.
-	@cd s_03_dev && docker compose up
-
-init.d.w: ## Booting only frontend devlopment containers.
-	@cd s_03_dev && docker compose up -d 110wbs_dev
-
-init.d.a.d: ## Booting only backend devlopment containers.
-	# @cd s_03_dev && docker compose up 124api_dev, 134dbs_dev
-	@cd s_03_dev && docker compose up 134dbs_dev -d
-	@cd s_03_dev && docker compose up 124api_dev -d
-
-init.tst.b: ## Under construction.
-	@cd s_05_tst && cd 130dbs_tst && docker compose up -d
-
-init.dev.bake: ## Under construction.
-	@docker buildx bake --file docker-bake.hcl STGprd_devpkg_dev STGprd_devpkg_tst
-
-inittem: ## Under construction.
-	@docker compose up 114api_dev, 314dbs_dev
 
 init.all: ## Initialize and booting all containers and services.
 	@cd s_03_dev && docker compose up -d
 	@cd s_05_tst && docker compose up -d
-	@cd k_04_stg && docker compose up -d
+	@cd s_06_stg && docker compose up -d
 
-# initdev: ## Under construction.
-# 	@cd k_914set_dev
-# 	# @docker compose up
-# 	@docker compose up 214api_dev, 314dbs_dev
-# 	# @docker compose up 114wbs_dev
+init.dev: ## Booting only frontend devlopment containers.
+	@cd s_03_dev && docker compose up
+
+init.tst: ## Booting only backend devlopment containers.
+	@cd s_05_tst && docker compose up
 
 #---[ 3. Tst env boot ]------------------------------------------------
 boot.api.a:
@@ -126,3 +100,17 @@ exec:
 
 
 debug: ## Debug code removal
+
+
+
+
+init.dev.bake: ## Under construction.
+	@docker buildx bake --file docker-bake.hcl STGprd_devpkg_dev STGprd_devpkg_tst
+
+
+
+chmod:
+	@cd s_03_dev && cd 124api_dev && ls -la && chmod 775 pkgset.sh && ls -la
+	@cd s_03_dev && cd 110wbs_dev && ls -la && chmod 775 strset.sh && ls -la
+	@cd s_05_tst && cd 130dbs_tst && ls -la && chmod 775 pg_dump.sh && ls -la
+	@cd s_05_tst && cd 130dbs_tst && ls -la && chmod 775 pg_restore.sh && ls -la
