@@ -20,11 +20,11 @@ Please check the Makefile, that's all.
 ```
 STGprd Repository Diagram
 
-<Sorce code>                        +-----------+ 
+<Sorce code>                        +-----------+
 (./STGprd_devpkg/s_01_src)          |/110wbs_src| React,Sass,TypeScript
-                                    |  +-----------+  
+                                    |  +-----------+
                                     |  |/124api_src| Golang
-                                    |  |  +-----------+                      
+                                    |  |  +-----------+
                                     |  |  |/134dbs_src| PostgreSQL
                                     +--|  |           |
                                        |  |Sorce codes|
@@ -39,7 +39,7 @@ STGprd Repository Diagram
      package.json------->|React,Sass +<--|--B  |                    |
                   |      |TypeScript |   |  |  |      +-----------+ |
                   | +----#3000       |   |  |  |      |/134dbs_dev| |
-                  | |    +-----------+   |  |  |      |  DBServer | | 
+                  | |    +-----------+   |  |  |      |  DBServer | |
   localhost:3000<---+    +-----------+   |  |  V<---->+ PostgreSQL| |
                   | |    |/124api_dev|   |  |  |      |           | |
                   | |    | APIServer |   |  |  |  +-->#5432       | |
@@ -48,12 +48,12 @@ STGprd Repository Diagram
                   | A--->#8080  #8080<------------S                 |
                   |      +-----------+   |  |  |                    |
                   +----------------------M--M--D--------------------+
-                                         |  |  |  
-<Testing environment>               +----+--|--|+ 
+                                         |  |  |
+<Testing environment>               +----+--|--|+
 (./STGprd_devpkg/s_05_tst)          |*110wbs|ts||
-"$ make init.tst"                   |  +----+--|---+  
+"$ make init.tst"                   |  +----+--|---+
                                     |  |/120api|tst|
-     A: Air(Hot reload)             |  |  +----+------+                      
+     A: Air(Hot reload)             |  |  +----+------+
      B: Bind Mount                  |  |  |/130dbs_tst|
      D: Dump and restore            +--|  | Container |
      M: Multi stage build              |  |    for    |
