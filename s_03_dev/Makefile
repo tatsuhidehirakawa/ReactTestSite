@@ -33,6 +33,10 @@ init.all: ## Initialize and booting all containers and services.
 	@cd k_03_tst && docker compose up -d
 	@cd k_04_stg && docker compose up -d
 
+# use env file
+# docker compose --env-file ../.env up 134dbs_dev
+
+
 # initdev: ## Under construction.
 # 	@cd k_914set_dev
 # 	# @docker compose up
