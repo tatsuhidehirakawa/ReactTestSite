@@ -3,20 +3,20 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.page--outline {
+.news--outline {
   @include page--outline;
   // background-color: rgb(107, 255, 255)
   // background-color: $NewsBackgroundColor;
 }
 //--- Page Inline -------------------------------------------------
-.page--inlineA {
+.news--inlineA {
   @include page--inlineA;
 }
 
-.page__textA {
+.news__textA {
   @include page__textA;
 }
 
-.page__textS {
+.news__textS {
   @include page__textS;
 }

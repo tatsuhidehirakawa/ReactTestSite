@@ -9,27 +9,27 @@ import "./Privacy.scss"
 
 const Privacy = () => {
   return (
-    <div className="page--outline">
-      <div className="page--inlineA">
-        <p className="page__textA">- <b>Privacy</b>(Sample) -</p>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <p className="page__textA"> <b>Privacy</b>(Sample) </p>
+    <div className="privacy--outline">
+      <div className="privacy--inlineA">
+        <p className="privacy__textA">- <b>Privacy</b>(Sample) -</p>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <p className="privacy__textA"> <b>Privacy</b>(Sample) </p>
       </div>  
     </div>
   )

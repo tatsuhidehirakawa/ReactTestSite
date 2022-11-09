@@ -1,23 +1,23 @@
 @import "../../Pager.scss";
 
-.SiteTop--outline {
+.sitetop--outline {
   @include page--outline;
   display:flex;
   flex-flow: column;
 
-  .SiteTop--inlineA {
+  .sitetop--inlineA {
     display: flex;
     // background-color: aquamarine;
     height: 33.33%;
     width: 100%;
     
-    .SiteTop--inlineA--boxA__pictureA {
+    .sitetop--inlineA--boxA__pictureA {
       background-color: rgb(245, 143, 143);
       height: 100%;
       width: 30%;
       margin: 0px;
     }
-    .SiteTop--inlineA--boxB__textA {
+    .sitetop--inlineA--boxB__textA {
       background-color: rgb(161, 184, 176);
       height: 100%;
       width: 70%;
@@ -30,23 +30,23 @@
     }
   }
 
-  .SiteTop--inlineB {
+  .sitetop--inlineB {
     height: 33.33%;
     width: 100%;
     display: flex;
-    .SiteTop--inlineB--boxA__pictureA {
+    .sitetop--inlineB--boxA__pictureA {
       height: 100%;
       width: 70%;
       background-color: rgb(132, 103, 238)
     }
-    .SiteTop--inlineB--boxB__textA {
+    .sitetop--inlineB--boxB__textA {
       height: 100%;
       width: 30%;
       background-color: rgb(236, 238, 153)
     }
   }
 
-  .SiteTop--inlineC__pictureA {
+  .sitetop--inlineC__pictureA {
     height: 33.33%;
     width: 100%;
     background-color: rgb(94, 131, 252);

@@ -3,29 +3,29 @@ import "./News.scss"
 
 const News = () => {
   return (
-    <div className="page--outline">
-      <div className="page--inlineA">
-        <p className="page__textA">- <b>News</b>(Sample) -</p>
+    <div className="news--outline">
+      <div className="news--inlineA">
+        <p className="news__textA">- <b>News</b>(Sample) -</p>
           <p>
             202x.xx.xx: サービスのローンチを行なった。<br />
             202x.xx.xx: xx機能をリリースしました。<br />
           </p>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <p className="page__textA">- <b>News</b>(Sample) -</p>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <div className="news__textS"></div>
+        <p className="news__textA">- <b>News</b>(Sample) -</p>
       </div>
     </div>
   )

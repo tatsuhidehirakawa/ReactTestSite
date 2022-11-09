@@ -3,18 +3,18 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.page--outline {
+.userguide--outline {
   @include page--outline;
 }
 //--- Page Inline -------------------------------------------------
-.page--inlineA {
+.userguide--inlineA {
   @include page--inlineA;
 }
 
-.page__textA {
+.userguide__textA {
   @include page__textA;
 }
 
-.page__textS {
+.userguide__textS {
   @include page__textS;
 }

@@ -4,13 +4,13 @@ import ApiFetch from '../../hooks/ApiFetch.jsx';
 
 const SiteTop = () => {
   return (
-    <div className="SiteTop--outline">
+    <div className="sitetop--outline">
 
-      <div className="SiteTop--inlineA">
-      {/* <p className="SiteTop__textA">- <b>SiteTop</b> -</p> */}
-      <div className="SiteTop--inlineA--boxA__pictureA">
+      <div className="sitetop--inlineA">
+      {/* <p className="sitetop__textA">- <b>SiteTop</b> -</p> */}
+      <div className="sitetop--inlineA--boxA__pictureA">
       </div>
-      <div className="SiteTop--inlineA--boxB__textA">
+      <div className="sitetop--inlineA--boxB__textA">
           <p className="sss">
           AAAAAAAAAAAAAA
           AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -18,8 +18,8 @@ const SiteTop = () => {
       </div>
       </div>
 
-      <div className="SiteTop--inlineB">
-        <div className="SiteTop--inlineB--boxA__pictureA">
+      <div className="sitetop--inlineB">
+        <div className="sitetop--inlineB--boxA__pictureA">
           <p>
             Technology stack:<br />
             Frontend: React.js, TypeScript, Sass<br />
@@ -29,19 +29,19 @@ const SiteTop = () => {
             <b>St</b>a<b>g</b>ing Environment: Terraform
           </p>
         </div>
-        <div className="SiteTop--inlineB--boxB__textA">
-          <div className="SiteTop__textS"></div>
-          <div className="SiteTop__textS"></div>
-          <div className="SiteTop__textS"></div>
+        <div className="sitetop--inlineB--boxB__textA">
+          <div className="sitetop__textS"></div>
+          <div className="sitetop__textS"></div>
+          <div className="sitetop__textS"></div>
           <ApiFetch />
-          <div className="SiteTop__textS"></div>
-          <div className="SiteTop__textS"></div>
-          <div className="SiteTop__textS"></div>
-          <div className="SiteTop__textS"></div>
+          <div className="sitetop__textS"></div>
+          <div className="sitetop__textS"></div>
+          <div className="sitetop__textS"></div>
+          <div className="sitetop__textS"></div>
         </div>
 
       </div>
-      <div className="SiteTop--inlineC__pictureA">
+      <div className="sitetop--inlineC__pictureA">
         </div>
     </div>
   );

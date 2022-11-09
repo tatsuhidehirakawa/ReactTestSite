@@ -3,18 +3,18 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.page--outline {
+.mypage--outline {
   @include page--outline;
 }
 //--- Page Inline -------------------------------------------------
-.page--inlineA {
+.mypage--inlineA {
   @include page--inlineA;
 }
 
-.page__textA {
+.mypage__textA {
   @include page__textA;
 }
 
-.page__textS {
+.mypage__textS {
   @include page__textS;
 }

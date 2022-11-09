@@ -3,35 +3,35 @@ import "./Products.scss"
 
 const Products = () => {
   return (
-    <div className="page--outline">
-      <div className="page--inlineA">
-        <p className="page__textA">- <b>Products</b>(Sample) -</p>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <div className="page__textS"></div>
-        <p className="page__textA">- <b>Products</b>(Sample) -</p>
+    <div className="products--outline">
+      <div className="products--inlineA">
+        <p className="products__textA">- <b>Products</b>(Sample) -</p>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <div className="products__textS"></div>
+        <p className="products__textA">- <b>Products</b>(Sample) -</p>
       </div>
     </div>
   )

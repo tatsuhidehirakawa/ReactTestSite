@@ -3,18 +3,18 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.page--outline {
+.agreement--outline {
   @include page--outline;
 }
 //--- Page Inline -------------------------------------------------
-.page--inlineA {
+.agreement--inlineA {
   @include page--inlineA;
 }
 
-.page__textA {
+.agreement__textA {
   @include page__textA;
 }
 
-.page__textS {
+.agreement__textS {
   @include page__textS;
 }

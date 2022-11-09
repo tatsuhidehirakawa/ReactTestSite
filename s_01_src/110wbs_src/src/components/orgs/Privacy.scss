@@ -3,18 +3,18 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.page--outline {
+.privacy--outline {
   @include page--outline;
 }
 //--- Page Inline -------------------------------------------------
-.page--inlineA {
+.privacy--inlineA {
   @include page--inlineA;
 }
 
-.page__textA {
+.privacy__textA {
   @include page__textA;
 }
 
-.page__textS {
+.privacy__textS {
   @include page__textS;
 }
