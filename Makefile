@@ -2,16 +2,19 @@
 
 #---[ 1. system boot ]-------------------------------------------------------
 
-init.all: ## Initialize and booting all containers and services.
-	@cd s_03_dev && docker compose up -d
-	@cd s_05_tst && docker compose up -d
-	@cd s_06_stg && docker compose up -d
+init.a: ## Initialize and booting all containers and services.
+	@cd s_03_dev && docker compose --env-file ../.env up
+	@cd s_05_tst && docker compose --env-file ../.env up
+	@cd s_06_stg && docker compose --env-file ../.env up
 
-init.dev: ## Booting only frontend devlopment containers.
-	@cd s_03_dev && docker compose up
+init.d: ## Booting only frontend devlopment containers.
+	@cd s_03_dev && docker compose --env-file ../.env up
 
-init.tst: ## Booting only backend devlopment containers.
-	@cd s_05_tst && docker compose up
+init.t: ## Booting only backend devlopment containers.
+	@cd s_05_tst && docker compose --env-file ../.env up
+
+init.s: ## Booting only backend devlopment containers.
+	@cd s_06_tst && docker compose --env-file ../.env up
 
 #---[ 3. Tst env boot ]------------------------------------------------
 boot.api.a:

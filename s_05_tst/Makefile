@@ -2,6 +2,14 @@
 
 #---[ 1. Test system boot ]-------------------------------------------------------
 
+init.t: ## Booting only frontend devlopment containers.
+	@docker compose --env-file ../.env up
+
+
+
+
+
+
 b/d.c.u/f: ## Booting only frontend testing containers.
 	docker compose up 110wbs_tst
 
