@@ -36,14 +36,14 @@ STGprd Repository Diagram
                   |      +-----------+   |  |  |                    |
                   |      |/110wbs_dev|   |  |  |                    |
                   |      | WebServer |   |  |  |                    |
-  package.json---------->|React,Sass +<--|--B  |                    |
+  package.json----C----->|React,Sass +<-----B  |                    |
                   |      |TypeScript |   |  |  |      +-----------+ |
                   | +----#3000       |   |  |  |      |/134dbs_dev| |
                   | |    +-----------+   |  |  |      |  DBServer | |
   localhost:3000<---+    +-----------+   |  |  V<---->+ PostgreSQL| |
                   | |    |/124api_dev|   |  |  |      |           | |
                   | |    | APIServer |   |  |  |  +-->#5432       | |
-  go.mod,go.sum--------->|  Golang   +<--B  |  |  |   +-----------+ |
+  go.mod,go.sum---C----->|  Golang   +<--B  |  |  |   +-----------+ |
                   | |    |           |   |  |  |  |                 |
                   | A--->#8080  #8080<------------S                 |
                   |      +-----------+   |  |  |                    |
@@ -55,11 +55,11 @@ STGprd Repository Diagram
                                     |  |/120api|tst|
      A: Air(Hot reload)             |  |  +----+------+
      B: Bind Mount                  |  |  |/130dbs_tst|
-     D: Dump and restore            +--|  | Container |
-     M: Multi stage build              |  |    for    |
-     S: sqlc(O/R Mapper)               +--|   test    |
-     V: Initialize & Volume Mount         |           |
-                                          +-----------+
+     C: Copy                        +--|  | Container |
+     D: Dump and restore               |  |    for    |
+     M: Multi stage build              +--|   test    |
+     S: sqlc(O/R Mapper)                  |           |
+     V: Initialize & Volume Mount         +-----------+
                                              |
 <Staging environment>                        |
 (./STGprd_devpkg/s_06_stg)                Staging
