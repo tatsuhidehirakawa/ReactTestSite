@@ -1,5 +1,5 @@
 //--- outline color control -----------------------------
-$NewsBackgroundColor: #cecdb2;
+// $NewsBackgroundColor: #cecdb2;
 $ProductsBackgroundColor: #bed2c3;
 $TestPageBackgroundColor: #bed2c3;
 $PricingBackgroundColor: #bed2c3;
@@ -43,7 +43,7 @@ $PrivacyBackgroundColor: #bed2c3;
   height: 800px;
   width: 900px;
   // float: both;
-  margin: 0px auto;
+  margin: -116px auto 0px auto;  // ※要検証
   // padding: 9px 0px 99px 0px;
   padding: 50px;
   // margin: auto;

@@ -1,9 +1,5 @@
 @import "../../Pager.scss";
 
-//--- Common Declarations -----------------------------------------
-
-
-//--- Definition of outermost area ---------------------------------
 .header--outline {
   display: flex;
   justify-content: space-between;
@@ -15,17 +11,22 @@
   @include frostedglass;
 }
 
-//--- Definition of internal areas -------------------------------
-//  Logo
-.header--sectionA__logo {
+.header--sectionA {
+  display: flex;
+  margin: 7px 0px 0px 15px;
+  height: 69px;
+  width: 30%;
+}
+
+.header--sectionA--boxA__logo {
   // @include background__testcolor;
   margin: 7px 0px 0px 15px;
   // float: left;
   height: 69px;
-  width: 8%;
+  width: 19%;
 }
 
-.header--sectionB__button {
+.header--sectionA--boxB__button {
   // padding-left: 5px;
   // float: left;
   //display: table-cell;
@@ -36,7 +37,7 @@
   }
 }
 
-.header--sectionC__searchbox {
+.header--sectionB__searchbox {
   // background-color: aqua;
   margin: 7px 33px 6px 33px
   // width: 30px;
@@ -47,7 +48,7 @@
   // }
 }
 
-.header--sectionD__button {
+.header--sectionC__button {
   display: flex;
   // @include background__testcolor;
   // float: right;

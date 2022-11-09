@@ -4,7 +4,7 @@ import "./News.scss"
 const News = () => {
   return (
     <div className="page--outline">
-      <div className="PageInlineA">
+      <div className="page--inlineA">
         <p className="page__textA">- <b>News</b>(Sample) -</p>
           <p>
             202x.xx.xx: サービスのローンチを行なった。<br />

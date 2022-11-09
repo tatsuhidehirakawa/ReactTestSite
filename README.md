@@ -1,4 +1,4 @@
-## Personal Development Practice Repository (use STGPRD environment)
+## Personal Development Practice Repository (use STGprd environment)
 1. Overview  
 It is a full-stack package for web development, focusing on the technology stack presented in the next chapter. It is optimized primarily as a template for creating large-scale CtoC sites. In particular, it is RESTful, does not use CSS-in-JS, minimizes Paas dependencies, emphasizes orthogonality and loose coupling, static typing, and Docker usage.  
 
@@ -18,8 +18,6 @@ Please check the Makefile, that's all.
 
 5. STGprd Repository Diagram (overall)  
 ```
-STGprd Repository Diagram
-
 <Sorce code>                        +-----------+
 (./STGprd_devpkg/s_01_src)          |/110wbs_src| React,Sass,TypeScript
                                     |  +-----------+
@@ -67,6 +65,8 @@ STGprd Repository Diagram
                                              |
 <Deploy>                                     |
                                            Deploy
+
+                           FIG. 1	STGprd Repository Diagram
 ```
 6. Directory structure diagram (overall/excerpt)  
 This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  

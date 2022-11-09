@@ -10,18 +10,20 @@ import "./Header.scss";
 const Header = () => {
   return (
     <div className="header--outline">
-      <div className="header--sectionA__logo">
-        <LogoA />
+      <div className="header--sectionA">
+        <div className="header--sectionA--boxA__logo">
+          <LogoA />
+        </div>
+        <div className="header--sectionA--boxB__button">
+          <Link to="/News" className="header__text">News</Link>
+          <Link to="/Products" className="header__text">Products</Link>
+          <Link to="/Pricing" className="header__text">Pricing</Link>
+        </div>
       </div>
-      <div className="header--sectionB__button">
-        <Link to="/News" className="header__text">News</Link>
-        <Link to="/Products" className="header__text">Products</Link>
-        <Link to="/Pricing" className="header__text">Pricing</Link>
-      </div>
-      <div className="header--sectionC__searchbox">
+      <div className="header--sectionB__searchbox">
         <Tags />
       </div>
-      <div className="header--sectionD__button">
+      <div className="header--sectionC__button">
         {/* <Language /> */}
         <Link to="/SiteTop" className="header__text">SiteTop</Link>
         <Link to="/Agreement" className="header__text">Agreement</Link>
