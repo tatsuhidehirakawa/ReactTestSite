@@ -2,7 +2,7 @@
 
 #---[ 1. system boot ]-------------------------------------------------------
 
-init.s: ## Booting only frontend devlopment containers.
+init.stg: ## Booting only frontend devlopment containers.
 	@docker compose --env-file ../.env up
 
 #---[ 3. DB backup and restore ]------------------------------------------------

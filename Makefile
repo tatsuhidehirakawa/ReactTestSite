@@ -1,20 +1,19 @@
 #.PHONY:
 
 #---[ 1. system boot ]-------------------------------------------------------
+init.all: ## Initialize and booting all containers and services.
+	@cd s_03_dev && make init.dev
+	@cd s_05_tst && make init.tst
+	@cd s_06_stg && make init.stg
 
-init.a: ## Initialize and booting all containers and services.
-	@cd s_03_dev && docker compose --env-file ../.env up
-	@cd s_05_tst && docker compose --env-file ../.env up
-	@cd s_06_stg && docker compose --env-file ../.env up
+init.dev: ## Booting only frontend devlopment containers.
+	@cd s_03_dev && make init.dev
 
-init.d: ## Booting only frontend devlopment containers.
-	@cd s_03_dev && docker compose --env-file ../.env up
+init.tst: ## Booting only backend testing containers.
+	@cd s_05_tst && make init.tst
 
-init.t: ## Booting only backend devlopment containers.
-	@cd s_05_tst && docker compose --env-file ../.env up
-
-init.s: ## Booting only backend devlopment containers.
-	@cd s_06_tst && docker compose --env-file ../.env up
+init.stg: ## Booting only backend staging containers.
+	@cd s_06_tst && make init.stg
 
 #---[ 3. Tst env boot ]------------------------------------------------
 boot.api.a:
