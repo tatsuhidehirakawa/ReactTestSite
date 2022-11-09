@@ -12,13 +12,13 @@
   height: 69px;
   width: 100%;
   // background-color: $color-header;
-  @include FrostedGlass;
+  @include frostedglass;
 }
 
 //--- Definition of internal areas -------------------------------
 //  Logo
 .header--sectionA__logo {
-  // @include background_test_color;
+  // @include background__testcolor;
   margin: 7px 0px 0px 15px;
   // float: left;
   height: 69px;
@@ -41,7 +41,7 @@
   margin: 7px 33px 6px 33px
   // width: 30px;
   // margin: 18px 0px 0px 0px;
-  // @include background_test_color;
+  // @include background__testcolor;
   // p {
   //   @include header__text;
   // }
@@ -49,7 +49,7 @@
 
 .header--sectionD__button {
   display: flex;
-  // @include background_test_color;
+  // @include background__testcolor;
   // float: right;
   padding: 0px;
   margin: 22px 110px 0px 0px;

@@ -21,7 +21,7 @@
   width: 100%;
   bottom: 0;
   position: fixed;
-  @include FrostedGlass;
+  @include frostedglass;
 }
 
 //--- Definition of intermediate areas ----------------------------
@@ -56,11 +56,11 @@
 }
 
 .footer--InlineA--SectionB__blank {
-  @include background_test_color;
+  @include background__testcolor;
 }
 
 .footer--InlineA--SectionC__blank {
-  @include background_test_color;
+  @include background__testcolor;
 }
 
 .footer--InlineA--SectionD__text {
@@ -72,7 +72,7 @@
   line-height: 2.0;
   text-align: center;
   // text-decoration: none;
-  // @include background_test_color;
+  // @include background__testcolor;
   .footer__Text {
     @include footer__Text;
   }
