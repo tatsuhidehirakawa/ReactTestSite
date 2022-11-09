@@ -28,7 +28,7 @@ $PrivacyBackgroundColor: #bed2c3;
   background-color: #f8b500;   //for test
 }
 
-@mixin PageOutline {
+@mixin page--outline {
     height: 701px;
     width: 963px;
     // margin-left: auto;
@@ -39,7 +39,7 @@ $PrivacyBackgroundColor: #bed2c3;
     // border: 5px dotted #4097a7;  // For test
   }
   
-@mixin PageInlineA {
+@mixin page--inlineA {
   height: 800px;
   width: 900px;
   // float: both;
@@ -52,7 +52,7 @@ $PrivacyBackgroundColor: #bed2c3;
   opacity: 0.5;
 }
 
-@mixin PageTextA {
+@mixin page__textA {
   color: rgb(0, 0, 0);
   //top: 0px;
   padding: 0px 0px 0px 0px;
@@ -60,7 +60,7 @@ $PrivacyBackgroundColor: #bed2c3;
   cursor: pointer;
 }
   
-@mixin PageTextS {
+@mixin page__textS {
   height: auto;
   width: auto;
   margin: 10px 30px 10px 30px;

@@ -4,26 +4,26 @@ import "./Pricing.scss"
 const Pricing = () => {
   return (
     <div className="PageOutline">
-      <div className="PageInlineA">
-        <p className="PageTextA">- <b>Pricing</b>(Sample) -</p>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <p className="PageTextA">- <b>Pricing</b>(Sample) -</p>
+      <div className="page--inlineA">
+        <p className="page__textA">- <b>Pricing</b>(Sample) -</p>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <div className="page__textS"></div>
+        <p className="page__textA">- <b>Pricing</b>(Sample) -</p>
       </div>
     </div>
   )
