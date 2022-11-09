@@ -2,7 +2,7 @@
 
 #---[ 1. system boot ]-------------------------------------------------------
 
-init.d: ## Booting only frontend devlopment containers.
+init.dev: ## Booting only frontend devlopment containers.
 	@docker compose --env-file ../.env up
 
 

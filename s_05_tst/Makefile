@@ -2,7 +2,7 @@
 
 #---[ 1. Test system boot ]-------------------------------------------------------
 
-init.t: ## Booting only frontend devlopment containers.
+init.tst: ## Booting only frontend devlopment containers.
 	@docker compose --env-file ../.env up
 
 
