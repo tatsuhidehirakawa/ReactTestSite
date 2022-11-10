@@ -21,7 +21,7 @@
   // bottom: 0;
   // position: fixed;
   position: bottom;
-  @include footer__height;
+  height: $footer__height;
   @include frostedglass;
 }
 
