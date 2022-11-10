@@ -1,20 +1,69 @@
 @import "../../Pager.scss";
 
-//--- Common Declarations -----------------------------------------
+.sitetop--outline {
+  @include page--outline;
+  display:flex;
+  flex-flow: column;
 
-//--- Page Outline ------------------------------------------------
-.PageOutline {
-  @include PageOutline;
-}
-//--- Page Inline -------------------------------------------------
-.PageInlineA {
-  @include PageInlineA;
+  .sitetop--inlineA {
+    display: flex;
+    // background-color: aquamarine;
+    height: 33.33%;
+    width: 100%;
+    .sitetop--inlineA--boxA__pictureA {
+      background-color: rgb(245, 143, 143);
+      height: 100%;
+      width: 30%;
+      margin: 0px;
+    }
+    .sitetop--inlineA--boxB__textA {
+      background-color: rgb(161, 184, 176);
+      height: 100%;
+      width: 70%;
+      padding: 20px;
+      text-align: left;
+      overflow-wrap:  break-word;
+      font-size: 22px;
+      // .sss{
+      //   // white-space: pre-line;
+      // }
+    }
+  }
+
+  .sitetop--inlineB {
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+    .sitetop--inlineB--boxA__pictureA {
+      height: 100%;
+      width: 70%;
+      background-color: rgb(132, 103, 238)
+    }
+    .sitetop--inlineB--boxB__textA {
+      height: 100%;
+      width: 30%;
+      background-color: rgb(236, 238, 153)
+    }
+  }
+
+  .sitetop--inlineC__pictureA {
+    height: 33.33%;
+    width: 100%;
+    background-color: rgb(94, 131, 252);
+  }
 }
 
-.PageTextA {
-  @include PageTextA;
-}
+// .page__textA {
+//   @include page__textA;
+// }
 
-.PageTextS {
-  @include PageTextS;
-}
+// .page__textS {
+//   @include page__textS;
+// }
+
+
+// <p>
+// This Packege is <b>fullstack</b> Web development <b>environment</b> named "<b>STGprd</b>".<br />
+// "<b>STGprd</b>" is made by Golang, PostgreSQL, React, TypeScript, Sass & Docker.<br />
+// If you want to use this packege, please access "<b>https://github.com/tatsuhidehirakawa/myportfolio_k</b>".
+// </p>

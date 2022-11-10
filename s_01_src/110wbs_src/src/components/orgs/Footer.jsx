@@ -7,15 +7,15 @@ const Footer = () => {
   return (
     <>
     <div className="footer--Outline">
-      <div className="footer--InlineA">
-        <div className="footer--InlineA--SectionA_logo">
+      <div className="footer--inlineA">
+        <div className="footer--inlineA--sectionA_logo">
           <LogoA />
         </div>
-        <div className="footer--InlineA--SectionB__blank">
+        <div className="footer--inlineA--sectionB__blank">
         </div>
-        <div className="footer--InlineA--SectionC__blank">
+        <div className="footer--inlineA--sectionC__blank">
         </div>
-        <div className="footer--InlineA--SectionD__text">
+        <div className="footer--inlineA--sectionD__text">
           <Link to="/Contact" className="footer__Text">Contact</Link>
           <Link to="/Recruit" className="footer__Text">Recruit</Link>
           <Link to="/Company" className="footer__Text">Company</Link>
@@ -24,7 +24,7 @@ const Footer = () => {
       </div>
       <div className="footer--InlineB__signeture">
         {/* oupCopyright inc.-3 2022 All Right Reser. All Right Reserved */}
-        <p>2023-2022 &copy; Sample Inc.</p>
+        <p>2023-2022 &copy; Your website org.</p>
       </div>
     </div>
     </>

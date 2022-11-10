@@ -3,18 +3,18 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.PageOutline {
-  @include PageOutline;
+.contact--outline {
+  @include page--outline;
 }
 //--- Page Inline -------------------------------------------------
-.PageInlineA {
-  @include PageInlineA;
+.contact--inlineA {
+  @include page--inlineA;
 }
 
-.PageTextA {
-  @include PageTextA;
+.contact__textA {
+  @include page__textA;
 }
 
-.PageTextS {
-  @include PageTextS;
+.contact__textS {
+  @include page__textS;
 }

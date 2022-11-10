@@ -3,27 +3,27 @@ import "./Recruit.scss"
 
 const Recruit = () => {
   return (
-    <div className="PageOutline">
-      <div className="PageInlineA">
-        <p className="PageTextA">- <b>Recruit</b>(Sample) -</p>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <p className="PageTextA">- <b>Recruit</b>(Sample) -</p>
+    <div className="recruit--outline">
+      <div className="recruit--inlineA">
+        <p className="recruit__textA">- <b>Recruit</b>(Sample) -</p>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <div className="recruit__textS"></div>
+        <p className="recruit__textA">- <b>Recruit</b>(Sample) -</p>
       </div>
     </div>
   )

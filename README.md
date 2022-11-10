@@ -1,11 +1,16 @@
-## Personal Development Practice Repository (use STGPRD environment)
+## Personal Development Practice Repository (use STGprd environment)
 1. Overview  
 It is a full-stack package for web development, focusing on the technology stack presented in the next chapter. It is optimized primarily as a template for creating large-scale CtoC sites. In particular, it is RESTful, does not use CSS-in-JS, minimizes Paas dependencies, emphasizes orthogonality and loose coupling, static typing, and Docker usage.  
 
 2. Technology stacks.  
-Frontend: TypeScript, React.js, Sass, Html, AtomicDesign, MindBEMding, MUI.  
-Backend: Go(Gin,sqlc), PostgreSQL.  
-Development environment: Docker, GNU Make, Air(Golang), VSCode, Git&Github, A5:SQL Mk-2, Windows10, macOS Monterey, Mermaid.js.  
+Common: Docker, GNU Make, VSCode, Git&Github, Mermaid.js.  
+Development environment: Air(Golang).  
+-> Frontend: TypeScript, React.js, Sass, Html, AtomicDesign, MindBEMding, MUI.  
+-> Backend: Go(Gin,sqlc), PostgreSQL, A5:SQL Mk-2.  
+Testing environment:  
+-> CircliCI  
+Staging environment:  
+-> Terraform  
 
 3. Boot procedure.  
 Please check the Makefile, that's all.  
@@ -13,52 +18,55 @@ Please check the Makefile, that's all.
 
 5. STGprd Repository Diagram (overall)  
 ```
-STGprd Repository Diagram
-
-Sorce code                          +-----------+ 
+<Sorce code>                        +-----------+
 (./STGprd_devpkg/s_01_src)          |/110wbs_src| React,Sass,TypeScript
-                                    |  +-----------+  
+                                    |  +-----------+
                                     |  |/124api_src| Golang
-                                    |  |  +-----------+                      
-                                    |  |  |/134api_src| PostgreSQL
+                                    |  |  +-----------+
+                                    |  |  |/134dbs_src| PostgreSQL
                                     +--|  |           |
                                        |  |Sorce codes|
                                        +--|           |
                                          ||           /
-Development environment                  |+----+-----/
+<Development environment>                |+----+-----/
 (./STGprd_devpkg/s_03_dev)               |  |  |
-"make init.d"     +----------------------|--|--|--------------------+
+"$ make init.dev" +----------------------|--|--|--------------------+
                   |      +-----------+   |  |  |                    |
                   |      |/110wbs_dev|   |  |  |                    |
                   |      | WebServer |   |  |  |                    |
-                  |      |React,Sass +<--|--B  |                    |
+  package.json----C----->|React,Sass +<-----B  |                    |
                   |      |TypeScript |   |  |  |      +-----------+ |
                   | +----#3000       |   |  |  |      |/134dbs_dev| |
-                  | |    +-----------+   |  |  |      |  DBServer | | 
+                  | |    +-----------+   |  |  |      |  DBServer | |
   localhost:3000<---+    +-----------+   |  |  V<---->+ PostgreSQL| |
                   | |    |/124api_dev|   |  |  |      |           | |
                   | |    | APIServer |   |  |  |  +-->#5432       | |
-                  | |    |  Golang   +<--B  |  |  |   +-----------+ |
+  go.mod,go.sum---C----->|  Golang   +<--B  |  |  |   +-----------+ |
                   | |    |           |   |  |  |  |                 |
                   | A--->#8080  #8080<------------S                 |
                   |      +-----------+   |  |  |                    |
                   +----------------------M--M--D--------------------+
-                                         |  |  |  
-Testing environment                 +----+--|--|+ 
-(./STGprd_devpkg/s_03_tst)          |/110wbs|ts||
-"make init.t"                       |  +----+--|---+  
+                                         |  |  |
+<Testing environment>               +----+--|--|+
+(./STGprd_devpkg/s_05_tst)          |*110wbs|ts||
+"$ make init.tst"                   |  +----+--|---+
                                     |  |/120api|tst|
-     A: Air(Hot reload)             |  |  +----+------+                      
+     A: Air(Hot reload)             |  |  +----+------+
      B: Bind Mount                  |  |  |/130dbs_tst|
-     D: Dump and restore            +--|  | Container |
-     M: Multi stage build              |  |    for    |
-     S: sqlc(O/R Mapper)               +--|   test    |
-     V: Initialize & Volume Mount         |           |
-                                          +-----------+
+     C: Copy                        +--|  | Container |
+     D: Dump and restore               |  |    for    |
+     M: Multi stage build              +--|   test    |
+     S: sqlc(O/R Mapper)                  |           |
+     V: Initialize & Volume Mount         +-----------+
                                              |
-Staging environment                          |
-(./STGprd_devpkg/s_04_stg)                Staging
-"make init.s"                           (Terraform)
+<Staging environment>                        |
+(./STGprd_devpkg/s_06_stg)                Staging
+"$ make init.stg"                       (*Terraform)
+                                             |
+<Deploy>                                     |
+                                           Deploy
+
+                           FIG. 1	STGprd Repository Diagram
 ```
 6. Directory structure diagram (overall/excerpt)  
 This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  

@@ -9,27 +9,27 @@ import "./Privacy.scss"
 
 const Privacy = () => {
   return (
-    <div className="PageOutline">
-      <div className="PageInlineA">
-        <p className="PageTextA">- <b>Privacy</b>(Sample) -</p>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <p className="PageTextA"> <b>Privacy</b>(Sample) </p>
+    <div className="privacy--outline">
+      <div className="privacy--inlineA">
+        <p className="privacy__textA">- <b>Privacy</b>(Sample) -</p>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <div className="privacy__textS"></div>
+        <p className="privacy__textA"> <b>Privacy</b>(Sample) </p>
       </div>  
     </div>
   )

@@ -15,55 +15,65 @@
 .footer--Outline {
   display: flex;
   flex-direction: column;
-  height: 154px;
-  padding-bottom: 43px;
-  // float: inline-end;
   width: 100%;
-  bottom: 0;
-  position: fixed;
-  @include FrostedGlass;
+  // padding-bottom: 43px;
+  float: inline-end;
+  // bottom: 0;
+  // position: fixed;
+  position: bottom;
+  height: $footer__height;
+  @include frostedglass;
 }
 
 //--- Definition of intermediate areas ----------------------------
-.footer--InlineA {
+.footer--inlineA {
   display: flex;
+  height: 173px;
   justify-content: space-between;
 }
 
 // Signeture area
 .footer--InlineB__signeture {
-  background-color: #84a2d4;
+  // background-color: #84a2d4;
   bottom: 0;
-  height: 25px;
+  margin: 0px;
+  height: 45px;
+  p {
+    margin: 0px;
+    @include footer__Text;
+  }
 }
 
 //--- Definition of internal areas -------------------------------
 // Logo area
-.footer--InlineA--SectionA_logo {
-  margin-left: 7px;
+.footer--inlineA--sectionA_logo {
+  margin: 43px 0px 0px 29px;
   float: left;
   height: 59px;
   width: 58px;
+  .logoInline {
+    height: 90px;
+  }
 }
 
-.footer--InlineA--SectionB__blank {
-  @include background_test_color;
+.footer--inlineA--sectionB__blank {
+  @include background__testcolor;
 }
 
-.footer--InlineA--SectionC__blank {
-  @include background_test_color;
+.footer--inlineA--sectionC__blank {
+  @include background__testcolor;
 }
 
-.footer--InlineA--SectionD__text {
+.footer--inlineA--sectionD__text {
   width: 20%;
   height: 10px;
   display: flex;
   flex-direction: column;
-  margin: 18px 29px 0px 0px;
+  margin: 33px 29px 0px 0px;
   line-height: 2.0;
   text-align: center;
   // text-decoration: none;
-  // @include background_test_color;
+  // @include background__testcolor;
   .footer__Text {
     @include footer__Text;
   }

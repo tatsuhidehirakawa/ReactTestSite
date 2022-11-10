@@ -3,27 +3,27 @@ import "./Contact.scss"
 
 const Contact = () => {
   return (
-    <div className="PageOutline">
-      <div className="PageInlineA">
-        <p className="PageTextA">- <b>Contact Us</b>(Sample) -</p>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <div className="PageTextS"></div>
-        <p className="PageTextA">- <b>Contact Us</b>(Sample) -</p>
+    <div className="contact--outline">
+      <div className="contact--inlineA">
+        <p className="contact__textA">- <b>Contact Us</b>(Sample) -</p>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <div className="contact__textS"></div>
+        <p className="contact__textA">- <b>Contact Us</b>(Sample) -</p>
       </div>
     </div>
   )

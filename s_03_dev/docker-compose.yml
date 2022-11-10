@@ -1,7 +1,6 @@
 version: "3"
 services:
 
-#---110wbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   110wbs_dev:
     container_name: 110wbs_dev
     # build: ../s_03_dev/110wbs_dev
@@ -22,7 +21,6 @@ services:
       - STGprd_devpkg_dev_network
     # platform: linux/x86_64
 
-#---124api_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   124api_dev:
     container_name: 124api_dev
     # build:
@@ -41,7 +39,6 @@ services:
     # depends_on:
     #   - 134dbs_dev
 
-#---134dbs_dev---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   134dbs_dev:
     container_name: 134dbs_dev
     image: postgres:14
@@ -55,19 +52,17 @@ services:
       - ../s_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
       # This directory is for generate test data from db dump and restore.
       # Warning : Do not operate PowerShell at dump and restore.
-      - ../k_03_tst/130dbs_tst/:/usr/src/dbstore
+      - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
       - STGprd_devpkg_dev_network
 
-#----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 volumes:
   # wbs-vol:
   # api-vol: # Activate for Dockerfile Opration.
   dbs-vol:
 
-#---k_214aps_dev-+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 networks:
   STGprd_devpkg_dev_network:
     driver: bridge

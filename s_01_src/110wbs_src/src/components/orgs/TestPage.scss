@@ -3,19 +3,19 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.PageOutline {
-  @include PageOutline;
-  background-color: $TestPageBackgroundColor;
+.page--outline {
+  @include page--outline;
+  // background-color: $TestPageBackgroundColor;
 }
 //--- Page Inline -------------------------------------------------
-.PageInlineA {
-  @include PageInlineA;
+.page--inlineA {
+  @include page--inlineA;
 }
 
-.PageTextA {
-  @include PageTextA;
+.page__textA {
+  @include page__textA;
 }
 
-.PageTextS {
-  @include PageTextS;
+.page__textS {
+  @include page__textS;
 }

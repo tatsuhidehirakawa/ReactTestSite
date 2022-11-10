@@ -3,18 +3,18 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.products--outline {
+.sidebar--outline {
   @include page--outline;
 }
 //--- Page Inline -------------------------------------------------
-.products--inlineA {
+.sidebar--inlineA {
   @include page--inlineA;
 }
 
-.products__textA {
+.sidebar__textA {
   @include page__textA;
 }
 
-.products__textS {
+.sidebar__textS {
   @include page__textS;
 }
