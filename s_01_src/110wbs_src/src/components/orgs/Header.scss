@@ -5,7 +5,7 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
-  height: 69px;
+  @include header__height;
   width: 100%;
   // background-color: $color-header;
   @include frostedglass;
@@ -14,7 +14,7 @@
 .header--sectionA {
   display: flex;
   margin: 0px 0px 0px 15px;
-  height: 69px;
+  @include header__height;
   width: 30%;
 }
 
@@ -22,7 +22,7 @@
   // @include background__testcolor;
   margin: 7px 0px 0px 15px;
   // float: left;
-  height: 69px;
+  @include header__height;
   width: 19%;
 }
 

@@ -15,17 +15,18 @@
 .footer--Outline {
   display: flex;
   flex-direction: column;
-  height: 199px;
-  // padding-bottom: 43px;
-  // float: inline-end;
   width: 100%;
-  bottom: 0;
-  position: fixed;
+  // padding-bottom: 43px;
+  float: inline-end;
+  // bottom: 0;
+  // position: fixed;
+  position: bottom;
+  @include footer__height;
   @include frostedglass;
 }
 
 //--- Definition of intermediate areas ----------------------------
-.footer--InlineA {
+.footer--inlineA {
   display: flex;
   height: 173px;
   justify-content: space-between;
@@ -45,7 +46,7 @@
 
 //--- Definition of internal areas -------------------------------
 // Logo area
-.footer--InlineA--SectionA_logo {
+.footer--inlineA--sectionA_logo {
   margin: 43px 0px 0px 29px;
   float: left;
   height: 59px;
@@ -55,15 +56,15 @@
   }
 }
 
-.footer--InlineA--SectionB__blank {
+.footer--inlineA--sectionB__blank {
   @include background__testcolor;
 }
 
-.footer--InlineA--SectionC__blank {
+.footer--inlineA--sectionC__blank {
   @include background__testcolor;
 }
 
-.footer--InlineA--SectionD__text {
+.footer--inlineA--sectionD__text {
   width: 20%;
   height: 10px;
   display: flex;

@@ -10,7 +10,6 @@
     // background-color: aquamarine;
     height: 33.33%;
     width: 100%;
-    
     .sitetop--inlineA--boxA__pictureA {
       background-color: rgb(245, 143, 143);
       height: 100%;
@@ -21,12 +20,13 @@
       background-color: rgb(161, 184, 176);
       height: 100%;
       width: 70%;
-      .sss{
-        white-space: pre-line;
-
-
-      // align-items:
-      }
+      padding: 20px;
+      text-align: left;
+      overflow-wrap:  break-word;
+      font-size: 22px;
+      // .sss{
+      //   // white-space: pre-line;
+      // }
     }
   }
 

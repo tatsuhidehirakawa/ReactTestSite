@@ -14,6 +14,14 @@ $CompanyBackgroundColor: #bed2c3;
 $PrivacyBackgroundColor: #bed2c3;
 
 
+@mixin header__height {
+  height: 69px;
+}
+
+@mixin footer__height {
+  height: 199px;
+}
+
 @mixin header__text {
   margin: 0px 3px 3px 30px;
   color: rgb(26, 24, 24);
