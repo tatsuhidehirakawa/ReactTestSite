@@ -66,7 +66,7 @@ Please check the Makefile, that's all.
 <Deploy>                                     |
                                            Deploy
 
-                           FIG. 1	STGprd Repository Diagram
+                           FIG.1 STGprd Repository Diagram
 ```
 6. Directory structure diagram (overall/excerpt)  
 This directory structure is characterized by the separation of management files such as "Dockerfile" from the source code. The advantage of separating management files is that it is easy to switch architectures, for example, when you want to convert from "REST" to "GraphQL".  
