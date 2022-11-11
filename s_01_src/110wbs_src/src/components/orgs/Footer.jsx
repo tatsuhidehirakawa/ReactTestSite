@@ -39,6 +39,7 @@ const Footer = () => {
           <Link to="/Privacy" className="footer__Text">Privacy</Link>
           <Link to="/none" className="footer__Text">Temes fo use</Link>
         </div>
+        <div className="footer--inlineA--sectionF__blank"></div>
       </div>
       <div className="footer--InlineB__signeture">
         {/* oupCopyright inc.-3 2022 All Right Reser. All Right Reserved */}

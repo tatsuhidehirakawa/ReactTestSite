@@ -21,14 +21,14 @@
 }
 
 @mixin footer--inlineA--section {
-  width: 19%;
+  width: 10%;
   height: 10px;
   display: flex;
   flex-direction: column;
   // margin: 33px 29px 0px 0px;
   line-height: 1.4;
   text-align: center;
-  margin: 15px 60px 5px 60px;
+  margin: 15px 21px 5px 0px;
   // text-decoration: none;
   // @include background__testcolor;
   .footer__Text {
@@ -91,10 +91,10 @@
 //--- Definition of internal areas -------------------------------
 // Logo area
 .footer--inlineA--sectionA_logo {
-  margin: 43px 30px 0px 59px;
+  margin: 43px 0px 0px 90px;
   float: left;
-  height: 59px;
-  width: 58px;
+  height: 100px;
+  width: 19%;
   .logoInline {
     height: 90px;
   }
@@ -126,4 +126,9 @@
   p {
     @include footer__text__label;
   }
+}
+
+.footer--inlineA--sectionF__blank {
+  height: auto;
+  width: 15%;
 }
