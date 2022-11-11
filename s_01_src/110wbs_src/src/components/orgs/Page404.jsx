@@ -3,10 +3,12 @@ import "./Page404.scss"
 
 const Page404 = () => {
   return (
-    <div className="bbb">
-      {/* <img src="hiyoko.svg" className="icon-beginner" /> */}
-      <p className="userGuide_text_a">404 Page not found...</p>
+    <div className="Page404--outline">
+      <div className="Page404--inlineA">
+        <b><p className="Page404__textA">404 Page not found...</p></b>
+      </div>
     </div>
   )
 }
+
 export default Page404;

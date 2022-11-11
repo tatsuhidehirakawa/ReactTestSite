@@ -14,8 +14,17 @@ $CompanyBackgroundColor: #bed2c3;
 $PrivacyBackgroundColor: #bed2c3;
 
 
+
 $header__height: 69px;
-$footer__height: 199px;
+$footer__height: 237px;
+
+@media (max-width: 600px) {
+  $header__height: 300px;
+  $footer__height: 300px;
+}
+
+
+$layout--outline__color: #dbd0e6;
 
 
 @mixin header__text {

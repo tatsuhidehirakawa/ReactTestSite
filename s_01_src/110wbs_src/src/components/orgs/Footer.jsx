@@ -12,14 +12,32 @@ const Footer = () => {
           <LogoA />
         </div>
         <div className="footer--inlineA--sectionB__blank">
+          <p>Company</p>
+          <Link to="/Team" className="footer__Text">Team</Link>
+          <Link to="/none" className="footer__Text">Histroy</Link>
+          <Link to="/Contact" className="footer__Text">Contact</Link>
+          <Link to="/none" className="footer__Text">Locations</Link>
         </div>
         <div className="footer--inlineA--sectionC__blank">
+          <p>Features</p>
+          <Link to="/none" className="footer__Text">Cool stuff</Link>
+          <Link to="/none" className="footer__Text">Random feature</Link>
+          <Link to="/none" className="footer__Text">Team feature</Link>
+          <Link to="/none" className="footer__Text">Developer staff</Link>
+          <Link to="/Recruit" className="footer__Text">Recruit</Link>
         </div>
         <div className="footer--inlineA--sectionD__text">
+          <p>Resources</p>
           <Link to="/Contact" className="footer__Text">Contact</Link>
           <Link to="/Recruit" className="footer__Text">Recruit</Link>
           <Link to="/Company" className="footer__Text">Company</Link>
           <Link to="/Privacy" className="footer__Text">Privacy</Link>
+        </div>
+        <div className="footer--inlineA--sectionE__text">
+          <p>Legal</p>
+          <Link to="/Contact" className="footer__Text">Contact</Link>
+          <Link to="/Privacy" className="footer__Text">Privacy</Link>
+          <Link to="/none" className="footer__Text">Temes fo use</Link>
         </div>
       </div>
       <div className="footer--InlineB__signeture">

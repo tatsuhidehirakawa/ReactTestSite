@@ -26,7 +26,8 @@ const Router = () => {
       <Routes>
         <Route path={`/`} element={<Main/>} />
         {/* <Route path={`/`} element={<http://www.sample.com/landingpage.html>} /> */}  {/* Change CORS setting sat API*/}
-        <Route path={`*`} element={<Page404 />} />
+        <Route path={`*`} element={<Layout><Page404 /></Layout>} />
+
         <Route path={`/News`} element={<Layout><News /></Layout>} />
         <Route path={`/Products`} element={<Layout><Products /></Layout>} />
         {/* <Route path={`/TestPage`} element={<Layout><TestPage /></Layout>} /> */}
