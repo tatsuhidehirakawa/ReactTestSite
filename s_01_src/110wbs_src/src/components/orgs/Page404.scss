@@ -3,20 +3,24 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.Page404--outline {
+.page404--outline {
   @include page--outline;
   // background-color: rgb(107, 255, 255)
   // background-color: $NewsBackgroundColor;
 }
 //--- Page Inline -------------------------------------------------
-.Page404--inlineA {
+.page404--inlineA {
   @include page--inlineA;
 }
 
-.Page404__textA {
-  @include page__textA;
+.page404__textA {
+  padding-top: 254px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(25, 66, 248);
+  opacity: 0.6;
 }
 
-.Page404__textS {
+.page404__textS {
   @include page__textS;
 }
