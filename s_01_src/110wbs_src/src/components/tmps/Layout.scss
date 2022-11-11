@@ -6,6 +6,8 @@
   // height: 100vh;
   // height: 1500px;
   display: flex;
+  position: relative;
+  min-height: 100vh;
   flex-direction: column;
   .layout--outline__inlineB__children {
     background-color: rgb(172, 246, 246);
