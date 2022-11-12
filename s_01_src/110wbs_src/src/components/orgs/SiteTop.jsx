@@ -15,7 +15,7 @@ const SiteTop = () => {
           It is a full-stack package for web development, 
           focusing on the technology stack presented in the next block. 
           It is optimized primarily as a template for creating large-scale CtoC sites. 
-          In particular, it is RESTful, 
+          In particular, it is RESTful,
           does not use CSS-in-JS, minimizes Paas dependencies, 
           emphasizes orthogonality and loose coupling, static typing, 
           and Docker usage.

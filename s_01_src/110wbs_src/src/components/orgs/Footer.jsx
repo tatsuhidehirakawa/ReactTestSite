@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogoA from '../atms/LogoA.jsx';
 import "./Footer.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -30,7 +32,7 @@ const Footer = () => {
         <div className="footer--inlineA--sectionD__text">
           <p>Resources</p>
           <Link to="/ResourceA" className="footer__Text">ResourceA</Link>
-          <Link to="/ResourceB" className="footer__Text">ResourceB</Link>
+          <Link to="/ResourceB" className="footer__Text"><FontAwesomeIcon icon={faCoffee} /> ResourceB</Link>
           <Link to="/Company" className="footer__Text">Company</Link>
           <Link to="/ResourceC" className="footer__Text">ResourceC</Link>
         </div>
