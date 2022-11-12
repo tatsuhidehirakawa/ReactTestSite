@@ -8,6 +8,7 @@ const Footer = () => {
     <>
     <div className="footer--Outline">
       <div className="footer--inlineA">
+        <div className="footer--inlineA--sectionY__blank"></div>
         <div className="footer--inlineA--sectionA_logo">
           <LogoA />
         </div>
@@ -28,10 +29,10 @@ const Footer = () => {
         </div>
         <div className="footer--inlineA--sectionD__text">
           <p>Resources</p>
-          <Link to="/Contact" className="footer__Text">Contact</Link>
-          <Link to="/Recruit" className="footer__Text">Recruit</Link>
+          <Link to="/ResourceA" className="footer__Text">ResourceA</Link>
+          <Link to="/ResourceB" className="footer__Text">ResourceB</Link>
           <Link to="/Company" className="footer__Text">Company</Link>
-          <Link to="/Privacy" className="footer__Text">Privacy</Link>
+          <Link to="/ResourceC" className="footer__Text">ResourceC</Link>
         </div>
         <div className="footer--inlineA--sectionE__text">
           <p>Legal</p>
@@ -39,7 +40,7 @@ const Footer = () => {
           <Link to="/Privacy" className="footer__Text">Privacy</Link>
           <Link to="/none" className="footer__Text">Temes fo use</Link>
         </div>
-        <div className="footer--inlineA--sectionF__blank"></div>
+        <div className="footer--inlineA--sectionZ__blank"></div>
       </div>
       <div className="footer--InlineB__signeture">
         {/* oupCopyright inc.-3 2022 All Right Reser. All Right Reserved */}
