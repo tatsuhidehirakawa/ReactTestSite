@@ -4,6 +4,7 @@ import (
     "database/sql"
     "time"
     "fmt"
+    // "os"
 
     "log"
     "net/http"
@@ -12,13 +13,14 @@ import (
     "github.com/gin-gonic/gin"
     _ "github.com/lib/pq"
     "github.com/tatsuhidehirakawa/STGprd_devpkg/controllers"
-    // "github.com/tatsuhidehirakawa/STGprd_devpkg/config"
+    "github.com/tatsuhidehirakawa/STGprd_devpkg/config"
 )
 
 func main() {
 
 	// DB(PostgreSQL)への接続処理(環境変数導入バージョン)    
-	cfg := NewConfig()
+	// cfg := NewConfig()
+	cfg := config.NewConfig()
 	dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode) // 「dsn」に結合した文字列を格納
 	db, err := sql.Open("postgres", dsn)
 

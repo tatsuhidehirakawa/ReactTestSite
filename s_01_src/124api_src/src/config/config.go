@@ -6,8 +6,8 @@ import (
 
 type Config struct {
 	Host     string
-	User     string
 	Port     string
+	User     string
 	Password string
 	Sslmode  string
 }
@@ -24,9 +24,11 @@ func NewConfig() *Config {
 
 
 
+
+
 // DB_HOST
 // DB_PORT
-// DB_USER
+// DB_USER  
 // DB_PASS
 // DB_NAME
 // DB_SSLMODE
