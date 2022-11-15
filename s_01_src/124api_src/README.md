@@ -2,7 +2,10 @@ Container for API server.
 
 1. API Definition  
 (1) Endpoint  
-localhost:3000/someGet,somePost,somePut,someDelete  
+localhost:8080/someGet  
+localhost:8080/somePost  
+localhost:8080/somePut  
+localhost:8080/someDelete/:accountID  
 (2)Data Formats  
 Under construction
 2. Directory structure diagram (Local/excerpt)  
@@ -13,7 +16,9 @@ STGprd_devpkg
   │  ├─124api_src                     # APIServer(No.214)
   │  │  └─src -----------------------># Bind mounted area.
   │  │    ├─main.go
-  │  │    ├─config.go
+  │  │    ├─config
+  │  │    ├─controllers
+  │  │    ├─models
   │  │    └─sqlc                      # ORM(sqlc)
   │  │       ├─query.sql
   │  │       ├─schema.sql
