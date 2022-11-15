@@ -14,11 +14,11 @@ type Config struct {
 
 func NewConfig() *Config {
 	return &Config{
-		Host:     os.Getenv("DATABASE_HOST"), // 134dbs_dev
-		Port:     os.Getenv("PORT"),          // 5432
-		User:     os.Getenv("USER"),          // postgres
-		Password: os.Getenv("PGSQL_PW"),      // passw0rd
-		Sslmode:  os.Getenv("SSLMODE"),       // disable
+		Host:     os.Getenv("DATABASE_HOST"),
+		Port:     os.Getenv("PORT"),
+		User:     os.Getenv("USER"),
+		Password: os.Getenv("PGSQL_PW"),
+		Sslmode:  os.Getenv("SSLMODE"),
 	}
 }
 
