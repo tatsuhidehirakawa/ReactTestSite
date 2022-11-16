@@ -23,7 +23,10 @@ services:
 #---120api_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   120api_tst:
     container_name: 120api_tst
-    build: ./120api_tst
+    # build: ./120api_tst
+    build:
+      context: ../s_01_src/124api_src/src
+      dockerfile: ../../../s_03_dev/124api_dev/Dockerfile
     tty: true
     volumes:
       - ../s_01_src/124api_src/src:/go/src
