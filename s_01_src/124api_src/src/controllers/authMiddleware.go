@@ -1,8 +1,13 @@
-package controllers
+package LoginCheckMiddleware
 
 import (
 	"encoding/json"
 	"net/http"
+
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+	_ "github.com/lib/pq"
 )
 
 func LoginCheckMiddleware() gin.HandlerFunc {

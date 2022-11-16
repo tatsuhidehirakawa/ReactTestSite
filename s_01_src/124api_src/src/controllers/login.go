@@ -1,10 +1,11 @@
-package controllers
+package Login
 
 import (
 	"encoding/json"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	_ "github.com/lib/pq"
 )
 
 func Login(c *gin.Context) {
