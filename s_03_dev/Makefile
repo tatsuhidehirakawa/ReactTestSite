@@ -8,8 +8,8 @@ init.dev: ## Booting only frontend devlopment containers.
 
 
 
-
-
+build.react: ## Create frontend production files.
+	docker exec -it 110wbs_dev npm run build bash
 
 
 
