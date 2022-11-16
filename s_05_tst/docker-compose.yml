@@ -1,24 +1,24 @@
 version: "3"
 services:
 
-# #---110wbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-#   110wbs_tst:
-#     container_name: 110wbs_tst
-#     build: ./110wbs_tst
-#     volumes:
-#       - ../s_01_src/110wbs_src/build:/usr/src/app
-#       # - wbs-vol:/usr/src/app
-#     # working_dir: /usr/src/app/110wbs_tst
-#     working_dir: /usr/src/app
-#     environment:
-#       - CHOKIDAR_USEPOLLING=true # Hotreload
-#     ports:
-#       - "3000:3000"
-#     tty: true
-#     stdin_open: true
-#     networks:
-#       - STGprd_devpkg_tst_network
-#     # platform: linux/x86_64
+#---110wbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+  110wbs_tst:
+    container_name: 110wbs_tst
+    build: ./110wbs_tst
+    volumes:
+      - ../s_01_src/110wbs_src/build:/usr/src/app
+      # - wbs-vol:/usr/src/app
+    # working_dir: /usr/src/app/110wbs_tst
+    working_dir: /usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Hotreload
+    ports:
+      - "3001:3000"
+    tty: true
+    stdin_open: true
+    networks:
+      - STGprd_devpkg_tst_network
+    # platform: linux/x86_64
 
 #---120api_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   120api_tst:
@@ -61,7 +61,7 @@ networks:
   STGprd_devpkg_tst_network:
     driver: bridge
 
-#---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
+# ---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 # db-storeが生成されるような行為を行うときには「.sql」ファイルを
 # 格納していないと初期化処理がスキップされるので注意！
 
