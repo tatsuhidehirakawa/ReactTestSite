@@ -5,7 +5,8 @@ WORKDIR /usr/src/app
 
 # React installation.
 RUN npm install -g create-react-app@latest
-RUN create-react-app . --typescript
+RUN create-react-app --typescript
+# WORKDIR src
 
 # Import Sass
 RUN npm install sass@latest
