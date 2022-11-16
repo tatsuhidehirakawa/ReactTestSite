@@ -23,6 +23,7 @@ func main() {
 	db, err := sql.Open("postgres", dsn)
 
     // db, err := sql.Open("postgres", "host=134dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
+    // db, err := sql.Open("postgres", "host=130dbs_tst port=5433 user=postgres password=passw0rd sslmode=disable")
 
     accountAttributeController := controllers.NewAccountAttribute(db)
 
