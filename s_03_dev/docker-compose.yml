@@ -17,55 +17,55 @@ services:
     # command: sh -c "./110wbs_dev/npmset.sh && yarn start" # ShellScript for boot && ShellScript for initialize.
     tty: true
     stdin_open: true
-    networks:
-      - STGprd_devpkg_dev_network
-    # platform: linux/x86_64
+#     networks:
+#       - STGprd_devpkg_dev_network
+#     # platform: linux/x86_64
 
-  124api_dev:
-    container_name: 124api_dev
-    # build:
-    #   context: ../s_01_src/124api_src/src
-    #   dockerfile: ../../../s_03_dev/124api_dev/Dockerfile
-    build: ./124api_dev
-    tty: true
-    volumes:
-      - ../s_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
-      # - api-vol:/go/src # Activate for Dockerfile Opration.
-    ports:
-      - "8080:8080"
-      # Port No of Host(non-overlapable):Port No of Container(overlappable)
-    networks:
-      - STGprd_devpkg_dev_network
-    # depends_on:
-    #   - 134dbs_dev
+#   124api_dev:
+#     container_name: 124api_dev
+#     # build:
+#     #   context: ../s_01_src/124api_src/src
+#     #   dockerfile: ../../../s_03_dev/124api_dev/Dockerfile
+#     build: ./124api_dev
+#     tty: true
+#     volumes:
+#       - ../s_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
+#       # - api-vol:/go/src # Activate for Dockerfile Opration.
+#     ports:
+#       - "8080:8080"
+#       # Port No of Host(non-overlapable):Port No of Container(overlappable)
+#     networks:
+#       - STGprd_devpkg_dev_network
+#     # depends_on:
+#     #   - 134dbs_dev
 
-  134dbs_dev:
-    container_name: 134dbs_dev
-    image: postgres:14
-    # build: ./134dbs_dev
-    command: -c 'config_file=/etc/postgresql/postgresql.conf'
-    ports:
-      - 5432:5432
-    volumes:
-      - dbs-vol:/var/lib/postgresql/data
-      - ../s_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
-      - ../s_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
-      # This directory is for generate test data from db dump and restore.
-      # Warning : Do not operate PowerShell at dump and restore.
-      - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
-    environment:
-        POSTGRES_PASSWORD: ${PGSQL_PW}
-    networks:
-      - STGprd_devpkg_dev_network
+#   134dbs_dev:
+#     container_name: 134dbs_dev
+#     image: postgres:14
+#     # build: ./134dbs_dev
+#     command: -c 'config_file=/etc/postgresql/postgresql.conf'
+#     ports:
+#       - 5432:5432
+#     volumes:
+#       - dbs-vol:/var/lib/postgresql/data
+#       - ../s_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
+#       - ../s_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
+#       # This directory is for generate test data from db dump and restore.
+#       # Warning : Do not operate PowerShell at dump and restore.
+#       - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
+#     environment:
+#         POSTGRES_PASSWORD: ${PGSQL_PW}
+#     networks:
+#       - STGprd_devpkg_dev_network
 
-volumes:
-  # wbs-vol:
-  # api-vol: # Activate for Dockerfile Opration.
-  dbs-vol:
+# volumes:
+#   # wbs-vol:
+#   # api-vol: # Activate for Dockerfile Opration.
+#   dbs-vol:
 
-networks:
-  STGprd_devpkg_dev_network:
-    driver: bridge
+# networks:
+#   STGprd_devpkg_dev_network:
+#     driver: bridge
 
 #---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
 # db-storeが生成されるような行為を行うときには「.sql」ファイルを
