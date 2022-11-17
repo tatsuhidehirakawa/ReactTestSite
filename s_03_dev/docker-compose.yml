@@ -27,6 +27,13 @@ services:
     #   context: ../s_01_src/124api_src/src
     #   dockerfile: ../../../s_03_dev/124api_dev/Dockerfile
     build: ./124api_dev
+    # environment:
+    #   - DATABASE_HOST=${DATABASE_HOST}
+    #   - DB_PORT=${PORT}
+    #   - USER=${USER}
+    #   - PGSQL_PW=${PGSQL_PW}
+    #   - SSLMODE=${SSLMODE}
+    env_file: dev.env
     tty: true
     volumes:
       - ../s_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
