@@ -17,17 +17,12 @@ import (
 
 func main() {
 
-	// cfg := NewConfig()
 	cfg := config.NewConfig()
 	dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode) // 「dsn」に結合した文字列を格納
 	db, err := sql.Open("postgres", dsn)
 
-    // db, err := sql.Open("postgres", "host=134dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
-    // db, err := sql.Open("postgres", "host=130dbs_tst port=5433 user=postgres password=passw0rd sslmode=disable")
-
     accountAttributeController := controllers.NewAccountAttribute(db)
 
-    // DB接続時の例外処理
     if err != nil {
         log.Fatal(err)
     }

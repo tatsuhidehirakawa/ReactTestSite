@@ -33,7 +33,7 @@ services:
     #   - USER=${USER}
     #   - PGSQL_PW=${PGSQL_PW}
     #   - SSLMODE=${SSLMODE}
-    env_file: dev.env
+    env_file: ../dev.env
     tty: true
     volumes:
       - ../s_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.

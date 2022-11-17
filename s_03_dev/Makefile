@@ -3,8 +3,8 @@
 #---[ 1. system boot ]-------------------------------------------------------
 
 init.dev: ## Booting only frontend devlopment containers.
-	# docker compose --env-file ../.env up
-	docker compose --env-file ../.env_dev up --build
+	# docker compose --env-file ../dev.env up
+	docker compose --env-file ../dev.env up --build
 
 
 
