@@ -25,7 +25,7 @@ services:
     container_name: 124api_dev
     # build:
     #   context: ../s_01_src/124api_src/src
-    #   dockerfile: ../../../s_03_dev/124api_dev/Dockerfile
+    #   dockerfile: ../s_03_dev/124api_dev/Dockerfile
     build: ./124api_dev
     tty: true
     volumes:
@@ -36,8 +36,8 @@ services:
       # Port No of Host(non-overlapable):Port No of Container(overlappable)
     networks:
       - STGprd_devpkg_dev_network
-    # depends_on:
-    #   - 134dbs_dev
+    depends_on:
+      - 134dbs_dev
 
   134dbs_dev:
     container_name: 134dbs_dev

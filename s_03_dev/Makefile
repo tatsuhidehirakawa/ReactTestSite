@@ -5,12 +5,18 @@
 init.dev: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../.env up
 
+init.dev.wbs: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../.env up 110wbs_dev -d
+
+init.dev.api: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../.env up 124api_dev -d
+
+init.dev.dbs: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../.env up 134dbs_dev -d
 
 
-
-
-
-
+dev.air:
+	docker exec -it 124api_dev air bash
 
 # use env file
 # docker compose --env-file ../.env up 134dbs_dev
