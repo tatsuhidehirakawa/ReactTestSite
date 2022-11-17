@@ -23,10 +23,10 @@ services:
 
   124api_dev:
     container_name: 124api_dev
-    # build:
-    #   context: ../s_01_src/124api_src/src
-    #   dockerfile: ../s_03_dev/124api_dev/Dockerfile
-    build: ./124api_dev
+    build:
+      context: ../s_01_src/124api_src/src
+      dockerfile: ../../../s_03_dev/124api_dev/Dockerfile
+    # build: ./124api_dev
     tty: true
     volumes:
       - ../s_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
