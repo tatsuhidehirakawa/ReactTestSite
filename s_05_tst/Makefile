@@ -11,11 +11,22 @@ init.tst.wbs:
 	docker exec -it 110wbs_dev npm run build bash
 	docker compose --env-file ../tst.env up --build
 
-init.tst.api:
+
+
+init.tst.a:
+	# cd ../s_03_dev && make init.dev.dbs
+	docker compose --env-file ../tst.env up 130dbs_tst && docker exec -it 130dbs_tst usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
+
+init.tst.c:
 	docker compose --env-file ../tst.env up 120api_tst -d
 
-init.tst.dbs:
-	docker compose --env-file ../tst.env up 130dbs_tst -d
+init.tst.d:
+	cd ../s_03_dev && make init.dev.wbs
+	docker exec -it 110wbs_dev npm run build bash
+	docker compose --env-file ../tst.env up --build
+
+
+
 
 
 

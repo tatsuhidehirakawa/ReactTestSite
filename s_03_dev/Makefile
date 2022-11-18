@@ -7,7 +7,7 @@ init.dev: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up --build
 
 init.dev.wbs: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../dev.env up 110wbs_dev -d
+	docker compose --env-file ../dev.env up 110wbs_dev
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
