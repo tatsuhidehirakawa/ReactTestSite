@@ -9,8 +9,13 @@ init.tst: ## Booting only frontend devlopment containers.
 
 
 
-b/d.c.u/f: ## Booting only frontend testing containers.
-	docker compose up 110wbs_tst
+init.tst.api:
+	docker compose --env-file ../tst.env up 120api_tst -d
+
+init.tst.dbs:
+	docker compose --env-file ../tst.env up 130dbs_tst -d
+
+
 
 
 b.t.a: ## Booting only backend testing containers.

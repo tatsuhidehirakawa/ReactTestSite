@@ -24,11 +24,18 @@ services:
     # build: ./120api_tst
     build:
       context: ../s_01_src/124api_src/src
-      dockerfile: ../../../s_03_dev/124api_dev/Dockerfile
+      dockerfile: ../../../s_05_tst/120api_tst/Dockerfile
+    # environment:
+    #   - DATABASE_HOST=${DATABASE_HOST}
+    #   - DB_PORT=${PORT}
+    #   - USER=${USER}
+    #   - PGSQL_PW=${PGSQL_PW}
+    #   - SSLMODE=${SSLMODE}
+    env_file: ../tst.env
     tty: true
     volumes:
       - ../s_01_src/124api_src/src:/go/src
-      # - api-vol:/go/src
+      - api-vol:/go/src
     ports:
       - "8081:8080"
     networks:
@@ -39,7 +46,10 @@ services:
   130dbs_tst:
     container_name: 130dbs_tst
     # image: postgres:14
-    build: ./130dbs_tst
+    build:
+      context: ../s_01_src/134dbs_src
+      dockerfile: ../../s_05_tst/130dbs_tst/Dockerfile
+    # build: ./130dbs_tst
     # working_dir: /usr/src/dbstore
     ports:
       - 5433:5432
@@ -54,7 +64,7 @@ services:
 
 volumes:
   # wbs-vol:
-  # api-vol:
+  api-vol:
   dbs-vol:
 
 networks:

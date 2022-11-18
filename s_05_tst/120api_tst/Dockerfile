@@ -7,15 +7,13 @@ WORKDIR /go/src
 # COPY s_01_src/124api_src/src /go/src
 
 # COPY ./src /go/src
+COPY . .
 RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
 RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
 RUN go install github.com/kyleconroy/sqlc/cmd/sqlc
 RUN sqlc generate --file sqlc/sqlc.yaml
-# WORKDIR /go/src/sqlc/build_sqlc
-# RUN go mod init sqlc_pkg
-# WORKDIR /go/src
-# RUN echo 'replace sqlc_pkg => ./sqlc/build_sqlc' >> go.mod
 RUN go mod tidy
+
 # Build binary
 RUN go build -v -o server
 
