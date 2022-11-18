@@ -3,10 +3,9 @@
 #---[ 1. Test system boot ]-------------------------------------------------------
 
 init.tst: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../.env up -d --build --no-cache
-
-
-
+	docker exec -it 110wbs_dev npm run build bash
+	# docker compose --env-file ../.env_tst up -d --build --no-cache
+	docker compose --env-file ../.env_tst up --build
 
 
 

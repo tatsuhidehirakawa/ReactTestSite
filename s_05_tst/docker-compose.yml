@@ -1,26 +1,24 @@
 version: "3"
 services:
 
-# #---110wbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-#   110wbs_tst:
-#     container_name: 110wbs_tst
-#     build: ./110wbs_tst
-#     volumes:
-#       - ../s_01_src/110wbs_src:/usr/src/app
-#       - wbs-vol:/usr/src/app
-#     # working_dir: /usr/src/app/110wbs_tst
-#     working_dir: /usr/src/app
-#     environment:
-#       - CHOKIDAR_USEPOLLING=true # Hotreload
-#     ports:
-#       - "3000:3000"
-#     tty: true
-#     stdin_open: true
-#     networks:
-#       - STGprd_devpkg_tst_network
-#     # platform: linux/x86_64
+  110wbs_tst:
+    container_name: 110wbs_tst
+    build: ./110wbs_tst
+    volumes:
+      - ../s_01_src/110wbs_src/build:/usr/src/app
+      # - wbs-vol:/usr/src/app
+    # working_dir: /usr/src/app/110wbs_tst
+    working_dir: /usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Hotreload
+    ports:
+      - "3001:3000"
+    tty: true
+    stdin_open: true
+    networks:
+      - STGprd_devpkg_tst_network
+    # platform: linux/x86_64
 
-#---120api_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   120api_tst:
     container_name: 120api_tst
     # build: ./120api_tst
@@ -30,22 +28,21 @@ services:
     tty: true
     volumes:
       - ../s_01_src/124api_src/src:/go/src
-      - api-vol:/go/src
+      # - api-vol:/go/src
     ports:
-      - "8080:8080"
+      - "8081:8080"
     networks:
       - STGprd_devpkg_tst_network
     depends_on:
       - 130dbs_tst
 
-#---130dbs_tst---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
   130dbs_tst:
     container_name: 130dbs_tst
     # image: postgres:14
     build: ./130dbs_tst
     # working_dir: /usr/src/dbstore
     ports:
-      - 5432:5432
+      - 5433:5432
     volumes:
       - dbs-vol:/var/lib/postgresql/data
       - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
@@ -57,16 +54,9 @@ services:
 
 volumes:
   # wbs-vol:
-  api-vol:
+  # api-vol:
   dbs-vol:
 
 networks:
   STGprd_devpkg_tst_network:
     driver: bridge
-
-#---note---+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----#
-# db-storeが生成されるような行為を行うときには「.sql」ファイルを
-# 格納していないと初期化処理がスキップされるので注意！
-
-# Dockerfile：コンテナ自体の初期設定のみ(動作に必要なツールのインストールと設定変更)記載
-# docker-compose.yml：環境依存情報のみ(ポートとかストレージとか、プログラムの起動コマンドとか)記載
