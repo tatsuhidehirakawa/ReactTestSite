@@ -24,10 +24,11 @@ RUN air init
 # RUN air
 
 RUN go mod tidy
-# RUN cat go.mod
 CMD ["nohup", "go", "run", "main.go"]
-# CMD ["cat", "go.mod"]
-
 # # CMD ["go", "run", "main.go"]
+ENTRYPOINT [ "air" ]
 
-# # ENTRYPOINT [ "air" ]
+
+
+# RUN cat go.mod
+# CMD ["cat", "go.mod"]
