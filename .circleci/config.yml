@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+  build:
+    steps:
+      - when:
+        condition: <<parameters.custom_checkout>>
+        steps:
+        - run: echo \"my custom checkout\"
+      - unless:
+        condition: <<parameters.custom_checkout>>
+        steps:
+          - checkout
