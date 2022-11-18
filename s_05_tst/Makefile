@@ -4,8 +4,8 @@
 
 init.tst: ## Booting only frontend devlopment containers.
 	docker exec -it 110wbs_dev npm run build bash
-	# docker compose --env-file ../.env_tst up -d --build --no-cache
-	docker compose --env-file ../.env_tst up --build
+	# docker compose --env-file ../tst.env up -d --build --no-cache
+	docker compose --env-file ../tst.env up --build
 
 
 
