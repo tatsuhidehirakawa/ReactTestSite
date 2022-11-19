@@ -3,4 +3,4 @@ WORKDIR /usr/src/app
 
 # use multi-stage build to copy only the files needed for production
 
-CMD ["serve","-s","./build","-p","3001"]
+# CMD ["serve","-s","./build","-p","3001"]

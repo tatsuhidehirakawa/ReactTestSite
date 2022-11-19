@@ -35,7 +35,8 @@ init.tst.d:
 	docker compose --env-file ../dev.env up 110wbs_tst --build
 
 
-
+npm -g install serve
+serve -s ./build -p 3001
 
 b.t.a: ## Booting only backend testing containers.
 	cp -r ../s_01_src/124api_src/src ./120api_tst
