@@ -7,9 +7,9 @@ init.tst: ## Booting only frontend devlopment containers.
 	# docker compose --env-file ../tst.env up -d --build --no-cache
 	docker compose --env-file ../tst.env up --build
 
-init.tst.wbs:
-	docker exec -it 110wbs_dev npm run build bash
-	docker compose --env-file ../tst.env up --build
+# init.tst.wbs:
+# 	docker exec -it 110wbs_dev npm run build bash
+# 	docker compose --env-file ../tst.env up --build
 
 
 
@@ -24,19 +24,15 @@ init.tst.b:
 init.tst.c:
 	docker compose --env-file ../tst.env up 120api_tst -d
 
-init.tst.d:
-	# cd ../s_03_dev && make init.dev.wbs
-	# docker exec -it 110wbs_dev npm run build bash
-	docker compose --env-file ../tst.env up --build
+init.tst.wbs:
+	cd ../s_03_dev && make init.dev.wbs
+	docker compose build 110wbs_tst --no-cache
+	docker compose up 110wbs_tst
 
 
 
-	docker compose --env-file ../dev.env build 110wbs_tst --no-cache
-	docker compose --env-file ../dev.env up 110wbs_tst --build
-
-
-npm -g install serve
-serve -s ./build -p 3001
+# npm -g install serve
+# serve -s ./build -p 3001
 
 b.t.a: ## Booting only backend testing containers.
 	cp -r ../s_01_src/124api_src/src ./120api_tst
