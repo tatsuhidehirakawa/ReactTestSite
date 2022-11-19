@@ -16,6 +16,10 @@ init.dev.dbs: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 134dbs_dev -d
 
 
+docker compose --env-file ../dev.env build --no-cache   
+	docker compose --env-file ../dev.env up --build
+
+
 dev.air:
 	docker exec -it 124api_dev air bash
 
