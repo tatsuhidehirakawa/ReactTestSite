@@ -31,6 +31,8 @@ init.tst.d:
 
 
 
+	docker compose --env-file ../dev.env build 110wbs_tst --no-cache
+	docker compose --env-file ../dev.env up 110wbs_tst --build
 
 
 
