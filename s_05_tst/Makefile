@@ -25,8 +25,8 @@ init.tst.c:
 	docker compose --env-file ../tst.env up 120api_tst -d
 
 init.tst.d:
-	cd ../s_03_dev && make init.dev.wbs
-	docker exec -it 110wbs_dev npm run build bash
+	# cd ../s_03_dev && make init.dev.wbs
+	# docker exec -it 110wbs_dev npm run build bash
 	docker compose --env-file ../tst.env up --build
 
 
