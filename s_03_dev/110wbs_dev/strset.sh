@@ -46,7 +46,8 @@ npm install @mui/material @emotion/react @emotion/styled
 npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
 
 # Add accesspoint of build directroy.
-npm install -g serve
+# npm install -g serve
+npm install serve
 npm run build
 
 # Make a standby state.
