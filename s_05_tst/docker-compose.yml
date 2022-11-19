@@ -5,7 +5,7 @@ services:
     container_name: 110wbs_tst
     build: ./110wbs_tst
     volumes:
-      - ../s_01_src/110wbs_src/build:/usr/src/app
+      - ../s_01_src/110wbs_src:/usr/src/app
       # - wbs-vol:/usr/src/app
     # working_dir: /usr/src/app/110wbs_tst
     working_dir: /usr/src/app

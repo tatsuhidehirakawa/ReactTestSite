@@ -47,7 +47,7 @@ npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @forta
 
 # Add accesspoint of build directroy.
 # npm install -g serve
-npm install serve
+npm -g install serve
 npm run build
 
 # Make a standby state.

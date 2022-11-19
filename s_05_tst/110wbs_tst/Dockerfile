@@ -3,4 +3,6 @@ WORKDIR /usr/src/app
 
 # use multi-stage build to copy only the files needed for production
 
-# CMD ["serve","-s","./build","-p","3001"]
+
+COPY abc.sh /usr/local/bin
+CMD ["sh", "../../../usr/local/bin/abc.sh"]
