@@ -38,9 +38,13 @@ init.tst.dbs.b:
 	docker exec -it 130dbs_tst usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
 
 
+#---[ 2. Buliding test environments ]------------------------------------------------
 
+init.ci:
+	curl -fLSs https://circle.ci/cli | bash
 
-
+validate.ci:
+	circleci config validate
 
 
 # npm -g install serve

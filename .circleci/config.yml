@@ -1,12 +1,16 @@
 version: 2.1
 jobs:
   build:
-    steps:
-      - when:
-        condition: <<parameters.custom_checkout>>
-        steps:
-        - run: echo \"my custom checkout\"
-      - unless:
-        condition: <<parameters.custom_checkout>>
-        steps:
-          - checkout
+    docker:
+      -image: cimg/node:lts
+      step: # stepsキーが正しい
+      - run: echo "hello world"
+    # steps:
+    #   - when:
+    #     condition: <<parameters.custom_checkout>>
+    #     steps:
+    #     - run: echo \"my custom checkout\"
+    #   - unless:
+    #     condition: <<parameters.custom_checkout>>
+    #     steps:
+    #       - checkout
