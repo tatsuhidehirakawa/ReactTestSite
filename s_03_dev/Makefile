@@ -7,17 +7,15 @@ init.dev: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up --build
 
 init.dev.wbs: ## Booting only frontend devlopment containers.
-	docker compose up 110wbs_dev
+	# docker compose --env-file ../dev.env up 110wbs_dev -d
+	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
+	docker compose --env-file ../dev.env up 110wbs_dev --build
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
 
 init.dev.dbs: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 134dbs_dev -d
-
-
-	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
-	docker compose --env-file ../dev.env up 110wbs_dev --build
 
 
 dev.air:
