@@ -1,4 +1,4 @@
-package Login
+package controllers
 
 import (
 	"encoding/json"
@@ -6,6 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
+	"golang.org/x/crypto/bcrypt"
 )
 
 func Login(c *gin.Context) {

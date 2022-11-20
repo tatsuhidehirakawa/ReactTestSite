@@ -1,9 +1,7 @@
-package LoginCheckMiddleware
+package controllers
 
 import (
 	"encoding/json"
-	"net/http"
-
 	"net/http"
 
 	"github.com/gin-gonic/gin"

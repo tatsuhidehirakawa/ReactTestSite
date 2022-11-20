@@ -25,6 +25,10 @@ build.react: ## Create frontend production files.
 	docker exec -it 110wbs_dev npm run build bash
 
 
+copy: ## Command to copy source code modified in a container to local.
+	docker cp 124api_dev:go/src ../s_01_src/124api_src
+
+
 # use env file
 # docker compose --env-file ../.env up 134dbs_dev
 
