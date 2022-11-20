@@ -2,12 +2,8 @@
 FROM golang:1.18.0-buster as builder
 WORKDIR /go/src
 
-# RUN ./srccpy.sh
-# COPY ../../s_01_src/124api_src/src /go/src
-# COPY s_01_src/124api_src/src /go/src
-
-# COPY ./src /go/src
 COPY . .
+
 RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
 RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
 RUN go install github.com/kyleconroy/sqlc/cmd/sqlc
