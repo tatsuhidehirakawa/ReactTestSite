@@ -1,27 +1,31 @@
 package main
 
 import (
-	"database/sql"
-	"time"
+    "database/sql"
+    "time"
+    "fmt"
 
 	"log"
 	"net/http"
 
-	"github.com/gin-contrib/cors"
-	"github.com/gin-gonic/gin"
-	_ "github.com/lib/pq"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/controllers"
+    "github.com/gin-contrib/cors"
+    "github.com/gin-gonic/gin"
+    _ "github.com/lib/pq"
+    "github.com/tatsuhidehirakawa/STGprd_devpkg/controllers"
+    "github.com/tatsuhidehirakawa/STGprd_devpkg/config"
 )
 
 func main() {
-	db, err := sql.Open("postgres", "host=134dbs_dev port=5432 user=postgres password=passw0rd sslmode=disable")
+
+	cfg := config.NewConfig()
+	dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode) // 「dsn」に結合した文字列を格納
+	db, err := sql.Open("postgres", dsn)
 
 	accountAttributeController := controllers.NewAccountAttribute(db)
 
-	// DB接続時の例外処理
-	if err != nil {
-		log.Fatal(err)
-	}
+    if err != nil {
+        log.Fatal(err)
+    }
 
 	router := gin.Default()
 
