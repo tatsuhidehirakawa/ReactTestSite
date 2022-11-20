@@ -2,17 +2,49 @@
 
 #---[ 1. Test system boot ]-------------------------------------------------------
 
-init.tst: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../.env up
+# init.tst: ## Booting only frontend devlopment containers.
+# 	docker exec -it 110wbs_dev npm run build bash
+# 	# docker compose --env-file ../tst.env up -d --build --no-cache
+# 	docker compose --env-file ../tst.env up --build
 
+# init.tst.wbs:
+# 	docker exec -it 110wbs_dev npm run build bash
+# 	docker compose --env-file ../tst.env up --build
 
+init.tst.a:
+	make init.tst.dbs.a
 
+init.tst.b:
+	make init.tst.dbs.b
 
+init.tst.c:
+	make init.tst.api
+	make init.tst.wbs
 
-
-b/d.c.u/f: ## Booting only frontend testing containers.
+init.tst.wbs:
+	# cd ../s_03_dev && make init.dev.wbs
+	docker compose build 110wbs_tst --no-cache
 	docker compose up 110wbs_tst
 
+init.tst.api:
+	docker compose --env-file ../tst.env up 120api_tst -d
+
+init.tst.dbs.a:
+	# cd ../s_03_dev && make init.dev.dbs
+	docker compose --env-file ../tst.env up 130dbs_tst -d
+	# docker compose --env-file ../tst.env up 130dbs_tst -d; docker exec -it 130dbs_tst usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
+
+init.tst.dbs.b:
+	docker exec -it 130dbs_tst usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
+
+
+
+
+
+
+
+# npm -g install serve
+# serve -s ./build -p 3001
 
 b.t.a: ## Booting only backend testing containers.
 	cp -r ../s_01_src/124api_src/src ./120api_tst

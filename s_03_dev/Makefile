@@ -3,13 +3,26 @@
 #---[ 1. system boot ]-------------------------------------------------------
 
 init.dev: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../.env up
+	# docker compose --env-file ../dev.env up
+	docker compose --env-file ../dev.env up --build
+
+init.dev.wbs: ## Booting only frontend devlopment containers.
+	# docker compose --env-file ../dev.env up 110wbs_dev -d
+	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
+	docker compose --env-file ../dev.env up 110wbs_dev --build
+
+init.dev.api: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 124api_dev -d
+
+init.dev.dbs: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 134dbs_dev -d
 
 
+dev.air:
+	docker exec -it 124api_dev air bash
 
-
-
-
+build.react: ## Create frontend production files.
+	docker exec -it 110wbs_dev npm run build bash
 
 
 # use env file

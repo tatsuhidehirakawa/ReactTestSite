@@ -13,7 +13,7 @@ init.stg: ## Booting only backend staging containers.
 init.all: ## Initialize and booting all containers and services.
 	cd s_03_dev && make init.dev
 	cd s_05_tst && make init.tst
-	cd s_06_stg && make init.stg
+	# cd s_06_stg && make init.stg
 
 #---[ 3. Tst env boot ]------------------------------------------------
 boot.api.a:

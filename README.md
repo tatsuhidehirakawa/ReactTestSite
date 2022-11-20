@@ -45,7 +45,7 @@ Please check the Makefile, that's all.
                   | |    |           |   |  |  |  |                 |
                   | A--->#8080  #8080<------------S                 |
                   |      +-----------+   |  |  |                    |
-                  +----------------------M--M--D--------------------+
+                  +----------------------R--M--|--------------------+
                                          |  |  |
 <Testing environment>               +----+--|--|+
 (./STGprd_devpkg/s_05_tst)          |*110wbs|ts||
@@ -54,8 +54,8 @@ Please check the Makefile, that's all.
      A: Air(Hot reload)             |  |  +----+------+
      B: Bind Mount                  |  |  |/130dbs_tst|
      C: Copy                        +--|  | Container |
-     D: Dump and restore               |  |    for    |
-     M: Multi stage build              +--|   test    |
+     M: Multi stage build              |  |    for    |
+     R: React build and bind muont     +--|   test    |
      S: sqlc(O/R Mapper)                  |           |
      V: Initialize & Volume Mount         +-----------+
                                              |
