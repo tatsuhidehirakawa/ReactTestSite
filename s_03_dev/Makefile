@@ -22,8 +22,9 @@ init.dev.dbs: ## Booting only frontend devlopment containers.
 #---[ 1. Container manipulation. ]-------------------------------------------
 
 import_sorce_code.dev.wbs:
-	docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
-	docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
+	@docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
+	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
+	@echo "User sorce code was imported..."
 
 downcopy.dev.wbs: ## Command to copy source code modified in a container to local.
 	docker cp 110wbs_dev:usr/src/app/src ../s_01_src/110wbs_src
