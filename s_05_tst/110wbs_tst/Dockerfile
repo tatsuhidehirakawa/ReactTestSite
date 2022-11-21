@@ -18,7 +18,7 @@ FROM nginx as production-stage
 # RUN mkdir /var/www/front
 # COPY --from=build-stage /code/build /var/www/front
 
-COPY --from=build-stage /usr/src/app/build .
+COPY --from=build-stage /usr/src/app/build /usr/src/app
 EXPOSE 3001
 CMD nginx -g "daemon off;"
 # CMD [ "nginx", "-g", "daemon off;" ]
