@@ -11,7 +11,7 @@ init.dev: ## Initializing only frontend devlopment containers.
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
 	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
 	docker compose --env-file ../dev.env up 110wbs_dev -d
-	@make upcopy.wbs
+	@make import_sorce_code.dev.wbs
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
@@ -19,20 +19,18 @@ init.dev.api: ## Booting only frontend devlopment containers.
 init.dev.dbs: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 134dbs_dev -d
 
-upcopy.wbs:
+#---[ 1. Container manipulation. ]-------------------------------------------
+
+import_sorce_code.dev.wbs:
 	docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
 	docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
 
+downcopy.dev.wbs: ## Command to copy source code modified in a container to local.
+	docker cp 110wbs_dev:usr/src/app/src ../s_01_src/110wbs_src
+	docker cp 110wbs_dev:usr/src/app/public ../s_01_src/110wbs_src
+
 build.react: ## Create frontend production files.
 	docker exec -it 110wbs_dev npm run build bash
-
-
-
-
-
-
-# use env file
-# docker compose --env-file ../.env up 134dbs_dev
 
 
 # initdev: ## Under construction.
