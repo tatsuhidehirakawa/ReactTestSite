@@ -10,7 +10,6 @@ RUN npm install @mui/material @emotion/react @emotion/styled
 RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
 
 COPY . .
-# RUN go build -v -o server
 RUN npm run build
 
 #--- Stage 2 --------------------------------------------------------------#
