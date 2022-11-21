@@ -1,5 +1,5 @@
 #--- Stage 1 --------------------------------------------------------------#
-FROM node as build-stage
+FROM node as build_stage
 WORKDIR /usr/src/app
 
 RUN npm install -g create-react-app@latest
@@ -8,17 +8,15 @@ RUN npm install sass@latest
 RUN npm i -S react-router-dom@6.4.2
 RUN npm install @mui/material @emotion/react @emotion/styled
 RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
-
 COPY . .
 RUN npm run build
 
 #--- Stage 2 --------------------------------------------------------------#
-FROM nginx as production-stage
+FROM nginx as production_stage
 
 RUN mkdir /var/www
 RUN mkdir /var/www/front
-
-COPY --from=build-stage /code/build /var/www/front
+COPY --from=build_stage /code/build /var/www/front
 
 # EXPOSE 3001
 # CMD nginx -g "daemon off;"
