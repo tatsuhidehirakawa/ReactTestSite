@@ -1,5 +1,5 @@
 #--- Stage 1 --------------------------------------------------------------#
-FROM node:16.15.0-alpine
+FROM node as build-stage
 WORKDIR /usr/src/app
 
 RUN npm install -g create-react-app@latest
@@ -11,16 +11,52 @@ RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @f
 
 COPY . .
 # RUN go build -v -o server
-RUN npm run build -v -o server
+RUN npm run build
 
 #--- Stage 2 --------------------------------------------------------------#
-FROM node:16.15.0-alpine-slim
+FROM nginx as production-stage
 
-COPY --from=builder /usr/src/app/server /app/server
+RUN mkdir /var/www
+RUN mkdir /var/www/front
 
-# Launch Binary
-EXPOSE 3001
-ENTRYPOINT ["/app/server"]
+COPY --from=build-stage /code/build /var/www/front
+
+# EXPOSE 3001
+# CMD nginx -g "daemon off;"
+
+
+
+
+# FROM node as build-stage
+
+# # frontendのソースをビルド
+# ADD ./frontend/package*.json ./
+# RUN npm install
+# COPY ./frontend .
+# RUN npm run build
+
+# FROM nginx as production-stage
+
+# RUN mkdir /var/www
+# RUN mkdir /var/www/front
+
+# COPY --from=build-stage /code/build /var/www/front
+
+
+
+
+
+
+# #第一段階(productionファイル生成まで)
+# FROM node:12 as node
+# COPY . /react-app
+# WORKDIR /react-app
+# RUN npm install && npm run build
+
+# #第二段階(一段階目のコンテナの中身から静的ファイル群だけをコピーする)
+# FROM nginx:1.19.2-alpine
+# COPY --from=node ./react-app/build /usr/share/nginx/html
+# CMD nginx -g "daemon off;"
 
 
 
