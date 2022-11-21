@@ -9,7 +9,7 @@ services:
       # dockerfile: ../../s_03_dev/110wbs_dev/Dockerfile
     build: ./110wbs_dev
     volumes:
-      - ../s_01_src/110wbs_src:/usr/src/data_store
+      - ../s_01_src/110wbs_src:/usr/src
       - wbs-vol:/usr/src/app
     # working_dir: /usr/src/app/110wbs_dev
     working_dir: /usr/src/app

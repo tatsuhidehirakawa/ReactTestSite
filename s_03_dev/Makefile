@@ -3,9 +3,9 @@
 #---[ 1. system init ]-------------------------------------------------------
 
 init.dev: ## Booting only frontend devlopment containers.
-	make init.dev.wbs
-	make init.dev.api
 	make init.dev.dbs
+	make init.dev.api
+	make init.dev.wbs
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
 	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
