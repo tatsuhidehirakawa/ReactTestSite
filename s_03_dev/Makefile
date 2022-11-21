@@ -1,15 +1,16 @@
 #.PHONY:
 
-#---[ 1. system boot ]-------------------------------------------------------
+#---[ 1. system init ]-------------------------------------------------------
 
 init.dev: ## Booting only frontend devlopment containers.
-	# docker compose --env-file ../dev.env up
-	docker compose --env-file ../dev.env up --build
+	make init.dev.wbs
+	make init.dev.api
+	make init.dev.dbs
 
-init.dev.wbs: ## Booting only frontend devlopment containers.
-	# docker compose --env-file ../dev.env up 110wbs_dev -d
+init.dev.wbs: ## Initilazing only frontend devlopment containers.
 	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
-	docker compose --env-file ../dev.env up 110wbs_dev --build
+	docker compose --env-file ../dev.env up 110wbs_dev -d
+	make copy.wbs
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
@@ -17,12 +18,15 @@ init.dev.api: ## Booting only frontend devlopment containers.
 init.dev.dbs: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 134dbs_dev -d
 
-
-dev.air:
-	docker exec -it 124api_dev air bash
-
 build.react: ## Create frontend production files.
 	docker exec -it 110wbs_dev npm run build bash
+
+
+
+copy.wbs:
+	docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
+	docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
+
 
 
 # use env file

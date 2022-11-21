@@ -4,10 +4,13 @@ services:
   110wbs_dev:
     container_name: 110wbs_dev
     # build: ../s_03_dev/110wbs_dev
+    build:
+      # context: ../s_01_src/110wbs_src
+      # dockerfile: ../../s_03_dev/110wbs_dev/Dockerfile
     build: ./110wbs_dev
     volumes:
-      - ../s_01_src/110wbs_src:/usr/src/app
-      # - wbs-vol:/usr/src/app
+      - ../s_01_src/110wbs_src:/usr/src/data_store
+      - wbs-vol:/usr/src/app
     # working_dir: /usr/src/app/110wbs_dev
     working_dir: /usr/src/app
     environment:
@@ -66,8 +69,8 @@ services:
       - STGprd_devpkg_dev_network
 
 volumes:
-  # wbs-vol:
-  api-vol: # Activate for Dockerfile Opration.
+  wbs-vol:
+  api-vol:
   dbs-vol:
 
 networks:
