@@ -3,7 +3,10 @@ services:
 
   110wbs_tst:
     container_name: 110wbs_tst
-    build: ./110wbs_tst
+    # build: ./110wbs_tst
+    build:
+      context: ../s_01_src/110wbs_src
+      dockerfile: ../../s_05_tst/110wbs_tst/Dockerfile
     volumes:
       - ../s_01_src/110wbs_src:/usr/src/app
       # - wbs-vol:/usr/src/app
