@@ -21,5 +21,5 @@ RUN npm install @mui/material @emotion/react @emotion/styled
 RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
 
 # Make a standby state.
-CMD ["yarn", "start"]
-# ENTRYPOINT ["yarn", "start"]
+CMD [ "yarn", "start" ]
+# ENTRYPOINT [ "yarn", "start" ]
