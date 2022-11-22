@@ -2,6 +2,8 @@
 FROM node as build-stage
 WORKDIR /usr/src/app
 
+# COPY package*.json ./
+# RUN npm install
 RUN npm install -g create-react-app@latest
 RUN create-react-app . --typescript
 RUN npm install sass@latest
@@ -12,13 +14,14 @@ COPY . .
 RUN npm run build
 
 #--- Stage 2 --------------------------------------------------------------#
-FROM nginx as production-stage
+FROM nginx:alpine as production-stage
 
 # RUN mkdir /var/www
 # RUN mkdir /var/www/front
 # COPY --from=build-stage /code/build /var/www/front
 
 COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
-CMD nginx -g "daemon off;"
+# CMD nginx -g "daemon off;"
 EXPOSE 3001
-# CMD [ "nginx", "-g", "daemon off;" ]
+CMD [ "nginx", "-g", "daemon off;" ]
+# ENTRYPOINT [ "/usr/share/nginx/html" ]
