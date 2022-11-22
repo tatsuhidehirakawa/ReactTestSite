@@ -1,9 +1,5 @@
 package config
 
-import (
-	"os"
-)
-
 type Config struct {
 	Host     string
 	Port     string
@@ -22,6 +18,12 @@ func NewConfig() *Config {
 	}
 }
 
+//                           // postgres
+// cont := os.Getenv("CONT") // 134dbs_dev
+// port := os.Getenv("PORT") // 5432
+// user := os.Getenv("USER") // postgres
+// 						  // passw0rd
+// 						  // disable
 
 
 

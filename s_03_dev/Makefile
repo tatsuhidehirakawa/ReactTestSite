@@ -17,12 +17,12 @@ init.dev.api: ## Booting only frontend devlopment containers.
 init.dev.dbs: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 134dbs_dev -d
 
-
-dev.air:
-	docker exec -it 124api_dev air bash
-
 build.react: ## Create frontend production files.
 	docker exec -it 110wbs_dev npm run build bash
+
+
+copy.dev.api: ## Command to copy source code modified in a container to local.
+	docker cp 124api_dev:go/src ../s_01_src/124api_src
 
 
 # use env file
