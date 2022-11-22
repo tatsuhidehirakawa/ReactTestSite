@@ -18,4 +18,4 @@ FROM debian:buster-slim
 COPY --from=builder /go/src/server /app/server
 # Launch Binary
 EXPOSE 8081
-ENTRYPOINT ["/app/server"]
+ENTRYPOINT [ "/app/server" ]
