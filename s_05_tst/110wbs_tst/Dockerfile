@@ -25,3 +25,21 @@ COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
 EXPOSE 3001
 CMD [ "nginx", "-g", "daemon off;" ]
 # ENTRYPOINT [ "/usr/share/nginx/html" ]
+
+
+
+
+
+# FROM node:16.15-alpine as production-stage
+
+# # RUN mkdir /var/www
+# # RUN mkdir /var/www/front
+# # COPY --from=build-stage /code/build /var/www/front
+
+# RUN npm install -g serve
+# COPY --from=build-stage /usr/src/app/build React
+# # CMD nginx -g "daemon off;"
+
+# EXPOSE 3001
+# CMD [ "serve", "-s", "./React", "-p", "3001" ]
+# # ENTRYPOINT [ "/usr/share/nginx/html" ]
