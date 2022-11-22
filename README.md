@@ -45,17 +45,17 @@ Please check the Makefile, that's all.
                   | |    |           |   |  |  |  |                 |
                   | A--->#8080  #8080<------------S                 |
                   |      +-----------+   |  |  |                    |
-                  +----------------------R--M--|--------------------+
+                  +----------------------M--M--|--------------------+
                                          |  |  |
 <Testing environment>               +----+--|--|+
 (./STGprd_devpkg/s_05_tst)          |*110wbs|ts||
 "$ make init.tst"                   |  +----+--|---+
                                     |  |/120api|tst|
-     A: Air(Hot reload)             |  |  +----+------+
-     B: Bind Mount                  |  |  |/130dbs_tst|
-     C: Copy                        +--|  | Container |
-     M: Multi stage build              |  |    for    |
-     R: React build and bind muont     +--|   test    |
+                                    |  |  +----+------+
+     A: Air(Hot reload)             |  |  |/130dbs_tst|
+     B: Bind Mount                  +--|  | Container |
+     C: Copy                           |  |    for    |
+     M: Multi stage build              +--|   test    |
      S: sqlc(O/R Mapper)                  |           |
      V: Initialize & Volume Mount         +-----------+
                                              |
