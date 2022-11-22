@@ -1,5 +1,9 @@
 package config
 
+import (
+	"os"
+)
+
 type Config struct {
 	Host     string
 	Port     string
