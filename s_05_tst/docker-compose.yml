@@ -3,18 +3,19 @@ services:
 
   110wbs_tst:
     container_name: 110wbs_tst
-    build: ./110wbs_tst
+    build:
+      context: ../s_01_src/110wbs_src
+      dockerfile: ../../s_05_tst/110wbs_tst/Dockerfile
     volumes:
       - ../s_01_src/110wbs_src:/usr/src/app
-      # - wbs-vol:/usr/src/app
-    # working_dir: /usr/src/app/110wbs_tst
+      - wbs-vol:/usr/src/app
     working_dir: /usr/src/app
     environment:
       - CHOKIDAR_USEPOLLING=true # Hotreload
     ports:
       # - "3000:3000"
-      # - "3001:3000"
-      - "3001:3001"
+      - "3001:3000"
+      # - "3001:3001"
     tty: true
     stdin_open: true
     networks:
@@ -66,7 +67,7 @@ services:
       - STGprd_devpkg_tst_network
 
 volumes:
-  # wbs-vol:
+  wbs-vol:
   api-vol:
   dbs-vol:
 

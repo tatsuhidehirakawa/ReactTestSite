@@ -23,8 +23,8 @@ init.tst.c:
 
 init.tst.wbs:
 	# cd ../s_03_dev && make init.dev.wbs
-	docker compose build 110wbs_tst --no-cache
-	docker compose up 110wbs_tst
+	docker compose --env-file ../dev.env build 110wbs_tst --no-cache
+	docker compose --env-file ../dev.env up 110wbs_tst -d
 
 init.tst.api:
 	docker compose --env-file ../tst.env up 120api_tst -d
