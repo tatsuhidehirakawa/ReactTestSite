@@ -13,7 +13,7 @@ RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @f
 COPY . .
 RUN npm run build
 
-#--- Stage 2 --------------------------------------------------------------#
+#--- Stage 2 <Nginx ver.> -------------------------------------------------#
 FROM nginx:alpine as production-stage
 
 # RUN mkdir /var/www
@@ -27,9 +27,7 @@ CMD [ "nginx", "-g", "daemon off;" ]
 # ENTRYPOINT [ "/usr/share/nginx/html" ]
 
 
-
-
-
+#--- Stage 2 <Server ver.> ------------------------------------------------#
 # FROM node:16.15-alpine as production-stage
 
 # # RUN mkdir /var/www
