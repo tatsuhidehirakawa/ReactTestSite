@@ -1,15 +1,17 @@
 #.PHONY:
 
-#---[ 1. system boot ]-------------------------------------------------------
+#---[ 1. system initialize ]-----------------------------------------------
 
-init.dev: ## Booting only frontend devlopment containers.
-	# docker compose --env-file ../dev.env up
-	docker compose --env-file ../dev.env up --build
+init.dev: ## Initializing only frontend devlopment containers.
+	make init.dev.dbs
+	make init.dev.api
+	make init.dev.wbs
+	@echo "Succeful initializing devlopment environment!"
 
-init.dev.wbs: ## Booting only frontend devlopment containers.
-	# docker compose --env-file ../dev.env up 110wbs_dev -d
+init.dev.wbs: ## Initilazing only frontend devlopment containers.
 	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
-	docker compose --env-file ../dev.env up 110wbs_dev --build
+	docker compose --env-file ../dev.env up 110wbs_dev -d
+	@make import_sorce_code.dev.wbs
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
@@ -17,9 +19,16 @@ init.dev.api: ## Booting only frontend devlopment containers.
 init.dev.dbs: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 134dbs_dev -d
 
+#---[ 1. Container manipulation. ]-------------------------------------------
 
-dev.air:
-	docker exec -it 124api_dev air bash
+import_sorce_code.dev.wbs:
+	@docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
+	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
+	@echo "User sorce code was imported..."
+
+downcopy.dev.wbs: ## Command to copy source code modified in a container to local.
+	docker cp 110wbs_dev:usr/src/app/src ../s_01_src/110wbs_src
+	docker cp 110wbs_dev:usr/src/app/public ../s_01_src/110wbs_src
 
 build.react: ## Create frontend production files.
 	docker exec -it 110wbs_dev npm run build bash
