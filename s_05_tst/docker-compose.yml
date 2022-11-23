@@ -64,7 +64,6 @@ services:
     env_file: ../tst.env
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
-    # command: sh -c `pg_restore.sh 130dbs_tst`
     networks:
       - STGprd_devpkg_tst_network
 
