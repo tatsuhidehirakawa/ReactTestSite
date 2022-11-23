@@ -15,7 +15,7 @@ services:
     ports:
       # - "3000:3000"
       # - "3001:3000"
-      - "3001:80"
+      - "3001:80"   # For Nginx
     tty: true
     stdin_open: true
     networks:
