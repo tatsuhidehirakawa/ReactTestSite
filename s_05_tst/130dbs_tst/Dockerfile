@@ -1,16 +1,20 @@
-FROM postgres:14-alpine
+#--- Stage 1 --------------------------------------------------------------#
+FROM postgres:14 AS build-stage
 ENV LANG ja_JP.utf8
 
-# COPY . .
-# RUN pg_restore -c -Fc -d postgres -U postgres /usr/src/dbstore/130dbs_tst.sql
+# RUN pg_dump -U postgres -Fc postgres > /usr/src/dbstore/130dbs_tst.sql
+RUN ["pg_dump" "-U" "postgres" "-Fc" "postgres" ">" "/usr/src/dbstore/130dbs_tst.sql"]
 
-# RUN ["apt-get", "update"]
-# RUN ["apt-get", "install", "-y", "cron"]
+# Stage1でDBの初期化（開発環境と同じ動作）を行い、生成されたDBをコンテナ内にてダンプさせる。
 
-# COPY pg_dump.sh /usr/local/bin
-# COPY pg_restore.sh /usr/local/bin
+#--- Stage 2 --------------------------------------------------------------#
+FROM postgres:14-alpine AS production-stage
+ENV LANG ja_JP.utf8
 
-# CMD ["cron", "-f"]
+COPY --from=build-stage /usr/src/dbstore/130dbs_tst.sql /usr/share/nginx/html
+RUN pg_restore -c -Fc -d postgres -U postgres /usr/src/dbstore/130dbs_tst.sql
+
+# Stage1でダンプしたデータをStage2にコピーしリストアさせる。
 
 
-# マルチステージビルドでbinary取り込み？
+

@@ -56,9 +56,11 @@ services:
     # working_dir: /usr/src/dbstore
     ports:
       - 5433:5432
+    command: -c 'config_file=/etc/postgresql/postgresql.conf'
     volumes:
       - dbs-vol:/var/lib/postgresql/data
-      - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
+      - ../s_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
+      - ../s_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
     env_file: ../tst.env
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
