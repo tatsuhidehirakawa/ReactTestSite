@@ -15,7 +15,7 @@ services:
     ports:
       # - "3000:3000"
       # - "3001:3000"
-      - "3001:80"
+      - "3001:80"   # For Nginx
     tty: true
     stdin_open: true
     networks:
@@ -49,20 +49,21 @@ services:
   130dbs_tst:
     container_name: 130dbs_tst
     # image: postgres:14
-    build:
-      context: ../s_01_src/134dbs_src
-      dockerfile: ../../s_05_tst/130dbs_tst/Dockerfile
-    # build: ./130dbs_tst
+    # build:
+    #   context: ../s_01_src/134dbs_src
+    #   dockerfile: ../../s_05_tst/130dbs_tst/Dockerfile
+    build: ./130dbs_tst
     # working_dir: /usr/src/dbstore
     ports:
       - 5433:5432
+    # command: -c 'config_file=/etc/postgresql/postgresql.conf'
     volumes:
       - dbs-vol:/var/lib/postgresql/data
-      - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
+      # - ../s_01_src/134dbs_src/initdb:/docker-entrypoint-initdb.d
+      # - ../s_01_src/134dbs_src/config/postgresql.conf:/etc/postgresql/postgresql.conf
     env_file: ../tst.env
     environment:
         POSTGRES_PASSWORD: ${PGSQL_PW}
-    # command: sh -c `pg_restore.sh 130dbs_tst`
     networks:
       - STGprd_devpkg_tst_network
 

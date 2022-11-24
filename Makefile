@@ -5,7 +5,7 @@
 init.all: ## Initialize and booting all containers and services.
 	make init.dev
 	make init.tst
-	make init.stg
+	# make init.stg
 
 init.dev: ## Booting only frontend devlopment containers.
 	cd s_03_dev && make init.dev
