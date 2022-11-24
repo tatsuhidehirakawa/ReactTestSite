@@ -5,23 +5,23 @@ import "./Main.scss";
 const List = () => {
   const customerList = [
     {
-      name: "草刈正雄の父です！",
+      name: "壁紙の張り替え得意です！（現状回復）",
       image: "./sass.svg",
       introduction: "息子がお世話になっております。草刈り界の重鎮です。"
     },
     {
-      name: "草刈り得意です！",
+      name: "どんな鍵にも対応できます！（鍵開け）",
       image: "./react2.svg",
       introduction:
-        "畳一枚一秒で草を刈ります。"
+        "３以内に解錠できなかったら返金いたします。"
     },
     {
-      name: "雑草界のジェノサイドカッターと呼ばれてます",
+      name: "マイ草刈り機持ってます！（草刈り）",
       image: "./golang.svg",
       introduction: "雑草に恐れられています。"
     },
     {
-      name: "マイ草刈り機持ってます！",
+      name: "ゴミ屋敷は私にお任せ下さい！（ゴミ回収）",
       image: "./postgresql.svg",
       introduction:
         "ご依頼いただければ出動させます。"
@@ -39,16 +39,16 @@ const List = () => {
         "のび太です。"
     },
     {
-      name: "ヤギ１匹派遣します！",
+      name: "清掃はお任せください！（敷地内清掃）",
       image: "./postgresql.svg",
       introduction:
         "彼らが通った後にはぺんぺん草一つ生えません。"
     },
     {
-      name: "ヤギ２匹派遣します！",
+      name: "ヤギ２匹派遣します！（草刈り）",
       image: "./postgresql.svg",
       introduction:
-        "二馬力ならぬ二山羊力です。"
+        "二馬力ならぬ二山羊力です。彼らが通った後にはぺんぺん草一つ生えません"
     }
   ];
 

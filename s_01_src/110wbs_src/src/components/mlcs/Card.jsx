@@ -19,7 +19,6 @@ class Card extends React.Component {
     let modal;
     if (this.state.isModalOpen) {
       modal = (
-        /*　こいつらを描画しますよ！！！-----------------------*/
         <div className="modalBackground">
           <div className="modal-inner">
             <div className="modal-header"></div>
@@ -32,7 +31,6 @@ class Card extends React.Component {
             </button>
           </div>
         </div>
-        /*----------------------------------------------*/
       );
     }
 
