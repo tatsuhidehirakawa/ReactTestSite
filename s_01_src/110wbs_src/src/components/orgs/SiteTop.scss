@@ -1,94 +1,84 @@
 @import "../../Pager.scss";
 
-// // p43
-// $main__color: #f18d09;
-// $sub__color: #fac112;
-// $base__color: #fcf8d4;
-// $accent__color: #474b4b;
-
-// // p105
-// $main__color: #a6c3ac;
-// $sub__color: #eee2d3;
-// $base__color: #eaf3d7;
-// $accent__color: #8f7e61;
-
-// p65
-$main__color: #cf5e37;
-$sub__color: #bfa679;
-$base__color: #f6edec;
-$accent__color: #003268;
-
-// // p169
-// $main__color: #bfbcd8;
-// $sub__color: #d1cfbf;
-// $base__color: #dfe4ec;
-// $accent__color: #61616d;
 
 
-.sitetop--outline {
-  @include page--outline;
-  display:flex;
-  flex-flow: column;
+.lesson-container {
+  margin-top: 96px;
+}
 
-  .sitetop--inlineA {
-    display: flex;
-    // background-color: aquamarine;
-    height: 33.33%;
-    width: 100%;
-    .sitetop--inlineA--boxA__pictureA {
-      background-color: $main__color;
-      height: 100%;
-      width: 30%;
-      margin: 0px;
-    }
-    .sitetop--inlineA--boxB__textA {
-      background-color: $sub__color;
-      height: 100%;
-      width: 70%;
-      padding: 20px;
-      text-align: left;
-      overflow-wrap:  break-word;
-      font-size: 22px;
-      // .sss{
-      //   // white-space: pre-line;
-      // }
-    }
+.lesson-card {
+  display: inline-block;
+  width: 22.5%;
+  margin-right: 24px;
+  margin-bottom: 24px; /* 追加コード */
+  text-align: center;
+  box-shadow: 0 0 6px #e8e8e8;
+  background-color: #fff;
+  cursor: pointer;
+  
+}
+
+.lesson-item {
+  border-radius: 4px;
+  padding: 48px 0 64px;
+  img {
+  width: 126px;
   }
-
-  .sitetop--inlineB {
-    height: 33.33%;
-    width: 100%;
-    display: flex;
-    .sitetop--inlineB--boxA__pictureA {
-      height: 100%;
-      width: 70%;
-      background-color: $base__color;
-    }
-    .sitetop--inlineB--boxB__textA {
-      height: 100%;
-      width: 30%;
-      background-color: $accent__color;
-    }
-  }
-
-  .sitetop--inlineC__pictureA {
-    height: 33.33%;
-    width: 100%;
-    background-color: $sub__color;
+  p {
+  color: #2b546a;
   }
 }
 
-// .page__textA {
-//   @include page__textA;
-// }
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+//  background-color: rgba(255,255,255,0.2);     //新規導入すりガラスエフェクト！！！
+//  backdrop-filter:blur(8px);                     //新規導入すりガラスエフェクト！！！
+}
 
-// .page__textS {
-//   @include page__textS;
-// }
+.modal-inner {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  left: 0;
+  width: 480px;
+  padding-bottom: 60px;
+  margin: auto;
+ // background-color: rgba(255,255,255,0.2);     //新規導入すりガラスエフェクト！！！
+ // backdrop-filter:blur(8px);                     //新規導入すりガラスエフェクト！！！
+  border-radius: 8px;
+}
 
+.modal-header {
+  height: 8px;
+  width: 100%;
+  margin-bottom: 60px;
+  border-radius: 8px 8px 0 0;
+  //background-image: url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/modal_bar.svg");
+}
 
-// <p>
-// This Packege is <b>fullstack</b> Web development <b>environment</b> named "<b>STGprd</b>".<br />
-// "<b>STGprd</b>" is made by Golang, PostgreSQL, React, TypeScript, Sass & Docker.<br />
-// If you want to use this packege, please access "<b>https://github.com/tatsuhidehirakawa/myportfolio_k</b>".
-// </p>
+.modal-introduction p {
+  color: #5876a3;
+  width: 384px;
+  line-height: 32px;
+  text-align: left;
+  margin: 36px auto 40px;
+}
+
+.modal-close-btn {
+  font-size: 13px;
+  color: #8491a5;
+  width: 200px;
+  padding: 16px 0;
+  border: 0;
+  background-color: #f0f4f9;
+  cursor: pointer;
+  &:hover {
+    color: #8491a5;
+    background-color: #ccd9ea;
+    transition: 0.3s ease-in-out;
+  }
+}
