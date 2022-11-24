@@ -35,8 +35,8 @@ class Card extends React.Component {
     }
 
     return (
-      <div className="lesson-card">
-        <div className="lesson-item" onClick={() => {this.handleClickLesson();}}>
+      <div className="card--outline">
+        <div className="card--inline" onClick={() => {this.handleClickLesson();}}>
           <p>{this.props.name}</p>
           <img src={this.props.image} />
         </div>
