@@ -5,8 +5,11 @@ FROM postgres:14 AS build-stage
 # RUN /etc/init.d/postgresql start
 
 WORKDIR /usr/src/dbstore
+
 # RUN pg_dump -U postgres -Fc postgres > /usr/src/pg_dump.sql
-CMD pg_dump -U postgres -Fc postgres > /usr/src/dbstore/pg_dump.sql
+
+# CMD pg_dump -U postgres -Fc postgres > /usr/src/dbstore/pg_dump.sql
+
 # RUN ["pg_dump" "-U" "postgres" "-Fc" "postgres" ">" "/usr/src/pg_dump.sql"]
 # CMD ["pg_dump" "-U" "postgres" "-Fc" "postgres" ">" "/usr/src/pg_dump.sql"]
 # CMD ["pg_dump" "-U" "postgres" "-Fc" "postgres" ">" "/usr/src/pg_dump.sql"]
