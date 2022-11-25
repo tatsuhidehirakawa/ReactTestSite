@@ -21,19 +21,19 @@ init.dev.dbs: ## Booting only frontend devlopment containers.
 
 #---[ 1. Container manipulation. ]-------------------------------------------
 
-import_sorce_code.dev.wbs:
+send_code_wbs:
 	@docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
 	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
 	@docker cp ../s_01_src/110wbs_src/README.md 110wbs_dev:usr/src/app
 	@echo "User sorce code was imported..."
 
-downcopy.dev.wbs: ## Command to copy source code modified in a container to local.
-	@docker cp 110wbs_dev:usr/src/app/public ../s_01_src/110wbs_src
-	@docker cp 110wbs_dev:usr/src/app/src ../s_01_src/110wbs_src
-	@docker cp 110wbs_dev:usr/src/app/package.json ../s_01_src/110wbs_src
-	@docker cp 110wbs_dev:usr/src/app/package-lock.json ../s_01_src/110wbs_src
-	@docker cp 110wbs_dev:usr/src/app/.gitignore ../s_01_src/110wbs_src
-	@echo "User sorce code was Downloded..."
+# pill_codedowncopy.dev.wbs: ## Command to copy source code modified in a container to local.
+# 	@docker cp 110wbs_dev:usr/src/app/public ../s_01_src/110wbs_src
+# 	@docker cp 110wbs_dev:usr/src/app/src ../s_01_src/110wbs_src
+# 	@docker cp 110wbs_dev:usr/src/app/package.json ../s_01_src/110wbs_src
+# 	@docker cp 110wbs_dev:usr/src/app/package-lock.json ../s_01_src/110wbs_src
+# 	@docker cp 110wbs_dev:usr/src/app/.gitignore ../s_01_src/110wbs_src
+# 	@echo "User sorce code was Downloded..."
 
 build.react: ## Create frontend production files.
 	docker exec -it 110wbs_dev npm run build bash
