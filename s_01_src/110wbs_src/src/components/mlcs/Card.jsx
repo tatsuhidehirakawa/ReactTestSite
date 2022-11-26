@@ -37,9 +37,9 @@ class Card extends React.Component {
     return (
       <div className="card--outline">
         <div className="card--inline" onClick={() => {this.handleClickLesson();}}>
-          <p>{this.props.name}</p>
           <img src={this.props.image} />
         </div>
+        <p>{this.props.name}</p>
         {modal}
       </div>
     );

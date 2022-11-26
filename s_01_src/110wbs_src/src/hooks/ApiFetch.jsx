@@ -24,9 +24,10 @@ const ApiFetch = () => {
   return (
     <div>
       <ul>
-          {
-          posts.map(post => <li key={post.account_id}>{post.skill}</li>)
-          }
+        {posts.map(post => <li key={post.account_id}>{post.skill}</li>)}
+      </ul>
+      <ul>
+        {posts.map(post => <li key={post.account_id}>{post.pic_id_02}</li>)}
       </ul>
     </div>
   )

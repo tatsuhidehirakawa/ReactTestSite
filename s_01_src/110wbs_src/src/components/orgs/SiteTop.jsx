@@ -1,11 +1,11 @@
 // import React from "react"
 import Card from "../mlcs/Card";
 import "./SiteTop.scss"
-import ApiFetch from "../../hooks/ApiFetch";
+// import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
 
 const SiteTop = () => {
-  const [data, setData] = useState({ hits: [] });
+  // const [data, setData] = useState({ hits: [] });
   const [posts, setPosts] = useState([])
   useEffect(() => {
     // console.log('ApiFetch.jsx: useEffect()')   // Debug.
@@ -25,13 +25,13 @@ const SiteTop = () => {
       // });
   },[])
 
-  const customerList = [
-    {
-      name: <ApiFetch>data.account_id</ApiFetch>,
-      image: <ApiFetch>data.pic_id</ApiFetch>,
-      introduction: data.skill
-    },
-  ];
+  // const customerList = [
+  //   {
+  //     name: <ApiFetch>data.account_id</ApiFetch>,
+  //     image: <ApiFetch>data.pic_id</ApiFetch>,
+  //     introduction: data.skill
+  //   },
+  // ];
  
   return (
     <div className="main-wrapper">
@@ -40,9 +40,9 @@ const SiteTop = () => {
           {posts.map((post) => {
             return (
               <Card
-                name={post.skill}
-                // image={productItem.image}
+                image={post.pic_id_02}
                 // introduction={productItem.introduction}
+                name={post.skill}
               />
             );
           })}

@@ -1,6 +1,6 @@
 import React from "react"
 import "./Products.scss"
-import ApiFetch from '../../hooks/ApiFetch.jsx';
+// import ApiFetch from '../../hooks/ApiFestch.jsx';
 
 const Products = () => {
   return (
@@ -38,7 +38,7 @@ const Products = () => {
           <div className="sitetop__textS"></div>
           <div className="sitetop__textS"></div>
           <div className="sitetop__textS"></div>
-          <ApiFetch />
+          {/* <ApiFetch /> */}
           <div className="sitetop__textS"></div>
           <div className="sitetop__textS"></div>
           <div className="sitetop__textS"></div>
