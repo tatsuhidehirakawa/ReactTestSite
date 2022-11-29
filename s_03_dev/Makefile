@@ -30,7 +30,7 @@ import.code.wbs:
 
 import.data.dbs:
 	# @docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
-	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
+	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh backup_20221129014205_134dbs_dev.sql bash
 
 export.data.dbs:
 	docker exec -it 134dbs_dev /usr/src/dbstore/pg_dump.sh 134dbs_dev bash

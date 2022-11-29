@@ -4,6 +4,7 @@ import "./SiteTop.scss"
 // import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
 
+
 const SiteTop = () => {
   // const [data, setData] = useState({ hits: [] });
   const [posts, setPosts] = useState([])
@@ -31,13 +32,14 @@ const SiteTop = () => {
         <div className="sitetop--inline">
           {posts.map((post) => {
             return (
-              <Card
-                image={post.pic_id_02.String}
-                // introduction={productItem.introduction}
-                name={post.skill}
-                location={post.pic_id_01}
-                distance={post.update_id}
-              />
+                <Card
+                  image={post.pic_id_02.String}
+                  // introduction={productItem.introduction}
+                  name={post.skill}
+                  location={post.pic_id_01}
+                  distance={post.update_id}
+                  introduction={post.skill}
+                />
             );
           })}
         </div>
