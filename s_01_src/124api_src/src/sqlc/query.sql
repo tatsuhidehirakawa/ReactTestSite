@@ -65,7 +65,7 @@ INSERT INTO offer_master (
 );
 
 -- name: UpdateOffer_master :execresult
-UPDATE offer_master SET self_introduction=$2, twitter_url=$3, facebook_url=$4,instagram_url=$5, youtube_channel=$6, update_date=$7, update_id=$8, pic_id_01=$9, pic_id_02=$10, pic_id_03=$11, skill=$12
+UPDATE offer_master SET offer_type=$2, offer_title=$3, offer_severity=$4,offer_catagory=$5, offer_locktion=$6, offer_pic_1=$7, offer_pic_2=$8, offer_pic_3=$9, offer_pic_4=$10, offer_pic_5=$11, offer_text=$12
 WHERE user_id=$1; 
 
 -- name: DeleteOffer_master :exec
