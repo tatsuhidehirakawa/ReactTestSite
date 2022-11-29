@@ -45,3 +45,27 @@ WHERE account_id=$1;
 -- name: DeleteAccount_attribute :exec
 DELETE FROM account_attribute
 WHERE account_id = $1;
+
+-- name: GetOffer_master :one
+SELECT * FROM offer_master
+WHERE account_id = ? LIMIT 1;
+
+-- name: ListOffer_master :many
+SELECT * FROM offer_master
+ORDER BY account_id;
+
+-- name: CreateOffer_master :execresult
+INSERT INTO offer_master (
+-- account_id, self_introduction, twitter_url, facebook_url, instagram_url, youtube_channel, update_date, update_id, pic_id_01, pic_id_02, pic_id_03, skill
+  account_id, self_introduction, twitter_url, facebook_url, instagram_url, youtube_channel, update_date, update_id, pic_id_01, pic_id_02, pic_id_03, skill
+) VALUES (
+  $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12
+);
+
+-- name: UpdateOffer_master :execresult
+UPDATE offer_master SET self_introduction=$2, twitter_url=$3, facebook_url=$4,instagram_url=$5, youtube_channel=$6, update_date=$7, update_id=$8, pic_id_01=$9, pic_id_02=$10, pic_id_03=$11, skill=$12
+WHERE account_id=$1; 
+
+-- name: DeleteOffer_master :exec
+DELETE FROM offer_master
+WHERE account_id = $1;

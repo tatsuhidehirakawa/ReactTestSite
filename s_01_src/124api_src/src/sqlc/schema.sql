@@ -26,3 +26,18 @@ CREATE TABLE account_attribute (
   pic_id_03         text,
   skill             text      NOT NULL
 );
+
+CREATE TABLE offer_master (
+  user_id           text    NOT NULL,
+  offer_type        text    NOT NULL,
+  offer_title       text    NOT NULL,
+  offer_severity    text,
+  offer_catagory    text,
+  offer_locktion    text,
+  offer_pic_1       text    NOT NULL,
+  offer_pic_2       text,
+  offer_pic_3       text,
+  offer_pic_4       text,
+  offer_pic_5       text,
+  offer_text        text    NOT NULL,
+);
