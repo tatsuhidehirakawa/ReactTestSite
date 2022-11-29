@@ -6,12 +6,13 @@ init.dev: ## Initializing only frontend devlopment containers.
 	make init.dev.dbs
 	make init.dev.api
 	make init.dev.wbs
+	make import.data.dbs
+	make import.code.wbs
 	@echo "Succeful initializing devlopment environment!"
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
-	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
+	# docker compose --env-file ../dev.env build 110wbs_dev --no-cache
 	docker compose --env-file ../dev.env up 110wbs_dev -d
-	@make import_sorce_code.dev.wbs
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
@@ -21,14 +22,31 @@ init.dev.dbs: ## Booting only frontend devlopment containers.
 
 #---[ 1. Container manipulation. ]-------------------------------------------
 
-import_sorce_code.dev.wbs:
+import.code.wbs:
 	@docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
 	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
+	@docker cp ../s_01_src/110wbs_src/README.md 110wbs_dev:usr/src/app
 	@echo "User sorce code was imported..."
 
-downcopy.dev.wbs: ## Command to copy source code modified in a container to local.
-	docker cp 110wbs_dev:usr/src/app/src ../s_01_src/110wbs_src
-	docker cp 110wbs_dev:usr/src/app/public ../s_01_src/110wbs_src
+import.data.dbs:
+	# @docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
+	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh backup_20221129034618_134dbs_dev.sql bash
+
+export.data.dbs:
+	docker exec -it 134dbs_dev /usr/src/dbstore/pg_dump.sh 134dbs_dev bash
+
+init.dev.adm:
+	docker compose --env-file ../dev.env up 135adm_dev -d
+
+
+
+# pill_codedowncopy.dev.wbs: ## Command to copy source code modified in a container to local.
+# 	@docker cp 110wbs_dev:usr/src/app/public ../s_01_src/110wbs_src
+# 	@docker cp 110wbs_dev:usr/src/app/src ../s_01_src/110wbs_src
+# 	@docker cp 110wbs_dev:usr/src/app/package.json ../s_01_src/110wbs_src
+# 	@docker cp 110wbs_dev:usr/src/app/package-lock.json ../s_01_src/110wbs_src
+# 	@docker cp 110wbs_dev:usr/src/app/.gitignore ../s_01_src/110wbs_src
+# 	@echo "User sorce code was Downloded..."
 
 build.react: ## Create frontend production files.
 	docker exec -it 110wbs_dev npm run build bash

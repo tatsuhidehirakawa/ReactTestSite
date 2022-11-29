@@ -1,19 +1,19 @@
 import React from "react"
-import "./Products.scss"
+import "./Offer.scss"
 import Rating from '@mui/material/Rating';
 // import Avater from '@mui/material/Avater';
 
 // import ApiFetch from '../../hooks/ApiFestch.jsx';
 
-const Products = () => {
+const Offer = () => {
   return (
-    <div className="sitetop--outline">
+    <div className="Offer--outline">
 
-      <div className="sitetop--inlineA">
-      {/* <p className="sitetop__textA">- <b>SiteTop</b> -</p> */}
-      <div className="sitetop--inlineA--boxA__pictureA">
+      <div className="Offer--inlineA">
+      {/* <p className="Offer__textA">- <b>Offer</b> -</p> */}
+      <div className="Offer--inlineA--boxA__pictureA">
       </div>
-      <div className="sitetop--inlineA--boxB__textA">
+      <div className="Offer--inlineA--boxB__textA">
         <p className="sss">
           It is a full-stack package for web development, 
           focusing on the technology stack presented in the next block. 
@@ -32,8 +32,8 @@ const Products = () => {
       </div>
       </div>
 
-      <div className="sitetop--inlineB">
-        <div className="sitetop--inlineB--boxA__pictureA">
+      <div className="Offer--inlineB">
+        <div className="Offer--inlineB--boxA__pictureA">
           <p>
             Technology stack:<br />
             Frontend: React.js, TypeScript, Sass<br />
@@ -43,22 +43,22 @@ const Products = () => {
             <b>St</b>a<b>g</b>ing Environment: Terraform
           </p>
         </div>
-        <div className="sitetop--inlineB--boxB__textA">
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
+        <div className="Offer--inlineB--boxB__textA">
+          <div className="Offer__textS"></div>
+          <div className="Offer__textS"></div>
+          <div className="Offer__textS"></div>
           {/* <ApiFetch /> */}
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
+          <div className="Offer__textS"></div>
+          <div className="Offer__textS"></div>
+          <div className="Offer__textS"></div>
+          <div className="Offer__textS"></div>
         </div>
 
       </div>
-      <div className="sitetop--inlineC__pictureA">
+      <div className="Offer--inlineC__pictureA">
         </div>
     </div>
   )
 }
 
-export default Products;
+export default Offer;

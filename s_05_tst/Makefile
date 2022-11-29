@@ -2,30 +2,20 @@
 
 #---[ 1. Test system boot ]-------------------------------------------------------
 
-# init.tst: ## Booting only frontend devlopment containers.
-# 	docker exec -it 110wbs_dev npm run build bash
-# 	# docker compose --env-file ../tst.env up -d --build --no-cache
-# 	docker compose --env-file ../tst.env up --build
-
-# init.tst.wbs:
-# 	docker exec -it 110wbs_dev npm run build bash
-# 	docker compose --env-file ../tst.env up --build
-
-
 init.tst:
 	make init.tst.dbs_1
 	make init.tst.api
 	make init.tst.wbs
 	make init.tst.dbs_2
 
-init.tst.wbs:
-	docker compose --env-file ../dev.env build 110wbs_tst --no-cache
+init.tst.wbs: # Booting only frontend devlopment containers.
+	# docker compose --env-file ../dev.env build 110wbs_tst --no-cache
 	docker compose --env-file ../dev.env up 110wbs_tst -d
 
-init.tst.api:
+init.tst.api: # Booting only api devlopment containers.
 	docker compose --env-file ../tst.env up 120api_tst -d
 
-init.tst.dbs_1:
+init.tst.dbs_1: # Booting only database devlopment containers.
 	docker compose --env-file ../tst.env up 130dbs_tst -d
 
 init.tst.dbs.b:

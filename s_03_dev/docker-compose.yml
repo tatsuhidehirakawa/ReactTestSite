@@ -61,11 +61,28 @@ services:
         POSTGRES_PASSWORD: ${PGSQL_PW}
     networks:
       - STGprd_devpkg_dev_network
+  
+  135adm_dev:
+    container_name: 135adm_dev
+    image: dpage/pgadmin4
+    volumes:
+      - adm-vol:/var/lib/pgadmin
+      # - ./pgadmin:/var/lib/pgadmin
+# - ./pgadmin:/var/lib/pgadmin/storage 
+    ports:
+      - "5439:80"
+      - "443:443"
+    environment:
+       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    networks:
+      - STGprd_devpkg_dev_network
 
 volumes:
   wbs-vol:
   api-vol:
   dbs-vol:
+  adm-vol:   # For pgAdmin.
 
 networks:
   STGprd_devpkg_dev_network:

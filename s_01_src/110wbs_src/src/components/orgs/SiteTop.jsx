@@ -1,53 +1,49 @@
-import React from "react"
+// import React from "react"
+import Card from "../mlcs/Card";
 import "./SiteTop.scss"
-import ApiFetch from '../../hooks/ApiFetch.jsx';
+// import ApiFetch from "../../hooks/ApiFetch";
+import React, { useState, useEffect } from 'react';
+
 
 const SiteTop = () => {
+  // const [data, setData] = useState({ hits: [] });
+  const [posts, setPosts] = useState([])
+  useEffect(() => {
+    // console.log('ApiFetch.jsx: useEffect()')   // Debug.
+    // fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
+    // fetch('http://localhost:8080/somePost', {method: 'GET'})
+    // fetch('http://host.docker.internal:8080/somePost', {method: 'GET'})
+    // fetch('http://host.docker.internal:8080/someGet', {method: 'GET'})   // Docker for Mac 18.03 and Windows10
+    // fetch('http://docker.for.mac.host.internal:8080/someGet', {method: 'GET'})   // Docker for Mac 17.12
+    fetch('http://docker.for.mac.localhost:8080/someGet', {method: 'GET'})   // Docker for Mac 17.06
+    .then(res => res.json())
+    .then(data => {
+      setPosts(data)
+      console.log(data)
+      })
+      // .catch(err => {   // Debug.
+      //     console.log('ApiFetch.jsx: useEffect(): err: ', err)
+      // });
+  },[])
+ 
   return (
-    <div className="sitetop--outline">
-
-      <div className="sitetop--inlineA">
-      {/* <p className="sitetop__textA">- <b>SiteTop</b> -</p> */}
-      <div className="sitetop--inlineA--boxA__pictureA">
-      </div>
-      <div className="sitetop--inlineA--boxB__textA">
-        <p className="sss">
-          It is a full-stack package for web development, 
-          focusing on the technology stack presented in the next block. 
-          It is optimized primarily as a template for creating large-scale CtoC sites. 
-          In particular, it is RESTful,
-          does not use CSS-in-JS, minimizes Paas dependencies, 
-          emphasizes orthogonality and loose coupling, static typing, 
-          and Docker usage.
-        </p>
-      </div>
-      </div>
-
-      <div className="sitetop--inlineB">
-        <div className="sitetop--inlineB--boxA__pictureA">
-          <p>
-            Technology stack:<br />
-            Frontend: React.js, TypeScript, Sass<br />
-            Backend: Golang(Gin,sqlc), PostgreSQL<br />
-            <b>Dev</b>lopment environment: Docker<br />
-            <b>T</b>e<b>st</b> Environment: CircleCI, Docker(Multistage Build)<br />
-            <b>St</b>a<b>g</b>ing Environment: Terraform
-          </p>
+    <div className="main-wrapper">
+      <div className="main">
+        <div className="sitetop--inline">
+          {posts.map((post) => {
+            return (
+                <Card
+                  image={post.pic_id_02.String}
+                  // introduction={productItem.introduction}
+                  name={post.skill}
+                  location={post.pic_id_01}
+                  distance={post.update_id}
+                  introduction={post.skill}
+                />
+            );
+          })}
         </div>
-        <div className="sitetop--inlineB--boxB__textA">
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
-          <ApiFetch />
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
-          <div className="sitetop__textS"></div>
-        </div>
-
       </div>
-      <div className="sitetop--inlineC__pictureA">
-        </div>
     </div>
   );
 }

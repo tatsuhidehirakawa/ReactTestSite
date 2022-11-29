@@ -8,8 +8,9 @@
   height: $header__height;
   // @include header__height;
   width: 100%;
-  // background-color: $color-header;
-  @include frostedglass;
+  background-color: $color-header;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+  // @include frostedglass;
 }
 
 .header--sectionA {
