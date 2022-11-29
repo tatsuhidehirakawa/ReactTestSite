@@ -82,7 +82,7 @@ func (a OfferMaster) Delete(c *gin.Context) {
     // クエリパラメータからofferIDを取得
     offerID := c.Param("offerID")
     queries := sqlc_pkg.New(a.db)
-    err := queries.Deleteoffer_master(context.TODO(), offerID)
+    err := queries.Deleteoffer_master(context.TODO(), accountID)
 
     if err != nil {
         log.Fatal(err)
