@@ -19,6 +19,7 @@ import Recruit from  './components/orgs/Recruit.jsx';
 import Company from  './components/orgs/Company.jsx';
 import Privacy from  './components/orgs/Privacy.jsx';
 import SiteTop from  './components/orgs/SiteTop.jsx';
+import Offer from  './components/orgs/Offer.jsx';
 
 const Router = () => {
   return (
@@ -32,6 +33,7 @@ const Router = () => {
         <Route path={`/Products`} element={<Layout><Products /></Layout>} />
         {/* <Route path={`/TestPage`} element={<Layout><TestPage /></Layout>} /> */}
         <Route path={`/Pricing`} element={<Layout><PricingContent /></Layout>} />
+
         <Route path={`/SiteTop`} element={<Layout><SiteTop /></Layout>} />
         <Route path={`/Agreement`} element={<Layout><Agreement /></Layout>} />
         <Route path={`/UserGuide`} element={<Layout><UserGuide /></Layout>} />
@@ -42,6 +44,8 @@ const Router = () => {
         <Route path={`/Recruit`} element={<Layout><Recruit /></Layout>} />
         <Route path={`/Company`} element={<Layout><Company /></Layout>} />
         <Route path={`/Privacy`} element={<Layout><Privacy /></Layout>} />
+
+        <Route path={`/Offer`} element={<Layout><Offer /></Layout>} />
       </Routes>
     </BrowserRouter>
   );
