@@ -50,24 +50,24 @@ WHERE account_id = $1;
 
 -- name: GetOffer_master :one
 SELECT * FROM offer_master
-WHERE user_id = ? LIMIT 1;
+WHERE offer_id = ? LIMIT 1;
 
 -- name: ListOffer_master :many
 SELECT * FROM offer_master
-ORDER BY user_id;
+ORDER BY offer_id;
 
 -- name: CreateOffer_master :execresult
 INSERT INTO offer_master (
 -- user_id, offer_type, offer_title, offer_severity, offer_catagory, offer_locktion, offer_pic_1, offer_pic_2, offer_pic_3, offer_pic_4, offer_pic_5, offer_text
-  user_id, offer_type, offer_title, offer_severity, offer_catagory, offer_locktion, offer_pic_1, offer_pic_2, offer_pic_3, offer_pic_4, offer_pic_5, offer_text
+  offer_id, user_id, offer_type, offer_title, offer_severity, offer_catagory, offer_locktion, offer_pic_1, offer_pic_2, offer_pic_3, offer_pic_4, offer_pic_5, offer_text
 ) VALUES (
-  $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12
+  $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13
 );
 
 -- name: UpdateOffer_master :execresult
 UPDATE offer_master SET offer_type=$2, offer_title=$3, offer_severity=$4,offer_catagory=$5, offer_locktion=$6, offer_pic_1=$7, offer_pic_2=$8, offer_pic_3=$9, offer_pic_4=$10, offer_pic_5=$11, offer_text=$12
-WHERE user_id=$1; 
+WHERE offer_id=$1; 
 
 -- name: DeleteOffer_master :exec
 DELETE FROM offer_master
-WHERE user_id = $1;
+WHERE offer_id = $1;

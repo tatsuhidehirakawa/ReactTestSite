@@ -28,6 +28,7 @@ CREATE TABLE account_attribute (
 );
 
 CREATE TABLE offer_master (
+  offer_id          text    NOT NULL,
   user_id           text    NOT NULL,
   offer_type        text    NOT NULL,
   offer_title       text    NOT NULL,

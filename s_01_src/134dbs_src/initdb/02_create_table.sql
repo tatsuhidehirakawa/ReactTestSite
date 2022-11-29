@@ -1,5 +1,5 @@
 -- Project Name : noname
--- Date/Time    : 2022/11/29 22:40:32
+-- Date/Time    : 2022/11/30 8:47:02
 -- Author       : tatsu_hira_s
 -- RDBMS Type   : Oracle Database
 -- Application  : A5:SQL Mk-2
@@ -50,7 +50,8 @@ create table account_master (
 -- offer_master
 --* RestoreFromTempTable
 create table offer_master (
-  user_id character varying not null
+  offer_id character varying not null
+  , user_id character varying not null
   , offer_type character varying not null
   , offer_title character varying not null
   , offer_severity character varying
@@ -62,10 +63,10 @@ create table offer_master (
   , offer_pic_4 character varying
   , offer_pic_5 character varying
   , offer_text character varying not null
-  , constraint offer_master_PKC primary key (user_id)
+  , constraint offer_master_PKC primary key (offer_id)
 ) ;
 
-comment on table account_attribute is 'account_attribute:メイン･ユーザアカウント台帳';
+comment on table account_attribute is 'account_attribute';
 comment on column account_attribute.account_id is 'Account-ID:アカウントID';
 comment on column account_attribute.self_introduction is 'Self Introduction';
 comment on column account_attribute.twitter_url is 'Twitter URL:ツイッターID';
@@ -79,7 +80,7 @@ comment on column account_attribute.pic_id_02 is 'Picture ID 2:プロフィー�
 comment on column account_attribute.pic_id_03 is 'Picture ID 3:プロフィール写真3';
 comment on column account_attribute.skill is 'skill:スキル';
 
-comment on table account_master is 'account_master:ユーザー・プロフィール';
+comment on table account_master is 'account_master';
 comment on column account_master.user_id is 'User ID:ユーザID';
 comment on column account_master.account_name is 'Account Name:氏名';
 comment on column account_master.mail_addless is 'Mail Addless:メールアドレス';
@@ -93,6 +94,7 @@ comment on column account_master.registration_date is 'Registration Date:登録�
 comment on column account_master.rate is 'Rate:評価';
 
 comment on table offer_master is 'offer_master:オファー台帳';
+comment on column offer_master.offer_id is 'Offer ID:オファーID';
 comment on column offer_master.user_id is 'User ID:ユーザID';
 comment on column offer_master.offer_type is 'Offer Type:オファー種別';
 comment on column offer_master.offer_title is 'Offer Title:オファー題目';

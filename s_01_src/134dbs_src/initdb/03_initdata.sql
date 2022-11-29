@@ -9,5 +9,5 @@ INSERT INTO account_attribute
 VALUES ('5e9nr6eka93u','09/07/22','5e9nr6eka93u','5e9nr6eka93u','Successfully loaded the database from PostgreSQL.');
 
 INSERT INTO offer_master
-  (user_id,offer_type,offer_title,offer_pic_1,offer_text)
-VALUES ('5e9nr6eka93u','provider','Test Offer','a4cjuzn2','Test Offer');
+  (offer_id,user_id,offer_type,offer_title,offer_pic_1,offer_text)
+VALUES ('5e9nr6eka93u','5e9nr6eka93u','provider','Test Offer','a4cjuzn2','Test Offer');
