@@ -39,5 +39,5 @@ CREATE TABLE offer_master (
   offer_pic_3       text,
   offer_pic_4       text,
   offer_pic_5       text,
-  offer_text        text    NOT NULL,
+  offer_text        text    NOT NULL
 );
