@@ -1,6 +1,9 @@
 import React from "react"
 import "./Offer.scss"
 import Rating from '@mui/material/Rating';
+// import MyMap from './Map';
+import 'leaflet/dist/leaflet.css';
+import { Map } from "./Map";
 // import Avater from '@mui/material/Avater';
 
 // import ApiFetch from '../../hooks/ApiFestch.jsx';
@@ -53,7 +56,7 @@ const Offer = () => {
           <div className="Offer__textS"></div>
           <div className="Offer__textS"></div>
         </div>
-
+        <Map />
       </div>
       <div className="Offer--inlineC__pictureA">
         </div>

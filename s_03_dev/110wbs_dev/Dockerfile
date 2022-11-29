@@ -20,6 +20,10 @@ RUN npm install @mui/material @emotion/react @emotion/styled
 # Import Font Awesome
 RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
 
+# Import leaflet for OpenStreetMap.
+# RUN npm install leaflet react-leaflet@next --save
+RUN npm install leaflet react-leaflet
+
 # # Install Git
 # RUN apk update && \
 #     apk add git
