@@ -24,14 +24,6 @@ const SiteTop = () => {
       //     console.log('ApiFetch.jsx: useEffect(): err: ', err)
       // });
   },[])
-
-  // const customerList = [
-  //   {
-  //     name: <ApiFetch>data.account_id</ApiFetch>,
-  //     image: <ApiFetch>data.pic_id</ApiFetch>,
-  //     introduction: data.skill
-  //   },
-  // ];
  
   return (
     <div className="main-wrapper">
@@ -40,9 +32,11 @@ const SiteTop = () => {
           {posts.map((post) => {
             return (
               <Card
-                image={post.pic_id_02}
+                image={post.pic_id_02.String}
                 // introduction={productItem.introduction}
                 name={post.skill}
+                location={post.pic_id_01}
+                distance={post.update_id}
               />
             );
           })}

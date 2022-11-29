@@ -1,5 +1,7 @@
 import React from "react";
 import "./Card.scss";
+// import { IconButton } from "@material-ui/core";
+// import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 
 class Card extends React.Component {
   constructor(props) {
@@ -38,8 +40,12 @@ class Card extends React.Component {
       <div className="card--outline">
         <div className="card--inline" onClick={() => {this.handleClickLesson();}}>
           <img src={this.props.image} />
+          {/* <IconButton color="primary" onClick={() => this.props.snsPost()}>
+            <FavoriteBorder />
+          </IconButton> */}
         </div>
         <p>{this.props.name}</p>
+        <p><b>{this.props.location}</b>、日本、{this.props.distance}km</p>
         {modal}
       </div>
     );

@@ -1,5 +1,8 @@
 import React from "react"
 import "./Products.scss"
+import Rating from '@mui/material/Rating';
+// import Avater from '@mui/material/Avater';
+
 // import ApiFetch from '../../hooks/ApiFestch.jsx';
 
 const Products = () => {
@@ -19,6 +22,12 @@ const Products = () => {
           does not use CSS-in-JS, minimizes Paas dependencies, 
           emphasizes orthogonality and loose coupling, static typing, 
           and Docker usage.
+          <Rating />
+          {/* <Avater
+            alt="sss"
+            src="http://www.fff.kkk/src.svg"
+            sx={{ width: 24, hight: 24 }}
+          /> */}
         </p>
       </div>
       </div>
