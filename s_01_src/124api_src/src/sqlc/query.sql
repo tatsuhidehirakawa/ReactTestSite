@@ -58,7 +58,7 @@ ORDER BY offer_id;
 
 -- name: CreateOffer_master :execresult
 INSERT INTO offer_master (
--- user_id, offer_type, offer_title, offer_severity, offer_catagory, offer_locktion, offer_pic_1, offer_pic_2, offer_pic_3, offer_pic_4, offer_pic_5, offer_text
+-- offer_id, user_id, offer_type, offer_title, offer_severity, offer_catagory, offer_locktion, offer_pic_1, offer_pic_2, offer_pic_3, offer_pic_4, offer_pic_5, offer_text
   offer_id, user_id, offer_type, offer_title, offer_severity, offer_catagory, offer_locktion, offer_pic_1, offer_pic_2, offer_pic_3, offer_pic_4, offer_pic_5, offer_text
 ) VALUES (
   $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13
