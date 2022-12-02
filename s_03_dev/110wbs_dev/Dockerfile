@@ -6,6 +6,12 @@ RUN npm install -g create-react-app@latest
 RUN create-react-app . --typescript
 # WORKDIR src
 
+# install Tailwindcss.
+RUN npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+RUN npm install @craco/craco
+# RUN npx tailwindcss init
+# RUN npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
 # Transfer version control files at this place.
 # \cp -f ./package.json ../../s_01_src/110wbs_src/package.json
 
@@ -22,11 +28,8 @@ RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @f
 
 # Import leaflet for OpenStreetMap.
 # RUN npm install leaflet react-leaflet@next --save
-RUN npm install leaflet react-leaflet
-
-# # Install Git
-# RUN apk update && \
-#     apk add git
+RUN npm install leaflet react-leaflet --save
+# RUN npm install -D @types/leaflet
 
 # Make a standby state.
 CMD [ "yarn", "start" ]

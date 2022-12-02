@@ -8,6 +8,7 @@ init.dev: ## Initializing only frontend devlopment containers.
 	make init.dev.wbs
 	make import.data.dbs
 	make import.code.wbs
+	make init.tailwindcss
 	@echo "Succeful initializing devlopment environment!"
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
@@ -27,6 +28,14 @@ import.code.wbs:
 	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
 	@docker cp ../s_01_src/110wbs_src/README.md 110wbs_dev:usr/src/app
 	@echo "User sorce code was imported..."
+
+init.tailwindcss:
+	@docker cp ../s_01_src/110wbs_src/craco.config.js 110wbs_dev:usr/src/app
+	@docker exec -it 110wbs_dev npx tailwindcss init bash
+	@docker cp ../s_01_src/110wbs_src/src/index.css 110wbs_dev:usr/src/app/src
+
+export.data.wbs:
+	@docker cp 110wbs_dev:usr/src/app/ ../s_01_src/110wbs_src/
 
 import.data.dbs:
 	# @docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
