@@ -7,7 +7,7 @@ export const Map = () => {
   // const position = [51.505, -0.09];
   const position = [33.852, 130.89];
   // 初期マップズームレベル
-  const zoom = 30;
+  const zoom = 15;  // Adjustable between 0 and 19.
   // 33.851568, 130.890275
   return (
     <MapContainer center={position} zoom={zoom}>
