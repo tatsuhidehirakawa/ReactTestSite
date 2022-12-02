@@ -52,9 +52,9 @@ Please check the Makefile, that's all.
 "$ make init.tst"                   |  +----+--|---+
                                     |  |/120api|tst|
                                     |  |  +----+------+
-     A: Air(Hot reload)             |  |  |/130dbs_tst|
-     B: Bind Mount                  +--|  | Container |
-     C: Copy                           |  |    for    |
+     A: Air(Hot reload)             |  |  |/130dbs_tst| --+
+     B: Bind Mount                  +--|  | Container |   +--->localhost:3001
+     C: Copy                           |  |    for #80----+
      M: Multi stage build              +--|   test    |
      S: sqlc(O/R Mapper)                  |           |
      V: Initialize & Volume Mount         +-----------+

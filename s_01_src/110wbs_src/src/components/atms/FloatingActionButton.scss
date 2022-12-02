@@ -4,7 +4,7 @@
 
 //--- Page Outline ------------------------------------------------
 .FloatingActionButton--outline {
-  @include frostedglass;
+  // @include frostedglass;
   display: flex;
   border-radius: 25px;
   font-size: small;
@@ -13,6 +13,7 @@
   position: fixed;
   top: 890px;
   left: 765px;
+  background-color: black;
   // position: center;
 }
 
