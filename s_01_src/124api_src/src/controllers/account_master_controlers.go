@@ -5,7 +5,8 @@ import (
     "database/sql"
     "log"
     "net/http"
-
+    "strconv"
+    
     "github.com/gin-gonic/gin"
     _ "github.com/lib/pq"
     "github.com/tatsuhidehirakawa/STGprd_devpkg/sqlc/sqlc_pkg"
@@ -80,9 +81,10 @@ func (a AccountMaster) Put(c *gin.Context) {
 /*--- DELETEのハンドラ部分 --------------------*/
 func (a AccountMaster) Delete(c *gin.Context) {
     // クエリパラメータからaccountIDを取得
-    accountID := c.Param("accountID")
+    accountIDString := c.Param("accountID")
+    accountID, _ := strconv.Atoi(accountIDString)
     queries := sqlc_pkg.New(a.db)
-    err := queries.DeleteAccount_master(context.TODO(), accountID)
+    err := queries.DeleteAccount_master(context.TODO(), int32(accountID))
 
     if err != nil {
         log.Fatal(err)

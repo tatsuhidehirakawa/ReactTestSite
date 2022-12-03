@@ -58,20 +58,20 @@ func main() {
 
 	setCors(router)
 
-	router.GET("/someGet", accountMasterController.Get)
-	router.POST("/somePost", accountMasterController.Post)
-	router.PUT("/somePut", accountMasterController.Put)
-	router.DELETE("/someDelete/:accountID", accountMasterController.Delete)
+    router.GET("/accountMaster/someGet", accountMasterController.Get)
+    router.POST("/accountMaster/somePost", accountMasterController.Post)
+    router.PUT("/accountMaster/somePut", accountMasterController.Put)
+    router.DELETE("/accountMaster/someDelete/:accountID", accountMasterController.Delete)
 
-	router.GET("/someGet", accountAttributeController.Get)
-	router.POST("/somePost", accountAttributeController.Post)
-	router.PUT("/somePut", accountAttributeController.Put)
-	router.DELETE("/someDelete/:accountID", accountAttributeController.Delete)
+    router.GET("/accountAttribute/someGet", accountAttributeController.Get)
+    router.POST("/accountAttribute/somePost", accountAttributeController.Post)
+    router.PUT("/accountAttribute/somePut", accountAttributeController.Put)
+    router.DELETE("/accountAttribute/someDelete/:accountID", accountAttributeController.Delete)
 
-	router.GET("/someGet", offerMasterController.Get)
-	router.POST("/somePost", offerMasterController.Post)
-	router.PUT("/somePut", offerMasterController.Put)
-	router.DELETE("/someDelete/:accountID", offerMasterController.Delete)
+    router.GET("/offerMaster/someGet", offerMasterController.Get)
+    router.POST("/offerMaster/somePost", offerMasterController.Post)
+    router.PUT("/offerMaster/somePut", offerMasterController.Put)
+    router.DELETE("/offerMaster/someDelete/:accountID", offerMasterController.Delete)
 
 	router.Run()
 }

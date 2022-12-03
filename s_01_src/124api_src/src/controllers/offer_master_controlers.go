@@ -5,6 +5,7 @@ import (
     "database/sql"
     "log"
     "net/http"
+    // "strconv"
 
     "github.com/gin-gonic/gin"
     _ "github.com/lib/pq"
@@ -81,8 +82,11 @@ func (a OfferMaster) Put(c *gin.Context) {
 func (a OfferMaster) Delete(c *gin.Context) {
     // クエリパラメータからofferIDを取得
     offerID := c.Param("offerID")
+    // accountIDString := c.Param("accountID")
+    // accountID, _ := strconv.Atoi(accountIDString)
     queries := sqlc_pkg.New(a.db)
     err := queries.DeleteOffer_master(context.TODO(), accountID)
+    // err := queries.DeleteOffer_master(context.TODO(), offerID)
 
     if err != nil {
         log.Fatal(err)
