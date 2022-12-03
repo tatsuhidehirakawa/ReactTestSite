@@ -9,6 +9,7 @@ const Agreement = () => {
         <div className="agreement__textS"></div>
         <div className="agreement__textS"></div>
         <div className="agreement__textS"></div>
+        <div class="m-0 text-pink-700">Tailwindのテスト</div>
         <div className="agreement__textS"></div>
         <div className="agreement__textS"></div>
         <div className="agreement__textS"></div>

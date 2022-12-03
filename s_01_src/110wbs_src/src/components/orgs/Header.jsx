@@ -27,6 +27,7 @@ const Header = () => {
         {/* <Language /> */}
         <Link to="/SiteTop" className="header__text">SiteTop</Link>
         <Link to="/Agreement" className="header__text">Agreement</Link>
+        {/* <Link to="/Agreement" className="text-9xl">Agreement</Link> */}
         <Link to="/UserGuide" className="header__text">UserGuide</Link>
         <Link to="/SignUp" className="header__text">SignUp</Link>
         {/* <SignIn className="header__text">kkk</SignIn> */}
