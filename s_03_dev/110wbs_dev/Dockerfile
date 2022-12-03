@@ -9,8 +9,6 @@ RUN create-react-app . --typescript
 # install Tailwindcss.
 RUN npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
 RUN npm install @craco/craco
-# RUN npx tailwindcss init
-# RUN npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 # Transfer version control files at this place.
 # \cp -f ./package.json ../../s_01_src/110wbs_src/package.json
