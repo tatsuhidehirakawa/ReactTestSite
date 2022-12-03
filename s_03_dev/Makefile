@@ -35,6 +35,9 @@ import.data.dbs:
 export.data.dbs:
 	docker exec -it 134dbs_dev /usr/src/dbstore/pg_dump.sh 134dbs_dev bash
 
+export.data.api:
+	@docker cp 124api_dev:/go/src ../s_01_src/124api_src
+
 init.dev.adm:
 	docker compose --env-file ../dev.env up 135adm_dev -d
 
