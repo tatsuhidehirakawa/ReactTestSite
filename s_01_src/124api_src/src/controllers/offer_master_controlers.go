@@ -85,8 +85,8 @@ func (a OfferMaster) Delete(c *gin.Context) {
     // accountIDString := c.Param("accountID")
     // accountID, _ := strconv.Atoi(accountIDString)
     queries := sqlc_pkg.New(a.db)
-    err := queries.DeleteOffer_master(context.TODO(), accountID)
-    // err := queries.DeleteOffer_master(context.TODO(), offerID)
+    // err := queries.DeleteOffer_master(context.TODO(), accountID)
+    err := queries.DeleteOffer_master(context.TODO(), offerID)
 
 	if err != nil {
 		log.Fatal(err)
