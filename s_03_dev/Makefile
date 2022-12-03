@@ -11,15 +11,15 @@ init.dev: ## Initializing only frontend devlopment containers.
 	make import.code.wbs
 	@echo "Succeful initializing devlopment environment!"
 
-init.dev.wbs: ## Initilazing only frontend devlopment containers.
-	# docker compose --env-file ../dev.env build 110wbs_dev --no-cache
-	docker compose --env-file ../dev.env up 110wbs_dev -d
+init.dev.dbs: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 134dbs_dev -d
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
 
-init.dev.dbs: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../dev.env up 134dbs_dev -d
+init.dev.wbs: ## Initilazing only frontend devlopment containers.
+	# docker compose --env-file ../dev.env build 110wbs_dev --no-cache
+	docker compose --env-file ../dev.env up 110wbs_dev -d
 
 #---[ 1. Container manipulation. ]-------------------------------------------
 
