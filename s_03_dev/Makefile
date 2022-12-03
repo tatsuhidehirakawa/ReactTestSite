@@ -6,9 +6,9 @@ init.dev: ## Initializing only frontend devlopment containers.
 	make init.dev.dbs
 	make init.dev.api
 	make init.dev.wbs
+	make activate.dev.wbs.tailwindcss
 	make import.data.dbs
 	make import.code.wbs
-	make init.tailwindcss
 	@echo "Succeful initializing devlopment environment!"
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
@@ -29,10 +29,15 @@ import.code.wbs:
 	@docker cp ../s_01_src/110wbs_src/README.md 110wbs_dev:usr/src/app
 	@echo "User sorce code was imported..."
 
-init.tailwindcss:
+activate.dev.wbs.tailwindcss:
 	@docker cp ../s_01_src/110wbs_src/craco.config.js 110wbs_dev:usr/src/app
-	@docker exec -it 110wbs_dev npx tailwindcss init bash
+	@docker exec -it 110wbs_dev npx tailwindcss init tailwind.config.js bash
+	# @docker cp ../s_03_dev/110wbs_dev/tailwind.config.js 110wbs_dev:usr/src/app
+	@sed 2d && sed 2 -i 'purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],'
 	@docker cp ../s_01_src/110wbs_src/src/index.css 110wbs_dev:usr/src/app/src
+	# @docker cp ../s_03_dev/110wbs_dev/package.json 110wbs_dev:usr/src/app
+	@docker restart 110wbs_dev
+	@echo "Succeful Activate Tailwindcss!"
 
 export.data.wbs:
 	@docker cp 110wbs_dev:usr/src/app/ ../s_01_src/110wbs_src/
