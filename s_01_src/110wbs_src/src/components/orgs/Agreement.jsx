@@ -11,7 +11,7 @@ const Agreement = () => {
         <div className="agreement__textS"></div>
         <div className="agreement__textS"></div>
         <div className="agreement__textS"></div>
-        <div class="m-0 text-pink-700">Tailwindのテスト</div>
+        <div class="m-0 text-pink-400 underline">Tailwindのテスト(ピンク色＆アンダーライン)</div>
         <div className="agreement__textS"></div>
         <div className="agreement__textS"></div>
         <div className="agreement__textS"></div>
