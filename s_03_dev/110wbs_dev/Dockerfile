@@ -1,18 +1,14 @@
 FROM node:16.15.0-alpine
 WORKDIR /usr/src/app
 
+# \cp -f ./package.json ../../s_01_src/110wbs_src/package.json
+
 # React installation.
 RUN npm install -g create-react-app@latest
 RUN create-react-app . --typescript
-# WORKDIR src
 
 # install Tailwind CSS.
-# RUN npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
-# RUN npm install @craco/craco
 RUN npm install -D tailwindcss postcss autoprefixer
-
-# Transfer version control files at this place.
-# \cp -f ./package.json ../../s_01_src/110wbs_src/package.json
 
 # Import Sass
 RUN npm install sass@latest
