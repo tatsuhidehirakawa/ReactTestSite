@@ -1,6 +1,9 @@
 import React from "react"
 import "./Offer.scss"
 import Rating from '@mui/material/Rating';
+// import MyMap from './Map';
+import 'leaflet/dist/leaflet.css';
+import { Map } from "../atms/Map";
 // import Avater from '@mui/material/Avater';
 
 // import ApiFetch from '../../hooks/ApiFestch.jsx';
@@ -12,6 +15,7 @@ const Offer = () => {
       <div className="Offer--inlineA">
       {/* <p className="Offer__textA">- <b>Offer</b> -</p> */}
       <div className="Offer--inlineA--boxA__pictureA">
+      {/* <img src={this.props.image} alt={this.props.introduction}/> */}
       </div>
       <div className="Offer--inlineA--boxB__textA">
         <p className="sss">
@@ -47,16 +51,15 @@ const Offer = () => {
           <div className="Offer__textS"></div>
           <div className="Offer__textS"></div>
           <div className="Offer__textS"></div>
-          {/* <ApiFetch /> */}
           <div className="Offer__textS"></div>
           <div className="Offer__textS"></div>
           <div className="Offer__textS"></div>
           <div className="Offer__textS"></div>
         </div>
-
       </div>
       <div className="Offer--inlineC__pictureA">
-        </div>
+        <Map />
+      </div>
     </div>
   )
 }

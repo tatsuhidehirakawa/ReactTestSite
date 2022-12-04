@@ -1,8 +1,9 @@
 // import React from "react"
-import Card from "../mlcs/Card";
+import Card from "../atms/Card";
 import "./SiteTop.scss"
 // import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
+import FloatingActionButton from '../atms/FloatingActionButton'
 
 
 const SiteTop = () => {
@@ -28,6 +29,7 @@ const SiteTop = () => {
  
   return (
     <div className="main-wrapper">
+      <FloatingActionButton />
       <div className="main">
         <div className="sitetop--inline">
           {posts.map((post) => {
