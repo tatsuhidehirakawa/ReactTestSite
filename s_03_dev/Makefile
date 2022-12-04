@@ -6,19 +6,20 @@ init.dev: ## Initializing only frontend devlopment containers.
 	make init.dev.dbs
 	make init.dev.api
 	make init.dev.wbs
+	make activate.dev.wbs.tailwindcss
 	make import.data.dbs
 	make import.code.wbs
 	@echo "Succeful initializing devlopment environment!"
 
-init.dev.wbs: ## Initilazing only frontend devlopment containers.
-	# docker compose --env-file ../dev.env build 110wbs_dev --no-cache
-	docker compose --env-file ../dev.env up 110wbs_dev -d
+init.dev.dbs: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 134dbs_dev -d
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
 
-init.dev.dbs: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../dev.env up 134dbs_dev -d
+init.dev.wbs: ## Initilazing only frontend devlopment containers.
+	# docker compose --env-file ../dev.env build 110wbs_dev --no-cache
+	docker compose --env-file ../dev.env up 110wbs_dev -d
 
 #---[ 1. Container manipulation. ]-------------------------------------------
 
@@ -27,6 +28,19 @@ import.code.wbs:
 	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
 	@docker cp ../s_01_src/110wbs_src/README.md 110wbs_dev:usr/src/app
 	@echo "User sorce code was imported..."
+
+activate.dev.wbs.tailwindcss:
+	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/postcss.config.js 110wbs_dev:usr/src/app
+	# @docker exec -it 110wbs_dev npx tailwindcss init tailwind.config.js bash
+	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/tailwind.config.js 110wbs_dev:usr/src/app
+	# @sed 2d && sed 2 -i 'purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],'
+	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/index.css 110wbs_dev:usr/src/app/src
+	# @docker cp ../s_03_dev/110wbs_dev/package.json 110wbs_dev:usr/src/app
+	@docker restart 110wbs_dev
+	@echo "Succeful Activate Tailwindcss!"
+
+export.data.wbs:
+	@docker cp 110wbs_dev:usr/src/app/ ../s_01_src/110wbs_src/
 
 import.data.dbs:
 	# @docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash

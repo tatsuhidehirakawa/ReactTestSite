@@ -5,7 +5,7 @@ It is a full-stack package for web development, focusing on the technology stack
 2. Technology stacks.  
 Common: Docker, GNU Make, VSCode, Git&Github, Mermaid.js.  
 Development environment: Air(Golang).  
--> Frontend: TypeScript, React.js, Sass, Html, AtomicDesign, MindBEMding, MUI, Font Awesome.  
+-> Frontend: TypeScript, React.js, Sass, Html, Tailwind CSS, AtomicDesign, MindBEMding, MUI, Font Awesome.  
 -> Backend: Go(Gin,sqlc), PostgreSQL, A5:SQL Mk-2.  
 Testing environment:  
 -> CircliCI  
@@ -54,7 +54,7 @@ Please check the Makefile, that's all.
                                     |  |  +----+------+
      A: Air(Hot reload)             |  |  |/130dbs_tst|
      B: Bind Mount                  +--|  | Container |
-     C: Copy                           |  |    for    |
+     C: Copy                           |  |    for    |  -->localhost:3001
      M: Multi stage build              +--|   test    |
      S: sqlc(O/R Mapper)                  |           |
      V: Initialize & Volume Mount         +-----------+

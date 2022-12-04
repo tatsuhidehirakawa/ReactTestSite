@@ -1,0 +1,52 @@
+@import "../../Pager.scss";
+
+//--- Common Declarations -----------------------------------------
+
+//--- Page Outline ------------------------------------------------
+.FloatingActionButton--outline {
+  // @include frostedglass;
+  display: flex;
+  border-radius: 25px;
+  font-size: small;
+  height: 50px;
+  width: 180px;
+  position: fixed;
+  top: 890px;
+  left: 765px;
+  background-color: rgb(117, 116, 116);
+  // position: center;
+}
+
+//--- Page Inline -------------------------------------------------
+.FloatingActionButton--sectionA {
+  width: 11%;
+}
+
+.FloatingActionButton--sectionB {
+  font-size: small;
+  width: 28%;
+  padding-top: 15px;
+  // opacity: 0.9%;
+}
+
+.FloatingActionButton--sectionC {
+  font-size: small;
+  width: 28%;
+  padding-top: 15px;
+}
+
+.FloatingActionButton--sectionD {
+  font-size: small;
+  width: 28%;
+  padding-top: 15px;
+}
+
+// .FloatingActionButton--sectionE {
+//   font-size: small;
+//   width: 21%;
+//   padding-top: 15px;
+// }
+
+.FloatingActionButton--sectionF {
+  width: 11%;
+}

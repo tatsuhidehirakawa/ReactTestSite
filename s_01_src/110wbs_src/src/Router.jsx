@@ -20,6 +20,7 @@ import Company from  './components/orgs/Company.jsx';
 import Privacy from  './components/orgs/Privacy.jsx';
 import SiteTop from  './components/orgs/SiteTop.jsx';
 import Offer from  './components/orgs/Offer.jsx';
+import Coordinate from  './components/orgs/Coordinate.jsx';
 
 const Router = () => {
   return (
@@ -44,6 +45,7 @@ const Router = () => {
         <Route path={`/Recruit`} element={<Layout><Recruit /></Layout>} />
         <Route path={`/Company`} element={<Layout><Company /></Layout>} />
         <Route path={`/Privacy`} element={<Layout><Privacy /></Layout>} />
+        <Route path={`/Coordinate`} element={<Layout><Coordinate /></Layout>} />
 
         <Route path={`/Offer`} element={<Layout><Offer /></Layout>} />
       </Routes>
