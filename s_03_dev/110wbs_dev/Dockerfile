@@ -18,8 +18,8 @@ RUN npm i -S react-router-dom@6.4.2
 
 # Import MUI
 RUN npm install @mui/material @emotion/react @emotion/styled
-# # Import Font Awesome
-# RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+# Import Font Awesome
+RUN npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
 
 # Import leaflet for OpenStreetMap.
 # RUN npm install leaflet react-leaflet@next --save
