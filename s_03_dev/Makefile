@@ -30,12 +30,12 @@ import.code.wbs:
 	@echo "User sorce code was imported..."
 
 activate.dev.wbs.tailwindcss:
-	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/craco.config.js 110wbs_dev:usr/src/app
+	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/postcss.config.js 110wbs_dev:usr/src/app
 	# @docker exec -it 110wbs_dev npx tailwindcss init tailwind.config.js bash
 	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/tailwind.config.js 110wbs_dev:usr/src/app
 	# @sed 2d && sed 2 -i 'purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],'
 	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/index.css 110wbs_dev:usr/src/app/src
-	@docker cp ../s_03_dev/110wbs_dev/package.json 110wbs_dev:usr/src/app
+	# @docker cp ../s_03_dev/110wbs_dev/package.json 110wbs_dev:usr/src/app
 	@docker restart 110wbs_dev
 	@echo "Succeful Activate Tailwindcss!"
 
