@@ -1,5 +1,7 @@
 import React from "react"
-import "./Agreement.scss"
+// import "./Agreement.scss"
+// import "../../craco.config.js"
+// import "../../tailwind.config.js"
 
 const Agreement = () => {
   return (

@@ -7,8 +7,8 @@ const LogoA = () => {
   return (
     <div className="logoOutline">
       <Link to="/SiteTop">
-        {/* <img src={logo} className="logoInline" alt="logo" /> */}
-        <img src={logo} className="h-12" alt="logo" />
+        <img src={logo} className="logoInline" alt="logo" />
+        {/* <img src={logo} className="h-12" alt="logo" /> */}
       </Link>
     </div>
   );

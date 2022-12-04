@@ -3,9 +3,12 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-// .Coordinate--outline {
-//   @include page--outline;
-// }
+.coordinate--outline {
+  position: relative;
+  width: 210%;
+  height: 2000px;
+
+}
 //--- Page Inline -------------------------------------------------
 .coordinate--sectionA__provider {
 //   width: 100%;
