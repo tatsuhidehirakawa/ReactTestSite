@@ -22,8 +22,8 @@ func main() {
 	db, err := sql.Open("postgres", dsn)
 
 	accountAttributeController := controllers.NewAccountAttribute(db)
-	accountMasterController := controllers.NewAccountAttribute(db)
-	offerMasterController := controllers.NewAccountAttribute(db)
+	accountMasterController := controllers.NewAccountMaster(db)
+	offerMasterController := controllers.NewOfferMaster(db)
 
     if err != nil {
         log.Fatal(err)

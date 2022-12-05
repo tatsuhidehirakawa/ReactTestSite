@@ -80,13 +80,10 @@ func (a OfferMaster) Put(c *gin.Context) {
 
 /*--- DELETEのハンドラ部分 --------------------*/
 func (a OfferMaster) Delete(c *gin.Context) {
-    // クエリパラメータからofferIDを取得
-    offerID := c.Param("offerID")
-    // accountIDString := c.Param("accountID")
-    // accountID, _ := strconv.Atoi(accountIDString)
+    // クエリパラメータからaccountIDを取得
+    accountID := c.Param("accountID")
     queries := sqlc_pkg.New(a.db)
-    // err := queries.DeleteOffer_master(context.TODO(), accountID)
-    err := queries.DeleteOffer_master(context.TODO(), offerID)
+    err := queries.DeleteOffer_master(context.TODO(), accountID)
 
 	if err != nil {
 		log.Fatal(err)
