@@ -1,7 +1,7 @@
 -- Project Name : noname
--- Date/Time    : 2022/12/06 0:30:15
+-- Date/Time    : 2022/12/06 1:33:28
 -- Author       : tatsu_hira_s
--- RDBMS Type   : Oracle Database
+-- RDBMS Type   : PostgreSQL
 -- Application  : A5:SQL Mk-2
 
 /*
@@ -15,12 +15,12 @@
 -- purchase_histroy
 --* RestoreFromTempTable
 create table purchase_histroy (
-  purchase_id VARCHAR2 not null
-  , purchase_date DATE not null
-  , purchase_time DATE not null
-  , payer_account_id VARCHAR2 not null
-  , payee_account_id VARCHAR2 not null
-  , amount NUMBER not null
+  purchase_id character varying not null
+  , purchase_date date not null
+  , purchase_time time not null
+  , payer_account_id character varying not null
+  , payee_account_id character varying not null
+  , amount numeric not null
   , create_date timestamp(6) without time zone not null
   , update_date timestamp(6) without time zone not null
   , constraint purchase_histroy_PKC primary key (purchase_id,payer_account_id,payee_account_id)
@@ -63,15 +63,15 @@ create table account_master (
 -- offer_list
 --* RestoreFromTempTable
 create table offer_list (
-  offer_id VARCHAR2(64) not null
-  , account_id VARCHAR2(64) not null
-  , offer_type VARCHAR2(1) not null
-  , offer_title VARCHAR2 not null
-  , offer_severity VARCHAR2
-  , offer_catagory VARCHAR2
-  , offer_location VARCHAR2
-  , offer_status VARCHAR2(1) not null
-  , offer_text VARCHAR2(140) not null
+  offer_id character varying(64) not null
+  , account_id character varying(64) not null
+  , offer_type character varying(1) not null
+  , offer_title character varying not null
+  , offer_severity character varying
+  , offer_catagory character varying
+  , offer_location character varying
+  , offer_status character varying(1) not null
+  , offer_text character varying(140) not null
   , create_date timestamp(6) without time zone not null
   , update_date timestamp(6) without time zone not null
   , constraint offer_list_PKC primary key (offer_id,account_id)
