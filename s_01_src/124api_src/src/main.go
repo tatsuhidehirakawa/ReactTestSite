@@ -22,27 +22,14 @@ func main() {
 	db, err := sql.Open("postgres", dsn)
 
 	accountAttributeController := controllers.NewAccountAttribute(db)
-	accountMasterController := controllers.NewAccountAttribute(db)
-	offerMasterController := controllers.NewAccountAttribute(db)
+	accountMasterController := controllers.NewAccountMaster(db)
+	offerMasterController := controllers.NewOfferMaster(db)
 
     if err != nil {
         log.Fatal(err)
     }
 
 	router := gin.Default()
-
-	// // Logon function
-	// // セッションCookieの設定
-	// store := cookie.NewStore([]byte("secret"))
-	// router.Use(sessions.Sessions("mysession", store))
-	// // ログイン用のhandler
-	// router.POST("/login", handler.Login)
-	// // 認証済のみアクセス可能なグループ
-	// authUserGroup := router.Group("/auth")
-	// authUserGroup.Use(middleware.LoginCheckMiddleware())
-	// {
-	// 	authUserGroup.GET("/getSample", handler.getSample)
-	// }
 
 	// Access Allowance
 	setCors := func(r *gin.Engine) {

@@ -14,7 +14,7 @@ CREATE TABLE account_attribute (
 );
 
 CREATE TABLE account_master (
-  user_id SERIAL PRIMARY KEY,
+  user_id           text      NOT NULL,
   account_name      text      NOT NULL,
   mail_addless      text      NOT NULL,
   password          text      NOT NULL,
