@@ -35,12 +35,12 @@ const SiteTop = () => {
           {posts.map((post) => {
             return (
                 <Card
-                  image={post.pic_id_02.String}
+                  image={post.rate.String}
                   // introduction={productItem.introduction}
-                  name={post.skill}
-                  location={post.pic_id_01}
-                  distance={post.update_id}
-                  introduction={post.skill}
+                  name={post.self_introduction.String}
+                  location={post.facebook_uri.String}
+                  distance={post.twitter_uri.String}
+                  introduction={post.skill.String}
                 />
             );
           })}
