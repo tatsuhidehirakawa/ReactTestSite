@@ -31,20 +31,16 @@ import.code.wbs:
 
 activate.dev.wbs.tailwindcss:
 	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/postcss.config.js 110wbs_dev:usr/src/app
-	# @docker exec -it 110wbs_dev npx tailwindcss init tailwind.config.js bash
 	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/tailwind.config.js 110wbs_dev:usr/src/app
-	# @sed 2d && sed 2 -i 'purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],'
 	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/index.css 110wbs_dev:usr/src/app/src
-	# @docker cp ../s_03_dev/110wbs_dev/package.json 110wbs_dev:usr/src/app
 	@docker restart 110wbs_dev
 	@echo "Succeful Activate Tailwindcss!"
 
+import.data.dbs:
+	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh backup_20221206062920_134dbs_dev.sql bash
+
 export.data.wbs:
 	@docker cp 110wbs_dev:usr/src/app/ ../s_01_src/110wbs_src/
-
-import.data.dbs:
-	# @docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
-	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh backup_20221206062920_134dbs_dev.sql bash
 
 export.data.dbs:
 	docker exec -it 134dbs_dev /usr/src/dbstore/pg_dump.sh 134dbs_dev bash
