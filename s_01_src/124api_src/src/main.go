@@ -21,9 +21,10 @@ func main() {
 	dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode) // 「dsn」に結合した文字列を格納
 	db, err := sql.Open("postgres", dsn)
 
-	accountAttributeController := controllers.NewAccountAttribute(db)
 	accountMasterController := controllers.NewAccountMaster(db)
-	offerMasterController := controllers.NewOfferMaster(db)
+    accountAttributeController := controllers.NewAccountAttribute(db)
+    offerListController := controllers.NewOfferList(db)
+	purchaseHistroyController := controllers.NewPurchaseHistroy(db)
 
     if err != nil {
         log.Fatal(err)
@@ -55,10 +56,15 @@ func main() {
     router.PUT("/accountAttribute/somePut", accountAttributeController.Put)
     router.DELETE("/accountAttribute/someDelete/:accountID", accountAttributeController.Delete)
 
-    router.GET("/offerMaster/someGet", offerMasterController.Get)
-    router.POST("/offerMaster/somePost", offerMasterController.Post)
-    router.PUT("/offerMaster/somePut", offerMasterController.Put)
-    router.DELETE("/offerMaster/someDelete/:accountID", offerMasterController.Delete)
+    router.GET("/offerList/someGet", offerListController.Get)
+    router.POST("/offerList/somePost", offerListController.Post)
+    router.PUT("/offerList/somePut", offerListController.Put)
+    router.DELETE("/offerList/someDelete/:accountID", offerListController.Delete)
+
+    router.GET("/purchaseHistroy/someGet", purchaseHistroyController.Get)
+    router.POST("/purchaseHistroy/somePost", purchaseHistroyController.Post)
+    router.PUT("/purchaseHistroy/somePut", purchaseHistroyController.Put)
+    router.DELETE("/purchaseHistroy/someDelete/:accountID", purchaseHistroyController.Delete)
 
 	router.Run()
 }
