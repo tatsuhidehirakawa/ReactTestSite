@@ -45,8 +45,8 @@ const Router = () => {
         <Route path={`/Recruit`} element={<Layout><Recruit /></Layout>} />
         <Route path={`/Company`} element={<Layout><Company /></Layout>} />
         <Route path={`/Privacy`} element={<Layout><Privacy /></Layout>} />
-        <Route path={`/Coordinate`} element={<Layout><Coordinate /></Layout>} />
 
+        <Route path={`/Coordinate`} element={<Layout><Coordinate /></Layout>} />
         <Route path={`/Offer`} element={<Layout><Offer /></Layout>} />
       </Routes>
     </BrowserRouter>
