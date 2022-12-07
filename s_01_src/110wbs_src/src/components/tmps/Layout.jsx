@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "../orgs/Header";
 import Footer from "../orgs/Footer";
-import './Layout.scss';
+// import '../../Pager.scss';
 
 const Layout = ({children}) => {
   return (
     <>
-    <div className="layout--outline__violet">
-      <div className="layout--outline__inlineA__header"><Header /></div>
-      <div className="layout--outline__inlineB__children">{children}</div>
-      <div className="layout--outline__inlineC__footer"><Footer /></div>
+    <div className="top-0	flex relative min-h-screen flex-col">
+      <div><Header /></div>
+      <div className="px-[25px] pt-[150px] pb-[50px] justify-center mt-[69px] mb-[237px]">{children}</div>
+      <div><Footer /></div>
     </div>
     </>
   );

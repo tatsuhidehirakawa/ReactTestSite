@@ -24,6 +24,15 @@ $footer__height: 237px;
 }
 
 
+.layout--outline__violet {
+  // background-color: $layout--outline__color;
+  .layout--outline__inlineB__children {
+    // background-color: rgb(172, 246, 246);  // For test
+    margin-top: $header__height;
+    margin-bottom: $footer__height;
+  }
+}
+
 $layout--outline__color: #dbd0e6;
 
 
