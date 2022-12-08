@@ -3,7 +3,7 @@ import "./Offer.scss"
 import Rating from '@mui/material/Rating';
 // import MyMap from './Map';
 import 'leaflet/dist/leaflet.css';
-import { Map } from "../atms/Map";
+import { Mapper } from "../atms/Mapper";
 import { Link } from "react-router-dom";
 
 // import Avater from '@mui/material/Avater';
@@ -60,7 +60,7 @@ const Offer = () => {
         </div>
       </div>
       <div className="Offer--inlineC__pictureA">
-        <Link to="/Coordinate" className=""><Map /></Link>
+        <Link to="/Coordinate" className=""><Mapper /></Link>
       </div>
     </div>
   )

@@ -1,12 +1,10 @@
 // import React from "react"
 import Card from "../atms/Card";
-import "./SiteTop.scss"
-// import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
-import FloatingActionButton from '../atms/FloatingActionButton'
 
-const SiteTop = () => {
-  // const [data, setData] = useState({ hits: [] });
+const Saver = () => {
+
+      // const [data, setData] = useState({ hits: [] });
   const [posts, setPosts] = useState([])
   useEffect(() => {
     // console.log('ApiFetch.jsx: useEffect()')   // Debug.
@@ -19,18 +17,15 @@ const SiteTop = () => {
     .then(res => res.json())
     .then(data => {
       setPosts(data)
-      // console.log(data)
+      console.log(data)
       })
       // .catch(err => {   // Debug.
       //     console.log('ApiFetch.jsx: useEffect(): err: ', err)
       // });
   },[])
- 
+
   return (
-    <div className="main-wrapper">
-      <FloatingActionButton />
-      <div className="main">
-        <div className="sitetop--inline">
+    <div className="w-16 mt-[69px] mb-[237] pl-[30] pr-[500] bg-gray-100">
           {posts.map((post) => {
             return (
                 <Card
@@ -43,10 +38,8 @@ const SiteTop = () => {
                 />
             );
           })}
-        </div>
-      </div>
     </div>
-  );
+)
 }
 
-export default SiteTop;
+export default Saver;
