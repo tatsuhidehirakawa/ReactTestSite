@@ -20,7 +20,7 @@ const Saver = () => {
   },[])
 
   return (
-    <div className="w-[270px] h-[3000px] mb-[237] ml-[100px] p-[10px]">
+    <div className="w-[270px] h-[3000px] mb-[237px] ml-[100px] p-[10px] absolute">
           {posts.map((post) => {
             return (
                 <Card

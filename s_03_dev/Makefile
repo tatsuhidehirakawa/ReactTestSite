@@ -36,7 +36,7 @@ activate.dev.wbs.tailwindcss:
 	@echo "Succeful Activate Tailwindcss!"
 
 import.data.dbs:
-	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh backup_20221206062920_134dbs_dev.sql bash
+	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh backup_20221208142209_134dbs_dev.sql bash
 
 export.data.wbs:
 	@docker cp 110wbs_dev:usr/src/app/ ../s_01_src/110wbs_src/

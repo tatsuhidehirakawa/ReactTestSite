@@ -25,9 +25,7 @@ const Savee = () => {
   },[])
 
   return (
-    <div className="main-wrapper">
-      <div className="main">
-        <div className="sitetop--inline">
+    <div className="w-[270px] h-[3000px] mb-[237px] ml-[1000px] p-[10px] absolute">
           {posts.map((post) => {
             return (
                 <Card
@@ -41,8 +39,6 @@ const Savee = () => {
             );
           })}
         </div>
-      </div>
-    </div>
 )
 }
 
