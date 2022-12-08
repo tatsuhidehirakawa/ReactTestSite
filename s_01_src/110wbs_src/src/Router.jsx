@@ -25,8 +25,6 @@ import Offer from  './components/orgs/Offer.jsx';
 import MapLayout from './components/tmps/MapLayout.jsx';
 // import { MapLayout, abc, def, ghi } from './components/tmps/MapLayout.jsx';
 // import Mapper from  './components/atms/Mapper.jsx';
-import Saver from  './components/orgs/Saver.jsx';
-import Savee from  './components/orgs/Savee.jsx';
 import Coordinate from  './components/orgs/Coordinate.jsx';
 
 const Router = () => {
@@ -54,14 +52,7 @@ const Router = () => {
         <Route path={`/Privacy`} element={<MainLayout><Privacy /></MainLayout>} />
         <Route path={`/Offer`} element={<MainLayout><Offer /></MainLayout>} />
 
-        {/* <Route path={`/Coordinate`} element={[
-          abc=<MapLayout><Mapper /></MapLayout>, 
-          def=<MapLayout><Saver /></MapLayout>, 
-          ghi=<MapLayout><Savee /></MapLayout>
-        ]} /> */}
         <Route path={`/Coordinate`} element={<MapLayout><Coordinate /></MapLayout>} />
-        <Route path={`/Saver`} element={<MapLayout><Saver /></MapLayout>} />
-        <Route path={`/Savee`} element={<MapLayout><Savee /></MapLayout>} />
       </Routes>
     </BrowserRouter>
   );

@@ -4,6 +4,8 @@ import "./SiteTop.scss"
 // import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
 import FloatingActionButton from '../atms/FloatingActionButton'
+// import useFetch from '../../hooks/useFetch';
+   
 
 const SiteTop = () => {
   // const [data, setData] = useState({ hits: [] });
