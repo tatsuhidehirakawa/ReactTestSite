@@ -6,14 +6,9 @@ const Saver = () => {
 
       // const [data, setData] = useState({ hits: [] });
   const [posts, setPosts] = useState([])
+  const url = 'http://docker.for.mac.localhost:8080/accountAttribute/someGet'
   useEffect(() => {
-    // console.log('ApiFetch.jsx: useEffect()')   // Debug.
-    // fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
-    // fetch('http://localhost:8080/somePost', {method: 'GET'})
-    // fetch('http://host.docker.internal:8080/somePost', {method: 'GET'})
-    // fetch('http://host.docker.internal:8080/someGet', {method: 'GET'})   // Docker for Mac 18.03 and Windows10
-    // fetch('http://docker.for.mac.host.internal:8080/someGet', {method: 'GET'})   // Docker for Mac 17.12
-    fetch('http://docker.for.mac.localhost:8080/accountAttribute/someGet', {method: 'GET'})   // Docker for Mac 17.06
+    fetch( url, {method: 'GET'})
     .then(res => res.json())
     .then(data => {
       setPosts(data)
@@ -25,7 +20,7 @@ const Saver = () => {
   },[])
 
   return (
-    <div className="w-16 mt-[69px] mb-[237] pl-[30] pr-[500] bg-gray-100">
+    <div className="w-[270px] h-[3000px] mb-[237] ml-[100px] p-[10px]">
           {posts.map((post) => {
             return (
                 <Card
@@ -43,3 +38,13 @@ const Saver = () => {
 }
 
 export default Saver;
+
+
+
+    // console.log('ApiFetch.jsx: useEffect()')   // Debug.
+// https://jsonplaceholder.typicode.com/posts
+// http://localhost:8080/somePost
+// http://host.docker.internal:8080/somePost
+// http://host.docker.internal:8080/someGet   // Docker for Mac 18.03 and Windows10
+// http://docker.for.mac.host.internal:8080/someGet   // Docker for Mac 17.12
+// http://docker.for.mac.localhost:8080/accountAttribute/someGet    // Docker for Mac 17.06

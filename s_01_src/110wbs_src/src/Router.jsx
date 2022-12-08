@@ -25,8 +25,8 @@ import Offer from  './components/orgs/Offer.jsx';
 import MapLayout from './components/tmps/MapLayout.jsx';
 // import { MapLayout, abc, def, ghi } from './components/tmps/MapLayout.jsx';
 // import Mapper from  './components/atms/Mapper.jsx';
-// import Saver from  './components/orgs/Saver.jsx';
-// import Savee from  './components/orgs/Savee.jsx';
+import Saver from  './components/orgs/Saver.jsx';
+import Savee from  './components/orgs/Savee.jsx';
 import Coordinate from  './components/orgs/Coordinate.jsx';
 
 const Router = () => {
@@ -60,7 +60,8 @@ const Router = () => {
           ghi=<MapLayout><Savee /></MapLayout>
         ]} /> */}
         <Route path={`/Coordinate`} element={<MapLayout><Coordinate /></MapLayout>} />
-        {/* <Route path={`/Coordinate`} element={<MapLayout><Mapper /></MapLayout>} /> */}
+        <Route path={`/Saver`} element={<MapLayout><Saver /></MapLayout>} />
+        <Route path={`/Savee`} element={<MapLayout><Savee /></MapLayout>} />
       </Routes>
     </BrowserRouter>
   );

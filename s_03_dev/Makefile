@@ -26,7 +26,6 @@ init.dev.wbs: ## Initilazing only frontend devlopment containers.
 import.code.wbs:
 	@docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
 	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
-	@docker cp ../s_01_src/110wbs_src/README.md 110wbs_dev:usr/src/app
 	@echo "User sorce code was imported..."
 
 activate.dev.wbs.tailwindcss:
