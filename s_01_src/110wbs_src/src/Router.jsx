@@ -40,7 +40,6 @@ const Router = () => {
         {/* <Route path={`/TestPage`} element={<MainLayout><TestPage /></MainLayout>} /> */}
         <Route path={`/Pricing`} element={<MainLayout><PricingContent /></MainLayout>} />
 
-        <Route path={`/SiteTop`} element={<MainLayout><SiteTop /></MainLayout>} />
         <Route path={`/Agreement`} element={<MainLayout><Agreement /></MainLayout>} />
         <Route path={`/UserGuide`} element={<MainLayout><UserGuide /></MainLayout>} />
         <Route path={`/SignUp`} element={<MainLayout><SignUp /></MainLayout>} />
@@ -52,6 +51,7 @@ const Router = () => {
         <Route path={`/Privacy`} element={<MainLayout><Privacy /></MainLayout>} />
         <Route path={`/Offer`} element={<MainLayout><Offer /></MainLayout>} />
 
+        <Route path={`/SiteTop`} element={<MapLayout><SiteTop /></MapLayout>} />
         <Route path={`/Coordinate`} element={<MapLayout><Coordinate /></MapLayout>} />
       </Routes>
     </BrowserRouter>
