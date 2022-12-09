@@ -5,7 +5,7 @@ import Saver from  '../mlcs/Saver.jsx';
 
 const Coordinate = () => {
   return (
-    <div className="relative w-full h-[1900px] z-3 absolute">
+    <div className="relative w-full z-3 absolute">
       <Saver />
       {/* <Savee /> */}
       <Mapper />

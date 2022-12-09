@@ -1,3 +1,20 @@
+
 .z_index {
-    z-index: 1000;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
+
+// スクロールバー非表示 overflow-scroll -translate-y-full
+.nonscrollbar {
+    overflow-y: scroll;
+    /*スクロールバー非表示（IE・Edge）*/
+    -ms-overflow-style: none;
+    /*スクロールバー非表示（Firefox）*/
+    scrollbar-width: none;
+}
+/*スクロールバー非表示（Chrome・Safari）*/
+.content::-webkit-scrollbar{
+    display:none;
+  }
