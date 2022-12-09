@@ -1,6 +1,7 @@
 // import React from "react"
 import Card from "../atms/Card";
 import React, { useState, useEffect } from 'react';
+import './Saver.scss';
 
 const Saver = () => {
 
@@ -20,7 +21,7 @@ const Saver = () => {
   },[])
 
   return (
-    <div className="w-[270px] h-[3000px] mb-[237px] p-[10px] absolute left-[3%] h-screen overflow-scroll -translate-y-full fixed top-1/2 z-800">
+    <div className="z_index w-[370px] mb-[237px] p-[10px] absolute left-[3%] h-screen overflow-scroll -translate-y-full fixed top-1/2">
           {posts.map((post) => {
             return (
                 <Card

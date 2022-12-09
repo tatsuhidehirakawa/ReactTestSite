@@ -5,7 +5,7 @@ import Footer from "../orgs/Footer";
 const MapLayout = ({children}) => {
 // const MapLayout = ({children: [ aaa, bbb, ccc ] }) => {
     return (
-    <div className="absolute top-0	flex relative min-h-screen flex-col z-0">
+    <div className="absolute top-0 flex relative min-h-screen flex-col z-0">
       <div><Header /></div>
       <div className="justify-center mt-[69px] mb-[237px]">{children}</div>
       {/* <div className="justify-center mt-[69px] mb-[237px]">{aaa}</div>

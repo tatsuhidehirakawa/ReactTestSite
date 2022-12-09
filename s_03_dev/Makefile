@@ -28,7 +28,7 @@ boot.dev:
 
 boot.dev.dbs: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 134dbs_dev -d
-	@sleep 1
+	@sleep 5
 	@make insert.data.dbs
 
 boot.dev.api: ## Booting only frontend devlopment containers.
