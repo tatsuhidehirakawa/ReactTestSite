@@ -4,7 +4,12 @@ WORKDIR /go/src
 # COPY pkgset.sh /usr/local/bin
 # CMD pkgset.sh
 
+# COPY ../../s_03_dev/124api_dev/go.mod ./
+# COPY ../../s_03_dev/124api_dev/go.sum ./
+# RUN go mod download
+
 COPY . .
+
 RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
 
 # sqlc
