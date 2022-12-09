@@ -25,7 +25,7 @@ const Savee = () => {
   },[])
 
   return (
-    <div className="w-[270px] h-[3000px] mb-[237px] p-[10px] absolute left-[80%] h-screen overflow-scroll top-1/2 z-5">
+    <div className="w-[270px] h-[3000px] mb-[237px] p-[10px] absolute left-[80%] h-screen overflow-scroll -translate-y-full fixed top-1/2 z-800">
           {posts.map((post) => {
             return (
                 <Card

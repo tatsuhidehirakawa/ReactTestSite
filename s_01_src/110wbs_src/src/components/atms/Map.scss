@@ -5,5 +5,9 @@
   height: 100%;
   margin: auto;
   pointer-events: none;
-  z-index: 2;
+  z-index: 1;
+  position: relative;
+  // .leaflet-top{
+  //   display: none;
+  // }
 }

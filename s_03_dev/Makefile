@@ -71,11 +71,9 @@ init.dev.adm:
 rebuild.dev.wbs:
 	@docker stop 110wbs_dev
 	@docker rm 110wbs_dev
-	@docker rmi "s_03_dev-110wbs_dev
+	@docker rmi s_03_dev-110wbs_dev
 	@docker volume rm s_03_dev_wbs-vol
-	@make init.dev.wbs
-	@make insert.code.wbs
-	@make init.tailwindcss
+	@make boot.dev.wbs
 
 rebuild.dev.api:
 	@docker stop 124api_dev
