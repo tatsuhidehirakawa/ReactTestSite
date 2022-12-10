@@ -3,7 +3,7 @@ import Card from "../atms/Card";
 import "./SiteTop.scss"
 // import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
-import FloatingActionButton from '../atms/FloatingActionButton'
+// import FloatingActionButton from '../atms/FloatingActionButton'
 // import useFetch from '../../hooks/useFetch';
 import { Mapper } from "../atms/Mapper";
 
@@ -33,7 +33,7 @@ const SiteTop = () => {
     <div className="main-wrapper relative w-full z-3 absolute">
             <Mapper />
 
-      <FloatingActionButton />
+      {/* <FloatingActionButton /> */}
       <div className="main">
         <div className="sitetop--inline">
           {posts.map((post) => {
