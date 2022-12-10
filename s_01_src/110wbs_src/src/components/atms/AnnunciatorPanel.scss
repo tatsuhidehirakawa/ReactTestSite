@@ -3,25 +3,26 @@
 //--- Common Declarations -----------------------------------------
 
 //--- Page Outline ------------------------------------------------
-.FloatingActionPanel--outline {
+.AnnunciatorPanel--outline {
   // @include frostedglass;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   filter: drop-shadow(0 0px 13px rgba(0, 0, 0, .5));
   font-size: small;
-  height: 247px;
+  height: 90px;
   width: 280px;
   position: fixed;
-  top: 4%;
+  bottom: 4%;
   right: 70px;
   background-color: rgb(255, 255, 255);
-  z-index: 7;
+  z-index: 8;
   // position: center;
+  // @include frostedglass;
 }
 
 //--- Page Inline -------------------------------------------------
-.FloatingActionPanel--inlineA--location {
+.AnnunciatorPanel--inlineA--location {
   margin: 6px 6px 6px 6px;
   padding: 6px 6px 6px 12px;
   width: 268px;
@@ -30,7 +31,7 @@
   border-color: aqua;
 }
 
-.FloatingActionPanel--inlineB--category {
+.AnnunciatorPanel--inlineB--category {
   margin: 6px 6px 6px 6px;
   padding: 6px 6px 6px 12px;
   width: 268px;
@@ -39,7 +40,7 @@
   border-color: aqua;
 }
 
-.FloatingActionPanel--inlineC--subcategory {
+.AnnunciatorPanel--inlineC--subcategory {
   margin: 6px 6px 6px 6px;
   padding: 6px 6px 6px 12px;
   width: 268px;
@@ -48,18 +49,18 @@
   border-color: aqua;
 }
 
-.FloatingActionPanel--inlineD--priority {
+.AnnunciatorPanel--inlineD--priority {
   font-size: small;
   width: 28%;
   padding-top: 15px;
 }
 
-// .FloatingActionPanel--inlineE {
+// .AnnunciatorPanel--inlineE {
 //   font-size: small;
 //   width: 21%;
 //   padding-top: 15px;
 // }
 
-.FloatingActionPanel--inlineF {
+.AnnunciatorPanel--inlineF {
   width: 11%;
 }

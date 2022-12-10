@@ -51,9 +51,8 @@ const Router = () => {
         <Route path={`/Privacy`} element={<MainLayout><Privacy /></MainLayout>} />
         <Route path={`/Offer`} element={<MainLayout><Offer /></MainLayout>} />
 
-        <Route path={`map/*`} element={<MapLayout />} />
-          <Route path={`SiteTop`} element={<SiteTop />} />
-          <Route path={`Coordinate`} element={<Coordinate />} />
+        <Route path={`/SiteTop`} element={<MapLayout><SiteTop /></MapLayout>} />
+        <Route path={`/Coordinate`} element={<MapLayout><Coordinate /></MapLayout>} />
       </Routes>
     </BrowserRouter>
   );

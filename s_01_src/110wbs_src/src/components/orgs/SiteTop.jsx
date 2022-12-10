@@ -3,7 +3,7 @@ import Card from "../atms/Card";
 import "./SiteTop.scss"
 // import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
-import FloatingActionPanel from '../atms/FloatingActionPanel'
+import FloatingActionPanel from '../atms/ModeSelectPanel'
 // import useFetch from '../../hooks/useFetch';
 import { Mapper } from "../atms/Mapper";
 

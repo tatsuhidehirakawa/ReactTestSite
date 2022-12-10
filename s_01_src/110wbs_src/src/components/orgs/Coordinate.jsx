@@ -1,13 +1,15 @@
 import React from "react"
 import { Mapper } from "../atms/Mapper";
 import Saver from  '../mlcs/Saver.jsx';
-import FloatingActionPanel from  '../atms/FloatingActionPanel.jsx';
+import ModeSelectPanel from  '../atms/ModeSelectPanel.jsx';
+import AnnunciatorPanel from  '../atms/AnnunciatorPanel.jsx';
 
 const Coordinate = () => {
   return (
     <div className="relative w-full z-3 absolute">
+      <ModeSelectPanel />
       <Saver />
-      <FloatingActionPanel />
+      <AnnunciatorPanel />
       <Mapper />
       {/* <Saver className="z-6" /> */}
       {/* <Savee className="z-5" /> */}
