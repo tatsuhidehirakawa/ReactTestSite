@@ -21,7 +21,7 @@ const Saver = () => {
   },[])
 
   return (
-    <div className="hidden-scrollbar z_index w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2">
+    <div className="content::-webkit-scrollbar nonscrollbar z_index w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2">
           {posts.map((post) => {
             return (
                 <Card
