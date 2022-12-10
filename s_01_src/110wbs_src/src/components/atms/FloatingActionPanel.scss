@@ -1,0 +1,65 @@
+@import "../../Pager.scss";
+
+//--- Common Declarations -----------------------------------------
+
+//--- Page Outline ------------------------------------------------
+.FloatingActionPanel--outline {
+  // @include frostedglass;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  filter: drop-shadow(0 0px 13px rgba(0, 0, 0, .5));
+  font-size: small;
+  height: 247px;
+  width: 280px;
+  position: fixed;
+  top: 4%;
+  right: 70px;
+  background-color: rgb(255, 255, 255);
+  z-index: 7;
+  // position: center;
+}
+
+//--- Page Inline -------------------------------------------------
+.FloatingActionPanel--inlineA--location {
+  margin: 6px 6px 6px 6px;
+  padding: 6px 6px 6px 12px;
+  width: 268px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: aqua;
+}
+
+.FloatingActionPanel--inlineB--category {
+  margin: 6px 6px 6px 6px;
+  padding: 6px 6px 6px 12px;
+  width: 268px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: aqua;
+}
+
+.FloatingActionPanel--inlineC--subcategory {
+  margin: 6px 6px 6px 6px;
+  padding: 6px 6px 6px 12px;
+  width: 268px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: aqua;
+}
+
+.FloatingActionPanel--inlineD--priority {
+  font-size: small;
+  width: 28%;
+  padding-top: 15px;
+}
+
+// .FloatingActionPanel--inlineE {
+//   font-size: small;
+//   width: 21%;
+//   padding-top: 15px;
+// }
+
+.FloatingActionPanel--inlineF {
+  width: 11%;
+}
