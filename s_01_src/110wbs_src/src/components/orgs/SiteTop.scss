@@ -3,6 +3,48 @@
 
 
 
+@mixin common_jkdfjeo {
+  font-size: 25px;
+  color: aqua;
+  text-align: left;
+  padding: 12px 0px 8px 33px;
+}
+
+
+
+
 .sitetop--inline {
   margin-top: 1px;
+}
+
+.sitetop--inlineA--text {
+
+}
+
+.sitetop--inlineB--text {
+  @include common_jkdfjeo
+}
+
+.sitetop--inlineC--tiling {
+  margin: 0px 0px 0px 0px;
+}
+
+.sitetop--inlineD--text {
+  @include common_jkdfjeo
+}
+
+.sitetop--inlineE--tiling {
+  margin-top: 1px;
+}
+
+.sitetop--inlineF--text {
+  @include common_jkdfjeo
+}
+
+.sitetop--inlineG--tiling {
+  margin-top: 1px;
+}
+
+.sitetop--inlineH--text {
+  @include common_jkdfjeo
 }

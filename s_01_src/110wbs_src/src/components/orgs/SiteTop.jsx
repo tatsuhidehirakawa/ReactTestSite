@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import FloatingActionPanel from '../atms/ModeSelectPanel'
 // import useFetch from '../../hooks/useFetch';
 import { Mapper } from "../atms/Mapper";
+import './SiteTop.scss';
 
 
 const SiteTop = () => {
@@ -32,9 +33,15 @@ const SiteTop = () => {
   return (
     <div className="main-wrapper relative w-full z-3 absolute">
       <Mapper />
-      <FloatingActionPanel />
+      {/* <FloatingActionPanel /> */}
       <div className="main">
         <div className="sitetop--inline">
+          <div className="sitetop--inlineA--text">
+          </div>
+          <div className="sitetop--inlineB--text">
+            <p>人気急上昇のギルド（仮称）</p>
+          </div>
+          <div className="sitetop--inlineC--tiling">
           {posts.map((post) => {
             return (
                 <Card
@@ -47,6 +54,44 @@ const SiteTop = () => {
                 />
             );
           })}
+          </div>
+          <div className="sitetop--inlineD--text">
+            <p>あなたの近くの助けを求めている人</p>
+          </div>
+          <div className="sitetop--inlineE--tiling">
+          {posts.map((post) => {
+            return (
+                <Card
+                  image={post.rate.String}
+                  // introduction={productItem.introduction}
+                  name={post.self_introduction.String}
+                  location={post.facebook_uri.String}
+                  distance={post.twitter_uri.String}
+                  introduction={post.skill.String}
+                />
+            );
+          })}
+          </div>
+          <div className="sitetop--inlineF--text">
+            <p>最近の閲覧履歴</p>
+          </div>
+          <div className="sitetop--inlineG--tiling">
+          {posts.map((post) => {
+            return (
+                <Card
+                  image={post.rate.String}
+                  // introduction={productItem.introduction}
+                  name={post.self_introduction.String}
+                  location={post.facebook_uri.String}
+                  distance={post.twitter_uri.String}
+                  introduction={post.skill.String}
+                />
+            );
+          })}
+          </div>
+          <div className="sitetop--inlineH--text">
+            <p>最近登録した人</p>
+          </div>
         </div>
       </div>
     </div>
