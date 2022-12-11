@@ -9,9 +9,9 @@ import "./ModeSelectPanel.scss"
 const ModeSelectPanel = () => {
   return (
     <div className="ModeSelectPanel--outline">
-      <input type="text" placeholder="小倉南区" className="ModeSelectPanel--inlineA--location"/>
-      <input type="text" placeholder="修繕" className="ModeSelectPanel--inlineB--category"/>
-      <input type="text" placeholder="現状回復工事" className="ModeSelectPanel--inlineC--subcategory"/>
+      <input type="text" placeholder="〇〇市〇〇町〇〇１丁目" className="ModeSelectPanel--inlineA--location"/>
+      <input type="text" placeholder="大カテゴリ" className="ModeSelectPanel--inlineB--category"/>
+      <input type="text" placeholder="中カテゴリ" className="ModeSelectPanel--inlineC--subcategory"/>
       <select name="priority" placeholder="Priority" className="ModeSelectPanel--inlineD--priority">
         <option>選択肢のサンプル1</option>
         <option>選択肢のサンプル2</option>

@@ -3,7 +3,7 @@ import Card from "../atms/Card";
 import "./SiteTop.scss"
 // import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
-import FloatingActionPanel from '../atms/ModeSelectPanel'
+// import FloatingActionPanel from '../atms/ModeSelectPanel'
 // import useFetch from '../../hooks/useFetch';
 import { Mapper } from "../atms/Mapper";
 import './SiteTop.scss';
@@ -41,7 +41,7 @@ const SiteTop = () => {
           <div className="sitetop--inlineB--text">
             <p>人気急上昇のメンバー</p>
           </div>
-          <div className="sitetop--inlineC--tiling">
+          <div className="sitetop--inlineC--tiling contents_box">
           {posts.map((post) => {
             return (
                 <Card
