@@ -1,9 +1,20 @@
+/** @jsxImportSource @emotion/react */
+import { jsx,css } from "@emotion/react";
+
 import React from "react";
 import { Link } from "react-router-dom";
 import LogoA from '../atms/LogoA.jsx';
 import "./Footer.scss";
 
+
+// import styled from "@emotion/styled";
+
 const Footer = () => {
+
+    const emotionTest = css`
+      color: red;
+    `;
+    
   return (
     <>
     <div className="footer--Outline">
@@ -35,7 +46,7 @@ const Footer = () => {
           <Link to="/ResourceC" className="footer__Text">ResourceC</Link>
         </div>
         <div className="footer--inlineA--sectionE__text">
-          <p>Legal</p>
+          <p css={emotionTest}>Legal</p>
           <Link to="/Contact" className="footer__Text">Contact</Link>
           <Link to="/Privacy" className="footer__Text">Privacy</Link>
           <Link to="/none" className="footer__Text">Temes fo use</Link>

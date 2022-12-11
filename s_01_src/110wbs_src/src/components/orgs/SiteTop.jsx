@@ -58,7 +58,7 @@ const SiteTop = () => {
           <div className="sitetop--inlineD--text">
             <p>あなたの近くの助けを求めている人</p>
           </div>
-          <div className="sitetop--inlineE--tiling">
+          <div className="sitetop--inlineE--tiling contents_box">
           {posts.map((post) => {
             return (
                 <Card
@@ -75,7 +75,7 @@ const SiteTop = () => {
           <div className="sitetop--inlineF--text">
             <p>最近の閲覧履歴</p>
           </div>
-          <div className="sitetop--inlineG--tiling">
+          <div className="sitetop--inlineG--tiling contents_box">
           {posts.map((post) => {
             return (
                 <Card
@@ -92,7 +92,7 @@ const SiteTop = () => {
           <div className="sitetop--inlineH--text">
             <p>最近登録した人</p>
           </div>
-          <div className="sitetop--inlineI--tiling">
+          <div className="sitetop--inlineI--tiling contents_box">
           {posts.map((post) => {
             return (
                 <Card
