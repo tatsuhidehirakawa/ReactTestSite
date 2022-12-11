@@ -1,36 +1,46 @@
 @import "../../Pager.scss";
 
-
-
-
-@mixin common_jkdfjeo {
+// --- Common decarement -----------------------------------------------
+@mixin common_text_sitetop {
   font-size: 25px;
-  color: aqua;
+  color: black;
+  filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
   text-align: left;
   padding: 12px 0px 8px 33px;
+  width: 100vh;
 }
 
-
-
-
-.sitetop--inline {
-  margin-top: 1px;
+// --- Common decaremen ------------------------------------------------
+.sitetop--outline {
+  display: flex;
+  flex-direction: column;
+  z-index: 9;
+  // transform: translate(-50%, -50%);
 }
 
 .sitetop--inlineA--text {
-
+  filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+  width: 100vh;
+  height: 350px;
+  margin: 47px 10px 10px 50px;
+  text-align: left;
+  font-size: 50px;
 }
 
 .sitetop--inlineB--text {
-  @include common_jkdfjeo
+  @include common_text_sitetop
 }
 
 .sitetop--inlineC--tiling {
   margin: 0px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .sitetop--inlineD--text {
-  @include common_jkdfjeo
+  @include common_text_sitetop
 }
 
 .sitetop--inlineE--tiling {
@@ -38,7 +48,7 @@
 }
 
 .sitetop--inlineF--text {
-  @include common_jkdfjeo
+  @include common_text_sitetop
 }
 
 .sitetop--inlineG--tiling {
@@ -46,5 +56,5 @@
 }
 
 .sitetop--inlineH--text {
-  @include common_jkdfjeo
+  @include common_text_sitetop
 }

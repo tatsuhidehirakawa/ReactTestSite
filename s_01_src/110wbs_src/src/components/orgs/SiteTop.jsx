@@ -5,7 +5,7 @@ import "./SiteTop.scss"
 import React, { useState, useEffect } from 'react';
 import FloatingActionPanel from '../atms/ModeSelectPanel'
 // import useFetch from '../../hooks/useFetch';
-import { Mapper } from "../atms/Mapper";
+// import { Mapper } from "../atms/Mapper";
 import './SiteTop.scss';
 
 
@@ -32,14 +32,15 @@ const SiteTop = () => {
  
   return (
     <div className="main-wrapper relative w-full z-3 absolute">
-      <Mapper />
+      {/* <Mapper /> */}
       {/* <FloatingActionPanel /> */}
       <div className="main">
-        <div className="sitetop--inline">
+        <div className="sitetop--outline">
           <div className="sitetop--inlineA--text">
+            <p>ABC_defg</p>
           </div>
           <div className="sitetop--inlineB--text">
-            <p>人気急上昇のギルド（仮称）</p>
+            <p>人気急上昇のメンバー</p>
           </div>
           <div className="sitetop--inlineC--tiling">
           {posts.map((post) => {
