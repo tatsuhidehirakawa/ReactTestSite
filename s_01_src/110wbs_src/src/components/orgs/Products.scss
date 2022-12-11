@@ -25,23 +25,23 @@ $accent__color: #003268;
 // $accent__color: #61616d;
 
 
-.sitetop--outline {
+.products--outline {
   @include page--outline;
   display:flex;
   flex-flow: column;
 
-  .sitetop--inlineA {
+  .products--inlineA {
     display: flex;
     // background-color: aquamarine;
     height: 33.33%;
     width: 100%;
-    .sitetop--inlineA--boxA__pictureA {
+    .products--inlineA--boxA__pictureA {
       background-color: $main__color;
       height: 100%;
       width: 30%;
       margin: 0px;
     }
-    .sitetop--inlineA--boxB__textA {
+    .products--inlineA--boxB__textA {
       background-color: $sub__color;
       height: 100%;
       width: 70%;
@@ -55,23 +55,23 @@ $accent__color: #003268;
     }
   }
 
-  .sitetop--inlineB {
+  .products--inlineB {
     height: 33.33%;
     width: 100%;
     display: flex;
-    .sitetop--inlineB--boxA__pictureA {
+    .products--inlineB--boxA__pictureA {
       height: 100%;
       width: 70%;
       background-color: $base__color;
     }
-    .sitetop--inlineB--boxB__textA {
+    .products--inlineB--boxB__textA {
       height: 100%;
       width: 30%;
       background-color: $accent__color;
     }
   }
 
-  .sitetop--inlineC__pictureA {
+  .products--inlineC__pictureA {
     height: 33.33%;
     width: 100%;
     background-color: $sub__color;
