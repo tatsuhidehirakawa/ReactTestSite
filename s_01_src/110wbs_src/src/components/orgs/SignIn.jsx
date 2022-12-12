@@ -1,7 +1,7 @@
 import React from 'react';
 import A_BUTTON_A from '../atms/A_Button_a.tsx';
 // import Main from './Main.jsx';
-import './SignIn.scss';
+// import './SignIn.scss';
 // import DbGetParams from '../Lv1_atm/DbGetParams.jsx';
 // import ApiFetch from '../Lv1_atm/ApiFetch.js';
 

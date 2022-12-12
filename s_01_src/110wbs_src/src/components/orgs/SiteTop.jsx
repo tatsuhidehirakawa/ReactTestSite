@@ -5,7 +5,7 @@ import "./SiteTop.scss"
 import React, { useState, useEffect } from 'react';
 // import FloatingActionPanel from '../atms/ModeSelectPanel'
 // import useFetch from '../../hooks/useFetch';
-import { Mapper } from "../atms/Mapper";
+// import { Mapper } from "../atms/Mapper";
 import './SiteTop.scss';
 
 
@@ -32,7 +32,7 @@ const SiteTop = () => {
  
   return (
     <div className="sitetop--outline">
-      <Mapper style={{ backgroundColor: "rgba(0,0,0,0.74)" }} />
+      {/* <Mapper style={{ backgroundColor: "rgba(0,0,0,0.74)" }} /> */}
       {/* <FloatingActionPanel /> */}
         <div className="sitetop--inline">
           <div className="sitetop--inlineA--text">
