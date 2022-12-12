@@ -3,7 +3,10 @@ import Card from "../atms/Card";
 import "./SiteTop.scss"
 // import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
-import FloatingActionButton from '../atms/FloatingActionButton'
+// import FloatingActionPanel from '../atms/ModeSelectPanel'
+// import useFetch from '../../hooks/useFetch';
+// import { Mapper } from "../atms/Mapper";
+import './SiteTop.scss';
 
 
 const SiteTop = () => {
@@ -20,7 +23,7 @@ const SiteTop = () => {
     .then(res => res.json())
     .then(data => {
       setPosts(data)
-      console.log(data)
+      // console.log(data)
       })
       // .catch(err => {   // Debug.
       //     console.log('ApiFetch.jsx: useEffect(): err: ', err)
@@ -28,10 +31,35 @@ const SiteTop = () => {
   },[])
  
   return (
-    <div className="main-wrapper">
-      <FloatingActionButton />
-      <div className="main">
+    <div className="sitetop--outline">
+      {/* <Mapper style={{ backgroundColor: "rgba(0,0,0,0.74)" }} /> */}
+      {/* <FloatingActionPanel /> */}
         <div className="sitetop--inline">
+          <div className="sitetop--inlineA--text">
+            <p style={{fontSize: `90px`}}>いろはにほへと</p><p>ちりぬるを</p>
+          </div>
+          <div className="sitetop--inlineB--text">
+            <p>人気急上昇のメンバー</p>
+          </div>
+          <div className="sitetop--inlineC--tiling contents_box">
+          {posts.map((post) => {
+            return (
+                <Card
+                  link={"../Coordinate"}
+                  image={post.rate.String}
+                  // introduction={productItem.introduction}
+                  name={post.self_introduction.String}
+                  location={post.facebook_uri.String}
+                  distance={post.twitter_uri.String}
+                  introduction={post.skill.String}
+                />
+            );
+          })}
+          </div>
+          <div className="sitetop--inlineD--text">
+            <p>あなたの近くの助けを求めている人</p>
+          </div>
+          <div className="sitetop--inlineE--tiling contents_box">
           {posts.map((post) => {
             return (
                 <Card
@@ -44,8 +72,42 @@ const SiteTop = () => {
                 />
             );
           })}
+          </div>
+          <div className="sitetop--inlineF--text">
+            <p>最近の閲覧履歴</p>
+          </div>
+          <div className="sitetop--inlineG--tiling contents_box">
+          {posts.map((post) => {
+            return (
+                <Card
+                  image={post.rate.String}
+                  // introduction={productItem.introduction}
+                  name={post.self_introduction.String}
+                  location={post.facebook_uri.String}
+                  distance={post.twitter_uri.String}
+                  introduction={post.skill.String}
+                />
+            );
+          })}
+          </div>
+          <div className="sitetop--inlineH--text">
+            <p>最近登録した人</p>
+          </div>
+          <div className="sitetop--inlineI--tiling contents_box">
+          {posts.map((post) => {
+            return (
+                <Card
+                  image={post.rate.String}
+                  // introduction={productItem.introduction}
+                  name={post.self_introduction.String}
+                  location={post.facebook_uri.String}
+                  distance={post.twitter_uri.String}
+                  introduction={post.skill.String}
+                />
+            );
+          })}
+          </div>
         </div>
-      </div>
     </div>
   );
 }

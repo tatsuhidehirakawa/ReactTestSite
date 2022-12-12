@@ -1,0 +1,36 @@
+
+.z_index {
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+// スクロールバー非表示 overflow-scroll -translate-y-full
+.nonscrollbar {
+    overflow-x: scroll;
+    /*スクロールバー非表示（IE・Edge）*/
+    -ms-overflow-style: none;
+    /*スクロールバー非表示（Firefox）*/
+    scrollbar-width: none;
+}
+/*スクロールバー非表示（Chrome・Safari）*/
+.content::-webkit-scrollbar{
+    display:none;
+  }
+
+
+
+
+  // @layer utilities {
+  //   .hidden-scrollbar {
+  //     -ms-overflow-style: none; /* IE, Edge 対応 */
+  //     scrollbar-width: none; /* Firefox 対応 */
+  //   }
+  //   .hidden-scrollbar::-webkit-scrollbar {
+  //     /* Chrome, Safari 対応 */
+  //     display: none;
+  //   }
+  // }
+
+  // https://zenn.dev/nbr41to/articles/11efbc362a89ba

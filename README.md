@@ -54,7 +54,7 @@ Please check the Makefile, that's all.
                                     |  |  +----+------+
      A: Air(Hot reload)             |  |  |/130dbs_tst|
      B: Bind Mount                  +--|  | Container |
-     C: Copy                           |  |    for    |  -->localhost:3001
+     C: Copy                           |  |    for    | -->localhost:3001
      M: Multi stage build              +--|   test    |
      S: sqlc(O/R Mapper)                  |           |
      V: Initialize & Volume Mount         +-----------+

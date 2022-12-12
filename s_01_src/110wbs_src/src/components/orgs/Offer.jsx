@@ -3,7 +3,9 @@ import "./Offer.scss"
 import Rating from '@mui/material/Rating';
 // import MyMap from './Map';
 import 'leaflet/dist/leaflet.css';
-import { Map } from "../atms/Map";
+import { Mapper } from "../atms/Mapper";
+import { Link } from "react-router-dom";
+
 // import Avater from '@mui/material/Avater';
 
 // import ApiFetch from '../../hooks/ApiFestch.jsx';
@@ -58,7 +60,7 @@ const Offer = () => {
         </div>
       </div>
       <div className="Offer--inlineC__pictureA">
-        <Map />
+        <Link to="/Coordinate" className=""><Mapper /></Link>
       </div>
     </div>
   )

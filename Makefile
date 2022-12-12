@@ -35,8 +35,6 @@ pg_restore: ## Restore by local file.(cf."make pg_restore container_name=130dbs_
 
 #---[ 4. Hot-reload ]-------------------------------------------------------------
 
-air:
-	docker exec -it 124api_dev air bash
 
 #---[ 5. Validation ]----------------------------------------------------------------
 

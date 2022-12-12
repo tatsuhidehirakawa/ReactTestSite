@@ -6,9 +6,6 @@ init.dev: ## Initializing only frontend devlopment containers.
 	make init.dev.dbs
 	make init.dev.api
 	make init.dev.wbs
-	make activate.dev.wbs.tailwindcss
-	make import.data.dbs
-	make import.code.wbs
 	@echo "Succeful initializing devlopment environment!"
 
 init.dev.dbs: ## Booting only frontend devlopment containers.
@@ -18,42 +15,75 @@ init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
-	# docker compose --env-file ../dev.env build 110wbs_dev --no-cache
 	docker compose --env-file ../dev.env up 110wbs_dev -d
+	@make init.tailwindcss
 
-#---[ 1. Container manipulation. ]-------------------------------------------
+#---[ 2. system booting ]-----------------------------------------------
 
-import.code.wbs:
+boot.dev:
+	make boot.dev.dbs
+	make boot.dev.api
+	make boot.dev.wbs
+	@echo "Succeful booting devlopment environment!"
+
+boot.dev.dbs: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 134dbs_dev -d
+	@sleep 5
+	@make insert.data.dbs
+
+boot.dev.api: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 124api_dev -d
+
+boot.dev.wbs: ## Initilazing only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 110wbs_dev -d
+	@make insert.code.wbs
+	@make init.tailwindcss
+
+#---[ 3. Container manipulation. ]-------------------------------------------
+
+insert.code.wbs:
 	@docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
 	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
-	@docker cp ../s_01_src/110wbs_src/README.md 110wbs_dev:usr/src/app
-	@echo "User sorce code was imported..."
 
-activate.dev.wbs.tailwindcss:
+init.tailwindcss:
+	@docker container exec -it 110wbs_dev npm install -D tailwindcss@3.2.4 postcss@8.4.19 autoprefixer@10.4.13
 	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/postcss.config.js 110wbs_dev:usr/src/app
-	# @docker exec -it 110wbs_dev npx tailwindcss init tailwind.config.js bash
 	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/tailwind.config.js 110wbs_dev:usr/src/app
-	# @sed 2d && sed 2 -i 'purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],'
 	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/index.css 110wbs_dev:usr/src/app/src
-	# @docker cp ../s_03_dev/110wbs_dev/package.json 110wbs_dev:usr/src/app
 	@docker restart 110wbs_dev
-	@echo "Succeful Activate Tailwindcss!"
 
-export.data.wbs:
+insert.data.dbs:
+	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh backup_20221211014623_134dbs_dev.sql bash
+
+eject.data.wbs:
 	@docker cp 110wbs_dev:usr/src/app/ ../s_01_src/110wbs_src/
 
-import.data.dbs:
-	# @docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh 134dbs_dev.sql bash
-	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh backup_20221206062920_134dbs_dev.sql bash
-
-export.data.dbs:
+eject.data.dbs:
 	docker exec -it 134dbs_dev /usr/src/dbstore/pg_dump.sh 134dbs_dev bash
 
-export.data.api:
+eject.data.api:
 	@docker cp 124api_dev:/go/src ../s_01_src/124api_src
 
 init.dev.adm:
 	docker compose --env-file ../dev.env up 135adm_dev -d
+
+
+
+rebuild.dev.wbs:
+	@docker stop 110wbs_dev
+	@docker rm 110wbs_dev
+	@docker rmi s_03_dev-110wbs_dev
+	@docker volume rm s_03_dev_wbs-vol
+	@make boot.dev.wbs
+
+rebuild.dev.api:
+	@docker stop 124api_dev
+	@docker rm 124api_dev
+	@docker rmi s_03_dev-124api_dev
+	@docker volume rm s_03_dev_api-vol
+	# @make init.dev.api
+
+
 
 
 

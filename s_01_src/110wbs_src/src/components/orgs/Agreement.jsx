@@ -1,87 +1,64 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import React from "react"
-// import "./Agreement.scss"
-// import "../../craco.config.js"
-// import "../../tailwind.config.js"
 
 const Agreement = () => {
+
+  const agreement__outline = css`
+    height: 701px;
+    width: 963px;
+    margin: 0px auto;
+`;
+
+  const agreement__inlineA = css`
+    height: 800px;
+    width: 900px;
+    margin: -116px auto 0px auto;
+    padding: 50px;
+    opacity: 0.5;
+  `;
+
+  const agreement__textA = css`
+    color: rgb(0, 0, 0);
+    padding: 0px 0px 0px 0px;
+    margin: 35px 3px 35px 0px;
+    cursor: pointer;
+  `;
+
+  const agreement__textS = css`
+    height: auto;
+    width: auto;
+    margin: 10px 30px 10px 30px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(81, 81, 81);
+    border-radius: 30px;
+  `;
+
   return (
-    <div className="agreement--outline">
-      <div className="agreement--inlineA">
-        <p className="agreement__textA">- <b>Agreement</b>(Sample) -</p>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div class="m-0 text-pink-400 underline">Tailwindのテスト(ピンク色＆アンダーライン)</div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <div className="agreement__textS"></div>
-        <p className="agreement__textA">- <b>Agreement</b>(Sample) -</p>
+    <div className="agreement--outline" css={agreement__outline}>
+      <div className="agreement--inlineA" css={agreement__inlineA}>
+        <p className="agreement__textA" css={agreement__textA}>- <b>Agreement</b>(Sample) -</p>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <div className="agreement__textS" css={agreement__textS}></div>
+        <p className="agreement__textA" css={agreement__textA}>- <b>Agreement</b>(Sample) -</p>
       </div>
     </div>
   )
 }
 
 export default Agreement;
-
-// import React from "react"
-// import { css } from "@emotion/react";
-// // import "./Agreement.scss"
-// import "../../Pager.scss";
-
-// const Agreement = () => {
-
-//   const agreement__outline = css`
-//     @include page--outline;
-//   `;
-
-//   const agreement__inlineA = css`
-//     @include page--inlineA;
-//   `;
-
-//   const agreement__textA = css`
-//     @include page__textA;
-//   `;
-
-//   const agreement__textS = css`
-//     @include page__textS;
-//   `;
-
-//   return (
-//     <div css={agreement__outline}>
-//       <div css={agreement__inlineA}>
-//         <p css={agreement__textA}>- <b>Agreement</b>(Sample) -</p>
-//         <div className={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <div css={agreement__textS}></div>
-//         <p css={agreement__textA}>- <b>Agreement</b>(Sample) -</p>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Agreement;

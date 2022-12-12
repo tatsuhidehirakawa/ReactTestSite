@@ -1,5 +1,5 @@
 import React from "react"
-import "./Products.scss"
+// import "./Products.scss"
 import Rating from '@mui/material/Rating';
 // import Avater from '@mui/material/Avater';
 
