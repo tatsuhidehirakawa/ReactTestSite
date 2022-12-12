@@ -1,7 +1,7 @@
 import React from "react";
 import Nukes from "../orgs/Nukes";
 
-const Main = () => {
+const LandingPageLayout = () => {
   return (
     <>
       <Nukes />
@@ -9,4 +9,4 @@ const Main = () => {
   )
 }
 
-export default Main;
+export default LandingPageLayout;

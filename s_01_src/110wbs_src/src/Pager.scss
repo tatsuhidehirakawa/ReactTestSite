@@ -24,13 +24,24 @@ $footer__height: 237px;
 }
 
 
+.layout--outline__violet {
+  // background-color: $layout--outline__color;
+  .layout--outline__inlineB__children {
+    // background-color: rgb(172, 246, 246);  // For test
+    margin-top: $header__height;
+    margin-bottom: $footer__height;
+  }
+}
+
 $layout--outline__color: #dbd0e6;
 
 
 $color-header: #ffffff;
 
-
-
+// スクロールバーを消す操作
+.contents_box::-webkit-scrollbar{
+  display: none;
+}
 
 @mixin header__text {
   margin: 0px 3px 3px 30px;

@@ -1,6 +1,6 @@
 import React from "react"
 import ApiFetch from '../../hooks/ApiFetch.jsx';
-import "./SignUp.scss"
+// import "./SignUp.scss"
 
 const SignUp = () => {
   return (

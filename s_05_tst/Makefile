@@ -3,33 +3,35 @@
 #---[ 1. Test system boot ]-------------------------------------------------------
 
 init.tst:
-	make init.tst.dbs_1
+	make init.tst.dbs
 	make init.tst.api
 	make init.tst.wbs
-	make init.tst.dbs_2
 
-init.tst.wbs: # Booting only frontend devlopment containers.
-	# docker compose --env-file ../dev.env build 110wbs_tst --no-cache
-	docker compose --env-file ../dev.env up 110wbs_tst -d
-
-init.tst.api: # Booting only api devlopment containers.
-	docker compose --env-file ../tst.env up 120api_tst -d
-
-init.tst.dbs_1: # Booting only database devlopment containers.
+init.tst.dbs: # Booting only database devlopment containers.
 	docker compose --env-file ../tst.env up 130dbs_tst -d
-
-init.tst.dbs.b:
-	docker exec -it 130dbs_tst usr/src/pg_restore.sh 134dbs_dev.sql bash
-
-init.tst.dbs_2:
+	@sleep 10
 	@docker cp ./130dbs_tst/pg_restore.sh 130dbs_tst:usr/src/dbstore
 	@docker cp ./130dbs_tst/130dbs_tst.sql 130dbs_tst:usr/src/dbstore#---[ 2. Buliding test environments ]------------------------------------------------
 
 	@docker exec -it 130dbs_tst ./pg_restore.sh 130dbs_tst.sql bashinit.ci:
 	curl -fLSs https://circle.ci/cli | bash
 
-validate.ci:
-	circleci config validate
+
+
+init.tst.dbs.b:
+	docker exec -it 130dbs_tst usr/src/pg_restore.sh 134dbs_dev.sql bash
+
+init.tst.dbs_2:
+	@docker cp ./130dbs_tst/pg_restore.sh 130dbs_tst:usr/src/dbstore
+	@docker cp ./130dbs_tst/130dbs_tst.sql 130dbs_tst:usr/src/dbstore
+	@docker exec -it 130dbs_tst ./pg_restore.sh 130dbs_tst.sql bash
+
+init.tst.api: # Booting only api devlopment containers.
+	docker compose --env-file ../tst.env up 120api_tst -d
+
+init.tst.wbs: # Booting only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 110wbs_tst -d
+
 
 
 # npm -g install serve

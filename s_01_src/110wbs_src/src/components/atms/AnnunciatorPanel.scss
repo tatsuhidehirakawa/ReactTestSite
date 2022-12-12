@@ -1,0 +1,66 @@
+@import "../../Pager.scss";
+
+//--- Common Declarations -----------------------------------------
+
+//--- Page Outline ------------------------------------------------
+.AnnunciatorPanel--outline {
+  // @include frostedglass;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  filter: drop-shadow(0 0px 13px rgba(0, 0, 0, .5));
+  font-size: small;
+  height: 90px;
+  width: 280px;
+  position: fixed;
+  bottom: 4%;
+  right: 70px;
+  background-color: rgb(255, 255, 255);
+  z-index: 8;
+  // position: center;
+  // @include frostedglass;
+}
+
+//--- Page Inline -------------------------------------------------
+.AnnunciatorPanel--inlineA--location {
+  margin: 6px 6px 6px 6px;
+  padding: 6px 6px 6px 12px;
+  width: 268px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: aqua;
+}
+
+.AnnunciatorPanel--inlineB--category {
+  margin: 6px 6px 6px 6px;
+  padding: 6px 6px 6px 12px;
+  width: 268px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: aqua;
+}
+
+.AnnunciatorPanel--inlineC--subcategory {
+  margin: 6px 6px 6px 6px;
+  padding: 6px 6px 6px 12px;
+  width: 268px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: aqua;
+}
+
+.AnnunciatorPanel--inlineD--priority {
+  font-size: small;
+  width: 28%;
+  padding-top: 15px;
+}
+
+// .AnnunciatorPanel--inlineE {
+//   font-size: small;
+//   width: 21%;
+//   padding-top: 15px;
+// }
+
+.AnnunciatorPanel--inlineF {
+  width: 11%;
+}
