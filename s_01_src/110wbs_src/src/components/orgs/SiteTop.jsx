@@ -36,7 +36,7 @@ const SiteTop = () => {
       {/* <FloatingActionPanel /> */}
         <div className="sitetop--inline">
           <div className="sitetop--inlineA--text">
-            <p>いろはにほへと</p>
+            <p style={{fontSize: `90px`}}>いろはにほへと</p><p>ちりぬるを</p>
           </div>
           <div className="sitetop--inlineB--text">
             <p>人気急上昇のメンバー</p>
@@ -45,6 +45,7 @@ const SiteTop = () => {
           {posts.map((post) => {
             return (
                 <Card
+                  link={"../Coordinate"}
                   image={post.rate.String}
                   // introduction={productItem.introduction}
                   name={post.self_introduction.String}

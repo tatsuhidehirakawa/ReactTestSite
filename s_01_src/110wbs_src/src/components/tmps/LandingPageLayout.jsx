@@ -1,7 +1,7 @@
 import React from "react";
 import Nukes from "../orgs/Nukes";
 
-const GateLayout = () => {
+const LandingPageLayout = () => {
   return (
     <>
       <Nukes />
@@ -9,4 +9,4 @@ const GateLayout = () => {
   )
 }
 
-export default GateLayout;
+export default LandingPageLayout;

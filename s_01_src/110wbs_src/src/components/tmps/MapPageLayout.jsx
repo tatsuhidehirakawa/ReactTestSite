@@ -2,8 +2,8 @@ import React from "react";
 // import Header from "../orgs/Header";
 // import Footer from "../orgs/Footer";
 
-const MapLayout = ({children}) => {
-// const MapLayout = ({children: [ aaa, bbb, ccc ] }) => {
+const MapPageLayout = ({children}) => {
+// const MapPageLayout = ({children: [ aaa, bbb, ccc ] }) => {
     return (
     <div className="absolute top-0 flex relative min-h-screen flex-col z-0">
       {/* <div><Header /></div> */}
@@ -17,7 +17,7 @@ const MapLayout = ({children}) => {
   );
 }
 
-export default MapLayout;
+export default MapPageLayout;
 
 
 

@@ -1,8 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
-import GateLayout from  './components/tmps/GateLayout.jsx';
-// --- MainLayout ---------------------------------------------
-import MainLayout from './components/tmps/MainLayout.jsx';
+// --- LandingPageLayout ----------------------------------------------------
+import LandingPageLayout from  './components/tmps/LandingPageLayout.jsx';
+// --- TopPageLayout --------------------------------------------------------
+import TopPageLayout from './components/tmps/TopPageLayout.jsx';
+import SiteTop from  './components/orgs/SiteTop.jsx';
+// --- MapLayout ------------------------------------------------------------
+import MapLayout from './components/tmps/MapPageLayout.jsx';
+// import { MapLayout, abc, def, ghi } from './components/tmps/MapLayout.jsx';
+// import Mapper from  './components/atms/Mapper.jsx';
+import Coordinate from  './components/orgs/Coordinate.jsx';
+// --- CommonLayout ---------------------------------------------------------
+import CommonLayout from './components/tmps/CommonLayout.jsx';
 import Page404 from  './components/orgs/Page404.jsx';
 // import TestPage from './components/orgs/TestPage.jsx';
 import News from './components/orgs/News.jsx';
@@ -19,40 +28,34 @@ import Contact from  './components/orgs/Contact.jsx';
 import Recruit from  './components/orgs/Recruit.jsx';
 import Company from  './components/orgs/Company.jsx';
 import Privacy from  './components/orgs/Privacy.jsx';
-import SiteTop from  './components/orgs/SiteTop.jsx';
 import Offer from  './components/orgs/Offer.jsx';
-// --- MapLayout ---------------------------------------------  
-import MapLayout from './components/tmps/MapLayout.jsx';
-// import { MapLayout, abc, def, ghi } from './components/tmps/MapLayout.jsx';
-// import Mapper from  './components/atms/Mapper.jsx';
-import Coordinate from  './components/orgs/Coordinate.jsx';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={`/`} element={<GateLayout/>} />
+        <Route path={`/`} element={<LandingPageLayout/>} />
         {/* <Route path={`/`} element={<http://www.sample.com/landingpage.html>} /> */}  {/* Change CORS setting sat API*/}
-        <Route path={`*`} element={<MainLayout><Page404 /></MainLayout>} />
+        <Route path={`*`} element={<CommonLayout><Page404 /></CommonLayout>} />
 
-        <Route path={`/News`} element={<MainLayout><News /></MainLayout>} />
-        <Route path={`/Products`} element={<MainLayout><Products /></MainLayout>} />
-        {/* <Route path={`/TestPage`} element={<MainLayout><TestPage /></MainLayout>} /> */}
-        <Route path={`/Pricing`} element={<MainLayout><PricingContent /></MainLayout>} />
-
-        <Route path={`/Agreement`} element={<MainLayout><Agreement /></MainLayout>} />
-        <Route path={`/UserGuide`} element={<MainLayout><UserGuide /></MainLayout>} />
-        <Route path={`/SignUp`} element={<MainLayout><SignUp /></MainLayout>} />
-        <Route path={`/SignIn`} element={<MainLayout><SignIn /></MainLayout>} />
-        <Route path={`/MyPage`} element={<MainLayout><MyPage /></MainLayout>} />
-        <Route path={`/Contact`} element={<MainLayout><Contact /></MainLayout>} />
-        <Route path={`/Recruit`} element={<MainLayout><Recruit /></MainLayout>} />
-        <Route path={`/Company`} element={<MainLayout><Company /></MainLayout>} />
-        <Route path={`/Privacy`} element={<MainLayout><Privacy /></MainLayout>} />
-        <Route path={`/Offer`} element={<MainLayout><Offer /></MainLayout>} />
-
-        <Route path={`/SiteTop`} element={<MapLayout><SiteTop /></MapLayout>} />
+        <Route path={`/SiteTop`} element={<TopPageLayout><SiteTop /></TopPageLayout>} />
         <Route path={`/Coordinate`} element={<MapLayout><Coordinate /></MapLayout>} />
+
+        <Route path={`/News`} element={<CommonLayout><News /></CommonLayout>} />
+        <Route path={`/Products`} element={<CommonLayout><Products /></CommonLayout>} />
+        {/* <Route path={`/TestPage`} element={<CommonLayout><TestPage /></CommonLayout>} /> */}
+        <Route path={`/Pricing`} element={<CommonLayout><PricingContent /></CommonLayout>} />
+        <Route path={`/Agreement`} element={<CommonLayout><Agreement /></CommonLayout>} />
+        <Route path={`/UserGuide`} element={<CommonLayout><UserGuide /></CommonLayout>} />
+        <Route path={`/SignUp`} element={<CommonLayout><SignUp /></CommonLayout>} />
+        <Route path={`/SignIn`} element={<CommonLayout><SignIn /></CommonLayout>} />
+        <Route path={`/MyPage`} element={<CommonLayout><MyPage /></CommonLayout>} />
+        <Route path={`/Contact`} element={<CommonLayout><Contact /></CommonLayout>} />
+        <Route path={`/Recruit`} element={<CommonLayout><Recruit /></CommonLayout>} />
+        <Route path={`/Company`} element={<CommonLayout><Company /></CommonLayout>} />
+        <Route path={`/Privacy`} element={<CommonLayout><Privacy /></CommonLayout>} />
+        <Route path={`/Offer`} element={<CommonLayout><Offer /></CommonLayout>} />
+
       </Routes>
     </BrowserRouter>
   );

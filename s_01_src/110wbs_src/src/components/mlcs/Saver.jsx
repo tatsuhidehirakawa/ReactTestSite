@@ -25,6 +25,7 @@ const Saver = () => {
           {posts.map((post) => {
             return (
                 <Card
+                  link={"../Offer"}
                   image={post.rate.String}
                   // introduction={productItem.introduction}
                   name={post.self_introduction.String}

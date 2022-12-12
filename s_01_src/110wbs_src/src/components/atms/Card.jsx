@@ -7,7 +7,8 @@ class Card extends React.Component {
     return (
       <div className="bg-white inline-block drop-shadow-[0_0px_13px_rgba(0,0,0,0.3)] w-[182px] h-[223px] shadow-lg text-center rounded-2xl text-base leading-normal z-6 m-[5px]">
         <div className="rounded">
-          <Link to="/Offer">
+          {/* <Link to="/Coordinate"> */}
+          <Link to={this.props.link}>
             <img src={this.props.image} alt={this.props.introduction} className="w-[165px] h-[165px] rounded-2xl cursor-pointer mt-[7px] mr-[7px] mb-[0px] ml-[7px]" />
           </Link>
         </div>
