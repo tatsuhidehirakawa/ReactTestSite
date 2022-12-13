@@ -1,9 +1,34 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 // import React from "react"
 import Card from "../atms/Card";
 import React, { useState, useEffect } from 'react';
 import './Saver.scss';
 
 const Saver = () => {
+
+  const z_index = css`
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  `;
+
+  // <div className="w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2" css={z_index}>
+
+const aaa = css`
+    width: 240px;
+    margine-bottom: 237px;
+    padding: 10px;
+    position: absolute;
+    left: 153px;
+    height: 100%;
+    top: 50%
+  `;
+
+  // const scrollbar = css`
+  //   @include purgescrollbar;
+  // `;
 
       // const [data, setData] = useState({ hits: [] });
   const [posts, setPosts] = useState([])
@@ -21,7 +46,7 @@ const Saver = () => {
   },[])
 
   return (
-    <div className="content::-webkit-scrollbar nonscrollbar z_index w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2">
+    <div className="content::-webkit-scrollbar nonscrollbar w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2" css={z_index}>
           {posts.map((post) => {
             return (
                 <Card
