@@ -12,6 +12,7 @@ const Coordinate = () => {
   const outline = css`
     position: absolute;
     width: 100%;
+    height 1500px;
     z-index: 3;
   `;
 
