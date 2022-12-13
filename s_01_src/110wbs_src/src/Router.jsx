@@ -29,6 +29,7 @@ import Recruit from  './components/orgs/Recruit.jsx';
 import Company from  './components/orgs/Company.jsx';
 import Privacy from  './components/orgs/Privacy.jsx';
 import Offer from  './components/orgs/Offer.jsx';
+import Csstest from  './components/orgs/Csstest.jsx';
 
 const Router = () => {
   return (
@@ -42,7 +43,7 @@ const Router = () => {
         <Route path={`/Coordinate`} element={<MapLayout><Coordinate /></MapLayout>} />
 
         <Route path={`/News`} element={<CommonLayout><News /></CommonLayout>} />
-        <Route path={`/Products`} element={<CommonLayout><Products /></CommonLayout>} />
+        <Route path={`/Products`} element={<CommonLayout><Csstest /></CommonLayout>} />
         {/* <Route path={`/TestPage`} element={<CommonLayout><TestPage /></CommonLayout>} /> */}
         <Route path={`/Pricing`} element={<CommonLayout><PricingContent /></CommonLayout>} />
         <Route path={`/Agreement`} element={<CommonLayout><Agreement /></CommonLayout>} />
