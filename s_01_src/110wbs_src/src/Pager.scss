@@ -111,9 +111,6 @@ $color-header: #ffffff;
   border-radius: 30px;
 }
 
-
-
-
 // Frosted Glass Effect
 @mixin frostedglass {
   // background-color: rgba(255,255,255,0.2);
@@ -122,7 +119,12 @@ $color-header: #ffffff;
   filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
 }
 
-
+.frostedglass {
+  // background-color: rgba(255,255,255,0.2);
+  background-color: rgba(125, 194, 68, 0.486);
+  backdrop-filter:blur(8px);
+  filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+}
 
 .footer--Outline {
   @include frostedglass;

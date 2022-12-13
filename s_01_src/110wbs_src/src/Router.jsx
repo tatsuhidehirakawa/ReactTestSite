@@ -5,8 +5,8 @@ import LandingPageLayout from  './components/tmps/LandingPageLayout.jsx';
 // --- TopPageLayout --------------------------------------------------------
 import TopPageLayout from './components/tmps/TopPageLayout.jsx';
 import SiteTop from  './components/orgs/SiteTop.jsx';
-// --- MapLayout ------------------------------------------------------------
-import MapLayout from './components/tmps/MapPageLayout.jsx';
+// --- MapPageLayout --------------------------------------------------------
+import MapPageLayout from './components/tmps/MapPageLayout.jsx';
 // import { MapLayout, abc, def, ghi } from './components/tmps/MapLayout.jsx';
 // import Mapper from  './components/atms/Mapper.jsx';
 import Coordinate from  './components/orgs/Coordinate.jsx';
@@ -40,7 +40,7 @@ const Router = () => {
         <Route path={`*`} element={<CommonLayout><Page404 /></CommonLayout>} />
 
         <Route path={`/SiteTop`} element={<TopPageLayout><SiteTop /></TopPageLayout>} />
-        <Route path={`/Coordinate`} element={<MapLayout><Coordinate /></MapLayout>} />
+        <Route path={`/Coordinate`} element={<MapPageLayout><Coordinate /></MapPageLayout>} />
 
         <Route path={`/News`} element={<CommonLayout><News /></CommonLayout>} />
         <Route path={`/Products`} element={<CommonLayout><Csstest /></CommonLayout>} />
