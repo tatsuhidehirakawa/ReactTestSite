@@ -9,7 +9,7 @@ const Saver = () => {
 
   // <div className="w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2" css={z_index}>
 
-const saver__outline = css`
+const outline = css`
     z-index: 5;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -45,7 +45,7 @@ const saver__outline = css`
   },[])
 
   return (
-    <div className="card--outline" css={saver__outline}>
+    <div className="card--outline nonscrollbar content::-webkit-scrollbar" css={outline}>
           {posts.map((post) => {
             return (
                 <Card
