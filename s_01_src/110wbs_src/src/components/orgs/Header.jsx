@@ -22,10 +22,6 @@ const Header = () => {
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
-    background-color: rgba(125, 194, 68, 0.486);
-    backdrop-filter:blur(8px);
-    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
-  
   `;
 
   const sectionA = css`
@@ -67,7 +63,7 @@ const Header = () => {
   `;
 
   return (
-    <div className="header--outline" css={outline}>
+    <div className="header--outline frostedglass" css={outline}>
       <div className="header--sectionA" css={sectionA}>
         <div className="header--sectionA--boxA__logo" css={logo}>
           <LogoA />
