@@ -1,4 +1,4 @@
-@import "../../Pager.scss";
+// @import "../../Pager.scss";
 
 //--- Common Declarations -----------------------------------------
 @mixin footer__Text {
@@ -37,28 +37,16 @@
 }
 
 //--- Definition of outermost area ---------------------------------
-.footer--Outline {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  // padding-bottom: 43px;
-  // bottom: 0;
-  // position: fixed;
-  // padding: 0px 10px;
-  height: $footer__height;
-  // top: 100vh;
-  position: absolute;
-  bottom: 0;
-  z-index: 9;
-  @include frostedglass;
-}
+// .footer--Outline {
+//   @include frostedglass;
+// }
 
 //--- Definition of intermediate areas ----------------------------
-.footer--inlineA {
-  display: flex;
-  height: 173px;
-  justify-content: space-between;
-}
+// .footer--inlineA {
+//   display: flex;
+//   height: 173px;
+//   justify-content: space-between;
+// }
 
 @media (max-width: 600px) {
   .footer--Outline {
@@ -80,11 +68,11 @@
 // Signeture area
 .footer--InlineB__signeture {
   // background-color: #84a2d4;
-  bottom: 0;
-  margin: 0px;
-  height: 35px;
+  // bottom: 0;
+  // margin: 0px;
+  // height: 35px;
   p {
-    margin-top: 30px;
+    // margin-top: 30px;
     @include footer__Text;
   }
 }
