@@ -7,23 +7,22 @@ import './Saver.scss';
 
 const Saver = () => {
 
-  const z_index = css`
+  // <div className="w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2" css={z_index}>
+
+const card__outline = css`
     z-index: 5;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-  `;
-
-  // <div className="w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2" css={z_index}>
-
-const aaa = css`
+    position: absolute;
+    // position: fixed;
+    height: 100vh;
     width: 240px;
+    top: 50%
+    left: 163px;
+    height: 100%;
     margine-bottom: 237px;
     padding: 10px;
-    position: absolute;
-    left: 153px;
-    height: 100%;
-    top: 50%
   `;
 
   // const scrollbar = css`
@@ -46,7 +45,7 @@ const aaa = css`
   },[])
 
   return (
-    <div className="content::-webkit-scrollbar nonscrollbar w-[240px] mb-[237px] p-[10px] absolute left-[163px] h-screen fixed top-1/2" css={z_index}>
+    <div className="card--outline" css={card__outline}>
           {posts.map((post) => {
             return (
                 <Card
