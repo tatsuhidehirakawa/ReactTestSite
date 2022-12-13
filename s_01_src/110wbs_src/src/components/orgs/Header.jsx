@@ -8,16 +8,22 @@ import "../../Pager.scss";
 
 const Header = () => {
 
+  const headerHight = '69px'
+
   const outline = css`
     display: flex;
     justify-content: space-between;
     position: fixed;
     top: 0;
-    height: 69px;
+    height: ${headerHight};
     z-index: 10;
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+    background-color: rgba(125, 194, 68, 0.486);
+    backdrop-filter:blur(8px);
+    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+  
   `;
 
   const sectionA = css`
