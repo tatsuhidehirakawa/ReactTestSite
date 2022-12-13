@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import LogoA from '../atms/LogoA.jsx';
 import React from "react";
 import "../../Pager.scss";
-// import "./Footer.scss";
 
 const Footer = () => {
 
@@ -58,7 +57,7 @@ const Footer = () => {
     color: rgb(26, 24, 24);
     text-decoration: none;
     text-shadow: 1px 2px 3px #808080;
-    font-weight: bold;  // もっと太くしたい
+    font-weight: bold;
   `;
 
   return (
