@@ -15,11 +15,17 @@ const Coordinate = () => {
     height 1500px;
     z-index: 3;
   `;
+  
+  const contents_box = css`
+    overflow-y: scroll;        // Disable scroll bar.
+    -ms-overflow-style: none;  // Disable scroll bar.
+    scrollbar-width: none;     // Disable scroll bar.
+  `;
 
   return (
     <div className="coodinate--outline" css={outline}>
       <ModeSelectPanel />
-      <Saver className="contents_box"/>
+      <Saver className="contents_box" css={contents_box}/>
       {/* <Saver /> */}
       <AnnunciatorPanel />
       <Mapper />
@@ -31,3 +37,7 @@ const Coordinate = () => {
 }
 
 export default Coordinate;
+
+
+
+

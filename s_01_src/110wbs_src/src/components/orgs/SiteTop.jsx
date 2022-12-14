@@ -48,9 +48,9 @@ const SiteTop = () => {
     filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
     margin: 0px 0px 0px 0px;
     padding: 10px 0px 0px 0px;
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    overflow-y: scroll;        // Disable scroll bar.
+    -ms-overflow-style: none;  // Disable scroll bar.
+    scrollbar-width: none;     // Disable scroll bar.
   `;
 
   // const [data, setData] = useState({ hits: [] });
