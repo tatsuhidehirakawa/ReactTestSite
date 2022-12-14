@@ -2,13 +2,9 @@
 import { css } from "@emotion/react";
 // import React from "react"
 import Card from "../atms/Card";
-import "./SiteTop.scss"
-// import ApiFetch from "../../hooks/ApiFetch";
 import React, { useState, useEffect } from 'react';
-// import FloatingActionPanel from '../atms/ModeSelectPanel'
 // import useFetch from '../../hooks/useFetch';
 // import { Mapper } from "../atms/Mapper";
-// import './SiteTop.scss';
 
 const SiteTop = () => {
 
@@ -41,7 +37,7 @@ const SiteTop = () => {
     filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
     width: 100%;
     height: 245px;
-    margin: 99px 10px 421px 50px;
+    margin: 17px 10px 38px 50px;
     text-align: left;
     font-size: 50px;
     color: white;
@@ -83,7 +79,7 @@ const SiteTop = () => {
       {/* <FloatingActionPanel /> */}
         <div className="sitetop--inline" css={sitetop_inline}>
           <div className="sitetop--inlineA--text" css={inlineA_text}>
-            <p style={{fontSize: `90px`}}>いろはにほへと</p><p>ちりぬるを</p>
+            <p style={{fontSize: `90px`}}>＞サイト名</p><p>＞副題</p>
           </div>
           <div className="sitetop--inlineB--text" css={inlineB_text}>
             <p>人気急上昇のメンバー</p>
@@ -140,7 +136,7 @@ const SiteTop = () => {
           <div className="sitetop--inlineH--text">
             <p>最近登録した人</p>
           </div>
-          <div className="sitetop--inlineI--tiling contents_box">
+          <div className="sitetop--inlineI--tiling contents_box" css={tile_sitetop}>
           {posts.map((post) => {
             return (
                 <Card
