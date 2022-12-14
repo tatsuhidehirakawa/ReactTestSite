@@ -74,6 +74,7 @@ rebuild.dev.wbs:
 	@docker stop 110wbs_dev
 	@docker rm 110wbs_dev
 	@docker rmi s_03_dev-110wbs_dev
+	# @docker rmi s_03_dev_110wbs_dev
 	@docker volume rm s_03_dev_wbs-vol
 	@make boot.dev.wbs
 	@make insert.code.wbs

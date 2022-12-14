@@ -11,7 +11,8 @@ const Footer = () => {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: $footer__height;
+    height: 237px;
+    // padding: 0% 17% 0% 6%;
     position: absolute;
     bottom: 0;
     z-index: 9;
@@ -33,7 +34,7 @@ const Footer = () => {
     }
   `;
 
-  const LogoBox = css`
+  const logoBox = css`
     margin: 43px 0px 0px 90px;
     float: left;
     height: 100px;
@@ -53,8 +54,14 @@ const Footer = () => {
     margin: 15px 21px 5px 0px;
   `;
 
-  const footerText = css`
+  const footerSubtitle = css`
     color: rgb(26, 24, 24);
+    text-decoration: none;
+    text-shadow: 1px 2px 3px #808080;
+  `;
+
+  const footerMaintitle = css`
+    color: #203744;
     text-decoration: none;
     text-shadow: 1px 2px 3px #808080;
     font-weight: bold;
@@ -64,36 +71,36 @@ const Footer = () => {
     <>
     <div className="footer--Outline" css={outline}>
       <div className="footer--inlineA" css={inlineA}>
-        <div className="footer--inlineA--sectionA_logo" css={LogoBox}>
+        <div className="footer--inlineA--sectionA_logo" css={logoBox}>
           <LogoA />
         </div>
         <div className="footer--inlineA--sectionB__blank" css={SectionBox}>
-          <p>Company</p>
-          <Link to="/Team" css={footerText}>Team</Link>
-          <Link to="/none" css={footerText}>Histroy</Link>
-          <Link to="/Contact" css={footerText}>Contact</Link>
-          <Link to="/none" css={footerText}>Locations</Link>
+          <p css={footerMaintitle}>Company</p>
+          <Link to="/Team" css={footerSubtitle}>Team</Link>
+          <Link to="/none" css={footerSubtitle}>Histroy</Link>
+          <Link to="/Contact" css={footerSubtitle}>Contact</Link>
+          <Link to="/none" css={footerSubtitle}>Locations</Link>
         </div>
         <div className="footer--inlineA--sectionC__blank" css={SectionBox}>
-          <p>Features</p>
-          <Link to="/none" css={footerText}>Cool stuff</Link>
-          <Link to="/none" css={footerText}>Random feature</Link>
-          <Link to="/none" css={footerText}>Team feature</Link>
-          <Link to="/none" css={footerText}>Developer staff</Link>
-          <Link to="/Recruit" css={footerText}>Recruit</Link>
+        <p css={footerMaintitle}>Features</p>
+          <Link to="/none" css={footerSubtitle}>Cool stuff</Link>
+          <Link to="/none" css={footerSubtitle}>Random feature</Link>
+          <Link to="/none" css={footerSubtitle}>Team feature</Link>
+          <Link to="/none" css={footerSubtitle}>Developer staff</Link>
+          <Link to="/Recruit" css={footerSubtitle}>Recruit</Link>
         </div>
         <div className="footer--inlineA--sectionD__text" css={SectionBox}>
-          <p>Resources</p>
-          <Link to="/ResourceA" css={footerText}>ResourceA</Link>
-          <Link to="/ResourceB" css={footerText}>ResourceB</Link>
-          <Link to="/Company" css={footerText}>Company</Link>
-          <Link to="/ResourceC" css={footerText}>ResourceC</Link>
+        <p css={footerMaintitle}>Resources</p>
+          <Link to="/ResourceA" css={footerSubtitle}>ResourceA</Link>
+          <Link to="/ResourceB" css={footerSubtitle}>ResourceB</Link>
+          <Link to="/Company" css={footerSubtitle}>Company</Link>
+          <Link to="/ResourceC" css={footerSubtitle}>ResourceC</Link>
         </div>
         <div className="footer--inlineA--sectionE__text" css={SectionBox}>
-          <p>Legal</p>
-          <Link to="/Contact" css={footerText}>Contact</Link>
-          <Link to="/Privacy" css={footerText}>Privacy</Link>
-          <Link to="/none" css={footerText}>Temes fo use</Link>
+        <p css={footerMaintitle}>Legal</p>
+          <Link to="/Contact" css={footerSubtitle}>Contact</Link>
+          <Link to="/Privacy" css={footerSubtitle}>Privacy</Link>
+          <Link to="/none" css={footerSubtitle}>Temes fo use</Link>
         </div>
       </div>
       <div className="footer--InlineB__signeture" css={inlineB}>

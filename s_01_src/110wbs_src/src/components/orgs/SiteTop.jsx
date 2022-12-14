@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 // import React from "react"
 import Card from "../atms/Card";
 import "./SiteTop.scss"
@@ -6,10 +8,55 @@ import React, { useState, useEffect } from 'react';
 // import FloatingActionPanel from '../atms/ModeSelectPanel'
 // import useFetch from '../../hooks/useFetch';
 // import { Mapper } from "../atms/Mapper";
-import './SiteTop.scss';
-
+// import './SiteTop.scss';
 
 const SiteTop = () => {
+
+  const inlineB_text = css`
+    font-size: 21px;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+    font-weight: bolder;
+    text-align: left;
+    padding: 12px 0px 8px 33px;
+    width: 100vh;
+    z-index: 3;
+  `;
+
+  const sitetop_outline = css`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    padding: 0px 0px 237px 0px;
+  `;
+
+  const sitetop_inline = css`
+    background: rgba(115, 255, 277, 0.3);
+    display: flex;
+    flex-direction: column;
+  `;
+
+  const inlineA_text = css`
+    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+    width: 100%;
+    height: 245px;
+    margin: 99px 10px 421px 50px;
+    text-align: left;
+    font-size: 50px;
+    color: white;
+  `;
+
+  const tile_sitetop = css`
+    display: flex;
+    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  `;
+
   // const [data, setData] = useState({ hits: [] });
   const [posts, setPosts] = useState([])
   useEffect(() => {
@@ -31,17 +78,17 @@ const SiteTop = () => {
   },[])
  
   return (
-    <div className="sitetop--outline">
+    <div className="sitetop--outline" css={sitetop_outline}>
       {/* <Mapper style={{ backgroundColor: "rgba(0,0,0,0.74)" }} /> */}
       {/* <FloatingActionPanel /> */}
-        <div className="sitetop--inline">
-          <div className="sitetop--inlineA--text">
+        <div className="sitetop--inline" css={sitetop_inline}>
+          <div className="sitetop--inlineA--text" css={inlineA_text}>
             <p style={{fontSize: `90px`}}>いろはにほへと</p><p>ちりぬるを</p>
           </div>
-          <div className="sitetop--inlineB--text">
+          <div className="sitetop--inlineB--text" css={inlineB_text}>
             <p>人気急上昇のメンバー</p>
           </div>
-          <div className="sitetop--inlineC--tiling contents_box">
+          <div className="sitetop--inlineC--tiling contents_box" css={tile_sitetop}>
           {posts.map((post) => {
             return (
                 <Card
@@ -56,10 +103,10 @@ const SiteTop = () => {
             );
           })}
           </div>
-          <div className="sitetop--inlineD--text">
+          <div className="sitetop--inlineD--text" css={inlineB_text}>
             <p>あなたの近くの助けを求めている人</p>
           </div>
-          <div className="sitetop--inlineE--tiling contents_box">
+          <div className="sitetop--inlineE--tiling contents_box" css={tile_sitetop}>
           {posts.map((post) => {
             return (
                 <Card
@@ -73,10 +120,10 @@ const SiteTop = () => {
             );
           })}
           </div>
-          <div className="sitetop--inlineF--text">
+          <div className="sitetop--inlineF--text" css={inlineB_text}>
             <p>最近の閲覧履歴</p>
           </div>
-          <div className="sitetop--inlineG--tiling contents_box">
+          <div className="sitetop--inlineG--tiling contents_box" css={tile_sitetop}>
           {posts.map((post) => {
             return (
                 <Card
