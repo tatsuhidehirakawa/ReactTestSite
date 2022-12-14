@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 import Card from "../mlcs/Card";
 // import Pic from "../atms/Pic";
 import React, { useState, useEffect } from 'react';
-import useFetch from '../../hooks/useFetch';
+// import useFetch from '../../hooks/useFetch';
 // import { Mapper } from "../atms/Mapper";
 
 const SiteTop = () => {
