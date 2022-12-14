@@ -39,24 +39,24 @@ const Router = () => {
         {/* <Route path={`/`} element={<http://www.sample.com/landingpage.html>} /> */}  {/* Change CORS setting sat API*/}
         <Route path={`*`} element={<CommonLayout><Page404 /></CommonLayout>} />
 
-        <Route path={`/SiteTop`} element={<TopPageLayout><SiteTop /></TopPageLayout>} />
-        <Route path={`/Coordinate`} element={<MapPageLayout><Coordinate /></MapPageLayout>} />
+        <Route path={`/sitetop`} element={<TopPageLayout><SiteTop /></TopPageLayout>} />
 
-        <Route path={`/News`} element={<CommonLayout><News /></CommonLayout>} />
-        <Route path={`/Products`} element={<CommonLayout><Csstest /></CommonLayout>} />
+        <Route path={`/coordinate`} element={<MapPageLayout><Coordinate /></MapPageLayout>} />
+
+        <Route path={`/news`} element={<CommonLayout><News /></CommonLayout>} />
+        <Route path={`/products`} element={<CommonLayout><Csstest /></CommonLayout>} />
         {/* <Route path={`/TestPage`} element={<CommonLayout><TestPage /></CommonLayout>} /> */}
-        <Route path={`/Pricing`} element={<CommonLayout><PricingContent /></CommonLayout>} />
-        <Route path={`/Agreement`} element={<CommonLayout><Agreement /></CommonLayout>} />
-        <Route path={`/UserGuide`} element={<CommonLayout><UserGuide /></CommonLayout>} />
-        <Route path={`/SignUp`} element={<CommonLayout><SignUp /></CommonLayout>} />
-        <Route path={`/SignIn`} element={<CommonLayout><SignIn /></CommonLayout>} />
-        <Route path={`/MyPage`} element={<CommonLayout><MyPage /></CommonLayout>} />
-        <Route path={`/Contact`} element={<CommonLayout><Contact /></CommonLayout>} />
-        <Route path={`/Recruit`} element={<CommonLayout><Recruit /></CommonLayout>} />
-        <Route path={`/Company`} element={<CommonLayout><Company /></CommonLayout>} />
-        <Route path={`/Privacy`} element={<CommonLayout><Privacy /></CommonLayout>} />
-        <Route path={`/Offer`} element={<CommonLayout><Offer /></CommonLayout>} />
-
+        <Route path={`/pricing`} element={<CommonLayout><PricingContent /></CommonLayout>} />
+        <Route path={`/agreement`} element={<CommonLayout><Agreement /></CommonLayout>} />
+        <Route path={`/userguide`} element={<CommonLayout><UserGuide /></CommonLayout>} />
+        <Route path={`/signup`} element={<CommonLayout><SignUp /></CommonLayout>} />
+        <Route path={`/signin`} element={<CommonLayout><SignIn /></CommonLayout>} />
+        <Route path={`/mypage`} element={<CommonLayout><MyPage /></CommonLayout>} />
+        <Route path={`/contact`} element={<CommonLayout><Contact /></CommonLayout>} />
+        <Route path={`/recruit`} element={<CommonLayout><Recruit /></CommonLayout>} />
+        <Route path={`/company`} element={<CommonLayout><Company /></CommonLayout>} />
+        <Route path={`/privacy`} element={<CommonLayout><Privacy /></CommonLayout>} />
+        <Route path={`/offer`} element={<CommonLayout><Offer /></CommonLayout>} />
       </Routes>
     </BrowserRouter>
   );

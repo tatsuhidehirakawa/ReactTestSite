@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 // import React from "react"
-import Card from "../atms/Card";
+import Card from "../mlcs/Card";
+import Pic from "../atms/Pic";
 import React, { useState, useEffect } from 'react';
 // import useFetch from '../../hooks/useFetch';
 // import { Mapper } from "../atms/Mapper";

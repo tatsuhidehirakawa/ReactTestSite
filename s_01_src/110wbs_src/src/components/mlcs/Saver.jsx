@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 // import React from "react"
-import Card from "../atms/Card";
+import Card from "./Card";
 import React, { useState, useEffect } from 'react';
 import './Saver.scss';
 
