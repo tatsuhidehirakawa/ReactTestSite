@@ -16,19 +16,19 @@ const Coordinate = () => {
     z-index: 3;
   `;
   
-  const contents_box = css`
-    overflow-y: scroll;        // Disable scroll bar.
-    -ms-overflow-style: none;  // Disable scroll bar.
-    scrollbar-width: none;     // Disable scroll bar.
-    .content::-webkit-scrollbar{
-      display:none;
-    }
-  `;
+  // const contents_box = css`
+  //   overflow-y: scroll;        // Disable scroll bar.
+  //   -ms-overflow-style: none;  // Disable scroll bar.
+  //   scrollbar-width: none;     // Disable scroll bar.
+  //   .content::-webkit-scrollbar {
+  //     display:none;
+  //   }
+  // `;
 
   return (
     <div className="coodinate--outline" css={outline}>
       <ModeSelectPanel />
-      <Saver className="purgescrollbar" css={contents_box}/>
+      <Saver className={`${nonscrollbar} ${"content::-webkit-scrollbar"}`}/>
       {/* <Saver /> */}
       <AnnunciatorPanel />
       <Mapper />

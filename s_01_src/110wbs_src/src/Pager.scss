@@ -36,19 +36,19 @@ $layout--outline__color: #dbd0e6;
 $color-header: #ffffff;
 
 
-.purgescrollbar{
-  .nonscrollbar {
-    overflow-x: scroll;
-    /*スクロールバー非表示（IE・Edge）*/
-    -ms-overflow-style: none;
-    /*スクロールバー非表示（Firefox）*/
-    scrollbar-width: none;
-  }
-  /*スクロールバー非表示（Chrome・Safari）*/
-  .content::-webkit-scrollbar{
-    display:none;
-  }
+
+.nonscrollbar {
+  overflow-x: scroll;
+  /*スクロールバー非表示（IE・Edge）*/
+  -ms-overflow-style: none;
+  /*スクロールバー非表示（Firefox）*/
+  scrollbar-width: none;
 }
+  /*スクロールバー非表示（Chrome・Safari）*/
+.content::-webkit-scrollbar{
+  display:none;
+}
+
 
 // スクロールバーを消す操作
 .contents_box::-webkit-scrollbar{
