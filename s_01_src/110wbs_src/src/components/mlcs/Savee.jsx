@@ -1,7 +1,7 @@
 // import React from "react"
 import Card from "../atms/Card";
 import React, { useState, useEffect } from 'react';
-import useFetch from "../../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 
 const Savee = () => {
 

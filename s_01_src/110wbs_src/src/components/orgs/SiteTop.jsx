@@ -2,12 +2,24 @@
 import { css } from "@emotion/react";
 // import React from "react"
 import Card from "../mlcs/Card";
-import Pic from "../atms/Pic";
+// import Pic from "../atms/Pic";
 import React, { useState, useEffect } from 'react';
-// import useFetch from '../../hooks/useFetch';
+import useFetch from '../../hooks/useFetch';
 // import { Mapper } from "../atms/Mapper";
 
 const SiteTop = () => {
+
+  // // カスタムフック（useFetch.js）を利用した記述
+  // const url = "http://docker.for.mac.localhost:8080/accountAttribute/someGet";
+  // const { data, loading, error } = useFetch(url, {});
+
+  //   if (isLoading) {
+  //     return <h4>Loading...</h4>;
+  //   }
+  //   if (error) {
+  //     alert(error);
+  //     return <h4>Error Occured</h4>;
+  //   }
 
   const inlineB_text = css`
     font-size: 21px;
@@ -54,6 +66,7 @@ const SiteTop = () => {
     scrollbar-width: none;     // Disable scroll bar.
   `;
 
+// 従来のApiFetchを利用した記述
   // const [data, setData] = useState({ hits: [] });
   const [posts, setPosts] = useState([])
   useEffect(() => {
@@ -76,6 +89,7 @@ const SiteTop = () => {
  
   return (
     <div className="sitetop--outline" css={sitetop_outline}>
+      {/* <FetchComponent /> */}
       {/* <Mapper style={{ backgroundColor: "rgba(0,0,0,0.74)" }} /> */}
       {/* <FloatingActionPanel /> */}
         <div className="sitetop--inline" css={sitetop_inline}>
@@ -86,6 +100,7 @@ const SiteTop = () => {
             <p>人気急上昇のメンバー</p>
           </div>
           <div className="sitetop--inlineC--tiling contents_box" css={tile_sitetop}>
+
           {posts.map((post) => {
             return (
                 <Card
@@ -97,59 +112,25 @@ const SiteTop = () => {
                   distance={post.twitter_uri.String}
                   introduction={post.skill.String}
                 />
+                
             );
           })}
-          </div>
-          <div className="sitetop--inlineD--text" css={inlineB_text}>
-            <p>あなたの近くの助けを求めている人</p>
-          </div>
-          <div className="sitetop--inlineE--tiling contents_box" css={tile_sitetop}>
-          {posts.map((post) => {
+
+          {/* {posts.map((data) => {
             return (
                 <Card
-                  image={post.rate.String}
+                  link={"../Coordinate"}
+                  image={data.rate.String}
                   // introduction={productItem.introduction}
-                  name={post.self_introduction.String}
-                  location={post.facebook_uri.String}
-                  distance={post.twitter_uri.String}
-                  introduction={post.skill.String}
+                  name={data.self_introduction.String}
+                  location={data.facebook_uri.String}
+                  distance={data.twitter_uri.String}
+                  introduction={data.skill.String}
                 />
+                
             );
-          })}
-          </div>
-          <div className="sitetop--inlineF--text" css={inlineB_text}>
-            <p>最近の閲覧履歴</p>
-          </div>
-          <div className="sitetop--inlineG--tiling contents_box" css={tile_sitetop}>
-          {posts.map((post) => {
-            return (
-                <Card
-                  image={post.rate.String}
-                  // introduction={productItem.introduction}
-                  name={post.self_introduction.String}
-                  location={post.facebook_uri.String}
-                  distance={post.twitter_uri.String}
-                  introduction={post.skill.String}
-                />
-            );
-          })}
-          </div>
-          <div className="sitetop--inlineH--text">
-            <p>最近登録した人</p>
-          </div>
-          <div className="sitetop--inlineI--tiling contents_box" css={tile_sitetop}>
-          {posts.map((post) => {
-            return (
-                <Card
-                  image={post.rate.String}
-                  // introduction={productItem.introduction}
-                  name={post.self_introduction.String}
-                  location={post.facebook_uri.String}
-                  distance={post.twitter_uri.String}
-                  introduction={post.skill.String}
-                />
-            );
-          })}
+          })} */}
+
           </div>
         </div>
     </div>
