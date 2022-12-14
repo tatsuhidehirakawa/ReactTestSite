@@ -94,7 +94,7 @@ const SiteTop = () => {
       {/* <FloatingActionPanel /> */}
         <div className="sitetop--inline" css={sitetop_inline}>
           <div className="sitetop--inlineA--text" css={inlineA_text}>
-            <p style={{fontSize: `90px`}}>＞サイト名</p><p>＞副題</p>
+            <p style={{fontSize: `90px`}}>Main Title</p><p>Subtitle</p>
           </div>
           <div className="sitetop--inlineB--text" css={inlineB_text}>
             <p>人気急上昇のメンバー</p>
