@@ -21,7 +21,6 @@ $footer__height: 237px;
   $footer__height: 300px;
 }
 
-
 .layout--outline__violet {
   // background-color: $layout--outline__color;
   .layout--outline__inlineB__children {
@@ -37,7 +36,7 @@ $layout--outline__color: #dbd0e6;
 $color-header: #ffffff;
 
 
-@mixin purgescrollbar{
+.purgescrollbar{
   .nonscrollbar {
     overflow-x: scroll;
     /*スクロールバー非表示（IE・Edge）*/
