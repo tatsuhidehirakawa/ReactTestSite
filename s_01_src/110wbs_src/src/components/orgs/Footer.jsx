@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import LogoA from '../atms/LogoA.jsx';
 import React from "react";
-import "../../Pager.scss";
+// import "../../Pager.scss";
 
 const Footer = () => {
 
@@ -16,7 +16,7 @@ const Footer = () => {
     position: absolute;
     bottom: 0;
     z-index: 9;
-    @include frostedglass;
+    // @include frostedglass;
   `;
 
   const inlineA = css`

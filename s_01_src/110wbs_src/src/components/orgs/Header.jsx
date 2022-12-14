@@ -20,11 +20,11 @@ const Header = () => {
     height: ${headerHight};
     z-index: 10;
     width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
-    background-color: rgba(125, 194, 68, 0.486);
+    // box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+    background-color: rgba(76, 108, 179, 0.486);
     backdrop-filter:blur(8px);
-    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));  
+    // @include frostedglass;
   `;
 
   const sectionA = css`
@@ -47,7 +47,7 @@ const Header = () => {
 
   const text = css`
     margin: 0px 3px 3px 30px;
-    color: rgb(26, 24, 24);
+    color: #fffffc;
     padding: 0px 0px 10px 0px;
     text-decoration: none;
     text-shadow: 1px 2px 3px #808080;

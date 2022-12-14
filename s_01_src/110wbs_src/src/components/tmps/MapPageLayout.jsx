@@ -21,7 +21,7 @@ const MapPageLayout = ({children}) => {
 
 // const MapPageLayout = ({children: [ aaa, bbb, ccc ] }) => {
   return (
-    <div className="MapPageLayout__outline" css={outline}>
+    <div className="MapPageLayout__outline bg-[#fbfaf5]" css={outline}>
       <div><Header /></div>
       <div className="MapPageLayout__inline" css={inline}>{children}</div>
       <div><Footer /></div>
