@@ -1,8 +1,7 @@
+import React from "react"
+import { Link } from "react-router-dom";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Link } from "react-router-dom";
-import React from "react"
-import "../../Pager.scss";
 
 const Pic = () => {
 
@@ -14,7 +13,11 @@ const Pic = () => {
 
   return (
     <Link to={this.props.link}>
-      <img src={this.props.image} alt={this.props.introduction} css={outline} />
+      <img
+        src={this.props.image}
+        alt={this.props.introduction}
+        css={outline}
+      />
     </Link>
   );
 }
