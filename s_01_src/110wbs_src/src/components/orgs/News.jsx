@@ -16,6 +16,9 @@ const News = () => {
     margin: -116px auto 0px auto;
     padding: 50px;
     opacity: 0.5;
+    p {
+      text-align: left;
+    }
   `;
 
   const news__textA = css`
@@ -37,11 +40,12 @@ const News = () => {
   return (
     <div className="news--outline" css={news__outline}>
       <div className="news--inlineA" css={news__inlineA}>
-        <p className="news__textA" css={news__textA}>- <b>News</b>(Sample) -</p>
-          <p>
-            202x.xx.xx: サービスのローンチを行なった。<br />
-            202x.xx.xx: xx機能をリリースしました。<br />
-          </p>
+        <h1 className="news__textA" css={news__textA}>- <h1>News</h1>(Sample) -</h1>
+          <p>2022.12.14: Emotionを導入した。</p>
+          <p>2022.12.13: TailwindCSSを導入した。</p>
+          <p>2022.11.xx: Webコンテナでのマルチステージビルドに成功した。</p>
+          <p>2022.10.27: React上でのデータベースの値の表示に成功した。</p>
+          <p>2022.07.xx: CtoCサイトの開発に着手した。</p>
         <div className="news__textS" css={news__textS}></div>
         <div className="news__textS" css={news__textS}></div>
         <div className="news__textS" css={news__textS}></div>
@@ -54,10 +58,7 @@ const News = () => {
         <div className="news__textS" css={news__textS}></div>
         <div className="news__textS" css={news__textS}></div>
         <div className="news__textS" css={news__textS}></div>
-        <div className="news__textS" css={news__textS}></div>
-        <div className="news__textS" css={news__textS}></div>
-        <div className="news__textS" css={news__textS}></div>
-        <p className="news__textA" css={news__textA}>- <b>News</b>(Sample) -</p>
+        <h1 className="news__textA" css={news__textA}>- <h1>News</h1>(Sample) -</h1>
       </div>
     </div>
   )

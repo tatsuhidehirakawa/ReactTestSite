@@ -22,13 +22,14 @@ const Footer = () => {
   const inlineA = css`
     display: flex;
     height: 173px;
-    justify-content: space-between;
+    justify-content: space-evenly;
   `;
 
   const inlineB = css`
     bottom: 0;
     margin: 0px;
     height: 35px;
+    color: #e9e4d4;
     p {
       margin-top: 30px;
     }
@@ -51,20 +52,21 @@ const Footer = () => {
     flex-direction: column;
     line-height: 1.4;
     text-align: center;
-    margin: 15px 21px 5px 0px;
+    margin: 36px 88px 0px 0px;
   `;
 
   const footerSubtitle = css`
-    color: rgb(26, 24, 24);
+    color: #fffffc;
     text-decoration: none;
     text-shadow: 1px 2px 3px #808080;
   `;
 
   const footerMaintitle = css`
-    color: #203744;
+    color: #e9e4d4;
     text-decoration: none;
     text-shadow: 1px 2px 3px #808080;
     font-weight: bold;
+    margin-bottom: 10px;
   `;
 
   return (

@@ -70,13 +70,14 @@ init.dev.adm:
 
 
 
-rebuild.dev.wbs:
-	@docker stop 110wbs_dev
-	@docker rm 110wbs_dev
-	@docker rmi s_03_dev-110wbs_dev
-	# @docker rmi s_03_dev_110wbs_dev
-	@docker volume rm s_03_dev_wbs-vol
-	@make boot.dev.wbs
+recon.dev.wbs: ## Variable "c" is "_(Windows)" or "-(Mac)".
+	docker stop 110wbs_dev
+	docker rm 110wbs_dev
+	docker rmi s_03_dev$(a)110wbs_dev
+	docker volume rm s_03_dev_wbs-vol
+	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
+	docker compose --env-file ../dev.env up 110wbs_dev -d
+	@make init.tailwindcss
 	@make insert.code.wbs
 
 rebuild.dev.api:

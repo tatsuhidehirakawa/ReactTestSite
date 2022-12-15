@@ -55,7 +55,7 @@ const Offer = () => {
     height: 100%;
     width: 33%;
     background-color: #e9dfe5;
-    transform: translate(-15px, -15px);
+    transform: translate(-39px, -33px);
     border-radius: 15px 15px 15px 15px;
     filter: drop-shadow(9px 13px 7px rgba(0, 0, 0, 0.2));
   `;
