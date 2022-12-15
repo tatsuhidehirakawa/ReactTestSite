@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-function useFetch(url, config) {
-// const useFetch = (url, config) => {
+// function useFetch(url, config) {
+const useFetch = ( url, config ) => {
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
 
@@ -22,9 +22,12 @@ function useFetch(url, config) {
     fetchData();
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return { data, loading, error };
+  // return { data, isLoading, error };
+  return {
+    data: data,
+    isLoading: isLoading,
+    error: error,
+  };
 }
 
 export default useFetch;
-
-// L3をL$に書き換えた。
