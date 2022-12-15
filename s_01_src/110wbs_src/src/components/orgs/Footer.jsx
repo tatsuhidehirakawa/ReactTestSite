@@ -21,7 +21,7 @@ const Footer = () => {
 
   const inlineA = css`
     display: flex;
-    height: 173px;
+    height: 190px;
     justify-content: space-evenly;
   `;
 
@@ -31,7 +31,7 @@ const Footer = () => {
     height: 35px;
     color: #e9e4d4;
     p {
-      margin-top: 30px;
+      margin-top: 15px;
     }
   `;
 
