@@ -22,12 +22,12 @@ const useFetch = ( url, config ) => {
     fetchData();
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // return { data, isLoading, error };
-  return {
-    data: data,
-    isLoading: isLoading,
-    error: error,
-  };
+  return { data, isLoading, error };
+  // return {
+  //   data: data,
+  //   isLoading: isLoading,
+  //   error: error,
+  // };
 }
 
 export default useFetch;

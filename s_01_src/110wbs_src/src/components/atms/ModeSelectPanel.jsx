@@ -6,41 +6,41 @@ import { css } from "@emotion/react";
 // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 // import { fasharp } from "@fortawesome/free-solid-svg-icons";
 
+const outline = css`
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  filter: drop-shadow(0 0px 13px rgba(0, 0, 0, .5));
+  font-size: small;
+  height: 247px;
+  width: 280px;
+  position: fixed;
+  top: 10%;
+  right: 57px;
+  background-color: rgb(255, 255, 255);
+  z-index: 7;
+`;
+
+const inline = css`
+  margin: 6px 6px 6px 6px;
+  padding: 6px 6px 6px 12px;
+  width: 268px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: aqua;
+`;
+
+const inlineD = css`
+  font-size: small;
+  width: 28%;
+  padding-top: 15px;
+`;
+
+const inlineE = css`
+width: 11%;
+`;
+
 const ModeSelectPanel = () => {
-
-  const outline = css`
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    filter: drop-shadow(0 0px 13px rgba(0, 0, 0, .5));
-    font-size: small;
-    height: 247px;
-    width: 280px;
-    position: fixed;
-    top: 10%;
-    right: 57px;
-    background-color: rgb(255, 255, 255);
-    z-index: 7;
-  `;
-
-  const inline = css`
-    margin: 6px 6px 6px 6px;
-    padding: 6px 6px 6px 12px;
-    width: 268px;
-    border-radius: 10px;
-    text-align: left;
-    border-color: aqua;
-  `;
-
-  const inlineD = css`
-    font-size: small;
-    width: 28%;
-    padding-top: 15px;
-  `;
-
-  const inlineE = css`
-    width: 11%;
-  `;
 
   return (
     <div className="ModeSelectPanel--outline" css={outline}>

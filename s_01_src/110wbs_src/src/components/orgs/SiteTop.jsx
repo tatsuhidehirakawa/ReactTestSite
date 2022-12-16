@@ -19,49 +19,49 @@ const inlineB_text = css`
 `;
 
 const sitetop_outline = css`
-display: flex;
-flex-direction: column;
-width: 100%;
-position: absolute;
-padding: 0px 0px 237px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  padding: 0px 0px 237px 0px;
 `;
 
 const sitetop_inline = css`
-background: rgba(115, 255, 277, 0.3);
-display: flex;
-flex-direction: column;
+  background: rgba(115, 255, 277, 0.3);
+  display: flex;
+  flex-direction: column;
 `;
 
 const inlineA_text = css`
-filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
-width: 100%;
-height: 245px;
-margin: 17px 10px 38px 50px;
-text-align: left;
-font-size: 50px;
-color: white;
+  filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+  width: 100%;
+  height: 245px;
+  margin: 17px 10px 38px 50px;
+  text-align: left;
+  font-size: 50px;
+  color: white;
 `;
 
 const tile_sitetop = css`
-display: flex;
-filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
-margin: 0px 0px 0px 0px;
-padding: 10px 0px 0px 0px;
-overflow-y: scroll;        // Disable scroll bar.
--ms-overflow-style: none;  // Disable scroll bar.
-scrollbar-width: none;     // Disable scroll bar.
+  display: flex;
+  filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
+  margin: 0px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
+  // overflow-y: scroll;        // Disable scroll bar.
+  // -ms-overflow-style: none;  // Disable scroll bar.
+  // scrollbar-width: none;     // Disable scroll bar.
 `;
+
 const SiteTop = () => {
 
-  // カスタムフック（useFetch.js）を利用した記述
- 
   const url = "http://docker.for.mac.localhost:8080/accountAttribute/someGet";
+  const config = { method: "GET" };
   
-  const { data:data, isLoading:isLoading, error:error } = useFetch(url, {});
-
-  const { pro1: var1, pro2: var2 } = { pro1: 1, pro2: 2 };
-
+  const { data, isLoading, error } = useFetch(url, config);
   const [ posts, setPosts ] = useState([])
+
+  useEffect(() => {setPosts(data)}, [data])
+  console.log(data)
 
     if (isLoading) {
       return <h4>Loading...</h4>;
@@ -71,37 +71,31 @@ const SiteTop = () => {
       return <h4>Error Occured</h4>;
     }
 
-   return (
+  return (
     <div className="sitetop--outline" css={sitetop_outline}>
-      {/* <FetchComponent /> */}
-      {/* <Mapper style={{ backgroundColor: "rgba(0,0,0,0.74)" }} /> */}
-      {/* <FloatingActionPanel /> */}
-        <div className="sitetop--inline" css={sitetop_inline}>
-          <div className="sitetop--inlineA--text" css={inlineA_text}>
-            <p style={{fontSize: `90px`}}>Main Title</p><p>Subtitle</p>
-          </div>
-          <div className="sitetop--inlineB--text" css={inlineB_text}>
-            <p>人気急上昇のメンバー</p>
-          </div>
-          <div className="sitetop--inlineC--tiling contents_box" css={tile_sitetop}>
-
+      <div className="sitetop--inline" css={sitetop_inline}>
+        <div className="sitetop--inlineA--text" css={inlineA_text}>
+          <p style={{fontSize: `90px`}}>Main Title</p><p>Subtitle</p>
+        </div>
+        <div className="sitetop--inlineB--text" css={inlineB_text}>
+          <p>人気急上昇のメンバー</p>
+        </div>
+        <div className="sitetop--inlineC--tiling" css={tile_sitetop}>
           {posts.map((post) => {
             return (
-                <Card
-                  link={"../Coordinate"}
-                  image={post.rate.String}
-                  // introduction={productItem.introduction}
-                  name={post.self_introduction.String}
-                  location={post.facebook_uri.String}
-                  distance={post.twitter_uri.String}
-                  introduction={post.skill.String}
-                />
-                
+              <Card
+                link={"../Coordinate"}
+                image={post.rate}
+                // introduction={productItem.introduction}
+                name={post.self_introduction.String}
+                location={post.facebook_uri.String}
+                distance={post.twitter_uri.String}
+                introduction={post.skill.String}
+              />
             );
           })}
-
-          </div>
         </div>
+      </div>
     </div>
   );
 }

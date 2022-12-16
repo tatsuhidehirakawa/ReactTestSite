@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-const Pic = () => {
+const outline = css`
+  border-radius: 1rem;
+  width: 165px;
+  height: 165px;
+`;
 
-  const outline = css`
-    border-radius: 1rem;
-    width: 165px;
-    height: 165px;
-  `;
+const Pic = () => {
 
   return (
     <Link to={this.props.link}>

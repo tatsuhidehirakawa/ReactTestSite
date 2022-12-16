@@ -12,6 +12,69 @@ import { Link } from "react-router-dom";
 
 // import ApiFetch from '../../hooks/ApiFestch.jsx';
 
+const outline = css`
+  width: 900px;
+  height: 970px;
+  display:flex;
+  flex-flow: column;
+  background-color: white;
+  margin: 0px auto;
+  border-radius: 15px;
+  filter: drop-shadow(9px 13px 7px rgba(0, 0, 0, 0.2));
+`;
+
+const inlineA = css`
+  display: flex;
+  height: 33%;
+  width: 100%;
+  // background-color: gray;
+`;
+
+const boxA = css`
+  height: 100%;
+  width: 33%;
+  background-color: #e9dfe5;
+  transform: translate(-39px, -33px);
+  border-radius: 15px 15px 15px 15px;
+  filter: drop-shadow(9px 13px 7px rgba(0, 0, 0, 0.2));
+`;
+
+const boxB = css`
+  height: 100%;
+  width: 70%;
+  // background-color: blue;
+  // border-radius: 0px 15px 0px 0px;
+  text-align: left;
+  padding: 15px 20px 15px 20px;
+  // filter: drop-shadow(9px 13px 7px rgba(0, 0, 0, 0.2));
+`;
+
+const inlineB = css`
+  height: 34%;
+  width: 100%;
+  background-color: #eaf4fc;
+`;
+
+const inlineC = css`
+  height: 33%;
+  width: 100%;
+  // border-radius: 0px 0px 15px 15px;
+  // background-color: yellow;
+`;
+
+const boxC = css`
+  height: 100%;
+  width: 63%;
+`;
+
+const boxD = css`
+  height: 100%;
+  width: 37%;
+  z-index: 10;
+  // border-radius: 15px 15px 15px 15px;
+  transform: translate(567px, -320px);
+`;
+
 const Offer = () => {
 
   // const [posts, setPosts] = useState([])
@@ -32,69 +95,6 @@ const Offer = () => {
   //     //     console.log('ApiFetch.jsx: useEffect(): err: ', err)
   //     // });
   // },[])
-
-  const outline = css`
-    width: 900px;
-    height: 970px;
-    display:flex;
-    flex-flow: column;
-    background-color: white;
-    margin: 0px auto;
-    border-radius: 15px;
-    filter: drop-shadow(9px 13px 7px rgba(0, 0, 0, 0.2));
-  `;
-
-  const inlineA = css`
-    display: flex;
-    height: 33%;
-    width: 100%;
-    // background-color: gray;
-  `;
-
-  const boxA = css`
-    height: 100%;
-    width: 33%;
-    background-color: #e9dfe5;
-    transform: translate(-39px, -33px);
-    border-radius: 15px 15px 15px 15px;
-    filter: drop-shadow(9px 13px 7px rgba(0, 0, 0, 0.2));
-  `;
-
-  const boxB = css`
-    height: 100%;
-    width: 70%;
-    // background-color: blue;
-    // border-radius: 0px 15px 0px 0px;
-    text-align: left;
-    padding: 15px 20px 15px 20px;
-    // filter: drop-shadow(9px 13px 7px rgba(0, 0, 0, 0.2));
-  `;
-
-  const inlineB = css`
-    height: 34%;
-    width: 100%;
-    background-color: #eaf4fc;
-  `;
-
-  const inlineC = css`
-    height: 33%;
-    width: 100%;
-    // border-radius: 0px 0px 15px 15px;
-    // background-color: yellow;
-  `;
-
-  const boxC = css`
-    height: 100%;
-    width: 63%;
-  `;
-
-  const boxD = css`
-    height: 100%;
-    width: 37%;
-    z-index: 10;
-    // border-radius: 15px 15px 15px 15px;
-    transform: translate(567px, -320px);
-  `;
 
   return (
     <div className="Offer--outline" css={outline}>

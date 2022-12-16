@@ -5,69 +5,69 @@ import LogoA from '../atms/LogoA.jsx';
 import React from "react";
 // import "../../Pager.scss";
 
+const outline = css`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 237px;
+  // padding: 0% 17% 0% 6%;
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+  // @include frostedglass;
+`;
+
+const inlineA = css`
+  display: flex;
+  height: 190px;
+  justify-content: space-evenly;
+`;
+
+const inlineB = css`
+  bottom: 0;
+  margin: 0px;
+  height: 35px;
+  color: #e9e4d4;
+  p {
+    margin-top: 15px;
+  }
+`;
+
+const logoBox = css`
+  margin: 43px 0px 0px 90px;
+  float: left;
+  height: 100px;
+  width: 10%;
+  .logoInline {
+    height: 90px;
+  }
+`;
+
+const SectionBox = css`
+  width: 9%;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  text-align: center;
+  margin: 36px 88px 0px 0px;
+`;
+
+const footerSubtitle = css`
+  color: #fffffc;
+  text-decoration: none;
+  text-shadow: 1px 2px 3px #808080;
+`;
+
+const footerMaintitle = css`
+  color: #e9e4d4;
+  text-decoration: none;
+  text-shadow: 1px 2px 3px #808080;
+  font-weight: bold;
+  margin-bottom: 10px;
+`;
+
 const Footer = () => {
-
-  const outline = css`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 237px;
-    // padding: 0% 17% 0% 6%;
-    position: absolute;
-    bottom: 0;
-    z-index: 9;
-    // @include frostedglass;
-  `;
-
-  const inlineA = css`
-    display: flex;
-    height: 190px;
-    justify-content: space-evenly;
-  `;
-
-  const inlineB = css`
-    bottom: 0;
-    margin: 0px;
-    height: 35px;
-    color: #e9e4d4;
-    p {
-      margin-top: 15px;
-    }
-  `;
-
-  const logoBox = css`
-    margin: 43px 0px 0px 90px;
-    float: left;
-    height: 100px;
-    width: 10%;
-    .logoInline {
-      height: 90px;
-    }
-  `;
-
-  const SectionBox = css`
-    width: 9%;
-    height: 10px;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.4;
-    text-align: center;
-    margin: 36px 88px 0px 0px;
-  `;
-
-  const footerSubtitle = css`
-    color: #fffffc;
-    text-decoration: none;
-    text-shadow: 1px 2px 3px #808080;
-  `;
-
-  const footerMaintitle = css`
-    color: #e9e4d4;
-    text-decoration: none;
-    text-shadow: 1px 2px 3px #808080;
-    font-weight: bold;
-    margin-bottom: 10px;
-  `;
 
   return (
     <>

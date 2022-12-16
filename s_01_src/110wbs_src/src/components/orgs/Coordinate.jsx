@@ -7,14 +7,14 @@ import ModeSelectPanel from  '../atms/ModeSelectPanel.jsx';
 import AnnunciatorPanel from  '../atms/AnnunciatorPanel.jsx';
 import "../../Pager.scss";
 
-const Coordinate = () => {
+const outline = css`
+  position: absolute;
+  width: 100%;
+  height 1500px;
+  z-index: 3;
+`;
 
-  const outline = css`
-    position: absolute;
-    width: 100%;
-    height 1500px;
-    z-index: 3;
-  `;
+const Coordinate = () => {
 
   return (
     <div className="coodinate--outline" css={outline}>

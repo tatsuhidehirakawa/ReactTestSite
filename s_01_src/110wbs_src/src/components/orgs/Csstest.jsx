@@ -2,13 +2,13 @@
 import { css } from "@emotion/react";
 import React from "react"
 
-const Csstest = () => {
+const csstest_emotion = css`
+  color: fuchsia;
+  font-size: 20px;
+  text-align: center;
+`;
 
-  const csstest_emotion = css`
-    color: fuchsia;
-    font-size: 20px;
-    text-align: center;
-  `;
+const Csstest = () => {
 
   return (
     <>

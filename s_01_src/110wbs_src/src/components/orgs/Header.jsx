@@ -8,62 +8,62 @@ import Tags from '../mlcs/SearchBox.tsx';
 // import SignIn from './SignIn.jsx';
 import "../../Pager.scss";
 
+const headerHight = '69px'
+
+const outline = css`
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  height: ${headerHight};
+  z-index: 10;
+  width: 100%;
+  // box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+  background-color: rgba(76, 108, 179, 0.486);
+  backdrop-filter:blur(8px);
+  filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));  
+  // @include frostedglass;
+`;
+
+const sectionA = css`
+  display: flex;
+  margin: 0px 0px 0px 15px;
+  height: 69px;
+  width: 30%;
+`;
+
+const logo = css`
+  margin: 7px 0px 0px 15px;
+  height: 69px;
+  width: 19%;
+`;
+
+const boxB = css`
+  margin: 25px 0px 0px 0px;
+  width: 22%;
+`;
+
+const text = css`
+  margin: 0px 3px 3px 30px;
+  color: #fffffc;
+  padding: 0px 0px 10px 0px;
+  text-decoration: none;
+  text-shadow: 1px 2px 3px #808080;
+  cursor: pointer;
+`;
+
+const searchbox = css`
+  margin: 7px 33px 6px 33px
+`;
+
+const sectionC = css`
+  display: flex;
+  padding: 0px;
+  margin: 25px 110px 0px 0px;
+  width: 30%;
+`;
+
 const Header = () => {
-
-  const headerHight = '69px'
-
-  const outline = css`
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    height: ${headerHight};
-    z-index: 10;
-    width: 100%;
-    // box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
-    background-color: rgba(76, 108, 179, 0.486);
-    backdrop-filter:blur(8px);
-    filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));  
-    // @include frostedglass;
-  `;
-
-  const sectionA = css`
-    display: flex;
-    margin: 0px 0px 0px 15px;
-    height: 69px;
-    width: 30%;
-  `;
-
-  const logo = css`
-    margin: 7px 0px 0px 15px;
-    height: 69px;
-    width: 19%;
-  `;
-
-  const boxB = css`
-    margin: 25px 0px 0px 0px;
-    width: 22%;
-  `;
-
-  const text = css`
-    margin: 0px 3px 3px 30px;
-    color: #fffffc;
-    padding: 0px 0px 10px 0px;
-    text-decoration: none;
-    text-shadow: 1px 2px 3px #808080;
-    cursor: pointer;
-  `;
-
-  const searchbox = css`
-    margin: 7px 33px 6px 33px
-  `;
-
-  const sectionC = css`
-    display: flex;
-    padding: 0px;
-    margin: 25px 110px 0px 0px;
-    width: 30%;
-  `;
 
   return (
     <div className="header--outline" css={outline}>
