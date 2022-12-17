@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import React from "react"
+import User from "../../hooks/User"
 
 const mypage__outline = css`
   height: 701px;
@@ -46,6 +47,7 @@ const MyPage = () => {
         <div className="mypage__textS" css={mypage__textS}></div>
         <div className="mypage__textS" css={mypage__textS}></div>
         <div className="mypage__textS" css={mypage__textS}></div>
+        <User />
         <div className="mypage__textS" css={mypage__textS}></div>
         <div className="mypage__textS" css={mypage__textS}></div>
         <div className="mypage__textS" css={mypage__textS}></div>

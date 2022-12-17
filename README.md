@@ -5,7 +5,7 @@ It is a full-stack package for web development, focusing on the technology stack
 2. Technology stacks.  
 Common: Docker, GNU Make, VSCode, Git&Github, Mermaid.js.  
 Development environment: Air(Golang).  
--> Frontend: TypeScript, React.js, Sass, Html, Tailwind CSS, Emotion(String Styles), AtomicDesign, MindBEMding, MUI, Font Awesome.  
+-> Frontend: TypeScript, React.js, Sass, Html, TanStack Query, Tailwind CSS, Emotion(String Styles), AtomicDesign, MindBEMding, MUI, Font Awesome.  
 -> Backend: Go(Gin,sqlc), PostgreSQL, A5:SQL Mk-2.  
 Testing environment:  
 -> CircliCI  
