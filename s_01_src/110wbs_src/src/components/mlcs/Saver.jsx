@@ -11,11 +11,11 @@ const outline = css`
   -ms-transform: translate(-50%, -50%);
   position: absolute;
   // position: fixed;
-  height: 100vh;
+  height: 82vh;
   width: 240px;
-  top: 50%;
+  top: 45%;
   left: 163px;
-  height: 100%;
+  // height: 100%;
   margine-bottom: 237px;
   padding: 10px;
   `;
