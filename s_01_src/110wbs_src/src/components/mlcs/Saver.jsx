@@ -18,7 +18,7 @@ const outline = css`
   // height: 100%;
   margine-bottom: 237px;
   padding: 10px;
-  `;
+`;
 
 const fetchUsers = async () => {
   const res = await fetch('http://localhost:8080/accountAttribute/someGet');
