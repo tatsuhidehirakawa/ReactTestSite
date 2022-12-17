@@ -21,7 +21,7 @@ const outline = css`
 `;
 
 const fetchUsers = async () => {
-  const res = await fetch('http://localhost:8080/accountAttribute/someGet');
+  const res = await fetch('http://localhost:8080/offerList/someGet');
   return res.json();
 };
 
@@ -33,19 +33,22 @@ const Saver = () => {
     return <span>Loading...</span>;
   }
 
+  console.log(data)
+
   return (
     <div className="card--outline nonscrollbar content::-webkit-scrollbar" css={outline}>
-      {data.map((user) => {
+      {data.map((user, index) => {
         return (
-          <Card
-            link={"../Offer"}
-            image={user.rate.String}
-            // introduction={productItem.introduction}
-            name={user.self_introduction.String}
-            location={user.facebook_uri.String}
-            distance={user.twitter_uri.String}
-            introduction={user.skill.String}
-          />
+            <Card
+              // key={index.account_id}
+              link={"../Offer"}
+              image={user.offer_catagory.String}
+              // introduction={productItem.introduction}
+              name={user.offer_text}
+              location={user.offer_location.String}
+              distance={user.offer_severity.String}
+              introduction={user.offer_title.String}
+            />
         );
       })}
     </div>
