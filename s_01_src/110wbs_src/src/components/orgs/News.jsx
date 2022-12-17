@@ -41,8 +41,9 @@ const News = () => {
     <div className="news--outline" css={news__outline}>
       <div className="news--inlineA" css={news__inlineA}>
         <h1 className="news__textA" css={news__textA}>- <h1>News</h1>(Sample) -</h1>
-          <p>2022.12.14: Emotionを導入した。</p>
-          <p>2022.12.13: TailwindCSSを導入した。</p>
+          <p>2022.12.17: TanStack Queryを導入した。</p>
+          <p>2022.12.12: Emotionを導入した。</p>
+          <p>2022.12. 4: TailwindCSSを導入した。</p>
           <p>2022.11.xx: Webコンテナでのマルチステージビルドに成功した。</p>
           <p>2022.10.27: React上でのデータベースの値の表示に成功した。</p>
           <p>2022.07.xx: CtoCサイトの開発に着手した。</p>
