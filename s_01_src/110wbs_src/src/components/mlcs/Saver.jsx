@@ -20,19 +20,20 @@ const outline = css`
   padding: 10px;
 `;
 
+// React-Query ------------------------------------------------------
 const fetchUsers = async () => {
   const res = await fetch('http://localhost:8080/offerList/someGet');
   return res.json();
-};
+}; // ---------------------------------------------------------------
 
 const Saver = () => {
 
+  // React-Query-------------------------------------------
   const { data,isLoading } = useQuery('users', fetchUsers);
-
   if (isLoading) {
     return <span>Loading...</span>;
-  }
-
+  } // ----------------------------------------------------
+ 
   console.log(data)
 
   return (

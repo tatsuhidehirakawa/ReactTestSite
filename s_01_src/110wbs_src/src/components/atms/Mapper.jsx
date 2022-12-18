@@ -37,7 +37,7 @@ export const Mapper = () => {
       <Marker key={d.id} position={[ d.position[0], d.position[1] ]}>
         <Popup position={[ d.position[0], d.position[1] ]} icon={icon}>
         {/* <Popup position={[ d.position[0], d.position[1] ]}> */}
-          A pretty CSS3 popup. <br /> Easily customizable.
+          {/* A pretty CSS3 popup. <br /> Easily customizable. */}
           <div>
 						<h2>{d.name}</h2>
 						<small>{d.address}</small>

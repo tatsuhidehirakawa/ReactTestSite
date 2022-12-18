@@ -60,8 +60,13 @@ const SiteTop = () => {
   const { data, isLoading, error } = useFetch(url, config);
   const [ posts, setPosts ] = useState([])
 
-  useEffect(() => {setPosts(data)}, [data])
-  console.log(data)
+  useEffect(() => {
+    console.log(data)
+    if (data){
+      setPosts(data)
+    }
+    }, [data])
+  // console.log(data)
 
     if (isLoading) {
       return <h4>Loading...</h4>;
@@ -83,16 +88,16 @@ const SiteTop = () => {
         <div className="sitetop--inlineC--tiling" css={tile_sitetop}>
           {posts.map((post) => {
             return (
-            <div>{post.account_id}</div>
-              // <Card
-              //   link={"../Coordinate"}
-              //   image={post.rate.String}
-              //   // introduction={productItem.introduction}
-              //   name={post.self_introduction.String}
-              //   location={post.facebook_uri.String}
-              //   distance={post.twitter_uri.String}
-              //   introduction={post.skill}
-              // />
+            // <div>{post.account_id}</div>
+              <Card
+                link={"../Coordinate"}
+                image={post.rate.String}
+                // introduction={productItem.introduction}
+                name={post.self_introduction.String}
+                location={post.facebook_uri.String}
+                distance={post.twitter_uri.String}
+                introduction={post.skill}
+              />
             );
           })}
         </div>
