@@ -56,10 +56,10 @@ export const Mapper = () => {
         {/* <Popup position={[ d.offer_location.String[0], d.offer_location.String[1] ]}> */}
           {/* A pretty CSS3 popup. <br /> Easily customizable. */}
           <div>
-						<h2>{d.account_id}</h2>
-						<small>{d.offer_text}</small>
-						<p>{d.offer_title}</p>
-					</div>
+            <h2>{d.account_id}</h2>
+            <small>{d.offer_text}</small>
+            <p>{d.offer_title}</p>
+          </div>
         </Popup>
       </Marker>
     ))}
