@@ -13,8 +13,6 @@ $RecruitBackgroundColor: #bed2c3;
 $CompanyBackgroundColor: #bed2c3;
 $PrivacyBackgroundColor: #bed2c3;
 
-
-
 $header__height: 69px;
 $footer__height: 237px;
 
@@ -22,7 +20,6 @@ $footer__height: 237px;
   $header__height: 300px;
   $footer__height: 300px;
 }
-
 
 .layout--outline__violet {
   // background-color: $layout--outline__color;
@@ -37,6 +34,21 @@ $layout--outline__color: #dbd0e6;
 
 
 $color-header: #ffffff;
+
+
+
+.nonscrollbar {
+  overflow-x: scroll;
+  /*スクロールバー非表示（IE・Edge）*/
+  -ms-overflow-style: none;
+  /*スクロールバー非表示（Firefox）*/
+  scrollbar-width: none;
+}
+  /*スクロールバー非表示（Chrome・Safari）*/
+.content::-webkit-scrollbar{
+  display:none;
+}
+
 
 // スクロールバーを消す操作
 .contents_box::-webkit-scrollbar{
@@ -98,10 +110,25 @@ $color-header: #ffffff;
   border-radius: 30px;
 }
 
-// Frosted Glass Effect
+// Frosted Glass Effect -------------------------------------------------------------------
 @mixin frostedglass {
   // background-color: rgba(255,255,255,0.2);
-  background-color: rgba(125, 194, 68, 0.486);
+  background-color: rgba(76, 108, 179, 0.486);
   backdrop-filter:blur(8px);
   filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
 }
+
+.header--Outline {
+  @include frostedglass;
+}
+
+.footer--Outline {
+  @include frostedglass;
+}
+
+// ---------------------------------------------------------------------------------------
+
+
+    // background-color: rgba(125, 194, 68, 0.486);
+    // backdrop-filter:blur(8px);
+    // filter: drop-shadow(3px 3px 9px rgba(0,0,0,0.6));
