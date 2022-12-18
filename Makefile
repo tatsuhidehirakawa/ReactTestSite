@@ -17,6 +17,15 @@ init.stg: ## Booting only backend staging containers.
 	cd s_06_tst && make init.stg
 
 #---[ 3. Tst env boot ]------------------------------------------------
+
+boot.all:
+	make boot.dev
+	make boot.tst
+	# make boot.stg
+
+boot.dev:
+	cd s_03_dev && make boot.dev
+
 boot.api.a:
 	docker build -f s_05_tst/120api_tst/Dockerfile -t 120api_tst s_01_src/124api_src/src
 	cd s_05_tst && docker compose up 120api_tst

@@ -19,7 +19,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 const data = require('./data.json');
 
-export const Mapper = () => {
+export const MapB = () => {
   // var marker = L.marker([33.852, 130.89]).addTo(mymap);
   return (
     // <div className="w-full h-full">
@@ -27,7 +27,7 @@ export const Mapper = () => {
       center={[33.852, 130.89]}
       zoom={15}
       scrollWheelZoom={false}
-      style={{ height: "100vh", width: "100%", zIndex: "1", position: "relative"}}
+      style={{ height: "100%", width: "100%", zIndex: "1", position: "relative", borderRadius: "0px 0px 15px 0px"}}
     >
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -37,7 +37,7 @@ export const Mapper = () => {
       <Marker key={d.id} position={[ d.position[0], d.position[1] ]}>
         <Popup position={[ d.position[0], d.position[1] ]} icon={icon}>
         {/* <Popup position={[ d.position[0], d.position[1] ]}> */}
-          {/* A pretty CSS3 popup. <br /> Easily customizable. */}
+          A pretty CSS3 popup. <br /> Easily customizable.
           <div>
 						<h2>{d.name}</h2>
 						<small>{d.address}</small>

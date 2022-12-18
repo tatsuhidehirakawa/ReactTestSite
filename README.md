@@ -1,11 +1,11 @@
 ## Personal Development Practice Repository (use STGprd environment)
 1. Overview  
-It is a full-stack package for web development, focusing on the technology stack presented in the next chapter. It is optimized primarily as a template for creating large-scale CtoC sites. In particular, it is RESTful, does not use CSS-in-JS, minimizes Paas dependencies, emphasizes orthogonality and loose coupling, static typing, and Docker usage.  
+It is a full-stack package for web development, focusing on the technology stack presented in the next chapter. It is optimized primarily as a template for creating large-scale CtoC sites. In particular, it is RESTful, minimizes Paas dependencies, emphasizes orthogonality and loose coupling, static typing, and Docker usage.  
 
 2. Technology stacks.  
 Common: Docker, GNU Make, VSCode, Git&Github, Mermaid.js.  
 Development environment: Air(Golang).  
--> Frontend: TypeScript, React.js, Sass, Html, Tailwind CSS, AtomicDesign, MindBEMding, MUI, Font Awesome.  
+-> Frontend: TypeScript, React.js, Sass, Html, TanStack Query, Tailwind CSS, Emotion(String Styles), AtomicDesign, MindBEMding, MUI, Font Awesome.  
 -> Backend: Go(Gin,sqlc), PostgreSQL, A5:SQL Mk-2.  
 Testing environment:  
 -> CircliCI  

@@ -5,7 +5,7 @@ import Footer from "../orgs/Footer";
 
 const TopPageLayout = ({children}) => {
   return (
-    <div className="top-0	flex relative min-h-screen flex-col">
+    <div className="top-0	flex relative min-h-screen flex-col bg-[#fbfaf5]">
       <div><Header /></div>
       <div className="justify-center mt-[69px] mb-[237px]">{children}</div>
       <div><Footer /></div>
