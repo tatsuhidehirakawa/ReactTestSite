@@ -4,8 +4,9 @@ import { css } from "@emotion/react";
 import Card from "../mlcs/Card";
 // import Pic from "../atms/Pic";
 import React, { useState, useEffect } from 'react';
-import useFetch from '../../hooks/useFetch';
+// import useFetch from '../../hooks/useFetch';
 // import { Mapper } from "../atms/Mapper";
+import { useQuery } from 'react-query';
 
 const inlineB_text = css`
   font-size: 21px;
@@ -52,29 +53,19 @@ const tile_sitetop = css`
   // scrollbar-width: none;     // Disable scroll bar.
 `;
 
+// React-Query ------------------------------------------------------
+const fetchUsers = async () => {
+  const res = await fetch('http://localhost:8080/offerList/someGet');
+  return res.json();
+}; // ---------------------------------------------------------------
+
 const SiteTop = () => {
 
-  const url = "http://docker.for.mac.localhost:8080/accountAttribute/someGet";
-  const config = { method: "GET" };
-  
-  const { data, isLoading, error } = useFetch(url, config);
-  const [ posts, setPosts ] = useState([])
-
-  useEffect(() => {
-    console.log(data)
-    if (data){
-      setPosts(data)
-    }
-    }, [data])
-  // console.log(data)
-
-    if (isLoading) {
-      return <h4>Loading...</h4>;
-    }
-    if (error) {
-      alert(error);
-      return <h4>Error Occured</h4>;
-    }
+  // React-Query-------------------------------------------
+  const { data,isLoading } = useQuery('users', fetchUsers);
+  if (isLoading) {
+    return <span>Loading...</span>;
+  } // ----------------------------------------------------
 
   return (
     <div className="sitetop--outline" css={sitetop_outline}>
@@ -86,18 +77,20 @@ const SiteTop = () => {
           <p>人気急上昇のメンバー</p>
         </div>
         <div className="sitetop--inlineC--tiling" css={tile_sitetop}>
-          {posts.map((post) => {
-            return (
-            // <div>{post.account_id}</div>
-              <Card
-                link={"../Coordinate"}
-                image={post.rate.String}
-                // introduction={productItem.introduction}
-                name={post.self_introduction.String}
-                location={post.facebook_uri.String}
-                distance={post.twitter_uri.String}
-                introduction={post.skill}
-              />
+          {data.map((post) => {
+          return (
+          // {data.filter((post, index) => {
+          // return index.Slice(0, 5)(
+            <div>{post.account_id}</div>
+              // <Card
+              //   link={"../Coordinate"}
+              //   image={post.rate.String}
+              //   // introduction={productItem.introduction}
+              //   name={post.self_introduction.String}
+              //   location={post.facebook_uri.String}
+              //   distance={post.twitter_uri.String}
+              //   introduction={post.skill}
+              // />
             );
           })}
         </div>
