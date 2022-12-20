@@ -58,6 +58,24 @@ insert.code.wbs:
 	@docker cp ../s_01_src/110wbs_src/public $(WBS_CONT):usr/src/app
 	@docker cp ../s_01_src/110wbs_src/src $(WBS_CONT):usr/src/app
 
+init.gqlgen:
+	@docker container exec -it $(API_CONT) go get -u github.com/99designs/gqlgen@latest
+	@docker container exec -it $(API_CONT) go run github.com/99designs/gqlgen init
+	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/main.go $(API_CONT):/go/src
+	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/resolver.go $(API_CONT):/go/src/graph
+	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/schema.resolvers.go $(API_CONT):/go/src/graph
+	@docker container exec -it $(API_CONT) go get
+	@docker container exec -it $(API_CONT) go run ./server.go
+
+# init.gqlgen:
+# 	@docker container exec -it $(API_CONT) go get github.com/99designs/gqlgen
+# 	@docker container exec -it $(API_CONT) go run github.com/99designs/gqlgen init
+# 	@docker cp ../s_03_dev/$(API_CONT)/gqlgen.yml $(API_CONT):/go/src
+# 	@docker cp ../s_03_dev/$(API_CONT)/schema.graphql $(API_CONT):/go/src
+# 	@docker cp ../s_03_dev/$(API_CONT)/resolver.go $(API_CONT):/go/src
+# 	@docker restart $(API_CONT)
+
+
 init.tailwindcss:
 	@docker container exec -it $(WBS_CONT) npm install -D tailwindcss@3.2.4 postcss@8.4.19 autoprefixer@10.4.13
 	@docker cp ../s_03_dev/$(WBS_CONT)/TailwindCSS/postcss.config.js $(WBS_CONT):usr/src/app
