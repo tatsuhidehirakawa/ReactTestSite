@@ -1,4 +1,26 @@
 
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor user
+    user->>LandingPage:Access
+    participant LandingPage
+    participant Logon
+    LandingPage->>Logon: Signin
+    Logon->>Logon: Signin Validation Check
+    LandingPage->>registration: Signup
+    Logon->>TopPage: Automatic screen transitions
+    registration->>TopPage:Automatic screen transitions
+    registration->>registration: Signup Validation Check
+    participant s5 as Map
+    participant s6 as registration
+    participant admin as TopPage
+
+    Note left of form: ID & Pass
+```
+
+
 1. Screen transition diagram
 ```mermaid
 flowchart LR
