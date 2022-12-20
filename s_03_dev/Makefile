@@ -1,4 +1,5 @@
 WBS_DEV:=110wbs_dev
+# API_DEV:=124api_dev
 API_DEV:=125gql_dev
 DBS_DEV:=134dbs_dev
 # CONNECTOR:=_   ## for Windows
@@ -60,7 +61,7 @@ init.tailwindcss:
 	@docker restart $(WBS_DEV)
 
 insert.data.dbs:
-	@docker exec -it $(DBS_DEV) /usr/src/dbstore/pg_restore.sh backup_20221217162111_$(DBS_DEV).sql bash
+	@docker exec -it $(DBS_DEV) /usr/src/dbstore/pg_restore.sh backup_20221219022656_134dbs_dev.sql bash
 
 eject.data.wbs:
 	@docker cp $(WBS_DEV):usr/src/app/ ../s_01_src/110wbs_src/
