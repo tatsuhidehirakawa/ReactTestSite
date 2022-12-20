@@ -3,9 +3,10 @@
 #---[ 0. custom params ]-----------------------------------------------
 
 WBS_CONT:=110wbs_dev
-API_CONT:=124api_dev  ## REST API Server
-# API_CONT:=125api_dev    ## GraphQL Server
+# API_CONT:=124api_dev  ## REST API Server
+API_CONT:=125api_dev    ## GraphQL Server
 DBS_CONT:=134dbs_dev
+
 # CONNECTOR:=_          ## for Windows
 CONNECTOR:=-            ## for Mac
 BACKUP_DATA:=backup_20221219022656_134dbs_dev.sql
@@ -74,7 +75,7 @@ eject.data.dbs:
 	docker exec -it $(DBS_CONT) /usr/src/dbstore/pg_dump.sh $(DBS_CONT) bash
 
 eject.data.api:
-	@docker cp $(API_CONT):/go/src ../s_01_src/124api_src
+	@docker cp $(API_CONT):/go/src ../s_01_src/125api_src
 
 init.dev.adm:
 	docker compose --env-file $(PASS_DEV_ENV) up 135adm_dev -d

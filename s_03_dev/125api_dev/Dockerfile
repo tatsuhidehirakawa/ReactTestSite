@@ -12,6 +12,10 @@ COPY . .
 
 RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
 
+# # gqlgen
+# RUN go get -u github.com/99designs/gqlgen@v0.17.5
+# RUN go run github.com/99designs/gqlgen init
+
 # sqlc
 RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
 RUN go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
