@@ -3,6 +3,8 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import { useQuery } from 'react-query';
+
 // import L from 'leaflet'
 // delete L.Icon.Default.prototype._getIconUrl;
 
@@ -17,10 +19,26 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-const data = require('./data.json');
+// const data = require('./data.json');
+
+// React-Query ------------------------------------------------------
+const fetchUsers = async () => {
+  const res = await fetch('http://localhost:8080/offerList/someGet');
+  return res.json();
+}; // ---------------------------------------------------------------
 
 export const Mapper = () => {
+
+  // React-Query-------------------------------------------
+  const { data,isLoading } = useQuery('users', fetchUsers);
+  if (isLoading) {
+    return <span>Loading...</span>;
+  } // ----------------------------------------------------
+
   // var marker = L.marker([33.852, 130.89]).addTo(mymap);
+
+  console.log(data)
+
   return (
     // <div className="w-full h-full">
     <MapContainer
@@ -34,18 +52,18 @@ export const Mapper = () => {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     {data.map((d) => (
-      <Marker key={d.id} position={[ d.position[0], d.position[1] ]}>
-        <Popup position={[ d.position[0], d.position[1] ]} icon={icon}>
-        {/* <Popup position={[ d.position[0], d.position[1] ]}> */}
+        <Marker key={d.offer_id} position={d.offer_location.String.split(",")}>
+        <Popup position={d.offer_location.String.split(",")} icon={icon}>
+          {/* <Popup position={[ d.offer_location.String[0], d.offer_location.String[1] ]}> */}
           {/* A pretty CSS3 popup. <br /> Easily customizable. */}
           <div>
-						<h2>{d.name}</h2>
-						<small>{d.address}</small>
-						<p>{d.description}</p>
-					</div>
+            <h2>{d.account_id}</h2>
+            <small>{d.offer_text}</small>
+            <p>{d.offer_title}</p>
+          </div>
         </Popup>
       </Marker>
-    ))}
+  ))}
     </MapContainer>
     // </div>
   )
