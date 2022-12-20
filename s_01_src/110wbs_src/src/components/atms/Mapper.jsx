@@ -3,9 +3,10 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import { useQuery } from 'react-query';
+
 // import L from 'leaflet'
 // delete L.Icon.Default.prototype._getIconUrl;
-import { useQuery } from 'react-query';
 
 // L.Icon.Default.mergeOptions({
 //     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
@@ -51,9 +52,9 @@ export const Mapper = () => {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     {data.map((d) => (
-      <Marker key={d.offer_id} position={[ d.offer_location[0].String, d.offer_location[1].String ]}>
-        <Popup position={[ d.offer_location[0].String, d.offer_location[1].String ]} icon={icon}>
-        {/* <Popup position={[ d.offer_location.String[0], d.offer_location.String[1] ]}> */}
+        <Marker key={d.offer_id} position={d.offer_location.String.split(",")}>
+        <Popup position={d.offer_location.String.split(",")} icon={icon}>
+          {/* <Popup position={[ d.offer_location.String[0], d.offer_location.String[1] ]}> */}
           {/* A pretty CSS3 popup. <br /> Easily customizable. */}
           <div>
             <h2>{d.account_id}</h2>
@@ -62,16 +63,8 @@ export const Mapper = () => {
           </div>
         </Popup>
       </Marker>
-    ))}
+  ))}
     </MapContainer>
     // </div>
   )
 };
-
-
-// json            database
-// id          -> offer_id
-// name        -> account_id
-// address     -> offer_text
-// description -> offer_title
-// position    -> offer_location.String

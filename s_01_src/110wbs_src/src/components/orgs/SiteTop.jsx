@@ -67,6 +67,8 @@ const SiteTop = () => {
     return <span>Loading...</span>;
   } // ----------------------------------------------------
 
+  console.log(data)
+
   return (
     <div className="sitetop--outline" css={sitetop_outline}>
       <div className="sitetop--inline" css={sitetop_inline}>
