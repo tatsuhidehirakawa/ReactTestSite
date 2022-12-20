@@ -79,20 +79,20 @@ const SiteTop = () => {
           <p>人気急上昇のメンバー</p>
         </div>
         <div className="sitetop--inlineC--tiling" css={tile_sitetop}>
-          {data.map((post) => {
+          {data.map((user) => {
           return (
           // {data.filter((post, index) => {
           // return index.Slice(0, 5)(
-            <div>{post.account_id}</div>
-              // <Card
-              //   link={"../Coordinate"}
-              //   image={post.rate.String}
-              //   // introduction={productItem.introduction}
-              //   name={post.self_introduction.String}
-              //   location={post.facebook_uri.String}
-              //   distance={post.twitter_uri.String}
-              //   introduction={post.skill}
-              // />
+            // <div>{post.account_id}</div>
+              <Card
+                link={"../Coordinate"}
+                image={user.offer_catagory.String}
+                // introduction={productItem.introduction}
+                name={user.offer_text}
+                location={user.offer_location.String}
+                distance={user.offer_severity.String}
+                introduction={user.offer_title.String}
+              />
             );
           })}
         </div>
