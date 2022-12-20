@@ -58,7 +58,7 @@ services:
     env_file: ../dev.env
     tty: true
     volumes:
-      - ../s_01_src/125api_src/src:/go/src # Activate for ShellScript Operation.
+      # - ../s_01_src/125api_src/src:/go/src # Activate for ShellScript Operation.
       - api-vol:/go/src # Activate for Dockerfile Opration.
     ports:
       - "8080:8080"

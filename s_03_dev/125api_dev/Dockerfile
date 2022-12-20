@@ -4,25 +4,25 @@ WORKDIR /go/src
 # COPY pkgset.sh /usr/local/bin
 # CMD pkgset.sh
 
-# COPY ../../s_03_dev/124api_dev/go.mod ./
-# COPY ../../s_03_dev/124api_dev/go.sum ./
+# COPY ../../../s_03_dev/125api_dev/go.mod .
+# COPY ../../../s_03_dev/125api_dev/go.sum .
 # RUN go mod download
 
 COPY . .
 
-RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
+# RUN go mod init github.com/tatsuhidehirakawa/STGprd_devpkg
 
 # # gqlgen
 # RUN go get -u github.com/99designs/gqlgen@v0.17.5
 # RUN go run github.com/99designs/gqlgen init
 
-# sqlc
-RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
+# # sqlc
+# RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
 RUN go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
 RUN sqlc generate --file sqlc/sqlc.yaml
 
 # Air
-RUN go get -u github.com/cosmtrek/air
+# RUN go get -u github.com/cosmtrek/air
 RUN go install github.com/cosmtrek/air@latest
 RUN which air
 RUN air init
