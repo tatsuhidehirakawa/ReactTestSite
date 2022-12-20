@@ -62,6 +62,7 @@ init.gqlgen:
 	@docker container exec -it $(API_CONT) go get -u github.com/99designs/gqlgen@latest
 	@docker container exec -it $(API_CONT) go run github.com/99designs/gqlgen init
 	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/main.go $(API_CONT):/go/src
+	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/server.go $(API_CONT):/go/src
 	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/resolver.go $(API_CONT):/go/src/graph
 	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/schema.resolvers.go $(API_CONT):/go/src/graph
 	@docker container exec -it $(API_CONT) go get
