@@ -38,7 +38,7 @@ const Saver = () => {
 
   return (
     <div className="card--outline nonscrollbar content::-webkit-scrollbar" css={outline}>
-      {data.map((user, index) => {
+      {data.map((user) => {
         return (
             <Card
               // key={index.account_id}
