@@ -43,6 +43,7 @@ boot.dev.dbs: ## Booting only frontend devlopment containers.
 
 boot.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file $(PASS_DEV_ENV) up $(API_CONT) -d
+	@make init.gqlgen
 
 boot.dev.wbs: ## Initilazing only frontend devlopment containers.
 	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
@@ -59,14 +60,17 @@ insert.code.wbs:
 	@docker cp ../s_01_src/110wbs_src/src $(WBS_CONT):usr/src/app
 
 init.gqlgen:
-	@docker container exec -it $(API_CONT) go get -u github.com/99designs/gqlgen@latest
-	@docker container exec -it $(API_CONT) go run github.com/99designs/gqlgen init
-	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/main.go $(API_CONT):/go/src
-	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/server.go $(API_CONT):/go/src
-	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/resolver.go $(API_CONT):/go/src/graph
-	@docker cp ../s_03_dev/$(API_CONT)/GraphQL/schema.resolvers.go $(API_CONT):/go/src/graph
-	@docker container exec -it $(API_CONT) go get
-	@docker container exec -it $(API_CONT) go run ./server.go
+	@docker container exec -it 125api_dev go get -u github.com/99designs/gqlgen@latest
+	@docker container exec -it 125api_dev go run github.com/99designs/gqlgen init
+	@docker container exec -it 125api_dev mkdir graph/generated
+	@docker container exec -it 125api_dev mv graph/generated.go graph/generated/generated.go
+	@docker cp ../s_03_dev/125api_dev/GraphQL/main.go 125api_dev:/go/src
+	@docker cp ../s_03_dev/125api_dev/GraphQL/server.go 125api_dev:/go/src
+	@docker cp ../s_03_dev/125api_dev/GraphQL/resolver.go 125api_dev:/go/src/graph
+	@docker cp ../s_03_dev/125api_dev/GraphQL/schema.resolvers.go 125api_dev:/go/src/graph
+	@docker cp ../s_03_dev/125api_dev/GraphQL/generated.go 125api_dev:/go/src/graph/generated
+	@docker container exec -it 125api_dev go get
+	@docker container exec -itd 125api_dev go run ./server.go
 
 # init.gqlgen:
 # 	@docker container exec -it $(API_CONT) go get github.com/99designs/gqlgen
