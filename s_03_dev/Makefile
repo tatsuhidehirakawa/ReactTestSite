@@ -1,11 +1,15 @@
-WBS_DEV:=110wbs_dev
-# API_DEV:=124api_dev
-API_DEV:=125gql_dev
-DBS_DEV:=134dbs_dev
-# CONNECTOR:=_   ## for Windows
-CONNECTOR:=-   ## for Mac
-
 #.PHONY:
+
+#---[ 0. custom params ]-----------------------------------------------
+
+WBS_CONT:=110wbs_dev
+API_CONT:=124api_dev  ## REST API Server
+# API_CONT:=125api_dev    ## GraphQL Server
+DBS_CONT:=134dbs_dev
+# CONNECTOR:=_          ## for Windows
+CONNECTOR:=-            ## for Mac
+BACKUP_DATA:=backup_20221219022656_134dbs_dev.sql
+PASS_DEV_ENV:=../dev.env
 
 #---[ 1. system initialize ]-----------------------------------------------
 
@@ -16,13 +20,13 @@ init.dev: ## Initializing only frontend devlopment containers.
 	@echo "Succeful initializing devlopment environment!"
 
 init.dev.dbs: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../dev.env up $(DBS_DEV) -d
+	docker compose --env-file $(PASS_DEV_ENV) up $(DBS_CONT) -d
 
 init.dev.api: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../dev.env up $(API_DEV) -d
+	docker compose --env-file $(PASS_DEV_ENV) up $(API_CONT) -d
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
-	docker compose --env-file ../dev.env up $(WBS_DEV) -d
+	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
 
 #---[ 2. system booting ]-----------------------------------------------
 
@@ -34,13 +38,13 @@ boot.dev:
 	@echo "Succeful booting devlopment environment!"
 
 boot.dev.dbs: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../dev.env up $(DBS_DEV) -d
+	docker compose --env-file $(PASS_DEV_ENV) up $(DBS_CONT) -d
 
 boot.dev.api: ## Booting only frontend devlopment containers.
-	docker compose --env-file ../dev.env up $(API_DEV) -d
+	docker compose --env-file $(PASS_DEV_ENV) up $(API_CONT) -d
 
 boot.dev.wbs: ## Initilazing only frontend devlopment containers.
-	docker compose --env-file ../dev.env up $(WBS_DEV) -d
+	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
 	@make init.tailwindcss
 
 set.code.dev:
@@ -50,47 +54,47 @@ set.code.dev:
 #---[ 3. Container manipulation. ]-------------------------------------------
 
 insert.code.wbs:
-	@docker cp ../s_01_src/110wbs_src/public $(WBS_DEV):usr/src/app
-	@docker cp ../s_01_src/110wbs_src/src $(WBS_DEV):usr/src/app
+	@docker cp ../s_01_src/110wbs_src/public $(WBS_CONT):usr/src/app
+	@docker cp ../s_01_src/110wbs_src/src $(WBS_CONT):usr/src/app
 
 init.tailwindcss:
-	@docker container exec -it $(WBS_DEV) npm install -D tailwindcss@3.2.4 postcss@8.4.19 autoprefixer@10.4.13
-	@docker cp ../s_03_dev/$(WBS_DEV)/TailwindCSS/postcss.config.js $(WBS_DEV):usr/src/app
-	@docker cp ../s_03_dev/$(WBS_DEV)/TailwindCSS/tailwind.config.js $(WBS_DEV):usr/src/app
-	@docker cp ../s_03_dev/$(WBS_DEV)/TailwindCSS/index.css $(WBS_DEV):usr/src/app/src
-	@docker restart $(WBS_DEV)
+	@docker container exec -it $(WBS_CONT) npm install -D tailwindcss@3.2.4 postcss@8.4.19 autoprefixer@10.4.13
+	@docker cp ../s_03_dev/$(WBS_CONT)/TailwindCSS/postcss.config.js $(WBS_CONT):usr/src/app
+	@docker cp ../s_03_dev/$(WBS_CONT)/TailwindCSS/tailwind.config.js $(WBS_CONT):usr/src/app
+	@docker cp ../s_03_dev/$(WBS_CONT)/TailwindCSS/index.css $(WBS_CONT):usr/src/app/src
+	@docker restart $(WBS_CONT)
 
 insert.data.dbs:
-	@docker exec -it $(DBS_DEV) /usr/src/dbstore/pg_restore.sh backup_20221219022656_134dbs_dev.sql bash
+	@docker exec -it $(DBS_CONT) /usr/src/dbstore/pg_restore.sh $(BACKUP_DATA) bash
 
 eject.data.wbs:
-	@docker cp $(WBS_DEV):usr/src/app/ ../s_01_src/110wbs_src/
+	@docker cp $(WBS_CONT):usr/src/app/ ../s_01_src/110wbs_src/
 
 eject.data.dbs:
-	docker exec -it $(DBS_DEV) /usr/src/dbstore/pg_dump.sh $(DBS_DEV) bash
+	docker exec -it $(DBS_CONT) /usr/src/dbstore/pg_dump.sh $(DBS_CONT) bash
 
 eject.data.api:
-	@docker cp $(API_DEV):/go/src ../s_01_src/124api_src
+	@docker cp $(API_CONT):/go/src ../s_01_src/124api_src
 
 init.dev.adm:
-	docker compose --env-file ../dev.env up 135adm_dev -d
+	docker compose --env-file $(PASS_DEV_ENV) up 135adm_dev -d
 
 
 
 recon.dev.wbs: ## Variable "c" is "_(Windows)" or "-(Mac)".
-	docker stop $(WBS_DEV)
-	docker rm $(WBS_DEV)
-	docker rmi s_03_dev$(CONNECTOR)$(WBS_DEV)
+	docker stop $(WBS_CONT)
+	docker rm $(WBS_CONT)
+	docker rmi s_03_dev$(CONNECTOR)$(WBS_CONT)
 	docker volume rm s_03_dev_wbs-vol
-	docker compose --env-file ../dev.env build $(WBS_DEV) --no-cache
-	docker compose --env-file ../dev.env up $(WBS_DEV) -d
+	docker compose --env-file $(PASS_DEV_ENV) build $(WBS_CONT) --no-cache
+	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
 	@make init.tailwindcss
 	@make insert.code.wbs
 
 rebuild.dev.api:
-	@docker stop $(API_DEV)
-	@docker rm $(API_DEV)
-	@docker rmi s_03_dev-$(API_DEV)
+	@docker stop $(API_CONT)
+	@docker rm $(API_CONT)
+	@docker rmi s_03_dev-$(API_CONT)
 	@docker volume rm s_03_dev_api-vol
 	# @make init.dev.api
 
@@ -164,11 +168,11 @@ look.crlf.wbs:
 	@cd s_03_dev/110wbs_dev && cat -e *.sh
 
 look.crlf.api:
-	@cd s_03_dev/$(API_DEV) && cat -e *.sh
+	@cd s_03_dev/$(API_CONT) && cat -e *.sh
 
 rplccrlf/all:
 	@cd s_03_dev/110wbs_dev && sed -i 's/\r//' *.sh
-	@cd s_03_dev/$(API_DEV) && sed -i 's/\r//' *.sh
+	@cd s_03_dev/$(API_CONT) && sed -i 's/\r//' *.sh
 
 yyyyyyy:
 	@docker exec -it k_904set_dev-214api_dev-1 bash
@@ -224,7 +228,7 @@ exec:
 
 
 chmod:
-	@cd s_03_dev && cd $(API_DEV) && ls -la && chmod 775 pkgset.sh && ls -la
+	@cd s_03_dev && cd $(API_CONT) && ls -la && chmod 775 pkgset.sh && ls -la
 	@cd s_03_dev && cd 110wbs_dev && ls -la && chmod 775 strset.sh && ls -la
 	@cd k_03_tst && cd 130dbs_tst && ls -la && chmod 775 pg_dump.sh && ls -la
 	@cd k_03_tst && cd 130dbs_tst && ls -la && chmod 775 pg_restore.sh && ls -la
