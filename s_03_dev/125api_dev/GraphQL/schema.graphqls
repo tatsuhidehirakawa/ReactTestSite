@@ -1,58 +1,58 @@
-# GraphQL schema example
+# GraphQL schema for STGprd_devpkg
 #
 # https://gqlgen.com/getting-started/
 
-type account_master {
-  account_id: ID!
-  account_name: String!
-  mail_addless: Boolean!
-  password: User!
-  zip_code: User!
-  barth_date: User!
-  time_zone: User!
-  language: User!
-  registration_date: User!
-  create_date: User!
-  update_date: User!
+type AccountMaster {
+  accountId: ID!
+  accountName: String!
+  mailAddless: String!
+  password: String!
+  zipCode: String!
+  barthDate: String!
+  timeZone: String!
+  language: String!
+  registrationDate: String!
+  createDate: String!
+  updateDate: String!
 }
 
-type account_attribute {
-  account_id: ID!
-  self_introduction: String!
-  twitter_uri: String!
-  facebook_uri: String!
-  instagram_uri: String!
-  youtube_channel_uri: String!
+type AccountAttribute {
+  accountId: ID!
+  selfIntroduction: String!
+  twitterUri: String!
+  facebookUri: String!
+  instagramUri: String!
+  youtubeChannelUri: String!
   skill: String!
   rate: String!
   status: String!
-  create_date: String!
-  update_date: String!
+  createDate: String!
+  updateDate: String!
 }
 
-type offer_list {
-  offer_id: ID!
-  account_id: String!
-  offer_type: String!
-  offer_title: String!
-  offer_severity: String!
-  offer_catagory: String!
-  offer_location: String!
-  offer_status: String!
-  offer_text: String!
-  create_date: String!
-  update_date: String!
+type OfferList {
+  offerId: ID!
+  accountId: String!
+  offerType: String!
+  offerTitle: String!
+  offerSeverity: String!
+  offerCatagory: String!
+  offerLocation: String!
+  offerStatus: String!
+  offerText: String!
+  createDate: String!
+  updateDate: String!
 }
 
-input purchase_histroy {
-  purchase_id: String!
-  purchase_date: String!
-  purchase_time: String!
-  payer_account_id: String!
-  payee_account_id: String!
+input PurchaseHistroy {
+  purchaseId: ID!
+  purchaseDate: String!
+  purchaseTime: String!
+  payerAccountId: String!
+  payeeAccountId: String!
   amount: String!
-  create_date: String!
-  update_date: String!
+  createDate: String!
+  updateDate: String!
 }
 
 type Mutation {
