@@ -2,6 +2,9 @@
 
 #---[ 0. Custom Params ]-----------------------------------------------
 
+STAND_BY:=sleep          ## for Mac
+# STAND_BY:=timeout        ## for Windows
+
 WBS_CONT:=110wbs_dev
 # API_CONT:=124api_dev    ## REST API Server
 API_CONT:=125api_dev    ## GraphQL Server
@@ -33,26 +36,15 @@ init.dev.wbs: ## Initilazing only frontend devlopment containers.
 
 #---[ 2. System Boot ]------------------------------------------------------
 
-boot.dev: ## for Mac and Linux
+boot.dev:
 	make boot.dev.dbs
-	make boot.dev.api
-	make boot.dev.wbs
-	@echo "Succeful booting devlopment environment!"
-
-boot.dev.win: ## for Windows
-	make boot.dev.dbs.win
 	make boot.dev.api
 	make boot.dev.wbs
 	@echo "Succeful booting devlopment environment!"
 
 boot.dev.dbs: ## Booting only frontend devlopment containers.
 	@make init.dev.dbs
-	sleep 5
-	make insert.data.dbs
-
-boot.dev.dbs.win: ## Booting only frontend devlopment containers.
-	@make init.dev.dbs
-	timeout 5
+	$(STAND_BY) 5
 	make insert.data.dbs
 
 boot.dev.api: ## Booting only frontend devlopment containers.
