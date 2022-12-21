@@ -7,8 +7,8 @@ WBS_CONT:=110wbs_dev
 API_CONT:=125api_dev    ## GraphQL Server
 DBS_CONT:=134dbs_dev
 
-STAND_BY:=sleep         ## for Mac
-CONNECTOR:=-            ## for Mac
+STAND_BY:=sleep         ## for Mac and Linux
+CONNECTOR:=-            ## for Mac and Linux
 # STAND_BY:=timeout       ## for Windows
 # CONNECTOR:=_            ## for Windows
 
