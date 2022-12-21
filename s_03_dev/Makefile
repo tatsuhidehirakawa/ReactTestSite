@@ -1,6 +1,6 @@
 #.PHONY:
 
-#---[ 0. custom params ]-----------------------------------------------
+#---[ 0. Custom Params ]-----------------------------------------------
 
 WBS_CONT:=110wbs_dev
 # API_CONT:=124api_dev    ## REST API Server
@@ -12,7 +12,7 @@ CONNECTOR:=-            ## for Mac
 BACKUP_DATA:=backup_20221219022656_134dbs_dev.sql
 PASS_DEV_ENV:=../dev.env
 
-#---[ 1. system initialize ]-----------------------------------------------
+#---[ 1. System Initialize ]-----------------------------------------------
 
 init.dev: ## Initializing only frontend devlopment containers.
 	make init.dev.dbs
@@ -25,32 +25,41 @@ init.dev.dbs: ## Booting only frontend devlopment containers.
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file $(PASS_DEV_ENV) up $(API_CONT) -d
+	@make init.gqlgen
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
 	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
+	@make init.tailwindcss
 
-#---[ 2. system booting ]-----------------------------------------------
+#---[ 2. System Boot ]------------------------------------------------------
 
-boot.dev:
+boot.dev: ## for Mac and Linux
 	make boot.dev.dbs
 	make boot.dev.api
 	make boot.dev.wbs
-	make set.code.dev
+	@echo "Succeful booting devlopment environment!"
+
+boot.dev.win: ## for Windows
+	make boot.dev.dbs.win
+	make boot.dev.api
+	make boot.dev.wbs
 	@echo "Succeful booting devlopment environment!"
 
 boot.dev.dbs: ## Booting only frontend devlopment containers.
-	docker compose --env-file $(PASS_DEV_ENV) up $(DBS_CONT) -d
+	@make init.dev.dbs
+	sleep 5
+	make insert.data.dbs
+
+boot.dev.dbs.win: ## Booting only frontend devlopment containers.
+	@make init.dev.dbs
+	timeout 5
+	make insert.data.dbs
 
 boot.dev.api: ## Booting only frontend devlopment containers.
-	docker compose --env-file $(PASS_DEV_ENV) up $(API_CONT) -d
-	@make init.gqlgen
+	@make init.dev.api
 
 boot.dev.wbs: ## Initilazing only frontend devlopment containers.
-	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
-	@make init.tailwindcss
-
-set.code.dev:
-	@make insert.data.dbs
+	@make init.dev.wbs
 	@make insert.code.wbs
 
 #---[ 3. Container manipulation. ]-------------------------------------------
@@ -115,7 +124,7 @@ recon.dev.wbs: ## Variable "c" is "_(Windows)" or "-(Mac)".
 	@make init.tailwindcss
 	@make insert.code.wbs
 
-rebuild.dev.api:
+recon.dev.api:
 	@docker stop $(API_CONT)
 	@docker rm $(API_CONT)
 	@docker rmi s_03_dev-$(API_CONT)
