@@ -68,6 +68,7 @@ init.gqlgen:
 	@docker cp ../s_03_dev/125api_dev/GraphQL/main.go 125api_dev:/go/src
 	@docker cp ../s_03_dev/125api_dev/GraphQL/server.go 125api_dev:/go/src
 	@docker cp ../s_03_dev/125api_dev/GraphQL/resolver.go 125api_dev:/go/src/graph
+	@docker cp ../s_03_dev/125api_dev/GraphQL/schema.graphqls 125api_dev:/go/src/graph
 	@docker cp ../s_03_dev/125api_dev/GraphQL/schema.resolvers.go 125api_dev:/go/src/graph
 	@docker cp ../s_03_dev/125api_dev/GraphQL/generated.go 125api_dev:/go/src/graph/generated
 	@docker container exec -it 125api_dev go get
