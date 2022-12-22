@@ -1,7 +1,3 @@
-# GraphQL schema for STGprd_devpkg
-#
-# https://gqlgen.com/getting-started/
-
 type AccountMaster {
   accountId: ID!
   accountName: String!
@@ -55,6 +51,31 @@ input PurchaseHistroy {
   updateDate: String!
 }
 
-type Mutation {
-  createTodo(input: NewTodo!): Todo!
-}
+# # GraphQL schema example
+# #
+# # https://gqlgen.com/getting-started/
+
+# type Todo {
+#   id: ID!
+#   text: String!
+#   done: Boolean!
+#   user: User!
+# }
+
+# type User {
+#   id: ID!
+#   name: String!
+# }
+
+# type Query {
+#   todos: [Todo!]!
+# }
+
+# input NewTodo {
+#   text: String!
+#   userId: String!
+# }
+
+# type Mutation {
+#   createTodo(input: NewTodo!): Todo!
+# }
