@@ -1,30 +1,30 @@
-type AccountMaster {
-  accountId: ID!
-  accountName: String!
-  mailAddless: String!
-  password: String!
-  zipCode: String!
-  barthDate: String!
-  timeZone: String!
-  language: String!
-  registrationDate: String!
-  createDate: String!
-  updateDate: String!
-}
+# type AccountMaster {
+#   accountId: ID!
+#   accountName: String!
+#   mailAddless: String!
+#   password: String!
+#   zipCode: String!
+#   barthDate: String!
+#   timeZone: String!
+#   language: String!
+#   registrationDate: String!
+#   createDate: String!
+#   updateDate: String!
+# }
 
-type AccountAttribute {
-  accountId: ID!
-  selfIntroduction: String!
-  twitterUri: String!
-  facebookUri: String!
-  instagramUri: String!
-  youtubeChannelUri: String!
-  skill: String!
-  rate: String!
-  status: String!
-  createDate: String!
-  updateDate: String!
-}
+# type AccountAttribute {
+#   accountId: ID!
+#   selfIntroduction: String!
+#   twitterUri: String!
+#   facebookUri: String!
+#   instagramUri: String!
+#   youtubeChannelUri: String!
+#   skill: String!
+#   rate: String!
+#   status: String!
+#   createDate: String!
+#   updateDate: String!
+# }
 
 type OfferList {
   offerId: ID!
@@ -40,16 +40,16 @@ type OfferList {
   updateDate: String!
 }
 
-input PurchaseHistroy {
-  purchaseId: ID!
-  purchaseDate: String!
-  purchaseTime: String!
-  payerAccountId: String!
-  payeeAccountId: String!
-  amount: String!
-  createDate: String!
-  updateDate: String!
-}
+# input PurchaseHistroy {
+#   purchaseId: ID!
+#   purchaseDate: String!
+#   purchaseTime: String!
+#   payerAccountId: String!
+#   payeeAccountId: String!
+#   amount: String!
+#   createDate: String!
+#   updateDate: String!
+# }
 
 # # GraphQL schema example
 # #

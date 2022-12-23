@@ -42,6 +42,10 @@ boot.dev:
 	make boot.dev.wbs
 	@echo "Succeful booting devlopment environment!"
 
+boot.dev.back:
+	make boot.dev.dbs
+	make boot.dev.api
+
 boot.dev.dbs: ## Booting only frontend devlopment containers.
 	@make init.dev.dbs
 	$(STAND_BY) 5
@@ -74,15 +78,6 @@ init.gqlgen:
 	@docker container exec -it 125api_dev go get
 	@docker container exec -itd 125api_dev go run ./server.go
 
-# init.gqlgen:
-# 	@docker container exec -it $(API_CONT) go get github.com/99designs/gqlgen
-# 	@docker container exec -it $(API_CONT) go run github.com/99designs/gqlgen init
-# 	@docker cp ../s_03_dev/$(API_CONT)/gqlgen.yml $(API_CONT):/go/src
-# 	@docker cp ../s_03_dev/$(API_CONT)/schema.graphql $(API_CONT):/go/src
-# 	@docker cp ../s_03_dev/$(API_CONT)/resolver.go $(API_CONT):/go/src
-# 	@docker restart $(API_CONT)
-
-
 init.tailwindcss:
 	@docker container exec -it $(WBS_CONT) npm install -D tailwindcss@3.2.4 postcss@8.4.19 autoprefixer@10.4.13
 	@docker cp ../s_03_dev/$(WBS_CONT)/TailwindCSS/postcss.config.js $(WBS_CONT):usr/src/app
@@ -104,6 +99,11 @@ eject.data.api:
 
 init.dev.adm:
 	docker compose --env-file $(PASS_DEV_ENV) up 135adm_dev -d
+
+generate.gqlgen:
+	@docker container exec -it $(API_CONT) go generate ./...
+
+
 
 
 
