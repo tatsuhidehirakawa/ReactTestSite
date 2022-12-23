@@ -11,7 +11,33 @@
 #   createDate: String!
 #   updateDate: String!
 # }
+# type AccountMaster {
+#   accountId: ID!
+#   accountName: String!
+#   mailAddless: String!
+#   password: String!
+#   zipCode: String!
+#   barthDate: String!
+#   timeZone: String!
+#   language: String!
+#   registrationDate: String!
+#   createDate: String!
+#   updateDate: String!
+# }
 
+# type AccountAttribute {
+#   accountId: ID!
+#   selfIntroduction: String!
+#   twitterUri: String!
+#   facebookUri: String!
+#   instagramUri: String!
+#   youtubeChannelUri: String!
+#   skill: String!
+#   rate: String!
+#   status: String!
+#   createDate: String!
+#   updateDate: String!
+# }
 # type AccountAttribute {
 #   accountId: ID!
 #   selfIntroduction: String!
@@ -38,6 +64,10 @@ type OfferList {
   offerText: String!
   createDate: String!
   updateDate: String!
+}
+
+type Query {
+  OfferList(id: String!): OfferList
 }
 
 # input PurchaseHistroy {
