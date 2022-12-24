@@ -103,9 +103,8 @@ init.dev.adm:
 generate.gqlgen:
 	@docker container exec -it $(API_CONT) go generate ./...
 
-
-
-
+generate.gqlgen:
+	@docker container exec -it $(API_CONT) go run github.com/99designs/gqlgen
 
 recon.dev.wbs: ## Variable "c" is "_(Windows)" or "-(Mac)".
 	docker stop $(WBS_CONT)
