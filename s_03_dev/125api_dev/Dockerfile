@@ -18,8 +18,8 @@ COPY . .
 
 # # sqlc
 # RUN go get github.com/kyleconroy/sqlc/cmd/sqlc
-RUN go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
-RUN sqlc generate --file sqlc/sqlc.yaml
+# RUN go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
+# RUN sqlc generate --file sqlc/sqlc.yaml
 
 # Air
 # RUN go get -u github.com/cosmtrek/air
