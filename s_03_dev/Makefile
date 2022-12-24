@@ -7,10 +7,10 @@ WBS_CONT:=110wbs_dev
 API_CONT:=125api_dev    ## GraphQL Server
 DBS_CONT:=134dbs_dev
 
-STAND_BY:=sleep         ## for Mac and Linux
-# STAND_BY:=timeout       ## for Windows
-CONNECTOR:=-            ## for Mac and Linux
-# CONNECTOR:=_            ## for Windows
+# STAND_BY:=sleep         ## for Mac and Linux
+STAND_BY:=timeout       ## for Windows
+# CONNECTOR:=-            ## for Mac and Linux
+CONNECTOR:=_            ## for Windows
 
 BACKUP_DATA:=backup_20221219022656_134dbs_dev.sql
 PASS_DEV_ENV:=../dev.env
