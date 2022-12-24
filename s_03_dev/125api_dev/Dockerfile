@@ -29,5 +29,6 @@ RUN air init
 
 RUN go mod tidy
 # CMD ["nohup", "go", "run", "main.go"]
+CMD ["nohup", "go", "run", "server.go"]
 # # CMD ["go", "run", "main.go"]
 ENTRYPOINT [ "air" ]

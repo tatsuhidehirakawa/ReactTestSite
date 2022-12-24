@@ -67,27 +67,16 @@ insert.code.wbs:
 
 init.gqlgen:
 	docker exec -it 125api_dev go mod tidy
-	docker exec -it 125api_dev go run github.com/99designs/gqlgen init
-	docker cp ../s_03_dev/125api_dev/GraphQL/schema.graphqls 125api_dev:/go/src/graph
-	docker exec -itd 125api_dev go run server.go
+
+# init.gqlgen:
+# 	docker exec -it 125api_dev go mod tidy
+# 	docker exec -it 125api_dev go run github.com/99designs/gqlgen init
+# 	docker cp ../s_03_dev/125api_dev/GraphQL/schema.graphqls 125api_dev:/go/src/graph
+# 	docker exec -itd 125api_dev go run server.go
 
 init.sqlc:
 	docker exec -it 125api_dev go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
 	docker exec -it 125api_dev sqlc generate --file sqlc/sqlc.yaml
-
-# init.gqlgen:
-# 	@docker container exec -it 125api_dev go get -u github.com/99designs/gqlgen@latest
-# 	@docker container exec -it 125api_dev go run github.com/99designs/gqlgen init
-# 	@docker container exec -it 125api_dev mkdir graph/generated
-# 	@docker container exec -it 125api_dev mv graph/generated.go graph/generated/generated.go
-# 	@docker cp ../s_03_dev/125api_dev/GraphQL/main.go 125api_dev:/go/src
-# 	@docker cp ../s_03_dev/125api_dev/GraphQL/server.go 125api_dev:/go/src
-# 	@docker cp ../s_03_dev/125api_dev/GraphQL/resolver.go 125api_dev:/go/src/graph
-# 	@docker cp ../s_03_dev/125api_dev/GraphQL/schema.graphqls 125api_dev:/go/src/graph
-# 	@docker cp ../s_03_dev/125api_dev/GraphQL/schema.resolvers.go 125api_dev:/go/src/graph
-# 	@docker cp ../s_03_dev/125api_dev/GraphQL/generated.go 125api_dev:/go/src/graph/generated
-# 	@docker container exec -it 125api_dev go get
-# 	@docker container exec -itd 125api_dev go run ./server.go
 
 init.tailwindcss:
 	@docker container exec -it $(WBS_CONT) npm install -D tailwindcss@3.2.4 postcss@8.4.19 autoprefixer@10.4.13
