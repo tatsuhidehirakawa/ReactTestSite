@@ -40,23 +40,9 @@ type OfferList {
   updateDate: String!
 }
 
-<<<<<<< HEAD
-# input PurchaseHistroy {
-#   purchaseId: ID!
-#   purchaseDate: String!
-#   purchaseTime: String!
-#   payerAccountId: String!
-#   payeeAccountId: String!
-#   amount: String!
-#   createDate: String!
-#   updateDate: String!
-# }
-=======
-
 type Query {
   OfferList(id: String!): OfferList
 }
->>>>>>> a57113ef3a055e92aa19716632584282508d5aa3
 
 
 # input PurchaseHistroy {
