@@ -97,6 +97,9 @@ eject.data.dbs:
 eject.data.api:
 	@docker cp $(API_CONT):/go/src ../s_01_src/125api_src
 
+insert.data.api:
+	@docker cp ../s_01_src/125api_src/src $(API_CONT):/go
+
 init.dev.adm:
 	docker compose --env-file $(PASS_DEV_ENV) up 135adm_dev -d
 
