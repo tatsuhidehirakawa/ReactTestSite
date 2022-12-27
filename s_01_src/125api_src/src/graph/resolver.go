@@ -6,9 +6,7 @@ package graph
 //
 // It serves as dependency injection for your app, add any dependencies you require here.
 
-import (
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/infrastractue/persistence"
-)
+import "STGprd_devpkg/infrastractue/persistence"
 
 type Resolver struct {
 	Repo *persistence.Repositories

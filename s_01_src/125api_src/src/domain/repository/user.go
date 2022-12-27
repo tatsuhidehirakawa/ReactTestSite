@@ -1,9 +1,8 @@
 package repository
 
 import (
+	"STGprd_devpkg/domain/entity"
 	"context"
-
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/domain/entity"
 )
 
 type IOfferListRepository interface {

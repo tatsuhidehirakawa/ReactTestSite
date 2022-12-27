@@ -2,12 +2,12 @@
 package io
 
 import (
+	"STGprd_devpkg/config"
 	"fmt"
 	"log"
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/config"
 )
 
 type SQLdatabase struct {
@@ -15,9 +15,9 @@ type SQLdatabase struct {
 }
 
 func NewSQLdatabase(cfg *config.Config) (*SQLdatabase, error) {
+	fmt.Printf(cfg.Host)
 	dsn := fmt.Sprintf(
-		"user=%s dbname=%s password=%s  host=%s port=5432 sslmode=disable",
-		cfg.PostgresUser, cfg.PostgresDB, cfg.PostgresPassword, cfg.PostgresHost)
+		"host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode)
 	db, err := sqlx.Connect("postgres", dsn)
 	if err != nil {
 		log.Fatalln(err)
@@ -29,3 +29,7 @@ func NewSQLdatabase(cfg *config.Config) (*SQLdatabase, error) {
 
 	return &SQLdatabase{SQLX: db}, nil
 }
+
+// cfg := config.NewConfig()
+// dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s sslmode=%s", cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Sslmode) // 「dsn」に結合した文字列を格納
+// db, err := sql.Open("postgres", dsn)

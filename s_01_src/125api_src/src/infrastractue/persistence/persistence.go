@@ -1,8 +1,8 @@
 package persistence
 
 import (
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/domain/repository"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/io"
+	"STGprd_devpkg/domain/repository"
+	"STGprd_devpkg/io"
 )
 
 type Repositories struct {

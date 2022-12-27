@@ -1,17 +1,16 @@
 package main
 
 import (
+	"STGprd_devpkg/config"
+	"STGprd_devpkg/graph"
+	"STGprd_devpkg/infrastractue/persistence"
+	"STGprd_devpkg/io"
 	"context"
 	"log"
 	"net/http"
 
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/config"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/infrastractue/persistence"
-
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/graph"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/io"
 )
 
 func main() {
@@ -44,6 +43,6 @@ func main() {
 	http.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	http.Handle("/query", srv)
 
-	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)
-	log.Fatal(http.ListenAndServe(":"+cfg.Port, nil))
+	log.Printf("connect to http://localhost:%s/ for GraphQL playground", "8080")
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
