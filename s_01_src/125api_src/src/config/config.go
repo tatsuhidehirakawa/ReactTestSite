@@ -2,6 +2,7 @@ package config
 
 import (
 	"os"
+	// "github.com/sethvargo/go-envconfig"
 )
 
 type Config struct {
@@ -21,3 +22,13 @@ func NewConfig() *Config {
 		Sslmode:  os.Getenv("SSLMODE"),
 	}
 }
+
+// // add code
+// func LoadConfig(ctx context.Context) (*Config, error) {
+// 	var cfg Config
+// 	if err := envconfig.Process(ctx, &cfg); err != nil {
+// 		return nil, err
+// 	}
+
+// 	return &cfg, nil
+// }
