@@ -83,7 +83,7 @@ services:
       # Warning : Do not operate PowerShell at dump and restore.
       - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
     environment:
-        POSTGRES_PASSWORD: ${PGSQL_PW}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     networks:
       - STGprd_devpkg_dev_network
   

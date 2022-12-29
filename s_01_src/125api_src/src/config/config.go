@@ -24,7 +24,6 @@ type Config struct {
 // 	}
 // }
 
-// add code
 func LoadConfig(ctx context.Context) (*Config, error) {
 	var cfg Config
 	if err := envconfig.Process(ctx, &cfg); err != nil {
