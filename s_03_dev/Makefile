@@ -26,11 +26,11 @@ init.dev: ## Initializing only frontend devlopment containers.
 init.dev.dbs: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 134dbs_dev -d
 
-init.dev.api: ## Booting only frontend devlopment containers.
+init.dev.api.rest: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 124api_dev -d
 	@make init.sqlc
 
-init.dev.api.gql: ## Booting only frontend devlopment containers.
+init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file ../dev.env up 125api_dev -d
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
@@ -47,7 +47,7 @@ boot.dev:
 
 boot.dev.back:
 	make boot.dev.dbs
-	make boot.dev.api.gql
+	make boot.dev.api
 
 boot.dev.dbs: ## Booting only frontend devlopment containers.
 	@make init.dev.dbs
@@ -105,7 +105,7 @@ init.dev.adm:
 generate.gqlgen:
 	@docker container exec -it 125api_dev go generate ./...
 
-generate.gqlgen:
+generate.gqlgen.k:
 	@docker container exec -it 125api_dev go run github.com/99designs/gqlgen
 
 recon.dev.wbs: ## Variable "c" is "_(Windows)" or "-(Mac)".
@@ -124,9 +124,6 @@ recon.dev.api:
 	@docker rmi s_03_dev-$(API_CONT)
 	@docker volume rm s_03_dev_api-vol
 	# @make init.dev.api
-
-
-
 
 
 # pill_codedowncopy.dev.wbs: ## Command to copy source code modified in a container to local.

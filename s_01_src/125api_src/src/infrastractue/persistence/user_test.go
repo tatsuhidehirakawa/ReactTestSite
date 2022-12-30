@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/domain/entity"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/domain/entity"
 )
 
 func TestUserRepo_GetUser(t *testing.T) {

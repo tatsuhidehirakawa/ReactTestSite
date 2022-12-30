@@ -5,13 +5,13 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/config"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/infrastractue/persistence"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/config"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/infrastractue/persistence"
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/graph"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/io"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/graph"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/io"
 )
 
 func main() {

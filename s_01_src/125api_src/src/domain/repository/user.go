@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/domain/entity"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/domain/entity"
 )
 
 type IUserRepository interface {

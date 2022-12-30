@@ -7,7 +7,7 @@ package graph
 // It serves as dependency injection for your app, add any dependencies you require here.
 
 import (
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/infrastractue/persistence"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/infrastractue/persistence"
 )
 
 type Resolver struct {

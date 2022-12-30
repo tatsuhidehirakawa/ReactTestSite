@@ -1,8 +1,8 @@
 package persistence
 
 import (
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/domain/repository"
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/io"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/domain/repository"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/io"
 )
 
 type Repositories struct {

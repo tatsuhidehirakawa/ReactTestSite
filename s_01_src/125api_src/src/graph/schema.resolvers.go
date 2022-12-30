@@ -8,7 +8,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/tatsuhidehirakawa/STGprd_devpkg/graph/model"
+	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/graph/model"
 )
 
 // User is the resolver for the User field.
