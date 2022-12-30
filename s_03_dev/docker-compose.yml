@@ -49,13 +49,13 @@ services:
       context: ../s_01_src/125api_src/src
       dockerfile: ../../../s_03_dev/125api_dev/Dockerfile
     # build: ./125api_dev
-    # environment:
-    #   - DATABASE_HOST=${DATABASE_HOST}
-    #   - DB_PORT=${PORT}
-    #   - USER=${USER}
-    #   - PGSQL_PW=${PGSQL_PW}
-    #   - SSLMODE=${SSLMODE}
-    env_file: ../dev.env
+    environment:
+      PORT: 8080
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "passw0rd"
+      POSTGRES_DB: "postgres"
+      POSTGRES_HOST: "134dbs_dev"
+    # env_file: ../dev.env
     tty: true
     volumes:
       # - ../s_01_src/125api_src/src:/go/src # Activate for ShellScript Operation.
@@ -83,7 +83,7 @@ services:
       # Warning : Do not operate PowerShell at dump and restore.
       - ../s_05_tst/130dbs_tst/:/usr/src/dbstore
     environment:
-        POSTGRES_PASSWORD: ${PGSQL_PW}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     networks:
       - STGprd_devpkg_dev_network
   

@@ -2,16 +2,7 @@
 
 package model
 
-type OfferList struct {
-	OfferID       string `json:"offerId"`
-	AccountID     string `json:"accountId"`
-	OfferType     string `json:"offerType"`
-	OfferTitle    string `json:"offerTitle"`
-	OfferSeverity string `json:"offerSeverity"`
-	OfferCatagory string `json:"offerCatagory"`
-	OfferLocation string `json:"offerLocation"`
-	OfferStatus   string `json:"offerStatus"`
-	OfferText     string `json:"offerText"`
-	CreateDate    string `json:"createDate"`
-	UpdateDate    string `json:"updateDate"`
+type User struct {
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }

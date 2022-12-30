@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:1.19-alpine
 WORKDIR /go/src
 
 # COPY pkgset.sh /usr/local/bin
@@ -22,13 +22,12 @@ COPY . .
 # RUN sqlc generate --file sqlc/sqlc.yaml
 
 # Air
-# RUN go get -u github.com/cosmtrek/air
-RUN go install github.com/cosmtrek/air@latest
-RUN which air
-RUN air init
+# RUN go install github.com/cosmtrek/air@latest
+# RUN which air
+# RUN air init
 
 RUN go mod tidy
-# CMD ["nohup", "go", "run", "main.go"]
-CMD ["nohup", "go", "run", "server.go"]
+CMD ["go", "run", "main.go"]
+# CMD ["nohup", "go", "run", "server.go"]
 # # CMD ["go", "run", "main.go"]
-ENTRYPOINT [ "air" ]
+# ENTRYPOINT [ "air" ]

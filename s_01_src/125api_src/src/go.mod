@@ -1,9 +1,13 @@
-module STGprd_devpkg
+module github.com/gqlgensamples/golang-gqlgen-postgresql-example
 
 go 1.19
 
 require (
 	github.com/99designs/gqlgen v0.17.22
+	github.com/google/go-cmp v0.5.9
+	github.com/jmoiron/sqlx v1.3.5
+	github.com/lib/pq v1.10.7
+	github.com/sethvargo/go-envconfig v0.8.3
 	github.com/vektah/gqlparser/v2 v2.5.1
 )
 

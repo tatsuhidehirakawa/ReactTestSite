@@ -8,8 +8,8 @@ API_CONT:=125api_dev    ## GraphQL Server
 DBS_CONT:=134dbs_dev
 
 STAND_BY:=sleep         ## for Mac and Linux
-# STAND_BY:=timeout       ## for Windows
 CONNECTOR:=-            ## for Mac and Linux
+# STAND_BY:=timeout       ## for Windows
 # CONNECTOR:=_            ## for Windows
 
 BACKUP_DATA:=backup_20221219022656_134dbs_dev.sql
@@ -28,8 +28,10 @@ init.dev.dbs: ## Booting only frontend devlopment containers.
 
 init.dev.api: ## Booting only frontend devlopment containers.
 	docker compose --env-file $(PASS_DEV_ENV) up $(API_CONT) -d
-	@make init.sqlc
-	@make init.gqlgen
+
+commentout_from_init.dev.api:
+	# @make init.sqlc
+	# @make init.gqlgen
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
 	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
