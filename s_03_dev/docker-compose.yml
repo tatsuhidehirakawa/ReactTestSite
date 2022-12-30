@@ -24,19 +24,19 @@ services:
       context: ../s_01_src/124api_src/src
       dockerfile: ../../../s_03_dev/124api_dev/Dockerfile
     # build: ./124api_dev
-    # environment:
-    #   - DATABASE_HOST=${DATABASE_HOST}
-    #   - DB_PORT=${PORT}
-    #   - USER=${USER}
-    #   - PGSQL_PW=${PGSQL_PW}
-    #   - SSLMODE=${SSLMODE}
+    environment:
+      - DATABASE_HOST=${POSTGRES_HOST}
+      - DB_PORT=${DB_PORT}
+      - USER=${POSTGRES_USER}
+      - PGSQL_PW=${POSTGRES_PASSWORD}
+      - SSLMODE=${SSLMODE}
     env_file: ../dev.env
     tty: true
     volumes:
       - ../s_01_src/124api_src/src:/go/src # Activate for ShellScript Operation.
-      - api-vol:/go/src # Activate for Dockerfile Opration.
+      - api-vol-rest:/go/src # Activate for Dockerfile Opration.
     ports:
-      - "8080:8080"
+      - "8081:8080"
       # Port No of Host(non-overlapable):Port No of Container(overlappable)
     networks:
       - STGprd_devpkg_dev_network
@@ -106,6 +106,7 @@ services:
 volumes:
   wbs-vol:
   api-vol:
+  api-vol-rest:
   dbs-vol:
   adm-vol:   # For pgAdmin.
 

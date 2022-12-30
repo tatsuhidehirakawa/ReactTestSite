@@ -22,7 +22,8 @@ const outline = css`
 
 // React-Query ------------------------------------------------------
 const fetchUsers = async () => {
-  const res = await fetch('http://localhost:8080/offerList/someGet');
+  // const res = await fetch('http://localhost:8080/offerList/someGet');
+  const res = await fetch('http://localhost:8081/offerList/someGet');
   return res.json();
 }; // ---------------------------------------------------------------
 
