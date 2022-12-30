@@ -24,17 +24,17 @@ init.dev: ## Initializing only frontend devlopment containers.
 	@echo "Succeful initializing devlopment environment!"
 
 init.dev.dbs: ## Booting only frontend devlopment containers.
-	docker compose --env-file $(PASS_DEV_ENV) up $(DBS_CONT) -d
+	docker compose --env-file ../dev.env up 134dbs_dev -d
 
 init.dev.api: ## Booting only frontend devlopment containers.
-	docker compose --env-file $(PASS_DEV_ENV) up $(API_CONT) -d
+	docker compose --env-file ../dev.env up 124api_dev -d
+	@make init.sqlc
 
-commentout_from_init.dev.api:
-	# @make init.sqlc
-	# @make init.gqlgen
+init.dev.api.gql: ## Booting only frontend devlopment containers.
+	docker compose --env-file ../dev.env up 125api_dev -d
 
 init.dev.wbs: ## Initilazing only frontend devlopment containers.
-	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
+	docker compose --env-file ../dev.env up 110wbs_dev -d
 	@make init.tailwindcss
 
 #---[ 2. System Boot ]------------------------------------------------------
@@ -47,7 +47,7 @@ boot.dev:
 
 boot.dev.back:
 	make boot.dev.dbs
-	make boot.dev.api
+	make boot.dev.api.gql
 
 boot.dev.dbs: ## Booting only frontend devlopment containers.
 	@make init.dev.dbs
@@ -64,8 +64,8 @@ boot.dev.wbs: ## Initilazing only frontend devlopment containers.
 #---[ 3. Container manipulation. ]-------------------------------------------
 
 insert.code.wbs:
-	@docker cp ../s_01_src/110wbs_src/public $(WBS_CONT):usr/src/app
-	@docker cp ../s_01_src/110wbs_src/src $(WBS_CONT):usr/src/app
+	@docker cp ../s_01_src/110wbs_src/public 110wbs_dev:usr/src/app
+	@docker cp ../s_01_src/110wbs_src/src 110wbs_dev:usr/src/app
 
 init.gqlgen:
 	docker exec -it 125api_dev go mod tidy
@@ -77,44 +77,44 @@ init.gqlgen:
 # 	docker exec -itd 125api_dev go run server.go
 
 init.sqlc:
-	docker exec -it 125api_dev go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
-	docker exec -it 125api_dev sqlc generate --file sqlc/sqlc.yaml
+	docker exec -it 124api_dev go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
+	docker exec -it 124api_dev sqlc generate --file sqlc/sqlc.yaml
 
 init.tailwindcss:
-	@docker container exec -it $(WBS_CONT) npm install -D tailwindcss@3.2.4 postcss@8.4.19 autoprefixer@10.4.13
-	@docker cp ../s_03_dev/$(WBS_CONT)/TailwindCSS/postcss.config.js $(WBS_CONT):usr/src/app
-	@docker cp ../s_03_dev/$(WBS_CONT)/TailwindCSS/tailwind.config.js $(WBS_CONT):usr/src/app
-	@docker cp ../s_03_dev/$(WBS_CONT)/TailwindCSS/index.css $(WBS_CONT):usr/src/app/src
-	@docker restart $(WBS_CONT)
+	@docker container exec -it 110wbs_dev npm install -D tailwindcss@3.2.4 postcss@8.4.19 autoprefixer@10.4.13
+	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/postcss.config.js 110wbs_dev:usr/src/app
+	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/tailwind.config.js 110wbs_dev:usr/src/app
+	@docker cp ../s_03_dev/110wbs_dev/TailwindCSS/index.css 110wbs_dev:usr/src/app/src
+	@docker restart 110wbs_dev
 
 insert.data.dbs:
-	@docker exec -it $(DBS_CONT) /usr/src/dbstore/pg_restore.sh $(BACKUP_DATA) bash
+	@docker exec -it 134dbs_dev /usr/src/dbstore/pg_restore.sh $(BACKUP_DATA) bash
 
 eject.data.wbs:
-	@docker cp $(WBS_CONT):usr/src/app/ ../s_01_src/110wbs_src/
+	@docker cp 110wbs_dev:usr/src/app/ ../s_01_src/110wbs_src/
 
 eject.data.dbs:
-	docker exec -it $(DBS_CONT) /usr/src/dbstore/pg_dump.sh $(DBS_CONT) bash
+	docker exec -it 134dbs_dev /usr/src/dbstore/pg_dump.sh 134dbs_dev bash
 
 eject.data.api:
 	@docker cp $(API_CONT):/go/src ../s_01_src/125api_src
 
 init.dev.adm:
-	docker compose --env-file $(PASS_DEV_ENV) up 135adm_dev -d
+	docker compose --env-file ../dev.env up 135adm_dev -d
 
 generate.gqlgen:
-	@docker container exec -it $(API_CONT) go generate ./...
+	@docker container exec -it 125api_dev go generate ./...
 
 generate.gqlgen:
-	@docker container exec -it $(API_CONT) go run github.com/99designs/gqlgen
+	@docker container exec -it 125api_dev go run github.com/99designs/gqlgen
 
 recon.dev.wbs: ## Variable "c" is "_(Windows)" or "-(Mac)".
-	docker stop $(WBS_CONT)
-	docker rm $(WBS_CONT)
-	docker rmi s_03_dev$(CONNECTOR)$(WBS_CONT)
+	docker stop 110wbs_dev
+	docker rm 110wbs_dev
+	docker rmi s_03_dev$(CONNECTOR)110wbs_dev
 	docker volume rm s_03_dev_wbs-vol
-	docker compose --env-file $(PASS_DEV_ENV) build $(WBS_CONT) --no-cache
-	docker compose --env-file $(PASS_DEV_ENV) up $(WBS_CONT) -d
+	docker compose --env-file ../dev.env build 110wbs_dev --no-cache
+	docker compose --env-file ../dev.env up 110wbs_dev -d
 	@make init.tailwindcss
 	@make insert.code.wbs
 
