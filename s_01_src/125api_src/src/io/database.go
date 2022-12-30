@@ -7,7 +7,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/config"
+	"github.com/tatsuhidehirakawa/STGprd_devpkg/config"
 )
 
 type SQLdatabase struct {

@@ -5,9 +5,9 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/domain/entity"
-	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/domain/repository"
-	"github.com/gqlgensamples/golang-gqlgen-postgresql-example/io"
+	"github.com/tatsuhidehirakawa/STGprd_devpkg/domain/entity"
+	"github.com/tatsuhidehirakawa/STGprd_devpkg/domain/repository"
+	"github.com/tatsuhidehirakawa/STGprd_devpkg/io"
 )
 
 type UserRepository struct {
