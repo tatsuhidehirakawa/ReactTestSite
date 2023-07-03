@@ -1,6 +1,6 @@
 -- name: GetAccount_master :one
 SELECT * FROM account_master
-WHERE account_id = ? LIMIT 1;
+WHERE account_id = $1 LIMIT 1;
 
 -- name: ListAccount_master :many
 SELECT * FROM account_master
@@ -25,7 +25,7 @@ WHERE account_id = $1;
 
 -- name: GetAccount_attribute :one
 SELECT * FROM account_attribute
-WHERE account_id = ? LIMIT 1;
+WHERE account_id = $1 LIMIT 1;
 
 -- name: ListAccount_attribute :many
 SELECT * FROM account_attribute
@@ -50,7 +50,7 @@ WHERE account_id = $1;
 
 -- name: GetOffer_list :one
 SELECT * FROM offer_list
-WHERE offer_id = ? LIMIT 1;
+WHERE offer_id = $1 LIMIT 1;
 
 -- name: ListOffer_list :many
 SELECT * FROM offer_list
@@ -74,7 +74,7 @@ WHERE offer_id = $1;
 
 -- name: GetPurchase_histroy :one
 SELECT * FROM purchase_histroy
-WHERE purchase_id = ? LIMIT 1;
+WHERE purchase_id = $1 LIMIT 1;
 
 -- name: ListPurchase_histroy :many
 SELECT * FROM purchase_histroy
